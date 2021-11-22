@@ -1,0 +1,12 @@
+{
+    "name": "N1MM_Dashboard",
+    "description": "Dashboard for N1MM Contesting",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
