@@ -6628,7 +6628,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-3 hours') group by band;",
+        "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-1 hours') group by band;",
         "output": "str",
         "x": 2210,
         "y": 300,
@@ -6746,8 +6746,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2980,
-        "y": 280,
+        "x": 2780,
+        "y": 300,
         "wires": [
             [
                 "35dd8fcbbd78da95",
