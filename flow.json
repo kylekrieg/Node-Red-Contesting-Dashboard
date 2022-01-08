@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "1c66bd27e16a3fec",
+        "type": "tab",
+        "label": "N1MM Database",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "407d2b774fe67647",
         "type": "tab",
         "label": "N1MM Dashboard",
@@ -43,14 +51,6 @@
         "id": "b59d8b7ca43e59ce",
         "type": "tab",
         "label": "Spectator Dashboard",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "07cc79136618915a",
-        "type": "tab",
-        "label": "Online Scoreboard",
         "disabled": false,
         "info": "",
         "env": []
@@ -265,11 +265,29 @@
         ],
         "out": [
             {
-                "x": 2080,
+                "x": 2200,
                 "y": 200,
                 "wires": [
                     {
                         "id": "70b6de0f1840a35d",
+                        "port": 0
+                    },
+                    {
+                        "id": "ce43ae734fc9b55d",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 2180,
+                "y": 720,
+                "wires": [
+                    {
+                        "id": "9440ea3aa843027d",
+                        "port": 0
+                    },
+                    {
+                        "id": "dc2d5356e4a024aa",
                         "port": 0
                     }
                 ]
@@ -915,7 +933,7 @@
         "type": "ui_group",
         "name": "Operators Score",
         "tab": "d36058f98fbac69f",
-        "order": 13,
+        "order": 18,
         "disp": true,
         "width": "12",
         "collapse": false,
@@ -926,7 +944,7 @@
         "type": "ui_group",
         "name": "Operators QSOs",
         "tab": "d36058f98fbac69f",
-        "order": 18,
+        "order": 13,
         "disp": true,
         "width": "12",
         "collapse": false,
@@ -1975,7 +1993,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1620,
+        "x": 1560,
         "y": 200,
         "wires": [
             []
@@ -2054,7 +2072,7 @@
         "z": "bedd4acdc0e27dab",
         "name": "QRZ DB Lookup",
         "method": "GET",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
         "url": "https://xmldata.qrz.com/xml/current/?s={{{qrzkey}}};callsign={{{payload.call}}}",
         "tls": "",
@@ -2101,25 +2119,47 @@
         "id": "635e74837740d203",
         "type": "switch",
         "z": "bedd4acdc0e27dab",
-        "name": "Error Null?",
-        "property": "msg.payload.QRZDatabase.Session[0].Error",
+        "name": "Error?",
+        "property": "payload.QRZDatabase.Session[0].Error[0]",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "null"
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
             },
             {
-                "t": "nnull"
+                "t": "cont",
+                "v": "Not found",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Session Timeout",
+                "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
-        "x": 1570,
+        "outputs": 4,
+        "x": 1550,
         "y": 260,
         "wires": [
-            [],
-            []
+            [
+                "ce43ae734fc9b55d"
+            ],
+            [
+                "762f1749209f9ccf"
+            ],
+            [
+                "c494da870b130807"
+            ],
+            [
+                "f19991685165c4fc"
+            ]
         ]
     },
     {
@@ -2144,7 +2184,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1320,
+        "x": 1300,
         "y": 200,
         "wires": [
             [],
@@ -2181,7 +2221,9 @@
             [
                 "4982fd45c8dc3e9b"
             ],
-            []
+            [
+                "56c14f131ce916b6"
+            ]
         ]
     },
     {
@@ -2199,6 +2241,769 @@
                 "635e74837740d203"
             ]
         ]
+    },
+    {
+        "id": "e0bf55106eef7d29",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "Original Payload Copy",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.contactinfo",
+                "pt": "msg",
+                "to": "original",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.call",
+                "pt": "msg",
+                "to": "original.call[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 700,
+        "wires": [
+            [
+                "291a0fe954156e5c"
+            ]
+        ]
+    },
+    {
+        "id": "291a0fe954156e5c",
+        "type": "http request",
+        "z": "bedd4acdc0e27dab",
+        "name": "QSO Hamdb Lookup",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api.hamdb.org/{{payload.call}}/json/nodered",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 1020,
+        "y": 700,
+        "wires": [
+            [
+                "af774bfa8f3fc940"
+            ]
+        ]
+    },
+    {
+        "id": "9440ea3aa843027d",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.hamdb.callsign.call",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.hamdb.callsign.lat",
+                "pt": "msg",
+                "to": "payload.lat",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.hamdb.callsign.lon",
+                "pt": "msg",
+                "to": "payload.lon",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.hamdb",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ttl",
+                "pt": "msg",
+                "to": "ttl",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload.op",
+                "pt": "msg",
+                "to": "original.operator[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "original.band[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.mode",
+                "pt": "msg",
+                "to": "original.mode[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.isrunqso",
+                "pt": "msg",
+                "to": "original.IsRunQSO[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.exchange",
+                "pt": "msg",
+                "to": "original.exchange1[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.section",
+                "pt": "msg",
+                "to": "original.section[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56c14f131ce916b6",
+        "type": "switch",
+        "z": "bedd4acdc0e27dab",
+        "name": "Which Lookup DB?",
+        "property": "dblookup",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "hamdb",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "qrz",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 720,
+        "wires": [
+            [
+                "e0bf55106eef7d29"
+            ],
+            [
+                "6eddfa603c38dddc"
+            ]
+        ]
+    },
+    {
+        "id": "6eddfa603c38dddc",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "Original Payload Copy",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.contactinfo",
+                "pt": "msg",
+                "to": "original",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.call",
+                "pt": "msg",
+                "to": "original.call[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 760,
+        "wires": [
+            [
+                "b11f205691fffc5f"
+            ]
+        ]
+    },
+    {
+        "id": "310eb7063e3326df",
+        "type": "http request",
+        "z": "bedd4acdc0e27dab",
+        "name": "QRZ DB Lookup",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://xmldata.qrz.com/xml/current/?s={{{qrzkey}}};callsign={{{payload.call}}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 1200,
+        "y": 760,
+        "wires": [
+            [
+                "4b3ac2c8d45d7379"
+            ]
+        ]
+    },
+    {
+        "id": "b11f205691fffc5f",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "Set Key & Payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "qrzkey",
+                "pt": "msg",
+                "to": "qrzkey",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 760,
+        "wires": [
+            [
+                "310eb7063e3326df"
+            ]
+        ]
+    },
+    {
+        "id": "4b3ac2c8d45d7379",
+        "type": "xml",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1370,
+        "y": 760,
+        "wires": [
+            [
+                "6565ab818b55c9c3"
+            ]
+        ]
+    },
+    {
+        "id": "ce43ae734fc9b55d",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.QRZDatabase.Callsign[0].call[0]",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.QRZDatabase.Callsign[0].lat[0]",
+                "pt": "msg",
+                "to": "payload.lat",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.QRZDatabase.Callsign[0].lon[0]",
+                "pt": "msg",
+                "to": "payload.lon",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.QRZDatabase",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ttl",
+                "pt": "msg",
+                "to": "ttl",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload.op",
+                "pt": "msg",
+                "to": "original.operator[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "original.band[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.mode",
+                "pt": "msg",
+                "to": "original.mode[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.isrunqso",
+                "pt": "msg",
+                "to": "original.IsRunQSO[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.exchange",
+                "pt": "msg",
+                "to": "original.exchange1[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.section",
+                "pt": "msg",
+                "to": "original.section[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ID",
+                "pt": "msg",
+                "to": "original.ID[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1890,
+        "y": 260,
+        "wires": [
+            [
+                "6ddd40d0ad448153"
+            ]
+        ]
+    },
+    {
+        "id": "dc2d5356e4a024aa",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.QRZDatabase.Callsign[0].call[0]",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.QRZDatabase.Callsign[0].lat[0]",
+                "pt": "msg",
+                "to": "payload.lat",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.QRZDatabase.Callsign[0].lon[0]",
+                "pt": "msg",
+                "to": "payload.lon",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.QRZDatabase",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ttl",
+                "pt": "msg",
+                "to": "ttl",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload.op",
+                "pt": "msg",
+                "to": "original.operator[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "original.band[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.mode",
+                "pt": "msg",
+                "to": "original.mode[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.isrunqso",
+                "pt": "msg",
+                "to": "original.IsRunQSO[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.exchange",
+                "pt": "msg",
+                "to": "original.exchange1[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.section",
+                "pt": "msg",
+                "to": "original.section[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1780,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6565ab818b55c9c3",
+        "type": "switch",
+        "z": "bedd4acdc0e27dab",
+        "name": "Error Null?",
+        "property": "payload.QRZDatabase.Session[0].Error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1530,
+        "y": 760,
+        "wires": [
+            [
+                "dc2d5356e4a024aa"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "af774bfa8f3fc940",
+        "type": "switch",
+        "z": "bedd4acdc0e27dab",
+        "name": "Is Error?",
+        "property": "payload.hamdb.messages.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "NOT_FOUND",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1340,
+        "y": 700,
+        "wires": [
+            [
+                "9440ea3aa843027d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "762f1749209f9ccf",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "original.ID[0]",
+                "pt": "msg",
+                "to": "payload.ID",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.isbusted",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            },
+            {
+                "t": "delete",
+                "p": "payload.QRZDatabase",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1820,
+        "y": 360,
+        "wires": [
+            [
+                "e770e56154542cdd",
+                "c0c81bc9589bbb2e"
+            ]
+        ]
+    },
+    {
+        "id": "e770e56154542cdd",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1990,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c494da870b130807",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "QRZ Session Timeout.  Relogin to QRZ.com on the configuration tab.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1780,
+        "y": 460,
+        "wires": [
+            [
+                "3df3ddad593e6199",
+                "e995fea5e9a4c6e2"
+            ]
+        ]
+    },
+    {
+        "id": "41573a33ce16bc93",
+        "type": "ui_toast",
+        "z": "bedd4acdc0e27dab",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "QRZ Session Timeout Notification",
+        "x": 2440,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f19991685165c4fc",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "c0c81bc9589bbb2e",
+        "type": "template",
+        "z": "bedd4acdc0e27dab",
+        "name": "Update isbusted DB",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "update qsos\nset isbusted='1'\nwhere ID='{{{payload.ID}}}';",
+        "output": "str",
+        "x": 2180,
+        "y": 360,
+        "wires": [
+            [
+                "ae62ec7640f60321"
+            ]
+        ]
+    },
+    {
+        "id": "ae62ec7640f60321",
+        "type": "sqlite",
+        "z": "bedd4acdc0e27dab",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "N1MM QSOs",
+        "x": 2790,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ddd40d0ad448153",
+        "type": "template",
+        "z": "bedd4acdc0e27dab",
+        "name": "Update lat & lon DB",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "update qsos set lon='{{{payload.lon}}}', lat='{{{payload.lat}}}' where ID='{{{payload.ID}}}';",
+        "output": "str",
+        "x": 2170,
+        "y": 260,
+        "wires": [
+            [
+                "ae62ec7640f60321"
+            ]
+        ]
+    },
+    {
+        "id": "3df3ddad593e6199",
+        "type": "delay",
+        "z": "bedd4acdc0e27dab",
+        "name": "1 Msg Per Hour",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "hour",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2140,
+        "y": 460,
+        "wires": [
+            [
+                "41573a33ce16bc93"
+            ]
+        ]
+    },
+    {
+        "id": "e995fea5e9a4c6e2",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2060,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "064be844b3de8cf5",
+        "type": "comment",
+        "z": "bedd4acdc0e27dab",
+        "name": "Insert isbusted = 1 for busted call",
+        "info": "",
+        "x": 2190,
+        "y": 320,
+        "wires": []
     },
     {
         "id": "97a1a482a165f0be",
@@ -2478,7 +3283,8 @@
         "wires": [
             [],
             [
-                "eb3ca470d3edfd9b"
+                "eb3ca470d3edfd9b",
+                "a8e1841366ca9ba1"
             ]
         ]
     },
@@ -2514,7 +3320,7 @@
         "y": 2740,
         "wires": [
             [
-                "3fdf8e2946d8054f"
+                "2e2e0467ab7359da"
             ]
         ]
     },
@@ -2571,31 +3377,6 @@
         ]
     },
     {
-        "id": "3fdf8e2946d8054f",
-        "type": "moment",
-        "z": "4a77ed092d5e5141",
-        "name": "",
-        "topic": "",
-        "input": "payload",
-        "inputType": "msg",
-        "inTz": "America/Chicago",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "YYYY-MM-DD HH:MM:SS",
-        "locale": "en-GB",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "ETC/UTC",
-        "x": 620,
-        "y": 2740,
-        "wires": [
-            [
-                "2e2e0467ab7359da"
-            ]
-        ]
-    },
-    {
         "id": "8d0919f303d09a6c",
         "type": "udp out",
         "z": "4a77ed092d5e5141",
@@ -2607,7 +3388,7 @@
         "outport": "",
         "base64": false,
         "multicast": "false",
-        "x": 1660,
+        "x": 1640,
         "y": 260,
         "wires": []
     },
@@ -3689,7 +4470,7 @@
         "type": "debug",
         "z": "4a77ed092d5e5141",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3837,6 +4618,430 @@
         "wires": []
     },
     {
+        "id": "a8e1841366ca9ba1",
+        "type": "debug",
+        "z": "4a77ed092d5e5141",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1e5d975d4f33a469",
+        "type": "udp in",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "iface": "",
+        "port": "12061",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "8d88aedc41864cf8"
+            ]
+        ]
+    },
+    {
+        "id": "7d228ea50d42e333",
+        "type": "debug",
+        "z": "1c66bd27e16a3fec",
+        "name": "QSO Data Raw",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "95dee3dbb21d6492",
+        "type": "comment",
+        "z": "1c66bd27e16a3fec",
+        "name": "QSO's In from N1MM",
+        "info": "",
+        "x": 380,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1af14f7f89b29f60",
+        "type": "template",
+        "z": "1c66bd27e16a3fec",
+        "name": "Insert info DB",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "insert into qsos (app, contestname, contestnr, timestamp, mycall, band, \nrxfreq, txfreq, operator, mode, call, countryprefix, wpxprefix, stationprefix,\ncontinent, snt, sntnr, rcv, rcvnr, gridsquare, exchange1, section, comment, qth, name, power, \nmisctext, zone, prec, ck, ismultiplier1, ismultiplier2, ismultiplier3,\npoints, radionr, run1run2, RoverLocation, RadioInterfaced, NetworkedCompNr, IsOriginal,\nNetBiosName, IsRunQSO, StationName, ID, IsClaimedQso) values \n('{{{payload.contactinfo.app}}}',\n'{{{payload.contactinfo.contestname}}}',\n'{{{payload.contactinfo.contestnr}}}',\n'{{{payload.contactinfo.timestamp}}}',\n'{{{payload.contactinfo.mycall}}}',\n'{{{payload.contactinfo.band}}}',\n'{{{payload.contactinfo.rxfreq}}}',\n'{{{payload.contactinfo.txfreq}}}',\n'{{{payload.contactinfo.operator}}}',\n'{{{payload.contactinfo.mode}}}',\n'{{{payload.contactinfo.call}}}',\n'{{{payload.contactinfo.countryprefix}}}',\n'{{{payload.contactinfo.wpxprefix}}}',\n'{{{payload.contactinfo.stationprefix}}}',\n'{{{payload.contactinfo.continent}}}',\n'{{{payload.contactinfo.snt}}}',\n'{{{payload.contactinfo.sntnr}}}',\n'{{{payload.contactinfo.rcv}}}',\n'{{{payload.contactinfo.rcvnr}}}',\n'{{{payload.contactinfo.gridsquare}}}',\n'{{{payload.contactinfo.exchange1}}}',\n'{{{payload.contactinfo.section}}}',\n'{{{payload.contactinfo.comment}}}',\n'{{{payload.contactinfo.qth}}}',\n'{{{payload.contactinfo.name}}}',\n'{{{payload.contactinfo.power}}}',\n'{{{payload.contactinfo.misctext}}}',\n'{{{payload.contactinfo.zone}}}',\n'{{{payload.contactinfo.prec}}}',\n'{{{payload.contactinfo.ck}}}',\n'{{{payload.contactinfo.ismultiplier1}}}',\n'{{{payload.contactinfo.ismultiplier2}}}',\n'{{{payload.contactinfo.ismultiplier3}}}',\n'{{{payload.contactinfo.points}}}',\n'{{{payload.contactinfo.radionr}}}',\n'{{{payload.contactinfo.run1run2}}}',\n'{{{payload.contactinfo.RoverLocation}}}',\n'{{{payload.contactinfo.RadioInterfaced}}}',\n'{{{payload.contactinfo.NetworkedCompNr}}}',\n'{{{payload.contactinfo.IsOriginal}}}',\n'{{{payload.contactinfo.NetBiosName}}}',\n'{{{payload.contactinfo.IsRunQSO}}}',\n'{{{payload.contactinfo.StationName}}}',\n'{{{payload.contactinfo.ID}}}',\n'{{{payload.contactinfo.IsClaimedQso}}}');\n\n",
+        "output": "str",
+        "x": 1200,
+        "y": 320,
+        "wires": [
+            [
+                "589f1d4180adfc19",
+                "826117837339278a"
+            ]
+        ]
+    },
+    {
+        "id": "589f1d4180adfc19",
+        "type": "sqlite",
+        "z": "1c66bd27e16a3fec",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "N1MM QSOs",
+        "x": 1590,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63b9afc11deec0ca",
+        "type": "switch",
+        "z": "1c66bd27e16a3fec",
+        "name": "Add - Delete - Replace",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "contactinfo",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "contactdelete",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "contactreplace",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 680,
+        "y": 360,
+        "wires": [
+            [
+                "407e8deceb6ad9d3"
+            ],
+            [
+                "71ba52668f48ab6c"
+            ],
+            [
+                "740fa20ee427ed88"
+            ]
+        ]
+    },
+    {
+        "id": "40f7b8d29f1a593a",
+        "type": "template",
+        "z": "1c66bd27e16a3fec",
+        "name": "Delete QSO",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "delete from qsos where ID=('{{{payload.contactdelete.ID}}}');",
+        "output": "str",
+        "x": 1290,
+        "y": 360,
+        "wires": [
+            [
+                "589f1d4180adfc19",
+                "812f9d1a536fe289"
+            ]
+        ]
+    },
+    {
+        "id": "826117837339278a",
+        "type": "debug",
+        "z": "1c66bd27e16a3fec",
+        "name": "DB Insert",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a8d691c04ea6cbf7",
+        "type": "string",
+        "z": "1c66bd27e16a3fec",
+        "name": "Replace - ",
+        "methods": [
+            {
+                "name": "replaceAll",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "-"
+                    },
+                    {
+                        "type": "str",
+                        "value": ""
+                    }
+                ]
+            }
+        ],
+        "prop": "payload.contactdelete.ID",
+        "propout": "payload.contactdelete.ID",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 1120,
+        "y": 360,
+        "wires": [
+            [
+                "40f7b8d29f1a593a"
+            ]
+        ]
+    },
+    {
+        "id": "33f7f725b5fb698a",
+        "type": "template",
+        "z": "1c66bd27e16a3fec",
+        "name": "Replaced info DB",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "insert into qsos (app, contestname, contestnr, timestamp, mycall, band, \nrxfreq, txfreq, operator, mode, call, countryprefix, wpxprefix, stationprefix,\ncontinent, snt, sntnr, rcv, rcvnr, gridsquare, exchange1, section, comment, qth, name, power, \nmisctext, zone, prec, ck, ismultiplier1, ismultiplier2, ismultiplier3,\npoints, radionr, run1run2, RoverLocation, RadioInterfaced, NetworkedCompNr, IsOriginal,\nNetBiosName, IsRunQSO, StationName, ID, IsClaimedQso) values \n('{{{payload.contactreplace.app}}}',\n'{{{payload.contactreplace.contestname}}}',\n'{{{payload.contactreplace.contestnr}}}',\n'{{{payload.contactreplace.timestamp}}}',\n'{{{payload.contactreplace.mycall}}}',\n'{{{payload.contactreplace.band}}}',\n'{{{payload.contactreplace.rxfreq}}}',\n'{{{payload.contactreplace.txfreq}}}',\n'{{{payload.contactreplace.operator}}}',\n'{{{payload.contactreplace.mode}}}',\n'{{{payload.contactreplace.call}}}',\n'{{{payload.contactreplace.countryprefix}}}',\n'{{{payload.contactreplace.wpxprefix}}}',\n'{{{payload.contactreplace.stationprefix}}}',\n'{{{payload.contactreplace.continent}}}',\n'{{{payload.contactreplace.snt}}}',\n'{{{payload.contactreplace.sntnr}}}',\n'{{{payload.contactreplace.rcv}}}',\n'{{{payload.contactreplace.rcvnr}}}',\n'{{{payload.contactreplace.gridsquare}}}',\n'{{{payload.contactreplace.exchange1}}}',\n'{{{payload.contactreplace.section}}}',\n'{{{payload.contactreplace.comment}}}',\n'{{{payload.contactreplace.qth}}}',\n'{{{payload.contactreplace.name}}}',\n'{{{payload.contactreplace.power}}}',\n'{{{payload.contactreplace.misctext}}}',\n'{{{payload.contactreplace.zone}}}',\n'{{{payload.contactreplace.prec}}}',\n'{{{payload.contactreplace.ck}}}',\n'{{{payload.contactreplace.ismultiplier1}}}',\n'{{{payload.contactreplace.ismultiplier2}}}',\n'{{{payload.contactreplace.ismultiplier3}}}',\n'{{{payload.contactreplace.points}}}',\n'{{{payload.contactreplace.radionr}}}',\n'{{{payload.contactreplace.run1run2}}}',\n'{{{payload.contactreplace.RoverLocation}}}',\n'{{{payload.contactreplace.RadioInterfaced}}}',\n'{{{payload.contactreplace.NetworkedCompNr}}}',\n'{{{payload.contactreplace.IsOriginal}}}',\n'{{{payload.contactreplace.NetBiosName}}}',\n'{{{payload.contactreplace.IsRunQSO}}}',\n'{{{payload.contactreplace.StationName}}}',\n'{{{payload.contactreplace.ID}}}',\n'{{{payload.contactreplace.IsClaimedQso}}}');\n\n",
+        "output": "str",
+        "x": 1270,
+        "y": 520,
+        "wires": [
+            [
+                "589f1d4180adfc19",
+                "ec8cad684cf4500a"
+            ]
+        ]
+    },
+    {
+        "id": "4ae0a908ac9a4dce",
+        "type": "delay",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 520,
+        "wires": [
+            [
+                "33f7f725b5fb698a"
+            ]
+        ]
+    },
+    {
+        "id": "ec8cad684cf4500a",
+        "type": "debug",
+        "z": "1c66bd27e16a3fec",
+        "name": "DB Replace",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1530,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "812f9d1a536fe289",
+        "type": "debug",
+        "z": "1c66bd27e16a3fec",
+        "name": "DB Delete",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "740fa20ee427ed88",
+        "type": "xml",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 910,
+        "y": 520,
+        "wires": [
+            [
+                "4ae0a908ac9a4dce"
+            ]
+        ]
+    },
+    {
+        "id": "71ba52668f48ab6c",
+        "type": "xml",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 930,
+        "y": 360,
+        "wires": [
+            [
+                "a8d691c04ea6cbf7"
+            ]
+        ]
+    },
+    {
+        "id": "407e8deceb6ad9d3",
+        "type": "xml",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 930,
+        "y": 320,
+        "wires": [
+            [
+                "1af14f7f89b29f60",
+                "8643e8fa28502256",
+                "91e3a9b7825238b6"
+            ]
+        ]
+    },
+    {
+        "id": "2603d7c7f6cdeeb9",
+        "type": "play audio",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "voice": "5",
+        "x": 1650,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "91e3a9b7825238b6",
+        "type": "function",
+        "z": "1c66bd27e16a3fec",
+        "name": "If Mult Say Mult",
+        "func": "let m1 = msg.payload.contactinfo.ismultiplier1[0];\nlet m2 = msg.payload.contactinfo.ismultiplier2[0];\nlet m3 = msg.payload.contactinfo.ismultiplier3[0];\n\n\n\nif (m1 == \"1\" || m2 == '1' || m3 == '1')\n{\n    \n    let x = msg.payload.contactinfo.operator[0];\n    let y = msg.payload.contactinfo.band[0];\n    let xy = \"New Multiplyer from \" + x;\n    msg.payload = xy;\n\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 220,
+        "wires": [
+            [
+                "2603d7c7f6cdeeb9"
+            ]
+        ]
+    },
+    {
+        "id": "677d263669792c2d",
+        "type": "link out",
+        "z": "1c66bd27e16a3fec",
+        "name": "QSOs From N1MM OUT",
+        "mode": "link",
+        "links": [
+            "e4e81a5987819415"
+        ],
+        "x": 1315,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8643e8fa28502256",
+        "type": "change",
+        "z": "1c66bd27e16a3fec",
+        "name": "Set Type to QSO",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.type",
+                "pt": "msg",
+                "to": "qso",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 100,
+        "wires": [
+            [
+                "677d263669792c2d"
+            ]
+        ]
+    },
+    {
+        "id": "8d88aedc41864cf8",
+        "type": "function",
+        "z": "1c66bd27e16a3fec",
+        "name": "UTF8",
+        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "63b9afc11deec0ca",
+                "7d228ea50d42e333"
+            ]
+        ]
+    },
+    {
         "id": "6961ddaf.bce294",
         "type": "switch",
         "z": "407d2b774fe67647",
@@ -3891,8 +5096,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 9,
-        "x": 1600,
-        "y": 520,
+        "x": 820,
+        "y": 320,
         "wires": [
             [
                 "1f6207d2.7e1b88"
@@ -3965,8 +5170,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 2140,
-        "y": 500,
+        "x": 1380,
+        "y": 300,
         "wires": [
             [
                 "29346b4d.ba3fc4"
@@ -4021,8 +5226,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
-        "y": 380,
+        "x": 1130,
+        "y": 180,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4062,8 +5267,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
-        "y": 420,
+        "x": 1130,
+        "y": 220,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4103,8 +5308,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
-        "y": 460,
+        "x": 1140,
+        "y": 260,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4144,8 +5349,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
-        "y": 500,
+        "x": 1140,
+        "y": 300,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4185,8 +5390,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
-        "y": 540,
+        "x": 1130,
+        "y": 340,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4226,8 +5431,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
-        "y": 580,
+        "x": 1130,
+        "y": 380,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4267,8 +5472,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
-        "y": 620,
+        "x": 1140,
+        "y": 420,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4308,8 +5513,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
-        "y": 660,
+        "x": 1140,
+        "y": 460,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4342,8 +5547,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
-        "y": 700,
+        "x": 1140,
+        "y": 500,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -4369,8 +5574,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2340,
-        "y": 460,
+        "x": 1580,
+        "y": 260,
         "wires": [
             [
                 "c9f5c786.410838"
@@ -4396,8 +5601,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2350,
-        "y": 500,
+        "x": 1590,
+        "y": 300,
         "wires": [
             [
                 "c9f5c786.410838"
@@ -4423,8 +5628,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2350,
-        "y": 540,
+        "x": 1590,
+        "y": 340,
         "wires": [
             [
                 "c9f5c786.410838"
@@ -4450,8 +5655,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2340,
-        "y": 580,
+        "x": 1580,
+        "y": 380,
         "wires": [
             [
                 "c9f5c786.410838"
@@ -4473,7 +5678,7 @@
         "layer": "OSMG",
         "cluster": "",
         "maxage": "",
-        "usermenu": "show",
+        "usermenu": "hide",
         "layers": "show",
         "panit": "false",
         "panlock": "false",
@@ -4489,8 +5694,8 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 2970,
-        "y": 420,
+        "x": 2190,
+        "y": 140,
         "wires": []
     },
     {
@@ -4498,14 +5703,14 @@
         "type": "function",
         "z": "407d2b774fe67647",
         "name": "Label +  Add Multis + Exchange",
-        "func": "msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nreturn msg;\n\n//37.959110, -91.227360",
+        "func": "msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2630,
-        "y": 520,
+        "x": 1870,
+        "y": 320,
         "wires": [
             [
                 "2f1bf610.d7c76a",
@@ -4529,8 +5734,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3900,
-        "y": 360,
+        "x": 3120,
+        "y": 80,
         "wires": []
     },
     {
@@ -4546,8 +5751,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.mode}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3910,
-        "y": 400,
+        "x": 3130,
+        "y": 120,
         "wires": []
     },
     {
@@ -4563,8 +5768,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.exchange}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3920,
-        "y": 480,
+        "x": 3140,
+        "y": 200,
         "wires": []
     },
     {
@@ -4587,8 +5792,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3020,
-        "y": 480,
+        "x": 2240,
+        "y": 200,
         "wires": [
             [
                 "689d9371.ad2e0c"
@@ -4617,8 +5822,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3350,
-        "y": 420,
+        "x": 2570,
+        "y": 140,
         "wires": [
             [
                 "586d604ba6bb4097"
@@ -4644,8 +5849,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3340,
-        "y": 460,
+        "x": 2560,
+        "y": 180,
         "wires": [
             [
                 "586d604ba6bb4097"
@@ -4665,8 +5870,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.band}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3910,
-        "y": 440,
+        "x": 3130,
+        "y": 160,
         "wires": []
     },
     {
@@ -4691,8 +5896,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2990,
-        "y": 680,
+        "x": 2210,
+        "y": 400,
         "wires": [
             [
                 "26d6dfc5398aed9a",
@@ -4711,8 +5916,8 @@
         "name": "",
         "persistId": "",
         "humanizeLocale": "",
-        "x": 3460,
-        "y": 760,
+        "x": 2680,
+        "y": 480,
         "wires": [
             [
                 "46edf21ad9fe8580"
@@ -4730,8 +5935,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3640,
-        "y": 760,
+        "x": 2860,
+        "y": 480,
         "wires": [
             [
                 "5a216be2bdc202b8"
@@ -4760,8 +5965,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "str",
-        "x": 3240,
-        "y": 640,
+        "x": 2460,
+        "y": 360,
         "wires": [
             [
                 "c4ca101c43ab8cb0",
@@ -4782,8 +5987,8 @@
         "format": "<font size = 50 font color=#FF8C00>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3860,
-        "y": 600,
+        "x": 3080,
+        "y": 320,
         "wires": []
     },
     {
@@ -4793,8 +5998,8 @@
         "name": "",
         "persistId": "",
         "humanizeLocale": "",
-        "x": 3460,
-        "y": 600,
+        "x": 2680,
+        "y": 320,
         "wires": [
             [
                 "78b62d696464ca78"
@@ -4812,8 +6017,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3640,
-        "y": 600,
+        "x": 2860,
+        "y": 320,
         "wires": [
             [
                 "6697e03dc0ecce50"
@@ -4839,8 +6044,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3290,
-        "y": 600,
+        "x": 2510,
+        "y": 320,
         "wires": [
             [
                 "1c23e47818d36917"
@@ -4866,8 +6071,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3290,
-        "y": 760,
+        "x": 2510,
+        "y": 480,
         "wires": [
             [
                 "c4ca101c43ab8cb0"
@@ -4887,8 +6092,8 @@
         "format": "<font size = 50 font color=#008000>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3880,
-        "y": 760,
+        "x": 3100,
+        "y": 480,
         "wires": []
     },
     {
@@ -4904,8 +6109,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3880,
-        "y": 880,
+        "x": 3100,
+        "y": 600,
         "wires": []
     },
     {
@@ -4915,8 +6120,8 @@
         "name": "",
         "persistId": "",
         "humanizeLocale": "",
-        "x": 3460,
-        "y": 880,
+        "x": 2680,
+        "y": 600,
         "wires": [
             [
                 "a0658e82121731a8"
@@ -4934,8 +6139,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3640,
-        "y": 880,
+        "x": 2860,
+        "y": 600,
         "wires": [
             [
                 "d253cee5fb3ba4b9"
@@ -4961,8 +6166,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3290,
-        "y": 880,
+        "x": 2510,
+        "y": 600,
         "wires": [
             [
                 "b77db70e05f8b1d9"
@@ -4986,8 +6191,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3010,
-        "y": 880,
+        "x": 2230,
+        "y": 600,
         "wires": [
             [
                 "774ff0257828e8ad"
@@ -5015,8 +6220,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 3260,
-        "y": 920,
+        "x": 2480,
+        "y": 640,
         "wires": [
             [
                 "b77db70e05f8b1d9"
@@ -5036,8 +6241,8 @@
         "format": "<font size = 50 font color=#FF8C00>{{msg.payload.name}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3280,
-        "y": 560,
+        "x": 2500,
+        "y": 280,
         "wires": []
     },
     {
@@ -5053,8 +6258,8 @@
         "format": "<font size = 50 font color=#008000>{{msg.payload.name}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3280,
-        "y": 800,
+        "x": 2500,
+        "y": 520,
         "wires": []
     },
     {
@@ -5065,8 +6270,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 2390,
-        "y": 160,
+        "x": 2630,
+        "y": 1200,
         "wires": [
             [
                 "1dbe4e5a3370d2f2",
@@ -5094,8 +6299,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 1770,
-        "y": 160,
+        "x": 2010,
+        "y": 1200,
         "wires": [
             [
                 "d3b97c2f3316c129"
@@ -5113,8 +6318,8 @@
         "syntax": "mustache",
         "template": "select count(*) as rate from qsos where timestamp >= datetime('now','-1 hours');",
         "output": "str",
-        "x": 2190,
-        "y": 160,
+        "x": 2430,
+        "y": 1200,
         "wires": [
             [
                 "b829243f42385969"
@@ -5134,8 +6339,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.rate}}</font><font size = 4 font color={{msg.color}}> Q's/Hr</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3010,
-        "y": 180,
+        "x": 3250,
+        "y": 1220,
         "wires": []
     },
     {
@@ -5144,8 +6349,8 @@
         "z": "407d2b774fe67647",
         "name": "Calc Current QSO Rate",
         "info": "",
-        "x": 2040,
-        "y": 100,
+        "x": 2280,
+        "y": 1140,
         "wires": []
     },
     {
@@ -5170,8 +6375,8 @@
         "onceDelay": "1",
         "topic": "",
         "payloadType": "str",
-        "x": 3250,
-        "y": 680,
+        "x": 2470,
+        "y": 400,
         "wires": [
             [
                 "c4ca101c43ab8cb0",
@@ -5200,8 +6405,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 3270,
-        "y": 960,
+        "x": 2490,
+        "y": 680,
         "wires": [
             [
                 "b77db70e05f8b1d9"
@@ -5684,8 +6889,8 @@
         "order": 3,
         "width": 5,
         "height": 3,
-        "name": "Total Multi's",
-        "label": "<font size = 6>Multipliers",
+        "name": "Total Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 50>{{payload.totalmult}}</font>",
         "layout": "col-center",
         "className": "",
@@ -5785,379 +6990,6 @@
         "wires": []
     },
     {
-        "id": "25d63b2bc12f4b62",
-        "type": "udp in",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "iface": "",
-        "port": "12061",
-        "ipv": "udp4",
-        "multicast": "false",
-        "group": "",
-        "datatype": "utf8",
-        "x": 160,
-        "y": 260,
-        "wires": [
-            [
-                "3a78ced649465625"
-            ]
-        ]
-    },
-    {
-        "id": "e7bcb7273689d6d7",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "QSO Data Raw",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "e3399b91cce6fc2a",
-        "type": "comment",
-        "z": "407d2b774fe67647",
-        "name": "QSO's In from N1MM",
-        "info": "",
-        "x": 220,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "f23918ae1931d906",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "name": "Insert info DB",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "insert into qsos (app, contestname, contestnr, timestamp, mycall, band, \nrxfreq, txfreq, operator, mode, call, countryprefix, wpxprefix, stationprefix,\ncontinent, snt, sntnr, rcv, rcvnr, gridsquare, exchange1, section, comment, qth, name, power, \nmisctext, zone, prec, ck, ismultiplier1, ismultiplier2, ismultiplier3,\npoints, radionr, run1run2, RoverLocation, RadioInterfaced, NetworkedCompNr, IsOriginal,\nNetBiosName, IsRunQSO, StationName, ID, IsClaimedQso) values \n('{{{payload.contactinfo.app}}}',\n'{{{payload.contactinfo.contestname}}}',\n'{{{payload.contactinfo.contestnr}}}',\n'{{{payload.contactinfo.timestamp}}}',\n'{{{payload.contactinfo.mycall}}}',\n'{{{payload.contactinfo.band}}}',\n'{{{payload.contactinfo.rxfreq}}}',\n'{{{payload.contactinfo.txfreq}}}',\n'{{{payload.contactinfo.operator}}}',\n'{{{payload.contactinfo.mode}}}',\n'{{{payload.contactinfo.call}}}',\n'{{{payload.contactinfo.countryprefix}}}',\n'{{{payload.contactinfo.wpxprefix}}}',\n'{{{payload.contactinfo.stationprefix}}}',\n'{{{payload.contactinfo.continent}}}',\n'{{{payload.contactinfo.snt}}}',\n'{{{payload.contactinfo.sntnr}}}',\n'{{{payload.contactinfo.rcv}}}',\n'{{{payload.contactinfo.rcvnr}}}',\n'{{{payload.contactinfo.gridsquare}}}',\n'{{{payload.contactinfo.exchange1}}}',\n'{{{payload.contactinfo.section}}}',\n'{{{payload.contactinfo.comment}}}',\n'{{{payload.contactinfo.qth}}}',\n'{{{payload.contactinfo.name}}}',\n'{{{payload.contactinfo.power}}}',\n'{{{payload.contactinfo.misctext}}}',\n'{{{payload.contactinfo.zone}}}',\n'{{{payload.contactinfo.prec}}}',\n'{{{payload.contactinfo.ck}}}',\n'{{{payload.contactinfo.ismultiplier1}}}',\n'{{{payload.contactinfo.ismultiplier2}}}',\n'{{{payload.contactinfo.ismultiplier3}}}',\n'{{{payload.contactinfo.points}}}',\n'{{{payload.contactinfo.radionr}}}',\n'{{{payload.contactinfo.run1run2}}}',\n'{{{payload.contactinfo.RoverLocation}}}',\n'{{{payload.contactinfo.RadioInterfaced}}}',\n'{{{payload.contactinfo.NetworkedCompNr}}}',\n'{{{payload.contactinfo.IsOriginal}}}',\n'{{{payload.contactinfo.NetBiosName}}}',\n'{{{payload.contactinfo.IsRunQSO}}}',\n'{{{payload.contactinfo.StationName}}}',\n'{{{payload.contactinfo.ID}}}',\n'{{{payload.contactinfo.IsClaimedQso}}}');\n\n",
-        "output": "str",
-        "x": 1040,
-        "y": 220,
-        "wires": [
-            [
-                "5f3a102b8073cd89",
-                "c0fcd8e02e638258"
-            ]
-        ]
-    },
-    {
-        "id": "5f3a102b8073cd89",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "N1MM QSOs",
-        "x": 1530,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d844a6f3cc25d06e",
-        "type": "switch",
-        "z": "407d2b774fe67647",
-        "name": "Add - Delete - Replace",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "contactinfo",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "contactdelete",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "contactreplace",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 580,
-        "y": 260,
-        "wires": [
-            [
-                "6dfa21e4ce13d33e"
-            ],
-            [
-                "356d0bb1d7a7c023"
-            ],
-            [
-                "fdd7e3fa422366e7"
-            ]
-        ]
-    },
-    {
-        "id": "cc5636dc7a5e4512",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "name": "Delete QSO",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "delete from qsos where ID=('{{{payload.contactdelete.ID}}}');",
-        "output": "str",
-        "x": 1130,
-        "y": 260,
-        "wires": [
-            [
-                "5f3a102b8073cd89",
-                "4a4d1e175fd1044e"
-            ]
-        ]
-    },
-    {
-        "id": "c0fcd8e02e638258",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "DB Insert",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1420,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "b1177e34110cfec7",
-        "type": "string",
-        "z": "407d2b774fe67647",
-        "name": "Replace - ",
-        "methods": [
-            {
-                "name": "replaceAll",
-                "params": [
-                    {
-                        "type": "str",
-                        "value": "-"
-                    },
-                    {
-                        "type": "str",
-                        "value": ""
-                    }
-                ]
-            }
-        ],
-        "prop": "payload.contactdelete.ID",
-        "propout": "payload.contactdelete.ID",
-        "object": "msg",
-        "objectout": "msg",
-        "x": 960,
-        "y": 260,
-        "wires": [
-            [
-                "cc5636dc7a5e4512"
-            ]
-        ]
-    },
-    {
-        "id": "b39c200f702e29aa",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "name": "Replaced info DB",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "insert into qsos (app, contestname, contestnr, timestamp, mycall, band, \nrxfreq, txfreq, operator, mode, call, countryprefix, wpxprefix, stationprefix,\ncontinent, snt, sntnr, rcv, rcvnr, gridsquare, exchange1, section, comment, qth, name, power, \nmisctext, zone, prec, ck, ismultiplier1, ismultiplier2, ismultiplier3,\npoints, radionr, run1run2, RoverLocation, RadioInterfaced, NetworkedCompNr, IsOriginal,\nNetBiosName, IsRunQSO, StationName, ID, IsClaimedQso) values \n('{{{payload.contactreplace.app}}}',\n'{{{payload.contactreplace.contestname}}}',\n'{{{payload.contactreplace.contestnr}}}',\n'{{{payload.contactreplace.timestamp}}}',\n'{{{payload.contactreplace.mycall}}}',\n'{{{payload.contactreplace.band}}}',\n'{{{payload.contactreplace.rxfreq}}}',\n'{{{payload.contactreplace.txfreq}}}',\n'{{{payload.contactreplace.operator}}}',\n'{{{payload.contactreplace.mode}}}',\n'{{{payload.contactreplace.call}}}',\n'{{{payload.contactreplace.countryprefix}}}',\n'{{{payload.contactreplace.wpxprefix}}}',\n'{{{payload.contactreplace.stationprefix}}}',\n'{{{payload.contactreplace.continent}}}',\n'{{{payload.contactreplace.snt}}}',\n'{{{payload.contactreplace.sntnr}}}',\n'{{{payload.contactreplace.rcv}}}',\n'{{{payload.contactreplace.rcvnr}}}',\n'{{{payload.contactreplace.gridsquare}}}',\n'{{{payload.contactreplace.exchange1}}}',\n'{{{payload.contactreplace.section}}}',\n'{{{payload.contactreplace.comment}}}',\n'{{{payload.contactreplace.qth}}}',\n'{{{payload.contactreplace.name}}}',\n'{{{payload.contactreplace.power}}}',\n'{{{payload.contactreplace.misctext}}}',\n'{{{payload.contactreplace.zone}}}',\n'{{{payload.contactreplace.prec}}}',\n'{{{payload.contactreplace.ck}}}',\n'{{{payload.contactreplace.ismultiplier1}}}',\n'{{{payload.contactreplace.ismultiplier2}}}',\n'{{{payload.contactreplace.ismultiplier3}}}',\n'{{{payload.contactreplace.points}}}',\n'{{{payload.contactreplace.radionr}}}',\n'{{{payload.contactreplace.run1run2}}}',\n'{{{payload.contactreplace.RoverLocation}}}',\n'{{{payload.contactreplace.RadioInterfaced}}}',\n'{{{payload.contactreplace.NetworkedCompNr}}}',\n'{{{payload.contactreplace.IsOriginal}}}',\n'{{{payload.contactreplace.NetBiosName}}}',\n'{{{payload.contactreplace.IsRunQSO}}}',\n'{{{payload.contactreplace.StationName}}}',\n'{{{payload.contactreplace.ID}}}',\n'{{{payload.contactreplace.IsClaimedQso}}}');\n\n",
-        "output": "str",
-        "x": 1250,
-        "y": 300,
-        "wires": [
-            [
-                "5f3a102b8073cd89",
-                "e272b7393074da39"
-            ]
-        ]
-    },
-    {
-        "id": "d00f42e0b3704fb1",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 1020,
-        "y": 300,
-        "wires": [
-            [
-                "b39c200f702e29aa"
-            ]
-        ]
-    },
-    {
-        "id": "e272b7393074da39",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "DB Replace",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1510,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "4a4d1e175fd1044e",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "DB Delete",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1430,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "fdd7e3fa422366e7",
-        "type": "xml",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 770,
-        "y": 300,
-        "wires": [
-            [
-                "d00f42e0b3704fb1"
-            ]
-        ]
-    },
-    {
-        "id": "356d0bb1d7a7c023",
-        "type": "xml",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 770,
-        "y": 260,
-        "wires": [
-            [
-                "b1177e34110cfec7"
-            ]
-        ]
-    },
-    {
-        "id": "6dfa21e4ce13d33e",
-        "type": "xml",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 770,
-        "y": 220,
-        "wires": [
-            [
-                "90eaf11403679eeb",
-                "8d2583aaf4262451",
-                "f23918ae1931d906",
-                "fedade43117f087a"
-            ]
-        ]
-    },
-    {
-        "id": "90eaf11403679eeb",
-        "type": "switch",
-        "z": "407d2b774fe67647",
-        "name": "If Multi",
-        "property": "payload.contactinfo.ismultiplier1[0]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 930,
-        "y": 120,
-        "wires": [
-            [
-                "edf48a236a32b0d4"
-            ]
-        ]
-    },
-    {
-        "id": "f628b3035f57332b",
-        "type": "play audio",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "voice": "5",
-        "x": 1490,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "edf48a236a32b0d4",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "name": "Say Multi",
-        "func": "let x = msg.payload.contactinfo.operator[0];\nlet y = msg.payload.contactinfo.band[0];\nlet xy = \"New Multiplyer from \" + x;\n\nmsg.payload = xy;\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1080,
-        "y": 120,
-        "wires": [
-            [
-                "f628b3035f57332b"
-            ]
-        ]
-    },
-    {
         "id": "5d82a0a17d0f57ea",
         "type": "udp in",
         "z": "407d2b774fe67647",
@@ -6235,9 +7067,9 @@
         "type": "comment",
         "z": "407d2b774fe67647",
         "name": "Readme First!!!!",
-        "info": "Non-Standard nodes to load to the pallet;\n\nSqlite (will take 15 mins to load on a RasPi)\nPlay Audio\nHourglass\nWorldmap\nGeofence\nmsg-speed\n\n*****************\nAfter loading Sqlite node, we need to build the QSO table in the database. \n\nAt the command prompt User (pi) type the following (everything after the $);\n\n$sqlite3 qsos\n\nThis will create the qsos database and drop you into the database.\n\nNow we have to create a table within the qsos database called qsos.\n\nAt the sqlite> prompt, copy everything below from & including CREATE INDEX down to the semicolon and paste into the database.  This will create a table called qsos and a table named spots.\n\nCREATE TABLE qsos(\n  \"app\" TEXT,\n  \"contestname\" TEXT,\n  \"contestnr\" TEXT,\n  \"timestamp\" TEXT,\n  \"mycall\" TEXT,\n  \"band\" TEXT,\n  \"rxfreq\" TEXT,\n  \"txfreq\" TEXT,\n  \"operator\" TEXT,\n  \"mode\" TEXT,\n  \"call\" TEXT,\n  \"countryprefix\" TEXT,\n  \"wpxprefix\" TEXT,\n  \"stationprefix\" TEXT,\n  \"continent\" TEXT,\n  \"snt\" TEXT,\n  \"sntnr\" TEXT,\n  \"rcv\" TEXT,\n  \"rcvnr\" TEXT,\n  \"gridsquare\" TEXT,\n  \"exchange1\" TEXT,\n  \"section\" TEXT,\n  \"comment\" TEXT,\n  \"qth\" TEXT,\n  \"name\" TEXT,\n  \"power\" TEXT,\n  \"misctext\" TEXT,\n  \"zone\" TEXT,\n  \"prec\" TEXT,\n  \"ck\" TEXT,\n  \"ismultiplier1\" TEXT,\n  \"ismultiplier2\" TEXT,\n  \"ismultiplier3\" TEXT,\n  \"points\" TEXT,\n  \"radionr\" TEXT,\n  \"run1run2\" TEXT,\n  \"RoverLocation\" TEXT,\n  \"RadioInterfaced\" TEXT,\n  \"NetworkedCompNr\" TEXT,\n  \"IsOriginal\" TEXT,\n  \"NetBiosName\" TEXT,\n  \"IsRunQSO\" TEXT,\n  \"StationName\" TEXT,\n  \"ID\" TEXT type UNIQUE,\n  \"IsClaimedQso\" TEXT,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"busted\" TEXT\n);\n\nCREATE TABLE spots(\n  \"call\" TEXT type UNIQUE,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"grid\" TEXT\n);\n\nCREATE INDEX call_idx on spots(call);\n\nType .schema at the carrot prompt to confirm your database structure.  You should see everything above.\n\nType .exit to exit out of the database and return to the Pi command prompt.\n\nsqlite>.exit \n\nYour Node Red local qsos database is now created and ready to go.  Now configure the properties of the SQLite node to create (or confirm) the node is pointing to the qsos database.  There are four (4) N1MM database nodes you need to configure.  In the sqlite node configuration screen, add the qsos database.  Names are case sensitive. \n\nFor your contest stations. in N1MM, within the entry window, click on Config -> Configure Ports, Mode Control, Winkey,etc... -> Broadcast Data.  Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  Place a space after the default IP:Port to start your IP address.\n\nRadio to aaa.bbb.ccc.ddd:12060\nContacts to aaa.bbb.ccc.ddd:12061\nScore to aaa.bbb.ccc.ddd:12062\n\nFor example, the Radio text box should look like this after your done (with the default values still there).\n\n127.0.0.1:12060 192.168.1.30:12060\n\nIn the Station Data switch node (Flow that starts with UDP 12060), you'll need to get N1MM started on all your PC's and determine the station name (typically the hostname of the computer).  You can enable the debug node and drill down into the XML data for StationName to check each UDP packet.  You'll want to get into the node and enter the station name for each of the stations you want to pull data from.\n\nI'm using Hamdb.org to grab the lon/lat for the map.  This database is a free lookup but currently only has US/VE data with a few other select countries.  If you want world wide spots, switch over to the QRZ.com paid XML subscription.\n\nThe time to live pins on the map is set to 3600 seconds (1 hour).  You can change this within the change node after the hamdb lookup.  Be aware a station with high QSO rates, this map will get cluttered very fast and not be very useful.\n\n",
-        "x": 200,
-        "y": 80,
+        "info": "These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command \n\nsudo apt-get install sqlite3\n\nThis will install sqlite3 on to your raspberry pi.\n\n\nNon-Standard nodes to load to the pallet (before you load the .json file)\n\n\"node-red-contrib-hourglass\": \"1.5.0\",\n\"node-red-contrib-msg-speed\": \"2.1.0\",\n\"node-red-contrib-play-audio\": \"2.5.0\",\n\"node-red-node-geofence\": \"0.3.1\",\n\"node-red-node-ping\": \"0.3.1\",\n\"node-red-node-smooth\": \"0.1.2\",\n\"node-red-node-sqlite\": \"1.0.1\", (will take 10 to 15 mins to load on RasPi)\n\"node-red-node-ui-table\": \"0.3.11\",\n\"node-red-contrib-web-worldmap\": \"2.24.0\",\n\"node-red-dashboard\": \"3.1.3\",\n\"node-red-contrib-string\": \"1.0.0\",\n\"node-red-contrib-ui-led\": \"0.4.11\",\n\"node-red-contrib-unit-converter\": \"0.0.2\"\n\n\n\n\n*****************\nAfter loading Sqlite node, we need to build the QSO table in the database. \n\nAt the command prompt User (pi) type the following (everything after the $);\n\n$sqlite3 qsos\n\nThis will create the qsos database and drop you into the database.\n\nNow we have to create a table within the qsos database called qsos.\n\nAt the sqlite> prompt, copy everything below from & including CREATE INDEX down to the semicolon and paste into the database.  This will create a table called qsos and a table named spots.\n\nCREATE TABLE qsos(\n  \"app\" TEXT,\n  \"contestname\" TEXT,\n  \"contestnr\" TEXT,\n  \"timestamp\" TEXT,\n  \"mycall\" TEXT,\n  \"band\" TEXT,\n  \"rxfreq\" TEXT,\n  \"txfreq\" TEXT,\n  \"operator\" TEXT,\n  \"mode\" TEXT,\n  \"call\" TEXT,\n  \"countryprefix\" TEXT,\n  \"wpxprefix\" TEXT,\n  \"stationprefix\" TEXT,\n  \"continent\" TEXT,\n  \"snt\" TEXT,\n  \"sntnr\" TEXT,\n  \"rcv\" TEXT,\n  \"rcvnr\" TEXT,\n  \"gridsquare\" TEXT,\n  \"exchange1\" TEXT,\n  \"section\" TEXT,\n  \"comment\" TEXT,\n  \"qth\" TEXT,\n  \"name\" TEXT,\n  \"power\" TEXT,\n  \"misctext\" TEXT,\n  \"zone\" TEXT,\n  \"prec\" TEXT,\n  \"ck\" TEXT,\n  \"ismultiplier1\" TEXT,\n  \"ismultiplier2\" TEXT,\n  \"ismultiplier3\" TEXT,\n  \"points\" TEXT,\n  \"radionr\" TEXT,\n  \"run1run2\" TEXT,\n  \"RoverLocation\" TEXT,\n  \"RadioInterfaced\" TEXT,\n  \"NetworkedCompNr\" TEXT,\n  \"IsOriginal\" TEXT,\n  \"NetBiosName\" TEXT,\n  \"IsRunQSO\" TEXT,\n  \"StationName\" TEXT,\n  \"ID\" TEXT,\n  \"IsClaimedQso\" TEXT,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"isbusted\" TEXT\n);\n\nCREATE TABLE spots(\n  \"call\" TEXT type UNIQUE,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"grid\" TEXT\n);\n\nCREATE INDEX call_idx on spots(call);\n\nType .schema at the carrot prompt to confirm your database structure.  You should see everything above.\n\nType .exit to exit out of the database and return to the Pi command prompt.\n\nsqlite>.exit \n\nYour Node Red local qsos database is now created and ready to go.  Now configure the properties of the SQLite node to create (or confirm) the node is pointing to the qsos database.  There are four (4) N1MM database nodes you need to configure.  In the sqlite node configuration screen, add the qsos database.  Names are case sensitive. \n\nFor your contest stations. in N1MM, within the entry window, click on Config -> Configure Ports, Mode Control, Winkey,etc... -> Broadcast Data.  Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  Place a space after the default IP:Port to start your IP address.\n\nRadio to aaa.bbb.ccc.ddd:12060\nContacts to aaa.bbb.ccc.ddd:12061\nScore to aaa.bbb.ccc.ddd:12062\n\nFor example, the Radio text box should look like this after your done (with the default values still there).\n\n127.0.0.1:12060 192.168.1.30:12060\n\nIn the Station Data switch node (Flow that starts with UDP 12060), you'll need to get N1MM started on all your PC's and determine the station name (typically the hostname of the computer).  You can enable the debug node and drill down into the XML data for StationName to check each UDP packet.  You'll want to get into the node and enter the station name for each of the stations you want to pull data from.\n\nI'm using Hamdb.org to grab the lon/lat for the map.  This database is a free lookup but currently only has US/VE data with a few other select countries.  If you want world wide spots, switch over to the QRZ.com paid XML subscription.\n\nThe time to live pins on the map is set to 3600 seconds (1 hour).  You can change this within the change node after the hamdb lookup.  Be aware a station with high QSO rates, this map will get cluttered very fast and not be very useful.\n\n",
+        "x": 160,
+        "y": 120,
         "wires": []
     },
     {
@@ -6295,8 +7127,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 3400,
-        "y": 180,
+        "x": 3640,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -6320,8 +7152,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2980,
-        "y": 140,
+        "x": 3220,
+        "y": 1180,
         "wires": [
             [
                 "816d3f7e84dd1bf0",
@@ -6350,7 +7182,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 2150,
-        "y": 1240,
+        "y": 1480,
         "wires": [
             [
                 "c700f03ea974bf65"
@@ -6366,7 +7198,7 @@
         "sql": "",
         "name": "N1MM QSOs",
         "x": 2710,
-        "y": 1240,
+        "y": 1480,
         "wires": [
             [
                 "fc6208525bfd2db6"
@@ -6385,7 +7217,7 @@
         "stream": false,
         "addname": "",
         "x": 2870,
-        "y": 1240,
+        "y": 1480,
         "wires": [
             [
                 "e616bcdb29792aa8"
@@ -6404,7 +7236,7 @@
         "finalize": "",
         "libs": [],
         "x": 3060,
-        "y": 1240,
+        "y": 1480,
         "wires": [
             [
                 "5d54abefaa3f6011"
@@ -6423,7 +7255,7 @@
         "template": "select count(band) as total, band as band from qsos group by band order by length(band) desc;",
         "output": "str",
         "x": 2530,
-        "y": 1240,
+        "y": 1480,
         "wires": [
             [
                 "61fdced830d7a010"
@@ -6443,8 +7275,8 @@
         "format": "<font size = 10 font color=#FFFF00>{{msg.payload[0].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 3020,
-        "y": 1460,
+        "x": 3040,
+        "y": 1700,
         "wires": []
     },
     {
@@ -6455,13 +7287,13 @@
         "order": 6,
         "width": 5,
         "height": 3,
-        "name": "Top OP Multis",
-        "label": "<font size = 6>Top OP Multi",
+        "name": "Top OP Mults",
+        "label": "<font size = 6>Top OP Mults",
         "format": "<font size = 10 font color=#FFFF00>{{msg.payload[0].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 3040,
-        "y": 1400,
+        "x": 3060,
+        "y": 1640,
         "wires": []
     },
     {
@@ -6532,17 +7364,6 @@
         "statusType": "auto",
         "x": 3850,
         "y": 1740,
-        "wires": []
-    },
-    {
-        "id": "8d2583aaf4262451",
-        "type": "link out",
-        "z": "407d2b774fe67647",
-        "name": "QSOs From N1MM OUT",
-        "mode": "link",
-        "links": [],
-        "x": 895,
-        "y": 60,
         "wires": []
     },
     {
@@ -6630,8 +7451,8 @@
         "syntax": "mustache",
         "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-1 hours') group by band;",
         "output": "str",
-        "x": 2210,
-        "y": 300,
+        "x": 2450,
+        "y": 1340,
         "wires": [
             [
                 "9ba2b748bca48ba8"
@@ -6658,8 +7479,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 1810,
-        "y": 300,
+        "x": 2050,
+        "y": 1340,
         "wires": [
             [
                 "afcc0fe55c3cb07e"
@@ -6674,8 +7495,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 2410,
-        "y": 300,
+        "x": 2650,
+        "y": 1340,
         "wires": [
             [
                 "fae0041199166dbc"
@@ -6693,8 +7514,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 2570,
-        "y": 300,
+        "x": 2810,
+        "y": 1340,
         "wires": [
             [
                 "1aa94adaa1790106"
@@ -6714,8 +7535,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3070,
-        "y": 360,
+        "x": 3270,
+        "y": 1380,
         "wires": []
     },
     {
@@ -6731,8 +7552,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3100,
-        "y": 80,
+        "x": 3340,
+        "y": 1120,
         "wires": []
     },
     {
@@ -6746,8 +7567,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2780,
-        "y": 300,
+        "x": 3020,
+        "y": 1340,
         "wires": [
             [
                 "35dd8fcbbd78da95",
@@ -6793,8 +7614,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 3410,
-        "y": 280,
+        "x": 3650,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -6838,7 +7659,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 3360,
-        "y": 1240,
+        "y": 1480,
         "wires": [
             []
         ]
@@ -6861,7 +7682,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 2330,
-        "y": 1240,
+        "y": 1480,
         "wires": [
             [
                 "002dded44b1b5ee6"
@@ -6885,8 +7706,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1970,
-        "y": 160,
+        "x": 2210,
+        "y": 1200,
         "wires": [
             [
                 "870d2ff5a5b268a5"
@@ -6910,8 +7731,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2010,
-        "y": 300,
+        "x": 2250,
+        "y": 1340,
         "wires": [
             [
                 "ba28175bd864c273"
@@ -6938,8 +7759,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 2190,
-        "y": 1400,
+        "x": 2210,
+        "y": 1640,
         "wires": [
             [
                 "be3cb3b9861c2e31"
@@ -6954,8 +7775,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 2830,
-        "y": 1400,
+        "x": 2850,
+        "y": 1640,
         "wires": [
             [
                 "a2c474948039215e"
@@ -6973,8 +7794,8 @@
         "syntax": "mustache",
         "template": "select total(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, operator as operator from qsos group by operator order by multiplier desc;",
         "output": "str",
-        "x": 2630,
-        "y": 1400,
+        "x": 2650,
+        "y": 1640,
         "wires": [
             [
                 "4554da196e8e7d98"
@@ -6998,8 +7819,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2390,
-        "y": 1400,
+        "x": 2410,
+        "y": 1640,
         "wires": [
             [
                 "64ca2307721f7954"
@@ -7026,8 +7847,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 2150,
-        "y": 1460,
+        "x": 2170,
+        "y": 1700,
         "wires": [
             [
                 "33a1fe7f6bd59c25"
@@ -7042,8 +7863,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 2790,
-        "y": 1460,
+        "x": 2810,
+        "y": 1700,
         "wires": [
             [
                 "e7705b1d662e98c7"
@@ -7061,8 +7882,8 @@
         "syntax": "mustache",
         "template": "select operator as operator,\ntotal(points) as points,\ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos\ngroup by operator\norder by score desc;",
         "output": "str",
-        "x": 2570,
-        "y": 1460,
+        "x": 2590,
+        "y": 1700,
         "wires": [
             [
                 "5c207f03192ffb04"
@@ -7086,8 +7907,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2350,
-        "y": 1460,
+        "x": 2370,
+        "y": 1700,
         "wires": [
             [
                 "d1e531d474c42dde"
@@ -7132,18 +7953,20 @@
         "id": "97ed253958c48009",
         "type": "switch",
         "z": "407d2b774fe67647",
-        "name": "If payload = dynamicresults",
-        "property": "payload.dynamicresults",
+        "name": "If Score != 0",
+        "property": "payload.dynamicresults.score[0]",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "nnull"
+                "t": "neq",
+                "v": "0",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 660,
+        "x": 610,
         "y": 800,
         "wires": [
             [
@@ -7166,8 +7989,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3610,
-        "y": 440,
+        "x": 2830,
+        "y": 160,
         "wires": [
             [
                 "6c3eca08.f081a4",
@@ -7192,8 +8015,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3840,
-        "y": 280,
+        "x": 3070,
+        "y": 40,
         "wires": []
     },
     {
@@ -7239,8 +8062,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "407d2b774fe67647",
         "name": "",
-        "x": 2760,
-        "y": 160,
+        "x": 3000,
+        "y": 1200,
         "wires": [
             [
                 "6d122d15af375ab6",
@@ -7269,8 +8092,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2580,
-        "y": 80,
+        "x": 2820,
+        "y": 1120,
         "wires": []
     },
     {
@@ -7326,8 +8149,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2590,
-        "y": 160,
+        "x": 2830,
+        "y": 1200,
         "wires": [
             [
                 "bc62893a749a6116"
@@ -7396,8 +8219,8 @@
         "links": [
             "5e1859619292b1b8"
         ],
-        "x": 2795,
-        "y": 240,
+        "x": 3035,
+        "y": 1280,
         "wires": [
             [
                 "816d3f7e84dd1bf0",
@@ -7415,7 +8238,7 @@
             "5e1859619292b1b8"
         ],
         "x": 3115,
-        "y": 1320,
+        "y": 1560,
         "wires": [
             [
                 "5d54abefaa3f6011"
@@ -7428,8 +8251,8 @@
         "z": "407d2b774fe67647",
         "name": "To Do",
         "info": "Graph or plot seen spots vs actual qsos in the log.\n\nPull in RBN info on where you are being spotted.\n\nSpectator dashboard where you can stream to YouTube/Twitch/FB to show off Amateur Radio and contesting without showing your score.\n\nIntegrate QRZ.com XML for look ups.\n\nTurn on/off multipler announcement for the first x amount of hours before a contest.\n\nBusted call #'s based on xml lookup after call is logged.\n\nPull in Onlinescoreboard stats.\n\nPopulate PC computers names automatically from the XML UDP packets and stick in global variable.\n\nSO2R or split mode based on the UDP packet coming in and showing that on the radio tab.",
-        "x": 420,
-        "y": 80,
+        "x": 190,
+        "y": 60,
         "wires": []
     },
     {
@@ -7455,8 +8278,8 @@
         "z": "407d2b774fe67647",
         "name": "Issues",
         "info": "On N1MM Dashboard Screen\n - parsing through the XML file for score sometimes the multi is arraylength - 1 and sometimes it's arraylength - 2\n - \n ",
-        "x": 610,
-        "y": 80,
+        "x": 310,
+        "y": 60,
         "wires": []
     },
     {
@@ -7501,54 +8324,14 @@
         "type": "subflow:bedd4acdc0e27dab",
         "z": "407d2b774fe67647",
         "name": "",
-        "x": 1040,
-        "y": 520,
+        "x": 340,
+        "y": 320,
         "wires": [
             [
                 "6961ddaf.bce294",
                 "13d29b4154be030c"
-            ]
-        ]
-    },
-    {
-        "id": "fedade43117f087a",
-        "type": "change",
-        "z": "407d2b774fe67647",
-        "name": "Set Type to QSO",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.type",
-                "pt": "msg",
-                "to": "qso",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 950,
-        "y": 400,
-        "wires": [
-            [
-                "cadea72441280e66"
-            ]
-        ]
-    },
-    {
-        "id": "9dbd607862af4cb3",
-        "type": "link in",
-        "z": "407d2b774fe67647",
-        "name": "Testing QSOs IN",
-        "links": [],
-        "x": 145,
-        "y": 140,
-        "wires": [
-            [
-                "3a78ced649465625"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -7564,8 +8347,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1290,
-        "y": 440,
+        "x": 670,
+        "y": 380,
         "wires": []
     },
     {
@@ -7581,8 +8364,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2990,
-        "y": 560,
+        "x": 2210,
+        "y": 280,
         "wires": []
     },
     {
@@ -7598,29 +8381,9 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.op}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3900,
-        "y": 520,
+        "x": 3120,
+        "y": 240,
         "wires": []
-    },
-    {
-        "id": "3a78ced649465625",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "name": "UTF8",
-        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 260,
-        "wires": [
-            [
-                "d844a6f3cc25d06e",
-                "e7bcb7273689d6d7"
-            ]
-        ]
     },
     {
         "id": "40fb53d603bf5c87",
@@ -7672,6 +8435,32 @@
         "x": 1550,
         "y": 860,
         "wires": []
+    },
+    {
+        "id": "a52c21c0e2444f74",
+        "type": "comment",
+        "z": "407d2b774fe67647",
+        "name": "Nodes to Load",
+        "info": "\"node-red-contrib-hourglass\": \"1.5.0\",\n\"node-red-contrib-msg-speed\": \"2.1.0\",\n\"node-red-contrib-play-audio\": \"2.5.0\",\n\"node-red-node-geofence\": \"0.3.1\",\n\"node-red-node-ping\": \"0.3.1\",\n\"node-red-node-smooth\": \"0.1.2\",\n\"node-red-node-sqlite\": \"1.0.1\",\n\"node-red-node-ui-table\": \"0.3.11\",\n\"node-red-contrib-web-worldmap\": \"2.24.0\",\n\"node-red-dashboard\": \"3.1.3\",\n\"node-red-contrib-string\": \"1.0.0\",\n\"node-red-contrib-ui-led\": \"0.4.11\",\n\"node-red-contrib-unit-converter\": \"0.0.2\"\n",
+        "x": 480,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e4e81a5987819415",
+        "type": "link in",
+        "z": "407d2b774fe67647",
+        "name": "N1MM Dashboard IN",
+        "links": [
+            "677d263669792c2d"
+        ],
+        "x": 175,
+        "y": 320,
+        "wires": [
+            [
+                "cadea72441280e66"
+            ]
+        ]
     },
     {
         "id": "4079239a4fd5c11c",
@@ -12702,8 +13491,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 520,
+        "x": 250,
+        "y": 580,
         "wires": [
             [
                 "2b2f3e640248b72a"
@@ -12718,8 +13507,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 790,
-        "y": 520,
+        "x": 890,
+        "y": 580,
         "wires": [
             [
                 "03065499f5880f2d",
@@ -12766,7 +13555,15 @@
                 "a44ee2cc9a9b7398",
                 "76b9e5dff8bd683f",
                 "ef7856ab646dc938",
-                "6dc0b640e1c8407e"
+                "6dc0b640e1c8407e",
+                "582eb93ec7687986",
+                "f10eaa69c05b8a4c",
+                "d89c6e30ca15bf1e",
+                "46a109ee0a2e75aa",
+                "0d32551591f4febb",
+                "4e25eef7a46062ed",
+                "74823dbc48c66f23",
+                "4e1d05c16ace0917"
             ]
         ]
     },
@@ -12796,10 +13593,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
         "output": "str",
-        "x": 580,
-        "y": 520,
+        "x": 680,
+        "y": 580,
         "wires": [
             [
                 "e5bfbfa56cbfc533"
@@ -12853,8 +13650,8 @@
         "format": "<font size = 8>{{msg.payload[0].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 670,
-        "y": 40,
+        "x": 770,
+        "y": 100,
         "wires": []
     },
     {
@@ -12870,8 +13667,8 @@
         "format": "<font size = 8>{{msg.payload[2].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 670,
-        "y": 120,
+        "x": 770,
+        "y": 180,
         "wires": []
     },
     {
@@ -12887,8 +13684,8 @@
         "format": "<font size = 8>{{msg.payload[3].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 670,
-        "y": 160,
+        "x": 770,
+        "y": 220,
         "wires": []
     },
     {
@@ -12904,8 +13701,8 @@
         "format": "<font size = 8>{{msg.payload[4].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 670,
-        "y": 200,
+        "x": 770,
+        "y": 260,
         "wires": []
     },
     {
@@ -12921,8 +13718,8 @@
         "format": "<font size = 8>{{msg.payload[5].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 670,
-        "y": 240,
+        "x": 770,
+        "y": 300,
         "wires": []
     },
     {
@@ -12938,8 +13735,8 @@
         "format": "<font size = 8>{{msg.payload[6].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 670,
-        "y": 280,
+        "x": 770,
+        "y": 340,
         "wires": []
     },
     {
@@ -12955,8 +13752,8 @@
         "format": "<font size = 8>{{msg.payload[7].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 670,
-        "y": 320,
+        "x": 770,
+        "y": 380,
         "wires": []
     },
     {
@@ -12972,8 +13769,8 @@
         "format": "<font size = 8>{{msg.payload[1].operator}}",
         "layout": "col-center",
         "className": "",
-        "x": 680,
-        "y": 80,
+        "x": 780,
+        "y": 140,
         "wires": []
     },
     {
@@ -12989,8 +13786,8 @@
         "format": "<font size = 8>{{msg.payload[0].totalqsos}}",
         "layout": "col-center",
         "className": "",
-        "x": 1030,
-        "y": 40,
+        "x": 1130,
+        "y": 100,
         "wires": []
     },
     {
@@ -13006,8 +13803,8 @@
         "format": "<font size = 8>{{msg.payload[1].totalqsos}}",
         "layout": "col-center",
         "className": "",
-        "x": 1040,
-        "y": 80,
+        "x": 1140,
+        "y": 140,
         "wires": []
     },
     {
@@ -13023,8 +13820,8 @@
         "format": "<font size = 8>{{msg.payload[2].totalqsos}}",
         "layout": "col-center",
         "className": "",
-        "x": 1040,
-        "y": 120,
+        "x": 1140,
+        "y": 180,
         "wires": []
     },
     {
@@ -13040,8 +13837,8 @@
         "format": "<font size = 8>{{msg.payload[3].totalqsos}}",
         "layout": "col-center",
         "className": "",
-        "x": 1040,
-        "y": 160,
+        "x": 1140,
+        "y": 220,
         "wires": []
     },
     {
@@ -13057,8 +13854,8 @@
         "format": "<font size = 8>{{msg.payload[4].totalqsos}}",
         "layout": "col-center",
         "className": "",
-        "x": 1040,
-        "y": 200,
+        "x": 1140,
+        "y": 260,
         "wires": []
     },
     {
@@ -13074,8 +13871,8 @@
         "format": "<font size = 8>{{msg.payload[5].totalqsos}}",
         "layout": "col-center",
         "className": "",
-        "x": 1040,
-        "y": 240,
+        "x": 1140,
+        "y": 300,
         "wires": []
     },
     {
@@ -13091,8 +13888,8 @@
         "format": "<font size = 8>{{msg.payload[6].totalqsos}}",
         "layout": "col-center",
         "className": "",
-        "x": 1040,
-        "y": 280,
+        "x": 1140,
+        "y": 340,
         "wires": []
     },
     {
@@ -13108,8 +13905,8 @@
         "format": "<font size = 8>{{msg.payload[7].totalqsos}}",
         "layout": "col-center",
         "className": "",
-        "x": 1040,
-        "y": 320,
+        "x": 1140,
+        "y": 380,
         "wires": []
     },
     {
@@ -13125,8 +13922,8 @@
         "format": "<font size = 8>{{msg.payload[0].score}}",
         "layout": "col-center",
         "className": "",
-        "x": 790,
-        "y": 680,
+        "x": 890,
+        "y": 740,
         "wires": []
     },
     {
@@ -13142,8 +13939,8 @@
         "format": "<font size = 8>{{msg.payload[1].score}}",
         "layout": "col-center",
         "className": "",
-        "x": 800,
-        "y": 720,
+        "x": 900,
+        "y": 780,
         "wires": []
     },
     {
@@ -13159,8 +13956,8 @@
         "format": "<font size = 8>{{msg.payload[2].score}}",
         "layout": "col-center",
         "className": "",
-        "x": 790,
-        "y": 760,
+        "x": 890,
+        "y": 820,
         "wires": []
     },
     {
@@ -13176,8 +13973,8 @@
         "format": "<font size = 8>{{msg.payload[3].score}}",
         "layout": "col-center",
         "className": "",
-        "x": 790,
-        "y": 800,
+        "x": 890,
+        "y": 860,
         "wires": []
     },
     {
@@ -13193,8 +13990,8 @@
         "format": "<font size = 8>{{msg.payload[4].score}}",
         "layout": "col-center",
         "className": "",
-        "x": 790,
-        "y": 840,
+        "x": 890,
+        "y": 900,
         "wires": []
     },
     {
@@ -13210,8 +14007,8 @@
         "format": "<font size = 8>{{msg.payload[5].score}}",
         "layout": "col-center",
         "className": "",
-        "x": 790,
-        "y": 880,
+        "x": 890,
+        "y": 940,
         "wires": []
     },
     {
@@ -13227,8 +14024,8 @@
         "format": "<font size = 8>{{msg.payload[6].score}}",
         "layout": "col-center",
         "className": "",
-        "x": 790,
-        "y": 920,
+        "x": 890,
+        "y": 980,
         "wires": []
     },
     {
@@ -13244,8 +14041,8 @@
         "format": "<font size = 8>{{msg.payload[7].score}}",
         "layout": "col-center",
         "className": "",
-        "x": 790,
-        "y": 960,
+        "x": 890,
+        "y": 1020,
         "wires": []
     },
     {
@@ -13261,8 +14058,8 @@
         "format": "<font size = 8>{{msg.payload[0].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 450,
-        "y": 680,
+        "x": 550,
+        "y": 740,
         "wires": []
     },
     {
@@ -13278,8 +14075,8 @@
         "format": "<font size = 8>{{msg.payload[1].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 460,
-        "y": 720,
+        "x": 560,
+        "y": 780,
         "wires": []
     },
     {
@@ -13295,8 +14092,8 @@
         "format": "<font size = 8>{{msg.payload[2].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 450,
-        "y": 760,
+        "x": 550,
+        "y": 820,
         "wires": []
     },
     {
@@ -13312,8 +14109,8 @@
         "format": "<font size = 8>{{msg.payload[3].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 450,
-        "y": 800,
+        "x": 550,
+        "y": 860,
         "wires": []
     },
     {
@@ -13329,8 +14126,8 @@
         "format": "<font size = 8>{{msg.payload[4].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 450,
-        "y": 840,
+        "x": 550,
+        "y": 900,
         "wires": []
     },
     {
@@ -13346,8 +14143,8 @@
         "format": "<font size = 8>{{msg.payload[5].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 450,
-        "y": 880,
+        "x": 550,
+        "y": 940,
         "wires": []
     },
     {
@@ -13363,8 +14160,8 @@
         "format": "<font size = 8>{{msg.payload[6].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 450,
-        "y": 920,
+        "x": 550,
+        "y": 980,
         "wires": []
     },
     {
@@ -13380,8 +14177,8 @@
         "format": "<font size = 8>{{msg.payload[7].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 450,
-        "y": 960,
+        "x": 550,
+        "y": 1020,
         "wires": []
     },
     {
@@ -13461,8 +14258,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1970,
-        "y": 220,
+        "x": 2070,
+        "y": 280,
         "wires": []
     },
     {
@@ -13478,8 +14275,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1970,
-        "y": 280,
+        "x": 2070,
+        "y": 340,
         "wires": []
     },
     {
@@ -13495,8 +14292,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1970,
-        "y": 340,
+        "x": 2070,
+        "y": 400,
         "wires": []
     },
     {
@@ -13512,8 +14309,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1970,
-        "y": 400,
+        "x": 2070,
+        "y": 460,
         "wires": []
     },
     {
@@ -13529,8 +14326,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1970,
-        "y": 460,
+        "x": 2070,
+        "y": 520,
         "wires": []
     },
     {
@@ -13546,8 +14343,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1970,
-        "y": 520,
+        "x": 2070,
+        "y": 580,
         "wires": []
     },
     {
@@ -13563,8 +14360,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1970,
-        "y": 580,
+        "x": 2070,
+        "y": 640,
         "wires": []
     },
     {
@@ -13580,8 +14377,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1970,
-        "y": 640,
+        "x": 2070,
+        "y": 700,
         "wires": []
     },
     {
@@ -13597,8 +14394,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 940,
+        "x": 2090,
+        "y": 1000,
         "wires": []
     },
     {
@@ -13614,8 +14411,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 1000,
+        "x": 2090,
+        "y": 1060,
         "wires": []
     },
     {
@@ -13631,8 +14428,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 1060,
+        "x": 2090,
+        "y": 1120,
         "wires": []
     },
     {
@@ -13648,8 +14445,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 1120,
+        "x": 2090,
+        "y": 1180,
         "wires": []
     },
     {
@@ -13665,8 +14462,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 1180,
+        "x": 2090,
+        "y": 1240,
         "wires": []
     },
     {
@@ -13682,8 +14479,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 1240,
+        "x": 2090,
+        "y": 1300,
         "wires": []
     },
     {
@@ -13699,8 +14496,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 1300,
+        "x": 2090,
+        "y": 1360,
         "wires": []
     },
     {
@@ -13716,8 +14513,8 @@
         "format": "<font size = 8 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 1360,
+        "x": 2090,
+        "y": 1420,
         "wires": []
     },
     {
@@ -13734,7 +14531,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1460,
-        "y": 1460,
+        "y": 1500,
         "wires": []
     },
     {
@@ -13742,17 +14539,18 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP0_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4 || totalscore == 3 )\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 2)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn msg;",
+        "func": "let x = flow.get(\"OP0_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 1460,
+        "y": 1500,
         "wires": [
             [
-                "da67b9b7e9829477"
+                "da67b9b7e9829477",
+                "7efa1ebb794e5dea"
             ]
         ]
     },
@@ -13813,8 +14611,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
-        "y": 360,
+        "x": 1090,
+        "y": 420,
         "wires": []
     },
     {
@@ -13844,11 +14642,11 @@
         "height": 2,
         "name": "1st Place Busted Calls",
         "label": "<font size = 6>Busted",
-        "format": "<font size = 8>",
+        "format": "<font size = 8>{{msg.payload[0].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 140,
-        "y": 1140,
+        "x": 440,
+        "y": 120,
         "wires": []
     },
     {
@@ -13861,11 +14659,11 @@
         "height": 2,
         "name": "2nd Place Busted Calls",
         "label": "<font size = 6>Busted",
-        "format": "<font size = 8>",
+        "format": "<font size = 8>{{msg.payload[1].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 150,
-        "y": 1180,
+        "x": 450,
+        "y": 160,
         "wires": []
     },
     {
@@ -13878,11 +14676,11 @@
         "height": 2,
         "name": "3rd Place Busted Calls",
         "label": "<font size = 6>Busted",
-        "format": "<font size = 8>",
+        "format": "<font size = 8>{{msg.payload[2].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 140,
-        "y": 1220,
+        "x": 440,
+        "y": 200,
         "wires": []
     },
     {
@@ -13895,11 +14693,11 @@
         "height": 2,
         "name": "4th Place Busted Calls",
         "label": "<font size = 6>Busted",
-        "format": "<font size = 8>",
+        "format": "<font size = 8>{{msg.payload[3].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 140,
-        "y": 1260,
+        "x": 440,
+        "y": 240,
         "wires": []
     },
     {
@@ -13912,11 +14710,11 @@
         "height": 2,
         "name": "5th Place Busted Calls",
         "label": "<font size = 6>Busted",
-        "format": "<font size = 8>",
+        "format": "<font size = 8>{{msg.payload[4].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 140,
-        "y": 1300,
+        "x": 440,
+        "y": 280,
         "wires": []
     },
     {
@@ -13929,11 +14727,11 @@
         "height": 2,
         "name": "6th Place Busted Calls",
         "label": "<font size = 6>Busted",
-        "format": "<font size = 8>",
+        "format": "<font size = 8>{{msg.payload[5].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 140,
-        "y": 1340,
+        "x": 440,
+        "y": 320,
         "wires": []
     },
     {
@@ -13946,11 +14744,11 @@
         "height": 2,
         "name": "7th Place Busted Calls",
         "label": "<font size = 6>Busted",
-        "format": "<font size = 8>",
+        "format": "<font size = 8>{{msg.payload[6].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 140,
-        "y": 1380,
+        "x": 440,
+        "y": 360,
         "wires": []
     },
     {
@@ -13963,11 +14761,11 @@
         "height": 2,
         "name": "8th Place Busted Calls",
         "label": "<font size = 6>Busted",
-        "format": "<font size = 8>",
+        "format": "<font size = 8>{{msg.payload[7].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 140,
-        "y": 1420,
+        "x": 440,
+        "y": 400,
         "wires": []
     },
     {
@@ -14065,8 +14863,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 2780,
+        "x": 1820,
+        "y": 2840,
         "wires": [
             []
         ]
@@ -14163,8 +14961,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1730,
-        "y": 220,
+        "x": 1830,
+        "y": 280,
         "wires": [
             [
                 "85bbbbb955279cce"
@@ -14182,8 +14980,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1730,
-        "y": 280,
+        "x": 1830,
+        "y": 340,
         "wires": [
             [
                 "a8a629af1c61453f"
@@ -14201,8 +14999,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1730,
-        "y": 340,
+        "x": 1830,
+        "y": 400,
         "wires": [
             [
                 "a0468e25398dee83"
@@ -14220,8 +15018,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1730,
-        "y": 400,
+        "x": 1830,
+        "y": 460,
         "wires": [
             [
                 "faaa9c2c4f22247a"
@@ -14239,8 +15037,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1730,
-        "y": 460,
+        "x": 1830,
+        "y": 520,
         "wires": [
             [
                 "8195b25c71b87897"
@@ -14258,8 +15056,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1730,
-        "y": 520,
+        "x": 1830,
+        "y": 580,
         "wires": [
             [
                 "5c8d08c380f3c83c"
@@ -14277,8 +15075,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1730,
-        "y": 580,
+        "x": 1830,
+        "y": 640,
         "wires": [
             [
                 "79544073b704db82"
@@ -14296,8 +15094,8 @@
         "type": "subflow:c967abe5be484ee6",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1730,
-        "y": 640,
+        "x": 1830,
+        "y": 700,
         "wires": [
             [
                 "10cdec73865dc8b0"
@@ -14318,8 +15116,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 930,
-        "y": 1020,
+        "x": 1030,
+        "y": 1080,
         "wires": [
             [
                 "7469b23c7663c08e",
@@ -14343,10 +15141,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
         "output": "str",
-        "x": 700,
-        "y": 1020,
+        "x": 800,
+        "y": 1080,
         "wires": [
             [
                 "852b78df4e8c39e7"
@@ -14367,7 +15165,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1460,
-        "y": 1500,
+        "y": 1540,
         "wires": []
     },
     {
@@ -14384,7 +15182,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1460,
-        "y": 1540,
+        "y": 1580,
         "wires": []
     },
     {
@@ -14401,7 +15199,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1460,
-        "y": 1580,
+        "y": 1620,
         "wires": []
     },
     {
@@ -14418,7 +15216,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1460,
-        "y": 1620,
+        "y": 1660,
         "wires": []
     },
     {
@@ -14435,7 +15233,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1460,
-        "y": 1660,
+        "y": 1700,
         "wires": []
     },
     {
@@ -14452,7 +15250,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1460,
-        "y": 1700,
+        "y": 1740,
         "wires": []
     },
     {
@@ -14469,7 +15267,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1460,
-        "y": 1740,
+        "y": 1780,
         "wires": []
     },
     {
@@ -14485,8 +15283,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2230,
-        "y": 860,
+        "x": 2130,
+        "y": 900,
         "wires": []
     },
     {
@@ -14527,8 +15325,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1940,
-        "y": 680,
+        "x": 2040,
+        "y": 740,
         "wires": [
             []
         ]
@@ -14571,8 +15369,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1920,
-        "y": 900,
+        "x": 2020,
+        "y": 960,
         "wires": [
             []
         ]
@@ -14615,8 +15413,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1940,
-        "y": 720,
+        "x": 2040,
+        "y": 780,
         "wires": [
             []
         ]
@@ -14659,53 +15457,10 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1940,
-        "y": 760,
+        "x": 2040,
+        "y": 820,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "d3c1028c021c3219",
-        "type": "random",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "low": 1,
-        "high": "9",
-        "inte": "true",
-        "property": "payload",
-        "x": 400,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e3b96f84583fbe78",
-        "type": "inject",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "15",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 210,
-        "y": 380,
-        "wires": [
-            [
-                "d3c1028c021c3219"
-            ]
         ]
     },
     {
@@ -14722,7 +15477,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 1820,
+        "y": 1860,
         "wires": []
     },
     {
@@ -14739,7 +15494,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 1860,
+        "y": 1900,
         "wires": []
     },
     {
@@ -14756,7 +15511,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 1900,
+        "y": 1940,
         "wires": []
     },
     {
@@ -14773,7 +15528,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 1940,
+        "y": 1980,
         "wires": []
     },
     {
@@ -14790,7 +15545,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 1980,
+        "y": 2020,
         "wires": []
     },
     {
@@ -14807,7 +15562,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2020,
+        "y": 2060,
         "wires": []
     },
     {
@@ -14824,7 +15579,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2060,
+        "y": 2100,
         "wires": []
     },
     {
@@ -14841,7 +15596,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2100,
+        "y": 2140,
         "wires": []
     },
     {
@@ -14855,8 +15610,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 220,
+        "x": 1590,
+        "y": 280,
         "wires": [
             [
                 "3bb04de21f29fc73"
@@ -14874,8 +15629,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1530,
-        "y": 940,
+        "x": 1630,
+        "y": 1000,
         "wires": [
             [
                 "c73ec9d8818ae376"
@@ -14893,8 +15648,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1530,
-        "y": 1000,
+        "x": 1630,
+        "y": 1060,
         "wires": [
             [
                 "99d4566b9cf8980e"
@@ -14912,8 +15667,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1530,
-        "y": 1060,
+        "x": 1630,
+        "y": 1120,
         "wires": [
             [
                 "02876d688b9989e2"
@@ -14931,8 +15686,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1530,
-        "y": 1120,
+        "x": 1630,
+        "y": 1180,
         "wires": [
             [
                 "d44619f01e1ce742"
@@ -14950,8 +15705,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1530,
-        "y": 1180,
+        "x": 1630,
+        "y": 1240,
         "wires": [
             [
                 "69315433e45eeb72"
@@ -14969,8 +15724,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1530,
-        "y": 1240,
+        "x": 1630,
+        "y": 1300,
         "wires": [
             [
                 "f5e8e6ce5aaf36a1"
@@ -14988,8 +15743,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1530,
-        "y": 1300,
+        "x": 1630,
+        "y": 1360,
         "wires": [
             [
                 "30dba7714a329859"
@@ -15007,8 +15762,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1530,
-        "y": 1360,
+        "x": 1630,
+        "y": 1420,
         "wires": [
             [
                 "1171f1687a20db54"
@@ -15026,8 +15781,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 280,
+        "x": 1590,
+        "y": 340,
         "wires": [
             [
                 "4f9539da465cd05a"
@@ -15045,8 +15800,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 400,
+        "x": 1590,
+        "y": 460,
         "wires": [
             [
                 "d929f189b5cdeb97"
@@ -15064,8 +15819,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 460,
+        "x": 1590,
+        "y": 520,
         "wires": [
             [
                 "c0c834cec53f2580"
@@ -15083,8 +15838,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 520,
+        "x": 1590,
+        "y": 580,
         "wires": [
             [
                 "52e553a31c598e10"
@@ -15102,8 +15857,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 580,
+        "x": 1590,
+        "y": 640,
         "wires": [
             [
                 "d6bbb415a21b9265"
@@ -15115,14 +15870,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP6_1HRateCurrent\");\nflow.set([\"OP6_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[7] != null)\n{\n    msg.rate = msg.payload[7].rate\n    let call = msg.payload[7].operator\n    let rate = msg.payload[7].rate\n    flow.set([\"OP7\"],[call])\n    flow.set([\"OP7_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP7_1HRateCurrent\");\nflow.set([\"OP7_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[7] != null)\n{\n    msg.rate = msg.payload[7].rate\n    let call = msg.payload[7].operator\n    let rate = msg.payload[7].rate\n    flow.set([\"OP7\"],[call])\n    flow.set([\"OP7_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 640,
+        "x": 1590,
+        "y": 700,
         "wires": [
             [
                 "54a6b73ccb177ca4"
@@ -15134,14 +15889,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP1_1HRateCurrent\");\nflow.set([\"OP1_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[2] != null)\n{\n    msg.rate = msg.payload[2].rate\n    let call = msg.payload[2].operator\n    let rate = msg.payload[2].rate\n    flow.set([\"OP2\"],[call])\n    flow.set([\"OP2_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn msg;",
+        "func": "let previousrate = flow.get(\"OP2_1HRateCurrent\");\nflow.set([\"OP2_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[2] != null)\n{\n    msg.rate = msg.payload[2].rate\n    let call = msg.payload[2].operator\n    let rate = msg.payload[2].rate\n    flow.set([\"OP2\"],[call])\n    flow.set([\"OP2_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 340,
+        "x": 1590,
+        "y": 400,
         "wires": [
             [
                 "fd38811164759d48"
@@ -15162,7 +15917,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2180,
+        "y": 2220,
         "wires": []
     },
     {
@@ -15179,7 +15934,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2220,
+        "y": 2260,
         "wires": []
     },
     {
@@ -15196,7 +15951,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2260,
+        "y": 2300,
         "wires": []
     },
     {
@@ -15213,7 +15968,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2300,
+        "y": 2340,
         "wires": []
     },
     {
@@ -15230,7 +15985,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2340,
+        "y": 2380,
         "wires": []
     },
     {
@@ -15247,7 +16002,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2380,
+        "y": 2420,
         "wires": []
     },
     {
@@ -15264,7 +16019,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2420,
+        "y": 2460,
         "wires": []
     },
     {
@@ -15281,7 +16036,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1480,
-        "y": 2460,
+        "y": 2500,
         "wires": []
     },
     {
@@ -15292,8 +16047,8 @@
         "links": [
             "5e1859619292b1b8"
         ],
-        "x": 1075,
-        "y": 840,
+        "x": 1175,
+        "y": 900,
         "wires": [
             [
                 "f48d809a801528dc",
@@ -15312,8 +16067,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
-        "y": 800,
+        "x": 1340,
+        "y": 860,
         "wires": [
             []
         ]
@@ -15332,7 +16087,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1470,
-        "y": 2520,
+        "y": 2560,
         "wires": []
     },
     {
@@ -15349,7 +16104,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1470,
-        "y": 2560,
+        "y": 2600,
         "wires": []
     },
     {
@@ -15366,7 +16121,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1470,
-        "y": 2600,
+        "y": 2640,
         "wires": []
     },
     {
@@ -15383,7 +16138,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1470,
-        "y": 2640,
+        "y": 2680,
         "wires": []
     },
     {
@@ -15400,7 +16155,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1470,
-        "y": 2680,
+        "y": 2720,
         "wires": []
     },
     {
@@ -15417,7 +16172,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1470,
-        "y": 2720,
+        "y": 2760,
         "wires": []
     },
     {
@@ -15434,7 +16189,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1470,
-        "y": 2760,
+        "y": 2800,
         "wires": []
     },
     {
@@ -15451,7 +16206,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1470,
-        "y": 2800,
+        "y": 2840,
         "wires": []
     },
     {
@@ -15459,14 +16214,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[1]);\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 1820,
+        "y": 1860,
         "wires": [
             [
                 "f1d22697c74b510d"
@@ -15478,14 +16233,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP1_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[1]);\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP1_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 1860,
+        "y": 1900,
         "wires": [
             [
                 "01133d67adbaf806"
@@ -15497,14 +16252,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP2_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[1]);\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP2_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 1900,
+        "y": 1940,
         "wires": [
             [
                 "8ce512c3b1c7c11a"
@@ -15516,14 +16271,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP3_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[1]);\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP3_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 1940,
+        "y": 1980,
         "wires": [
             [
                 "43d8d1e673f4cd7c"
@@ -15535,14 +16290,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP4_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[1]);\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP4_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 1980,
+        "y": 2020,
         "wires": [
             [
                 "cc1e30724335086d"
@@ -15554,14 +16309,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP5_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[1]);\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP5_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2020,
+        "y": 2060,
         "wires": [
             [
                 "08912b465a9ef75e"
@@ -15573,14 +16328,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP6_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[1]);\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP6_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2060,
+        "y": 2100,
         "wires": [
             [
                 "804ab4252f9e6b08"
@@ -15592,14 +16347,14 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP7_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[1]);\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP7_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2100,
+        "y": 2140,
         "wires": [
             [
                 "51f7aec3999c34fe"
@@ -15618,7 +16373,7 @@
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2180,
+        "y": 2220,
         "wires": [
             [
                 "f09ca3fb1f789f90"
@@ -15637,7 +16392,7 @@
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2220,
+        "y": 2260,
         "wires": [
             [
                 "9f49e1b3a8dbcbc9"
@@ -15656,7 +16411,7 @@
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2260,
+        "y": 2300,
         "wires": [
             [
                 "78a88421b603dfad"
@@ -15675,7 +16430,7 @@
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2300,
+        "y": 2340,
         "wires": [
             [
                 "6d0ddc9efba4411e"
@@ -15694,7 +16449,7 @@
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2340,
+        "y": 2380,
         "wires": [
             [
                 "9fdc4f465d7dc9b1"
@@ -15713,7 +16468,7 @@
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2380,
+        "y": 2420,
         "wires": [
             [
                 "23310392a454374a"
@@ -15732,7 +16487,7 @@
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2420,
+        "y": 2460,
         "wires": [
             [
                 "9119d9c282c42a34"
@@ -15751,7 +16506,7 @@
         "finalize": "",
         "libs": [],
         "x": 1160,
-        "y": 2460,
+        "y": 2500,
         "wires": [
             [
                 "187d324ac6f32059"
@@ -15770,7 +16525,7 @@
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 2520,
+        "y": 2560,
         "wires": [
             []
         ]
@@ -15787,7 +16542,7 @@
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 2560,
+        "y": 2600,
         "wires": [
             []
         ]
@@ -15804,7 +16559,7 @@
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 2600,
+        "y": 2640,
         "wires": [
             []
         ]
@@ -15821,7 +16576,7 @@
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 2640,
+        "y": 2680,
         "wires": [
             []
         ]
@@ -15838,7 +16593,7 @@
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 2680,
+        "y": 2720,
         "wires": [
             []
         ]
@@ -15855,7 +16610,7 @@
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 2720,
+        "y": 2760,
         "wires": [
             []
         ]
@@ -15872,7 +16627,7 @@
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 2760,
+        "y": 2800,
         "wires": [
             []
         ]
@@ -15889,7 +16644,7 @@
         "finalize": "",
         "libs": [],
         "x": 1150,
-        "y": 2800,
+        "y": 2840,
         "wires": [
             []
         ]
@@ -15905,8 +16660,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
-        "y": 680,
+        "x": 1730,
+        "y": 740,
         "wires": [
             [
                 "5b5a697a70efb8e5"
@@ -15924,8 +16679,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 1430,
-        "y": 680,
+        "x": 1530,
+        "y": 740,
         "wires": [
             [
                 "fdcd1a86d1dbece5"
@@ -15949,8 +16704,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 330,
-        "y": 520,
+        "x": 430,
+        "y": 580,
         "wires": [
             [
                 "b75e17f3e122ce80",
@@ -15969,8 +16724,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
-        "y": 900,
+        "x": 1730,
+        "y": 960,
         "wires": [
             [
                 "4386336ee678eaa6"
@@ -15988,8 +16743,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 1430,
-        "y": 900,
+        "x": 1530,
+        "y": 960,
         "wires": [
             [
                 "fd25a617c30bc58c"
@@ -16007,8 +16762,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
-        "y": 720,
+        "x": 1730,
+        "y": 780,
         "wires": [
             [
                 "f2a6aaaadecd230e"
@@ -16026,8 +16781,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 1430,
-        "y": 720,
+        "x": 1530,
+        "y": 780,
         "wires": [
             [
                 "e86e6ef9f37c360d"
@@ -16045,8 +16800,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
-        "y": 760,
+        "x": 1730,
+        "y": 820,
         "wires": [
             [
                 "5efdb6488628af4b"
@@ -16064,8 +16819,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 1430,
-        "y": 760,
+        "x": 1530,
+        "y": 820,
         "wires": [
             [
                 "ab1fc32faaf1b4e3"
@@ -16091,8 +16846,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1550,
-        "y": 840,
+        "x": 1650,
+        "y": 900,
         "wires": [
             [
                 "5b5a697a70efb8e5",
@@ -16107,8 +16862,8 @@
         "type": "subflow:7d3bb9d663bb9f7c",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1740,
-        "y": 940,
+        "x": 1840,
+        "y": 1000,
         "wires": [
             [
                 "0dd4886eb5efe40b"
@@ -16126,8 +16881,8 @@
         "type": "subflow:7d3bb9d663bb9f7c",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1740,
-        "y": 1000,
+        "x": 1840,
+        "y": 1060,
         "wires": [
             [
                 "1d60e2ec9ef777d3"
@@ -16145,8 +16900,8 @@
         "type": "subflow:7d3bb9d663bb9f7c",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1740,
-        "y": 1060,
+        "x": 1840,
+        "y": 1120,
         "wires": [
             [
                 "16ed5df7bb6031a9"
@@ -16164,8 +16919,8 @@
         "type": "subflow:7d3bb9d663bb9f7c",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1740,
-        "y": 1120,
+        "x": 1840,
+        "y": 1180,
         "wires": [
             [
                 "9b0da2b2603edbdd"
@@ -16183,8 +16938,8 @@
         "type": "subflow:7d3bb9d663bb9f7c",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1740,
-        "y": 1180,
+        "x": 1840,
+        "y": 1240,
         "wires": [
             [
                 "4a5f395f4ffdd7ed"
@@ -16202,8 +16957,8 @@
         "type": "subflow:7d3bb9d663bb9f7c",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1740,
-        "y": 1240,
+        "x": 1840,
+        "y": 1300,
         "wires": [
             [
                 "1343d07ab73fd624"
@@ -16221,8 +16976,8 @@
         "type": "subflow:7d3bb9d663bb9f7c",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1740,
-        "y": 1300,
+        "x": 1840,
+        "y": 1360,
         "wires": [
             [
                 "582de778fcc4c175"
@@ -16240,8 +16995,8 @@
         "type": "subflow:7d3bb9d663bb9f7c",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "x": 1740,
-        "y": 1360,
+        "x": 1840,
+        "y": 1420,
         "wires": [
             [
                 "648aa4a6cc2e22db"
@@ -16261,8 +17016,8 @@
         "links": [
             "2c852c39b9025338"
         ],
-        "x": 975,
-        "y": 620,
+        "x": 1075,
+        "y": 680,
         "wires": []
     },
     {
@@ -16274,7 +17029,7 @@
             "6dc0b640e1c8407e"
         ],
         "x": 125,
-        "y": 1960,
+        "y": 2000,
         "wires": [
             [
                 "9341467b40450590",
@@ -16302,7 +17057,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 720,
-        "y": 1600,
+        "y": 1640,
         "wires": [
             [
                 "946213d343357cf2",
@@ -16333,8 +17088,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 140,
-        "y": 1020,
+        "x": 240,
+        "y": 1080,
         "wires": [
             [
                 "1aa5e6353669ca19"
@@ -16354,8 +17109,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 750,
-        "y": 1320,
+        "x": 850,
+        "y": 1380,
         "wires": []
     },
     {
@@ -16376,7 +17131,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 720,
-        "y": 1940,
+        "y": 1980,
         "wires": [
             [
                 "85b47be5c163b3f0",
@@ -16408,7 +17163,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 720,
-        "y": 2320,
+        "y": 2360,
         "wires": [
             [
                 "0a1c0887a8b6268e",
@@ -16440,7 +17195,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 720,
-        "y": 2620,
+        "y": 2660,
         "wires": [
             []
         ]
@@ -16450,26 +17205,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP1_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4 || totalscore == 3 )\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 2)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1150,
-        "y": 1500,
-        "wires": [
-            [
-                "0173339b90c30073"
-            ]
-        ]
-    },
-    {
-        "id": "09daa9c87fc8c51f",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP2_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4 || totalscore == 3 )\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 2)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn msg;",
+        "func": "let x = flow.get(\"OP1_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16479,16 +17215,17 @@
         "y": 1540,
         "wires": [
             [
-                "8ce83f211846106d"
+                "0173339b90c30073",
+                "8433fd3cfc7ddddc"
             ]
         ]
     },
     {
-        "id": "b9c3e71c21b61db0",
+        "id": "09daa9c87fc8c51f",
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "\nlet x = flow.get(\"OP3_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4 || totalscore == 3 )\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 2)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let x = flow.get(\"OP2_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16498,16 +17235,17 @@
         "y": 1580,
         "wires": [
             [
-                "a06aef0809e3b058"
+                "8ce83f211846106d",
+                "05eb80183770322c"
             ]
         ]
     },
     {
-        "id": "e95888ecfaf26488",
+        "id": "b9c3e71c21b61db0",
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP4_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4 || totalscore == 3 )\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 2)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn msg;",
+        "func": "\nlet x = flow.get(\"OP3_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16517,16 +17255,17 @@
         "y": 1620,
         "wires": [
             [
-                "fcc708c0b3c585dc"
+                "a06aef0809e3b058",
+                "25baec64d0da4507"
             ]
         ]
     },
     {
-        "id": "f4e133ea63f047f5",
+        "id": "e95888ecfaf26488",
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP5_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4 || totalscore == 3 )\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 2)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn msg;",
+        "func": "let x = flow.get(\"OP4_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16536,16 +17275,17 @@
         "y": 1660,
         "wires": [
             [
-                "11aabad73297429a"
+                "fcc708c0b3c585dc",
+                "7f7d7ec4af88bb2c"
             ]
         ]
     },
     {
-        "id": "bf9a806b95aee605",
+        "id": "f4e133ea63f047f5",
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP6_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4 || totalscore == 3 )\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 2)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn msg;",
+        "func": "let x = flow.get(\"OP5_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16555,16 +17295,17 @@
         "y": 1700,
         "wires": [
             [
-                "048583383c6c2b63"
+                "11aabad73297429a",
+                "2618bdd7f2dcf19e"
             ]
         ]
     },
     {
-        "id": "33c5b5618b183b4f",
+        "id": "bf9a806b95aee605",
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP7_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4 || totalscore == 3 )\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 2)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn msg;",
+        "func": "let x = flow.get(\"OP6_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16574,9 +17315,176 @@
         "y": 1740,
         "wires": [
             [
-                "b92aec5ddc71fafc"
+                "048583383c6c2b63",
+                "7c182c86d2aa1bbb"
             ]
         ]
+    },
+    {
+        "id": "33c5b5618b183b4f",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Overall Trending Arrow Direction",
+        "func": "let x = flow.get(\"OP7_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1780,
+        "wires": [
+            [
+                "b92aec5ddc71fafc",
+                "5b48eca13a7f6b38"
+            ]
+        ]
+    },
+    {
+        "id": "7efa1ebb794e5dea",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "8433fd3cfc7ddddc",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "05eb80183770322c",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "25baec64d0da4507",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "7f7d7ec4af88bb2c",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "2618bdd7f2dcf19e",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "7c182c86d2aa1bbb",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "5b48eca13a7f6b38",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "29d1e8f7a6175ead",
+        "type": "comment",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Arrow Decision Tree",
+        "info": "Up = 2 pt\nEven = 1 pt\nDown = 0 pt\n\n\n\nOverall         1Hr             2Hr             Score\n--------------------------------------------------\n6               2               2               2\n5               2               1               2\n5               2               2               1\n++++++++\n4               2               1               1\n4               2               2               0\n4               2               0               2\n++++++++\n3               2               1               0\n3               2               0               1\n2               2               0               0\n\n---------------------------------------------------\n4               1               2               2\n4               1               1               2\n4               1               2               1\n++++++++\n3               1               1               1\n3               1               2               0\n3               1               0               2\n2               1               1               0\n2               1               0               1\n++++++++\n1               1               0               0\n\n\n---------------------------------------------------\n4               0               2               2\n++++++++\n3               0               1               2\n3               0               2               1\n3               0               1               2\n2               0               1               1\n2               0               2               0\n2               0               0               2\n++++++++\n1               0               1               0\n1               0               0               1\n0               0               0               0",
+        "x": 390,
+        "y": 1580,
+        "wires": []
     },
     {
         "id": "425f3c637f4bf34a",
@@ -20058,7 +20966,7 @@
         "position": "dialog",
         "displayTime": "",
         "highlight": "",
-        "sendall": true,
+        "sendall": false,
         "outputs": 1,
         "ok": "OK",
         "cancel": "Cancel",
@@ -20687,7 +21595,8 @@
         "y": 1520,
         "wires": [
             [
-                "a6a12ef5e9b4d877"
+                "a6a12ef5e9b4d877",
+                "8b73f980f505c909"
             ]
         ]
     },
@@ -20706,7 +21615,7 @@
         "className": "",
         "topic": "",
         "name": "Expired QRZ XML Key",
-        "x": 1980,
+        "x": 2200,
         "y": 1520,
         "wires": [
             []
@@ -20934,7 +21843,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Reset Keys",
-        "func": "global.set('qrzkey', undefined);\nglobal.set('qrzkeyexpire', undefined);\n\nreturn msg;",
+        "func": "global.set('qrzkey', undefined);\nglobal.set('qrzpassword', undefined)\nglobal.set('qrzkeyexpire', undefined);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -21243,18 +22152,6 @@
         "x": 250,
         "y": 1720,
         "wires": []
-    },
-    {
-        "id": "906f81af.036e7",
-        "type": "ui_ui_control",
-        "z": "204548a488401a1b",
-        "name": "",
-        "events": "all",
-        "x": 1300,
-        "y": 1180,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "a40770b92efed7ad",
@@ -21597,7 +22494,7 @@
         "id": "34a7871439e7394e",
         "type": "function",
         "z": "204548a488401a1b",
-        "name": "",
+        "name": "Get TTL",
         "func": "ttl = global.get('ttl')\n\nif (ttl == null)\n{\n    global.set('ttl',1200)\n    msg.payload = 1200\n}\n\nmsg.payload = ttl;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
@@ -21636,7 +22533,8 @@
         "y": 2160,
         "wires": [
             [
-                "34a7871439e7394e"
+                "34a7871439e7394e",
+                "6e48cbe3f5469ec6"
             ]
         ]
     },
@@ -21715,7 +22613,7 @@
         "id": "7a4b515df88258ed",
         "type": "ui_form",
         "z": "204548a488401a1b",
-        "name": "",
+        "name": "Lat & Lon Input",
         "label": "",
         "group": "2b43e4ca38d9b76c",
         "order": 1,
@@ -21748,7 +22646,7 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 230,
+        "x": 260,
         "y": 2320,
         "wires": [
             [
@@ -21769,8 +22667,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 2420,
+        "x": 510,
+        "y": 2360,
         "wires": []
     },
     {
@@ -21844,6 +22742,96 @@
         "wires": [
             [
                 "fb6c340e0efe1add"
+            ]
+        ]
+    },
+    {
+        "id": "3ae850cc68585fca",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "2b43e4ca38d9b76c",
+        "order": 1,
+        "width": "6",
+        "height": "2",
+        "name": "Current Lat & Lon",
+        "label": "Current Home Lat & Lon",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 930,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "6e48cbe3f5469ec6",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Lat & Lon",
+        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat == '' || homelon == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\"\n}\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 2280,
+        "wires": [
+            [
+                "3ae850cc68585fca"
+            ]
+        ]
+    },
+    {
+        "id": "3e99a62a3c74b32c",
+        "type": "http request",
+        "z": "204548a488401a1b",
+        "name": "Get QRZ XML Key",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://xmldata.qrz.com/xml/current/?username={{payload.qrzusername}};password={{payload.qrzpassword}};agent=q5.0",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 2170,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b73f980f505c909",
+        "type": "change",
+        "z": "204548a488401a1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.qrzusername",
+                "pt": "msg",
+                "to": "qrzusername",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload.qrzpassword",
+                "pt": "msg",
+                "to": "qrzpassword",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 1580,
+        "wires": [
+            [
+                "3e99a62a3c74b32c"
             ]
         ]
     },
@@ -22820,103 +23808,6 @@
         ]
     },
     {
-        "id": "5148140901147a6e",
-        "type": "statistics",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "dataSetSize": "2",
-        "inputField": "payload",
-        "inputFieldType": "msg",
-        "resultField": "payload",
-        "resultFieldType": "msg",
-        "parameterField": "sum",
-        "parameterFieldType": "msg",
-        "stripFunction": false,
-        "resultOnly": true,
-        "x": 440,
-        "y": 800,
-        "wires": [
-            [
-                "cb551b5e6bf306f5"
-            ]
-        ]
-    },
-    {
-        "id": "593977d4f44752d5",
-        "type": "inject",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 190,
-        "y": 820,
-        "wires": [
-            [
-                "5148140901147a6e"
-            ]
-        ]
-    },
-    {
-        "id": "cb551b5e6bf306f5",
-        "type": "debug",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "a1c3e14709df7155",
-        "type": "inject",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "2",
-        "payloadType": "num",
-        "x": 200,
-        "y": 880,
-        "wires": [
-            [
-                "5148140901147a6e"
-            ]
-        ]
-    },
-    {
         "id": "8b67a949f2e70ade",
         "type": "link out",
         "z": "bd8a446b999750f9",
@@ -23235,6 +24126,7 @@
         "x": 2020,
         "y": 820,
         "wires": [
+            [],
             []
         ]
     },

@@ -2,7 +2,21 @@
     "name": "N1MM_Dashboard",
     "description": "Dashboard for N1MM Contesting",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-hourglass": "1.5.0",
+        "node-red-contrib-msg-speed": "2.1.0",
+        "node-red-contrib-play-audio": "2.5.0",
+        "node-red-node-geofence": "0.3.1",
+        "node-red-node-ping": "0.3.1",
+        "node-red-node-smooth": "0.1.2",
+        "node-red-node-sqlite": "1.0.1",
+        "node-red-node-ui-table": "0.3.11",
+        "node-red-contrib-web-worldmap": "2.24.0",
+        "node-red-dashboard": "3.1.3",
+        "node-red-contrib-string": "1.0.0",
+        "node-red-contrib-ui-led": "0.4.11",
+        "node-red-contrib-unit-converter": "0.0.2"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",
