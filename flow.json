@@ -265,22 +265,22 @@
         ],
         "out": [
             {
-                "x": 2720,
-                "y": 60,
+                "x": 2620,
+                "y": 120,
                 "wires": [
                     {
-                        "id": "ce43ae734fc9b55d",
+                        "id": "b8b4fdfbdc3584ae",
                         "port": 0
                     },
                     {
-                        "id": "b8b4fdfbdc3584ae",
+                        "id": "c758ca8231477389",
                         "port": 0
                     }
                 ]
             },
             {
-                "x": 2180,
-                "y": 720,
+                "x": 2240,
+                "y": 1000,
                 "wires": [
                     {
                         "id": "9440ea3aa843027d",
@@ -616,7 +616,7 @@
         "type": "ui_group",
         "name": "Cluster without Dupes",
         "tab": "08eed6c3517c624e",
-        "order": 3,
+        "order": 2,
         "disp": true,
         "width": "10",
         "collapse": false,
@@ -986,21 +986,11 @@
         "type": "ui_group",
         "name": "Radio Names",
         "tab": "08eed6c3517c624e",
-        "order": 1,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "2dee2e04.7cf00a",
-        "type": "ui_group",
-        "name": "Test Messages",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "9",
-        "collapse": false
     },
     {
         "id": "475c1eff5d97ffe5",
@@ -1060,7 +1050,7 @@
         "type": "ui_group",
         "name": "Cluster with Dupes",
         "tab": "08eed6c3517c624e",
-        "order": 2,
+        "order": 1,
         "disp": true,
         "width": "10",
         "collapse": false,
@@ -1242,26 +1232,6 @@
         "className": ""
     },
     {
-        "id": "520f753e.322f2c",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "784c5b3f.cb6174",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "465f5622aae04ed5",
         "type": "tls-config",
         "name": "",
@@ -1382,6 +1352,17 @@
         "name": "Home Lat & Lon",
         "tab": "08eed6c3517c624e",
         "order": 12,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bf78ccb640f6b06a",
+        "type": "ui_group",
+        "name": "Map Labels",
+        "tab": "08eed6c3517c624e",
+        "order": 13,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1997,7 +1978,6 @@
         "y": 200,
         "wires": [
             [
-                "69e1aff2292f3f82",
                 "b8b4fdfbdc3584ae"
             ]
         ]
@@ -2142,12 +2122,17 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "Username / password required",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 4,
+        "outputs": 5,
         "x": 1550,
         "y": 260,
         "wires": [
@@ -2158,10 +2143,13 @@
                 "762f1749209f9ccf"
             ],
             [
-                "c494da870b130807"
+                "48307e071458f6a1"
             ],
             [
-                "f19991685165c4fc"
+                "48307e071458f6a1"
+            ],
+            [
+                "020edd3ba15d0ea4"
             ]
         ]
     },
@@ -2271,8 +2259,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 760,
-        "y": 700,
+        "x": 820,
+        "y": 980,
         "wires": [
             [
                 "291a0fe954156e5c"
@@ -2293,8 +2281,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 1020,
-        "y": 700,
+        "x": 1080,
+        "y": 980,
         "wires": [
             [
                 "af774bfa8f3fc940"
@@ -2388,8 +2376,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1620,
-        "y": 700,
+        "x": 1680,
+        "y": 980,
         "wires": [
             []
         ]
@@ -2416,8 +2404,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 490,
-        "y": 720,
+        "x": 550,
+        "y": 1000,
         "wires": [
             [
                 "e0bf55106eef7d29"
@@ -2453,8 +2441,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 760,
-        "y": 760,
+        "x": 820,
+        "y": 1040,
         "wires": [
             [
                 "b11f205691fffc5f"
@@ -2475,8 +2463,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 1200,
-        "y": 760,
+        "x": 1260,
+        "y": 1040,
         "wires": [
             [
                 "4b3ac2c8d45d7379"
@@ -2502,8 +2490,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
-        "y": 760,
+        "x": 1050,
+        "y": 1040,
         "wires": [
             [
                 "310eb7063e3326df"
@@ -2518,8 +2506,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 1370,
-        "y": 760,
+        "x": 1430,
+        "y": 1040,
         "wires": [
             [
                 "6565ab818b55c9c3"
@@ -2715,8 +2703,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1780,
-        "y": 760,
+        "x": 1840,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -2741,8 +2729,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1530,
-        "y": 760,
+        "x": 1590,
+        "y": 1040,
         "wires": [
             [
                 "dc2d5356e4a024aa"
@@ -2772,8 +2760,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1340,
-        "y": 700,
+        "x": 1400,
+        "y": 980,
         "wires": [
             [
                 "9440ea3aa843027d"
@@ -2816,93 +2804,9 @@
         "y": 360,
         "wires": [
             [
-                "e770e56154542cdd",
                 "c0c81bc9589bbb2e"
             ]
         ]
-    },
-    {
-        "id": "e770e56154542cdd",
-        "type": "debug",
-        "z": "bedd4acdc0e27dab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1990,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "c494da870b130807",
-        "type": "change",
-        "z": "bedd4acdc0e27dab",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "QRZ Session Timeout.  Relogin to QRZ.com on the configuration tab.",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1780,
-        "y": 460,
-        "wires": [
-            [
-                "3df3ddad593e6199",
-                "e995fea5e9a4c6e2"
-            ]
-        ]
-    },
-    {
-        "id": "41573a33ce16bc93",
-        "type": "ui_toast",
-        "z": "bedd4acdc0e27dab",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "QRZ Session Timeout Notification",
-        "x": 2440,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f19991685165c4fc",
-        "type": "debug",
-        "z": "bedd4acdc0e27dab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1630,
-        "y": 540,
-        "wires": []
     },
     {
         "id": "c0c81bc9589bbb2e",
@@ -2941,14 +2845,14 @@
         "id": "6ddd40d0ad448153",
         "type": "template",
         "z": "bedd4acdc0e27dab",
-        "name": "Update lat & lon DB",
+        "name": "Update lat, lon & distance DB",
         "field": "topic",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
         "template": "update qsos set lon='{{{payload.lon}}}', lat='{{{payload.lat}}}' , distance='{{{payload.distance}}}' where ID='{{{payload.ID}}}';",
         "output": "str",
-        "x": 2290,
+        "x": 2320,
         "y": 260,
         "wires": [
             [
@@ -2973,30 +2877,13 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 2140,
-        "y": 460,
+        "x": 2200,
+        "y": 520,
         "wires": [
             [
-                "41573a33ce16bc93"
+                "6b5361caafc5b871"
             ]
         ]
-    },
-    {
-        "id": "e995fea5e9a4c6e2",
-        "type": "debug",
-        "z": "bedd4acdc0e27dab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2060,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "064be844b3de8cf5",
@@ -3006,23 +2893,6 @@
         "info": "",
         "x": 2190,
         "y": 320,
-        "wires": []
-    },
-    {
-        "id": "69e1aff2292f3f82",
-        "type": "debug",
-        "z": "bedd4acdc0e27dab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1780,
-        "y": 80,
         "wires": []
     },
     {
@@ -3059,6 +2929,260 @@
         "y": 160,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "020edd3ba15d0ea4",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "QRZ Error.  Please check the configuration.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1800,
+        "y": 620,
+        "wires": [
+            [
+                "c0bf1ae508c68ea2"
+            ]
+        ]
+    },
+    {
+        "id": "c0bf1ae508c68ea2",
+        "type": "delay",
+        "z": "bedd4acdc0e27dab",
+        "name": "1 Msg Per Hour",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "hour",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2000,
+        "y": 620,
+        "wires": [
+            [
+                "ca9eb5a0ae68b3f7"
+            ]
+        ]
+    },
+    {
+        "id": "ca9eb5a0ae68b3f7",
+        "type": "ui_toast",
+        "z": "bedd4acdc0e27dab",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "QRZ Session General Error",
+        "x": 2240,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48307e071458f6a1",
+        "type": "switch",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "property": "qrzusername",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1770,
+        "y": 500,
+        "wires": [
+            [
+                "df7aeb880271e9ab"
+            ],
+            [
+                "f8fca14f8348f52a"
+            ]
+        ]
+    },
+    {
+        "id": "f8fca14f8348f52a",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "Set Error Msg",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please enter in your username & password on the configuration dashboard.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2000,
+        "y": 520,
+        "wires": [
+            [
+                "3df3ddad593e6199"
+            ]
+        ]
+    },
+    {
+        "id": "6b5361caafc5b871",
+        "type": "ui_toast",
+        "z": "bedd4acdc0e27dab",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Enter in Your QRZ Username & Password",
+        "x": 2500,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec02285ebc182563",
+        "type": "http request",
+        "z": "bedd4acdc0e27dab",
+        "name": "Get QRZ XML Key",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://xmldata.qrz.com/xml/current/?username={{payload.qrzusername}};password={{payload.qrzpassword}};agent=q5.0",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 2310,
+        "y": 480,
+        "wires": [
+            [
+                "9b81b34ea7eab20b"
+            ]
+        ]
+    },
+    {
+        "id": "9b81b34ea7eab20b",
+        "type": "xml",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 2490,
+        "y": 480,
+        "wires": [
+            [
+                "2585664f7f4bcded"
+            ]
+        ]
+    },
+    {
+        "id": "2585664f7f4bcded",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "qrzkey",
+                "pt": "global",
+                "to": "payload.QRZDatabase.Session[0].Key[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "qrzkeyexpire",
+                "pt": "global",
+                "to": "payload.QRZDatabase.Session[0].SubExp[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2660,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df7aeb880271e9ab",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "Set QRZ Username & Password",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.qrzusername",
+                "pt": "msg",
+                "to": "qrzusername",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload.qrzpassword",
+                "pt": "msg",
+                "to": "qrzpassword",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2050,
+        "y": 480,
+        "wires": [
+            [
+                "ec02285ebc182563"
+            ]
         ]
     },
     {
@@ -3444,7 +3568,7 @@
         "outport": "",
         "base64": false,
         "multicast": "false",
-        "x": 1640,
+        "x": 1660,
         "y": 260,
         "wires": []
     },
@@ -4514,22 +4638,6 @@
         "wires": []
     },
     {
-        "id": "3d0bf2defa23d6cc",
-        "type": "debug",
-        "z": "4a77ed092d5e5141",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1520,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "7ad80c90bd5ccb58",
         "type": "inject",
         "z": "4a77ed092d5e5141",
@@ -4609,6 +4717,59 @@
         "x": 690,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "3b58e03810ee1f50",
+        "type": "udp in",
+        "z": "4a77ed092d5e5141",
+        "name": "",
+        "iface": "",
+        "port": "12064",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 330,
+        "y": 1980,
+        "wires": [
+            [
+                "db042e9a0d0ae2a2"
+            ]
+        ]
+    },
+    {
+        "id": "db042e9a0d0ae2a2",
+        "type": "function",
+        "z": "4a77ed092d5e5141",
+        "name": "UTF8",
+        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 490,
+        "y": 1980,
+        "wires": [
+            [
+                "7e39b7915e02ac2d"
+            ]
+        ]
+    },
+    {
+        "id": "7e39b7915e02ac2d",
+        "type": "xml",
+        "z": "4a77ed092d5e5141",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 630,
+        "y": 1980,
+        "wires": [
+            [
+                "8098acef78168f5c"
+            ]
+        ]
     },
     {
         "id": "1e5d975d4f33a469",
@@ -5679,7 +5840,7 @@
         "type": "function",
         "z": "407d2b774fe67647",
         "name": "Label +  Add Multis + Exchange",
-        "func": "msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
+        "func": "let maplabels = global.get('maplabels')\n\nif (maplabels == true)\n{\n    msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6081,7 +6242,7 @@
         "width": 5,
         "height": 3,
         "name": "Last Multi QSO Time",
-        "label": "<font size = 6>Last Multi QSO",
+        "label": "<font size = 6>Last Mult QSO",
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
@@ -6250,7 +6411,6 @@
         "y": 1200,
         "wires": [
             [
-                "1dbe4e5a3370d2f2",
                 "d13e3608177fffc1"
             ]
         ]
@@ -6453,7 +6613,6 @@
                 "cab897702f8a6f57",
                 "b946bc8caa8d1dfa",
                 "b9e129bdae4de517",
-                "9d82475359abd064",
                 "5bbc72a4e604df32"
             ],
             [
@@ -6461,7 +6620,6 @@
                 "fb911af0905d8f5d",
                 "ccb12f5a5e87937a",
                 "27f4e52f97117294",
-                "4793713c1c0df6a1",
                 "d9503f18f29524db"
             ]
         ]
@@ -6685,7 +6843,6 @@
         "y": 1080,
         "wires": [
             [
-                "5669e3c2a02d3a5d",
                 "572d2215a6ea16bb"
             ]
         ]
@@ -6705,40 +6862,6 @@
         "className": "",
         "x": 1850,
         "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "9d82475359abd064",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "After Radio 1 Switch",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "4793713c1c0df6a1",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "After Radio 2 Switch",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 1540,
         "wires": []
     },
     {
@@ -6772,7 +6895,6 @@
         "y": 1480,
         "wires": [
             [
-                "a92d29f7e824277a",
                 "7aa65e21deb3bbf5"
             ]
         ]
@@ -7042,9 +7164,9 @@
         "id": "414221bb1dc710ba",
         "type": "comment",
         "z": "407d2b774fe67647",
-        "name": "Readme First!!!!",
-        "info": "These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command \n\nsudo apt-get install sqlite3\n\nThis will install sqlite3 on to your raspberry pi.\n\n\nNon-Standard nodes to load to the pallet (before you load the .json file)\n\n\"node-red-contrib-hourglass\": \"1.5.0\",\n\"node-red-contrib-msg-speed\": \"2.1.0\",\n\"node-red-contrib-play-audio\": \"2.5.0\",\n\"node-red-node-geofence\": \"0.3.1\",\n\"node-red-node-ping\": \"0.3.1\",\n\"node-red-node-smooth\": \"0.1.2\",\n\"node-red-node-sqlite\": \"1.0.1\", (will take 10 to 15 mins to load on RasPi)\n\"node-red-node-ui-table\": \"0.3.11\",\n\"node-red-contrib-web-worldmap\": \"2.24.0\",\n\"node-red-dashboard\": \"3.1.3\",\n\"node-red-contrib-string\": \"1.0.0\",\n\"node-red-contrib-ui-led\": \"0.4.11\",\n\"node-red-contrib-unit-converter\": \"0.0.2\"\n\n\n\n\n*****************\nAfter loading Sqlite node, we need to build the QSO table in the database. \n\nAt the command prompt User (pi) type the following (everything after the $);\n\n$sqlite3 qsos\n\nThis will create the qsos database and drop you into the database.\n\nNow we have to create a table within the qsos database called qsos.\n\nAt the sqlite> prompt, copy everything below from & including CREATE INDEX down to the semicolon and paste into the database.  This will create a table called qsos and a table named spots.\n\nCREATE TABLE qsos(\n  \"app\" TEXT,\n  \"contestname\" TEXT,\n  \"contestnr\" TEXT,\n  \"timestamp\" TEXT,\n  \"mycall\" TEXT,\n  \"band\" TEXT,\n  \"rxfreq\" TEXT,\n  \"txfreq\" TEXT,\n  \"operator\" TEXT,\n  \"mode\" TEXT,\n  \"call\" TEXT,\n  \"countryprefix\" TEXT,\n  \"wpxprefix\" TEXT,\n  \"stationprefix\" TEXT,\n  \"continent\" TEXT,\n  \"snt\" TEXT,\n  \"sntnr\" TEXT,\n  \"rcv\" TEXT,\n  \"rcvnr\" TEXT,\n  \"gridsquare\" TEXT,\n  \"exchange1\" TEXT,\n  \"section\" TEXT,\n  \"comment\" TEXT,\n  \"qth\" TEXT,\n  \"name\" TEXT,\n  \"power\" TEXT,\n  \"misctext\" TEXT,\n  \"zone\" TEXT,\n  \"prec\" TEXT,\n  \"ck\" TEXT,\n  \"ismultiplier1\" TEXT,\n  \"ismultiplier2\" TEXT,\n  \"ismultiplier3\" TEXT,\n  \"points\" TEXT,\n  \"radionr\" TEXT,\n  \"run1run2\" TEXT,\n  \"RoverLocation\" TEXT,\n  \"RadioInterfaced\" TEXT,\n  \"NetworkedCompNr\" TEXT,\n  \"IsOriginal\" TEXT,\n  \"NetBiosName\" TEXT,\n  \"IsRunQSO\" TEXT,\n  \"StationName\" TEXT,\n  \"ID\" TEXT,\n  \"IsClaimedQso\" TEXT,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"isbusted\" TEXT,\n  \"distance\" TEXT\n);\nCREATE TABLE spots(\n  \"call\" TEXT type UNIQUE,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"grid\" TEXT\n);\nCREATE INDEX call_idx on spots(call);\n\n\nType .schema at the carrot prompt to confirm your database structure.  You should see everything above.\n\nType .exit to exit out of the database and return to the Pi command prompt.\n\nsqlite>.exit \n\nYour Node Red local qsos database is now created and ready to go.  Now configure the properties of the SQLite node to create (or confirm) the node is pointing to the qsos database.  There are four (4) N1MM database nodes you need to configure.  In the sqlite node configuration screen, add the qsos database.  Names are case sensitive. \n\nFor your contest stations. in N1MM, within the entry window, click on Config -> Configure Ports, Mode Control, Winkey,etc... -> Broadcast Data.  Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  Place a space after the default IP:Port to start your IP address.\n\nRadio to aaa.bbb.ccc.ddd:12060\nContacts to aaa.bbb.ccc.ddd:12061\nScore to aaa.bbb.ccc.ddd:12062\n\nFor example, the Radio text box should look like this after your done (with the default values still there).\n\n127.0.0.1:12060 192.168.1.30:12060\n\nIn the Station Data switch node (Flow that starts with UDP 12060), you'll need to get N1MM started on all your PC's and determine the station name (typically the hostname of the computer).  You can enable the debug node and drill down into the XML data for StationName to check each UDP packet.  You'll want to get into the node and enter the station name for each of the stations you want to pull data from.\n\nI'm using Hamdb.org to grab the lon/lat for the map.  This database is a free lookup but currently only has US/VE data with a few other select countries.  If you want world wide spots, switch over to the QRZ.com paid XML subscription.\n\nThe time to live pins on the map is set to 3600 seconds (1 hour).  You can change this within the change node after the hamdb lookup.  Be aware a station with high QSO rates, this map will get cluttered very fast and not be very useful.\n\n",
-        "x": 160,
+        "name": "Readme First!!!! First Time Install",
+        "info": "These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command \n\nsudo apt-get install sqlite3\n\nThis will install sqlite3 on to your raspberry pi.\n\n\nNon-Standard nodes to load to the pallet (before you load the .json file)\n\n\"node-red-contrib-hourglass\": \"1.5.0\",\n\"node-red-contrib-msg-speed\": \"2.1.0\",\n\"node-red-contrib-play-audio\": \"2.5.0\",\n\"node-red-node-geofence\": \"0.3.1\",\n\"node-red-node-ping\": \"0.3.1\",\n\"node-red-node-smooth\": \"0.1.2\",\n\"node-red-node-sqlite\": \"1.0.1\", (will take 10 to 15 mins to load on RasPi)\n\"node-red-node-ui-table\": \"0.3.11\",\n\"node-red-contrib-web-worldmap\": \"2.24.0\",\n\"node-red-dashboard\": \"3.1.3\",\n\"node-red-contrib-string\": \"1.0.0\",\n\"node-red-contrib-ui-led\": \"0.4.11\",\n\"node-red-contrib-unit-converter\": \"0.0.2\"\n\n\n\n\n*****************\nAfter loading Sqlite node, we need to build the QSO table in the database. \n\nAt the command prompt User (pi) type the following (everything after the $);\n\n$sqlite3 qsos\n\nThis will create the qsos database and drop you into the database.\n\nNow we have to create a table within the qsos database called qsos.\n\nAt the sqlite> prompt, copy everything below from & including CREATE INDEX down to the semicolon and paste into the database.  This will create a table called qsos and a table named spots.\n\nCREATE TABLE qsos(\n  \"app\" TEXT,\n  \"contestname\" TEXT,\n  \"contestnr\" TEXT,\n  \"timestamp\" TEXT,\n  \"mycall\" TEXT,\n  \"band\" TEXT,\n  \"rxfreq\" TEXT,\n  \"txfreq\" TEXT,\n  \"operator\" TEXT,\n  \"mode\" TEXT,\n  \"call\" TEXT,\n  \"countryprefix\" TEXT,\n  \"wpxprefix\" TEXT,\n  \"stationprefix\" TEXT,\n  \"continent\" TEXT,\n  \"snt\" TEXT,\n  \"sntnr\" TEXT,\n  \"rcv\" TEXT,\n  \"rcvnr\" TEXT,\n  \"gridsquare\" TEXT,\n  \"exchange1\" TEXT,\n  \"section\" TEXT,\n  \"comment\" TEXT,\n  \"qth\" TEXT,\n  \"name\" TEXT,\n  \"power\" TEXT,\n  \"misctext\" TEXT,\n  \"zone\" TEXT,\n  \"prec\" TEXT,\n  \"ck\" TEXT,\n  \"ismultiplier1\" TEXT,\n  \"ismultiplier2\" TEXT,\n  \"ismultiplier3\" TEXT,\n  \"points\" TEXT,\n  \"radionr\" TEXT,\n  \"run1run2\" TEXT,\n  \"RoverLocation\" TEXT,\n  \"RadioInterfaced\" TEXT,\n  \"NetworkedCompNr\" TEXT,\n  \"IsOriginal\" TEXT,\n  \"NetBiosName\" TEXT,\n  \"IsRunQSO\" TEXT,\n  \"StationName\" TEXT,\n  \"ID\" TEXT,\n  \"IsClaimedQso\" TEXT,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"isbusted\" TEXT,\n  \"distance\" TEXT\n);\nCREATE TABLE spots(\n  \"call\" TEXT type UNIQUE,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"grid\" TEXT\n);\nCREATE INDEX call_idx on spots(call);\n\n\nType .schema at the carrot prompt to confirm your database structure.  You should see everything above.\n\nsqlite>.schema\n\nType .exit to exit out of the database and return to the Pi command prompt.\n\nsqlite>.exit \n\nYour Node Red local qsos database is now created and ready to go.  Now configure the properties of the SQLite node to create (or confirm) the node is pointing to the qsos database.  There are four (4) N1MM database nodes you need to configure.  In the sqlite node configuration screen, add the qsos database.  Names are case sensitive. \nFor your contest stations. in N1MM, within the entry window, click on Config -> Configure Ports, Mode Control, Winkey,etc... -> Broadcast Data.  Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  Place a space after the default IP:Port to start your IP address.\n\nRadio to aaa.bbb.ccc.ddd:12060\nContacts to aaa.bbb.ccc.ddd:12061\nScore to aaa.bbb.ccc.ddd:12062\n\nFor example, the Radio text box should look like this after your done (with the default values still there).\n\n127.0.0.1:12060 192.168.1.30:12060\n\nIn the Station Data switch node (Flow that starts with UDP 12060), you'll need to get N1MM started on all your PC's and determine the station name (typically the hostname of the computer).  You can enable the debug node and drill down into the XML data for StationName to check each UDP packet.  You'll want to get into the node and enter the station name for each of the stations you want to pull data from.\n\nI'm using Hamdb.org to grab the lon/lat for the map.  This database is a free lookup but currently only has US/VE data with a few other select countries.  If you want world wide spots, switch over to the QRZ.com paid XML subscription.\n\nThe time to live pins on the map is set to 3600 seconds (1 hour).  You can change this within the change node after the hamdb lookup.  Be aware a station with high QSO rates, this map will get cluttered very fast and not be very useful.\n\n",
+        "x": 210,
         "y": 120,
         "wires": []
     },
@@ -7132,8 +7254,7 @@
         "y": 1180,
         "wires": [
             [
-                "816d3f7e84dd1bf0",
-                "ebf8757d45bb7ea4"
+                "816d3f7e84dd1bf0"
             ]
         ]
     },
@@ -7270,76 +7391,6 @@
         "className": "",
         "x": 3060,
         "y": 1640,
-        "wires": []
-    },
-    {
-        "id": "611f96bb660a0836",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "name": "Set Topic & Payload Total Points by OP",
-        "func": "let points = msg.payload.points;\nlet multiplier = msg.payload.multiplier;\nlet operator = msg.payload.operator;\nlet score = msg.payload.score;\nlet total = null;\n\nif (multiplier == 0)\n{\n    total = points;\n}\nelse\n{\n    total = points * multiplier;\n}\n\nmsg.topic = operator;\nmsg.payload = total;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3540,
-        "y": 1700,
-        "wires": [
-            [
-                "6bf90cc5827e2aba"
-            ]
-        ]
-    },
-    {
-        "id": "6bf90cc5827e2aba",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3850,
-        "y": 1700,
-        "wires": []
-    },
-    {
-        "id": "03927204e4918bea",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "name": "Set Topic & Payload Total Multi by OP",
-        "func": "let multiplier = msg.payload.multiplier;\nlet operator = msg.payload.operator;\nlet score = msg.payload.score;\n\nmsg.topic = operator;\nmsg.payload = multiplier;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3530,
-        "y": 1740,
-        "wires": [
-            [
-                "3b31f91e00944778"
-            ]
-        ]
-    },
-    {
-        "id": "3b31f91e00944778",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3850,
-        "y": 1740,
         "wires": []
     },
     {
@@ -7499,40 +7550,6 @@
         ]
     },
     {
-        "id": "8d329ef4839fc644",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3270,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "ebf8757d45bb7ea4",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3340,
-        "y": 1120,
-        "wires": []
-    },
-    {
         "id": "1aa94adaa1790106",
         "type": "function",
         "z": "407d2b774fe67647",
@@ -7547,8 +7564,7 @@
         "y": 1340,
         "wires": [
             [
-                "35dd8fcbbd78da95",
-                "8d329ef4839fc644"
+                "35dd8fcbbd78da95"
             ]
         ]
     },
@@ -7909,23 +7925,6 @@
         "wires": []
     },
     {
-        "id": "2620c5c320338432",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "name": "If Score != 0",
-        "func": "score = msg.payload.dynamicresults.score[0]\n\nif (score == 0)\n{\n    return {\"payload\":{score:0}};\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 890,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "97ed253958c48009",
         "type": "switch",
         "z": "407d2b774fe67647",
@@ -8054,57 +8053,6 @@
                 "8a40e0fa64c5ad77"
             ]
         ]
-    },
-    {
-        "id": "1dbe4e5a3370d2f2",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2820,
-        "y": 1120,
-        "wires": []
-    },
-    {
-        "id": "5669e3c2a02d3a5d",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1450,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "a92d29f7e824277a",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 1420,
-        "wires": []
     },
     {
         "id": "d13e3608177fffc1",
@@ -8263,7 +8211,7 @@
         "type": "function",
         "z": "407d2b774fe67647",
         "name": "Total Multi Array Parse",
-        "func": "let arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmult = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmult = msg.payload.dynamicresults.breakdown[0].mult[i]._;\n        msg.payload = totalmult;\n        return {\"payload\":{totalmult:totalmult}};\n        \n    }\n    \n}\n\n\nreturn;",
+        "func": "let arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmult = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        total = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n        totalmult = totalmult + total;\n    }\n    \n}\n\nreturn {\"payload\":{totalmult:totalmult}};\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8439,73 +8387,59 @@
         ]
     },
     {
-        "id": "5b5d0e6a85c34a65",
-        "type": "udp in",
+        "id": "3105183456c5bc51",
+        "type": "template",
         "z": "407d2b774fe67647",
-        "name": "",
-        "iface": "",
-        "port": "12063",
-        "ipv": "udp4",
-        "multicast": "false",
-        "group": "",
-        "datatype": "utf8",
-        "x": 200,
+        "name": "Select Max Distance & Operator",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select max(cast(distance as int)) as distance, operator as operator from qsos;",
+        "output": "str",
+        "x": 310,
         "y": 1800,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5af8b84a9901ebd0",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.command",
+                "v": "{ \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \" }",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 1920,
+        "y": 140,
+        "wires": [
             [
-                "6e359d5a1ecc4dcc"
+                "2f1bf610.d7c76a"
             ]
         ]
     },
     {
-        "id": "6e359d5a1ecc4dcc",
-        "type": "function",
+        "id": "e90979a1ad5147cd",
+        "type": "comment",
         "z": "407d2b774fe67647",
-        "name": "UTF8",
-        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 330,
-        "y": 1800,
-        "wires": [
-            [
-                "901346f7c985c246"
-            ]
-        ]
-    },
-    {
-        "id": "901346f7c985c246",
-        "type": "xml",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
+        "name": "ReadMe First!!!! Upgrading",
+        "info": "These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command \n\nNon-Standard nodes to load to the pallet (before you load the .json file)\n\n\"node-red-contrib-hourglass\": \"1.5.0\",\n\"node-red-contrib-msg-speed\": \"2.1.0\",\n\"node-red-contrib-play-audio\": \"2.5.0\",\n\"node-red-node-geofence\": \"0.3.1\",\n\"node-red-node-ping\": \"0.3.1\",\n\"node-red-node-smooth\": \"0.1.2\",\n\"node-red-node-sqlite\": \"1.0.1\", (will take 10 to 15 mins to load on RasPi)\n\"node-red-node-ui-table\": \"0.3.11\",\n\"node-red-contrib-web-worldmap\": \"2.24.0\",\n\"node-red-dashboard\": \"3.1.3\",\n\"node-red-contrib-string\": \"1.0.0\",\n\"node-red-contrib-ui-led\": \"0.4.11\",\n\"node-red-contrib-unit-converter\": \"0.0.2\"\n\n\n\n\n*****************\nAfter loading Sqlite node, we need to build the QSO table in the database. \n\nAt the command prompt User (pi) type the following (everything after the $);\n\nThe following command will remove the qsos database\n$rm qsos\n\n$sqlite3 qsos\n\nThis will create the qsos database and drop you into the database.\n\nNow we have to create a table within the qsos database called qsos.\n\nAt the sqlite> prompt, copy everything below from & including CREATE INDEX down to the semicolon and paste into the database.  This will create a table called qsos and a table named spots.\n\nCREATE TABLE qsos(\n  \"app\" TEXT,\n  \"contestname\" TEXT,\n  \"contestnr\" TEXT,\n  \"timestamp\" TEXT,\n  \"mycall\" TEXT,\n  \"band\" TEXT,\n  \"rxfreq\" TEXT,\n  \"txfreq\" TEXT,\n  \"operator\" TEXT,\n  \"mode\" TEXT,\n  \"call\" TEXT,\n  \"countryprefix\" TEXT,\n  \"wpxprefix\" TEXT,\n  \"stationprefix\" TEXT,\n  \"continent\" TEXT,\n  \"snt\" TEXT,\n  \"sntnr\" TEXT,\n  \"rcv\" TEXT,\n  \"rcvnr\" TEXT,\n  \"gridsquare\" TEXT,\n  \"exchange1\" TEXT,\n  \"section\" TEXT,\n  \"comment\" TEXT,\n  \"qth\" TEXT,\n  \"name\" TEXT,\n  \"power\" TEXT,\n  \"misctext\" TEXT,\n  \"zone\" TEXT,\n  \"prec\" TEXT,\n  \"ck\" TEXT,\n  \"ismultiplier1\" TEXT,\n  \"ismultiplier2\" TEXT,\n  \"ismultiplier3\" TEXT,\n  \"points\" TEXT,\n  \"radionr\" TEXT,\n  \"run1run2\" TEXT,\n  \"RoverLocation\" TEXT,\n  \"RadioInterfaced\" TEXT,\n  \"NetworkedCompNr\" TEXT,\n  \"IsOriginal\" TEXT,\n  \"NetBiosName\" TEXT,\n  \"IsRunQSO\" TEXT,\n  \"StationName\" TEXT,\n  \"ID\" TEXT,\n  \"IsClaimedQso\" TEXT,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"isbusted\" TEXT,\n  \"distance\" TEXT\n);\nCREATE TABLE spots(\n  \"call\" TEXT type UNIQUE,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"grid\" TEXT\n);\nCREATE INDEX call_idx on spots(call);\n\n\nType .schema at the carrot prompt to confirm your database structure.  You should see everything above.\n\nsqlite>.schema\n\nType .exit to exit out of the database and return to the Pi command prompt.\n\nsqlite>.exit \n\nYou can now exit out the terminal window.\n",
         "x": 470,
-        "y": 1800,
-        "wires": [
-            [
-                "858937f075f5882d"
-            ]
-        ]
-    },
-    {
-        "id": "858937f075f5882d",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 1800,
+        "y": 120,
         "wires": []
     },
     {
@@ -8836,8 +8770,7 @@
         "y": 120,
         "wires": [
             [
-                "c1c7c6ce1669d97e",
-                "70cb5cd0e257f749"
+                "c1c7c6ce1669d97e"
             ]
         ]
     },
@@ -8853,7 +8786,6 @@
         "y": 120,
         "wires": [
             [
-                "ec899d8a102522ff",
                 "3073d60f25abe0f4"
             ]
         ]
@@ -8940,7 +8872,6 @@
         "y": 440,
         "wires": [
             [
-                "6657c41e8afdfb71",
                 "45ddcbd0d057c0bc"
             ]
         ]
@@ -9133,7 +9064,6 @@
         "y": 760,
         "wires": [
             [
-                "c468f5d0382da5fa",
                 "95c3475ec0e0b4d9"
             ]
         ]
@@ -9309,7 +9239,6 @@
         "y": 1100,
         "wires": [
             [
-                "1a47808ab3edfac6",
                 "24c3fc53c5522a8d"
             ]
         ]
@@ -9454,23 +9383,6 @@
         ]
     },
     {
-        "id": "f86b3bace56f2e66",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1430,
-        "y": 200,
-        "wires": []
-    },
-    {
         "id": "c5877e8dd99b4e62",
         "type": "delay",
         "z": "63d876401a56f871",
@@ -9582,7 +9494,6 @@
         "y": 320,
         "wires": [
             [
-                "f86b3bace56f2e66",
                 "a267e8d599520171"
             ]
         ]
@@ -9599,7 +9510,6 @@
         "y": 640,
         "wires": [
             [
-                "351bc21b85bc440a",
                 "2d9c8ae4d8a9a8fe"
             ]
         ]
@@ -9704,7 +9614,6 @@
         "y": 960,
         "wires": [
             [
-                "fa8b284f90fe0d47",
                 "335050ee7717c221"
             ]
         ]
@@ -9748,23 +9657,6 @@
         ]
     },
     {
-        "id": "9be258ef3f5176a6",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1650,
-        "y": 1240,
-        "wires": []
-    },
-    {
         "id": "4ad6652ae6d82b00",
         "type": "delay",
         "z": "63d876401a56f871",
@@ -9801,7 +9693,6 @@
         "y": 1300,
         "wires": [
             [
-                "9be258ef3f5176a6",
                 "e52eef0c05f525e1"
             ]
         ]
@@ -11852,16 +11743,13 @@
         "y": 120,
         "wires": [
             [
-                "bed5d086957bf3eb",
-                "33b07c668d01e524"
+                "bed5d086957bf3eb"
             ],
             [
-                "bed5d086957bf3eb",
-                "33b07c668d01e524"
+                "bed5d086957bf3eb"
             ],
             [
-                "bed5d086957bf3eb",
-                "33b07c668d01e524"
+                "bed5d086957bf3eb"
             ]
         ]
     },
@@ -12242,142 +12130,6 @@
                 "592c56e3d1449c3e"
             ]
         ]
-    },
-    {
-        "id": "70cb5cd0e257f749",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1090,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "ec899d8a102522ff",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "33b07c668d01e524",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1710,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "6657c41e8afdfb71",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1310,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "351bc21b85bc440a",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1490,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "c468f5d0382da5fa",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1510,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "fa8b284f90fe0d47",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1690,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "1a47808ab3edfac6",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1510,
-        "y": 1040,
-        "wires": []
     },
     {
         "id": "3073d60f25abe0f4",
@@ -12823,7 +12575,6 @@
         "y": 1440,
         "wires": [
             [
-                "42f4e613bf37051e",
                 "0c53f4520bda7edc"
             ]
         ]
@@ -12926,23 +12677,6 @@
         ]
     },
     {
-        "id": "01841f61354cc455",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1470,
-        "y": 1580,
-        "wires": []
-    },
-    {
         "id": "a1d33b13deb1d304",
         "type": "delay",
         "z": "63d876401a56f871",
@@ -12979,7 +12713,6 @@
         "y": 1640,
         "wires": [
             [
-                "01841f61354cc455",
                 "1e942633d1b0330e"
             ]
         ]
@@ -13021,23 +12754,6 @@
                 "ab222f8f3c53cd87"
             ]
         ]
-    },
-    {
-        "id": "42f4e613bf37051e",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 1380,
-        "wires": []
     },
     {
         "id": "0c53f4520bda7edc",
@@ -13247,7 +12963,6 @@
         "y": 1780,
         "wires": [
             [
-                "bee21c4b191ae150",
                 "8c845733e92e41e2"
             ]
         ]
@@ -13350,23 +13065,6 @@
         ]
     },
     {
-        "id": "d62fe08de5440996",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 1920,
-        "wires": []
-    },
-    {
         "id": "88362d3b27d187ed",
         "type": "delay",
         "z": "63d876401a56f871",
@@ -13403,7 +13101,6 @@
         "y": 1980,
         "wires": [
             [
-                "d62fe08de5440996",
                 "14ddf66a8c208255"
             ]
         ]
@@ -13445,23 +13142,6 @@
                 "bca717449dc24f29"
             ]
         ]
-    },
-    {
-        "id": "bee21c4b191ae150",
-        "type": "debug",
-        "z": "63d876401a56f871",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1190,
-        "y": 1720,
-        "wires": []
     },
     {
         "id": "8c845733e92e41e2",
@@ -14576,8 +14256,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1460,
-        "y": 1500,
+        "x": 1960,
+        "y": 1480,
         "wires": []
     },
     {
@@ -14591,8 +14271,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 1500,
+        "x": 1650,
+        "y": 1480,
         "wires": [
             [
                 "da67b9b7e9829477",
@@ -14835,87 +14515,6 @@
         ]
     },
     {
-        "id": "ba90ae0292ffd20f",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "func": "//let array1=[];\n    \n//    for (i = 0; i <=3; i++) {\n //       array1[i].push = 10;\n//        }\n        \n//msg.payload = array1;        \n//return msg;\n\n//payload[0]\n\n//payload[0].points\n\nlet cars = [\n  {\n    \"color\": \"purple\",\n    \"type\": \"minivan\",\n    \"capacity\": 7\n  },\n  {\n    \"color\": \"red\",\n    \"type\": \"station wagon\",\n    \"capacity\": 5\n  },\n]\n\ncars.forEach(car => \n{\n car['size'] = \"large\";\n \n if (car.capacity <= 5)\n {\n   car['size'] = \"medium\";\n }\n \n if (car.capacity <= 3)\n {\n   car['size'] = \"small\";\n }\n});\n\nmsg.payload = cars\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1840,
-        "y": 3020,
-        "wires": [
-            [
-                "2b31376bb4b6e905"
-            ]
-        ]
-    },
-    {
-        "id": "85f49e5abba6fdb5",
-        "type": "inject",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1650,
-        "y": 3020,
-        "wires": [
-            [
-                "ba90ae0292ffd20f"
-            ]
-        ]
-    },
-    {
-        "id": "2b31376bb4b6e905",
-        "type": "debug",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2010,
-        "y": 3020,
-        "wires": []
-    },
-    {
-        "id": "07b821fd834a0431",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "func": "let orig = msg.original\nlet rate = msg.payload\n\n//for (var i = 0; i < orig.length; i++)\n//{\n//    rate[i].operator = orig[i].operator\n//    msg.payload = rate\n//    return msg\n//}\n\norig.forEach(orig =>\n\nrate.operator = orig.operator\n)\n\n\n//if (operator == null)\n//{\n//    return;\n//}\n\n//if (operator !== null)\n//{\n//    orig.forEach(orig =>\n//    {\n//        if(orig.operator == operator)\n//        {\n//            orig['rate1'] = rate\n//        }\n//    });\n//}\n\nmsg.payload = rate;\nreturn;\n\n\n\n//let cars = [\n//  {\n//    \"color\": \"purple\",\n//    \"type\": \"minivan\",\n//    \"capacity\": 7\n//  },\n//  {\n//    \"color\": \"red\",\n//    \"type\": \"station wagon\",\n//    \"capacity\": 5\n//  },\n//]\n\n//cars.forEach(car => \n//{\n// car['size'] = \"large\";\n// \n// if (car.capacity <= 5)\n// {\n//   car['size'] = \"medium\";\n// }\n \n// if (car.capacity <= 3)\n// {\n//   car['size'] = \"small\";\n// }\n//});\n\n//msg.payload = cars\n//return msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1820,
-        "y": 2840,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "194d2908ec3d0929",
         "type": "debug",
         "z": "c8e1ef6f509cd75a",
@@ -14952,54 +14551,8 @@
         "y": 2960,
         "wires": [
             [
-                "194d2908ec3d0929",
-                "8e93b98b98a01630"
+                "194d2908ec3d0929"
             ]
-        ]
-    },
-    {
-        "id": "8e93b98b98a01630",
-        "type": "array-loop",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "key": "al8e93b98b98a01630",
-        "keyType": "msg",
-        "reset": false,
-        "resetValue": "value-null",
-        "array": "original",
-        "arrayType": "msg",
-        "x": 1150,
-        "y": 2960,
-        "wires": [
-            [],
-            [
-                "baf93dde01084918"
-            ]
-        ]
-    },
-    {
-        "id": "baf93dde01084918",
-        "type": "change",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.operator",
-                "pt": "msg",
-                "to": "original.operator",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1390,
-        "y": 3020,
-        "wires": [
-            []
         ]
     },
     {
@@ -15210,8 +14763,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1460,
-        "y": 1540,
+        "x": 1960,
+        "y": 1520,
         "wires": []
     },
     {
@@ -15227,8 +14780,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1460,
-        "y": 1580,
+        "x": 1960,
+        "y": 1560,
         "wires": []
     },
     {
@@ -15244,8 +14797,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1460,
-        "y": 1620,
+        "x": 1960,
+        "y": 1600,
         "wires": []
     },
     {
@@ -15261,8 +14814,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1460,
-        "y": 1660,
+        "x": 1960,
+        "y": 1640,
         "wires": []
     },
     {
@@ -15278,8 +14831,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1460,
-        "y": 1700,
+        "x": 1960,
+        "y": 1680,
         "wires": []
     },
     {
@@ -15295,8 +14848,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1460,
-        "y": 1740,
+        "x": 1960,
+        "y": 1720,
         "wires": []
     },
     {
@@ -15312,25 +14865,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1460,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "059b9c8e500010ca",
-        "type": "debug",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2130,
-        "y": 900,
+        "x": 1960,
+        "y": 1760,
         "wires": []
     },
     {
@@ -15522,8 +15058,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 1860,
+        "x": 1980,
+        "y": 1840,
         "wires": []
     },
     {
@@ -15539,8 +15075,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 1900,
+        "x": 1980,
+        "y": 1880,
         "wires": []
     },
     {
@@ -15556,8 +15092,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 1940,
+        "x": 1980,
+        "y": 1920,
         "wires": []
     },
     {
@@ -15573,8 +15109,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 1980,
+        "x": 1980,
+        "y": 1960,
         "wires": []
     },
     {
@@ -15590,8 +15126,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2020,
+        "x": 1980,
+        "y": 2000,
         "wires": []
     },
     {
@@ -15607,8 +15143,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2060,
+        "x": 1980,
+        "y": 2040,
         "wires": []
     },
     {
@@ -15624,8 +15160,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2100,
+        "x": 1980,
+        "y": 2080,
         "wires": []
     },
     {
@@ -15641,8 +15177,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2140,
+        "x": 1980,
+        "y": 2120,
         "wires": []
     },
     {
@@ -15962,8 +15498,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2220,
+        "x": 1980,
+        "y": 2200,
         "wires": []
     },
     {
@@ -15979,8 +15515,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2260,
+        "x": 1980,
+        "y": 2240,
         "wires": []
     },
     {
@@ -15996,8 +15532,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2300,
+        "x": 1980,
+        "y": 2280,
         "wires": []
     },
     {
@@ -16013,8 +15549,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2340,
+        "x": 1980,
+        "y": 2320,
         "wires": []
     },
     {
@@ -16030,8 +15566,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2380,
+        "x": 1980,
+        "y": 2360,
         "wires": []
     },
     {
@@ -16047,8 +15583,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2420,
+        "x": 1980,
+        "y": 2400,
         "wires": []
     },
     {
@@ -16064,8 +15600,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2460,
+        "x": 1980,
+        "y": 2440,
         "wires": []
     },
     {
@@ -16081,8 +15617,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
-        "y": 2500,
+        "x": 1980,
+        "y": 2480,
         "wires": []
     },
     {
@@ -16128,12 +15664,12 @@
         "width": 2,
         "height": 2,
         "name": "1st Place Score Trending",
-        "label": "<font size = 4>Score",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1470,
-        "y": 2560,
+        "x": 1970,
+        "y": 2540,
         "wires": []
     },
     {
@@ -16145,12 +15681,12 @@
         "width": 2,
         "height": 2,
         "name": "2nd Place Score Trending",
-        "label": "<font size = 4>Score",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1470,
-        "y": 2600,
+        "x": 1970,
+        "y": 2580,
         "wires": []
     },
     {
@@ -16162,12 +15698,12 @@
         "width": 2,
         "height": 2,
         "name": "3rd Place Score Trending",
-        "label": "<font size = 4>Score",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1470,
-        "y": 2640,
+        "x": 1970,
+        "y": 2620,
         "wires": []
     },
     {
@@ -16179,12 +15715,12 @@
         "width": 2,
         "height": 2,
         "name": "4th Place Score Trending",
-        "label": "<font size = 4>Score",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1470,
-        "y": 2680,
+        "x": 1970,
+        "y": 2660,
         "wires": []
     },
     {
@@ -16196,12 +15732,12 @@
         "width": 2,
         "height": 2,
         "name": "5th Place Score Trending",
-        "label": "<font size = 4>Score",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1470,
-        "y": 2720,
+        "x": 1970,
+        "y": 2700,
         "wires": []
     },
     {
@@ -16213,12 +15749,12 @@
         "width": 2,
         "height": 2,
         "name": "6th Place Score Trending",
-        "label": "<font size = 4>Score",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1470,
-        "y": 2760,
+        "x": 1970,
+        "y": 2740,
         "wires": []
     },
     {
@@ -16230,12 +15766,12 @@
         "width": 2,
         "height": 2,
         "name": "7th Place Score Trending",
-        "label": "<font size = 4>Score",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1470,
-        "y": 2800,
+        "x": 1970,
+        "y": 2780,
         "wires": []
     },
     {
@@ -16247,12 +15783,12 @@
         "width": 2,
         "height": 2,
         "name": "8th Place Score Trending",
-        "label": "<font size = 4>Score",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1470,
-        "y": 2840,
+        "x": 1970,
+        "y": 2820,
         "wires": []
     },
     {
@@ -16266,8 +15802,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 1860,
+        "x": 1660,
+        "y": 1840,
         "wires": [
             [
                 "f1d22697c74b510d"
@@ -16285,8 +15821,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 1900,
+        "x": 1660,
+        "y": 1880,
         "wires": [
             [
                 "01133d67adbaf806"
@@ -16304,8 +15840,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 1940,
+        "x": 1660,
+        "y": 1920,
         "wires": [
             [
                 "8ce512c3b1c7c11a"
@@ -16323,8 +15859,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 1980,
+        "x": 1660,
+        "y": 1960,
         "wires": [
             [
                 "43d8d1e673f4cd7c"
@@ -16342,8 +15878,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2020,
+        "x": 1660,
+        "y": 2000,
         "wires": [
             [
                 "cc1e30724335086d"
@@ -16361,8 +15897,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2060,
+        "x": 1660,
+        "y": 2040,
         "wires": [
             [
                 "08912b465a9ef75e"
@@ -16380,8 +15916,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2100,
+        "x": 1660,
+        "y": 2080,
         "wires": [
             [
                 "804ab4252f9e6b08"
@@ -16399,8 +15935,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2140,
+        "x": 1660,
+        "y": 2120,
         "wires": [
             [
                 "51f7aec3999c34fe"
@@ -16418,8 +15954,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2220,
+        "x": 1660,
+        "y": 2200,
         "wires": [
             [
                 "f09ca3fb1f789f90"
@@ -16437,8 +15973,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2260,
+        "x": 1660,
+        "y": 2240,
         "wires": [
             [
                 "9f49e1b3a8dbcbc9"
@@ -16456,8 +15992,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2300,
+        "x": 1660,
+        "y": 2280,
         "wires": [
             [
                 "78a88421b603dfad"
@@ -16475,8 +16011,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2340,
+        "x": 1660,
+        "y": 2320,
         "wires": [
             [
                 "6d0ddc9efba4411e"
@@ -16494,8 +16030,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2380,
+        "x": 1660,
+        "y": 2360,
         "wires": [
             [
                 "9fdc4f465d7dc9b1"
@@ -16513,8 +16049,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2420,
+        "x": 1660,
+        "y": 2400,
         "wires": [
             [
                 "23310392a454374a"
@@ -16532,8 +16068,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2460,
+        "x": 1660,
+        "y": 2440,
         "wires": [
             [
                 "9119d9c282c42a34"
@@ -16551,8 +16087,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 2500,
+        "x": 1660,
+        "y": 2480,
         "wires": [
             [
                 "187d324ac6f32059"
@@ -16570,8 +16106,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 2560,
+        "x": 1650,
+        "y": 2540,
         "wires": [
             []
         ]
@@ -16587,8 +16123,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 2600,
+        "x": 1650,
+        "y": 2580,
         "wires": [
             []
         ]
@@ -16604,8 +16140,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 2640,
+        "x": 1650,
+        "y": 2620,
         "wires": [
             []
         ]
@@ -16621,8 +16157,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 2680,
+        "x": 1650,
+        "y": 2660,
         "wires": [
             []
         ]
@@ -16638,8 +16174,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 2720,
+        "x": 1650,
+        "y": 2700,
         "wires": [
             []
         ]
@@ -16655,8 +16191,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 2760,
+        "x": 1650,
+        "y": 2740,
         "wires": [
             []
         ]
@@ -16672,8 +16208,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 2800,
+        "x": 1650,
+        "y": 2780,
         "wires": [
             []
         ]
@@ -16689,8 +16225,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 2840,
+        "x": 1650,
+        "y": 2820,
         "wires": [
             []
         ]
@@ -17074,15 +16610,10 @@
         "links": [
             "6dc0b640e1c8407e"
         ],
-        "x": 125,
-        "y": 2000,
+        "x": 115,
+        "y": 1660,
         "wires": [
-            [
-                "9341467b40450590",
-                "fd0f75c40511dce7",
-                "e7a2274f394e40af",
-                "42dd44c1b9117a77"
-            ]
+            []
         ]
     },
     {
@@ -17091,7 +16622,7 @@
         "z": "c8e1ef6f509cd75a",
         "name": "",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "3",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -17143,87 +16674,6 @@
         ]
     },
     {
-        "id": "edf151691daadb8b",
-        "type": "debug",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 850,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "9341467b40450590",
-        "type": "delay",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 720,
-        "y": 1980,
-        "wires": [
-            [
-                "85b47be5c163b3f0",
-                "5086efc9ddeec8ac",
-                "9dfe1a3480d22cf3",
-                "92ed056eda686753",
-                "f5227e733dc9367f",
-                "5e640a0c686ea653",
-                "95638eb6e9f95f5c",
-                "262914991187e01b"
-            ]
-        ]
-    },
-    {
-        "id": "fd0f75c40511dce7",
-        "type": "delay",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "3",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 720,
-        "y": 2360,
-        "wires": [
-            [
-                "0a1c0887a8b6268e",
-                "67da8dd6717a753b",
-                "e9855929b8d30e1e",
-                "74b688fa1ce910af",
-                "c3f310a3673c779e",
-                "1720b55e52ebf32e",
-                "9181555252c367e6",
-                "a09e1e0b5c29889a"
-            ]
-        ]
-    },
-    {
         "id": "e7a2274f394e40af",
         "type": "delay",
         "z": "c8e1ef6f509cd75a",
@@ -17257,8 +16707,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 1540,
+        "x": 1650,
+        "y": 1520,
         "wires": [
             [
                 "0173339b90c30073",
@@ -17277,8 +16727,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 1580,
+        "x": 1650,
+        "y": 1560,
         "wires": [
             [
                 "8ce83f211846106d",
@@ -17297,8 +16747,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 1620,
+        "x": 1650,
+        "y": 1600,
         "wires": [
             [
                 "a06aef0809e3b058",
@@ -17317,8 +16767,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 1660,
+        "x": 1650,
+        "y": 1640,
         "wires": [
             [
                 "fcc708c0b3c585dc",
@@ -17337,8 +16787,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 1700,
+        "x": 1650,
+        "y": 1680,
         "wires": [
             [
                 "11aabad73297429a",
@@ -17357,8 +16807,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 1740,
+        "x": 1650,
+        "y": 1720,
         "wires": [
             [
                 "048583383c6c2b63",
@@ -17377,8 +16827,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 1780,
+        "x": 1650,
+        "y": 1760,
         "wires": [
             [
                 "b92aec5ddc71fafc",
@@ -17399,8 +16849,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1500,
+        "x": 2190,
+        "y": 1480,
         "wires": []
     },
     {
@@ -17416,8 +16866,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1540,
+        "x": 2190,
+        "y": 1520,
         "wires": []
     },
     {
@@ -17433,8 +16883,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1580,
+        "x": 2190,
+        "y": 1560,
         "wires": []
     },
     {
@@ -17450,8 +16900,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1620,
+        "x": 2190,
+        "y": 1600,
         "wires": []
     },
     {
@@ -17467,8 +16917,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1660,
+        "x": 2190,
+        "y": 1640,
         "wires": []
     },
     {
@@ -17484,8 +16934,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1700,
+        "x": 2190,
+        "y": 1680,
         "wires": []
     },
     {
@@ -17501,8 +16951,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1740,
+        "x": 2190,
+        "y": 1720,
         "wires": []
     },
     {
@@ -17518,8 +16968,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1780,
+        "x": 2190,
+        "y": 1760,
         "wires": []
     },
     {
@@ -17531,6 +16981,166 @@
         "x": 390,
         "y": 1580,
         "wires": []
+    },
+    {
+        "id": "6839cdf9e840f384",
+        "type": "inject",
+        "z": "c8e1ef6f509cd75a",
+        "name": "1 Per 5 Min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 2000,
+        "wires": [
+            [
+                "8c530f8aced55ea2",
+                "42dd44c1b9117a77",
+                "ad8a6a7b6330600c"
+            ]
+        ]
+    },
+    {
+        "id": "61d3849fc0346ed6",
+        "type": "sqlite",
+        "z": "c8e1ef6f509cd75a",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "N1MM QSOs",
+        "x": 850,
+        "y": 2000,
+        "wires": [
+            [
+                "85b47be5c163b3f0",
+                "5086efc9ddeec8ac",
+                "9dfe1a3480d22cf3",
+                "92ed056eda686753",
+                "f5227e733dc9367f",
+                "5e640a0c686ea653",
+                "95638eb6e9f95f5c",
+                "262914991187e01b"
+            ]
+        ]
+    },
+    {
+        "id": "8c530f8aced55ea2",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 1Hr Rate",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+        "output": "str",
+        "x": 640,
+        "y": 2000,
+        "wires": [
+            [
+                "61d3849fc0346ed6"
+            ]
+        ]
+    },
+    {
+        "id": "876a37f507199eeb",
+        "type": "delay",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "064a889f6409cc77",
+        "type": "delay",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 2240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea8fe7c3d099027a",
+        "type": "sqlite",
+        "z": "c8e1ef6f509cd75a",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "N1MM QSOs",
+        "x": 850,
+        "y": 2360,
+        "wires": [
+            [
+                "0a1c0887a8b6268e",
+                "67da8dd6717a753b",
+                "e9855929b8d30e1e",
+                "74b688fa1ce910af",
+                "c3f310a3673c779e",
+                "1720b55e52ebf32e",
+                "9181555252c367e6",
+                "a09e1e0b5c29889a"
+            ]
+        ]
+    },
+    {
+        "id": "ad8a6a7b6330600c",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 2Hr Rate",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+        "output": "str",
+        "x": 640,
+        "y": 2360,
+        "wires": [
+            [
+                "ea8fe7c3d099027a"
+            ]
+        ]
     },
     {
         "id": "425f3c637f4bf34a",
@@ -17719,8 +17329,7 @@
         "y": 840,
         "wires": [
             [
-                "aaafe6ffffa92c6f",
-                "60bcd00362ffec8a"
+                "aaafe6ffffa92c6f"
             ]
         ]
     },
@@ -17812,23 +17421,6 @@
                 "ed80acad2866a4c5"
             ]
         ]
-    },
-    {
-        "id": "60bcd00362ffec8a",
-        "type": "debug",
-        "z": "9ed270102b553c75",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1070,
-        "y": 980,
-        "wires": []
     },
     {
         "id": "e9a1427278cb27c6",
@@ -18691,22 +18283,6 @@
         "wires": []
     },
     {
-        "id": "335f5da911a52c73",
-        "type": "debug",
-        "z": "9ed270102b553c75",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1870,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "a0302a54a10a9798",
         "type": "function",
         "z": "9ed270102b553c75",
@@ -18723,73 +18299,6 @@
             [
                 "3eef6f4fb58523ba"
             ]
-        ]
-    },
-    {
-        "id": "ce3d6e06379fd881",
-        "type": "function",
-        "z": "9ed270102b553c75",
-        "name": "Get Mins",
-        "func": "function getminutes() {\n var date = new Date();\n var min = (date.getMinutes());\n return min;\n}\n\nvar min = getminutes();\n\nreturn {payload : min};\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 1640,
-        "wires": [
-            [
-                "433af832b8ca90da"
-            ]
-        ]
-    },
-    {
-        "id": "433af832b8ca90da",
-        "type": "switch",
-        "z": "9ed270102b553c75",
-        "name": "min = 00",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "00",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 480,
-        "y": 1640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2903ea3a05b6e6be",
-        "type": "change",
-        "z": "9ed270102b553c75",
-        "name": "Clear Stats",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.points",
-                "pt": "msg",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 910,
-        "y": 1440,
-        "wires": [
-            []
         ]
     },
     {
@@ -20917,7 +20426,7 @@
         "name": "Comptuer Name Input",
         "label": "Computer Names",
         "group": "887ee2eadc46df9a",
-        "order": 3,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -21050,7 +20559,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 2,
+        "order": 1,
         "width": 6,
         "height": 1,
         "name": "First Two PC Names Will Appear on the N1MM Dashboard With the Map",
@@ -21068,7 +20577,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "887ee2eadc46df9a",
-        "order": 1,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -21621,7 +21130,6 @@
         "y": 1480,
         "wires": [
             [
-                "c3c9d9c537baf50c",
                 "2474b2eb527716e4"
             ]
         ]
@@ -21638,10 +21146,9 @@
         "finalize": "",
         "libs": [],
         "x": 1720,
-        "y": 1520,
+        "y": 1580,
         "wires": [
             [
-                "a6a12ef5e9b4d877",
                 "8b73f980f505c909"
             ]
         ]
@@ -21661,8 +21168,8 @@
         "className": "",
         "topic": "",
         "name": "Expired QRZ XML Key",
-        "x": 2200,
-        "y": 1520,
+        "x": 2480,
+        "y": 1640,
         "wires": [
             []
         ]
@@ -21674,7 +21181,7 @@
         "name": "QRZ Database Login Form",
         "label": "",
         "group": "f1a247c452ce5f36",
-        "order": 2,
+        "order": 1,
         "width": 6,
         "height": 1,
         "options": [
@@ -21739,7 +21246,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "f1a247c452ce5f36",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -21766,7 +21273,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Clear Key & Expire Date",
-        "func": "global.set('qrzkey', undefined);\nglobal.set('qrzkeyexpire', undefined);\n\nmsg.payload = \"QRZ XML Login & Key Info Cleared\";\n\nreturn msg;",
+        "func": "global.set('qrzkey', undefined);\nglobal.set('qrzkeyexpire', undefined);\nglobal.set('qrzusername', undefined);\nglobal.set('qrzpassword', undefined);\n\nmsg.payload = \"QRZ XML Login & Key Info Cleared\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -21799,7 +21306,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1680,
-        "y": 1440,
+        "y": 1480,
         "wires": [
             [
                 "5a6fdd06cfcc6c2e"
@@ -21829,7 +21336,7 @@
         "to": "",
         "reg": false,
         "x": 1890,
-        "y": 1420,
+        "y": 1460,
         "wires": [
             [
                 "c435ac428aac9130"
@@ -21852,7 +21359,7 @@
         "topic": "",
         "name": "Check QRZ Username & Password",
         "x": 2160,
-        "y": 1420,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -21877,7 +21384,7 @@
         "to": "",
         "reg": false,
         "x": 1890,
-        "y": 1460,
+        "y": 1500,
         "wires": [
             [
                 "afe7bcce2a351666"
@@ -21889,7 +21396,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Reset Keys",
-        "func": "global.set('qrzkey', undefined);\nglobal.set('qrzpassword', undefined)\nglobal.set('qrzkeyexpire', undefined);\n\nreturn msg;",
+        "func": "global.set('qrzkey', undefined);\nglobal.set('qrzpassword', undefined)\nglobal.set('qrzkeyexpire', undefined);\nglobal.set('qrzusername', undefined);\n\nglobal.set('qrzusername', msg.payload.qrzusername)\nglobal.set('qrzpassword', msg.payload.qrzpassword)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -21918,8 +21425,8 @@
         "className": "",
         "topic": "",
         "name": "Correct QRZ Username & Password",
-        "x": 2170,
-        "y": 1460,
+        "x": 2150,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -22200,74 +21707,6 @@
         "wires": []
     },
     {
-        "id": "a40770b92efed7ad",
-        "type": "ui_button",
-        "z": "204548a488401a1b",
-        "name": "Current DB Lookup Engine Button",
-        "group": "8a65c232b2637c6a",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Current DB Lookup Engine",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "date",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 240,
-        "y": 1860,
-        "wires": [
-            [
-                "24b38c78c4a59f10"
-            ]
-        ]
-    },
-    {
-        "id": "24b38c78c4a59f10",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Get DB Lookup Engine",
-        "func": "dbengine = global.get('dblookup')\n\nif (dbengine == \"qrz\")\n{\n    dbengine = \"QRZ.com\"\n}\n\nif (dbengine == \"hamdb\")\n{\n    dbengine = \"Hamdb.org\"\n}\n\nif (dbengine == null)\n{\n    dbengine = \"No DB selected\"\n}\n\nmsg.payload = \"Current DB Lookup Engine: \" + dbengine\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 560,
-        "y": 1860,
-        "wires": [
-            [
-                "63ba99f536aa85d5"
-            ]
-        ]
-    },
-    {
-        "id": "63ba99f536aa85d5",
-        "type": "ui_toast",
-        "z": "204548a488401a1b",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Show DB Engine Notification",
-        "x": 840,
-        "y": 1860,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "cbc7bc22e6eb048b",
         "type": "inject",
         "z": "204548a488401a1b",
@@ -22287,8 +21726,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 350,
-        "y": 1940,
+        "x": 200,
+        "y": 1860,
         "wires": [
             [
                 "ab2842e50cc2870b"
@@ -22314,8 +21753,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 1940,
+        "x": 390,
+        "y": 1860,
         "wires": [
             [
                 "d3c43b4500a45618"
@@ -22335,8 +21774,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 980,
-        "y": 1940,
+        "x": 830,
+        "y": 1860,
         "wires": []
     },
     {
@@ -22350,8 +21789,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 1940,
+        "x": 600,
+        "y": 1860,
         "wires": [
             [
                 "b666af7686048a30"
@@ -22528,8 +21967,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 2080,
+        "x": 540,
+        "y": 2180,
         "wires": [
             [
                 "b64befbfca8cd376"
@@ -22548,7 +21987,7 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 2160,
+        "y": 2240,
         "wires": [
             [
                 "b64befbfca8cd376"
@@ -22575,12 +22014,11 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 240,
-        "y": 2160,
+        "x": 330,
+        "y": 2240,
         "wires": [
             [
-                "34a7871439e7394e",
-                "6e48cbe3f5469ec6"
+                "34a7871439e7394e"
             ]
         ]
     },
@@ -22597,8 +22035,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 990,
-        "y": 2120,
+        "x": 870,
+        "y": 2200,
         "wires": []
     },
     {
@@ -22630,8 +22068,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 230,
-        "y": 2080,
+        "x": 250,
+        "y": 2180,
         "wires": [
             [
                 "59afcb532e72d16e",
@@ -22651,8 +22089,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 2020,
+        "x": 530,
+        "y": 2140,
         "wires": []
     },
     {
@@ -22692,8 +22130,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 260,
-        "y": 2320,
+        "x": 1200,
+        "y": 2200,
         "wires": [
             [
                 "f9dceb53cc0b5821",
@@ -22713,8 +22151,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 2360,
+        "x": 1450,
+        "y": 2240,
         "wires": []
     },
     {
@@ -22743,8 +22181,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 2320,
+        "x": 1420,
+        "y": 2200,
         "wires": [
             [
                 "c77ffb1f28a8bc8e"
@@ -22766,8 +22204,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 970,
-        "y": 2320,
+        "x": 1910,
+        "y": 2200,
         "wires": [
             []
         ]
@@ -22783,8 +22221,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
-        "y": 2320,
+        "x": 1660,
+        "y": 2200,
         "wires": [
             [
                 "fb6c340e0efe1add"
@@ -22804,8 +22242,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 930,
-        "y": 2280,
+        "x": 1870,
+        "y": 2160,
         "wires": []
     },
     {
@@ -22819,8 +22257,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 2280,
+        "x": 1670,
+        "y": 2160,
         "wires": [
             [
                 "3ae850cc68585fca"
@@ -22878,6 +22316,197 @@
         "wires": [
             [
                 "3e99a62a3c74b32c"
+            ]
+        ]
+    },
+    {
+        "id": "9d67b8af1ecfca92",
+        "type": "ui_switch",
+        "z": "204548a488401a1b",
+        "name": "",
+        "label": "Map Labels On/Off",
+        "tooltip": "",
+        "group": "bf78ccb640f6b06a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1690,
+        "y": 1760,
+        "wires": [
+            [
+                "841135cf0ddd6d1c"
+            ]
+        ]
+    },
+    {
+        "id": "841135cf0ddd6d1c",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "",
+        "func": "x = msg.payload\nglobal.set('maplabels',x)\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60570ca612603af9",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1450,
+        "y": 1760,
+        "wires": [
+            [
+                "9d67b8af1ecfca92"
+            ]
+        ]
+    },
+    {
+        "id": "ea75d34b9868a160",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Map Labels On/Off",
+        "info": "This switch turns labels on or off on the main logged QSO map.\n\nAs QSO's are mapped, sometimes during heavy rates, the map can get cluttered with pins and the label (band and mode) takes up space.\n\nIn contests that only one mode is allowed, you might want to turn this off.\n\nThe legend will show the color of each band for the marked pins.",
+        "x": 1490,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "0e4e1f6d0b6f1a82",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Set TTL for Map Markers",
+        "info": "This flow sets the ttl (time to live) for map icons to live on the map.  \n\n",
+        "x": 270,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "a41b305808137c29",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 1470,
+        "y": 2160,
+        "wires": [
+            [
+                "6e48cbe3f5469ec6"
+            ]
+        ]
+    },
+    {
+        "id": "3b83c4e82671e53a",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Lat & Lon Input",
+        "info": "This flow gets the lat and lon input and allows great circle lines to be drawn from the QTH to each pin in the map.\n\nIf no lat and lon are input, the greatcircle lines are not drawn.",
+        "x": 1260,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "93edb440e7f6c467",
+        "type": "change",
+        "z": "204548a488401a1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "qrzkey",
+                "pt": "global",
+                "to": "payload.QRZDatabase.Session[0].Key[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "qrzkeyexpire",
+                "pt": "global",
+                "to": "payload.QRZDatabase.Session[0].SubExp[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 1640,
+        "wires": [
+            [
+                "9a414e8fd552ee88"
+            ]
+        ]
+    },
+    {
+        "id": "9a414e8fd552ee88",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Verify Valid Key Non-Expire",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2200,
+        "y": 1640,
+        "wires": [
+            [
+                "a6a12ef5e9b4d877"
             ]
         ]
     },
