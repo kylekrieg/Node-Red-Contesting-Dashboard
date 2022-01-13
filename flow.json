@@ -492,7 +492,7 @@
         "type": "ui_tab",
         "name": "Radio Info",
         "icon": "mi-radio",
-        "order": 3,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -567,7 +567,7 @@
         "type": "ui_tab",
         "name": "OP Competition",
         "icon": "mi-directions_run",
-        "order": 4,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -607,7 +607,7 @@
         "type": "ui_tab",
         "name": "Pi Status",
         "icon": "mi-computer",
-        "order": 8,
+        "order": 9,
         "disabled": false,
         "hidden": false
     },
@@ -715,7 +715,7 @@
         "type": "ui_tab",
         "name": "Band Stats",
         "icon": "mi-query_stats",
-        "order": 5,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -955,7 +955,7 @@
         "type": "ui_tab",
         "name": "Configuration & Resets",
         "icon": "mi-storage",
-        "order": 9,
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -1019,7 +1019,7 @@
         "type": "ui_tab",
         "name": "Operators Console",
         "icon": "dashboard",
-        "order": 2,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -1333,7 +1333,7 @@
         "type": "ui_tab",
         "name": "Mode Stats",
         "icon": "dashboard",
-        "order": 6,
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
@@ -1342,7 +1342,7 @@
         "type": "ui_tab",
         "name": "Performace Stats",
         "icon": "dashboard",
-        "order": 7,
+        "order": 8,
         "disabled": false,
         "hidden": false
     },
@@ -1365,6 +1365,59 @@
         "order": 13,
         "disp": true,
         "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "568305b092b67570",
+        "type": "ui_tab",
+        "name": "Spectator Dashboard",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "74f6d374fb94524c",
+        "type": "ui_group",
+        "name": "Worked QSOS",
+        "tab": "568305b092b67570",
+        "order": 4,
+        "disp": true,
+        "width": 16,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "13e71f1ba641b9c9",
+        "type": "ui_group",
+        "name": "QSO Being Worked",
+        "tab": "568305b092b67570",
+        "order": 2,
+        "disp": true,
+        "width": 16,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aff1f74aeb47511e",
+        "type": "ui_group",
+        "name": "Contest Score",
+        "tab": "568305b092b67570",
+        "order": 3,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aafad41ae29aabef",
+        "type": "ui_group",
+        "name": "Contest Info",
+        "tab": "568305b092b67570",
+        "order": 1,
+        "disp": true,
+        "width": "46",
         "collapse": false,
         "className": ""
     },
@@ -2199,16 +2252,24 @@
             },
             {
                 "t": "eq",
+                "v": "lookup",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "spot",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 180,
         "y": 560,
         "wires": [
+            [
+                "4982fd45c8dc3e9b"
+            ],
             [
                 "4982fd45c8dc3e9b"
             ],
@@ -4782,7 +4843,7 @@
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 320,
+        "x": 220,
         "y": 360,
         "wires": [
             [
@@ -4813,7 +4874,7 @@
         "z": "1c66bd27e16a3fec",
         "name": "QSO's In from N1MM",
         "info": "",
-        "x": 380,
+        "x": 280,
         "y": 320,
         "wires": []
     },
@@ -4855,10 +4916,15 @@
         "id": "63b9afc11deec0ca",
         "type": "switch",
         "z": "1c66bd27e16a3fec",
-        "name": "Add - Delete - Replace",
+        "name": "Add - Delete - Replace - Lookup",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
+            {
+                "t": "cont",
+                "v": "lookupinfo",
+                "vt": "str"
+            },
             {
                 "t": "cont",
                 "v": "contactinfo",
@@ -4877,10 +4943,13 @@
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 3,
-        "x": 680,
+        "outputs": 4,
+        "x": 650,
         "y": 360,
         "wires": [
+            [
+                "547cf705c08f3fee"
+            ],
             [
                 "407e8deceb6ad9d3"
             ],
@@ -5084,7 +5153,6 @@
         "wires": [
             [
                 "1af14f7f89b29f60",
-                "8643e8fa28502256",
                 "91e3a9b7825238b6"
             ]
         ]
@@ -5125,14 +5193,68 @@
         "name": "QSOs From N1MM OUT",
         "mode": "link",
         "links": [
-            "e4e81a5987819415"
+            "e4e81a5987819415",
+            "311b6207c07e5013"
         ],
         "x": 1315,
         "y": 100,
         "wires": []
     },
     {
-        "id": "8643e8fa28502256",
+        "id": "8d88aedc41864cf8",
+        "type": "function",
+        "z": "1c66bd27e16a3fec",
+        "name": "UTF8",
+        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 360,
+        "wires": [
+            [
+                "63b9afc11deec0ca",
+                "7d228ea50d42e333"
+            ]
+        ]
+    },
+    {
+        "id": "547cf705c08f3fee",
+        "type": "switch",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "contactinfo",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "lookupinfo",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 100,
+        "wires": [
+            [
+                "41f8c81cbde2390b"
+            ],
+            [
+                "90a21e8778a42633"
+            ]
+        ]
+    },
+    {
+        "id": "41f8c81cbde2390b",
         "type": "change",
         "z": "1c66bd27e16a3fec",
         "name": "Set Type to QSO",
@@ -5150,8 +5272,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1110,
-        "y": 100,
+        "x": 1150,
+        "y": 80,
         "wires": [
             [
                 "677d263669792c2d"
@@ -5159,22 +5281,29 @@
         ]
     },
     {
-        "id": "8d88aedc41864cf8",
-        "type": "function",
+        "id": "90a21e8778a42633",
+        "type": "change",
         "z": "1c66bd27e16a3fec",
-        "name": "UTF8",
-        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 470,
-        "y": 360,
+        "name": "Set Type to Lookup",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.type",
+                "pt": "msg",
+                "to": "lookup",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 120,
         "wires": [
             [
-                "63b9afc11deec0ca",
-                "7d228ea50d42e333"
+                "677d263669792c2d"
             ]
         ]
     },
@@ -5808,7 +5937,7 @@
         "order": 6,
         "width": 26,
         "height": 16,
-        "name": "",
+        "name": "Worked QSOs Map",
         "lat": "40.3426",
         "lon": "-92.8554",
         "zoom": "4",
@@ -5831,7 +5960,7 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 2190,
+        "x": 2230,
         "y": 140,
         "wires": []
     },
@@ -7399,8 +7528,10 @@
         "z": "407d2b774fe67647",
         "name": "Score from N1MM OUT",
         "mode": "link",
-        "links": [],
-        "x": 1095,
+        "links": [
+            "9ac6b8134108e3b3"
+        ],
+        "x": 875,
         "y": 700,
         "wires": []
     },
@@ -19012,6 +19143,517 @@
             [
                 "fd35788fe10c1ee7"
             ]
+        ]
+    },
+    {
+        "id": "c619ce9fa95f791b",
+        "type": "ui_worldmap",
+        "z": "b59d8b7ca43e59ce",
+        "group": "13e71f1ba641b9c9",
+        "order": 5,
+        "width": 16,
+        "height": 11,
+        "name": "QSO Being Worked",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1410,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "69d83cae2e4e6a4c",
+        "type": "ui_worldmap",
+        "z": "b59d8b7ca43e59ce",
+        "group": "74f6d374fb94524c",
+        "order": 6,
+        "width": 16,
+        "height": 11,
+        "name": "Worked QSOs",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1400,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8c261ef14e000fab",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "13e71f1ba641b9c9",
+        "order": 2,
+        "width": 5,
+        "height": 2,
+        "name": "Being Worked Call Sign",
+        "label": "<font size = 6>Call Sign",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1430,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4b288d63d33664da",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "13e71f1ba641b9c9",
+        "order": 3,
+        "width": 5,
+        "height": 2,
+        "name": "Being Worked Mode",
+        "label": "<font size = 6>Mode",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1420,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7465992a1b281676",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "13e71f1ba641b9c9",
+        "order": 4,
+        "width": 6,
+        "height": 2,
+        "name": "Being Worked Miles Away",
+        "label": "<font size = 6>Miles Away",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1430,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6b2eb9fe84b9ab5b",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "13e71f1ba641b9c9",
+        "order": 1,
+        "width": 16,
+        "height": 1,
+        "name": "Title Being Worked",
+        "label": "<font size = 6>Current Call Sign Being Contacted NOW!",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "row-center",
+        "className": "",
+        "x": 1410,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "93c97ccaa3e53d22",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "74f6d374fb94524c",
+        "order": 2,
+        "width": 4,
+        "height": 2,
+        "name": "Worked Call Sign",
+        "label": "<font size = 6>Call Sign",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1410,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "482152c92f2f5813",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "74f6d374fb94524c",
+        "order": 3,
+        "width": 4,
+        "height": 2,
+        "name": "Worked Mode",
+        "label": "<font size = 6>Mode",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1400,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "2f7d9a2d94268e97",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "74f6d374fb94524c",
+        "order": 4,
+        "width": 4,
+        "height": 2,
+        "name": "Worked Exchange",
+        "label": "<font size = 6>Exchange",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1410,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "aafb155f821969bb",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "74f6d374fb94524c",
+        "order": 5,
+        "width": 4,
+        "height": 2,
+        "name": "Worked Miles Away",
+        "label": "<font size = 6>Miles Away",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1410,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "485ec414a558aa92",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "74f6d374fb94524c",
+        "order": 1,
+        "width": 16,
+        "height": 1,
+        "name": "Title QSO Just Worked",
+        "label": "<font size = 6>Call Sign Just Logged",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "layout": "row-center",
+        "className": "",
+        "x": 1420,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "957eae866ade3bf2",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "aff1f74aeb47511e",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "name": "Total Score",
+        "label": "<font size = 6>Total Score",
+        "format": "<font size = 50>{{payload.dynamicresults.score[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 630,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "c3e82d630ac3af74",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "aff1f74aeb47511e",
+        "order": 3,
+        "width": 5,
+        "height": 2,
+        "name": "Total Mults",
+        "label": "<font size = 6>Mults",
+        "format": "<font size = 50>{{payload.totalmult}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 870,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "ecd6ccdaad69204f",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "aff1f74aeb47511e",
+        "order": 2,
+        "width": 5,
+        "height": 3,
+        "name": "Total QSO's",
+        "label": "<font size = 6>QSOs",
+        "format": "<font size = 50>{{payload.totalnoqsos}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 850,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "405c8aa66e5e4591",
+        "type": "function",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Total QSO Array Parse",
+        "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = msg.payload.dynamicresults.breakdown[0].qso[i]._;\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 860,
+        "wires": [
+            [
+                "ecd6ccdaad69204f",
+                "dec2582d441f407c"
+            ]
+        ]
+    },
+    {
+        "id": "ebcd86a7c9742a58",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "aff1f74aeb47511e",
+        "order": 4,
+        "width": 5,
+        "height": 3,
+        "name": "Total Points",
+        "label": "<font size = 6>Points",
+        "format": "<font size = 50>{{payload.totalpoints}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 870,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "4296adaf5ac5e757",
+        "type": "function",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Total Points Array Parse",
+        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = msg.payload.dynamicresults.breakdown[0].point[i]._;\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 940,
+        "wires": [
+            [
+                "ebcd86a7c9742a58",
+                "d01e4f6e8082c23c"
+            ]
+        ]
+    },
+    {
+        "id": "dec2582d441f407c",
+        "type": "debug",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "a7b7e69e5128e9c5",
+        "type": "debug",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "8c7bc42c703a42de",
+        "type": "function",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Total Multi Array Parse",
+        "func": "let arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmult = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        total = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n        totalmult = totalmult + total;\n    }\n    \n}\n\nreturn {\"payload\":{totalmult:totalmult}};\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 900,
+        "wires": [
+            [
+                "c3e82d630ac3af74",
+                "a7b7e69e5128e9c5"
+            ]
+        ]
+    },
+    {
+        "id": "d01e4f6e8082c23c",
+        "type": "debug",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "9ac6b8134108e3b3",
+        "type": "link in",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Spectator Dashboard Score IN",
+        "links": [
+            "aec65d796aed9cee"
+        ],
+        "x": 245,
+        "y": 900,
+        "wires": [
+            [
+                "957eae866ade3bf2",
+                "405c8aa66e5e4591",
+                "8c7bc42c703a42de",
+                "4296adaf5ac5e757"
+            ]
+        ]
+    },
+    {
+        "id": "5cbbbd25833dfb70",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "aafad41ae29aabef",
+        "order": 1,
+        "width": "44",
+        "height": 1,
+        "name": "Contest Discription",
+        "label": "<font size = 6>Currently working the ARRL RTTY Round Up.  Goal : To work as many stations on RTTY (a digital mode) as possible.",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 210,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "5a98f62903b42377",
+        "type": "switch",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Lookup or Contact",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "lookupinfo",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "contact",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "d2889ec7d7a0f525"
+            ],
+            [
+                "30f1f4e9ec10e932"
+            ]
+        ]
+    },
+    {
+        "id": "311b6207c07e5013",
+        "type": "link in",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "links": [
+            "677d263669792c2d"
+        ],
+        "x": 225,
+        "y": 220,
+        "wires": [
+            [
+                "5a98f62903b42377"
+            ]
+        ]
+    },
+    {
+        "id": "d2889ec7d7a0f525",
+        "type": "subflow:bedd4acdc0e27dab",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "x": 690,
+        "y": 180,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "30f1f4e9ec10e932",
+        "type": "subflow:bedd4acdc0e27dab",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "x": 680,
+        "y": 280,
+        "wires": [
+            [],
+            []
         ]
     },
     {
