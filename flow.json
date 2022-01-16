@@ -1406,7 +1406,7 @@
         "tab": "568305b092b67570",
         "order": 3,
         "disp": true,
-        "width": 5,
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -1417,7 +1417,7 @@
         "tab": "568305b092b67570",
         "order": 1,
         "disp": true,
-        "width": "46",
+        "width": "44",
         "collapse": false,
         "className": ""
     },
@@ -3629,7 +3629,7 @@
         "outport": "",
         "base64": false,
         "multicast": "false",
-        "x": 1660,
+        "x": 1640,
         "y": 260,
         "wires": []
     },
@@ -4951,7 +4951,8 @@
                 "547cf705c08f3fee"
             ],
             [
-                "407e8deceb6ad9d3"
+                "407e8deceb6ad9d3",
+                "547cf705c08f3fee"
             ],
             [
                 "71ba52668f48ab6c"
@@ -5163,7 +5164,7 @@
         "z": "1c66bd27e16a3fec",
         "name": "",
         "voice": "5",
-        "x": 1650,
+        "x": 1630,
         "y": 220,
         "wires": []
     },
@@ -5196,7 +5197,7 @@
             "e4e81a5987819415",
             "311b6207c07e5013"
         ],
-        "x": 1315,
+        "x": 1595,
         "y": 100,
         "wires": []
     },
@@ -5242,14 +5243,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 930,
+        "x": 910,
         "y": 100,
         "wires": [
             [
-                "41f8c81cbde2390b"
+                "03b5ea45a14bec38"
             ],
             [
-                "90a21e8778a42633"
+                "76624f15bec4c509"
             ]
         ]
     },
@@ -5272,7 +5273,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
+        "x": 1330,
         "y": 80,
         "wires": [
             [
@@ -5299,11 +5300,59 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
+        "x": 1330,
         "y": 120,
         "wires": [
             [
                 "677d263669792c2d"
+            ]
+        ]
+    },
+    {
+        "id": "878cfb498c85e9f5",
+        "type": "debug",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "03b5ea45a14bec38",
+        "type": "xml",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1110,
+        "y": 80,
+        "wires": [
+            [
+                "41f8c81cbde2390b"
+            ]
+        ]
+    },
+    {
+        "id": "76624f15bec4c509",
+        "type": "xml",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1110,
+        "y": 120,
+        "wires": [
+            [
+                "90a21e8778a42633"
             ]
         ]
     },
@@ -8402,7 +8451,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
+        "x": 510,
         "y": 380,
         "wires": []
     },
@@ -19169,7 +19218,7 @@
         "coords": "none",
         "showgrid": "false",
         "allowFileDrop": "false",
-        "path": "/worldmap",
+        "path": "/beingworkedqso",
         "overlist": "DR,CO,RA,DN,HM",
         "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
         "mapname": "",
@@ -19204,7 +19253,7 @@
         "coords": "none",
         "showgrid": "false",
         "allowFileDrop": "false",
-        "path": "/worldmap",
+        "path": "/workedqso",
         "overlist": "DR,CO,RA,DN,HM",
         "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
         "mapname": "",
@@ -19270,6 +19319,7 @@
         "id": "6b2eb9fe84b9ab5b",
         "type": "ui_text",
         "z": "b59d8b7ca43e59ce",
+        "d": true,
         "group": "13e71f1ba641b9c9",
         "order": 1,
         "width": 16,
@@ -19310,7 +19360,7 @@
         "height": 2,
         "name": "Worked Mode",
         "label": "<font size = 6>Mode",
-        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.mode}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 1400,
@@ -19327,7 +19377,7 @@
         "height": 2,
         "name": "Worked Exchange",
         "label": "<font size = 6>Exchange",
-        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.exchange}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 1410,
@@ -19344,7 +19394,7 @@
         "height": 2,
         "name": "Worked Miles Away",
         "label": "<font size = 6>Miles Away",
-        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.distance}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 1410,
@@ -19355,6 +19405,7 @@
         "id": "485ec414a558aa92",
         "type": "ui_text",
         "z": "b59d8b7ca43e59ce",
+        "d": true,
         "group": "74f6d374fb94524c",
         "order": 1,
         "width": 16,
@@ -19374,7 +19425,7 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aff1f74aeb47511e",
         "order": 1,
-        "width": 5,
+        "width": 6,
         "height": 3,
         "name": "Total Score",
         "label": "<font size = 6>Total Score",
@@ -19391,7 +19442,7 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aff1f74aeb47511e",
         "order": 3,
-        "width": 5,
+        "width": 6,
         "height": 2,
         "name": "Total Mults",
         "label": "<font size = 6>Mults",
@@ -19408,7 +19459,7 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aff1f74aeb47511e",
         "order": 2,
-        "width": 5,
+        "width": 6,
         "height": 3,
         "name": "Total QSO's",
         "label": "<font size = 6>QSOs",
@@ -19445,7 +19496,7 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aff1f74aeb47511e",
         "order": 4,
-        "width": 5,
+        "width": 6,
         "height": 3,
         "name": "Total Points",
         "label": "<font size = 6>Points",
@@ -19567,23 +19618,6 @@
         ]
     },
     {
-        "id": "5cbbbd25833dfb70",
-        "type": "ui_text",
-        "z": "b59d8b7ca43e59ce",
-        "group": "aafad41ae29aabef",
-        "order": 1,
-        "width": "44",
-        "height": 1,
-        "name": "Contest Discription",
-        "label": "<font size = 6>Currently working the ARRL RTTY Round Up.  Goal : To work as many stations on RTTY (a digital mode) as possible.",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "x": 210,
-        "y": 40,
-        "wires": []
-    },
-    {
         "id": "5a98f62903b42377",
         "type": "switch",
         "z": "b59d8b7ca43e59ce",
@@ -19598,7 +19632,7 @@
             },
             {
                 "t": "eq",
-                "v": "contact",
+                "v": "qso",
                 "vt": "str"
             }
         ],
@@ -19628,7 +19662,8 @@
         "y": 220,
         "wires": [
             [
-                "5a98f62903b42377"
+                "5a98f62903b42377",
+                "0aa2b387e2c18fb0"
             ]
         ]
     },
@@ -19652,9 +19687,151 @@
         "x": 680,
         "y": 280,
         "wires": [
-            [],
+            [
+                "16dc09bafbfc24f2",
+                "93c97ccaa3e53d22",
+                "482152c92f2f5813",
+                "2f7d9a2d94268e97",
+                "aafb155f821969bb",
+                "69d83cae2e4e6a4c"
+            ],
             []
         ]
+    },
+    {
+        "id": "325531df7894f668",
+        "type": "comment",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Map Properties To Do",
+        "info": "msg.command\n\nto position map to specific location\nlat\nlon\n\nto zoom into the map\nzoom\n\nadd great circle lines?\n\n\n\n\nmsg.payload = { \"command\": \n{ \n\"layer\":\"Esri Satellite\", \n\"lat\":51, \n\"lon\":3, \n\"zoom\":10 \n    \n}};\n\nTo clear map :\ndeleted : set to true to remove the named marker. (default false)\n\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n",
+        "x": 1040,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4b47257af760ef50",
+        "type": "inject",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.contest",
+                "v": "ARRL RTTY Round Up",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 60,
+        "wires": [
+            [
+                "55bf9cdbda7ef90e"
+            ]
+        ]
+    },
+    {
+        "id": "9959ab388ecfa77e",
+        "type": "inject",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.contestgoal",
+                "v": "To work as many North American contacts as possible",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "3ef90b9c62f3d682"
+            ]
+        ]
+    },
+    {
+        "id": "55bf9cdbda7ef90e",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "aafad41ae29aabef",
+        "order": 1,
+        "width": "14",
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "<font size = 6>Current Contest : {{msg.payload.contest}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 410,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3ef90b9c62f3d682",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "aafad41ae29aabef",
+        "order": 2,
+        "width": "30",
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "<font size = 6>Contest Goal : {{msg.payload.contestgoal}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 410,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "16dc09bafbfc24f2",
+        "type": "debug",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0aa2b387e2c18fb0",
+        "type": "debug",
+        "z": "b59d8b7ca43e59ce",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 380,
+        "wires": []
     },
     {
         "id": "dffc242.cc36fd8",
