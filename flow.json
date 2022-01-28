@@ -1006,11 +1006,12 @@
     {
         "id": "0ae735dd5356d1e8",
         "type": "ui_group",
+        "d": true,
         "name": "Rotating Dispaly",
         "tab": "08eed6c3517c624e",
         "order": 7,
         "disp": true,
-        "width": 6,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -1212,9 +1213,9 @@
     {
         "id": "f1a247c452ce5f36",
         "type": "ui_group",
-        "name": "QRZ Database Lookup XML",
+        "name": "QRZ XML Login",
         "tab": "08eed6c3517c624e",
-        "order": 9,
+        "order": 14,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1362,7 +1363,7 @@
         "type": "ui_group",
         "name": "Map Labels",
         "tab": "08eed6c3517c624e",
-        "order": 13,
+        "order": 9,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1418,6 +1419,28 @@
         "order": 1,
         "disp": true,
         "width": "44",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4ef10134c121cf09",
+        "type": "ui_group",
+        "name": "Announcements",
+        "tab": "08eed6c3517c624e",
+        "order": 13,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0bd61d43bd0eeaa0",
+        "type": "ui_group",
+        "name": "Contest Type",
+        "tab": "08eed6c3517c624e",
+        "order": 15,
+        "disp": true,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -5179,11 +5202,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
+        "x": 1160,
         "y": 220,
         "wires": [
             [
-                "2603d7c7f6cdeeb9"
+                "11439f8ac4e3b895"
             ]
         ]
     },
@@ -5353,6 +5376,29 @@
         "wires": [
             [
                 "90a21e8778a42633"
+            ]
+        ]
+    },
+    {
+        "id": "11439f8ac4e3b895",
+        "type": "switch",
+        "z": "1c66bd27e16a3fec",
+        "name": "Say Multi",
+        "property": "saymulti",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1360,
+        "y": 220,
+        "wires": [
+            [
+                "2603d7c7f6cdeeb9"
             ]
         ]
     },
@@ -6018,7 +6064,7 @@
         "type": "function",
         "z": "407d2b774fe67647",
         "name": "Label +  Add Multis + Exchange",
-        "func": "let maplabels = global.get('maplabels')\n\nif (maplabels == true)\n{\n    msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
+        "func": "let maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\nif (contesttype == 'qsoparty' || contesttype == '' || contesttype = \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.payload.section;\n    }\n}\n\nif (contesttype == 'sections')\n{\n    msg.payload.exchange = msg.payload.section;\n}\n\nif (contesttype == 'wpx')\n{\n    msg.payload.exchange = msg.original.rcvnr[0]\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6783,7 +6829,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 560,
+        "x": 700,
         "y": 1260,
         "wires": [
             [
@@ -6986,7 +7032,7 @@
         "z": "407d2b774fe67647",
         "name": "Get Radio Data",
         "info": "",
-        "x": 220,
+        "x": 120,
         "y": 1200,
         "wires": []
     },
@@ -7135,8 +7181,7 @@
         "y": 800,
         "wires": [
             [
-                "bcb9b861df7e6958",
-                "97ed253958c48009"
+                "622fed8ae8f6a5d2"
             ]
         ]
     },
@@ -7261,8 +7306,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 660,
+        "x": 1040,
+        "y": 640,
         "wires": []
     },
     {
@@ -7276,7 +7321,7 @@
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 160,
+        "x": 60,
         "y": 1260,
         "wires": [
             [
@@ -7312,7 +7357,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 290,
+        "x": 190,
         "y": 1260,
         "wires": [
             [
@@ -7328,13 +7373,11 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 410,
+        "x": 310,
         "y": 1260,
         "wires": [
             [
-                "4fdbbfe296a88bce",
-                "d67c999eabb4aba0",
-                "3e86130caa4f1f80"
+                "6eccad64a2223ff8"
             ]
         ]
     },
@@ -7361,8 +7404,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 1200,
+        "x": 760,
+        "y": 1000,
         "wires": []
     },
     {
@@ -7593,8 +7636,8 @@
         "links": [
             "b2e62889b54520fd"
         ],
-        "x": 565,
-        "y": 1080,
+        "x": 615,
+        "y": 1060,
         "wires": []
     },
     {
@@ -8121,7 +8164,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 610,
+        "x": 790,
         "y": 800,
         "wires": [
             [
@@ -8129,7 +8172,8 @@
                 "31d7202b2b50131d",
                 "aad501d4eeed3f6c",
                 "06ef39d063a5a0f6",
-                "aec65d796aed9cee"
+                "aec65d796aed9cee",
+                "bcb9b861df7e6958"
             ]
         ]
     },
@@ -8558,7 +8602,7 @@
         "links": [
             "677d263669792c2d"
         ],
-        "x": 175,
+        "x": 135,
         "y": 320,
         "wires": [
             [
@@ -8621,6 +8665,102 @@
         "x": 470,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "6eccad64a2223ff8",
+        "type": "switch",
+        "z": "407d2b774fe67647",
+        "name": "RadioInfo != Null",
+        "property": "payload.RadioInfo",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 1260,
+        "wires": [
+            [
+                "4fdbbfe296a88bce",
+                "3e86130caa4f1f80",
+                "d67c999eabb4aba0"
+            ]
+        ]
+    },
+    {
+        "id": "622fed8ae8f6a5d2",
+        "type": "switch",
+        "z": "407d2b774fe67647",
+        "name": "Contest != Empty",
+        "property": "payload.dynamicresults.contest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 800,
+        "wires": [
+            [
+                "97ed253958c48009"
+            ]
+        ]
+    },
+    {
+        "id": "b560bd86dc5c87f6",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "name": "Inject Home",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1870,
+        "y": 100,
+        "wires": [
+            [
+                "1fef8af3224d3ace"
+            ]
+        ]
+    },
+    {
+        "id": "1fef8af3224d3ace",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "name": "",
+        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nreturn {payload : {name:\"home\", lat:lat, lon:lon, icon:\"fa-home\", layer:\"Home\"}};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2040,
+        "y": 100,
+        "wires": [
+            [
+                "2f1bf610.d7c76a"
+            ]
+        ]
     },
     {
         "id": "4079239a4fd5c11c",
@@ -9081,7 +9221,7 @@
         "links": [
             "3e86130caa4f1f80"
         ],
-        "x": 255,
+        "x": 235,
         "y": 920,
         "wires": [
             [
@@ -21245,7 +21385,7 @@
         "name": "Comptuer Name Input",
         "label": "Computer Names",
         "group": "887ee2eadc46df9a",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "options": [
@@ -21378,7 +21518,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "name": "First Two PC Names Will Appear on the N1MM Dashboard With the Map",
@@ -21396,7 +21536,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "887ee2eadc46df9a",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -21578,7 +21718,7 @@
         "name": "",
         "label": "Socket ID & IP",
         "group": "0ae735dd5356d1e8",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 1,
         "options": [
@@ -21681,7 +21821,7 @@
         "z": "204548a488401a1b",
         "d": true,
         "group": "0ae735dd5356d1e8",
-        "order": 1,
+        "order": 3,
         "width": 6,
         "height": 2,
         "name": "",
@@ -23053,9 +23193,9 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "2b43e4ca38d9b76c",
-        "order": 1,
-        "width": "6",
-        "height": "2",
+        "order": 2,
+        "width": 6,
+        "height": 2,
         "name": "Current Lat & Lon",
         "label": "Current Home Lat & Lon",
         "format": "{{msg.payload}}",
@@ -23146,7 +23286,7 @@
         "label": "Map Labels On/Off",
         "tooltip": "",
         "group": "bf78ccb640f6b06a",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -23176,14 +23316,14 @@
         "id": "841135cf0ddd6d1c",
         "type": "function",
         "z": "204548a488401a1b",
-        "name": "",
+        "name": "Set Map Labels",
         "func": "x = msg.payload\nglobal.set('maplabels',x)\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1940,
+        "x": 1960,
         "y": 1760,
         "wires": [
             []
@@ -23330,6 +23470,226 @@
         ]
     },
     {
+        "id": "d99f186baf3ac355",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Label Type",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "bf78ccb640f6b06a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Band Only",
+                "value": "bandonly",
+                "type": "str"
+            },
+            {
+                "label": "Band + Mode",
+                "value": "bandmode",
+                "type": "str"
+            },
+            {
+                "label": "Mode Only",
+                "value": "modeonly",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1670,
+        "y": 1820,
+        "wires": [
+            [
+                "2dde15a004f80010"
+            ]
+        ]
+    },
+    {
+        "id": "2dde15a004f80010",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Map Label Type",
+        "func": "x = msg.payload\nglobal.set('maplabeltype',x)\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1900,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a7ab19bd2fdaf09",
+        "type": "ui_switch",
+        "z": "204548a488401a1b",
+        "name": "",
+        "label": "Say Multi On/Off",
+        "tooltip": "",
+        "group": "4ef10134c121cf09",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1680,
+        "y": 1980,
+        "wires": [
+            [
+                "851fa5920b751886"
+            ]
+        ]
+    },
+    {
+        "id": "851fa5920b751886",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Say Multi",
+        "func": "x = msg.payload\nglobal.set('saymulti',x)\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1950,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5584fe10df006594",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1450,
+        "y": 1980,
+        "wires": [
+            [
+                "4a7ab19bd2fdaf09"
+            ]
+        ]
+    },
+    {
+        "id": "0623273bd2a73945",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Contest Type Dropdown",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Type of Contest",
+        "group": "0bd61d43bd0eeaa0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "QSO Party",
+                "value": "qsoparty",
+                "type": "str"
+            },
+            {
+                "label": "ARRL/RAC Sections",
+                "value": "sections",
+                "type": "str"
+            },
+            {
+                "label": "WPX",
+                "value": "wpx",
+                "type": "str"
+            },
+            {
+                "label": "Serial Based",
+                "value": "serial",
+                "type": "str"
+            },
+            {
+                "label": "Other",
+                "value": "other",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 290,
+        "y": 2420,
+        "wires": [
+            [
+                "c55a8f8a7bb2ce67"
+            ]
+        ]
+    },
+    {
+        "id": "0e6e723e86267438",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Contest Type",
+        "info": "",
+        "x": 250,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "c55a8f8a7bb2ce67",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Contest Type",
+        "func": "x = msg.payload\nglobal.set('contesttype',x)\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2420,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "1f45eb9a.6f2614",
         "type": "tcp request",
         "z": "bd8a446b999750f9",
@@ -23352,7 +23712,7 @@
         "type": "function",
         "z": "bd8a446b999750f9",
         "name": "Send Call",
-        "func": "msg.payload = 'aa0z\\r\\n'\nreturn msg;",
+        "func": "let call = global.get('skimmercall')\nmsg.payload = call+'\\r\\n'\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -23476,7 +23836,7 @@
         "type": "function",
         "z": "bd8a446b999750f9",
         "name": "Send Call",
-        "func": "msg.payload = 'aa0z\\r\\n'\nreturn msg;",
+        "func": "let call = global.get('skimmercall')\nmsg.payload = call+'\\r\\n'\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -23618,12 +23978,12 @@
         "order": 4,
         "width": 10,
         "height": 3,
-        "name": "NC7J Skimmer Cluster Output",
-        "label": "NC7J Skimmer Cluster Output",
+        "name": "VE7CC Skimmer Cluster No Dupe Output",
+        "label": "VE7CC Skimmer Cluster Output",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1470,
+        "x": 1500,
         "y": 360,
         "wires": []
     },
@@ -23632,7 +23992,7 @@
         "type": "ui_table",
         "z": "bd8a446b999750f9",
         "group": "089f422fb01043ec",
-        "name": "CW Skimmer Spots with Dupes",
+        "name": "CW Skimmer Spots with No Dupes",
         "order": 1,
         "width": 10,
         "height": 6,
@@ -23680,7 +24040,7 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 1850,
+        "x": 1860,
         "y": 300,
         "wires": [
             []
@@ -23748,7 +24108,7 @@
         "type": "debug",
         "z": "bd8a446b999750f9",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -23820,8 +24180,8 @@
         "ceiling": "",
         "worldmap": true,
         "outputs": 2,
-        "x": 540,
-        "y": 1060,
+        "x": 800,
+        "y": 800,
         "wires": [
             [],
             []
@@ -23860,7 +24220,7 @@
         "type": "function",
         "z": "bd8a446b999750f9",
         "name": "Send Call",
-        "func": "msg.payload = 'aa0z\\r\\n'\nreturn msg;",
+        "func": "let call = global.get('skimmercall')\nmsg.payload = call+'\\r\\n'\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -23975,7 +24335,7 @@
         "type": "function",
         "z": "bd8a446b999750f9",
         "name": "Send Call",
-        "func": "msg.payload = 'aa0z\\r\\n'\nreturn msg;",
+        "func": "let call = global.get('skimmercall')\nmsg.payload = call+'\\r\\n'\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -24117,8 +24477,8 @@
         "order": 4,
         "width": 10,
         "height": 3,
-        "name": "VE7CC Skimmer Cluster Output",
-        "label": "VE7CC Skimmer Cluster Output",
+        "name": "Skimmer Cluster Dupe Output",
+        "label": "Skimmer Cluster with Dups Output",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -24131,7 +24491,7 @@
         "type": "ui_table",
         "z": "bd8a446b999750f9",
         "group": "b5c190b1c6ec4907",
-        "name": "CW Skimmer Spots without Dupes",
+        "name": "CW Skimmer Spots with Dupes",
         "order": 1,
         "width": 10,
         "height": 6,
@@ -24179,7 +24539,7 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 1860,
+        "x": 1850,
         "y": 600,
         "wires": [
             []
@@ -24246,7 +24606,7 @@
         "type": "debug",
         "z": "bd8a446b999750f9",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24479,8 +24839,8 @@
         "syntax": "mustache",
         "template": "\n'{{payload.QRZDatabase.Callsign.call}}',\n'{{{payload.QRZDatabase.Callsign.lat}}}',\n'{{{msg.payload.QRZDatabase.Callsign[0].lon[0]}}}',\n'{{{payload.QRZDatabase.Callsign[0].grid[0]}}}',\n'{{payload.QRZDatabase.Callsign[0].ccode}}',\n'{{{payload.QRZDatabase.Callsign.land[0]}}}',\n'{{{payload.QRZDatabase.Callsign[0].cqzone[0]}}}',\n'{{{payload.QRZDatabase.Callsign[0].ituzone[0]}}}',\n'{{{payload.QRZDatabase.Callsign[0].dxcc[0]}}}\n\n",
         "output": "str",
-        "x": 1260,
-        "y": 1100,
+        "x": 1140,
+        "y": 780,
         "wires": [
             []
         ]
@@ -24673,6 +25033,89 @@
         "wires": [
             [],
             []
+        ]
+    },
+    {
+        "id": "a74f6cb9b8629f3e",
+        "type": "http request",
+        "z": "bd8a446b999750f9",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://retrieve.pskreporter.info/query?senderCallsign={{payload.contestcallsign}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 460,
+        "y": 960,
+        "wires": [
+            [
+                "929f5044bccb8df7"
+            ]
+        ]
+    },
+    {
+        "id": "a5070f7cb70d485a",
+        "type": "inject",
+        "z": "bd8a446b999750f9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.contestcallsign",
+                "v": "W2ZMZ",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 200,
+        "y": 940,
+        "wires": [
+            [
+                "a74f6cb9b8629f3e"
+            ]
+        ]
+    },
+    {
+        "id": "9fc29b1d7f8667e6",
+        "type": "debug",
+        "z": "bd8a446b999750f9",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "929f5044bccb8df7",
+        "type": "xml",
+        "z": "bd8a446b999750f9",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 650,
+        "y": 960,
+        "wires": [
+            [
+                "9fc29b1d7f8667e6"
+            ]
         ]
     },
     {
