@@ -3670,11 +3670,12 @@
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "15",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "",
         "payloadType": "date",
         "x": 240,
         "y": 480,
@@ -3740,7 +3741,7 @@
         "type": "function",
         "z": "4a77ed092d5e5141",
         "name": "",
-        "func": "let p = msg.payload[0].points\nlet m = msg.payload[0].multiplier;\nlet t = msg.payload[0].totalqsos;\nlet s = msg.payload[0].score;\n\nlet totalqsos = t.toString();\nlet multiplier = m.toString();\nlet points = p.toString();\nlet score = s.toString();\n\n\nmsg.payload = {\n    \"dynamicresults\":\n    {\n        \"breakdown\":\n        [{\n             \"qso\":\n             [{\n                 \"_\":totalqsos,\n                 \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }],\n             \"mult\":\n             [{\n                \"_\":multiplier,\n                \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }],\n             \"point\":\n             [{\n                \"_\":points,\n                \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }]\n        }],\n        \"score\":[score],\n    }\n}\n\nreturn msg;",
+        "func": "let p = msg.payload[0].points\nlet m = msg.payload[0].multiplier;\nlet t = msg.payload[0].totalqsos;\nlet s = msg.payload[0].score;\n\nlet totalqsos = t.toString();\nlet multiplier = m.toString();\nlet points = p.toString();\nlet score = s.toString();\n\n\nmsg.payload = {\n    \"dynamicresults\":\n    {\n        \"contest\":\"QSOPARTY\",\n        \n        \"breakdown\":\n        [{\n             \"qso\":\n             [{\n                 \"_\":totalqsos,\n                 \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }],\n             \"mult\":\n             [{\n                \"_\":multiplier,\n                \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }],\n             \"point\":\n             [{\n                \"_\":points,\n                \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }]\n        }],\n        \"score\":[score],\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5187,8 +5188,8 @@
         "z": "1c66bd27e16a3fec",
         "name": "",
         "voice": "5",
-        "x": 1630,
-        "y": 220,
+        "x": 1590,
+        "y": 240,
         "wires": []
     },
     {
@@ -5202,8 +5203,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 220,
+        "x": 1220,
+        "y": 260,
         "wires": [
             [
                 "11439f8ac4e3b895"
@@ -5266,7 +5267,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 910,
+        "x": 550,
         "y": 100,
         "wires": [
             [
@@ -5355,7 +5356,7 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 1110,
+        "x": 750,
         "y": 80,
         "wires": [
             [
@@ -5371,7 +5372,7 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 1110,
+        "x": 750,
         "y": 120,
         "wires": [
             [
@@ -5394,8 +5395,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1360,
-        "y": 220,
+        "x": 1420,
+        "y": 240,
         "wires": [
             [
                 "2603d7c7f6cdeeb9"
@@ -5457,7 +5458,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 9,
-        "x": 820,
+        "x": 440,
         "y": 320,
         "wires": [
             [
@@ -5531,8 +5532,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 1380,
-        "y": 300,
+        "x": 960,
+        "y": 320,
         "wires": [
             [
                 "29346b4d.ba3fc4"
@@ -5587,8 +5588,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1130,
-        "y": 180,
+        "x": 690,
+        "y": 160,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5628,8 +5629,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1130,
-        "y": 220,
+        "x": 690,
+        "y": 200,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5669,8 +5670,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
-        "y": 260,
+        "x": 700,
+        "y": 240,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5710,8 +5711,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
-        "y": 300,
+        "x": 700,
+        "y": 280,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5751,8 +5752,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1130,
-        "y": 340,
+        "x": 690,
+        "y": 320,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5792,8 +5793,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1130,
-        "y": 380,
+        "x": 690,
+        "y": 360,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5833,8 +5834,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
-        "y": 420,
+        "x": 700,
+        "y": 400,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5874,8 +5875,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
-        "y": 460,
+        "x": 700,
+        "y": 440,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5908,8 +5909,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
-        "y": 500,
+        "x": 700,
+        "y": 480,
         "wires": [
             [
                 "1ccdca53.045846"
@@ -5935,8 +5936,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1580,
-        "y": 260,
+        "x": 1160,
+        "y": 280,
         "wires": [
             [
                 "c9f5c786.410838"
@@ -5962,8 +5963,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1590,
-        "y": 300,
+        "x": 1170,
+        "y": 320,
         "wires": [
             [
                 "c9f5c786.410838"
@@ -5989,8 +5990,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1590,
-        "y": 340,
+        "x": 1170,
+        "y": 360,
         "wires": [
             [
                 "c9f5c786.410838"
@@ -6016,8 +6017,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1580,
-        "y": 380,
+        "x": 1160,
+        "y": 400,
         "wires": [
             [
                 "c9f5c786.410838"
@@ -6064,7 +6065,7 @@
         "type": "function",
         "z": "407d2b774fe67647",
         "name": "Label +  Add Multis + Exchange",
-        "func": "let maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\nif (contesttype == 'qsoparty' || contesttype == '' || contesttype = \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.payload.section;\n    }\n}\n\nif (contesttype == 'sections')\n{\n    msg.payload.exchange = msg.payload.section;\n}\n\nif (contesttype == 'wpx')\n{\n    msg.payload.exchange = msg.original.rcvnr[0]\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\n// Determine what type of Exchange to dispaly\n\nif (contesttype == \"qsoparty\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.payload.section;\n    }\n}\n\nif (contesttype == \"naqp\")\n{\n    msg.payload.exchange = msg.payload.name + \" \" + msg.payload.section\n}\n\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.payload.section;\n    \n}\n\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.payload.gridsquare;\n}\n\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.payload.zone;\n}\n\nif (contesttype == \"wpx\")\n{\n    msg.payload.exchange = msg.payload.wpx + \" \" + msg.original.rcvnr;\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8472,7 +8473,7 @@
         "type": "subflow:bedd4acdc0e27dab",
         "z": "407d2b774fe67647",
         "name": "",
-        "x": 340,
+        "x": 200,
         "y": 320,
         "wires": [
             [
@@ -8495,8 +8496,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 380,
+        "x": 230,
+        "y": 420,
         "wires": []
     },
     {
@@ -8602,7 +8603,7 @@
         "links": [
             "677d263669792c2d"
         ],
-        "x": 135,
+        "x": 75,
         "y": 320,
         "wires": [
             [
@@ -21522,7 +21523,7 @@
         "width": 6,
         "height": 1,
         "name": "First Two PC Names Will Appear on the N1MM Dashboard With the Map",
-        "label": "First Two PC Names Will Appear on the N1MM Dashboard With the Map",
+        "label": "The First Two PC Names Will Appear on the N1MM Dashboard With the Map",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
@@ -21573,7 +21574,7 @@
         "className": "",
         "topic": "",
         "name": "Show Get Radio Computer Names",
-        "x": 1480,
+        "x": 1660,
         "y": 600,
         "wires": [
             []
@@ -21679,7 +21680,7 @@
         "name": "Contest Call Sign Entry",
         "label": "",
         "group": "475c1eff5d97ffe5",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -21718,7 +21719,7 @@
         "name": "",
         "label": "Socket ID & IP",
         "group": "0ae735dd5356d1e8",
-        "order": 1,
+        "order": 3,
         "width": 6,
         "height": 1,
         "options": [
@@ -21821,7 +21822,7 @@
         "z": "204548a488401a1b",
         "d": true,
         "group": "0ae735dd5356d1e8",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 2,
         "name": "",
@@ -21932,7 +21933,7 @@
         "name": "Cluster Login Form",
         "label": "",
         "group": "6e223ca6f2986fea",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -22140,7 +22141,7 @@
         "name": "QRZ Database Login Form",
         "label": "",
         "group": "f1a247c452ce5f36",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -22205,7 +22206,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "f1a247c452ce5f36",
-        "order": 2,
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -22789,7 +22790,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "6e223ca6f2986fea",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "Current Skimmer Login Text",
@@ -22861,7 +22862,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "475c1eff5d97ffe5",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "Current Contest Callsign Text",
@@ -22986,7 +22987,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "Current TTL Icon Value",
@@ -23005,7 +23006,7 @@
         "name": "QSO Map Icon TTL Form",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "options": [
@@ -23618,25 +23619,40 @@
         "tooltip": "",
         "place": "Select Type of Contest",
         "group": "0bd61d43bd0eeaa0",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
         "multiple": false,
         "options": [
             {
-                "label": "QSO Party",
+                "label": "State QSO Party",
                 "value": "qsoparty",
                 "type": "str"
             },
             {
-                "label": "ARRL/RAC Sections",
+                "label": "National QSO Party",
+                "value": "naqp",
+                "type": "str"
+            },
+            {
+                "label": "ARRL/RAC Sections & SS",
                 "value": "sections",
                 "type": "str"
             },
             {
-                "label": "WPX",
+                "label": "WPX Specific",
                 "value": "wpx",
+                "type": "str"
+            },
+            {
+                "label": "Grid Based",
+                "value": "grids",
+                "type": "str"
+            },
+            {
+                "label": "Zone Based",
+                "value": "zones",
                 "type": "str"
             },
             {
@@ -23683,10 +23699,122 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
+        "x": 570,
         "y": 2420,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "4bd54f4532cfb4e4",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "887ee2eadc46df9a",
+        "order": 4,
+        "width": 6,
+        "height": "2",
+        "name": "Current Radio Names Text Box",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1450,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f9aa65c20f157f8e",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set payload to printout",
+        "func": "let P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null)\n{\n    P1 = \"\"\n}\nif (P2 == null)\n{\n    P2 = \"\"\n}\nif (P3 == null)\n{\n    P3 = \"\"\n}\nif (P4 == null)\n{\n    P4 = \"\"\n}\nif (P5 == null)\n{\n    P5 = \"\"\n}\nif (P6 == null)\n{\n    P6 = \"\"\n}\n\nmsg.payload = \"Current PCs : \" + P1 + \"\\r\\n \" + P2 + \"\\r\\n \" + P3 + \"\\r\\n \" + P4 + \"\\r\\n \" + P5 + \"\\r\\n \" + P6\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 680,
+        "wires": [
+            [
+                "4bd54f4532cfb4e4"
+            ]
+        ]
+    },
+    {
+        "id": "b8502660ecb5eb37",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 910,
+        "y": 680,
+        "wires": [
+            [
+                "f9aa65c20f157f8e"
+            ]
+        ]
+    },
+    {
+        "id": "57e3618bf14fa9ab",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Erase Current PC Names",
+        "func": "global.set(\"PC1\",null);\nglobal.set(\"PC2\",null);\nglobal.set(\"PC3\",null);\nglobal.set(\"PC4\",null);\nglobal.set(\"PC5\",null);\nglobal.set(\"PC6\",null);\n\n\n\nmsg.payload = \"PC Names Have Been Reset\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 640,
+        "wires": [
+            [
+                "848cb7d74a2a8ede"
+            ]
+        ]
+    },
+    {
+        "id": "eeb023c41384541c",
+        "type": "ui_button",
+        "z": "204548a488401a1b",
+        "name": "",
+        "group": "887ee2eadc46df9a",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear All Computer Names",
+        "tooltip": "",
+        "color": "#FFFFFF",
+        "bgcolor": "#FF0000",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 640,
+        "wires": [
+            [
+                "57e3618bf14fa9ab"
+            ]
         ]
     },
     {
@@ -24108,7 +24236,7 @@
         "type": "debug",
         "z": "bd8a446b999750f9",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24606,7 +24734,7 @@
         "type": "debug",
         "z": "bd8a446b999750f9",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
