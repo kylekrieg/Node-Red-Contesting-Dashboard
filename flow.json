@@ -4931,7 +4931,7 @@
         "sql": "",
         "name": "N1MM QSOs",
         "x": 1590,
-        "y": 380,
+        "y": 420,
         "wires": [
             []
         ]
@@ -5020,7 +5020,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1580,
-        "y": 280,
+        "y": 320,
         "wires": []
     },
     {
@@ -5130,7 +5130,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1590,
-        "y": 320,
+        "y": 360,
         "wires": []
     },
     {
@@ -5267,7 +5267,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 550,
+        "x": 930,
         "y": 100,
         "wires": [
             [
@@ -5356,7 +5356,7 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 750,
+        "x": 1130,
         "y": 80,
         "wires": [
             [
@@ -5372,7 +5372,7 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 750,
+        "x": 1130,
         "y": 120,
         "wires": [
             [
@@ -23622,7 +23622,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -23670,7 +23670,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 290,
+        "x": 450,
         "y": 2420,
         "wires": [
             [
@@ -23684,7 +23684,7 @@
         "z": "204548a488401a1b",
         "name": "Contest Type",
         "info": "",
-        "x": 250,
+        "x": 410,
         "y": 2360,
         "wires": []
     },
@@ -23699,7 +23699,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 570,
+        "x": 730,
         "y": 2420,
         "wires": [
             []
