@@ -635,7 +635,7 @@
         "type": "ui_tab",
         "name": "Pi Status",
         "icon": "mi-computer",
-        "order": 9,
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -983,7 +983,7 @@
         "type": "ui_tab",
         "name": "Configuration & Resets",
         "icon": "mi-storage",
-        "order": 10,
+        "order": 11,
         "disabled": false,
         "hidden": false
     },
@@ -1362,7 +1362,7 @@
         "type": "ui_tab",
         "name": "Mode Stats",
         "icon": "dashboard",
-        "order": 7,
+        "order": 8,
         "disabled": false,
         "hidden": false
     },
@@ -1371,7 +1371,7 @@
         "type": "ui_tab",
         "name": "Performace Stats",
         "icon": "dashboard",
-        "order": 8,
+        "order": 9,
         "disabled": false,
         "hidden": false
     },
@@ -1647,8 +1647,8 @@
         "id": "7bbebae56744a5d8",
         "type": "ui_tab",
         "name": "RBN Spots",
-        "icon": "dashboard",
-        "order": 11,
+        "icon": "mi-pin_drop",
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
@@ -2964,7 +2964,6 @@
         "y": 1040,
         "wires": [
             [
-                "d5f6127bf6ca30ce",
                 "6dddf05a5c5aefea"
             ]
         ]
@@ -3599,23 +3598,6 @@
         "wires": []
     },
     {
-        "id": "d5f6127bf6ca30ce",
-        "type": "debug",
-        "z": "bedd4acdc0e27dab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2010,
-        "y": 1260,
-        "wires": []
-    },
-    {
         "id": "4bb532204fe3dfe4",
         "type": "debug",
         "z": "bedd4acdc0e27dab",
@@ -3668,9 +3650,7 @@
         "x": 2390,
         "y": 860,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -3709,9 +3689,7 @@
         "x": 2390,
         "y": 900,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -3750,9 +3728,7 @@
         "x": 2400,
         "y": 940,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -3791,9 +3767,7 @@
         "x": 2400,
         "y": 980,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -3832,9 +3806,7 @@
         "x": 2390,
         "y": 1020,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -3873,9 +3845,7 @@
         "x": 2390,
         "y": 1060,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -3914,9 +3884,7 @@
         "x": 2400,
         "y": 1100,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -3955,9 +3923,7 @@
         "x": 2400,
         "y": 1140,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -3989,9 +3955,7 @@
         "x": 2400,
         "y": 1180,
         "wires": [
-            [
-                "bc71fb896410f46e"
-            ]
+            []
         ]
     },
     {
@@ -4112,6 +4076,23 @@
         "statusType": "auto",
         "x": 2780,
         "y": 820,
+        "wires": []
+    },
+    {
+        "id": "d5f6127bf6ca30ce",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1990,
+        "y": 1160,
         "wires": []
     },
     {
@@ -9494,7 +9475,7 @@
         "id": "5af8b84a9901ebd0",
         "type": "inject",
         "z": "407d2b774fe67647",
-        "name": "",
+        "name": "Inject Legend",
         "props": [
             {
                 "p": "payload.command",
@@ -9511,7 +9492,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 1920,
+        "x": 1950,
         "y": 140,
         "wires": [
             [
@@ -25984,28 +25965,6 @@
         "wires": []
     },
     {
-        "id": "e0c5814c5c02972d",
-        "type": "http request",
-        "z": "bd8a446b999750f9",
-        "name": "QRZ DB Lookup",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://xmldata.qrz.com/xml/current/?s={{{qrzkey}}};callsign={{{payload}}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 1820,
-        "y": 1280,
-        "wires": [
-            [
-                "c4fe9ce29962bbc4"
-            ]
-        ]
-    },
-    {
         "id": "e95c6faa.ab2e1",
         "type": "http request",
         "z": "bd8a446b999750f9",
@@ -26079,65 +26038,6 @@
         ]
     },
     {
-        "id": "1b2add97ce38be55",
-        "type": "change",
-        "z": "bd8a446b999750f9",
-        "name": "Set Key & Payload",
-        "rules": [
-            {
-                "t": "set",
-                "p": "qrzkey",
-                "pt": "msg",
-                "to": "qrzkey",
-                "tot": "global"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.de",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 1280,
-        "wires": [
-            [
-                "9f7802f6e4d92f8c"
-            ]
-        ]
-    },
-    {
-        "id": "9f7802f6e4d92f8c",
-        "type": "delay",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "3",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "2",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1640,
-        "y": 1280,
-        "wires": [
-            [
-                "e0c5814c5c02972d"
-            ]
-        ]
-    },
-    {
         "id": "6c2910a0551187b0",
         "type": "template",
         "z": "bd8a446b999750f9",
@@ -26155,37 +26055,6 @@
         ]
     },
     {
-        "id": "b6c55bbd4f728ac5",
-        "type": "switch",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "property": "dblookup",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "qrz",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "hamdb",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1250,
-        "y": 1280,
-        "wires": [
-            [
-                "1b2add97ce38be55"
-            ],
-            []
-        ]
-    },
-    {
         "id": "868dd09f205ab8ef",
         "type": "subflow:bedd4acdc0e27dab",
         "z": "bd8a446b999750f9",
@@ -26196,39 +26065,6 @@
             [],
             [
                 "067c389c641a7d44"
-            ]
-        ]
-    },
-    {
-        "id": "cf5c84e77bc08321",
-        "type": "debug",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2170,
-        "y": 1280,
-        "wires": []
-    },
-    {
-        "id": "c4fe9ce29962bbc4",
-        "type": "xml",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 2030,
-        "y": 1280,
-        "wires": [
-            [
-                "cf5c84e77bc08321"
             ]
         ]
     },
@@ -26511,6 +26347,35 @@
         "y": 700,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f177b983ed87b46b",
+        "type": "inject",
+        "z": "bd8a446b999750f9",
+        "name": "Inject Legend",
+        "props": [
+            {
+                "p": "payload.command",
+                "v": "{ \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \" }",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 2020,
+        "y": 840,
+        "wires": [
+            [
+                "067c389c641a7d44"
+            ]
         ]
     },
     {
