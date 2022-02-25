@@ -279,15 +279,43 @@
                 ]
             },
             {
-                "x": 2240,
-                "y": 1000,
+                "x": 2700,
+                "y": 980,
                 "wires": [
                     {
-                        "id": "9440ea3aa843027d",
+                        "id": "db552b47bb5f9064",
                         "port": 0
                     },
                     {
-                        "id": "dc2d5356e4a024aa",
+                        "id": "bc778edd341cbc84",
+                        "port": 0
+                    },
+                    {
+                        "id": "96275f869825c27d",
+                        "port": 0
+                    },
+                    {
+                        "id": "2cf32f5a31aed22a",
+                        "port": 0
+                    },
+                    {
+                        "id": "260ab9255da1050e",
+                        "port": 0
+                    },
+                    {
+                        "id": "82696bd88fd60c22",
+                        "port": 0
+                    },
+                    {
+                        "id": "5e19bf265b499836",
+                        "port": 0
+                    },
+                    {
+                        "id": "885ec7953d91b737",
+                        "port": 0
+                    },
+                    {
+                        "id": "588111625a4f2458",
                         "port": 0
                     }
                 ]
@@ -1215,7 +1243,7 @@
         "type": "ui_group",
         "name": "QRZ XML Login",
         "tab": "08eed6c3517c624e",
-        "order": 16,
+        "order": 14,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1260,7 +1288,7 @@
     {
         "id": "3207774a885933a9",
         "type": "sqlitedb",
-        "db": "testdb",
+        "db": "wv4p_qsos",
         "mode": "RWC"
     },
     {
@@ -1352,7 +1380,7 @@
         "type": "ui_group",
         "name": "Home Lat & Lon",
         "tab": "08eed6c3517c624e",
-        "order": 13,
+        "order": 16,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1427,7 +1455,7 @@
         "type": "ui_group",
         "name": "Announcements",
         "tab": "08eed6c3517c624e",
-        "order": 14,
+        "order": 15,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1438,7 +1466,7 @@
         "type": "ui_group",
         "name": "Contest Type",
         "tab": "08eed6c3517c624e",
-        "order": 15,
+        "order": 13,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1452,6 +1480,208 @@
         "order": 12,
         "disp": true,
         "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b4bde4fad783b33f",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "e42cdfb590735e00",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "fc336097ae89242f",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "e42cdfb590735e00",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0708c2c8f9d6bd2d",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "8bf40d033d555b71",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6b40b60dd3175477",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "8bf40d033d555b71",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f7c998be26763c3e",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "4349237f79c6ee9d",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "699a396364dea282",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "4349237f79c6ee9d",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ff17c155f781e322",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "de79e0318aecd9cc",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "12f8f3f94ac88a8a",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "de79e0318aecd9cc",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "4039ed80c771b2a7",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "ec08fadc8d1d73bf",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "307a972454631ea2",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "ec08fadc8d1d73bf",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "99bf05d5f3776723",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "3dad506044ed2f24",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "71d364eb5981b7f1",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "3dad506044ed2f24",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "87fa7eada459a2e9",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "fbe68cb50c200a91",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "8a650756a439c27c",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "fbe68cb50c200a91",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "24b08be6ddea0e84",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "84c8e4f24085b4d7",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1620671f76936096",
+        "type": "ui_spacer",
+        "z": "c8e1ef6f509cd75a",
+        "name": "spacer",
+        "group": "84c8e4f24085b4d7",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "7bbebae56744a5d8",
+        "type": "ui_tab",
+        "name": "RBN Spots",
+        "icon": "dashboard",
+        "order": 11,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a55f6d343a61c86b",
+        "type": "ui_group",
+        "name": "Contest Call RBN Spots Map",
+        "tab": "7bbebae56744a5d8",
+        "order": 2,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ebbb538ba5d86639",
+        "type": "ui_group",
+        "name": "All Skimmer Spots with Dups",
+        "tab": "7bbebae56744a5d8",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f4191b752633a96",
+        "type": "ui_group",
+        "name": "Skimmer Spots with Contest Call",
+        "tab": "7bbebae56744a5d8",
+        "order": 3,
+        "disp": true,
+        "width": 10,
         "collapse": false,
         "className": ""
     },
@@ -2308,7 +2538,8 @@
                 "4982fd45c8dc3e9b"
             ],
             [
-                "56c14f131ce916b6"
+                "56c14f131ce916b6",
+                "907149949f25c980"
             ]
         ]
     },
@@ -2336,7 +2567,7 @@
         "rules": [
             {
                 "t": "move",
-                "p": "payload.contactinfo",
+                "p": "payload.arguments[0]",
                 "pt": "msg",
                 "to": "original",
                 "tot": "msg"
@@ -2345,7 +2576,7 @@
                 "t": "set",
                 "p": "payload.call",
                 "pt": "msg",
-                "to": "original.call[0]",
+                "to": "original.call",
                 "tot": "msg"
             }
         ],
@@ -2358,7 +2589,7 @@
         "y": 980,
         "wires": [
             [
-                "291a0fe954156e5c"
+                "2c108bd4aa824812"
             ]
         ]
     },
@@ -2506,41 +2737,7 @@
                 "e0bf55106eef7d29"
             ],
             [
-                "6eddfa603c38dddc"
-            ]
-        ]
-    },
-    {
-        "id": "6eddfa603c38dddc",
-        "type": "change",
-        "z": "bedd4acdc0e27dab",
-        "name": "Original Payload Copy",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.contactinfo",
-                "pt": "msg",
-                "to": "original",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload.call",
-                "pt": "msg",
-                "to": "original.call[0]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 820,
-        "y": 1040,
-        "wires": [
-            [
-                "b11f205691fffc5f"
+                "0d9c1780fb45ce22"
             ]
         ]
     },
@@ -2550,9 +2747,9 @@
         "z": "bedd4acdc0e27dab",
         "name": "QRZ DB Lookup",
         "method": "GET",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "https://xmldata.qrz.com/xml/current/?s={{{qrzkey}}};callsign={{{payload.call}}}",
+        "url": "https://xmldata.qrz.com/xml/current/?s={{{qrzkey}}};callsign={{{payload.de}}}",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2752,44 +2949,9 @@
             },
             {
                 "t": "set",
-                "p": "payload.op",
+                "p": "payload.freq",
                 "pt": "msg",
-                "to": "original.operator[0]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload.band",
-                "pt": "msg",
-                "to": "original.band[0]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload.mode",
-                "pt": "msg",
-                "to": "original.mode[0]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload.isrunqso",
-                "pt": "msg",
-                "to": "original.IsRunQSO[0]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload.exchange",
-                "pt": "msg",
-                "to": "original.exchange1[0]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload.section",
-                "pt": "msg",
-                "to": "original.section[0]",
+                "to": "original.freq",
                 "tot": "msg"
             }
         ],
@@ -2801,7 +2963,10 @@
         "x": 1840,
         "y": 1040,
         "wires": [
-            []
+            [
+                "d5f6127bf6ca30ce",
+                "6dddf05a5c5aefea"
+            ]
         ]
     },
     {
@@ -3281,6 +3446,675 @@
         ]
     },
     {
+        "id": "0d9c1780fb45ce22",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "Original Payload Copy",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "original",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.de",
+                "pt": "msg",
+                "to": "original.de",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 1040,
+        "wires": [
+            [
+                "b11f205691fffc5f"
+            ]
+        ]
+    },
+    {
+        "id": "907149949f25c980",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2c108bd4aa824812",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "05a18cec46e3d5f9",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "7ccf3b73a83b2944",
+        "type": "function",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52e6957ec9069595",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "1c9972b6a083c047",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "7065ac975fffdf5f",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1750,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "d5f6127bf6ca30ce",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2010,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "4bb532204fe3dfe4",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "db552b47bb5f9064",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "160M Color Purple",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#800080",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "160M",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "160M",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2390,
+        "y": 860,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "bc778edd341cbc84",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "80M Color Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#008000",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "80M",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "80M",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2390,
+        "y": 900,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "96275f869825c27d",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "40M Color Blue",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#0000FF",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "40M",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "40M",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2400,
+        "y": 940,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "2cf32f5a31aed22a",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "20M Color Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#FF0000",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "20M",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "20M",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2400,
+        "y": 980,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "260ab9255da1050e",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "15M Color Yellow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#FFFF00",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "15M",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "15M",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2390,
+        "y": 1020,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "82696bd88fd60c22",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "10M Color Orange",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#FF8C00",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "10M",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "10M",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2390,
+        "y": 1060,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "5e19bf265b499836",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "6M Color White",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#FFFFFF",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "6M",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "6M",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2400,
+        "y": 1100,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "885ec7953d91b737",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "2M Color Lime",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#00FF00",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "2M",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "2M",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2400,
+        "y": 1140,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "588111625a4f2458",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "Else Color Black",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.iconColor",
+                "pt": "msg",
+                "to": "#000000",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.layer",
+                "pt": "msg",
+                "to": "Other",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2400,
+        "y": 1180,
+        "wires": [
+            [
+                "bc71fb896410f46e"
+            ]
+        ]
+    },
+    {
+        "id": "6dddf05a5c5aefea",
+        "type": "switch",
+        "z": "bedd4acdc0e27dab",
+        "name": "Band Parse",
+        "property": "payload.freq",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "1800",
+                "vt": "num",
+                "v2": "2000",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "3500",
+                "vt": "num",
+                "v2": "4000",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "7000",
+                "vt": "num",
+                "v2": "7200",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "14000",
+                "vt": "num",
+                "v2": "14350",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "21000",
+                "vt": "num",
+                "v2": "21450",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "28000",
+                "vt": "num",
+                "v2": "29700",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "50000",
+                "vt": "num",
+                "v2": "54000",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "144000",
+                "vt": "num",
+                "v2": "148000",
+                "v2t": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 9,
+        "x": 2130,
+        "y": 1020,
+        "wires": [
+            [
+                "db552b47bb5f9064"
+            ],
+            [
+                "bc778edd341cbc84"
+            ],
+            [
+                "96275f869825c27d"
+            ],
+            [
+                "2cf32f5a31aed22a"
+            ],
+            [
+                "260ab9255da1050e"
+            ],
+            [
+                "82696bd88fd60c22"
+            ],
+            [
+                "5e19bf265b499836"
+            ],
+            [
+                "885ec7953d91b737"
+            ],
+            [
+                "588111625a4f2458"
+            ]
+        ]
+    },
+    {
+        "id": "bc71fb896410f46e",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2780,
+        "y": 820,
+        "wires": []
+    },
+    {
         "id": "97a1a482a165f0be",
         "type": "comment",
         "z": "4a77ed092d5e5141",
@@ -3452,7 +4286,7 @@
         "type": "function",
         "z": "4a77ed092d5e5141",
         "name": "",
-        "func": "let band = ''\nlet app = \"N1MM\"\nlet contestname = msg.payload.contestname;\nlet contestnr = msg.payload.contestnr\nlet timestamp = new Date().toISOString().replace(/T/, ' ').replace(/\\..+/, '');\nlet mycall = msg.payload.mycall;\nlet band1 = msg.payload.band;\nlet rxfreq = msg.payload.rxfreq;\nlet txfreq = msg.payload.txfreq;\nlet operator = msg.payload.operator;\nlet mode = msg.payload.mode;\nlet call = msg.payload.call;\nlet countryprefix = msg.payload.countryprefix;\nlet wpxprefix = msg.payload.wpxprefix;\nlet continent = msg.payload.continent;\nlet snt = msg.payload.snt;\nlet sntnr = \"1\";\nlet rcv = msg.payload.rcv;\nlet rcvnr = msg.payload.rcvnr;\nlet gridsquare = msg.payload.gridsquare;\nlet exchange1 = msg.payload.exchange1;\nlet section = msg.payload.section;\nlet comment = msg.payload.comment;\nlet qth = msg.payload.qth;\nlet name = msg.payload.name;\nlet power = msg.payload.power;\nlet misctext = msg.payload.misctext;\nlet zone = msg.payload.zone;\nlet prec = msg.payload.prec;\nlet ck = msg.payload.ck;\nlet ismultiplier1 = msg.payload.ismultiplier1;\nlet ismultiplier2 = msg.payload.ismultiplier2;\nlet ismultiplier3 = msg.payload.ismultiplier3;\nlet points = msg.payload.points;\nlet radionr = msg.payload.radionr;\nlet RoverLocation = msg.payload.RoverLocation;\nlet RadioInterfaced = msg.payload.RadioInterfaced;\nlet NetworkedCompNr = msg.payload.NetworkedCompNr;\nlet IsOriginal = msg.payload.IsOriginal;\nlet NetBiosName = msg.payload.NetBiosName;\nlet IsRunQSO = msg.payload.isrunqso;\nlet StationName = msg.payload.NetBiosName;\nlet ID = msg.payload.ID;\nlet IsClaimedQso = msg.payload.IsClaimedQso;\n\nif (band1 == \"7.0\" || band1 == \"14.0\" || band1 == \"21.0\" || band1 == \"28.0\" || band1 == \"50.0\" || band1 == \"144.0\" || band1 == \"420.0\")\n{\n    band = parseInt(band1).toString();\n    \n}\nelse\n{\n    band = band1\n}\n\n\nmsg.payload = {\"contactinfo\":{\"$\":{},\n\"app\":[app],\n\"contestname\":[contestname],\n\"contestnr\":[contestnr],\n\"timestamp\":[timestamp],\n\"mycall\":[mycall],\n\"band\":[band],\n\"rxfreq\":[rxfreq],\n\"txfreq\":[txfreq],\n\"operator\":[operator],\n\"mode\":[mode],\n\"call\":[call],\n\"countryprefix\":[countryprefix],\n\"wpxprefix\":[wpxprefix],\n\"continent\":[continent],\n\"snt\":[snt],\n\"sntnr\":[sntnr],\n\"rcv\":[rcv],\n\"rcvnr\":[rcvnr],\n\"gridsquare\":[gridsquare],\n\"exchange1\":[exchange1],\n\"section\":[section],\n\"comment\":[comment],\n\"qth\":[qth],\n\"name\":[name],\n\"power\":[power],\n\"misctext\":[misctext],\n\"zone\":[zone],\n\"prec\":[prec],\n\"ck\":[ck],\n\"ismultiplier1\":[ismultiplier1],\n\"ismultiplier2\":[ismultiplier2],\n\"ismultiplier3\":[ismultiplier3],\n\"points\":[points],\n\"radionr\":[radionr],\n\"RoverLocation\":[RoverLocation],\n\"RadioInterfaced\":[RadioInterfaced],\n\"NetworkedCompNr\":[NetworkedCompNr],\n\"IsOriginal\":[IsOriginal],\n\"NetBiosName\":[NetBiosName],\n\"IsRunQSO\":[IsRunQSO],\n\"StationName\":[StationName],\n\"ID\":[ID],\n\"IsClaimedQso\":[IsClaimedQso]\n}}\n\nreturn msg;",
+        "func": "let band = ''\nlet app = \"N1MM\"\nlet contestname = msg.payload.contestname;\nlet contestnr = msg.payload.contestnr\nlet timestamp = new Date().toISOString().replace(/T/, ' ').replace(/\\..+/, '');\nlet mycall = msg.payload.mycall;\nlet band1 = msg.payload.band;\nlet rxfreq = msg.payload.rxfreq;\nlet txfreq = msg.payload.txfreq;\nlet operator = msg.payload.operator;\nlet mode = msg.payload.mode;\nlet call = msg.payload.call;\nlet countryprefix = msg.payload.countryprefix;\nlet wpxprefix = msg.payload.wpxprefix;\nlet continent = msg.payload.continent;\nlet snt = msg.payload.snt;\nlet sntnr = \"1\";\nlet rcv = msg.payload.rcv;\nlet rcvnr = msg.payload.rcvnr;\nlet gridsquare = msg.payload.gridsquare;\nlet exchange1 = msg.payload.exchange1;\nlet section = msg.payload.section;\nlet comment = msg.payload.comment;\nlet qth = msg.payload.qth;\nlet name = msg.payload.name;\nlet power = msg.payload.power;\nlet misctext = msg.payload.misctext;\nlet zone = msg.payload.zone;\nlet prec = msg.payload.prec;\nlet ck = msg.payload.ck;\nlet ismultiplier1 = msg.payload.ismultiplier1;\nlet ismultiplier2 = msg.payload.ismultiplier2;\nlet ismultiplier3 = msg.payload.ismultiplier3;\nlet points = msg.payload.points;\nlet radionr = msg.payload.radionr;\nlet RoverLocation = msg.payload.RoverLocation;\nlet RadioInterfaced = msg.payload.RadioInterfaced;\nlet NetworkedCompNr = msg.payload.NetworkedCompNr;\nlet IsOriginal = msg.payload.IsOriginal;\nlet NetBiosName = msg.payload.NetBiosName;\nlet IsRunQSO = msg.payload.IsRunQSO;\nlet StationName = msg.payload.NetBiosName;\nlet ID = msg.payload.ID;\nlet IsClaimedQso = msg.payload.IsClaimedQso;\n\nif (band1 == \"7.0\" || band1 == \"14.0\" || band1 == \"21.0\" || band1 == \"28.0\" || band1 == \"50.0\" || band1 == \"144.0\" || band1 == \"420.0\")\n{\n    band = parseInt(band1).toString();\n    \n}\nelse\n{\n    band = band1\n}\n\n\nmsg.payload = {\"contactinfo\":{\"$\":{},\n\"app\":[app],\n\"contestname\":[contestname],\n\"contestnr\":[contestnr],\n\"timestamp\":[timestamp],\n\"mycall\":[mycall],\n\"band\":[band],\n\"rxfreq\":[rxfreq],\n\"txfreq\":[txfreq],\n\"operator\":[operator],\n\"mode\":[mode],\n\"call\":[call],\n\"countryprefix\":[countryprefix],\n\"wpxprefix\":[wpxprefix],\n\"continent\":[continent],\n\"snt\":[snt],\n\"sntnr\":[sntnr],\n\"rcv\":[rcv],\n\"rcvnr\":[rcvnr],\n\"gridsquare\":[gridsquare],\n\"exchange1\":[exchange1],\n\"section\":[section],\n\"comment\":[comment],\n\"qth\":[qth],\n\"name\":[name],\n\"power\":[power],\n\"misctext\":[misctext],\n\"zone\":[zone],\n\"prec\":[prec],\n\"ck\":[ck],\n\"ismultiplier1\":[ismultiplier1],\n\"ismultiplier2\":[ismultiplier2],\n\"ismultiplier3\":[ismultiplier3],\n\"points\":[points],\n\"radionr\":[radionr],\n\"RoverLocation\":[RoverLocation],\n\"RadioInterfaced\":[RadioInterfaced],\n\"NetworkedCompNr\":[NetworkedCompNr],\n\"IsOriginal\":[IsOriginal],\n\"NetBiosName\":[NetBiosName],\n\"IsRunQSO\":[IsRunQSO],\n\"StationName\":[StationName],\n\"ID\":[ID],\n\"IsClaimedQso\":[IsClaimedQso]\n}}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3505,7 +4339,8 @@
         "y": 140,
         "wires": [
             [
-                "78371bc4fa191a56"
+                "421e07d446a74155",
+                "9a8b6e92f6d9b1e6"
             ]
         ]
     },
@@ -3574,8 +4409,8 @@
         "syntax": "mustache",
         "template": "SELECT * FROM qsos ORDER BY RANDOM() LIMIT 1;",
         "output": "str",
-        "x": 800,
-        "y": 340,
+        "x": 200,
+        "y": 640,
         "wires": [
             []
         ]
@@ -3974,8 +4809,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 180,
+        "x": 930,
+        "y": 200,
         "wires": []
     },
     {
@@ -3989,10 +4824,13 @@
         "syntax": "mustache",
         "template": "select * from qsos where rowid={{loopcounter}};",
         "output": "str",
-        "x": 430,
-        "y": 360,
+        "x": 390,
+        "y": 300,
         "wires": [
-            []
+            [
+                "10e07873007fcf9d",
+                "d43ae06e849f6d4b"
+            ]
         ]
     },
     {
@@ -4711,10 +5549,7 @@
         "x": 420,
         "y": 260,
         "wires": [
-            [
-                "d43ae06e849f6d4b",
-                "10e07873007fcf9d"
-            ]
+            []
         ]
     },
     {
@@ -4866,6 +5701,22 @@
                 "8098acef78168f5c"
             ]
         ]
+    },
+    {
+        "id": "9a8b6e92f6d9b1e6",
+        "type": "debug",
+        "z": "4a77ed092d5e5141",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 100,
+        "wires": []
     },
     {
         "id": "1e5d975d4f33a469",
@@ -6067,7 +6918,7 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 2230,
+        "x": 2270,
         "y": 140,
         "wires": []
     },
@@ -6076,7 +6927,7 @@
         "type": "function",
         "z": "407d2b774fe67647",
         "name": "Label +  Add Multis + Exchange",
-        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\n// Determine what type of Exchange to dispaly\n\nif (contesttype == \"qsoparty\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.payload.section;\n    }\n}\n\nif (contesttype == \"naqp\")\n{\n    msg.payload.exchange = msg.payload.name + \" \" + msg.payload.section\n}\n\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.payload.section;\n    \n}\n\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.payload.gridsquare;\n}\n\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.payload.zone;\n}\n\nif (contesttype == \"wpx\")\n{\n    msg.payload.exchange = msg.payload.wpx + \" \" + msg.original.rcvnr;\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.section\n}\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\n// Determine what type of Exchange to dispaly\n\nif (contesttype == \"qsoparty\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section;\n    }\n}\n\nif (contesttype == \"naqp\")\n{\n    msg.payload.exchange = msg.original.name + \" \" + msg.original.section\n}\n\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section;\n    \n}\n\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare;\n}\n\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone;\n}\n\nif (contesttype == \"wpx\")\n{\n    msg.payload.exchange = msg.original.wpxprefix + \" \" + msg.original.rcvnr;\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.section\n}\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6086,11 +6937,11 @@
         "y": 320,
         "wires": [
             [
-                "2f1bf610.d7c76a",
                 "c0cc5426.3783b8",
                 "eaa8defdbb30a4cb",
                 "611bebabf791b26b",
-                "3617522441b640cb"
+                "3617522441b640cb",
+                "2f1bf610.d7c76a"
             ]
         ]
     },
@@ -8747,7 +9598,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1870,
+        "x": 1850,
         "y": 100,
         "wires": [
             [
@@ -8759,20 +9610,37 @@
         "id": "1fef8af3224d3ace",
         "type": "function",
         "z": "407d2b774fe67647",
-        "name": "",
+        "name": "Inject Home",
         "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nreturn {payload : {name:\"home\", lat:lat, lon:lon, icon:\"fa-home\", layer:\"Home\"}};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2040,
+        "x": 2050,
         "y": 100,
         "wires": [
             [
+                "d822b32b0913c2e8",
                 "2f1bf610.d7c76a"
             ]
         ]
+    },
+    {
+        "id": "d822b32b0913c2e8",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2300,
+        "y": 60,
+        "wires": []
     },
     {
         "id": "4079239a4fd5c11c",
@@ -13954,7 +14822,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "e42cdfb590735e00",
         "order": 2,
-        "width": 6,
+        "width": 4,
         "height": 2,
         "name": "1st Place OP Score",
         "label": "<font size = 6>Score",
@@ -13971,7 +14839,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "8bf40d033d555b71",
         "order": 2,
-        "width": 6,
+        "width": 4,
         "height": 2,
         "name": "2nd Place OP Score",
         "label": "<font size = 6>Score",
@@ -13988,7 +14856,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "4349237f79c6ee9d",
         "order": 2,
-        "width": 6,
+        "width": 4,
         "height": 2,
         "name": "3rd Place OP Score",
         "label": "<font size = 6>Score",
@@ -14005,7 +14873,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "de79e0318aecd9cc",
         "order": 2,
-        "width": 6,
+        "width": 4,
         "height": 2,
         "name": "4th Place OP Score",
         "label": "<font size = 6>Score",
@@ -14022,7 +14890,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "ec08fadc8d1d73bf",
         "order": 2,
-        "width": 6,
+        "width": 4,
         "height": 2,
         "name": "5th Place OP Score",
         "label": "<font size = 6>Score",
@@ -14039,7 +14907,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "3dad506044ed2f24",
         "order": 2,
-        "width": 6,
+        "width": 4,
         "height": 2,
         "name": "6th Place OP Score",
         "label": "<font size = 6>Score",
@@ -14056,7 +14924,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "fbe68cb50c200a91",
         "order": 2,
-        "width": 6,
+        "width": 4,
         "height": 2,
         "name": "7th Place OP Score",
         "label": "<font size = 6>Score",
@@ -14073,7 +14941,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "84c8e4f24085b4d7",
         "order": 2,
-        "width": 6,
+        "width": 4,
         "height": 2,
         "name": "8th Place OP Score",
         "label": "<font size = 6>Score",
@@ -15040,7 +15908,8 @@
                 "29cc830183af111c",
                 "2315776197970517",
                 "53a7fd969e406817",
-                "a65f77a9cdad872f"
+                "a65f77a9cdad872f",
+                "21fc033df0503c30"
             ]
         ]
     },
@@ -15055,12 +15924,10 @@
         "syntax": "mustache",
         "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
         "output": "str",
-        "x": 800,
-        "y": 1080,
+        "x": 240,
+        "y": 1240,
         "wires": [
-            [
-                "852b78df4e8c39e7"
-            ]
+            []
         ]
     },
     {
@@ -16109,7 +16976,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16586,7 +17453,7 @@
         "id": "2b2f3e640248b72a",
         "type": "delay",
         "z": "c8e1ef6f509cd75a",
-        "name": "30s Random Delay",
+        "name": "10s Random Delay",
         "pauseType": "random",
         "timeout": "5",
         "timeoutUnits": "seconds",
@@ -16594,7 +17461,7 @@
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
-        "randomLast": "30",
+        "randomLast": "10",
         "randomUnits": "seconds",
         "drop": false,
         "allowrate": false,
@@ -16923,10 +17790,14 @@
         "links": [
             "6dc0b640e1c8407e"
         ],
-        "x": 115,
-        "y": 1660,
+        "x": 95,
+        "y": 2000,
         "wires": [
-            []
+            [
+                "42dd44c1b9117a77",
+                "876a37f507199eeb",
+                "064a889f6409cc77"
+            ]
         ]
     },
     {
@@ -16935,7 +17806,7 @@
         "z": "c8e1ef6f509cd75a",
         "name": "",
         "pauseType": "delay",
-        "timeout": "3",
+        "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -16982,7 +17853,7 @@
         "y": 1080,
         "wires": [
             [
-                "1aa5e6353669ca19"
+                "ab15bdd28dcafc0f"
             ]
         ]
     },
@@ -17296,36 +18167,6 @@
         "wires": []
     },
     {
-        "id": "6839cdf9e840f384",
-        "type": "inject",
-        "z": "c8e1ef6f509cd75a",
-        "name": "1 Per 5 Min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "300",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 2000,
-        "wires": [
-            [
-                "8c530f8aced55ea2",
-                "42dd44c1b9117a77",
-                "ad8a6a7b6330600c"
-            ]
-        ]
-    },
-    {
         "id": "61d3849fc0346ed6",
         "type": "sqlite",
         "z": "c8e1ef6f509cd75a",
@@ -17384,10 +18225,12 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1060,
-        "y": 1920,
+        "x": 340,
+        "y": 2000,
         "wires": [
-            []
+            [
+                "8c530f8aced55ea2"
+            ]
         ]
     },
     {
@@ -17407,10 +18250,12 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1060,
-        "y": 2240,
+        "x": 360,
+        "y": 2220,
         "wires": [
-            []
+            [
+                "ad8a6a7b6330600c"
+            ]
         ]
     },
     {
@@ -17550,6 +18395,121 @@
         "wires": [
             [
                 "e5bfbfa56cbfc533"
+            ]
+        ]
+    },
+    {
+        "id": "21fc033df0503c30",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "ab15bdd28dcafc0f",
+        "type": "switch",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Sort By",
+        "property": "opsorttype",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "mults",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "qsos",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "score",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 420,
+        "y": 1080,
+        "wires": [
+            [
+                "2a3df4895a5d6780"
+            ],
+            [
+                "a84a90b1ace92c67"
+            ],
+            [
+                "ef5a4a7424394ddf"
+            ]
+        ]
+    },
+    {
+        "id": "2a3df4895a5d6780",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 2Hr Rate Sorty by Mults",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+        "output": "str",
+        "x": 740,
+        "y": 1040,
+        "wires": [
+            [
+                "852b78df4e8c39e7"
+            ]
+        ]
+    },
+    {
+        "id": "a84a90b1ace92c67",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 2Hr Rate Sorty by QSOs",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+        "output": "str",
+        "x": 740,
+        "y": 1080,
+        "wires": [
+            [
+                "852b78df4e8c39e7"
+            ]
+        ]
+    },
+    {
+        "id": "ef5a4a7424394ddf",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 2Hr Rate Sorty by Score",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+        "output": "str",
+        "x": 740,
+        "y": 1120,
+        "wires": [
+            [
+                "852b78df4e8c39e7"
             ]
         ]
     },
@@ -19849,39 +20809,6 @@
         ]
     },
     {
-        "id": "5a98f62903b42377",
-        "type": "switch",
-        "z": "b59d8b7ca43e59ce",
-        "name": "Lookup or Contact",
-        "property": "payload.type",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "lookupinfo",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "qso",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 220,
-        "wires": [
-            [
-                "d2889ec7d7a0f525"
-            ],
-            [
-                "30f1f4e9ec10e932"
-            ]
-        ]
-    },
-    {
         "id": "311b6207c07e5013",
         "type": "link in",
         "z": "b59d8b7ca43e59ce",
@@ -19892,40 +20819,6 @@
         "x": 225,
         "y": 220,
         "wires": [
-            [
-                "5a98f62903b42377",
-                "0aa2b387e2c18fb0"
-            ]
-        ]
-    },
-    {
-        "id": "d2889ec7d7a0f525",
-        "type": "subflow:bedd4acdc0e27dab",
-        "z": "b59d8b7ca43e59ce",
-        "name": "",
-        "x": 690,
-        "y": 180,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "30f1f4e9ec10e932",
-        "type": "subflow:bedd4acdc0e27dab",
-        "z": "b59d8b7ca43e59ce",
-        "name": "",
-        "x": 680,
-        "y": 280,
-        "wires": [
-            [
-                "16dc09bafbfc24f2",
-                "93c97ccaa3e53d22",
-                "482152c92f2f5813",
-                "2f7d9a2d94268e97",
-                "aafb155f821969bb",
-                "69d83cae2e4e6a4c"
-            ],
             []
         ]
     },
@@ -20029,39 +20922,6 @@
         "className": "",
         "x": 410,
         "y": 120,
-        "wires": []
-    },
-    {
-        "id": "16dc09bafbfc24f2",
-        "type": "debug",
-        "z": "b59d8b7ca43e59ce",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 850,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "0aa2b387e2c18fb0",
-        "type": "debug",
-        "z": "b59d8b7ca43e59ce",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 380,
         "wires": []
     },
     {
@@ -21476,7 +22336,7 @@
         "name": "Comptuer Name Input",
         "label": "Computer Names",
         "group": "887ee2eadc46df9a",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 1,
         "options": [
@@ -21609,7 +22469,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "name": "First Two PC Names Will Appear on the N1MM Dashboard With the Map",
@@ -21627,7 +22487,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "887ee2eadc46df9a",
-        "order": 1,
+        "order": 5,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -21809,7 +22669,7 @@
         "name": "",
         "label": "Socket ID & IP",
         "group": "0ae735dd5356d1e8",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 1,
         "options": [
@@ -21912,7 +22772,7 @@
         "z": "204548a488401a1b",
         "d": true,
         "group": "0ae735dd5356d1e8",
-        "order": 1,
+        "order": 3,
         "width": 6,
         "height": 2,
         "name": "",
@@ -22231,7 +23091,7 @@
         "name": "QRZ Database Login Form",
         "label": "",
         "group": "f1a247c452ce5f36",
-        "order": 2,
+        "order": 1,
         "width": 6,
         "height": 1,
         "options": [
@@ -22296,7 +23156,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "f1a247c452ce5f36",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -22520,7 +23380,7 @@
         "tooltip": "",
         "place": "Choose Selection",
         "group": "8a65c232b2637c6a",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -22816,7 +23676,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "8a65c232b2637c6a",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "Database Lookup Text",
@@ -23150,7 +24010,7 @@
         "name": "Lat & Lon Input",
         "label": "",
         "group": "2b43e4ca38d9b76c",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -23284,9 +24144,9 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "2b43e4ca38d9b76c",
-        "order": 2,
+        "order": 1,
         "width": 6,
-        "height": 2,
+        "height": "1",
         "name": "Current Lat & Lon",
         "label": "Current Home Lat & Lon",
         "format": "{{msg.payload}}",
@@ -23564,12 +24424,12 @@
         "id": "d99f186baf3ac355",
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
-        "name": "Label Type",
+        "name": "Map Label Type Dropdown",
         "label": "",
         "tooltip": "",
         "place": "Select option",
         "group": "bf78ccb640f6b06a",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -23595,7 +24455,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1670,
+        "x": 1680,
         "y": 1820,
         "wires": [
             [
@@ -23614,7 +24474,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1900,
+        "x": 1980,
         "y": 1820,
         "wires": [
             []
@@ -23647,7 +24507,7 @@
         "animate": false,
         "className": "",
         "x": 1680,
-        "y": 1980,
+        "y": 2020,
         "wires": [
             [
                 "851fa5920b751886"
@@ -23666,7 +24526,7 @@
         "finalize": "",
         "libs": [],
         "x": 1950,
-        "y": 1980,
+        "y": 2020,
         "wires": [
             []
         ]
@@ -23693,7 +24553,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 1450,
-        "y": 1980,
+        "y": 2020,
         "wires": [
             [
                 "4a7ab19bd2fdaf09"
@@ -23802,7 +24662,7 @@
         "group": "887ee2eadc46df9a",
         "order": 4,
         "width": 6,
-        "height": "2",
+        "height": 2,
         "name": "Current Radio Names Text Box",
         "label": "",
         "format": "{{msg.payload}}",
@@ -23885,7 +24745,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "887ee2eadc46df9a",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -23954,9 +24814,9 @@
         "id": "6bc62a899e0c2a87",
         "type": "comment",
         "z": "204548a488401a1b",
-        "name": "Contest Type",
+        "name": "OP Competition Sort Type",
         "info": "",
-        "x": 1270,
+        "x": 1310,
         "y": 2360,
         "wires": []
     },
@@ -24106,6 +24966,35 @@
         "x": 1780,
         "y": 2460,
         "wires": []
+    },
+    {
+        "id": "37883f2151c6aeb8",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "bandonly",
+        "payloadType": "str",
+        "x": 1420,
+        "y": 1820,
+        "wires": [
+            [
+                "d99f186baf3ac355"
+            ]
+        ]
     },
     {
         "id": "1f45eb9a.6f2614",
@@ -24363,7 +25252,7 @@
         "id": "64a3cfee.f2795",
         "type": "ui_button",
         "z": "bd8a446b999750f9",
-        "name": "Connect RBN",
+        "name": "No Dups Connect RBN",
         "group": "089f422fb01043ec",
         "order": 2,
         "width": 5,
@@ -24379,7 +25268,7 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 260,
+        "x": 290,
         "y": 320,
         "wires": [
             [
@@ -24396,12 +25285,12 @@
         "order": 4,
         "width": 10,
         "height": 3,
-        "name": "VE7CC Skimmer Cluster No Dupe Output",
-        "label": "VE7CC Skimmer Cluster Output",
+        "name": "Skimmer Cluster No Dupe Output",
+        "label": "Skimmer Cluster without Dups Output",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1500,
+        "x": 1480,
         "y": 360,
         "wires": []
     },
@@ -24413,7 +25302,7 @@
         "name": "CW Skimmer Spots with No Dupes",
         "order": 1,
         "width": 10,
-        "height": 6,
+        "height": 10,
         "columns": [
             {
                 "field": "freq",
@@ -24458,8 +25347,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 1860,
-        "y": 300,
+        "x": 1900,
+        "y": 240,
         "wires": [
             []
         ]
@@ -24549,8 +25438,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1680,
-        "y": 220,
+        "x": 1710,
+        "y": 160,
         "wires": []
     },
     {
@@ -24730,7 +25619,6 @@
                 "42ebd981310e69f8"
             ],
             [
-                "2fa15226ebf34fa1",
                 "2c10ebb5203d3319"
             ],
             [
@@ -24862,13 +25750,13 @@
         "id": "47388dcfb09b5146",
         "type": "ui_button",
         "z": "bd8a446b999750f9",
-        "name": "Connect RBN",
+        "name": "With Dups Connect RBN",
         "group": "b5c190b1c6ec4907",
         "order": 2,
         "width": 5,
         "height": 1,
         "passthru": false,
-        "label": "Connect Skimmer",
+        "label": "With Dups Connect Skimmer",
         "tooltip": "Connect to Cluster",
         "color": "",
         "bgcolor": "Green",
@@ -24878,7 +25766,7 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 160,
+        "x": 190,
         "y": 620,
         "wires": [
             [
@@ -24900,8 +25788,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1470,
-        "y": 740,
+        "x": 1490,
+        "y": 860,
         "wires": []
     },
     {
@@ -24912,7 +25800,7 @@
         "name": "CW Skimmer Spots with Dupes",
         "order": 1,
         "width": 10,
-        "height": 6,
+        "height": 10,
         "columns": [
             {
                 "field": "freq",
@@ -24957,8 +25845,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 1850,
-        "y": 600,
+        "x": 2010,
+        "y": 560,
         "wires": [
             []
         ]
@@ -24985,7 +25873,7 @@
         "type": "function",
         "z": "bd8a446b999750f9",
         "name": "Table Format",
-        "func": "let spot = msg.payload\n\nlet freq = spot.freq;\nlet call = spot.call;\nlet comment = spot.comment;\nlet time = spot.time;\n\n\nreturn {payload:{\n    command:\"addData\",\n    arguments:[\n        {\n            freq:freq,call:call,comment:comment,time:time\n        },\n        true\n    ],\n    returnPromise:true\n    }\n};",
+        "func": "let freq = msg.payload.freq;\nlet call = msg.payload.call;\nlet comment = msg.payload.comment;\nlet time = msg.payload.time;\n\n\nreturn {payload:{\n    command:\"addData\",\n    arguments:[\n        {\n            freq:freq,call:call,comment:comment,time:time\n        },\n        true\n    ],\n    returnPromise:true\n    }\n};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -24995,7 +25883,8 @@
         "y": 600,
         "wires": [
             [
-                "c3bc961d0c04b8a5"
+                "c3bc961d0c04b8a5",
+                "3c9f5ebc0b376e95"
             ]
         ]
     },
@@ -25014,8 +25903,9 @@
         "y": 600,
         "wires": [
             [
+                "370c72e23c2e0186",
                 "d9d2281122964125",
-                "370c72e23c2e0186"
+                "de8b711aa20ad228"
             ]
         ]
     },
@@ -25040,15 +25930,16 @@
         "type": "debug",
         "z": "bd8a446b999750f9",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 520,
+        "x": 1850,
+        "y": 460,
         "wires": []
     },
     {
@@ -25106,8 +25997,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 2080,
-        "y": 680,
+        "x": 1820,
+        "y": 1280,
         "wires": [
             [
                 "c4fe9ce29962bbc4"
@@ -25213,8 +26104,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1710,
-        "y": 680,
+        "x": 1450,
+        "y": 1280,
         "wires": [
             [
                 "9f7802f6e4d92f8c"
@@ -25238,8 +26129,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 1900,
-        "y": 680,
+        "x": 1640,
+        "y": 1280,
         "wires": [
             [
                 "e0c5814c5c02972d"
@@ -25259,102 +26150,6 @@
         "output": "str",
         "x": 1140,
         "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e212a85439f426b0",
-        "type": "template",
-        "z": "bd8a446b999750f9",
-        "name": "Insert info DB",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "insert or replace into spots(call, lat, lon, grid) values \n('{{payload.call}}',\n'{{payload.lat}}',\n'{{payload.lon}}',\n'{{payload.grid}}'\n);\n\n",
-        "output": "str",
-        "x": 3080,
-        "y": 440,
-        "wires": [
-            [
-                "7b047e4d7f8f67d6"
-            ]
-        ]
-    },
-    {
-        "id": "513b2cbeec40d804",
-        "type": "function",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "func": "if (msg.payload.QRZDatabase.Session[0].Error == null)\n{\n    let call = msg.payload.QRZDatabase.Callsign[0].call[0];\n    let lat = msg.payload.QRZDatabase.Callsign[0].lat[0];\n    let lon = msg.payload.QRZDatabase.Callsign[0].lon[0];\n    let grid = msg.payload.QRZDatabase.Callsign[0].grid[0];\n    return {payload:{call:call,lat:lat,lon:lon,grid:grid}};\n}\n\n\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2920,
-        "y": 440,
-        "wires": [
-            [
-                "e212a85439f426b0"
-            ]
-        ]
-    },
-    {
-        "id": "287fc1dde91fe15f",
-        "type": "switch",
-        "z": "bd8a446b999750f9",
-        "name": "Error Null?",
-        "property": "msg.payload.QRZDatabase.Session[0].Error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 2710,
-        "y": 720,
-        "wires": [
-            [],
-            [
-                "b5fa274f11aee772"
-            ]
-        ]
-    },
-    {
-        "id": "b5fa274f11aee772",
-        "type": "debug",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2870,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "7b047e4d7f8f67d6",
-        "type": "sqlite",
-        "z": "bd8a446b999750f9",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSOS Database",
-        "x": 3290,
-        "y": 440,
         "wires": [
             []
         ]
@@ -25381,8 +26176,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1510,
-        "y": 700,
+        "x": 1250,
+        "y": 1280,
         "wires": [
             [
                 "1b2add97ce38be55"
@@ -25395,11 +26190,13 @@
         "type": "subflow:bedd4acdc0e27dab",
         "z": "bd8a446b999750f9",
         "name": "",
-        "x": 2020,
-        "y": 820,
+        "x": 1980,
+        "y": 760,
         "wires": [
             [],
-            []
+            [
+                "067c389c641a7d44"
+            ]
         ]
     },
     {
@@ -25415,8 +26212,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2430,
-        "y": 680,
+        "x": 2170,
+        "y": 1280,
         "wires": []
     },
     {
@@ -25427,30 +26224,12 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 2290,
-        "y": 680,
+        "x": 2030,
+        "y": 1280,
         "wires": [
             [
                 "cf5c84e77bc08321"
             ]
-        ]
-    },
-    {
-        "id": "2fa15226ebf34fa1",
-        "type": "msg-speed",
-        "z": "bd8a446b999750f9",
-        "name": "",
-        "frequency": "min",
-        "interval": 1,
-        "estimation": false,
-        "ignore": false,
-        "pauseAtStartup": false,
-        "topicDependent": false,
-        "x": 1450,
-        "y": 640,
-        "wires": [
-            [],
-            []
         ]
     },
     {
@@ -25534,6 +26313,204 @@
             [
                 "9fc29b1d7f8667e6"
             ]
+        ]
+    },
+    {
+        "id": "de8b711aa20ad228",
+        "type": "switch",
+        "z": "bd8a446b999750f9",
+        "name": "Contest Callsign Check",
+        "property": "payload.call",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "callsign",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1730,
+        "y": 760,
+        "wires": [
+            [
+                "868dd09f205ab8ef",
+                "e4d94c370273fe6e"
+            ]
+        ]
+    },
+    {
+        "id": "067c389c641a7d44",
+        "type": "ui_worldmap",
+        "z": "bd8a446b999750f9",
+        "group": "a55f6d343a61c86b",
+        "order": 1,
+        "width": 20,
+        "height": 13,
+        "name": "Contest Call RBN Spots Map",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/rbnspots",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 2280,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "3c9f5ebc0b376e95",
+        "type": "ui_table",
+        "z": "bd8a446b999750f9",
+        "group": "ebbb538ba5d86639",
+        "name": "Skimmer Spots with Dupes RBN Dashboard",
+        "order": 1,
+        "width": 10,
+        "height": 13,
+        "columns": [
+            {
+                "field": "freq",
+                "title": "Freq",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "call",
+                "title": "Call",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "comment",
+                "title": "Comment",
+                "width": "175",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "time",
+                "title": "Time",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 2050,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4d94c370273fe6e",
+        "type": "function",
+        "z": "bd8a446b999750f9",
+        "name": "Table Format",
+        "func": "\nlet freq = msg.payload.freq;\nlet call = msg.payload.call;\nlet comment = msg.payload.comment;\nlet time = msg.payload.time;\n\n\nreturn {payload:{\n    command:\"addData\",\n    arguments:[\n        {\n            freq:freq,call:call,comment:comment,time:time\n        },\n        true\n    ],\n    returnPromise:true\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1970,
+        "y": 700,
+        "wires": [
+            [
+                "0ac54405c9b0dc1d"
+            ]
+        ]
+    },
+    {
+        "id": "0ac54405c9b0dc1d",
+        "type": "ui_table",
+        "z": "bd8a446b999750f9",
+        "group": "4f4191b752633a96",
+        "name": "Skimmer Spots with Contest Call",
+        "order": 1,
+        "width": 10,
+        "height": 13,
+        "columns": [
+            {
+                "field": "freq",
+                "title": "Freq",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "call",
+                "title": "Call",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "comment",
+                "title": "Comment",
+                "width": "175",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "time",
+                "title": "Time",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 2240,
+        "y": 700,
+        "wires": [
+            []
         ]
     },
     {
