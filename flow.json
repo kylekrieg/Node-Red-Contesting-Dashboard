@@ -1288,7 +1288,7 @@
     {
         "id": "3207774a885933a9",
         "type": "sqlitedb",
-        "db": "wv4p_qsos",
+        "db": "testdb",
         "mode": "RWC"
     },
     {
@@ -1684,6 +1684,12 @@
         "width": 10,
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "b24eab2f66eb7e96",
+        "type": "sqlitedb",
+        "db": "wv4p_qsos",
+        "mode": "RWC"
     },
     {
         "id": "db6c3ead34896ed7",
@@ -4188,11 +4194,11 @@
         "id": "10e07873007fcf9d",
         "type": "sqlite",
         "z": "4a77ed092d5e5141",
-        "mydb": "3207774a885933a9",
+        "mydb": "b24eab2f66eb7e96",
         "sqlquery": "msg.topic",
         "sql": "",
-        "name": "testdb",
-        "x": 650,
+        "name": "wv4p qsos",
+        "x": 670,
         "y": 260,
         "wires": [
             [
@@ -4965,8 +4971,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 1040,
+        "x": 1330,
+        "y": 1020,
         "wires": []
     },
     {
@@ -25911,7 +25917,7 @@
         "type": "debug",
         "z": "bd8a446b999750f9",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
