@@ -606,7 +606,7 @@
         "tab": "d36058f98fbac69f",
         "order": 1,
         "disp": true,
-        "width": 28,
+        "width": 30,
         "collapse": false,
         "className": ""
     },
@@ -657,7 +657,7 @@
         "tab": "d36058f98fbac69f",
         "order": 4,
         "disp": true,
-        "width": 28,
+        "width": 30,
         "collapse": false,
         "className": ""
     },
@@ -668,7 +668,7 @@
         "tab": "d36058f98fbac69f",
         "order": 6,
         "disp": true,
-        "width": 28,
+        "width": 30,
         "collapse": false,
         "className": ""
     },
@@ -679,7 +679,7 @@
         "tab": "d36058f98fbac69f",
         "order": 9,
         "disp": true,
-        "width": 28,
+        "width": 30,
         "collapse": false,
         "className": ""
     },
@@ -690,7 +690,7 @@
         "tab": "d36058f98fbac69f",
         "order": 11,
         "disp": true,
-        "width": 28,
+        "width": 30,
         "collapse": false,
         "className": ""
     },
@@ -701,7 +701,7 @@
         "tab": "d36058f98fbac69f",
         "order": 14,
         "disp": true,
-        "width": 28,
+        "width": 30,
         "collapse": false,
         "className": ""
     },
@@ -712,7 +712,7 @@
         "tab": "d36058f98fbac69f",
         "order": 16,
         "disp": true,
-        "width": 28,
+        "width": 30,
         "collapse": false,
         "className": ""
     },
@@ -723,7 +723,7 @@
         "tab": "d36058f98fbac69f",
         "order": 19,
         "disp": true,
-        "width": 28,
+        "width": 30,
         "collapse": false,
         "className": ""
     },
@@ -734,7 +734,7 @@
         "tab": "d36058f98fbac69f",
         "order": 2,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -820,7 +820,7 @@
         "tab": "d36058f98fbac69f",
         "order": 5,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -831,7 +831,7 @@
         "tab": "d36058f98fbac69f",
         "order": 7,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -842,7 +842,7 @@
         "tab": "d36058f98fbac69f",
         "order": 10,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -853,7 +853,7 @@
         "tab": "d36058f98fbac69f",
         "order": 12,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -864,7 +864,7 @@
         "tab": "d36058f98fbac69f",
         "order": 15,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -875,7 +875,7 @@
         "tab": "d36058f98fbac69f",
         "order": 17,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -886,7 +886,7 @@
         "tab": "d36058f98fbac69f",
         "order": 20,
         "disp": true,
-        "width": 6,
+        "width": 4,
         "collapse": false,
         "className": ""
     },
@@ -1484,166 +1484,6 @@
         "className": ""
     },
     {
-        "id": "b4bde4fad783b33f",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "e42cdfb590735e00",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "fc336097ae89242f",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "e42cdfb590735e00",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "0708c2c8f9d6bd2d",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "8bf40d033d555b71",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "6b40b60dd3175477",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "8bf40d033d555b71",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "f7c998be26763c3e",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "4349237f79c6ee9d",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "699a396364dea282",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "4349237f79c6ee9d",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "ff17c155f781e322",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "de79e0318aecd9cc",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "12f8f3f94ac88a8a",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "de79e0318aecd9cc",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "4039ed80c771b2a7",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "ec08fadc8d1d73bf",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "307a972454631ea2",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "ec08fadc8d1d73bf",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "99bf05d5f3776723",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "3dad506044ed2f24",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "71d364eb5981b7f1",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "3dad506044ed2f24",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "87fa7eada459a2e9",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "fbe68cb50c200a91",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "8a650756a439c27c",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "fbe68cb50c200a91",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "24b08be6ddea0e84",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "84c8e4f24085b4d7",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "1620671f76936096",
-        "type": "ui_spacer",
-        "z": "c8e1ef6f509cd75a",
-        "name": "spacer",
-        "group": "84c8e4f24085b4d7",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
         "id": "7bbebae56744a5d8",
         "type": "ui_tab",
         "name": "RBN Spots",
@@ -1688,7 +1528,13 @@
     {
         "id": "b24eab2f66eb7e96",
         "type": "sqlitedb",
-        "db": "wv4p_qsos",
+        "db": "wv4p_wpxrtty",
+        "mode": "RWC"
+    },
+    {
+        "id": "733225faece94859",
+        "type": "sqlitedb",
+        "db": "wv4p_arrldx",
         "mode": "RWC"
     },
     {
@@ -4197,8 +4043,8 @@
         "mydb": "b24eab2f66eb7e96",
         "sqlquery": "msg.topic",
         "sql": "",
-        "name": "wv4p qsos",
-        "x": 670,
+        "name": "wv4p wpxrtty",
+        "x": 650,
         "y": 260,
         "wires": [
             [
@@ -4265,7 +4111,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1610,
-        "y": 180,
+        "y": 160,
         "wires": []
     },
     {
@@ -6914,13 +6760,13 @@
         "type": "function",
         "z": "407d2b774fe67647",
         "name": "Label +  Add Multis + Exchange",
-        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\n// Determine what type of Exchange to dispaly\n\nif (contesttype == \"qsoparty\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section;\n    }\n}\n\nif (contesttype == \"naqp\")\n{\n    msg.payload.exchange = msg.original.name + \" \" + msg.original.section\n}\n\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section;\n    \n}\n\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare;\n}\n\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone;\n}\n\nif (contesttype == \"wpx\")\n{\n    msg.payload.exchange = msg.original.wpxprefix + \" \" + msg.original.rcvnr;\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.section\n}\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar x = parseFloat(multi1);\nvar y = parseFloat(multi2);\nvar z = parseFloat(multi3);\n\nmsg.payload.ismultiplier = x + y + z;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\n\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.payload.exchange\n}\n\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name + \" \" + msg.original.section[0];\n}\n\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\n\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\n\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\n\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\n\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.payload.exchange + \" \" + msg.original.section\n}\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n\nreturn msg;\n\n//37.959110, -91.227360",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1870,
+        "x": 1630,
         "y": 320,
         "wires": [
             [
@@ -9628,6 +9474,65 @@
         "x": 2300,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "593016df038ddee5",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "name": "Start",
+        "props": [
+            {
+                "p": "command",
+                "v": "start",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": ".1",
+        "topic": "",
+        "x": 2470,
+        "y": 440,
+        "wires": [
+            [
+                "1c23e47818d36917",
+                "c4ca101c43ab8cb0"
+            ]
+        ]
+    },
+    {
+        "id": "696566009ad9261d",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "name": "Start",
+        "props": [
+            {
+                "p": "command",
+                "v": "start",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": ".1",
+        "topic": "",
+        "x": 2490,
+        "y": 720,
+        "wires": [
+            [
+                "b77db70e05f8b1d9"
+            ]
+        ]
     },
     {
         "id": "4079239a4fd5c11c",
@@ -14476,42 +14381,16 @@
                 "0d32551591f4febb",
                 "4e25eef7a46062ed",
                 "74823dbc48c66f23",
-                "4e1d05c16ace0917"
+                "4e1d05c16ace0917",
+                "34008e11c64ab041",
+                "5c267064e9a5cfe5",
+                "fddd013b3adee514",
+                "568d906183a5bd04",
+                "3dfd2af79efe8194",
+                "e7b5e69e29f5048b",
+                "4469d749f5f64ed9",
+                "2697e5e8c3c7b86f"
             ]
-        ]
-    },
-    {
-        "id": "7459a93b0982f9b0",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Set Topic & Payload Total Points by OP",
-        "func": "let points = msg.payload.points;\nlet multiplier = msg.payload.multiplier;\nlet operator = msg.payload.operator;\nlet score = msg.payload.score;\nlet total = null;\n\nif (multiplier == 0)\n{\n    total = points;\n}\nelse\n{\n    total = points * multiplier;\n}\n\nmsg.topic = operator;\nmsg.payload = total;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2020,
-        "y": 2920,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0755cf494eeb23fb",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Set Topic & Payload Total Multi by OP",
-        "func": "let multiplier = msg.payload.multiplier;\nlet operator = msg.payload.operator;\nlet score = msg.payload.score;\n\nmsg.topic = operator;\nmsg.payload = multiplier;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1670,
-        "y": 2920,
-        "wires": [
-            []
         ]
     },
     {
@@ -14947,8 +14826,8 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "1st Place OP Multis",
-        "label": "<font size = 6>Multis",
+        "name": "1st Place OP Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 8>{{msg.payload[0].multiplier}}",
         "layout": "col-center",
         "className": "",
@@ -14964,12 +14843,12 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "2nd Place OP Multis",
-        "label": "<font size = 6>Multis",
+        "name": "2nd Place OP Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 8>{{msg.payload[1].multiplier}}",
         "layout": "col-center",
         "className": "",
-        "x": 940,
+        "x": 930,
         "y": 720,
         "wires": []
     },
@@ -14981,8 +14860,8 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "3rd Place OP Multis",
-        "label": "<font size = 6>Multis",
+        "name": "3rd Place OP Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 8>{{msg.payload[2].multiplier}}",
         "layout": "col-center",
         "className": "",
@@ -14998,8 +14877,8 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "4th Place OP Multis",
-        "label": "<font size = 6>Multis",
+        "name": "4th Place OP Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 8>{{msg.payload[3].multiplier}}",
         "layout": "col-center",
         "className": "",
@@ -15015,8 +14894,8 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "5th Place OP Multis",
-        "label": "<font size = 6>Multis",
+        "name": "5th Place OP Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 8>{{msg.payload[4].multiplier}}",
         "layout": "col-center",
         "className": "",
@@ -15032,8 +14911,8 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "6th Place OP Multis",
-        "label": "<font size = 6>Multis",
+        "name": "6th Place OP Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 8>{{msg.payload[5].multiplier}}",
         "layout": "col-center",
         "className": "",
@@ -15049,8 +14928,8 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "7th Place OP Multis",
-        "label": "<font size = 6>Multis",
+        "name": "7th Place OP Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 8>{{msg.payload[6].multiplier}}",
         "layout": "col-center",
         "className": "",
@@ -15066,8 +14945,8 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "8th Place OP Multis",
-        "label": "<font size = 6>Multis",
+        "name": "8th Place OP Mults",
+        "label": "<font size = 6>Mults",
         "format": "<font size = 8>{{msg.payload[7].multiplier}}",
         "layout": "col-center",
         "className": "",
@@ -15144,7 +15023,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "e42cdfb590735e00",
-        "order": 5,
+        "order": 7,
         "width": 3,
         "height": 2,
         "name": "1st Place Current 1Hr Run Rate",
@@ -15161,7 +15040,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "8bf40d033d555b71",
-        "order": 5,
+        "order": 7,
         "width": 3,
         "height": 2,
         "name": "2nd Place Current 1Hr Run Rate",
@@ -15178,7 +15057,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "4349237f79c6ee9d",
-        "order": 5,
+        "order": 7,
         "width": 3,
         "height": 2,
         "name": "3rd Place Current 1Hr Run Rate",
@@ -15195,7 +15074,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "de79e0318aecd9cc",
-        "order": 5,
+        "order": 7,
         "width": 3,
         "height": 2,
         "name": "4th Place Current 1Hr Run Rate",
@@ -15212,7 +15091,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "ec08fadc8d1d73bf",
-        "order": 5,
+        "order": 7,
         "width": 3,
         "height": 2,
         "name": "5th Place Current 1Hr Run Rate",
@@ -15229,7 +15108,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "3dad506044ed2f24",
-        "order": 5,
+        "order": 7,
         "width": 3,
         "height": 2,
         "name": "6th Place Current 1Hr Run Rate",
@@ -15246,7 +15125,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "fbe68cb50c200a91",
-        "order": 5,
+        "order": 7,
         "width": 3,
         "height": 2,
         "name": "7th Place Current 1Hr Run Rate",
@@ -15263,7 +15142,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "84c8e4f24085b4d7",
-        "order": 5,
+        "order": 7,
         "width": 3,
         "height": 2,
         "name": "8th Place Current 1Hr Run Rate",
@@ -15280,7 +15159,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "e42cdfb590735e00",
-        "order": 6,
+        "order": 8,
         "width": 3,
         "height": 2,
         "name": "1st Place Current 2Hr Run Rate",
@@ -15297,7 +15176,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "8bf40d033d555b71",
-        "order": 6,
+        "order": 8,
         "width": 3,
         "height": 2,
         "name": "2nd Place Current 2Hr Run Rate",
@@ -15314,7 +15193,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "4349237f79c6ee9d",
-        "order": 6,
+        "order": 8,
         "width": 3,
         "height": 2,
         "name": "3rd Place Current 2Hr Run Rate",
@@ -15331,7 +15210,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "de79e0318aecd9cc",
-        "order": 6,
+        "order": 8,
         "width": 3,
         "height": 2,
         "name": "4th Place Current 2Hr Run Rate",
@@ -15348,7 +15227,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "ec08fadc8d1d73bf",
-        "order": 6,
+        "order": 8,
         "width": 3,
         "height": 2,
         "name": "5th Place Current 2Hr Run Rate",
@@ -15365,7 +15244,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "3dad506044ed2f24",
-        "order": 6,
+        "order": 8,
         "width": 3,
         "height": 2,
         "name": "6th Place Current 2Hr Run Rate",
@@ -15382,7 +15261,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "fbe68cb50c200a91",
-        "order": 6,
+        "order": 8,
         "width": 3,
         "height": 2,
         "name": "7th Place Current 2Hr Run Rate",
@@ -15399,7 +15278,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "84c8e4f24085b4d7",
-        "order": 6,
+        "order": 8,
         "width": 3,
         "height": 2,
         "name": "8th Place Current 2Hr Run Rate",
@@ -15416,8 +15295,8 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "e42cdfb590735e00",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": 3,
         "height": 2,
         "name": "1st Place Overall Trending",
         "label": "<font size = 5>Overall",
@@ -15433,7 +15312,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP0_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP0_1HrTrendScore\");\nlet z = flow.get(\"OP0_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP0_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nlet \n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -15531,7 +15410,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "e42cdfb590735e00",
-        "order": 7,
+        "order": 5,
         "width": 3,
         "height": 2,
         "name": "1st Place Busted Calls",
@@ -15539,7 +15418,7 @@
         "format": "<font size = 8>{{msg.payload[0].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 820,
+        "x": 880,
         "y": 60,
         "wires": []
     },
@@ -15548,7 +15427,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "8bf40d033d555b71",
-        "order": 7,
+        "order": 5,
         "width": 3,
         "height": 2,
         "name": "2nd Place Busted Calls",
@@ -15556,7 +15435,7 @@
         "format": "<font size = 8>{{msg.payload[1].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 830,
+        "x": 890,
         "y": 100,
         "wires": []
     },
@@ -15565,7 +15444,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "4349237f79c6ee9d",
-        "order": 7,
+        "order": 5,
         "width": 3,
         "height": 2,
         "name": "3rd Place Busted Calls",
@@ -15573,7 +15452,7 @@
         "format": "<font size = 8>{{msg.payload[2].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 820,
+        "x": 880,
         "y": 140,
         "wires": []
     },
@@ -15582,7 +15461,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "de79e0318aecd9cc",
-        "order": 7,
+        "order": 5,
         "width": 3,
         "height": 2,
         "name": "4th Place Busted Calls",
@@ -15590,7 +15469,7 @@
         "format": "<font size = 8>{{msg.payload[3].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 820,
+        "x": 880,
         "y": 180,
         "wires": []
     },
@@ -15599,7 +15478,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "ec08fadc8d1d73bf",
-        "order": 7,
+        "order": 5,
         "width": 3,
         "height": 2,
         "name": "5th Place Busted Calls",
@@ -15607,7 +15486,7 @@
         "format": "<font size = 8>{{msg.payload[4].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 820,
+        "x": 880,
         "y": 220,
         "wires": []
     },
@@ -15616,7 +15495,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "3dad506044ed2f24",
-        "order": 7,
+        "order": 5,
         "width": 3,
         "height": 2,
         "name": "6th Place Busted Calls",
@@ -15624,7 +15503,7 @@
         "format": "<font size = 8>{{msg.payload[5].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 820,
+        "x": 880,
         "y": 260,
         "wires": []
     },
@@ -15633,7 +15512,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "fbe68cb50c200a91",
-        "order": 7,
+        "order": 5,
         "width": 3,
         "height": 2,
         "name": "7th Place Busted Calls",
@@ -15641,7 +15520,7 @@
         "format": "<font size = 8>{{msg.payload[6].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 820,
+        "x": 880,
         "y": 300,
         "wires": []
     },
@@ -15650,7 +15529,7 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "84c8e4f24085b4d7",
-        "order": 7,
+        "order": 5,
         "width": 3,
         "height": 2,
         "name": "8th Place Busted Calls",
@@ -15658,7 +15537,7 @@
         "format": "<font size = 8>{{msg.payload[7].busted}}",
         "layout": "col-center",
         "className": "",
-        "x": 820,
+        "x": 880,
         "y": 340,
         "wires": []
     },
@@ -15922,8 +15801,8 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "8bf40d033d555b71",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": 3,
         "height": 2,
         "name": "2nd Place Overall Trending",
         "label": "<font size = 5>Overall",
@@ -15939,8 +15818,8 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "4349237f79c6ee9d",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": 3,
         "height": 2,
         "name": "3rd Place Overall Trending",
         "label": "<font size = 5>Overall",
@@ -15956,8 +15835,8 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "de79e0318aecd9cc",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": 3,
         "height": 2,
         "name": "4th Place Overall Trending",
         "label": "<font size = 5>Overall",
@@ -15973,8 +15852,8 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "ec08fadc8d1d73bf",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": 3,
         "height": 2,
         "name": "5th Place Overall Trending",
         "label": "<font size = 5>Overall",
@@ -15990,8 +15869,8 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "3dad506044ed2f24",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": 3,
         "height": 2,
         "name": "6th Place Overall Trending",
         "label": "<font size = 5>Overall",
@@ -16007,8 +15886,8 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "fbe68cb50c200a91",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": 3,
         "height": 2,
         "name": "7th Place Overall Trending",
         "label": "<font size = 5>Overall",
@@ -16024,8 +15903,8 @@
         "type": "ui_text",
         "z": "c8e1ef6f509cd75a",
         "group": "84c8e4f24085b4d7",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": 3,
         "height": 2,
         "name": "8th Place Overall Trending",
         "label": "<font size = 5>Overall",
@@ -16810,7 +16689,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Reset Flow Variables",
-        "func": "flow.set('OP0', undefined);\nflow.set('OP0_1HRateCurrent', undefined);\nflow.set('OP0_1HRatePrevious', undefined);\nflow.set('OP0_2HRateCurrent', undefined);\nflow.set('OP0_2HRatePrevious', undefined);\nflow.set('OP0_TrendScore', undefined);\n\nflow.set('OP1', undefined);\nflow.set('OP1_1HRateCurrent', undefined);\nflow.set('OP1_1HRatePrevious', undefined);\nflow.set('OP1_2HRateCurrent', undefined);\nflow.set('OP1_2HRatePrevious', undefined);\nflow.set('OP1_TrendScore', undefined);\n\nflow.set('OP2', undefined);\nflow.set('OP2_1HRateCurrent', undefined);\nflow.set('OP2_1HRatePrevious', undefined);\nflow.set('OP2_2HRateCurrent', undefined);\nflow.set('OP2_2HRatePrevious', undefined);\nflow.set('OP2_TrendScore', undefined);\n\nflow.set('OP3', undefined);\nflow.set('OP3_1HRateCurrent', undefined);\nflow.set('OP3_1HRatePrevious', undefined);\nflow.set('OP3_2HRateCurrent', undefined);\nflow.set('OP3_2HRatePrevious', undefined);\nflow.set('OP3_TrendScore', undefined);\n\nflow.set('OP4', undefined);\nflow.set('OP4_1HRateCurrent', undefined);\nflow.set('OP4_1HRatePrevious', undefined);\nflow.set('OP4_2HRateCurrent', undefined);\nflow.set('OP4_2HRatePrevious', undefined);\nflow.set('OP4_TrendScore', undefined);\n\nflow.set('OP5', undefined);\nflow.set('OP5_1HRateCurrent', undefined);\nflow.set('OP5_1HRatePrevious', undefined);\nflow.set('OP5_2HRateCurrent', undefined);\nflow.set('OP5_2HRatePrevious', undefined);\nflow.set('OP5_TrendScore', undefined);\n\nflow.set('OP6', undefined);\nflow.set('OP6_1HRateCurrent', undefined);\nflow.set('OP6_1HRatePrevious', undefined);\nflow.set('OP6_2HRateCurrent', undefined);\nflow.set('OP6_2HRatePrevious', undefined);\nflow.set('OP6_TrendScore', undefined);\n\nflow.set('OP7', undefined);\nflow.set('OP7_1HRateCurrent', undefined);\nflow.set('OP7_1HRatePrevious', undefined);\nflow.set('OP7_2HRateCurrent', undefined);\nflow.set('OP7_2HRatePrevious', undefined);\nflow.set('OP7_TrendScore', undefined);\n\nreturn msg;",
+        "func": "flow.set('OP0', undefined);\nflow.set('OP0_1HRateCurrent', undefined);\nflow.set('OP0_1HRatePrevious', undefined);\nflow.set('OP0_1HrTrendScore', undefined);\nflow.set('OP0_2HRateCurrent', undefined);\nflow.set('OP0_2HRatePrevious', undefined);\nflow.set('OP0_2HrTrendScore', undefined);\nflow.set('OP0_TrendScore', undefined);\n\nflow.set('OP1', undefined);\nflow.set('OP1_1HRateCurrent', undefined);\nflow.set('OP1_1HRatePrevious', undefined);\nflow.set('OP1_1HrTrendScore', undefined);\nflow.set('OP1_2HRateCurrent', undefined);\nflow.set('OP1_2HRatePrevious', undefined);\nflow.set('OP1_2HrTrendScore', undefined);\nflow.set('OP1_TrendScore', undefined);\n\nflow.set('OP2', undefined);\nflow.set('OP2_1HRateCurrent', undefined);\nflow.set('OP2_1HRatePrevious', undefined);\nflow.set('OP2_1HrTrendScore', undefined);\nflow.set('OP2_2HRateCurrent', undefined);\nflow.set('OP2_2HRatePrevious', undefined);\nflow.set('OP2_2HrTrendScore', undefined);\nflow.set('OP2_TrendScore', undefined);\n\nflow.set('OP3', undefined);\nflow.set('OP3_1HRateCurrent', undefined);\nflow.set('OP3_1HRatePrevious', undefined);\nflow.set('OP3_1HrTrendScore', undefined);\nflow.set('OP3_2HRateCurrent', undefined);\nflow.set('OP3_2HRatePrevious', undefined);\nflow.set('OP3_2HrTrendScore', undefined);\nflow.set('OP3_TrendScore', undefined);\n\nflow.set('OP4', undefined);\nflow.set('OP4_1HRateCurrent', undefined);\nflow.set('OP4_1HRatePrevious', undefined);\nflow.set('OP4_1HrTrendScore', undefined);\nflow.set('OP4_2HRateCurrent', undefined);\nflow.set('OP4_2HRatePrevious', undefined);\nflow.set('OP4_2HrTrendScore', undefined);\nflow.set('OP4_TrendScore', undefined);\n\nflow.set('OP5', undefined);\nflow.set('OP5_1HRateCurrent', undefined);\nflow.set('OP5_1HRatePrevious', undefined);\nflow.set('OP5_1HrTrendScore', undefined);\nflow.set('OP5_2HRateCurrent', undefined);\nflow.set('OP5_2HRatePrevious', undefined);\nflow.set('OP5_2HrTrendScore', undefined);\nflow.set('OP5_TrendScore', undefined);\n\nflow.set('OP6', undefined);\nflow.set('OP6_1HRateCurrent', undefined);\nflow.set('OP6_1HRatePrevious', undefined);\nflow.set('OP6_1HrTrendScore', undefined);\nflow.set('OP6_2HRateCurrent', undefined);\nflow.set('OP6_2HRatePrevious', undefined);\nflow.set('OP6_2HrTrendScore', undefined);\nflow.set('OP6_TrendScore', undefined);\n\nflow.set('OP7', undefined);\nflow.set('OP7_1HRateCurrent', undefined);\nflow.set('OP7_1HRatePrevious', undefined);\nflow.set('OP7_1HrTrendScore', undefined);\nflow.set('OP7_2HRateCurrent', undefined);\nflow.set('OP7_2HRatePrevious', undefined);\nflow.set('OP7_2HrTrendScore', undefined);\nflow.set('OP7_TrendScore', undefined);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16823,147 +16702,11 @@
         ]
     },
     {
-        "id": "7fb7677f8b0d207f",
-        "type": "ui_text",
-        "z": "c8e1ef6f509cd75a",
-        "group": "4fe32a048d3e8016",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "name": "1st Place Score Trending",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1970,
-        "y": 2540,
-        "wires": []
-    },
-    {
-        "id": "a77e2c96eb0cb313",
-        "type": "ui_text",
-        "z": "c8e1ef6f509cd75a",
-        "group": "cf0fd8137d27fde9",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "name": "2nd Place Score Trending",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1970,
-        "y": 2580,
-        "wires": []
-    },
-    {
-        "id": "4552e4f23f766b83",
-        "type": "ui_text",
-        "z": "c8e1ef6f509cd75a",
-        "group": "a54565f26ef859a6",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "name": "3rd Place Score Trending",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1970,
-        "y": 2620,
-        "wires": []
-    },
-    {
-        "id": "eee32a7b24f5cbb4",
-        "type": "ui_text",
-        "z": "c8e1ef6f509cd75a",
-        "group": "53db3fa281c44012",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "name": "4th Place Score Trending",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1970,
-        "y": 2660,
-        "wires": []
-    },
-    {
-        "id": "8036304c93399549",
-        "type": "ui_text",
-        "z": "c8e1ef6f509cd75a",
-        "group": "5ea99b2ffafa1455",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "name": "5th Place Score Trending",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1970,
-        "y": 2700,
-        "wires": []
-    },
-    {
-        "id": "a54a34e899781383",
-        "type": "ui_text",
-        "z": "c8e1ef6f509cd75a",
-        "group": "2083f5d4aa25f442",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "name": "6th Place Score Trending",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1970,
-        "y": 2740,
-        "wires": []
-    },
-    {
-        "id": "9270bc05b12654fd",
-        "type": "ui_text",
-        "z": "c8e1ef6f509cd75a",
-        "group": "1f8381235f15779f",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "name": "7th Place Score Trending",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1970,
-        "y": 2780,
-        "wires": []
-    },
-    {
-        "id": "93a839f6835491f5",
-        "type": "ui_text",
-        "z": "c8e1ef6f509cd75a",
-        "group": "49e8559f5916fe38",
-        "order": 3,
-        "width": 2,
-        "height": 2,
-        "name": "8th Place Score Trending",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1970,
-        "y": 2820,
-        "wires": []
-    },
-    {
         "id": "85b47be5c163b3f0",
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRateTrendscore\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16982,7 +16725,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP1_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP1_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17001,7 +16744,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP2_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP2_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17020,7 +16763,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP3_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP3_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17039,7 +16782,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP4_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP4_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17058,7 +16801,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP5_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP5_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17077,7 +16820,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP6_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP6_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17096,7 +16839,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP7_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP7_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_1HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17108,294 +16851,6 @@
             [
                 "51f7aec3999c34fe"
             ]
-        ]
-    },
-    {
-        "id": "0a1c0887a8b6268e",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "2Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\nlet trendscore = flow.get(\"OP0_TrendScore\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[trendscore + 1])\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[trendscore + 2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_TrendScore\"],[trendscore]);\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1660,
-        "y": 2200,
-        "wires": [
-            [
-                "f09ca3fb1f789f90"
-            ]
-        ]
-    },
-    {
-        "id": "67da8dd6717a753b",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "2Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP1_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_1HRatePrevious\")\nlet trendscore = flow.get(\"OP1_TrendScore\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[trendscore + 1])\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[trendscore + 2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_TrendScore\"],[trendscore]);\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1660,
-        "y": 2240,
-        "wires": [
-            [
-                "9f49e1b3a8dbcbc9"
-            ]
-        ]
-    },
-    {
-        "id": "e9855929b8d30e1e",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "2Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP2_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_1HRatePrevious\")\nlet trendscore = flow.get(\"OP2_TrendScore\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[trendscore + 1])\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[trendscore + 2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_TrendScore\"],[trendscore]);\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1660,
-        "y": 2280,
-        "wires": [
-            [
-                "78a88421b603dfad"
-            ]
-        ]
-    },
-    {
-        "id": "74b688fa1ce910af",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "2Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP3_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_1HRatePrevious\")\nlet trendscore = flow.get(\"OP3_TrendScore\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[trendscore + 1])\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[trendscore + 2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_TrendScore\"],[trendscore]);\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1660,
-        "y": 2320,
-        "wires": [
-            [
-                "6d0ddc9efba4411e"
-            ]
-        ]
-    },
-    {
-        "id": "c3f310a3673c779e",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "2Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP4_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_1HRatePrevious\")\nlet trendscore = flow.get(\"OP4_TrendScore\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[trendscore + 1])\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[trendscore + 2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_TrendScore\"],[trendscore]);\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1660,
-        "y": 2360,
-        "wires": [
-            [
-                "9fdc4f465d7dc9b1"
-            ]
-        ]
-    },
-    {
-        "id": "1720b55e52ebf32e",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "2Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP5_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_1HRatePrevious\")\nlet trendscore = flow.get(\"OP5_TrendScore\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[trendscore + 1])\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[trendscore + 2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_TrendScore\"],[trendscore]);\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1660,
-        "y": 2400,
-        "wires": [
-            [
-                "23310392a454374a"
-            ]
-        ]
-    },
-    {
-        "id": "9181555252c367e6",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "2Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP6_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_1HRatePrevious\")\nlet trendscore = flow.get(\"OP6_TrendScore\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[trendscore + 1])\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[trendscore + 2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_TrendScore\"],[trendscore]);\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1660,
-        "y": 2440,
-        "wires": [
-            [
-                "9119d9c282c42a34"
-            ]
-        ]
-    },
-    {
-        "id": "a09e1e0b5c29889a",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "2Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP7_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_1HRatePrevious\")\nlet trendscore = flow.get(\"OP7_TrendScore\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet rcp0 = ratecurrent \nlet rcp1 = ratecurrent + 1;\nlet rcp2 = ratecurrent + 2;\nlet rcp3 = ratecurrent + 3;\nlet rcm1 = ratecurrent - 1;\nlet rcm2 = ratecurrent - 2;\nlet rcm3 = ratecurrent - 3;\n\nif ((rcp0 || rcp1 || rcp2 || rcp3 == rateprevious) || (rcm1 || rcm2 || rcm3 == rateprevious))\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[trendscore + 1])\n    return msg;\n}\n\nif (rcp3 >= rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[trendscore + 2]);\n    return msg;\n}\n\nif (rcm3 <= rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_TrendScore\"],[trendscore]);\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1660,
-        "y": 2480,
-        "wires": [
-            [
-                "187d324ac6f32059"
-            ]
-        ]
-    },
-    {
-        "id": "d84fbbaa124756da",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Score Trending Arrow Direction",
-        "func": "let number = msg.payload\n\nif (number == 2)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n}\n\nif (number == 1)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n}\n\nif (number == 0)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 2540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2cf6156d340a1c2c",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Score Trending Arrow Direction",
-        "func": "let number = msg.payload\n\nif (number == 2)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n}\n\nif (number == 1)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n}\n\nif (number == 0)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 2580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f00c98d0b01cb061",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Score Trending Arrow Direction",
-        "func": "let number = msg.payload\n\nif (number == 2)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n}\n\nif (number == 1)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n}\n\nif (number == 0)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 2620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d95ddf6eff389d68",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Score Trending Arrow Direction",
-        "func": "let number = msg.payload\n\nif (number == 2)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n}\n\nif (number == 1)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n}\n\nif (number == 0)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 2660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "dd01d19a525216f3",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Score Trending Arrow Direction",
-        "func": "let number = msg.payload\n\nif (number == 2)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n}\n\nif (number == 1)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n}\n\nif (number == 0)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 2700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e0be4a38da46e98f",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Score Trending Arrow Direction",
-        "func": "let number = msg.payload\n\nif (number == 2)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n}\n\nif (number == 1)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n}\n\nif (number == 0)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 2740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cc4480a4e3eb5b10",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Score Trending Arrow Direction",
-        "func": "let number = msg.payload\n\nif (number == 2)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n}\n\nif (number == 1)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n}\n\nif (number == 0)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 2780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7e098ce8717c0970",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Score Trending Arrow Direction",
-        "func": "let number = msg.payload\n\nif (number == 2)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n}\n\nif (number == 1)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n}\n\nif (number == 0)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 2820,
-        "wires": [
-            []
         ]
     },
     {
@@ -17793,7 +17248,7 @@
         "z": "c8e1ef6f509cd75a",
         "name": "",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "4",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -17809,13 +17264,13 @@
         "wires": [
             [
                 "946213d343357cf2",
-                "8cf92b9243bb99d9",
-                "09daa9c87fc8c51f",
-                "b9c3e71c21b61db0",
-                "e95888ecfaf26488",
-                "f4e133ea63f047f5",
-                "bf9a806b95aee605",
-                "33c5b5618b183b4f"
+                "c41fe5e78ced3900",
+                "8b7529644a06a10b",
+                "68dc1380a35da70a",
+                "7a218c90f41660bb",
+                "0f2a696a3e1e9795",
+                "6fb6403fef98802f",
+                "ab0335159c22cdf3"
             ]
         ]
     },
@@ -17841,169 +17296,6 @@
         "wires": [
             [
                 "ab15bdd28dcafc0f"
-            ]
-        ]
-    },
-    {
-        "id": "e7a2274f394e40af",
-        "type": "delay",
-        "z": "c8e1ef6f509cd75a",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "4",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 720,
-        "y": 2660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8cf92b9243bb99d9",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP1_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 1520,
-        "wires": [
-            [
-                "0173339b90c30073",
-                "8433fd3cfc7ddddc"
-            ]
-        ]
-    },
-    {
-        "id": "09daa9c87fc8c51f",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP2_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 1560,
-        "wires": [
-            [
-                "8ce83f211846106d",
-                "05eb80183770322c"
-            ]
-        ]
-    },
-    {
-        "id": "b9c3e71c21b61db0",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Overall Trending Arrow Direction",
-        "func": "\nlet x = flow.get(\"OP3_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 1600,
-        "wires": [
-            [
-                "a06aef0809e3b058",
-                "25baec64d0da4507"
-            ]
-        ]
-    },
-    {
-        "id": "e95888ecfaf26488",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP4_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 1640,
-        "wires": [
-            [
-                "fcc708c0b3c585dc",
-                "7f7d7ec4af88bb2c"
-            ]
-        ]
-    },
-    {
-        "id": "f4e133ea63f047f5",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP5_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 1680,
-        "wires": [
-            [
-                "11aabad73297429a",
-                "2618bdd7f2dcf19e"
-            ]
-        ]
-    },
-    {
-        "id": "bf9a806b95aee605",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP6_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 1720,
-        "wires": [
-            [
-                "048583383c6c2b63",
-                "7c182c86d2aa1bbb"
-            ]
-        ]
-    },
-    {
-        "id": "33c5b5618b183b4f",
-        "type": "function",
-        "z": "c8e1ef6f509cd75a",
-        "name": "Overall Trending Arrow Direction",
-        "func": "let x = flow.get(\"OP7_TrendScore\");\n\nif (x == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nlet totalscore = parseFloat(x);\n\nif (totalscore >= 5)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 4)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 3)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 1760,
-        "wires": [
-            [
-                "b92aec5ddc71fafc",
-                "5b48eca13a7f6b38"
             ]
         ]
     },
@@ -18161,7 +17453,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 850,
+        "x": 910,
         "y": 2000,
         "wires": [
             [
@@ -18173,25 +17465,6 @@
                 "5e640a0c686ea653",
                 "95638eb6e9f95f5c",
                 "262914991187e01b"
-            ]
-        ]
-    },
-    {
-        "id": "8c530f8aced55ea2",
-        "type": "template",
-        "z": "c8e1ef6f509cd75a",
-        "name": "SQL by Operator 1Hr Rate",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
-        "output": "str",
-        "x": 640,
-        "y": 2000,
-        "wires": [
-            [
-                "61d3849fc0346ed6"
             ]
         ]
     },
@@ -18216,7 +17489,9 @@
         "y": 2000,
         "wires": [
             [
-                "8c530f8aced55ea2"
+                "b2ca0d5b02a007c5",
+                "0c2d78020fc43d3c",
+                "49d35b7b223d6684"
             ]
         ]
     },
@@ -18237,11 +17512,13 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 360,
-        "y": 2220,
+        "x": 320,
+        "y": 2360,
         "wires": [
             [
-                "ad8a6a7b6330600c"
+                "60bf62f0336c1629",
+                "833228df29bb26b4",
+                "04c095a340a5d105"
             ]
         ]
     },
@@ -18253,37 +17530,18 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 850,
+        "x": 910,
         "y": 2360,
         "wires": [
             [
-                "0a1c0887a8b6268e",
-                "67da8dd6717a753b",
-                "e9855929b8d30e1e",
-                "74b688fa1ce910af",
-                "c3f310a3673c779e",
-                "1720b55e52ebf32e",
-                "9181555252c367e6",
-                "a09e1e0b5c29889a"
-            ]
-        ]
-    },
-    {
-        "id": "ad8a6a7b6330600c",
-        "type": "template",
-        "z": "c8e1ef6f509cd75a",
-        "name": "SQL by Operator 2Hr Rate",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
-        "output": "str",
-        "x": 640,
-        "y": 2360,
-        "wires": [
-            [
-                "ea8fe7c3d099027a"
+                "51d5370931f82b77",
+                "0c7100be1b8f1e6e",
+                "574e2b1b185f9621",
+                "973bea3c3c2c49fc",
+                "63b8becc7f3f04d2",
+                "18412a2c6a9c09f9",
+                "572e78028a063520",
+                "52a9a7586d46fa54"
             ]
         ]
     },
@@ -18337,7 +17595,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
         "output": "str",
         "x": 860,
         "y": 480,
@@ -18356,7 +17614,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
         "output": "str",
         "x": 860,
         "y": 520,
@@ -18375,7 +17633,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
         "output": "str",
         "x": 860,
         "y": 560,
@@ -18452,7 +17710,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
         "output": "str",
         "x": 740,
         "y": 1040,
@@ -18471,7 +17729,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
         "output": "str",
         "x": 740,
         "y": 1080,
@@ -18490,13 +17748,555 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
         "output": "str",
         "x": 740,
         "y": 1120,
         "wires": [
             [
                 "852b78df4e8c39e7"
+            ]
+        ]
+    },
+    {
+        "id": "34008e11c64ab041",
+        "type": "ui_text",
+        "z": "c8e1ef6f509cd75a",
+        "group": "e42cdfb590735e00",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "1st Place Run Qs",
+        "label": "<font size = 6>Run Qs",
+        "format": "<font size = 8>{{msg.payload[0].totalrun}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5c267064e9a5cfe5",
+        "type": "ui_text",
+        "z": "c8e1ef6f509cd75a",
+        "group": "8bf40d033d555b71",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "2nd Place Run Qs",
+        "label": "<font size = 6>Run Qs",
+        "format": "<font size = 8>{{msg.payload[1].totalrun}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fddd013b3adee514",
+        "type": "ui_text",
+        "z": "c8e1ef6f509cd75a",
+        "group": "4349237f79c6ee9d",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "3rd Place Run Qs",
+        "label": "<font size = 6>Run Qs",
+        "format": "<font size = 8>{{msg.payload[2].totalrun}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "568d906183a5bd04",
+        "type": "ui_text",
+        "z": "c8e1ef6f509cd75a",
+        "group": "de79e0318aecd9cc",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "4th Place Run Qs",
+        "label": "<font size = 6>Run Qs",
+        "format": "<font size = 8>{{msg.payload[3].totalrun}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3dfd2af79efe8194",
+        "type": "ui_text",
+        "z": "c8e1ef6f509cd75a",
+        "group": "ec08fadc8d1d73bf",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "5th Place Run Qs",
+        "label": "<font size = 6>Run Qs",
+        "format": "<font size = 8>{{msg.payload[4].totalrun}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e7b5e69e29f5048b",
+        "type": "ui_text",
+        "z": "c8e1ef6f509cd75a",
+        "group": "3dad506044ed2f24",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "6th Place Run Qs",
+        "label": "<font size = 6>Run Qs",
+        "format": "<font size = 8>{{msg.payload[5].totalrun}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4469d749f5f64ed9",
+        "type": "ui_text",
+        "z": "c8e1ef6f509cd75a",
+        "group": "fbe68cb50c200a91",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "7th Place Run Qs",
+        "label": "<font size = 6>Run Qs",
+        "format": "<font size = 8>{{msg.payload[6].totalrun}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2697e5e8c3c7b86f",
+        "type": "ui_text",
+        "z": "c8e1ef6f509cd75a",
+        "group": "84c8e4f24085b4d7",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "8th Place Run Qs",
+        "label": "<font size = 6>Run Qs",
+        "format": "<font size = 8>{{msg.payload[7].totalrun}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 570,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b2ca0d5b02a007c5",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 1Hr Rate Sorty by Mults",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+        "output": "str",
+        "x": 620,
+        "y": 1960,
+        "wires": [
+            [
+                "61d3849fc0346ed6"
+            ]
+        ]
+    },
+    {
+        "id": "0c2d78020fc43d3c",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 1Hr Rate Sorty by QSOs",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+        "output": "str",
+        "x": 620,
+        "y": 2000,
+        "wires": [
+            [
+                "61d3849fc0346ed6"
+            ]
+        ]
+    },
+    {
+        "id": "49d35b7b223d6684",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 1Hr Rate Sorty by Score",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+        "output": "str",
+        "x": 620,
+        "y": 2040,
+        "wires": [
+            [
+                "61d3849fc0346ed6"
+            ]
+        ]
+    },
+    {
+        "id": "60bf62f0336c1629",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 2Hr Rate Sorty by Mults",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+        "output": "str",
+        "x": 600,
+        "y": 2320,
+        "wires": [
+            [
+                "ea8fe7c3d099027a"
+            ]
+        ]
+    },
+    {
+        "id": "833228df29bb26b4",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 2Hr Rate Sorty by QSOs",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+        "output": "str",
+        "x": 600,
+        "y": 2360,
+        "wires": [
+            [
+                "ea8fe7c3d099027a"
+            ]
+        ]
+    },
+    {
+        "id": "04c095a340a5d105",
+        "type": "template",
+        "z": "c8e1ef6f509cd75a",
+        "name": "SQL by Operator 2Hr Rate Sorty by Score",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+        "output": "str",
+        "x": 600,
+        "y": 2400,
+        "wires": [
+            [
+                "ea8fe7c3d099027a"
+            ]
+        ]
+    },
+    {
+        "id": "0c7100be1b8f1e6e",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "2Hr Rate Trending Arrow Direction",
+        "func": "\nlet ratecurrent = flow.get(\"OP0_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_2HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2200,
+        "wires": [
+            [
+                "f09ca3fb1f789f90"
+            ]
+        ]
+    },
+    {
+        "id": "51d5370931f82b77",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "2Hr Rate Trending Arrow Direction",
+        "func": "\nlet ratecurrent = flow.get(\"OP1_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_2HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2240,
+        "wires": [
+            [
+                "9f49e1b3a8dbcbc9"
+            ]
+        ]
+    },
+    {
+        "id": "574e2b1b185f9621",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "2Hr Rate Trending Arrow Direction",
+        "func": "\nlet ratecurrent = flow.get(\"OP2_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_2HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2280,
+        "wires": [
+            [
+                "78a88421b603dfad"
+            ]
+        ]
+    },
+    {
+        "id": "973bea3c3c2c49fc",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "2Hr Rate Trending Arrow Direction",
+        "func": "\nlet ratecurrent = flow.get(\"OP3_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_2HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2320,
+        "wires": [
+            [
+                "6d0ddc9efba4411e"
+            ]
+        ]
+    },
+    {
+        "id": "63b8becc7f3f04d2",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "2Hr Rate Trending Arrow Direction",
+        "func": "\nlet ratecurrent = flow.get(\"OP4_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_2HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2360,
+        "wires": [
+            [
+                "9fdc4f465d7dc9b1"
+            ]
+        ]
+    },
+    {
+        "id": "18412a2c6a9c09f9",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "2Hr Rate Trending Arrow Direction",
+        "func": "\nlet ratecurrent = flow.get(\"OP5_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_2HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2400,
+        "wires": [
+            [
+                "23310392a454374a"
+            ]
+        ]
+    },
+    {
+        "id": "572e78028a063520",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "2Hr Rate Trending Arrow Direction",
+        "func": "\nlet ratecurrent = flow.get(\"OP6_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_2HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2440,
+        "wires": [
+            [
+                "9119d9c282c42a34"
+            ]
+        ]
+    },
+    {
+        "id": "52a9a7586d46fa54",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "2Hr Rate Trending Arrow Direction",
+        "func": "\nlet ratecurrent = flow.get(\"OP7_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_2HRatePrevious\")\n\nif (ratecurrent == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2480,
+        "wires": [
+            [
+                "187d324ac6f32059"
+            ]
+        ]
+    },
+    {
+        "id": "c41fe5e78ced3900",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Overall Trending Arrow Direction",
+        "func": "let y = flow.get(\"OP1_1HrTrendScore\");\nlet z = flow.get(\"OP1_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP1_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1520,
+        "wires": [
+            [
+                "0173339b90c30073",
+                "8433fd3cfc7ddddc"
+            ]
+        ]
+    },
+    {
+        "id": "8b7529644a06a10b",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Overall Trending Arrow Direction",
+        "func": "let y = flow.get(\"OP2_1HrTrendScore\");\nlet z = flow.get(\"OP2_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP2_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1560,
+        "wires": [
+            [
+                "8ce83f211846106d",
+                "05eb80183770322c"
+            ]
+        ]
+    },
+    {
+        "id": "68dc1380a35da70a",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Overall Trending Arrow Direction",
+        "func": "let y = flow.get(\"OP3_1HrTrendScore\");\nlet z = flow.get(\"OP3_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP3_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1600,
+        "wires": [
+            [
+                "a06aef0809e3b058",
+                "25baec64d0da4507"
+            ]
+        ]
+    },
+    {
+        "id": "7a218c90f41660bb",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Overall Trending Arrow Direction",
+        "func": "let y = flow.get(\"OP4_1HrTrendScore\");\nlet z = flow.get(\"OP4_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP4_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1640,
+        "wires": [
+            [
+                "fcc708c0b3c585dc",
+                "7f7d7ec4af88bb2c"
+            ]
+        ]
+    },
+    {
+        "id": "0f2a696a3e1e9795",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Overall Trending Arrow Direction",
+        "func": "let y = flow.get(\"OP5_1HrTrendScore\");\nlet z = flow.get(\"OP5_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP5_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1680,
+        "wires": [
+            [
+                "11aabad73297429a",
+                "2618bdd7f2dcf19e"
+            ]
+        ]
+    },
+    {
+        "id": "6fb6403fef98802f",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Overall Trending Arrow Direction",
+        "func": "let y = flow.get(\"OP6_1HrTrendScore\");\nlet z = flow.get(\"OP6_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP6_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1720,
+        "wires": [
+            [
+                "048583383c6c2b63",
+                "7c182c86d2aa1bbb"
+            ]
+        ]
+    },
+    {
+        "id": "ab0335159c22cdf3",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Overall Trending Arrow Direction",
+        "func": "let y = flow.get(\"OP7_1HrTrendScore\");\nlet z = flow.get(\"OP7_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP7_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 1760,
+        "wires": [
+            [
+                "b92aec5ddc71fafc",
+                "5b48eca13a7f6b38"
             ]
         ]
     },
@@ -24554,7 +24354,7 @@
         "name": "Contest Type Dropdown",
         "label": "",
         "tooltip": "",
-        "place": "Select Type of Contest",
+        "place": "Select Exchange Received",
         "group": "0bd61d43bd0eeaa0",
         "order": 2,
         "width": 0,
@@ -24563,43 +24363,43 @@
         "multiple": false,
         "options": [
             {
-                "label": "State QSO Party",
-                "value": "qsoparty",
+                "label": "US State",
+                "value": "stateonly",
                 "type": "str"
             },
             {
-                "label": "National QSO Party",
-                "value": "naqp",
+                "label": "County + State",
+                "value": "countystate",
                 "type": "str"
             },
             {
-                "label": "ARRL/RAC Sections & SS",
+                "label": "Name + State",
+                "value": "namestate",
+                "type": "str"
+            },
+            {
+                "label": "ARRL/RAC Sections",
                 "value": "sections",
                 "type": "str"
             },
             {
-                "label": "WPX Specific",
-                "value": "wpx",
-                "type": "str"
-            },
-            {
-                "label": "Grid Based",
+                "label": "Grid",
                 "value": "grids",
                 "type": "str"
             },
             {
-                "label": "Zone Based",
+                "label": "Zone",
                 "value": "zones",
                 "type": "str"
             },
             {
-                "label": "Serial Based",
+                "label": "Serial",
                 "value": "serial",
                 "type": "str"
             },
             {
-                "label": "Other",
-                "value": "other",
+                "label": "Power",
+                "value": "power",
                 "type": "str"
             }
         ],
@@ -24858,7 +24658,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Contest Type",
-        "func": "contesttype = global.get('contesttype')\n\nif (contesttype == null)\n{\n    global.set('contesttype','qsoparty')\n    msg.payload = \"qsoparty\"\n}\n\nmsg.payload = contesttype;\n\nreturn msg;",
+        "func": "contesttype = global.get('contesttype')\n\nif (contesttype == null)\n{\n    global.set('contesttype','stateonly')\n    msg.payload = \"statesonly\"\n}\n\nmsg.payload = contesttype;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
