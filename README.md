@@ -5,7 +5,7 @@ A basic multi screen N1MM contesting dasbhoard written in Node Red.
 
 ## About
 
-This program is written in Node Red and displays a basic dashboard for real time contesting stats.  N1MM radio, score and contact UDP packets are sent from each N1MM contesting computer to the Node Red server where that information is parsed out and displayed in real time for other contesters to follow.  This dashboard is useful in a multi radio setup with multiple operators keeping up with the contest or Field Day where other operators are wanting to follow along.
+This program is written in Node Red and displays a real time dashboard for ham radio contesting events.  N1MM radio, score and contact UDP broadcast packets are sent from each N1MM contesting computer to the Node Red server.  That information is parsed out and displayed in real time for other contesters to follow.  This dashboard is useful in a multi/1, multi/2, multi-multi radio setup.  It allows operators to keep with the contest during the event.  This program is also useful during Field Day where other operators or guests can follow along in the progress.
 
 ## Screenshots
 
@@ -15,7 +15,7 @@ Here are some basic screenshots of the different tabs within the dashboard.
 
 ## Install
 
-Follow the install_how_to located in the file section of this project.
+Follow the INSTALL.md located in the files section of this project.
 
 ## Questions
 
