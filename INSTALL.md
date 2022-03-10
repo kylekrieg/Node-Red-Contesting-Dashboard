@@ -146,7 +146,7 @@ Your Node Red local qsos database is now created and ready to go.
 Now configure the properties of the SQLite node (you installed via pallet manager) to create (or confirm) the node is pointing to the qsos database.  
 The database name is case sensitive inside the node properties.  
 
-For your contest stations, within the N1MM entry window, click on Config -> Configure Ports, Mode Control, Winkey,etc... -> Broadcast Data.  
+For your contest stations, within the N1MM entry window, click on Config then Configure Ports then Mode Control then Winkey,etc...Broadcast Data.  
 Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  
 Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  
 Place a space after the default IP:Port to start your IP address.
@@ -159,26 +159,16 @@ For example, the Radio text box should look like this after your done (with the 
 
 127.0.0.1:12060 192.168.1.30:12060
 
-IMPORTANT -> Only enable the socre checkbox on the MASTER N!MM STATION!!!!  Only 1 computer should be sending score data to Node Red.
+IMPORTANT Only enable the socre checkbox on the MASTER N!MM STATION!!!!  Only 1 computer should be sending score data to Node Red.
 
 Now click on the Configure & Resets tab and configure the dashboard per your liking.  
-
-
-
-
-
-
-
-
 
 ## Download the N1MM Dashboard JSON From GitHub
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
 ## Configure
-
-
-
-
-
-
+       
+       
+       
+       
