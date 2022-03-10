@@ -15,7 +15,7 @@ Here are some basic screenshots of the different tabs within the dashboard.
 
 ## Install
 
-Follow the INSTALL.md located in the files section of this project.
+Follow the [INSTALL.md](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/INSTALL.md) located in the files section of this project.
 
 ## Questions
 
