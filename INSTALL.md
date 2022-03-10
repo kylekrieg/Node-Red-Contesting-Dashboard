@@ -1,6 +1,6 @@
 ## Raspberry Pi OS Install
 
-Node Red can be installed on almost any Raspberry Pi, including a Pi Zero.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use plus a video on how to image your Pi.
+Node Red can be installed on almost any Raspberry Pi.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi, there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use, plus a video on how to image your Pi.  See below.
 
 [Groups IO Raspberry Pi Imager How To](https://groups.io/g/nodered-hamradio/message/5426)
 
@@ -165,7 +165,7 @@ node-red-contrib-unit-converter
 
 During the BETA phase, you'll need to delete the **Test Data** tab (the first tab) before your first deploy as those flows are only used for testing.
 
-On the **Configuration & Resets** Dashboard tab, you can configure all the parameters for the dashboard settings.  
+On the **Configuration & Resets** Dashboard tab, you can configure all the parameters for the dashboard settings.  If you rebook your Pi or re-start the Node Red server, the configuration settings will be lost.  
 
 More to come on the configuration of each setting as we work through the BETA.
 
