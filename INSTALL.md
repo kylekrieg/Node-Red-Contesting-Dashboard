@@ -179,7 +179,7 @@ A few things as we work through the BETA phase of testing.
 3) Configuration parameters get erased when re-starting the Pi or Node Red server.
 4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.
 
-# To Do
+## To Do
 
 The laundry list is huge.  These are just a few.
 
