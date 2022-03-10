@@ -165,11 +165,11 @@ node-red-contrib-unit-converter
 
 ## Configuration
 
-During the BETA phase, you'll need to delete the **Test Data** tab (the first tab) before your first deploy as those flows are only used for testing.
+A few things as we work through the BETA phase of testing.
 
-On the **Configuration & Resets** Dashboard tab, you can configure all the parameters for the dashboard settings.  If you rebook your Pi or re-start the Node Red server, the configuration settings will be lost.  
+1) Delete the **Test Data** tab (the first tab) before your first deploy as those flows are only used for testing.
+2) Verify all of the sqlite nodes point to the *qsos* database.
+3) Configure all the user settings on the **Configuration & Resets** dashboard tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost.
+4) Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  
 
 More to come on the configuration of each setting as we work through the BETA.
-
-Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  
-
