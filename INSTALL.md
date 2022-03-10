@@ -29,10 +29,10 @@ editorTheme: {
 
 ## Configuration
 
-These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command (everything after the $).
+These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command.
 
 ```
-$sudo apt-get install sqlite3
+sudo apt-get install sqlite3
 ```
 
 This will install sqlite3 on to your raspberry pi.
@@ -57,10 +57,10 @@ Non-Standard nodes to load to the pallet (before you load the .json file)
 
 After loading the sqlite node, we need to build the QSO table in the database. 
 
-At the terminal command prompt User (pi) type the following (everything after the $).
+At the terminal command prompt User (pi) type the following.
 
 ```
-$sqlite3 qsos
+sqlite3 qsos
 ```
 
 This will create a database named "qsos" and drop you into the database.
@@ -133,13 +133,13 @@ CREATE INDEX call_idx on spots(call);
 To verify, type .schema at the carrot (>) prompt to confirm your database structure.  You should see everything above.
 
 ```
-sqlite>.schema
+.schema
 ```
   
 Type .exit to exit out of the database and return to the Pi command prompt.
 
 ```
-sqlite>.exit 
+.exit 
 ```
 
 Your Node Red local qsos database is now created and ready to go.  
