@@ -134,11 +134,9 @@ Contacts to aaa.bbb.ccc.ddd:12061
 Score to aaa.bbb.ccc.ddd:12062
 ```
 
-For example, the Radio text box should look like this after your done (with the default values still there).
-
-
-
 **IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to Node Red server.
+
+![N1MM Broadcast Tab Configuration](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_broadcast_tab.jpg)
 
 ## Download the N1MM Dashboard JSON From GitHub & Load
 
