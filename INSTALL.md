@@ -172,4 +172,20 @@ A few things as we work through the BETA phase of testing.
 3) Configure all the user settings on the **Configuration & Resets** dashboard tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost.
 4) Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  
 
+## Known Issues
+
+1) The Spectator Dashboard is still a work in progress.  The vision of this dashboard is for a screen you can stream to YouTube or Twitch without violating any contest rules with giving your frequency or band information away but allows the viewer to interact and learn more about contesting and ham radio.
+2) The trending arrows on the Operator Competition dashboard need some more work.  I'm not 100% satisified with the way they work.
+3) Configuration parameters get erased when re-starting the Pi or Node Red server.
+4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.
+
+# To Do
+
+The laundry list is huge.  These are just a few.
+
+1) Setup the dashboard for Field Day.
+2) Currently the Q's per hour is Red < 30 Q/hr, Yellow 31 > or < 59, Green > 60.  Have this a user defined range in the configuration tab.
+3) The great circle lines in the Worldmap node currently have an issue with the international date line.  The developers are working on this bug.
+4) Able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
+
 More to come on the configuration of each setting as we work through the BETA.
