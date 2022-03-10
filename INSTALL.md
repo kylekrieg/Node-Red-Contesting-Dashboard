@@ -128,13 +128,15 @@ Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be s
 Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  
 Place a space after the default IP:Port to start your IP address.
 
+```
 Radio to aaa.bbb.ccc.ddd:12060
 Contacts to aaa.bbb.ccc.ddd:12061
 Score to aaa.bbb.ccc.ddd:12062
+```
 
 For example, the Radio text box should look like this after your done (with the default values still there).
 
-127.0.0.1:12060 192.168.1.30:12060
+
 
 **IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to Node Red server.
 
