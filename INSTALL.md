@@ -1,10 +1,6 @@
-Install Readme
-
 ## Raspberry Pi OS Install
 
-You can install Node Red on almost any Raspberry Pi, including a Pi Zero.  For instructions on how to build a Rasbperry Pi,
-there are tons of YouTube videos out there on how to build.  I created a primer on the Node Red for Ham Radio Groups IO page
-That you can use along with a video on after you image your Pi.
+Node Red can be installed on almost any Raspberry Pi, including a Pi Zero.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use plus a video on how to image your Pi.
 
 [Groups IO Raspberry Pi Imager How To](https://groups.io/g/nodered-hamradio/message/5426)
 
@@ -12,13 +8,13 @@ That you can use along with a video on after you image your Pi.
 
 ## Install Node Red
 
-One script to rule them all.
+One script to rule them all.  Follow the instructions on this website on how to install Node Red on your Pi.
 
 [Node Red Raspberry Pi Install Script](https://nodered.org/docs/getting-started/raspberrypi)
 
 ## Enable Projects within Node Red
 
-Edit the settings.js file within your /pi/.node-red directory.  In the editorTheme section, enable projects (set to true).  
+Edit the settings.js file within your /home/pi/.node-red directory.  In the editorTheme section, enable projects (set to true).  It is currently set to flase.  Save the file and restart Node Red.  
 
 ```
 editorTheme: {
@@ -27,47 +23,23 @@ editorTheme: {
            enabled: true,
 ```
 
-## Configuration
+## Pi SQLITE Configuration
 
-These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command.
+This flow require sqlite3 to be installed on your system.  At a terminal command prompt issue the command.  This will load sqlite3 on your Pi.
 
 ```
 sudo apt-get install sqlite3
 ```
 
-This will install sqlite3 on to your raspberry pi.
-
-Non-Standard nodes to load to the pallet (before you load the .json file)
-
-```
-"node-red-contrib-hourglass"
-"node-red-contrib-msg-speed"
-"node-red-contrib-play-audio"
-"node-red-node-geofence"
-"node-red-node-ping"
-"node-red-node-smooth"
-"node-red-node-sqlite"
-"node-red-node-ui-table"
-"node-red-contrib-web-worldmap"
-"node-red-dashboard"
-"node-red-contrib-string"
-"node-red-contrib-ui-led"
-"node-red-contrib-unit-converter"
-```
-
-After loading the sqlite node, we need to build the QSO table in the database. 
-
-At the terminal command prompt User (pi) type the following.
+At the terminal command prompt User (pi) type the following to create a database named qsos and drop you into the database server.
 
 ```
 sqlite3 qsos
 ```
 
-This will create a database named "qsos" and drop you into the database.
+Now we have to create tables within the qsos database called qsos.
 
-Now we have to create a table within the qsos database called qsos.
-
-At the sqlite> prompt, copy everything below from & including CREATE INDEX down to the semicolon and paste into the database.  When done, hit <enter>  This will create a table called qsos and a table named spots.
+At the sqlite prompt, copy everything below and paste into the database.  When done, hit *enter*.  This will create a table called qsos and a table named spots.  It will also create an index on table qsos.
 
 ```
 CREATE TABLE qsos(
@@ -130,24 +102,29 @@ CREATE TABLE spots(
 CREATE INDEX call_idx on spots(call);
 ```
   
-To verify, type .schema at the carrot (>) prompt to confirm your database structure.  You should see everything above.
+To verify, type .schema at the database carrot prompt to confirm your database structure.  You should see everything above.
 
 ```
 .schema
 ```
   
-Type .exit to exit out of the database and return to the Pi command prompt.
+Type .exit to exit out of the database and return to the Pi terminal command prompt.
 
 ```
 .exit 
 ```
 
-Your Node Red local qsos database is now created and ready to go.  
+Your Node Red local qsos database is now created and ready to go.
+
 Now configure the properties of the SQLite node (you installed via pallet manager) to create (or confirm) the node is pointing to the qsos database.  
 The database name is case sensitive inside the node properties.  
 
-For your contest stations, within the N1MM entry window, click on Config then Configure Ports then Mode Control then Winkey,etc...Broadcast Data.  
+## N1MM Configuration
+
+On your contest station PCs, within the N1MM entry window, click on Config then Configure Ports then Mode Control then Winkey,etc...Broadcast Data.  
+
 Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  
+
 Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  
 Place a space after the default IP:Port to start your IP address.
 
@@ -159,16 +136,38 @@ For example, the Radio text box should look like this after your done (with the 
 
 127.0.0.1:12060 192.168.1.30:12060
 
-IMPORTANT Only enable the socre checkbox on the MASTER N!MM STATION!!!!  Only 1 computer should be sending score data to Node Red.
+**IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to Node Red server.
 
-Now click on the Configure & Resets tab and configure the dashboard per your liking.  
-
-## Download the N1MM Dashboard JSON From GitHub
+## Download the N1MM Dashboard JSON From GitHub & Load
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
-## Configure
-       
-       
-       
-       
+## Loading Node Dependencies
+
+As of March 2022 the following node dependencies are needed.
+
+```
+node-red-contrib-hourglass
+node-red-contrib-msg-speed
+node-red-contrib-play-audio
+node-red-node-ping
+node-red-node-smooth
+node-red-node-sqlite
+node-red-node-ui-table
+node-red-contrib-web-worldmap
+node-red-dashboard
+node-red-contrib-string
+node-red-contrib-ui-led
+node-red-contrib-unit-converter
+```
+
+## Configuration
+
+During the BETA phase, you'll need to delete the **Test Data** tab (the first tab) before your first deploy as those flows are only used for testing.
+
+On the **Configuration & Resets** Dashboard tab, you can configure all the parameters for the dashboard settings.  
+
+More to come on the configuration of each setting as we work through the BETA.
+
+Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  
+
