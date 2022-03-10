@@ -12,3 +12,12 @@ This program is written in Node Red and displays a basic dashboard for real time
 Here are some basic screenshots of the different tabs within the dashboard.
 
 [N1MM Node Red Dashboard Screenshots](https://photos.app.goo.gl/J67xuLADBU3CMHYh7)
+
+## Install
+
+Follow the install_how_to located in the file section of this project.
+
+## Questions
+
+My email can be found on my qrz.com page.  Thanks.  Kyle AA0Z
+
