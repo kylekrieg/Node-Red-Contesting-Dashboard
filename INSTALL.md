@@ -142,6 +142,8 @@ For example, the Radio text box should look like this after your done (with the 
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
+I would highly suggest you clone the dashboard from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  You do not need a username or password for github to clone.  Leave those fields blank if asked.
+
 ## Loading Node Dependencies
 
 As of March 2022 the following node dependencies are needed.
