@@ -127,9 +127,11 @@ The database name is case sensitive inside the sqlite node properties.
 
 ## N1MM Configuration
 
-On your contest station PCs, within the N1MM entry window, click on Config then Configure Ports then Mode Control then Winkey,etc...Broadcast Data.  
+On your contest station PCs, within the N1MM entry window, click on **Config** then **Configure Ports, Mode Control, Winkey,etc...** then **Broadcast Data** tab.  
 
 ![N1MM Dropdown Menu](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_dropdown.jpg)
+
+![N1MM Broadcast Tab Configuration](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_broadcast_tab.jpg)
 
 Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  
 
@@ -143,8 +145,6 @@ Score to aaa.bbb.ccc.ddd:12062
 ```
 
 **IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to Node Red server.
-
-![N1MM Broadcast Tab Configuration](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_broadcast_tab.jpg)
 
 ## Download the N1MM Dashboard JSON From GitHub & Load
 
