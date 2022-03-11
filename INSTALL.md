@@ -9,13 +9,19 @@ Node Red can be installed on almost any Raspberry Pi.  Instructions for installi
 ## Install Node Red
 
 One script to rule them all.  Follow the instructions on this website on how to install Node Red on your Pi.
-Be sure to start the Node Red service per the instructions.
+Be sure to start the Node Red service per the instructions and you can get into the Node Red web interface for the first time.
 
 [Node Red Raspberry Pi Install Script](https://nodered.org/docs/getting-started/raspberrypi)
 
 ## Enable Projects within Node Red
 
-Edit the settings.js file within your /home/pi/.node-red directory.  In the editorTheme section, enable projects (set to true).  It is currently set to false.  Save the file and restart Node Red.
+First we need to install git.  Enter in the below command at a terminal.
+
+```
+sudo apt-get install git
+```
+
+Edit the settings.js file within your /home/pi/.node-red directory.  In the editorTheme section, enable projects (set to true).  It's probably currently set to false.  Save the file and restart Node Red.
 
 ```
 editorTheme: {
