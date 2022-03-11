@@ -15,6 +15,10 @@ Node Red can be installed on almost any Raspberry Pi.  Instructions for installi
 One script to rule them all.  Follow the instructions on this website on how to install Node Red on your Pi.
 Be sure to start the Node Red service per the instructions.  Make sure you can get into the Node Red web interface for the first time to verify Node Red is running correctly.
 
+```
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+```
+
 After the install script is finished, make sure you start the service and enable on boot.
 ```
 sudo systemctl start nodered.service
