@@ -43,9 +43,9 @@ At the terminal command prompt User (pi) type the following to create a database
 sqlite3 qsos
 ```
 
-Now we have to create tables within the qsos database called qsos.
+Now we have to create tables calles qsos within the qsos database.
 
-At the sqlite prompt, copy everything below and paste into the database.  When done, hit *enter*.  This will create a table called qsos and a table named spots.  It will also create an index on table qsos.
+At the sqlite prompt, copy everything below and paste into the database.  When done, hit *enter*.  This will create a table named qsos and a table named spots.  It will also create an index on the table qsos.
 
 ```
 CREATE TABLE qsos(
@@ -122,12 +122,14 @@ Type .exit to exit out of the database and return to the Pi terminal command pro
 
 Your Node Red local qsos database is now created and ready to go.
 
-Now configure the properties of the SQLite node (you installed via pallet manager) to create (or confirm) the node is pointing to the qsos database.  
-The database name is case sensitive inside the node properties.  
+Now configure the properties of the SQLite node (you installed via pallet manager) to create (or confirm) the nodes (should be many of them) are pointing to the qsos database.  
+The database name is case sensitive inside the sqlite node properties.  
 
 ## N1MM Configuration
 
 On your contest station PCs, within the N1MM entry window, click on Config then Configure Ports then Mode Control then Winkey,etc...Broadcast Data.  
+
+![N1MM Dropdown Menu](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_dropdown.jpg)
 
 Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  
 
