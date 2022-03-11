@@ -154,7 +154,7 @@ I would highly suggest you clone the dashboard from the github page and run this
 
 ## Loading Node Dependencies
 
-As of March 2022 the following node dependencies are needed.
+As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below to delete the ***test data*** tab.
 
 ```
 node-red-contrib-hourglass
@@ -177,8 +177,12 @@ A few things as we work through the BETA phase of testing.
 
 1) Delete the **Test Data** tab (the first tab) before your first deploy as those flows are only used for testing.
 2) Verify all of the sqlite nodes point to the *qsos* database.
-3) Configure all the user settings on the **Configuration & Resets** dashboard tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost.
+3) Configure all the dashboard user settings on the **Configuration & Resets** tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost so right them down.
 4) Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  
+
+## Dashboard Display Zoom
+
+All of the sections should line up nicely and look uniform except for the Configuration & Resets tab.  If they don't you might need to adjust the **Zoom** level on your browser to around 70% for the dashboard to look correct.  Your browswer should ***remember*** this setting next time you pull up the dashboard.
 
 ## Known Issues
 
