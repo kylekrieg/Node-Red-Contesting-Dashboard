@@ -25,7 +25,12 @@ First we need to install git.  Enter in the below command at a terminal.
 sudo apt-get install git
 ```
 
-Edit the settings.js file within your /home/pi/.node-red directory.  In the editorTheme section, enable projects (set to true).  It's probably currently set to false.  Save the file and restart Node Red.
+Edit the settings.js file within your /home/pi/.node-red directory.  Issue the following commands below.
+
+```
+sudo nano /home/pi/.node-red/settings.js
+```
+In the editorTheme section, enable projects (set to true).  It's probably currently set to false.  Save the file and restart Node Red.  CTRL+X to exit.  The editor will ask you if you want to save the file.  Type "Y" for yes to save the file.  Write the file to settings.js.
 
 ```
 editorTheme: {
