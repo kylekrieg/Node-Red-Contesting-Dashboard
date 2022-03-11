@@ -191,10 +191,12 @@ A few things as we work through the BETA phase of testing.
 
 The laundry list is huge.  These are just a few.
 
-1) Setup the dashboard for Field Day.
+1) Setup the dashboard for Field Day with every little effort.
 2) Currently the Q's per hour is Red < 30 Q/hr, Yellow 31 > or < 59, Green > 60.  Have this a user defined range in the configuration tab.
 3) The great circle lines in the Worldmap node currently have an issue with the international date line.  The developers are working on this bug.
-4) Able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
+4) Be able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
 5) Use hamdb.org lookup for RBN spots.
+6) Online Scoreboard integration.  Be able chase your friends or a few stations in real time directly from the dashboard.
+7) DXLog and N3FJP integration.
 
 More to come on the configuration of each setting as we work through the BETA.
