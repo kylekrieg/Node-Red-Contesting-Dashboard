@@ -14,7 +14,7 @@ One script to rule them all.  Follow the instructions on this website on how to 
 
 ## Enable Projects within Node Red
 
-Edit the settings.js file within your /home/pi/.node-red directory.  In the editorTheme section, enable projects (set to true).  It is currently set to flase.  Save the file and restart Node Red.  
+Edit the settings.js file within your /home/pi/.node-red directory.  In the editorTheme section, enable projects (set to true).  It is currently set to false.  Save the file and restart Node Red.
 
 ```
 editorTheme: {
@@ -22,6 +22,12 @@ editorTheme: {
            // To enable the Projects feature, set this value to true
            enabled: true,
 ```
+
+Restart Node Red from the command prompt
+
+~~~
+sudo systemctl restart nodered.service
+~~~
 
 ## Pi SQLITE Configuration
 
