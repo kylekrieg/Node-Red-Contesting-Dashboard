@@ -1380,7 +1380,7 @@
         "type": "ui_group",
         "name": "Home Lat & Lon",
         "tab": "08eed6c3517c624e",
-        "order": 16,
+        "order": 17,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1455,7 +1455,7 @@
         "type": "ui_group",
         "name": "Announcements",
         "tab": "08eed6c3517c624e",
-        "order": 15,
+        "order": 16,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1538,6 +1538,17 @@
         "mode": "RWC"
     },
     {
+        "id": "c89d2b489a7ea747",
+        "type": "ui_group",
+        "name": "Q's/Hr Rate Color Config",
+        "tab": "08eed6c3517c624e",
+        "order": 15,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "db6c3ead34896ed7",
         "type": "switch",
         "z": "c967abe5be484ee6",
@@ -1547,20 +1558,20 @@
         "rules": [
             {
                 "t": "lte",
-                "v": "30",
-                "vt": "str"
+                "v": "Q1hrlow",
+                "vt": "global"
             },
             {
                 "t": "btwn",
-                "v": "31",
-                "vt": "num",
-                "v2": "59",
-                "v2t": "num"
+                "v": "Q1hrmedlow",
+                "vt": "global",
+                "v2": "Q1hrmedhigh",
+                "v2t": "global"
             },
             {
                 "t": "gte",
-                "v": "60",
-                "vt": "num"
+                "v": "Q1hrhigh",
+                "vt": "global"
             }
         ],
         "checkall": "true",
@@ -1570,16 +1581,13 @@
         "y": 200,
         "wires": [
             [
-                "3ebd50dc409f07c7",
-                "08dab4cc28ed08e7"
+                "3ebd50dc409f07c7"
             ],
             [
-                "fd7ca0d193c43b4b",
-                "08dab4cc28ed08e7"
+                "fd7ca0d193c43b4b"
             ],
             [
-                "28159edd1453e0e9",
-                "08dab4cc28ed08e7"
+                "28159edd1453e0e9"
             ]
         ]
     },
@@ -1587,7 +1595,7 @@
         "id": "3ebd50dc409f07c7",
         "type": "change",
         "z": "c967abe5be484ee6",
-        "name": "<= 30 Then Color Red",
+        "name": "Red < global.Q1hrlow",
         "rules": [
             {
                 "t": "set",
@@ -1605,16 +1613,14 @@
         "x": 1000,
         "y": 160,
         "wires": [
-            [
-                "a5b4d74f9ae69fc3"
-            ]
+            []
         ]
     },
     {
         "id": "fd7ca0d193c43b4b",
         "type": "change",
         "z": "c967abe5be484ee6",
-        "name": "31 to 59 Then Color Yellow",
+        "name": "Yellow for between global.Q1hrmed",
         "rules": [
             {
                 "t": "set",
@@ -1629,19 +1635,17 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1020,
+        "x": 1040,
         "y": 200,
         "wires": [
-            [
-                "a5b4d74f9ae69fc3"
-            ]
+            []
         ]
     },
     {
         "id": "28159edd1453e0e9",
         "type": "change",
         "z": "c967abe5be484ee6",
-        "name": ">= 60 Then Color Green",
+        "name": "Green > global.Q1hrhigh",
         "rules": [
             {
                 "t": "set",
@@ -1659,46 +1663,8 @@
         "x": 1010,
         "y": 240,
         "wires": [
-            [
-                "a5b4d74f9ae69fc3"
-            ]
+            []
         ]
-    },
-    {
-        "id": "08dab4cc28ed08e7",
-        "type": "debug",
-        "z": "c967abe5be484ee6",
-        "d": true,
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 930,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "a5b4d74f9ae69fc3",
-        "type": "debug",
-        "z": "c967abe5be484ee6",
-        "d": true,
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1310,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "b01f668b580f9487",
@@ -1710,20 +1676,20 @@
         "rules": [
             {
                 "t": "lte",
-                "v": "60",
-                "vt": "str"
+                "v": "Q2hrlow",
+                "vt": "global"
             },
             {
                 "t": "btwn",
-                "v": "61",
-                "vt": "num",
-                "v2": "119",
-                "v2t": "num"
+                "v": "Q2hrmedlow",
+                "vt": "global",
+                "v2": "Q2hrmedhigh",
+                "v2t": "global"
             },
             {
                 "t": "gte",
-                "v": "120",
-                "vt": "num"
+                "v": "Q2hrhigh",
+                "vt": "global"
             }
         ],
         "checkall": "true",
@@ -1733,16 +1699,13 @@
         "y": 200,
         "wires": [
             [
-                "ec6b89c6f0f98386",
-                "4e47c7bfb866f8ab"
+                "ec6b89c6f0f98386"
             ],
             [
-                "b37e2740349a3ef5",
-                "4e47c7bfb866f8ab"
+                "b37e2740349a3ef5"
             ],
             [
-                "99cf51f0604626bf",
-                "4e47c7bfb866f8ab"
+                "99cf51f0604626bf"
             ]
         ]
     },
@@ -1750,7 +1713,7 @@
         "id": "ec6b89c6f0f98386",
         "type": "change",
         "z": "7d3bb9d663bb9f7c",
-        "name": "<= 60 Then Color Red",
+        "name": "Red < global.Q2hrlow",
         "rules": [
             {
                 "t": "set",
@@ -1768,16 +1731,14 @@
         "x": 680,
         "y": 160,
         "wires": [
-            [
-                "8798cf1f066cb522"
-            ]
+            []
         ]
     },
     {
         "id": "b37e2740349a3ef5",
         "type": "change",
         "z": "7d3bb9d663bb9f7c",
-        "name": "61 to 119 Then Color Yellow",
+        "name": "Yellow for Between global.Q2hrmed",
         "rules": [
             {
                 "t": "set",
@@ -1792,19 +1753,17 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 720,
         "y": 200,
         "wires": [
-            [
-                "8798cf1f066cb522"
-            ]
+            []
         ]
     },
     {
         "id": "99cf51f0604626bf",
         "type": "change",
         "z": "7d3bb9d663bb9f7c",
-        "name": ">= 120 Then Color Green",
+        "name": "Green > global.Q2hrhigh",
         "rules": [
             {
                 "t": "set",
@@ -1822,46 +1781,8 @@
         "x": 690,
         "y": 240,
         "wires": [
-            [
-                "8798cf1f066cb522"
-            ]
+            []
         ]
-    },
-    {
-        "id": "4e47c7bfb866f8ab",
-        "type": "debug",
-        "z": "7d3bb9d663bb9f7c",
-        "d": true,
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "8798cf1f066cb522",
-        "type": "debug",
-        "z": "7d3bb9d663bb9f7c",
-        "d": true,
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "0f73adb4da97836e",
@@ -22256,7 +22177,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 3,
+        "order": 2,
         "width": 6,
         "height": 1,
         "name": "First Two PC Names Will Appear on the N1MM Dashboard With the Map",
@@ -22274,7 +22195,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "887ee2eadc46df9a",
-        "order": 5,
+        "order": 4,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -22559,7 +22480,7 @@
         "z": "204548a488401a1b",
         "d": true,
         "group": "0ae735dd5356d1e8",
-        "order": 3,
+        "order": 2,
         "width": 6,
         "height": 2,
         "name": "",
@@ -22620,7 +22541,7 @@
         "z": "204548a488401a1b",
         "d": true,
         "group": "0ae735dd5356d1e8",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "name": "",
@@ -23933,7 +23854,7 @@
         "group": "2b43e4ca38d9b76c",
         "order": 1,
         "width": 6,
-        "height": "1",
+        "height": 1,
         "name": "Current Lat & Lon",
         "label": "Current Home Lat & Lon",
         "format": "{{msg.payload}}",
@@ -24216,7 +24137,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "bf78ccb640f6b06a",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -24447,7 +24368,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 3,
         "width": 6,
         "height": 2,
         "name": "Current Radio Names Text Box",
@@ -24532,7 +24453,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "887ee2eadc46df9a",
-        "order": 2,
+        "order": 5,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -24782,6 +24703,398 @@
                 "d99f186baf3ac355"
             ]
         ]
+    },
+    {
+        "id": "9677ae9555f53b24",
+        "type": "ui_form",
+        "z": "204548a488401a1b",
+        "name": "1Q Per Hour Color Form",
+        "label": "Q's Per 1 Hour Low & High Rates",
+        "group": "c89d2b489a7ea747",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Low Rate (Red)",
+                "value": "Q1hrlow",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "High Rate (Green)",
+                "value": "Q1hrhigh",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Q1hrlow": "",
+            "Q1hrhigh": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 1870,
+        "y": 140,
+        "wires": [
+            [
+                "b0d26d23f65e2f84"
+            ]
+        ]
+    },
+    {
+        "id": "073dbb68c96aeacf",
+        "type": "ui_form",
+        "z": "204548a488401a1b",
+        "name": "2Q Per Hour Color Form",
+        "label": "Q's Per 2 Hours Low & High Rates",
+        "group": "c89d2b489a7ea747",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Low Rate (Red)",
+                "value": "Q2hrlow",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "High Rate (Green)",
+                "value": "Q2hrhigh",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Q2hrlow": "",
+            "Q2hrhigh": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 1870,
+        "y": 340,
+        "wires": [
+            [
+                "f2bbdfe4d64051e4"
+            ]
+        ]
+    },
+    {
+        "id": "b0d26d23f65e2f84",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Global Q's Per Hour",
+        "func": "let Q1hrlow = msg.payload.Q1hrlow;\nlet Q1hrhigh = msg.payload.Q1hrhigh;\n\nlet Q1hrmedlow = Q1hrlow + 1;\nlet Q1hrmedhigh = Q1hrhigh - 1;\n\nglobal.set('Q1hrlow',Q1hrlow);\nglobal.set('Q1hrmedlow',Q1hrmedlow);\nglobal.set('Q1hrmedhigh',Q1hrmedhigh);\nglobal.set('Q1hrhigh',Q1hrhigh);\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2190,
+        "y": 140,
+        "wires": [
+            [
+                "57e8f8342132ab65"
+            ]
+        ]
+    },
+    {
+        "id": "aa49a893ac564a62",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Default Q's Per Hour If Not Set",
+        "func": "let Q1hrlow = global.get('Q1hrlow');\nlet Q1hrmedlow = global.get('Q1hrmedlow');\nlet Q1hrmedhigh = global.get('Q1hrmedhigh');\nlet Q1hrhigh = global.get('Q1hrhigh');\nlet Q2hrlow = global.get('Q2hrlow');\nlet Q2hrmedlow = global.get('Q2hrmedlow');\nlet Q2hrmedhigh = global.get('Q2hrmedhigh');\nlet Q2hrhigh = global.get('Q2hrhigh');\n\nif (Q1hrlow == null || undefined || Q1hrhigh == null || undefined)\n{\n    Q1hrlow = 30;\n    Q1hrmedlow = 31;\n    Q1hrmedhigh = 119;\n    Q1hrhigh = 120;\n}\n\nif (Q2hrlow == null || undefined || Q2hrhigh == null || undefined)\n{\n    Q2hrlow = 60;\n    Q2hrmedlow = 61;\n    Q2hrmedhigh = 239;\n    Q2hrhigh = 240;\n}\n\n\n\nglobal.set('Q1hrlow',Q1hrlow);\nglobal.set('Q1hrmedlow',Q1hrmedlow);\nglobal.set('Q1hrmedhigh',Q1hrmedhigh);\nglobal.set('Q1hrhigh',Q1hrhigh);\n\nglobal.set('Q2hrlow',Q2hrlow);\nglobal.set('Q2hrmedlow',Q2hrmedlow);\nglobal.set('Q2hrmedhigh',Q2hrmedhigh);\nglobal.set('Q2hrhigh',Q2hrhigh);\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2120,
+        "y": 420,
+        "wires": [
+            [
+                "d0d6cb3a3ee4b556"
+            ]
+        ]
+    },
+    {
+        "id": "1958e488cd45fa7f",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1850,
+        "y": 420,
+        "wires": [
+            [
+                "aa49a893ac564a62"
+            ]
+        ]
+    },
+    {
+        "id": "382b413af7329de3",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Set Q Hourly Rate for Green/Yellow/Red Stat Color",
+        "info": "",
+        "x": 1970,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "57e8f8342132ab65",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2480,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f2bbdfe4d64051e4",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Global Q's Per Hour",
+        "func": "let Q2hrlow = msg.payload.Q2hrlow;\nlet Q2hrhigh = msg.payload.Q2hrhigh;\n\nlet Q2hrmedlow = Q2hrlow + 1;\nlet Q2hrmedhigh = Q2hrhigh - 1;\n\nglobal.set('Q2hrlow',Q2hrlow);\nglobal.set('Q2hrmedlow',Q2hrmedlow);\nglobal.set('Q2hrmedhigh',Q2hrmedhigh);\nglobal.set('Q2hrhigh',Q2hrhigh);\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2190,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0d6cb3a3ee4b556",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a44147bde4d3c26b",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "c89d2b489a7ea747",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "name": "Q Low 1 Hour Text",
+        "label": "1Hr Low Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2310,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "234f58c7059453d9",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1850,
+        "y": 240,
+        "wires": [
+            [
+                "5b28c89ebe3d5de5",
+                "dc3f4a8f18178bfd",
+                "a9728ea9c9567093",
+                "43fc4c68ef5bf07a"
+            ]
+        ]
+    },
+    {
+        "id": "6ebe16a171254a3b",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "c89d2b489a7ea747",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "name": "Q High 1 Hour Text",
+        "label": "1Hr High Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2310,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "5b28c89ebe3d5de5",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get 1Hr Low Rate",
+        "func": "msg.payload = global.get('Q1hrlow')\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2090,
+        "y": 180,
+        "wires": [
+            [
+                "a44147bde4d3c26b"
+            ]
+        ]
+    },
+    {
+        "id": "dc3f4a8f18178bfd",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get 1Hr High Rate",
+        "func": "msg.payload = global.get('Q1hrhigh')\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2090,
+        "y": 220,
+        "wires": [
+            [
+                "6ebe16a171254a3b"
+            ]
+        ]
+    },
+    {
+        "id": "a9728ea9c9567093",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get 2Hr Low Rate",
+        "func": "msg.payload = global.get('Q2hrlow')\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2090,
+        "y": 260,
+        "wires": [
+            [
+                "0c490a55cd9feb52"
+            ]
+        ]
+    },
+    {
+        "id": "43fc4c68ef5bf07a",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get 2Hr High Rate",
+        "func": "msg.payload = global.get('Q2hrhigh')\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2090,
+        "y": 300,
+        "wires": [
+            [
+                "0a9cfccc31ee7434"
+            ]
+        ]
+    },
+    {
+        "id": "0c490a55cd9feb52",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "c89d2b489a7ea747",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "name": "Q Low 2 Hour Text",
+        "label": "2Hr Low Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2310,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0a9cfccc31ee7434",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "c89d2b489a7ea747",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "name": "Q High 2 Hour Text",
+        "label": "2Hr High Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2310,
+        "y": 300,
+        "wires": []
     },
     {
         "id": "1f45eb9a.6f2614",
