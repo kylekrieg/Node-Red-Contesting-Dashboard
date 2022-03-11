@@ -27,7 +27,7 @@ Make sure you can get into the Node Red web interface for the first time to veri
 
 Type the following into a web browser; http://ip_address_of_your_raspberry_pi:1880.  Complete the initial tutorial. 
 
-[Node Red Raspberry Pi Install Script](https://nodered.org/docs/getting-started/raspberrypi)
+[Official Node Red Raspberry Pi Documentation](https://nodered.org/docs/getting-started/raspberrypi)
 
 ## Enable Projects within Node Red
 
