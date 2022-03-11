@@ -1,3 +1,7 @@
+## STOP <- READ THIS SECTION FIRST
+
+Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that reading through this document will answer 99% of your questions regarding install.  I keep getting asked the same questions over and over and they are explained in this document.  Just take 10 mins and read the doc. 
+
 ## Raspberry Pi OS Install
 
 Node Red can be installed on almost any Raspberry Pi.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi, there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use, plus a video on how to image your Pi.  See below.
@@ -157,7 +161,7 @@ Score to aaa.bbb.ccc.ddd:12062
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
-I would highly suggest you clone the dashboard from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  You do not need a username or password for github to clone.  Leave those fields blank if asked.
+I would highly suggest you clone the dashboard from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note.  Use https for your clone transport, **DO NOT USE SSH** if you haven't set up github SSH keys.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
 
 ## Loading Node Dependencies
 
