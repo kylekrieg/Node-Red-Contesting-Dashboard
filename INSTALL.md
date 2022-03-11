@@ -45,6 +45,8 @@ Restart Node Red from the command prompt
 sudo systemctl restart nodered.service
 ~~~
 
+Once you restart your Node Red server with projects enabled, you will be asked to setup a default project.  Your existing flows will be put into this default project.  Choose no encryption if prompted. 
+
 ## Pi SQLITE Configuration
 
 This flow require sqlite3 to be installed on your system.  At a terminal command prompt issue the command.  This will load sqlite3 on your Pi.
@@ -157,13 +159,13 @@ Contacts to aaa.bbb.ccc.ddd:12061
 Score to aaa.bbb.ccc.ddd:12062
 ```
 
-**IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to Node Red server.
+**IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to the Node Red server.
 
 ## Download the N1MM Dashboard JSON From GitHub & Load
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
-I would highly suggest you clone the dashboard from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note.  Use https for your clone transport, **DO NOT USE SSH** if you haven't set up github SSH keys.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
+I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, **DO NOT USE SSH** if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
 
 ## Loading Node Dependencies
 
