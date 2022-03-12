@@ -179,6 +179,8 @@ Score to aaa.bbb.ccc.ddd:12062
 
 I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, **DO NOT USE SSH** if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
 
+![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.JPG)
+
 ## Loading Node Dependencies
 
 As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below to delete the ***test data*** tab.
