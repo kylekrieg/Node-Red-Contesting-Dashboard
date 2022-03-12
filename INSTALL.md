@@ -212,7 +212,7 @@ node-red-contrib-unit-converter
 
 ## Configuration
 
-The dashboard website is located at http://ip_address_of_your_raspberry_pi:1880/ui.  
+The dashboard website is located at **http://ip_address_of_your_raspberry_pi:1880/ui**.  
 
 A few things as we work through the BETA phase of testing.
 
