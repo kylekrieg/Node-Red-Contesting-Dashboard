@@ -23,7 +23,7 @@ After the install script is finished, make sure you start the service and enable
 sudo systemctl start nodered.service
 sudo systemctl enable nodered.service
 ```
-Make sure you can get into the Node Red web interface for the first time to verify Node Red is running correctly.  
+Make sure you can get into the Node Red web workspace interface for the first time to verify Node Red is running correctly.  
 
 Type the following into a web browser; http://ip_address_of_your_raspberry_pi:1880.  Complete the initial tutorial. 
 
@@ -31,7 +31,9 @@ Type the following into a web browser; http://ip_address_of_your_raspberry_pi:18
 
 ## Enable Projects within Node Red
 
-First we need to install git.  Enter in the below command at a terminal.
+First, go and watch this 12 min YouTube video on Node Red projects.  [Node Red Projects Overview](https://youtu.be/Bto2rz7bY3g).  
+
+Second, we need to install git.  On your Pi, enter in the below command at a terminal.
 
 ```
 sudo apt-get install git
@@ -42,7 +44,11 @@ Edit the settings.js file within your /home/pi/.node-red directory.  Issue the f
 ```
 sudo nano /home/pi/.node-red/settings.js
 ```
-In the editorTheme section, enable projects (set to true).  It's probably currently set to false.  Save the file and restart Node Red.  CTRL+X to exit.  The editor will ask you if you want to save the file.  Type "Y" for yes to save the file.  Write the file to settings.js.
+In the editorTheme section, enable projects (set to true).  It's probably currently set to false.  Save the settings.js file and restart Node Red.  
+
+***CTRL+X*** to exit nano.
+
+The editor will ask you if you want to save the file.  Type ***Y*** for yes to save the file.  Write the file to settings.js.
 
 ```
 editorTheme: {
@@ -51,13 +57,13 @@ editorTheme: {
            enabled: true,
 ```
 
-Restart Node Red from the command prompt
+Restart Node Red from the command prompt.
 
 ~~~
 sudo systemctl restart nodered.service
 ~~~
 
-Once you restart your Node Red server with projects enabled, you will be asked to setup a default project.  Your existing flows will be put into this default project.  Choose no encryption if prompted. 
+After restarting the Node Red server with projects enabled, go back into the web workspace interface of Node Red.  You will be asked to setup a default project.  Your existing flows will be put into this default project.  If asked to setup a Github account, just choose a username and enter your email address.  You can change these vales later if you want to actually create a Github account.  Choose no encryption if prompted.
 
 ## Pi SQLITE Configuration
 
