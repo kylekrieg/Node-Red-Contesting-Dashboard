@@ -23,7 +23,7 @@ After the install script is finished, make sure you start the service and enable
 sudo systemctl start nodered.service
 sudo systemctl enable nodered.service
 ```
-Make sure you can get into the Node Red web workspace interface for the first time to verify Node Red is running correctly.  
+Now we can ensure you can get into the Node Red web workspace interface for the first time to verify Node Red is running correctly.  
 
 Type the following into a web browser; http://ip_address_of_your_raspberry_pi:1880.  Complete the initial tutorial. 
 
