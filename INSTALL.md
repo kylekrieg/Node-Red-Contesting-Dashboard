@@ -63,7 +63,7 @@ Restart Node Red from the command prompt.
 sudo systemctl restart nodered.service
 ~~~
 
-After restarting the Node Red server with projects enabled, go back into the web workspace interface of Node Red.  You will be asked to setup a default project.  Your existing flows will be put into this default project.  If asked to setup a Github account, just choose a username and enter your email address.  You can change these vales later if you want to actually create a Github account.  Choose no encryption if prompted.
+After restarting the Node Red server with projects enabled, go back into the web workspace interface of Node Red.  You will be asked to setup a default project.  Your existing flows will be put into this default project.  If asked to setup a Github account, just choose a username and enter your email address.  You can change these values later if you want to actually create a Github account.  Choose no encryption if prompted.
 
 ## Pi SQLITE Configuration
 
