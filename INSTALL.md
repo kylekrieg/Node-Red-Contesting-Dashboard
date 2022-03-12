@@ -206,12 +206,12 @@ A few things as we work through the BETA phase of testing.
 
 1) Delete the **Test Data** tab (the first tab) before your first deploy as those flows are only used for testing.
 2) Verify all of the sqlite nodes point to the *qsos* database.
-3) Configure all the dashboard user settings on the **Configuration & Resets** tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost so right them down.
+3) Configure all the dashboard user settings on the **Configuration & Resets** tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost so write them down.
 4) Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain to you.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  Hamdb is a free lookup but only can lookup a few DXCC entities as of this writing. 
 
 ## Dashboard Display Zoom
 
-All of the sections should line up nicely and look uniform except for the Configuration & Resets tab.  If they don't you might need to adjust the **Zoom** level on your browser to around 70% for the dashboard to look correct.  Your browswer should ***remember*** this setting next time you pull up the dashboard.
+All of the sections should line up nicely and look uniform except for the Configuration & Resets tab.  If your dashboard doesn't look like the sample screenshots, you might need to adjust the **Zoom** level on your browser to around 70% for the dashboard to look correct.  Your browswer should ***remember*** this setting next time you pull up the dashboard.
 
 ## Known Issues
 
