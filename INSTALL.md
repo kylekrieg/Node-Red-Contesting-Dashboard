@@ -179,11 +179,15 @@ Score to aaa.bbb.ccc.ddd:12062
 
 **IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to the Node Red server.
 
-## Download the N1MM Dashboard JSON From GitHub & Load
+## Download the N1MM Dashboard JSON From GitHub
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
 I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, **DO NOT USE SSH** if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
+
+```
+https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
+```
 
 ![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.JPG)
 
