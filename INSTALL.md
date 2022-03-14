@@ -12,14 +12,28 @@ Node Red can be installed on almost any Raspberry Pi.  Instructions for installi
 
 ## Install Node Red
 
-One script to rule them all.  Follow the instructions on this website on how to install Node Red on your Pi.
-Be sure to start the Node Red service per the instructions.  Make sure you can get into the Node Red web interface for the first time to verify Node Red is running correctly.
+One script to rule them all.  Copy and run at the command prompt.  No sudo access needed.  Putty is a good SSH client for this.
 
-[Node Red Raspberry Pi Install Script](https://nodered.org/docs/getting-started/raspberrypi)
+```
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+```
+
+After the install script is finished, make sure you start the service and enable on boot.
+```
+sudo systemctl start nodered.service
+sudo systemctl enable nodered.service
+```
+Now we can ensure you can get into the Node Red web workspace interface for the first time to verify Node Red is running correctly.  
+
+Type the following into a web browser; http://ip_address_of_your_raspberry_pi:1880.  You can also try http://hostname_of_raspberry_ip.local:1880.  Complete the initial tutorial if it runs.  It will only run once. 
+
+[Official Node Red Raspberry Pi Documentation](https://nodered.org/docs/getting-started/raspberrypi)
 
 ## Enable Projects within Node Red
 
-First we need to install git.  Enter in the below command at a terminal.
+First, go and watch this 12 min YouTube video on Node Red projects.  [Node Red Projects Overview](https://youtu.be/Bto2rz7bY3g).  
+
+Second, we need to install git.  On your Pi, enter in the below command at a terminal.
 
 ```
 sudo apt-get install git
@@ -30,7 +44,11 @@ Edit the settings.js file within your /home/pi/.node-red directory.  Issue the f
 ```
 sudo nano /home/pi/.node-red/settings.js
 ```
-In the editorTheme section, enable projects (set to true).  It's probably currently set to false.  Save the file and restart Node Red.  CTRL+X to exit.  The editor will ask you if you want to save the file.  Type "Y" for yes to save the file.  Write the file to settings.js.
+In the editorTheme section, enable projects (set to true).  It's probably currently set to false.  Save the settings.js file and restart Node Red.  
+
+***CTRL+X*** to exit nano.
+
+The editor will ask you if you want to save the file.  Type ***Y*** for yes to save the file.  Write the file to settings.js.
 
 ```
 editorTheme: {
@@ -39,17 +57,17 @@ editorTheme: {
            enabled: true,
 ```
 
-Restart Node Red from the command prompt
+Restart Node Red from the command prompt.
 
 ~~~
 sudo systemctl restart nodered.service
 ~~~
 
-Once you restart your Node Red server with projects enabled, you will be asked to setup a default project.  Your existing flows will be put into this default project.  Choose no encryption if prompted. 
+After restarting the Node Red server with projects enabled, go back into the web workspace interface of Node Red.  You will be asked to setup a default project.  Your existing flows will be put into this default project.  If asked to setup a Github account, just choose a username and enter your email address.  You can change these values later if you want to actually create a Github account.  Choose no encryption if prompted.
 
 ## Pi SQLITE Configuration
 
-This flow require sqlite3 to be installed on your system.  At a terminal command prompt issue the command.  This will load sqlite3 on your Pi.
+This flow requires sqlite3 to be installed on your system.  At a terminal command prompt issue the command.  This will load sqlite3 on your Pi.
 
 ```
 sudo apt-get install sqlite3
@@ -61,9 +79,9 @@ At the terminal command prompt User (pi) type the following to create a database
 sqlite3 qsos
 ```
 
-Now we have to create tables calles qsos within the qsos database.
+Now we need to create some tables within the qsos database.
 
-At the sqlite prompt, copy everything below and paste into the database.  When done, hit *enter*.  This will create a table named qsos and a table named spots.  It will also create an index on the table qsos.
+At the database prompt, copy everything below and paste it into the database.  When done, hit *enter*.  This will create a table named qsos and a table named spots.  It will also create an index on the table qsos.
 
 ```
 CREATE TABLE qsos(
@@ -151,7 +169,7 @@ On your contest station PCs, within the N1MM entry window, click on **Config** t
 Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  
 
 Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  
-Place a space after the default IP:Port to start your IP address.
+Place a space after the default 127.0.0.1:12060 to start your IP address.
 
 ```
 Radio to aaa.bbb.ccc.ddd:12060
@@ -161,15 +179,21 @@ Score to aaa.bbb.ccc.ddd:12062
 
 **IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to the Node Red server.
 
-## Download the N1MM Dashboard JSON From GitHub & Load
+## Download the N1MM Dashboard JSON From GitHub
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
 I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, **DO NOT USE SSH** if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
 
+```
+https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
+```
+
+![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.JPG)
+
 ## Loading Node Dependencies
 
-As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below to delete the ***test data*** tab.
+As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below and delete the ***test data*** tab as one of your first steps.
 
 ```
 node-red-contrib-hourglass
@@ -188,16 +212,20 @@ node-red-contrib-unit-converter
 
 ## Configuration
 
+The main workspace pallet is located at **http://ip_address_of_your_rapsberry_pi:1880** or **http://hostname_of_your_raspberry_pi.local:1880**
+
+The dashboard website is located at **http://ip_address_of_your_raspberry_pi:1880/ui** or **http://hostname_of_your_raspberry_pi.local:1880/ui**
+
 A few things as we work through the BETA phase of testing.
 
 1) Delete the **Test Data** tab (the first tab) before your first deploy as those flows are only used for testing.
 2) Verify all of the sqlite nodes point to the *qsos* database.
-3) Configure all the dashboard user settings on the **Configuration & Resets** tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost so right them down.
+3) Configure all the dashboard user settings on the **Configuration & Resets** tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost so write them down.
 4) Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain to you.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  Hamdb is a free lookup but only can lookup a few DXCC entities as of this writing. 
 
 ## Dashboard Display Zoom
 
-All of the sections should line up nicely and look uniform except for the Configuration & Resets tab.  If they don't you might need to adjust the **Zoom** level on your browser to around 70% for the dashboard to look correct.  Your browswer should ***remember*** this setting next time you pull up the dashboard.
+All of the sections should line up nicely and look uniform except for the Configuration & Resets tab.  If your dashboard doesn't look like the sample screenshots, you might need to adjust the **Zoom** level on your browser to around 70% for the dashboard to look correct.  Your browswer should ***remember*** this setting next time you pull up the dashboard.
 
 ## Known Issues
 
