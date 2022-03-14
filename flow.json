@@ -15233,7 +15233,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP0_1HrTrendScore\");\nlet z = flow.get(\"OP0_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP0_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nlet \n\nreturn;",
+        "func": "let y = flow.get(\"OP0_1HrTrendScore\");\nlet z = flow.get(\"OP0_2HrTrendScore\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP0_TrendScore\",totalscore);\n\nif (totalscore == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -22190,34 +22190,6 @@
         "wires": []
     },
     {
-        "id": "790a5f0d655dc581",
-        "type": "ui_button",
-        "z": "204548a488401a1b",
-        "name": "",
-        "group": "887ee2eadc46df9a",
-        "order": 4,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "label": "Get Radio Computer Names",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "date",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 940,
-        "y": 600,
-        "wires": [
-            [
-                "3290ae89a3d0827c"
-            ]
-        ]
-    },
-    {
         "id": "848cb7d74a2a8ede",
         "type": "ui_toast",
         "z": "204548a488401a1b",
@@ -22232,29 +22204,10 @@
         "className": "",
         "topic": "",
         "name": "Show Get Radio Computer Names",
-        "x": 1660,
+        "x": 1500,
         "y": 600,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "3290ae89a3d0827c",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Set payload to printout",
-        "func": "let P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null)\n{\n    P1 = \"\"\n}\nif (P2 == null)\n{\n    P2 = \"\"\n}\nif (P3 == null)\n{\n    P3 = \"\"\n}\nif (P4 == null)\n{\n    P4 = \"\"\n}\nif (P5 == null)\n{\n    P5 = \"\"\n}\nif (P6 == null)\n{\n    P6 = \"\"\n}\n\nmsg.payload = \"Current PCs : \" + P1 + \"\\r\\n \" + P2 + \"\\r\\n \" + P3 + \"\\r\\n \" + P4 + \"\\r\\n \" + P5 + \"\\r\\n \" + P6\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1200,
-        "y": 600,
-        "wires": [
-            [
-                "848cb7d74a2a8ede"
-            ]
         ]
     },
     {
@@ -23669,7 +23622,7 @@
         "height": 0,
         "options": [
             {
-                "label": "",
+                "label": "Time To Live (sec)",
                 "value": "ttl",
                 "type": "number",
                 "required": true,
@@ -23723,14 +23676,14 @@
         "height": 1,
         "options": [
             {
-                "label": "lat",
+                "label": "Latitude",
                 "value": "lat",
                 "type": "number",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "lon",
+                "label": "Longitude",
                 "value": "lon",
                 "type": "number",
                 "required": false,
@@ -24377,7 +24330,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1450,
-        "y": 680,
+        "y": 640,
         "wires": []
     },
     {
@@ -24392,7 +24345,7 @@
         "finalize": "",
         "libs": [],
         "x": 1180,
-        "y": 680,
+        "y": 640,
         "wires": [
             [
                 "4bd54f4532cfb4e4"
@@ -24421,7 +24374,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 910,
-        "y": 680,
+        "y": 640,
         "wires": [
             [
                 "f9aa65c20f157f8e"
@@ -24440,7 +24393,7 @@
         "finalize": "",
         "libs": [],
         "x": 1210,
-        "y": 640,
+        "y": 600,
         "wires": [
             [
                 "848cb7d74a2a8ede"
@@ -24468,7 +24421,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 940,
-        "y": 640,
+        "y": 600,
         "wires": [
             [
                 "57e3618bf14fa9ab"
@@ -24709,7 +24662,7 @@
         "type": "ui_form",
         "z": "204548a488401a1b",
         "name": "1Q Per Hour Color Form",
-        "label": "Q's Per 1 Hour Low & High Rates",
+        "label": "Q's Per 1 Hour Rates",
         "group": "c89d2b489a7ea747",
         "order": 3,
         "width": 0,
@@ -24754,7 +24707,7 @@
         "type": "ui_form",
         "z": "204548a488401a1b",
         "name": "2Q Per Hour Color Form",
-        "label": "Q's Per 2 Hours Low & High Rates",
+        "label": "Q's Per 2 Hour Rates",
         "group": "c89d2b489a7ea747",
         "order": 6,
         "width": 0,
@@ -25094,6 +25047,16 @@
         "className": "",
         "x": 2310,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "09b7c5267865b449",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Speak Multiplier On/Off",
+        "info": "",
+        "x": 1500,
+        "y": 1960,
         "wires": []
     },
     {
