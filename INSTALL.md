@@ -12,7 +12,7 @@ Node Red can be installed on almost any Raspberry Pi.  Instructions for installi
 
 ## Install Node Red
 
-One script to rule them all.  Copy and run at the command prompt.  No sudo access needed.
+One script to rule them all.  Copy and run at the command prompt.  No sudo access needed.  Putty is a good SSH client for this.
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
@@ -25,7 +25,7 @@ sudo systemctl enable nodered.service
 ```
 Now we can ensure you can get into the Node Red web workspace interface for the first time to verify Node Red is running correctly.  
 
-Type the following into a web browser; http://ip_address_of_your_raspberry_pi:1880.  Complete the initial tutorial. 
+Type the following into a web browser; http://ip_address_of_your_raspberry_pi:1880.  You can also try http://hostname_of_raspberry_ip.local:1880.  Complete the initial tutorial if it runs.  It will only run once. 
 
 [Official Node Red Raspberry Pi Documentation](https://nodered.org/docs/getting-started/raspberrypi)
 
@@ -67,7 +67,7 @@ After restarting the Node Red server with projects enabled, go back into the web
 
 ## Pi SQLITE Configuration
 
-This flow require sqlite3 to be installed on your system.  At a terminal command prompt issue the command.  This will load sqlite3 on your Pi.
+This flow requires sqlite3 to be installed on your system.  At a terminal command prompt issue the command.  This will load sqlite3 on your Pi.
 
 ```
 sudo apt-get install sqlite3
@@ -79,9 +79,9 @@ At the terminal command prompt User (pi) type the following to create a database
 sqlite3 qsos
 ```
 
-Now we have to create tables calles qsos within the qsos database.
+Now we need to create some tables within the qsos database.
 
-At the sqlite prompt, copy everything below and paste into the database.  When done, hit *enter*.  This will create a table named qsos and a table named spots.  It will also create an index on the table qsos.
+At the database prompt, copy everything below and paste it into the database.  When done, hit *enter*.  This will create a table named qsos and a table named spots.  It will also create an index on the table qsos.
 
 ```
 CREATE TABLE qsos(
@@ -193,7 +193,7 @@ https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
 
 ## Loading Node Dependencies
 
-As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below to delete the ***test data*** tab.
+As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below and delete the ***test data*** tab as one of your first steps.
 
 ```
 node-red-contrib-hourglass
@@ -212,7 +212,9 @@ node-red-contrib-unit-converter
 
 ## Configuration
 
-The dashboard website is located at **http://ip_address_of_your_raspberry_pi:1880/ui**.  
+The main workspace pallet is located at **http://ip_address_of_your_rapsberry_pi:1880** or **http://hostname_of_your_raspberry_pi.local:1880**
+
+The dashboard website is located at **http://ip_address_of_your_raspberry_pi:1880/ui** or **http://hostname_of_your_raspberry_pi.local:1880/ui**
 
 A few things as we work through the BETA phase of testing.
 
