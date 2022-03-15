@@ -65,6 +65,8 @@ sudo systemctl restart nodered.service
 
 After restarting the Node Red server with projects enabled, go back into the web workspace interface of Node Red.  You will be asked to setup a default project.  Your existing flows will be put into this default project.  If asked to setup a Github account, just choose a username and enter your email address.  You can change these values later if you want to actually create a Github account.  Choose no encryption if prompted.
 
+[Node Red Project Documentation](https://nodered.org/docs/user-guide/projects/)
+
 ## Pi SQLITE Configuration
 
 This flow requires sqlite3 to be installed on your system.  At a terminal command prompt issue the command.  This will load sqlite3 on your Pi.
@@ -185,6 +187,8 @@ Score to aaa.bbb.ccc.ddd:12062
 
 I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, **DO NOT USE SSH** if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
 
+Name your project ```N1MM_Dashboard_<DATE>```.  Naming your project with the current date will help when upgrading to the latest version later. 
+
 ```
 https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
 ```
@@ -234,6 +238,10 @@ All of the sections should line up nicely and look uniform except for the Config
 3) Configuration parameters get erased when re-starting the Pi or Node Red server.
 4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.
 
+## Upgrading
+
+Via the projects tool, you can update your Dashboard to the latest dashboard version.  Create a new clone of the project and name it ```N1MM_Dashboard_<DATE>```.  All your settings (lon, lat, database, configuration user settings) will be kept as they are global variables.  
+
 ## To Do
 
 The laundry list is huge.  These are just a few.
@@ -244,5 +252,6 @@ The laundry list is huge.  These are just a few.
 4) Use hamdb.org lookup for RBN spots.
 5) Online Scoreboard integration.  Be able chase your friends or a few stations in real time directly from the dashboard.
 6) DXLog and N3FJP integration.
+7) Be able to save the configuration settings in a text file on your Pi and recall them after rebooting or restarting Node Red.
 
 More to come on the configuration of each setting as we work through the BETA.
