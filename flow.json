@@ -50,7 +50,7 @@
     {
         "id": "b59d8b7ca43e59ce",
         "type": "tab",
-        "label": "Spectator Dashboard",
+        "label": "Spectator Dashboard - Future",
         "disabled": false,
         "info": "",
         "env": []
@@ -82,7 +82,7 @@
     {
         "id": "2eedd966294071cc",
         "type": "tab",
-        "label": "Online Scoreboard",
+        "label": "Online Scoreboard - Future",
         "disabled": false,
         "info": "",
         "env": []
@@ -1547,6 +1547,25 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "c982fbb8.1deb38",
+        "type": "ui_group",
+        "name": "hidden_group",
+        "tab": "7c447e96.4b96a",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7c447e96.4b96a",
+        "type": "ui_tab",
+        "name": "Zooland Sys",
+        "icon": "home",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "db6c3ead34896ed7",
@@ -5512,7 +5531,7 @@
         "id": "95dee3dbb21d6492",
         "type": "comment",
         "z": "1c66bd27e16a3fec",
-        "name": "QSO's In from N1MM",
+        "name": "UDP XML Score Data",
         "info": "",
         "x": 280,
         "y": 320,
@@ -5865,7 +5884,7 @@
         "id": "547cf705c08f3fee",
         "type": "switch",
         "z": "1c66bd27e16a3fec",
-        "name": "",
+        "name": "contact or lookup?",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -5883,7 +5902,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 930,
+        "x": 910,
         "y": 100,
         "wires": [
             [
@@ -5947,22 +5966,6 @@
                 "677d263669792c2d"
             ]
         ]
-    },
-    {
-        "id": "878cfb498c85e9f5",
-        "type": "debug",
-        "z": "1c66bd27e16a3fec",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1590,
-        "y": 40,
-        "wires": []
     },
     {
         "id": "03b5ea45a14bec38",
@@ -7647,9 +7650,9 @@
         "id": "f56678090927861d",
         "type": "comment",
         "z": "407d2b774fe67647",
-        "name": "Get Radio Data",
+        "name": "UDP Radio Data XML",
         "info": "",
-        "x": 120,
+        "x": 140,
         "y": 1200,
         "wires": []
     },
@@ -8003,7 +8006,7 @@
         "type": "comment",
         "z": "407d2b774fe67647",
         "name": "Readme First!!!! First Time Install",
-        "info": "These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command (everything after the $).\n\n$sudo apt-get install sqlite3\n\nThis will install sqlite3 on to your raspberry pi.\n\n\nNon-Standard nodes to load to the pallet (before you load the .json file)\n\n\"node-red-contrib-hourglass\": \"1.5.0\",\n\"node-red-contrib-msg-speed\": \"2.1.0\",\n\"node-red-contrib-play-audio\": \"2.5.0\",\n\"node-red-node-geofence\": \"0.3.1\",\n\"node-red-node-ping\": \"0.3.1\",\n\"node-red-node-smooth\": \"0.1.2\",\n\"node-red-node-sqlite\": \"1.0.1\", (will take 10 to 15 mins to load on RasPi)\n\"node-red-node-ui-table\": \"0.3.11\",\n\"node-red-contrib-web-worldmap\": \"2.24.0\",\n\"node-red-dashboard\": \"3.1.3\",\n\"node-red-contrib-string\": \"1.0.0\",\n\"node-red-contrib-ui-led\": \"0.4.11\",\n\"node-red-contrib-unit-converter\": \"0.0.2\"\n\n\n\n\n*****************\nAfter loading Sqlite node, we need to build the QSO table in the database. \n\nAt the terminal command prompt User (pi) type the following (everything after the $).\n\n$sqlite3 qsos\n\nThis will create a database named \"qsos\" and drop you into the database.\n\nNow we have to create a table within the qsos database called qsos.\n\nAt the sqlite> prompt, copy everything below from & including CREATE INDEX down to the semicolon and paste into the database.  When done, hit <enter>  This will create a table called qsos and a table named spots.\n\nCREATE TABLE qsos(\n  \"app\" TEXT,\n  \"contestname\" TEXT,\n  \"contestnr\" TEXT,\n  \"timestamp\" TEXT,\n  \"mycall\" TEXT,\n  \"band\" TEXT,\n  \"rxfreq\" TEXT,\n  \"txfreq\" TEXT,\n  \"operator\" TEXT,\n  \"mode\" TEXT,\n  \"call\" TEXT,\n  \"countryprefix\" TEXT,\n  \"wpxprefix\" TEXT,\n  \"stationprefix\" TEXT,\n  \"continent\" TEXT,\n  \"snt\" TEXT,\n  \"sntnr\" TEXT,\n  \"rcv\" TEXT,\n  \"rcvnr\" TEXT,\n  \"gridsquare\" TEXT,\n  \"exchange1\" TEXT,\n  \"section\" TEXT,\n  \"comment\" TEXT,\n  \"qth\" TEXT,\n  \"name\" TEXT,\n  \"power\" TEXT,\n  \"misctext\" TEXT,\n  \"zone\" TEXT,\n  \"prec\" TEXT,\n  \"ck\" TEXT,\n  \"ismultiplier1\" TEXT,\n  \"ismultiplier2\" TEXT,\n  \"ismultiplier3\" TEXT,\n  \"points\" TEXT,\n  \"radionr\" TEXT,\n  \"run1run2\" TEXT,\n  \"RoverLocation\" TEXT,\n  \"RadioInterfaced\" TEXT,\n  \"NetworkedCompNr\" TEXT,\n  \"IsOriginal\" TEXT,\n  \"NetBiosName\" TEXT,\n  \"IsRunQSO\" TEXT,\n  \"StationName\" TEXT,\n  \"ID\" TEXT,\n  \"IsClaimedQso\" TEXT,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"isbusted\" TEXT,\n  \"distance\" TEXT\n);\nCREATE TABLE spots(\n  \"call\" TEXT type UNIQUE,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"grid\" TEXT\n);\nCREATE INDEX call_idx on spots(call);\n\n\nTo verify, type .schema at the carrot (>) prompt to confirm your database structure.  You should see everything above.\n\nsqlite>.schema\n\nType .exit to exit out of the database and return to the Pi command prompt.\n\nsqlite>.exit \n\nYour Node Red local qsos database is now created and ready to go.  Now configure the properties of the SQLite node (you installed via pallet manager) to create (or confirm) the node is pointing to the qsos database.  The database name is case sensitive inside the node properties.  \n\nFor your contest stations, within the N1MM entry window, click on Config -> Configure Ports, Mode Control, Winkey,etc... -> Broadcast Data.  Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  Place a space after the default IP:Port to start your IP address.\n\nRadio to aaa.bbb.ccc.ddd:12060\nContacts to aaa.bbb.ccc.ddd:12061\nScore to aaa.bbb.ccc.ddd:12062\n\nFor example, the Radio text box should look like this after your done (with the default values still there).\n\n127.0.0.1:12060 192.168.1.30:12060\n\nIMPORTANT -> Only enable the socre checkbox on the MASTER N!MM STATION!!!!  Only 1 computer should be sending score data to Node Red.\n\nNow click on the Configure & Resets tab and configure the dashboard per your liking and contest type.  \n\n\n",
+        "info": "Please see the following install document located here : \n\nhttps://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/INSTALL.md",
         "x": 210,
         "y": 120,
         "wires": []
@@ -9002,11 +9005,13 @@
         "links": [
             "5e1859619292b1b8"
         ],
-        "x": 3115,
+        "x": 2835,
         "y": 1560,
         "wires": [
             [
-                "5d54abefaa3f6011"
+                "5d54abefaa3f6011",
+                "a2c474948039215e",
+                "e7705b1d662e98c7"
             ]
         ]
     },
@@ -9151,40 +9156,6 @@
         "wires": []
     },
     {
-        "id": "40fb53d603bf5c87",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "name": "Total QSO Array Parse",
-        "func": "if (msg.payload.score == 0)\n{\n    return {\"payload\":{totalnoqsos:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\nlet totalnoqsos = 0;\n//return {\"payload\":{arraylength:arraylength}};\n\nif (msg.payload.dynamicresults.breakdown[0].qso[0]._ == null)\n{\n    return;\n}\n\nif (arraylength == 0)\n{\n\ttotalnoqsos = msg.payload.dynamicresults.breakdown[0].qso[0]._\n\treturn {\"payload\":{totalnoqsos:totalnoqsos}}\n}\n\ntotalnoqsos = msg.payload.dynamicresults.breakdown[0].qso[arraylength-1]._;\n\nreturn {\"payload\":{totalnoqsos:totalnoqsos}};\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1780,
-        "y": 820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4018df9775ed6dfa",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "name": "Total Points Array Parse",
-        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    return {\"payload\":{totalpoint:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoint = 0;\n//return {\"payload\":{arraylength:arraylength}};\n\n\nif (arraylength == 0)\n{\n\ttotalpoint = msg.payload.dynamicresults.breakdown[0].point[0]._\n\treturn {\"payload\":{totalpoint:totalpoint}}\n}\n\ntotalpoint = msg.payload.dynamicresults.breakdown[0].point[arraylength-1]._;\n\nreturn {\"payload\":{totalpoint:totalpoint}};\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1770,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "e4e6d6eff88f3cc6",
         "type": "debug",
         "z": "407d2b774fe67647",
@@ -9199,16 +9170,6 @@
         "statusType": "auto",
         "x": 1550,
         "y": 860,
-        "wires": []
-    },
-    {
-        "id": "a52c21c0e2444f74",
-        "type": "comment",
-        "z": "407d2b774fe67647",
-        "name": "Nodes to Load",
-        "info": "\"node-red-contrib-hourglass\": \"1.5.0\",\n\"node-red-contrib-msg-speed\": \"2.1.0\",\n\"node-red-contrib-play-audio\": \"2.5.0\",\n\"node-red-node-geofence\": \"0.3.1\",\n\"node-red-node-ping\": \"0.3.1\",\n\"node-red-node-smooth\": \"0.1.2\",\n\"node-red-node-sqlite\": \"1.0.1\",\n\"node-red-node-ui-table\": \"0.3.11\",\n\"node-red-contrib-web-worldmap\": \"2.24.0\",\n\"node-red-dashboard\": \"3.1.3\",\n\"node-red-contrib-string\": \"1.0.0\",\n\"node-red-contrib-ui-led\": \"0.4.11\",\n\"node-red-contrib-unit-converter\": \"0.0.2\"\n",
-        "x": 480,
-        "y": 60,
         "wires": []
     },
     {
@@ -9238,8 +9199,8 @@
         "syntax": "mustache",
         "template": "select max(cast(distance as int)) as distance, operator as operator from qsos;",
         "output": "str",
-        "x": 310,
-        "y": 1800,
+        "x": 870,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -9265,23 +9226,13 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 1950,
+        "x": 1840,
         "y": 140,
         "wires": [
             [
                 "2f1bf610.d7c76a"
             ]
         ]
-    },
-    {
-        "id": "e90979a1ad5147cd",
-        "type": "comment",
-        "z": "407d2b774fe67647",
-        "name": "ReadMe First!!!! Upgrading",
-        "info": "These flows require sqlite3 to be installed on your system.  At a terminal command prompt issue the command \n\nNon-Standard nodes to load to the pallet (before you load the .json file)\n\n\"node-red-contrib-hourglass\": \"1.5.0\",\n\"node-red-contrib-msg-speed\": \"2.1.0\",\n\"node-red-contrib-play-audio\": \"2.5.0\",\n\"node-red-node-geofence\": \"0.3.1\",\n\"node-red-node-ping\": \"0.3.1\",\n\"node-red-node-smooth\": \"0.1.2\",\n\"node-red-node-sqlite\": \"1.0.1\", (will take 10 to 15 mins to load on RasPi)\n\"node-red-node-ui-table\": \"0.3.11\",\n\"node-red-contrib-web-worldmap\": \"2.24.0\",\n\"node-red-dashboard\": \"3.1.3\",\n\"node-red-contrib-string\": \"1.0.0\",\n\"node-red-contrib-ui-led\": \"0.4.11\",\n\"node-red-contrib-unit-converter\": \"0.0.2\"\n\n\n\n\n*****************\nAfter loading Sqlite node, we need to build the QSO table in the database. \n\nAt the command prompt User (pi) type the following (everything after the $);\n\nThe following command will remove the qsos database\n$rm qsos\n\n$sqlite3 qsos\n\nThis will create the qsos database and drop you into the database.\n\nNow we have to create a table within the qsos database called qsos.\n\nAt the sqlite> prompt, copy everything below from & including CREATE INDEX down to the semicolon and paste into the database.  This will create a table called qsos and a table named spots.\n\nCREATE TABLE qsos(\n  \"app\" TEXT,\n  \"contestname\" TEXT,\n  \"contestnr\" TEXT,\n  \"timestamp\" TEXT,\n  \"mycall\" TEXT,\n  \"band\" TEXT,\n  \"rxfreq\" TEXT,\n  \"txfreq\" TEXT,\n  \"operator\" TEXT,\n  \"mode\" TEXT,\n  \"call\" TEXT,\n  \"countryprefix\" TEXT,\n  \"wpxprefix\" TEXT,\n  \"stationprefix\" TEXT,\n  \"continent\" TEXT,\n  \"snt\" TEXT,\n  \"sntnr\" TEXT,\n  \"rcv\" TEXT,\n  \"rcvnr\" TEXT,\n  \"gridsquare\" TEXT,\n  \"exchange1\" TEXT,\n  \"section\" TEXT,\n  \"comment\" TEXT,\n  \"qth\" TEXT,\n  \"name\" TEXT,\n  \"power\" TEXT,\n  \"misctext\" TEXT,\n  \"zone\" TEXT,\n  \"prec\" TEXT,\n  \"ck\" TEXT,\n  \"ismultiplier1\" TEXT,\n  \"ismultiplier2\" TEXT,\n  \"ismultiplier3\" TEXT,\n  \"points\" TEXT,\n  \"radionr\" TEXT,\n  \"run1run2\" TEXT,\n  \"RoverLocation\" TEXT,\n  \"RadioInterfaced\" TEXT,\n  \"NetworkedCompNr\" TEXT,\n  \"IsOriginal\" TEXT,\n  \"NetBiosName\" TEXT,\n  \"IsRunQSO\" TEXT,\n  \"StationName\" TEXT,\n  \"ID\" TEXT,\n  \"IsClaimedQso\" TEXT,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"isbusted\" TEXT,\n  \"distance\" TEXT\n);\nCREATE TABLE spots(\n  \"call\" TEXT type UNIQUE,\n  \"lat\" TEXT,\n  \"lon\" TEXT,\n  \"grid\" TEXT\n);\nCREATE INDEX call_idx on spots(call);\n\n\nType .schema at the carrot prompt to confirm your database structure.  You should see everything above.\n\nsqlite>.schema\n\nType .exit to exit out of the database and return to the Pi command prompt.\n\nsqlite>.exit \n\nYou can now exit out the terminal window.\n",
-        "x": 470,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "6eccad64a2223ff8",
@@ -9335,7 +9286,7 @@
         "id": "b560bd86dc5c87f6",
         "type": "inject",
         "z": "407d2b774fe67647",
-        "name": "Inject Home",
+        "name": "Inject Home Icon",
         "props": [
             {
                 "p": "payload"
@@ -9352,7 +9303,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1850,
+        "x": 1830,
         "y": 100,
         "wires": [
             [
@@ -9454,6 +9405,41 @@
                 "b77db70e05f8b1d9"
             ]
         ]
+    },
+    {
+        "id": "adb1747255633e97",
+        "type": "catch",
+        "z": "407d2b774fe67647",
+        "name": "Hourglass Error Catch",
+        "scope": [
+            "c4ca101c43ab8cb0",
+            "1c23e47818d36917",
+            "b77db70e05f8b1d9"
+        ],
+        "uncaught": false,
+        "x": 2780,
+        "y": 720,
+        "wires": [
+            [
+                "3d9090ccaadd42cb"
+            ]
+        ]
+    },
+    {
+        "id": "3d9090ccaadd42cb",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3020,
+        "y": 720,
+        "wires": []
     },
     {
         "id": "4079239a4fd5c11c",
@@ -20524,8 +20510,8 @@
         "links": [
             "677d263669792c2d"
         ],
-        "x": 225,
-        "y": 220,
+        "x": 275,
+        "y": 400,
         "wires": [
             []
         ]
@@ -20561,8 +20547,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 190,
-        "y": 60,
+        "x": 240,
+        "y": 240,
         "wires": [
             [
                 "55bf9cdbda7ef90e"
@@ -20590,8 +20576,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 190,
-        "y": 120,
+        "x": 240,
+        "y": 300,
         "wires": [
             [
                 "3ef90b9c62f3d682"
@@ -20611,8 +20597,8 @@
         "format": "<font size = 6>Current Contest : {{msg.payload.contest}}",
         "layout": "row-left",
         "className": "",
-        "x": 410,
-        "y": 60,
+        "x": 460,
+        "y": 240,
         "wires": []
     },
     {
@@ -20628,8 +20614,18 @@
         "format": "<font size = 6>Contest Goal : {{msg.payload.contestgoal}}",
         "layout": "row-left",
         "className": "",
-        "x": 410,
-        "y": 120,
+        "x": 460,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b80f7e753e4d50bb",
+        "type": "comment",
+        "z": "b59d8b7ca43e59ce",
+        "name": "FUTURE WORK ON DASHBOARD",
+        "info": "",
+        "x": 380,
+        "y": 160,
         "wires": []
     },
     {
@@ -21726,7 +21722,7 @@
         "syntax": "mustache",
         "template": "select distinct(contestname) from qsos;",
         "output": "str",
-        "x": 520,
+        "x": 440,
         "y": 240,
         "wires": [
             [
@@ -21742,7 +21738,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "N1MM QSOs",
-        "x": 710,
+        "x": 630,
         "y": 240,
         "wires": [
             [
@@ -21770,7 +21766,7 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 270,
+        "x": 190,
         "y": 240,
         "wires": [
             [
@@ -21793,7 +21789,7 @@
         "className": "",
         "topic": "",
         "name": "Show Query All Contests in DB",
-        "x": 1410,
+        "x": 1370,
         "y": 240,
         "wires": [
             []
@@ -21810,7 +21806,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 850,
+        "x": 790,
         "y": 240,
         "wires": [
             [
@@ -21835,7 +21831,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "Contest",
+                "to": "contest",
                 "tot": "str"
             }
         ],
@@ -21844,7 +21840,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1020,
+        "x": 980,
         "y": 240,
         "wires": [
             [
@@ -21872,7 +21868,7 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 1190,
+        "x": 1150,
         "y": 240,
         "wires": [
             [
@@ -21886,8 +21882,8 @@
         "z": "204548a488401a1b",
         "name": "Get IU Control",
         "events": "all",
-        "x": 1500,
-        "y": 980,
+        "x": 880,
+        "y": 1020,
         "wires": [
             [
                 "3e32507cf496c14e",
@@ -21907,8 +21903,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 1080,
+        "x": 310,
+        "y": 1120,
         "wires": [
             [
                 "57273c6d705dbfce",
@@ -21928,7 +21924,8 @@
             "359cdb13c6617344",
             "3fc8a4c3201d42cc",
             "917c86c665fa20e2",
-            "98f77ca383c99024"
+            "98f77ca383c99024",
+            "34128408a16270d9"
         ],
         "x": 1315,
         "y": 120,
@@ -22106,8 +22103,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 920,
-        "y": 520,
+        "x": 180,
+        "y": 420,
         "wires": [
             [
                 "1c46a9079b39b6af",
@@ -22126,8 +22123,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1280,
-        "y": 480,
+        "x": 540,
+        "y": 380,
         "wires": [
             []
         ]
@@ -22147,8 +22144,8 @@
         "className": "",
         "topic": "",
         "name": "Show Computer Name Input",
-        "x": 1460,
-        "y": 520,
+        "x": 720,
+        "y": 420,
         "wires": [
             []
         ]
@@ -22164,8 +22161,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 520,
+        "x": 480,
+        "y": 420,
         "wires": [
             [
                 "59239e08c7dcd682"
@@ -22185,8 +22182,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1080,
-        "y": 560,
+        "x": 340,
+        "y": 460,
         "wires": []
     },
     {
@@ -22204,8 +22201,8 @@
         "className": "",
         "topic": "",
         "name": "Show Get Radio Computer Names",
-        "x": 1500,
-        "y": 600,
+        "x": 760,
+        "y": 500,
         "wires": [
             []
         ]
@@ -22223,8 +22220,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 1040,
+        "x": 640,
+        "y": 1080,
         "wires": []
     },
     {
@@ -22360,8 +22357,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 740,
-        "y": 960,
+        "x": 120,
+        "y": 1000,
         "wires": [
             [
                 "80b7b6186bcf121d",
@@ -22380,8 +22377,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 960,
+        "x": 390,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -22402,8 +22399,8 @@
         "className": "",
         "topic": "",
         "name": "Show Socket ID",
-        "x": 1200,
-        "y": 1000,
+        "x": 580,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -22419,8 +22416,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 1000,
+        "x": 360,
+        "y": 1040,
         "wires": [
             [
                 "87bbe35110f717a1"
@@ -22441,35 +22438,9 @@
         "format": "{{msg.socketid}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1720,
-        "y": 980,
+        "x": 1100,
+        "y": 1020,
         "wires": []
-    },
-    {
-        "id": "320d94a84c4edd14",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 510,
-        "y": 960,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "3e32507cf496c14e",
@@ -22484,8 +22455,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1720,
-        "y": 940,
+        "x": 1100,
+        "y": 980,
         "wires": []
     },
     {
@@ -22502,8 +22473,8 @@
         "format": "{{msg.socketip}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1700,
-        "y": 1020,
+        "x": 1080,
+        "y": 1060,
         "wires": []
     },
     {
@@ -22512,8 +22483,8 @@
         "z": "204548a488401a1b",
         "name": "Rotate UI Control",
         "events": "change",
-        "x": 1250,
-        "y": 1080,
+        "x": 630,
+        "y": 1120,
         "wires": [
             [
                 "c473245f3df6387a"
@@ -22533,8 +22504,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1480,
-        "y": 1080,
+        "x": 860,
+        "y": 1120,
         "wires": []
     },
     {
@@ -22566,8 +22537,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 190,
-        "y": 1280,
+        "x": 1290,
+        "y": 540,
         "wires": [
             [
                 "c7d7c4c8556569e3"
@@ -22585,8 +22556,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 1280,
+        "x": 1560,
+        "y": 540,
         "wires": [
             [
                 "f7386a75022ea4a5"
@@ -22604,8 +22575,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 1280,
+        "x": 1810,
+        "y": 540,
         "wires": [
             [
                 "79c23ec2a554c304"
@@ -22627,8 +22598,8 @@
         "className": "",
         "topic": "",
         "name": "Show Skimmer Call Sign Input",
-        "x": 1000,
-        "y": 1280,
+        "x": 2100,
+        "y": 540,
         "wires": [
             []
         ]
@@ -22647,8 +22618,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 1170,
-        "y": 1480,
+        "x": 570,
+        "y": 1340,
         "wires": [
             [
                 "510b5f81ee688927"
@@ -22663,8 +22634,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 1330,
-        "y": 1480,
+        "x": 730,
+        "y": 1340,
         "wires": [
             [
                 "299c138b42867c0f"
@@ -22697,8 +22668,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
-        "y": 1480,
+        "x": 880,
+        "y": 1340,
         "wires": [
             [
                 "2474b2eb527716e4"
@@ -22716,8 +22687,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
-        "y": 1580,
+        "x": 1040,
+        "y": 1420,
         "wires": [
             [
                 "8b73f980f505c909"
@@ -22739,8 +22710,8 @@
         "className": "",
         "topic": "",
         "name": "Expired QRZ XML Key",
-        "x": 2480,
-        "y": 1640,
+        "x": 1520,
+        "y": 1480,
         "wires": [
             []
         ]
@@ -22782,8 +22753,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 780,
-        "y": 1480,
+        "x": 180,
+        "y": 1340,
         "wires": [
             [
                 "6dc67fc045c6beee"
@@ -22805,8 +22776,8 @@
         "className": "",
         "topic": "",
         "name": "Clear XML Login Data Notification",
-        "x": 1320,
-        "y": 1540,
+        "x": 720,
+        "y": 1400,
         "wires": [
             []
         ]
@@ -22831,8 +22802,8 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 800,
-        "y": 1540,
+        "x": 200,
+        "y": 1400,
         "wires": [
             [
                 "6c9cc5a9f7948aca"
@@ -22850,8 +22821,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 1540,
+        "x": 450,
+        "y": 1400,
         "wires": [
             [
                 "2fdc2f7dd58ef714"
@@ -22876,8 +22847,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1680,
-        "y": 1480,
+        "x": 1080,
+        "y": 1340,
         "wires": [
             [
                 "5a6fdd06cfcc6c2e"
@@ -22906,8 +22877,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
-        "y": 1460,
+        "x": 1290,
+        "y": 1320,
         "wires": [
             [
                 "c435ac428aac9130"
@@ -22929,8 +22900,8 @@
         "className": "",
         "topic": "",
         "name": "Check QRZ Username & Password",
-        "x": 2160,
-        "y": 1460,
+        "x": 1560,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -22954,8 +22925,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
-        "y": 1500,
+        "x": 1290,
+        "y": 1360,
         "wires": [
             [
                 "afe7bcce2a351666"
@@ -22973,8 +22944,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 1480,
+        "x": 390,
+        "y": 1340,
         "wires": [
             [
                 "48aadad3012ae037"
@@ -22996,8 +22967,8 @@
         "className": "",
         "topic": "",
         "name": "Correct QRZ Username & Password",
-        "x": 2150,
-        "y": 1500,
+        "x": 1550,
+        "y": 1360,
         "wires": [
             []
         ]
@@ -23018,8 +22989,8 @@
         "z": "204548a488401a1b",
         "name": "Computer Name Input",
         "info": "Computer Name Input - These are the computer names running N1MM for each radio.  Input the computer names EXACTLY how they defined on the computer name.  Be aware of upper and lower case names.  You can find the computer name by typing 'computername' in the search bar beside the start menu.  \n\nGet Radio Computer Names - This will dispaly the computer names in the database.  \n\nNote : the first two computer names entered into the input fields will be displayed on the N1MM Dashboard main screen (contest overview & map).\n\n",
-        "x": 920,
-        "y": 460,
+        "x": 180,
+        "y": 360,
         "wires": []
     },
     {
@@ -23062,8 +23033,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 840,
-        "y": 1740,
+        "x": 2140,
+        "y": 960,
         "wires": [
             [
                 "086b1f9232b45a14"
@@ -23089,8 +23060,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
-        "y": 1740,
+        "x": 2360,
+        "y": 960,
         "wires": [
             []
         ]
@@ -23115,8 +23086,8 @@
         "onceDelay": "1",
         "topic": "",
         "payloadType": "date",
-        "x": 190,
-        "y": 1780,
+        "x": 1490,
+        "y": 1000,
         "wires": [
             [
                 "de46f99297621ba3"
@@ -23148,8 +23119,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 390,
-        "y": 1780,
+        "x": 1690,
+        "y": 1000,
         "wires": [
             [
                 "847b2b855cfadc91"
@@ -23181,8 +23152,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
-        "y": 1740,
+        "x": 1900,
+        "y": 960,
         "wires": [
             [
                 "e35dbee7a81b43bc"
@@ -23208,8 +23179,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
-        "y": 1800,
+        "x": 1900,
+        "y": 1020,
         "wires": [
             [
                 "e7f72836de4c6294"
@@ -23231,8 +23202,8 @@
         "className": "",
         "topic": "",
         "name": "DB Not Selected Dialog",
-        "x": 850,
-        "y": 1800,
+        "x": 2150,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -23241,10 +23212,10 @@
         "id": "5ae4eb94028eb60d",
         "type": "comment",
         "z": "204548a488401a1b",
-        "name": "Rotate 2nd Tab/Window",
+        "name": "Rotate 2nd Tab/Window - NOT IN USE",
         "info": "",
-        "x": 1050,
-        "y": 900,
+        "x": 230,
+        "y": 920,
         "wires": []
     },
     {
@@ -23253,8 +23224,8 @@
         "z": "204548a488401a1b",
         "name": "Cluster Login",
         "info": "",
-        "x": 260,
-        "y": 1220,
+        "x": 1360,
+        "y": 480,
         "wires": []
     },
     {
@@ -23263,8 +23234,8 @@
         "z": "204548a488401a1b",
         "name": "QRZ Database Lookup Credentials",
         "info": "",
-        "x": 1120,
-        "y": 1420,
+        "x": 220,
+        "y": 1260,
         "wires": []
     },
     {
@@ -23273,8 +23244,8 @@
         "z": "204548a488401a1b",
         "name": "Database Lookup Engine Select",
         "info": "",
-        "x": 250,
-        "y": 1720,
+        "x": 1550,
+        "y": 940,
         "wires": []
     },
     {
@@ -23297,8 +23268,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 1860,
+        "x": 1500,
+        "y": 1080,
         "wires": [
             [
                 "ab2842e50cc2870b"
@@ -23324,8 +23295,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 1860,
+        "x": 1690,
+        "y": 1080,
         "wires": [
             [
                 "d3c43b4500a45618"
@@ -23345,8 +23316,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 830,
-        "y": 1860,
+        "x": 2130,
+        "y": 1080,
         "wires": []
     },
     {
@@ -23360,8 +23331,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 1860,
+        "x": 1900,
+        "y": 1080,
         "wires": [
             [
                 "b666af7686048a30"
@@ -23388,8 +23359,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 480,
-        "y": 1320,
+        "x": 1580,
+        "y": 580,
         "wires": [
             [
                 "bd05061997e6156b"
@@ -23409,8 +23380,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1050,
-        "y": 1320,
+        "x": 2150,
+        "y": 580,
         "wires": []
     },
     {
@@ -23432,8 +23403,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
-        "y": 1320,
+        "x": 1800,
+        "y": 580,
         "wires": [
             [
                 "1578c5bef7637e2c"
@@ -23538,8 +23509,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 2180,
+        "x": 460,
+        "y": 1640,
         "wires": [
             [
                 "b64befbfca8cd376"
@@ -23557,8 +23528,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
-        "y": 2240,
+        "x": 420,
+        "y": 1700,
         "wires": [
             [
                 "b64befbfca8cd376"
@@ -23585,8 +23556,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 330,
-        "y": 2240,
+        "x": 250,
+        "y": 1700,
         "wires": [
             [
                 "34a7871439e7394e"
@@ -23606,8 +23577,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 870,
-        "y": 2200,
+        "x": 790,
+        "y": 1660,
         "wires": []
     },
     {
@@ -23639,8 +23610,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 250,
-        "y": 2180,
+        "x": 170,
+        "y": 1640,
         "wires": [
             [
                 "59afcb532e72d16e",
@@ -23660,8 +23631,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 530,
-        "y": 2140,
+        "x": 450,
+        "y": 1600,
         "wires": []
     },
     {
@@ -23701,8 +23672,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 1200,
-        "y": 2200,
+        "x": 1120,
+        "y": 1660,
         "wires": [
             [
                 "f9dceb53cc0b5821",
@@ -23722,8 +23693,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1450,
-        "y": 2240,
+        "x": 1370,
+        "y": 1700,
         "wires": []
     },
     {
@@ -23752,8 +23723,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1420,
-        "y": 2200,
+        "x": 1340,
+        "y": 1660,
         "wires": [
             [
                 "c77ffb1f28a8bc8e"
@@ -23775,8 +23746,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1910,
-        "y": 2200,
+        "x": 1830,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -23792,8 +23763,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1660,
-        "y": 2200,
+        "x": 1580,
+        "y": 1660,
         "wires": [
             [
                 "fb6c340e0efe1add"
@@ -23813,8 +23784,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1870,
-        "y": 2160,
+        "x": 1790,
+        "y": 1620,
         "wires": []
     },
     {
@@ -23828,8 +23799,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1670,
-        "y": 2160,
+        "x": 1590,
+        "y": 1620,
         "wires": [
             [
                 "3ae850cc68585fca"
@@ -23850,8 +23821,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 2170,
-        "y": 1580,
+        "x": 1490,
+        "y": 1420,
         "wires": [
             []
         ]
@@ -23882,8 +23853,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1960,
-        "y": 1580,
+        "x": 1280,
+        "y": 1420,
         "wires": [
             [
                 "3e99a62a3c74b32c"
@@ -23916,8 +23887,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1690,
-        "y": 1760,
+        "x": 1570,
+        "y": 720,
         "wires": [
             [
                 "841135cf0ddd6d1c"
@@ -23935,8 +23906,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1960,
-        "y": 1760,
+        "x": 1840,
+        "y": 720,
         "wires": [
             []
         ]
@@ -23962,8 +23933,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1450,
-        "y": 1760,
+        "x": 1330,
+        "y": 720,
         "wires": [
             [
                 "9d67b8af1ecfca92"
@@ -23976,8 +23947,8 @@
         "z": "204548a488401a1b",
         "name": "Map Labels On/Off",
         "info": "This switch turns labels on or off on the main logged QSO map.\n\nAs QSO's are mapped, sometimes during heavy rates, the map can get cluttered with pins and the label (band and mode) takes up space.\n\nIn contests that only one mode is allowed, you might want to turn this off.\n\nThe legend will show the color of each band for the marked pins.",
-        "x": 1490,
-        "y": 1700,
+        "x": 1370,
+        "y": 660,
         "wires": []
     },
     {
@@ -23986,8 +23957,8 @@
         "z": "204548a488401a1b",
         "name": "Set TTL for Map Markers",
         "info": "This flow sets the ttl (time to live) for map icons to live on the map.  \n\n",
-        "x": 270,
-        "y": 2120,
+        "x": 190,
+        "y": 1580,
         "wires": []
     },
     {
@@ -24010,8 +23981,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 1470,
-        "y": 2160,
+        "x": 1390,
+        "y": 1620,
         "wires": [
             [
                 "6e48cbe3f5469ec6"
@@ -24024,8 +23995,8 @@
         "z": "204548a488401a1b",
         "name": "Lat & Lon Input",
         "info": "This flow gets the lat and lon input and allows great circle lines to be drawn from the QTH to each pin in the map.\n\nIf no lat and lon are input, the greatcircle lines are not drawn.",
-        "x": 1260,
-        "y": 2120,
+        "x": 1180,
+        "y": 1580,
         "wires": []
     },
     {
@@ -24054,8 +24025,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1960,
-        "y": 1640,
+        "x": 1000,
+        "y": 1480,
         "wires": [
             [
                 "9a414e8fd552ee88"
@@ -24073,8 +24044,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2200,
-        "y": 1640,
+        "x": 1240,
+        "y": 1480,
         "wires": [
             [
                 "a6a12ef5e9b4d877"
@@ -24116,8 +24087,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1680,
-        "y": 1820,
+        "x": 1560,
+        "y": 780,
         "wires": [
             [
                 "2dde15a004f80010"
@@ -24135,8 +24106,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
-        "y": 1820,
+        "x": 1860,
+        "y": 780,
         "wires": [
             []
         ]
@@ -24167,8 +24138,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1680,
-        "y": 2020,
+        "x": 2180,
+        "y": 1400,
         "wires": [
             [
                 "851fa5920b751886"
@@ -24186,8 +24157,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1950,
-        "y": 2020,
+        "x": 2450,
+        "y": 1400,
         "wires": [
             []
         ]
@@ -24213,8 +24184,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1450,
-        "y": 2020,
+        "x": 1950,
+        "y": 1400,
         "wires": [
             [
                 "4a7ab19bd2fdaf09"
@@ -24281,8 +24252,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 450,
-        "y": 2420,
+        "x": 370,
+        "y": 1880,
         "wires": [
             [
                 "c55a8f8a7bb2ce67"
@@ -24295,8 +24266,8 @@
         "z": "204548a488401a1b",
         "name": "Contest Type",
         "info": "",
-        "x": 410,
-        "y": 2360,
+        "x": 330,
+        "y": 1820,
         "wires": []
     },
     {
@@ -24310,8 +24281,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 2420,
+        "x": 650,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -24329,8 +24300,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1450,
-        "y": 640,
+        "x": 710,
+        "y": 540,
         "wires": []
     },
     {
@@ -24344,8 +24315,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1180,
-        "y": 640,
+        "x": 440,
+        "y": 540,
         "wires": [
             [
                 "4bd54f4532cfb4e4"
@@ -24373,8 +24344,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 910,
-        "y": 640,
+        "x": 170,
+        "y": 540,
         "wires": [
             [
                 "f9aa65c20f157f8e"
@@ -24392,8 +24363,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 600,
+        "x": 470,
+        "y": 500,
         "wires": [
             [
                 "848cb7d74a2a8ede"
@@ -24420,8 +24391,8 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 940,
-        "y": 600,
+        "x": 200,
+        "y": 500,
         "wires": [
             [
                 "57e3618bf14fa9ab"
@@ -24463,8 +24434,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1310,
-        "y": 2420,
+        "x": 1230,
+        "y": 1880,
         "wires": [
             [
                 "5540ea5a6de97dc7"
@@ -24477,8 +24448,8 @@
         "z": "204548a488401a1b",
         "name": "OP Competition Sort Type",
         "info": "",
-        "x": 1310,
-        "y": 2360,
+        "x": 1230,
+        "y": 1820,
         "wires": []
     },
     {
@@ -24492,8 +24463,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1590,
-        "y": 2420,
+        "x": 1510,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -24519,8 +24490,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 410,
-        "y": 2460,
+        "x": 330,
+        "y": 1920,
         "wires": [
             [
                 "678916562d7de9f5"
@@ -24538,8 +24509,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 2460,
+        "x": 530,
+        "y": 1920,
         "wires": [
             [
                 "ccc80b81dfc99354"
@@ -24559,8 +24530,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 860,
-        "y": 2460,
+        "x": 780,
+        "y": 1920,
         "wires": []
     },
     {
@@ -24584,8 +24555,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1290,
-        "y": 2460,
+        "x": 1210,
+        "y": 1920,
         "wires": [
             [
                 "55b371fcdda16d59"
@@ -24603,8 +24574,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1510,
-        "y": 2460,
+        "x": 1430,
+        "y": 1920,
         "wires": [
             [
                 "2607254e9c8640f7"
@@ -24624,8 +24595,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1780,
-        "y": 2460,
+        "x": 1700,
+        "y": 1920,
         "wires": []
     },
     {
@@ -24649,8 +24620,8 @@
         "topic": "",
         "payload": "bandonly",
         "payloadType": "str",
-        "x": 1420,
-        "y": 1820,
+        "x": 1300,
+        "y": 780,
         "wires": [
             [
                 "d99f186baf3ac355"
@@ -24829,7 +24800,7 @@
         "type": "debug",
         "z": "204548a488401a1b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24862,7 +24833,7 @@
         "type": "debug",
         "z": "204548a488401a1b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -25055,8 +25026,39 @@
         "z": "204548a488401a1b",
         "name": "Speak Multiplier On/Off",
         "info": "",
-        "x": 1500,
-        "y": 1960,
+        "x": 2000,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "b97bc1c0.cb899",
+        "type": "ui_template",
+        "z": "204548a488401a1b",
+        "group": "c982fbb8.1deb38",
+        "name": "Clock Toolbar",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<script id=\"titleScript\" type=\"text/javascript\">\n\n$(function() {\n    if($('.md-toolbar-tools').length != 0){\n        loadClock();\n    }else setTimeout(loadClock, 500)\n});\n\nfunction loadClock(){\n    $('#clock').remove();\n    var toolbar = $('.md-toolbar-tools');\n    \n    var div = $('<div/>');\n    var p = $('<p/ id=\"clock\">');\n    \n    div.append(p);\n    div[0].style.margin = '5px 5px 5px auto';\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n    \n    function upTime() {\n        var d = new Date();\n        p.text(d.toUTCString());\n    }\n\n    if(document.clockInterval){ \n            clearInterval(document.clockInterval);\n            document.clockInterval = null;\n    }\n        \n    document.clockInterval = setInterval(upTime,1000);\n}\n\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1160,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c93e27531935910",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Clock Toolbar",
+        "info": "",
+        "x": 1140,
+        "y": 340,
         "wires": []
     },
     {
@@ -25349,7 +25351,7 @@
         "width": 10,
         "height": 3,
         "name": "Skimmer Cluster No Dupe Output",
-        "label": "Skimmer Cluster without Dups Output",
+        "label": "No Dups Output",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -25550,8 +25552,8 @@
         "ceiling": "",
         "worldmap": true,
         "outputs": 2,
-        "x": 800,
-        "y": 800,
+        "x": 260,
+        "y": 1020,
         "wires": [
             [],
             []
@@ -25847,7 +25849,7 @@
         "width": 10,
         "height": 3,
         "name": "Skimmer Cluster Dupe Output",
-        "label": "Skimmer Cluster with Dups Output",
+        "label": "Dups Output",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -26055,8 +26057,8 @@
         "ret": "txt",
         "url": "https://query.yahooapis.com/v1/public/yql?q={{{query}}}&format=json",
         "tls": "",
-        "x": 730,
-        "y": 1200,
+        "x": 590,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -26084,8 +26086,8 @@
         "topic": "",
         "payload": "select astronomy.sunset from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"maui, hi\")",
         "payloadType": "str",
-        "x": 380,
-        "y": 1200,
+        "x": 240,
+        "y": 1100,
         "wires": [
             [
                 "b001d489.d8f818"
@@ -26111,29 +26113,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 1200,
+        "x": 420,
+        "y": 1100,
         "wires": [
             [
                 "e95c6faa.ab2e1"
             ]
-        ]
-    },
-    {
-        "id": "6c2910a0551187b0",
-        "type": "template",
-        "z": "bd8a446b999750f9",
-        "name": "Insert info DB",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "\n'{{payload.QRZDatabase.Callsign.call}}',\n'{{{payload.QRZDatabase.Callsign.lat}}}',\n'{{{msg.payload.QRZDatabase.Callsign[0].lon[0]}}}',\n'{{{payload.QRZDatabase.Callsign[0].grid[0]}}}',\n'{{payload.QRZDatabase.Callsign[0].ccode}}',\n'{{{payload.QRZDatabase.Callsign.land[0]}}}',\n'{{{payload.QRZDatabase.Callsign[0].cqzone[0]}}}',\n'{{{payload.QRZDatabase.Callsign[0].ituzone[0]}}}',\n'{{{payload.QRZDatabase.Callsign[0].dxcc[0]}}}\n\n",
-        "output": "str",
-        "x": 1140,
-        "y": 780,
-        "wires": [
-            []
         ]
     },
     {
@@ -26164,8 +26149,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 460,
-        "y": 960,
+        "x": 390,
+        "y": 940,
         "wires": [
             [
                 "929f5044bccb8df7"
@@ -26213,8 +26198,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 1000,
+        "x": 710,
+        "y": 940,
         "wires": []
     },
     {
@@ -26225,8 +26210,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 650,
-        "y": 960,
+        "x": 550,
+        "y": 940,
         "wires": [
             [
                 "9fc29b1d7f8667e6"
@@ -26461,6 +26446,16 @@
         ]
     },
     {
+        "id": "bc3287083b12a7ca",
+        "type": "comment",
+        "z": "bd8a446b999750f9",
+        "name": "Future PSK Reporter and Geofencing ",
+        "info": "",
+        "x": 290,
+        "y": 880,
+        "wires": []
+    },
+    {
         "id": "4643b86af448174a",
         "type": "inject",
         "z": "2eedd966294071cc",
@@ -26481,8 +26476,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 210,
-        "y": 180,
+        "x": 220,
+        "y": 200,
         "wires": [
             [
                 "dd3d5c16f312c621"
@@ -26522,7 +26517,7 @@
         "tag": "tr",
         "ret": "attr",
         "as": "single",
-        "x": 630,
+        "x": 610,
         "y": 200,
         "wires": [
             [
@@ -26545,8 +26540,8 @@
         "propout": "payload",
         "object": "msg",
         "objectout": "msg",
-        "x": 870,
-        "y": 180,
+        "x": 770,
+        "y": 200,
         "wires": [
             [
                 "f14eb5e297ac3a2b"
@@ -26563,8 +26558,8 @@
         "tag": "td",
         "ret": "html",
         "as": "single",
-        "x": 630,
-        "y": 260,
+        "x": 610,
+        "y": 240,
         "wires": [
             []
         ]
@@ -26581,8 +26576,18 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
-        "y": 160,
+        "x": 950,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9935c92ef01143cc",
+        "type": "comment",
+        "z": "2eedd966294071cc",
+        "name": "Future Online Scoreboard Integration",
+        "info": "",
+        "x": 340,
+        "y": 140,
         "wires": []
     }
 ]
