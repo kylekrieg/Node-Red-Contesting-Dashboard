@@ -1,6 +1,6 @@
 ## STOP <- READ THIS SECTION FIRST
 
-Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that reading through this document will answer 99% of your questions regarding install.  I keep getting asked the same questions over and over and they are explained in this document.  Just take 10 mins and read the doc. 
+Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that you must follow.  Reading through this document will answer 99% of your questions regarding install.  I keep getting asked the same questions over and over and they are explained in this document.  Just take 10 mins and read the doc. 
 
 ## Raspberry Pi OS Install
 
@@ -10,7 +10,9 @@ Node Red can be installed on almost any Raspberry Pi.  Instructions for installi
 
 [How to Install the Raspberry Pi OS & Update](https://youtu.be/4jNbmGgvT2g)
 
-After installing the OS be sure to issue this command to bring your system up to date.
+After you build your Pi, it probably has a DHCP address on your network.  If your router is smart enough, you might be able to find it via your local DNS via ```raspberrypi.local```.  
+
+After installing the OS be sure to issue this command at a terminal (SSH) window to bring your system up to date. 
 
 ```
 sudo apt update && sudo apt full-upgrade -y && sudo apt clean
