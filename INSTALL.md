@@ -25,7 +25,7 @@ sudo systemctl enable nodered.service
 ```
 Now we can ensure you can get into the Node Red web workspace interface for the first time to verify Node Red is running correctly.  
 
-Type the following into a web browser; http://ip_address_of_your_raspberry_pi:1880.  You can also try http://hostname_of_raspberry_ip.local:1880.  Complete the initial tutorial if it runs.  It will only run once. 
+Type the following into a web browser; ```http://ip_address_of_your_raspberry_pi:1880```.  You can also try ```http://hostname_of_raspberry_ip.local:1880```.  Complete the initial tutorial if it runs.  It will only run once. 
 
 [Official Node Red Raspberry Pi Documentation](https://nodered.org/docs/getting-started/raspberrypi)
 
@@ -162,7 +162,7 @@ Your Node Red local qsos database is now created and ready to go.
 
 ## N1MM Configuration
 
-On your contest station PCs, within the N1MM entry window, click on **Config** then **Configure Ports, Mode Control, Winkey,etc...** then **Broadcast Data** tab.  
+On your contest station PCs, within the N1MM entry window, click on ```Config``` then ```Configure Ports, Mode Control, Winkey,etc...``` then ```Broadcast Data``` tab.  
 
 ![N1MM Dropdown Menu](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_dropdown.jpg)
 
@@ -171,7 +171,7 @@ On your contest station PCs, within the N1MM entry window, click on **Config** t
 Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  
 
 Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  
-Place a space after the default 127.0.0.1:12060 to start your IP address.
+**Place a space after the default 127.0.0.1:12060 to start your IP address.**
 
 ```
 Radio to aaa.bbb.ccc.ddd:12060
@@ -179,13 +179,13 @@ Contacts to aaa.bbb.ccc.ddd:12061
 Score to aaa.bbb.ccc.ddd:12062
 ```
 
-**IMPORTANT** only enable the socre checkbox on the **MASTER N1MM STATION!!!!**  Only 1 computer should be sending score data to the Node Red server.
+**IMPORTANT** only enable the socre checkbox on the ```MASTER N1MM STATION!!!!```.  Only 1 computer should be sending score data to the Node Red server.
 
 ## Download the N1MM Dashboard JSON From GitHub
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
-I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, **DO NOT USE SSH** if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
+I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, ```DO NOT USE SSH``` if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
 
 Name your project ```N1MM_Dashboard_<DATE>```.  Naming your project with the current date will help when upgrading to the latest version later. 
 
@@ -216,9 +216,9 @@ node-red-contrib-unit-converter
 
 ## Configuration
 
-The main workspace pallet is located at **http://ip_address_of_your_rapsberry_pi:1880** or **http://hostname_of_your_raspberry_pi.local:1880**
+The main workspace pallet is located at ```http://ip_address_of_your_rapsberry_pi:1880``` or ```http://hostname_of_your_raspberry_pi.local:1880```
 
-The dashboard website is located at **http://ip_address_of_your_raspberry_pi:1880/ui** or **http://hostname_of_your_raspberry_pi.local:1880/ui**
+The dashboard website is located at ```http://ip_address_of_your_raspberry_pi:1880/ui``` or ```http://hostname_of_your_raspberry_pi.local:1880/ui```
 
 A few things as we work through the BETA phase of testing.
 
