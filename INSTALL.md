@@ -10,6 +10,12 @@ Node Red can be installed on almost any Raspberry Pi.  Instructions for installi
 
 [How to Install the Raspberry Pi OS & Update](https://youtu.be/4jNbmGgvT2g)
 
+After installing the OS be sure to issue this command to bring your system up to date.
+
+```
+sudo apt update && sudo apt full-upgrade -y && sudo apt clean
+```
+
 ## Install Node Red
 
 One script to rule them all.  Copy and run at the command prompt.  No sudo access needed.  Putty is a good SSH client for this.
