@@ -259,7 +259,8 @@ The laundry list is huge.  These are just a few.
 3) Be able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
 4) Use hamdb.org lookup for RBN spots.
 5) Online Scoreboard integration.  Be able chase your friends or a few stations in real time directly from the dashboard.
-6) DXLog and N3FJP integration.
+6) Write and N3FJP integration.
 7) Be able to save the configuration settings in a text file on your Pi and recall them after rebooting or restarting Node Red.
+8) Spot rate color definations.  Be able to fill the rate for red, yellow or green font color for rates per min.
 
 More to come on the configuration of each setting as we work through the BETA.
