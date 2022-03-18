@@ -189,6 +189,9 @@ Score to aaa.bbb.ccc.ddd:12062
 
 **IMPORTANT** only enable the socre checkbox on the ```MASTER N1MM STATION!!!!```.  Only 1 computer should be sending score data to the Node Red server.
 
+## TR4W Configuration
+Information on configuring TR4W to send the UDP broadcasts on the correct ports is available on the TR4W GitHub Wiki here: https://github.com/n4af/TR4W/wiki/Configuring-TR4W-for-Node-Red-Contesting-Dashboard
+
 ## Download the N1MM Dashboard JSON From GitHub
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
