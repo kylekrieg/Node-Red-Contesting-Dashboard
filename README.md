@@ -1,7 +1,7 @@
 Node Red Contesting Dashboard
 ==============
 
-A basic multi screen contesting dasbhoard written in Node Red.  It currently can display stats from N1MM and TR4W contesting software with mroe to come!!!
+A basic multi screen contesting dasbhoard written in Node Red.  It currently can display stats from N1MM and TR4W contesting software with more to come!!!
 
 ## About
 
