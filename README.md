@@ -15,11 +15,11 @@ This program is written in Node Red and displays a real time dashboard for ham r
 
 Here are some basic screenshots of the different tabs within the dashboard.
 
-[N1MM Node Red Dashboard Screenshots](https://photos.app.goo.gl/J67xuLADBU3CMHYh7)
+[Node Red Dashboard Screenshots](https://photos.app.goo.gl/J67xuLADBU3CMHYh7)
 
 ## Install
 
-Follow the [INSTALL.md](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/INSTALL.md) located in the files section of this project.
+Follow the [INSTALL.md](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/blob/master/INSTALL.md) located in the files section of this project.
 
 ## Questions
 
