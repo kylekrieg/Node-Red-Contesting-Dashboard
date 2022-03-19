@@ -94,7 +94,7 @@ Now we need to create some tables within the qsos database.
 At the database prompt, copy everything below and paste it into the database.  When done, hit *enter*.  This will create a table named qsos and a table named spots.  It will also create an index on the table qsos.
 
 ```
-CREATE TABLE qsos(
+CREATE TABLE IF NOT EXISTS qsos(
   "app" TEXT,
   "contestname" TEXT,
   "contestnr" TEXT,
@@ -145,7 +145,7 @@ CREATE TABLE qsos(
   "isbusted" TEXT,
   "distance" TEXT
 );
-CREATE TABLE radio(
+CREATE TABLE IF NOT EXISTS radio(
   "timestamp" TEXT,
   "app" TEXT,
   "StationName" TEXT,
@@ -169,7 +169,8 @@ CREATE TABLE radio(
   "AuxAntSelected" TEXT,
   "AuxAntSelectedName" TEXT
 );
-CREATE TABLE spots(
+CREATE TABLE IF NOT EXISTS spots(
+  "timestamp" TEXT,
   "call" TEXT type UNIQUE,
   "lat" TEXT,
   "lon" TEXT,
