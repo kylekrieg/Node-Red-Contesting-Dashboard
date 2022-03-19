@@ -145,6 +145,30 @@ CREATE TABLE qsos(
   "isbusted" TEXT,
   "distance" TEXT
 );
+CREATE TABLE radio(
+  "timestamp" TEXT,
+  "app" TEXT,
+  "StationName" TEXT,
+  "RadioNr" TEXT,
+  "Freq" TEXT,
+  "TXFreq" TEXT,
+  "Mode" TEXT,
+  "OpCall" TEXT,
+  "IsRunning" TEXT,
+  "FocusEntry" TEXT,
+  "EntryWindowHwnd" TEXT,
+  "antenna" TEXT,
+  "Rotors" TEXT,
+  "FocusRadioNr" TEXT,
+  "IsStereo" TEXT,
+  "IsSplit" TEXT,
+  "ActiveRadioNr" TEXT,
+  "IsTransmitting" TEXT,
+  "FunctionKeyCaption" TEXT,
+  "RadioName" TEXT,
+  "AuxAntSelected" TEXT,
+  "AuxAntSelectedName" TEXT
+);
 CREATE TABLE spots(
   "call" TEXT type UNIQUE,
   "lat" TEXT,
