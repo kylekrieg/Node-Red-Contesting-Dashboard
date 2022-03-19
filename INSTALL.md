@@ -82,10 +82,9 @@ This flow requires sqlite3 to be installed on your system.  At a terminal comman
 ```
 sudo apt-get install sqlite3
 ```
-
 ### Upgrading After 20220319
 
-We are going to archive the old qsos database and create a new one.  As of 20220319 I have a new database schema to use. Type the two following commands below to copy the qsos database to qsos_old and then remove the existing database.
+We are going to archive the old qsos database and create a new one.  As of 20220319 I have a new database schema to use. Type the two following commands below to copy the qsos database to qsos_old and then remove the existing database.  Resume by creating the qsos database below. 
 
 ```
 cp qsos qsos_old
