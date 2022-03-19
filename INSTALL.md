@@ -82,6 +82,14 @@ This flow requires sqlite3 to be installed on your system.  At a terminal comman
 ```
 sudo apt-get install sqlite3
 ```
+### Upgrading After 20220319
+
+We are going to archive the old qsos database and create a new one.  As of 20220319 I have a new database schema to use. Type the two following commands below to copy the qsos database to qsos_old and then remove the existing database.  Resume by creating the qsos database below. 
+
+```
+cp qsos qsos_old
+rm qsos
+```
 
 At the terminal command prompt User (pi) type the following to create a database named qsos and drop you into the database server.
 
@@ -94,7 +102,7 @@ Now we need to create some tables within the qsos database.
 At the database prompt, copy everything below and paste it into the database.  When done, hit *enter*.  This will create a table named qsos and a table named spots.  It will also create an index on the table qsos.
 
 ```
-CREATE TABLE qsos(
+CREATE TABLE IF NOT EXISTS qsos(
   "app" TEXT,
   "contestname" TEXT,
   "contestnr" TEXT,
@@ -145,7 +153,32 @@ CREATE TABLE qsos(
   "isbusted" TEXT,
   "distance" TEXT
 );
-CREATE TABLE spots(
+CREATE TABLE IF NOT EXISTS radio(
+  "timestamp" TEXT,
+  "app" TEXT,
+  "StationName" TEXT,
+  "RadioNr" TEXT,
+  "Freq" TEXT,
+  "TXFreq" TEXT,
+  "Mode" TEXT,
+  "OpCall" TEXT,
+  "IsRunning" TEXT,
+  "FocusEntry" TEXT,
+  "EntryWindowHwnd" TEXT,
+  "antenna" TEXT,
+  "Rotors" TEXT,
+  "FocusRadioNr" TEXT,
+  "IsStereo" TEXT,
+  "IsSplit" TEXT,
+  "ActiveRadioNr" TEXT,
+  "IsTransmitting" TEXT,
+  "FunctionKeyCaption" TEXT,
+  "RadioName" TEXT,
+  "AuxAntSelected" TEXT,
+  "AuxAntSelectedName" TEXT
+);
+CREATE TABLE IF NOT EXISTS spots(
+  "timestamp" TEXT,
   "call" TEXT type UNIQUE,
   "lat" TEXT,
   "lon" TEXT,
@@ -168,8 +201,9 @@ Type .exit to exit out of the database and return to the Pi terminal command pro
 
 Your Node Red local qsos database is now created and ready to go.
 
-## N1MM Configuration
+## Configuration
 
+### N1MM Configuration
 On your contest station PCs, within the N1MM entry window, click on ```Config``` then ```Configure Ports, Mode Control, Winkey,etc...``` then ```Broadcast Data``` tab.  
 
 ![N1MM Dropdown Menu](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_dropdown.jpg)
@@ -188,6 +222,9 @@ Score to aaa.bbb.ccc.ddd:12062
 ```
 
 **IMPORTANT** only enable the socre checkbox on the ```MASTER N1MM STATION!!!!```.  Only 1 computer should be sending score data to the Node Red server.
+
+### TR4W Configuration
+Information on configuring TR4W to send the UDP broadcasts on the correct ports is available on the TR4W GitHub Wiki here: https://github.com/n4af/TR4W/wiki/Configuring-TR4W-for-Node-Red-Contesting-Dashboard
 
 ## Download the N1MM Dashboard JSON From GitHub
 
