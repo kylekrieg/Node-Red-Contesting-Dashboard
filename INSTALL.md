@@ -84,7 +84,7 @@ sudo apt-get install sqlite3
 ```
 ### Upgrading After 20220319
 
-We are going to archive the old qsos database and create a new one.  As of 20220319 I have a new database schema to use. Type the two following commands below to copy the qsos database to qsos_old and then remove the existing database.  Resume by creating the qsos database below. 
+We are going to archive the old qsos database and create a new one.  As of 20220319 I have a new database schema to use. Type the following two commands below to copy the qsos database to qsos_old and then remove the existing database.  Resume by creating the qsos database below. 
 
 ```
 cp qsos qsos_old
@@ -242,7 +242,7 @@ https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
 
 ## Loading Node Dependencies
 
-As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below and delete the ***test data*** tab as one of your first steps.
+As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below.
 
 ```
 node-red-contrib-hourglass
@@ -267,10 +267,9 @@ The dashboard website is located at ```http://ip_address_of_your_raspberry_pi:18
 
 A few things as we work through the BETA phase of testing.
 
-1) Delete the **Test Data** tab (the first tab) before your first deploy as those flows are only used for testing.
-2) Verify all of the sqlite nodes point to the *qsos* database.
-3) Configure all the dashboard user settings on the **Configuration & Resets** tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost so write them down.
-4) Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain to you.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  Hamdb is a free lookup but only can lookup a few DXCC entities as of this writing. 
+1) Verify all of the sqlite nodes point to the *qsos* database.
+2) Configure all the dashboard user settings on the **Configuration & Resets** tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost so write them down.
+3) Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain to you.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  Hamdb is a free lookup but only can lookup a few DXCC entities as of this writing. 
 
 ## Dashboard Display Zoom
 
