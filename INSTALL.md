@@ -201,8 +201,9 @@ Type .exit to exit out of the database and return to the Pi terminal command pro
 
 Your Node Red local qsos database is now created and ready to go.
 
-## N1MM Configuration
+## Configuration
 
+### N1MM Configuration
 On your contest station PCs, within the N1MM entry window, click on ```Config``` then ```Configure Ports, Mode Control, Winkey,etc...``` then ```Broadcast Data``` tab.  
 
 ![N1MM Dropdown Menu](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_dropdown.jpg)
@@ -222,7 +223,7 @@ Score to aaa.bbb.ccc.ddd:12062
 
 **IMPORTANT** only enable the socre checkbox on the ```MASTER N1MM STATION!!!!```.  Only 1 computer should be sending score data to the Node Red server.
 
-## TR4W Configuration
+### TR4W Configuration
 Information on configuring TR4W to send the UDP broadcasts on the correct ports is available on the TR4W GitHub Wiki here: https://github.com/n4af/TR4W/wiki/Configuring-TR4W-for-Node-Red-Contesting-Dashboard
 
 ## Download the N1MM Dashboard JSON From GitHub
