@@ -277,10 +277,11 @@ All of the sections should line up nicely and look uniform except for the Config
 
 ## Known Issues
 
-1) The Spectator Dashboard is still a work in progress.  The vision of this dashboard is for a screen you can stream to YouTube or Twitch without violating any contest rules with giving your frequency or band information away but allows the viewer to interact and learn more about contesting and ham radio.
+1) The Spectator Dashboard is still a work in progress.  The vision of this dashboard is for an operator to be able to use this dashboard to stream to YouTube or Twitch without violating any contest rules.  This dashboard will not give your frequency or band information away but allows the viewer to interact and learn more about contesting and ham radio.
 2) The trending arrows on the Operator Competition dashboard need some more work.  I'm not 100% satisified with the way they work.
 3) Configuration parameters get erased when re-starting the Pi or Node Red server.
 4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.
+5) On the line charts, the most recent data point time is typically in local time with the rest of the data points in UTC.  This is a known bug in the graphing dashboard node.
 
 ## Upgrading
 
