@@ -87,8 +87,8 @@ sudo apt-get install sqlite3
 We are going to archive the old qsos database and create a new one.  As of 20220319 I have a new database schema to use. Type the following two commands below to copy the qsos database to qsos_old and then remove the existing database.  Resume by creating the qsos database below. 
 
 ```
-cp qsos qsos_old
-rm qsos
+cp /home/pi/qsos qsos_old
+rm /home/pi/qsos
 ```
 
 At the terminal command prompt User (pi) type the following to create a database named qsos and drop you into the database server.
@@ -266,7 +266,7 @@ If you follow the instructions for creating the *qsos* database in the pi home d
 2) Click on the pencil icon to the right of the database name.
 3) Enter in the full path on your computer to where the *qsos* database is located.  Windows users, spaces and long directories are not allowed.  Do a Google search on how to shorten file paths and how to deal with spaces in your file path. 
 
-## Configuration
+## General Configuration
 
 The main workspace pallet is located at ```http://ip_address_of_your_rapsberry_pi:1880``` or ```http://hostname_of_your_raspberry_pi.local:1880```
 
@@ -274,7 +274,7 @@ The dashboard website is located at ```http://ip_address_of_your_raspberry_pi:18
 
 A few things as we work through the BETA phase of testing.
 
-1) Verify all of the sqlite nodes point to the *qsos* database.
+1) Verify all of the sqlite nodes point to the *qsos* database.  See above for more info. 
 2) Configure all the dashboard user settings on the **Configuration & Resets** tab.  Note : If you reboot your Pi or re-start the Node Red server, the configuration settings will be lost so write them down.
 3) Before each contest, you must clear the database (big red button) and choose a database lookup server or the dashboard will complain to you.  If using QRZ.com, enter in your username and password if you have XML lookup enabled on your account.  Hamdb is a free lookup but only can lookup a few DXCC entities as of this writing. 
 
@@ -292,7 +292,7 @@ All of the sections should line up nicely and look uniform except for the Config
 
 ## Upgrading
 
-Via the projects tool, you can update your Dashboard to the latest dashboard version.  Create a new clone of the project and name it ```N1MM_Dashboard_<DATE>```.  All your settings (lon, lat, database, configuration user settings) will be kept as they are global variables.  
+See the section above named *Upgrading after 20220319* to create a new *qsos* database.  After the new database is created, you can download the newest version of this project by completing the *Download the N1MM Dashboard JSON From GitHub* above section again and name the new project with a new date.  Follow the steps again from that point on to verify all the configurations are correct.
 
 ## To Do
 
