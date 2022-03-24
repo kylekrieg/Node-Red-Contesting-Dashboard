@@ -289,6 +289,7 @@ All of the sections should line up nicely and look uniform except for the Config
 3) Configuration parameters get erased when re-starting the Pi or Node Red server.
 4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.
 5) On the line charts, the most recent data point time is typically in local time with the rest of the data points in UTC.  This is a known bug in the graphing dashboard node.
+6) The great circle lines in the Worldmap node currently have an issue with the international date line.  The developers are working on this bug.
 
 ## Upgrading
 
@@ -299,12 +300,10 @@ See the section above named *Upgrading after 20220319* to create a new *qsos* da
 The laundry list is huge.  These are just a few.
 
 1) Setup the dashboard for Field Day with every little effort.
-2) The great circle lines in the Worldmap node currently have an issue with the international date line.  The developers are working on this bug.
-3) Be able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
-4) Use hamdb.org lookup for RBN spots.
-5) Online Scoreboard integration.  Be able chase your friends or a few stations in real time directly from the dashboard.
-6) Write and N3FJP integration.
-7) Be able to save the configuration settings in a text file on your Pi and recall them after rebooting or restarting Node Red.
-8) Spot rate color definations.  Be able to fill the rate for red, yellow or green font color for rates per min.
+2) Be able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
+3) Use hamdb.org lookup for RBN spots.
+4) Online Scoreboard integration.  Be able chase your friends or a few stations in real time directly from the dashboard.
+5) Writelog and N3FJP integration.
+6) Be able to save the configuration settings in a text file on your Pi and recall them after rebooting or restarting Node Red.
 
-More to come on the configuration of each setting as we work through the BETA.
+This program is released as-is.  Modify this program as you see fit. 
