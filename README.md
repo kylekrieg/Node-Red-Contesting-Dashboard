@@ -21,5 +21,5 @@ Follow the [INSTALL.md](https://github.com/kylekrieg/Node-Red-Contesting-Dashboa
 
 ## Questions
 
-My email can be found on my qrz.com page.  Thanks.  Kyle AA0Z 
+Please join the Node Red for [Ham Radio Groups IO disucssion](https://groups.io/g/nodered-hamradio) and ask a support question there.
 
