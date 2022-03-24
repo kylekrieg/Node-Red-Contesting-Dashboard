@@ -22656,7 +22656,7 @@
         "className": "",
         "topic": "",
         "name": "DB Not Selected Dialog",
-        "x": 2330,
+        "x": 2290,
         "y": 1020,
         "wires": [
             []
@@ -24727,7 +24727,7 @@
         "y": 1020,
         "wires": [
             [
-                "e7f72836de4c6294"
+                "0bc31ccf6e0d76ad"
             ]
         ]
     },
@@ -25232,6 +25232,26 @@
         "x": 890,
         "y": 2440,
         "wires": []
+    },
+    {
+        "id": "0bc31ccf6e0d76ad",
+        "type": "rbe",
+        "z": "204548a488401a1b",
+        "name": "RBE",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2070,
+        "y": 1020,
+        "wires": [
+            [
+                "e7f72836de4c6294"
+            ]
+        ]
     },
     {
         "id": "1f45eb9a.6f2614",
@@ -27480,7 +27500,8 @@
                 "918a9d1fd39ca92e",
                 "2c3bff2c367c9aec",
                 "2f735fa6a5229447",
-                "b214cb6ec396e43d"
+                "b214cb6ec396e43d",
+                "68a0110ca1c8ef48"
             ]
         ]
     },
@@ -28158,9 +28179,7 @@
         "propertyType": "global",
         "rules": [
             {
-                "t": "neq",
-                "v": "",
-                "vt": "str"
+                "t": "nnull"
             }
         ],
         "checkall": "true",
@@ -28176,55 +28195,11 @@
         ]
     },
     {
-        "id": "6d3857d06b4a409e",
-        "type": "delay",
-        "z": "2eedd966294071cc",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2620,
-        "y": 620,
-        "wires": [
-            [
-                "179dc95293f5a93b",
-                "1aabaa1290b2e5d3",
-                "41e69ca48215c056"
-            ]
-        ]
-    },
-    {
-        "id": "179dc95293f5a93b",
-        "type": "function",
-        "z": "2eedd966294071cc",
-        "name": "",
-        "func": "let chasecall_score_total = msg.payload.score_total;\n\nlet contestcall_score_total = flow.get('score_total');\n\nlet score_total = chasecall_score_total - contestcall_score_total;\n\nmsg.payload.score_diff = score_total;\n\nif (msg.payload > 0)\n{\n    msg.color = \"#00800\"\n}\nif (msg.payload < 0)\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2840,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "bcbcd07949f8db3c",
         "type": "debug",
         "z": "2eedd966294071cc",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -28318,10 +28293,11 @@
             [
                 "8f683ff5386e05aa",
                 "d04f1ae2a71ae89d",
-                "94781e2098769144"
+                "94781e2098769144",
+                "de2f8c99e2657a88"
             ],
             [
-                "9ffae1d4a3d00d98"
+                "a473a361ea0204a9"
             ]
         ]
     },
@@ -28341,40 +28317,6 @@
         "x": 1310,
         "y": 200,
         "wires": []
-    },
-    {
-        "id": "1aabaa1290b2e5d3",
-        "type": "function",
-        "z": "2eedd966294071cc",
-        "name": "",
-        "func": "\nlet chasecall_qso_total = msg.payload.qso_total;\n\nlet contestcall_qso_total = flow.get('qso_total');\n\nlet qso_total = chasecall_qso_total - contestcall_qso_total;\n\nmsg.payload = qso_total;\n\nif (msg.payload > 0)\n{\n    msg.color = \"#00800\"\n}\nif (msg.payload < 0)\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2840,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "41e69ca48215c056",
-        "type": "function",
-        "z": "2eedd966294071cc",
-        "name": "",
-        "func": "\nlet chasecall_mult_total = msg.payload.mult_total\n\nlet contestcall_mult_total = flow.get('mult_total');\n\nlet mult_total = chasecall_mult_total - contestcall_mult_total;\n\nmsg.payload = mult_total;\n\nif (msg.payload > 0)\n{\n    msg.color = \"#00800\"\n}\nif (msg.payload < 0)\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2840,
-        "y": 660,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "94781e2098769144",
@@ -28419,10 +28361,64 @@
         "className": "",
         "topic": "",
         "name": "Online Scoreboard Error",
-        "x": 1350,
+        "x": 1430,
         "y": 420,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "68a0110ca1c8ef48",
+        "type": "debug",
+        "z": "2eedd966294071cc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2080,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "de2f8c99e2657a88",
+        "type": "debug",
+        "z": "2eedd966294071cc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a473a361ea0204a9",
+        "type": "rbe",
+        "z": "2eedd966294071cc",
+        "name": "RBE",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 420,
+        "wires": [
+            [
+                "9ffae1d4a3d00d98"
+            ]
         ]
     }
 ]
