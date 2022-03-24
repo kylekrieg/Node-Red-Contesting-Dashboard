@@ -27145,7 +27145,7 @@
         "height": 2,
         "name": "Contest Call 15",
         "label": "<font size = 6 font color=#FFFF00>15M Qs/Mults",
-        "format": "<font size = 50>{{payload.qso_20}} / {{payload.mult_20}}</font>",
+        "format": "<font size = 50>{{payload.qso_15}} / {{payload.mult_15}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 1700,
@@ -27380,7 +27380,7 @@
         "height": 2,
         "name": "Contest Call1 15",
         "label": "<font size = 6 font color=#FFFF00>15M Qs/Mults",
-        "format": "<font size = 50>{{payload.qso_20}} / {{payload.mult_20}}</font>",
+        "format": "<font size = 50>{{payload.qso_15}} / {{payload.mult_15}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 2070,
@@ -27596,7 +27596,7 @@
         "height": 2,
         "name": "Contest Call2 15",
         "label": "<font size = 6 font color=#FFFF00>15M Qs/Mults",
-        "format": "<font size = 50>{{payload.qso_20}} / {{payload.mult_20}}</font>",
+        "format": "<font size = 50>{{payload.qso_15}} / {{payload.mult_15}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 1710,
@@ -27812,7 +27812,7 @@
         "height": 2,
         "name": "Contest Call3 15",
         "label": "<font size = 6 font color=#FFFF00>15M Qs/Mults",
-        "format": "<font size = 50>{{payload.qso_20}} / {{payload.mult_20}}</font>",
+        "format": "<font size = 50>{{payload.qso_15}} / {{payload.mult_15}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 2070,
@@ -28028,7 +28028,7 @@
         "height": 2,
         "name": "Contest Call4 15",
         "label": "<font size = 6 font color=#FFFF00>15M Qs/Mults",
-        "format": "<font size = 50>{{payload.qso_20}} / {{payload.mult_20}}</font>",
+        "format": "<font size = 50>{{payload.qso_15}} / {{payload.mult_15}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 1710,
@@ -28192,8 +28192,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 3140,
-        "y": 600,
+        "x": 2620,
+        "y": 620,
         "wires": [
             [
                 "179dc95293f5a93b",
@@ -28213,8 +28213,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3360,
-        "y": 560,
+        "x": 2840,
+        "y": 580,
         "wires": [
             []
         ]
@@ -28258,7 +28258,7 @@
         "type": "debug",
         "z": "2eedd966294071cc",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -28343,22 +28343,6 @@
         "wires": []
     },
     {
-        "id": "289f325bd9c8ee80",
-        "type": "debug",
-        "z": "2eedd966294071cc",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3190,
-        "y": 480,
-        "wires": []
-    },
-    {
         "id": "1aabaa1290b2e5d3",
         "type": "function",
         "z": "2eedd966294071cc",
@@ -28369,8 +28353,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3360,
-        "y": 600,
+        "x": 2840,
+        "y": 620,
         "wires": [
             []
         ]
@@ -28386,45 +28370,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3360,
-        "y": 640,
+        "x": 2840,
+        "y": 660,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "f0840c6693a1ba60",
-        "type": "debug",
-        "z": "2eedd966294071cc",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3150,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "c1efb9e4378d00c0",
-        "type": "debug",
-        "z": "2eedd966294071cc",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3170,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "94781e2098769144",
