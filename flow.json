@@ -28291,23 +28291,6 @@
         ]
     },
     {
-        "id": "86c590b7587486d1",
-        "type": "debug",
-        "z": "2eedd966294071cc",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1310,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "47c19763c58cc298",
         "type": "switch",
         "z": "2eedd966294071cc",
@@ -28334,15 +28317,11 @@
         "wires": [
             [
                 "8f683ff5386e05aa",
-                "72725fb68585e15d",
-                "c89d9e7c5c6dbd01",
-                "b7652b3acedb4176",
-                "9c40fc709b74e053",
-                "95abe88dd284810d",
-                "d04f1ae2a71ae89d"
+                "d04f1ae2a71ae89d",
+                "94781e2098769144"
             ],
             [
-                "86c590b7587486d1"
+                "9ffae1d4a3d00d98"
             ]
         ]
     },
@@ -28446,5 +28425,54 @@
         "x": 3170,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "94781e2098769144",
+        "type": "delay",
+        "z": "2eedd966294071cc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 820,
+        "wires": [
+            [
+                "72725fb68585e15d",
+                "c89d9e7c5c6dbd01",
+                "b7652b3acedb4176",
+                "9c40fc709b74e053"
+            ]
+        ]
+    },
+    {
+        "id": "9ffae1d4a3d00d98",
+        "type": "ui_toast",
+        "z": "2eedd966294071cc",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Online Scoreboard Error",
+        "x": 1350,
+        "y": 420,
+        "wires": [
+            []
+        ]
     }
 ]
