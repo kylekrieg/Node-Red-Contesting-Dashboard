@@ -4,7 +4,7 @@ Read this full document.  All the way though.  No TL;DR sympathy here.  There ar
 
 ## Finding Errors
 
-Did you find an error or unexpected behavior?  I probably fixed it in the latest version.  Go ahead and upgrade your flow to the latest and see if that fixes the issue.
+Did you find an error or unexpected behavior?  I probably fixed it in the latest version.  Go ahead and upgrade your flow to the latest and see if that fixes the issue.  I update this program daily, so you probably don't have the latest version. 
 
 ## Raspberry Pi OS Install
 
