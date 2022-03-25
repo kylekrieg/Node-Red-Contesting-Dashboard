@@ -23004,11 +23004,12 @@
                 "vt": "str"
             }
         ],
-        "repeat": "5",
+        "repeat": "2",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "",
         "payloadType": "date",
         "x": 250,
         "y": 1700,
@@ -23429,11 +23430,12 @@
                 "vt": "str"
             }
         ],
-        "repeat": "5",
+        "repeat": "2",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "",
         "payloadType": "date",
         "x": 1390,
         "y": 1620,
@@ -23942,7 +23944,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "2",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -24007,7 +24009,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "2",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -24656,7 +24658,7 @@
         "name": "Online Scoreboard Call Entry",
         "info": "",
         "x": 420,
-        "y": 2120,
+        "y": 2080,
         "wires": []
     },
     {
@@ -24735,6 +24737,7 @@
         "id": "d73ffa2e2c4de937",
         "type": "inject",
         "z": "204548a488401a1b",
+        "d": true,
         "name": "Every 15 Sec",
         "props": [
             {
@@ -24901,7 +24904,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
+        "x": 710,
         "y": 2180,
         "wires": [
             [
@@ -24930,7 +24933,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 480,
-        "y": 2220,
+        "y": 2140,
         "wires": [
             [
                 "f77b512adee68822"
@@ -24942,14 +24945,14 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Reset to Undefined",
-        "func": "global.set('contestname',null);\nglobal.set('chasecall1',null);\nglobal.set('chasecall2',null);\nglobal.set('chasecall3',null);\nglobal.set('chasecall4',null);\nglobal.set('chasecall5',null);\n\nreturn msg;",
+        "func": "global.set('contestname',null);\nglobal.set('chasecall1',null);\nglobal.set('chasecall2',null);\nglobal.set('chasecall3',null);\nglobal.set('chasecall4',null);\nglobal.set('chasecall5',null);\n\nmsg.payload = \"\"\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 2220,
+        "y": 2140,
         "wires": [
             []
         ]
@@ -24974,7 +24977,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 2280,
+        "y": 2240,
         "wires": [
             [
                 "ed725a6ab2d77106"
@@ -25001,7 +25004,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 2320,
+        "y": 2280,
         "wires": [
             [
                 "01abe21d44dec1e8"
@@ -25028,7 +25031,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 2360,
+        "y": 2320,
         "wires": [
             [
                 "04a1723a5fc42cca"
@@ -25055,7 +25058,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 2400,
+        "y": 2360,
         "wires": [
             [
                 "05353219a2a8076e"
@@ -25082,7 +25085,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 2440,
+        "y": 2400,
         "wires": [
             [
                 "f738a03c7e4b7641"
@@ -25109,7 +25112,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 2480,
+        "y": 2440,
         "wires": [
             []
         ]
@@ -25128,15 +25131,15 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "2",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 400,
-        "y": 2360,
+        "x": 410,
+        "y": 2340,
         "wires": [
             [
                 "f9e7825f50baf241",
@@ -25162,7 +25165,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 890,
-        "y": 2280,
+        "y": 2240,
         "wires": []
     },
     {
@@ -25179,7 +25182,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 890,
-        "y": 2320,
+        "y": 2280,
         "wires": []
     },
     {
@@ -25196,7 +25199,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 890,
-        "y": 2360,
+        "y": 2320,
         "wires": []
     },
     {
@@ -25213,7 +25216,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 890,
-        "y": 2400,
+        "y": 2360,
         "wires": []
     },
     {
@@ -25230,7 +25233,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 890,
-        "y": 2440,
+        "y": 2400,
         "wires": []
     },
     {
@@ -28216,7 +28219,7 @@
         "type": "debug",
         "z": "2eedd966294071cc",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -28282,18 +28285,26 @@
                 "t": "eq",
                 "v": "Contest not supported",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "is not active",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 1050,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "8f683ff5386e05aa",
                 "d04f1ae2a71ae89d",
-                "94781e2098769144",
+                "94781e2098769144"
+            ],
+            [
+                "a473a361ea0204a9",
                 "de2f8c99e2657a88"
             ],
             [
