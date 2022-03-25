@@ -24645,7 +24645,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 1160,
         "y": 2180,
         "wires": [
             []
@@ -24908,7 +24908,7 @@
         "y": 2180,
         "wires": [
             [
-                "53b8d128ed86c659"
+                "0d5f928a68a24cca"
             ]
         ]
     },
@@ -25253,6 +25253,25 @@
         "wires": [
             [
                 "e7f72836de4c6294"
+            ]
+        ]
+    },
+    {
+        "id": "0d5f928a68a24cca",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "To Upper Case",
+        "func": "if (msg.payload.contestname != null)\n{\n    msg.payload.contestname = msg.payload.contestname.toUpperCase();\n}\n\nif (msg.payload.chasecall1 != null)\n{\n    msg.payload.chasecall1 = msg.payload.chasecall1.toUpperCase();\n}\n\nif (msg.payload.chasecall2 != null)\n{\n    msg.payload.chasecall2 = msg.payload.chasecall2.toUpperCase();\n}\n\nif (msg.payload.chasecall3 != null)\n{\n    msg.payload.chasecall3 = msg.payload.chasecall3.toUpperCase();\n}\n\nif (msg.payload.chasecall4 != null)\n{\n    msg.payload.chasecall4 = msg.payload.chasecall4.toUpperCase();\n}\n\nif (msg.payload.chasecall5 != null)\n{\n    msg.payload.chasecall5 = msg.payload.chasecall5.toUpperCase();\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 2180,
+        "wires": [
+            [
+                "53b8d128ed86c659"
             ]
         ]
     },
