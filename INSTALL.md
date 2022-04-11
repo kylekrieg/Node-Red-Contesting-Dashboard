@@ -8,7 +8,9 @@ Did you find an error or unexpected behavior?  I probably fixed it in the latest
 
 ## Raspberry Pi OS Install
 
-Node Red can be installed on almost any Raspberry Pi.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi, there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use, plus a video on how to image your Pi.  See below.
+Node Red can be installed on almost any Raspberry Pi.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi, there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use, plus a video on how to image your Pi.  See below.  
+
+Be sure to build your Raspberry Pi with the ```pi``` username, as the backup and restore functions require the /home/pi directory to exist.  
 
 [Groups IO Raspberry Pi Imager How To](https://groups.io/g/nodered-hamradio/message/5426)
 
