@@ -261,6 +261,7 @@ node-red-dashboard
 node-red-contrib-string
 node-red-contrib-ui-led
 node-red-contrib-unit-converter
+node-red-contrib-moment
 ```
 ## SQLITE Node Configuration
 
