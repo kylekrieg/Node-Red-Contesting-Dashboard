@@ -1,6 +1,6 @@
 ## STOP <- READ THIS SECTION FIRST
 
-Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that you must follow.  Reading through this document will answer 99% of your questions regarding install.  I keep getting asked the same questions over and over and they are explained in this document.  Just take 10 mins and read the doc. 
+Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that you must follow.  Reading through this document will answer 99% of your questions regarding install as I keep getting asked the same questions over and over.  They are explained in this document!  Just take 10 mins and read the doc. 
 
 ## Finding Errors
 
@@ -242,7 +242,7 @@ Name your project ```N1MM_Dashboard_<DATE>```.  Naming your project with the cur
 https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
 ```
 
-![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.JPG)
+![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.jpg)
 
 ## Loading Node Dependencies
 
