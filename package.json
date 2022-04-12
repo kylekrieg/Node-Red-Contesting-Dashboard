@@ -14,7 +14,7 @@
         "node-red-dashboard": "3.1.3",
         "node-red-contrib-string": "1.0.0",
         "node-red-contrib-ui-led": "0.4.11",
-        "node-red-contrib-unit-converter": "0.0.2"
+        "node-red-contrib-unit-converter": "0.0.2",
 	"node-red-contrib-moment": "4.0.0"
     },
     "node-red": {
