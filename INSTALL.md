@@ -1,6 +1,6 @@
 ## STOP <- READ THIS SECTION FIRST
 
-Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that you must follow.  Reading through this document will answer 99% of your questions regarding install.  I keep getting asked the same questions over and over and they are explained in this document.  Just take 10 mins and read the doc. 
+Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that you must follow.  Reading through this document will answer 99% of your questions regarding install as I keep getting asked the same questions over and over.  They are explained in this document!  Just take 10 mins and read the doc. 
 
 ## Finding Errors
 
@@ -8,7 +8,9 @@ Did you find an error or unexpected behavior?  I probably fixed it in the latest
 
 ## Raspberry Pi OS Install
 
-Node Red can be installed on almost any Raspberry Pi.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi, there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use, plus a video on how to image your Pi.  See below.
+Node Red can be installed on almost any Raspberry Pi.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi, there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use, plus a video on how to image your Pi.  See below.  
+
+Be sure to create the ```pi``` username (either at bootup during imaging or later), as the backup and restore functions require the ```/home/pi``` directory to exist.  
 
 [Groups IO Raspberry Pi Imager How To](https://groups.io/g/nodered-hamradio/message/5426)
 
@@ -242,7 +244,7 @@ Name your project ```N1MM_Dashboard_<DATE>```.  Naming your project with the cur
 https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
 ```
 
-![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.JPG)
+![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.jpg)
 
 ## Loading Node Dependencies
 
@@ -261,6 +263,7 @@ node-red-dashboard
 node-red-contrib-string
 node-red-contrib-ui-led
 node-red-contrib-unit-converter
+node-red-contrib-moment
 ```
 ## SQLITE Node Configuration
 
