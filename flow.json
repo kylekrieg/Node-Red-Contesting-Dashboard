@@ -5766,41 +5766,6 @@
         ]
     },
     {
-        "id": "2f1bf610.d7c76a",
-        "type": "ui_worldmap",
-        "z": "407d2b774fe67647",
-        "group": "b8ba38b3.abfb98",
-        "order": 7,
-        "width": 26,
-        "height": 16,
-        "name": "Worked QSOs Map",
-        "lat": "40.3426",
-        "lon": "-92.8554",
-        "zoom": "4",
-        "layer": "OSMG",
-        "cluster": "",
-        "maxage": "",
-        "usermenu": "hide",
-        "layers": "show",
-        "panit": "false",
-        "panlock": "false",
-        "zoomlock": "false",
-        "hiderightclick": "false",
-        "coords": "none",
-        "showgrid": "false",
-        "allowFileDrop": "false",
-        "path": "/qsos",
-        "overlist": "DR,CO,RA,DN,HM",
-        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriO,EsriDG,NatGeo,UKOS,OpTop,SW",
-        "mapname": "",
-        "mapurl": "",
-        "mapopt": "",
-        "mapwms": false,
-        "x": 2270,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "c9f5c786.410838",
         "type": "function",
         "z": "407d2b774fe67647",
@@ -5819,7 +5784,7 @@
                 "eaa8defdbb30a4cb",
                 "611bebabf791b26b",
                 "3617522441b640cb",
-                "2f1bf610.d7c76a"
+                "a6f01856669d3e50"
             ]
         ]
     },
@@ -8360,7 +8325,7 @@
         "y": 140,
         "wires": [
             [
-                "2f1bf610.d7c76a"
+                "a6f01856669d3e50"
             ]
         ]
     },
@@ -8456,7 +8421,7 @@
         "wires": [
             [
                 "d822b32b0913c2e8",
-                "2f1bf610.d7c76a"
+                "a6f01856669d3e50"
             ]
         ]
     },
@@ -9104,6 +9069,41 @@
         "name": "Radio 2 Focus LED",
         "x": 1730,
         "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "a6f01856669d3e50",
+        "type": "ui_worldmap",
+        "z": "407d2b774fe67647",
+        "group": "b8ba38b3.abfb98",
+        "order": 7,
+        "width": "26",
+        "height": "16",
+        "name": "Worked QSOs Map",
+        "lat": "40.3426",
+        "lon": "-92.8554",
+        "zoom": "4",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/qsos",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,OSMH,EsriC,EsriS,EsriT,EsriO,EsriDG,NatGeo,UKOS,OpTop,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 2340,
+        "y": 120,
         "wires": []
     },
     {
