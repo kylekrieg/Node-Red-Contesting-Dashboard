@@ -266,7 +266,7 @@ node-red-contrib-unit-converter
 node-red-contrib-moment
 ```
 
-After installing these node dependencies (which you should receive a pop up message asking you to resolve node dependencies after you clone the project), you'll need to restart Node Red for the nodes to work properly.  From a command prompt, issue the following command.  
+After installing these node dependencies (which you should receive a pop up message asking you to resolve node dependencies after you clone the project), you'll need to restart Node Red for the nodes to work properly.  From a command prompt, issue the following command.  Note : some dashboard nodes will only populate in your node palette after a restart. 
 
 ```sudo systemctl restart nodered.service```
 
