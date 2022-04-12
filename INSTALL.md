@@ -265,6 +265,11 @@ node-red-contrib-ui-led
 node-red-contrib-unit-converter
 node-red-contrib-moment
 ```
+
+After installing these node dependencies (which you should receive a pop up message asking you to resolve node dependencies after you clone the project), you'll need to restart Node Red for the nodes to work properly.  From a command prompt, issue the following command.  Note : some dashboard nodes will only populate in your node palette after a restart. 
+
+```sudo systemctl restart nodered.service```
+
 ## SQLITE Node Configuration
 
 If you follow the instructions for creating the *qsos* database in the pi home directory, you shouldn't need to re-configure any SQLite nodes.  If you are installing this flow on a non-Raspberry Pi environment, you'll need to make sure all SQLite nodes point to the location of the database on the Node Red computer.  To change the default location;
