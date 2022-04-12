@@ -1536,17 +1536,6 @@
         "width": 6
     },
     {
-        "id": "e357ef02.ef3cb",
-        "type": "ui_group",
-        "name": "Ribbon Solar Data",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": true,
-        "className": ""
-    },
-    {
         "id": "c7ddbe09dc516bb8",
         "type": "ui_group",
         "name": "HamQTH XML Login",
@@ -31308,7 +31297,7 @@
         "id": "43f75a01.74e884",
         "type": "inject",
         "z": "3e52b5d54104d7f0",
-        "name": "Daily backup",
+        "name": "Backup",
         "props": [
             {
                 "p": "payload"
@@ -31325,7 +31314,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 370,
+        "x": 350,
         "y": 220,
         "wires": [
             [
@@ -31474,43 +31463,9 @@
         "wires": [
             [
                 "14b4208c.99aaaf",
-                "a1f97bfeed90d2d3",
                 "894d6435bdb8fc81"
             ]
         ]
-    },
-    {
-        "id": "a1f97bfeed90d2d3",
-        "type": "debug",
-        "z": "3e52b5d54104d7f0",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 970,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "6ec3e702aae11818",
-        "type": "debug",
-        "z": "3e52b5d54104d7f0",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1510,
-        "y": 220,
-        "wires": []
     },
     {
         "id": "e58232f49764e24f",
@@ -31523,9 +31478,7 @@
         "x": 1290,
         "y": 220,
         "wires": [
-            [
-                "6ec3e702aae11818"
-            ]
+            []
         ]
     },
     {
@@ -31598,7 +31551,7 @@
         "className": "",
         "topic": "",
         "name": "Backup Dialog Box",
-        "x": 1470,
+        "x": 1650,
         "y": 280,
         "wires": [
             []
@@ -31674,10 +31627,98 @@
         "className": "",
         "topic": "",
         "name": "Restore Dialog Box",
-        "x": 1210,
+        "x": 1650,
         "y": 580,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "c85e5115fdd0c173",
+        "type": "catch",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "scope": [
+            "4cb14d0.afc25b4"
+        ],
+        "uncaught": false,
+        "x": 1190,
+        "y": 320,
+        "wires": [
+            [
+                "95830ed52e3781db"
+            ]
+        ]
+    },
+    {
+        "id": "95830ed52e3781db",
+        "type": "change",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "error.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1380,
+        "y": 320,
+        "wires": [
+            [
+                "7d74c21038089afd"
+            ]
+        ]
+    },
+    {
+        "id": "5ad33a23425e24ef",
+        "type": "catch",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "scope": [
+            "d8fa7064.9f60a"
+        ],
+        "uncaught": false,
+        "x": 950,
+        "y": 620,
+        "wires": [
+            [
+                "5c231f1f0fb2e5ec"
+            ]
+        ]
+    },
+    {
+        "id": "5c231f1f0fb2e5ec",
+        "type": "change",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "error.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 620,
+        "wires": [
+            [
+                "3fc6b038acd1dd64"
+            ]
         ]
     }
 ]
