@@ -1,0 +1,25 @@
+[
+    {
+        "id": "5345d71389425140",
+        "type": "ui_template",
+        "z": "407d2b774fe67647",
+        "group": "",
+        "name": "Dashboard Theme : Dark",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div>\n    <link href=\"https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap\" rel=\"stylesheet\">\n    <style>\n        body {\n            --background: #000000;\n            --on-background: white;\n            --surface: #000000;\n            --on-surface: white;\n            --primary: var(--nr-dashboard-widgetColor);\n            --on-primary: white;\n            --secondary: var(--nr-dashboard-groupTextColor);\n            --radius-s: 8px;\n            --font-weight-m: 300;\n            --font-weight-m: 400;\n            --font-weight-l: 700;\n            --space-s: 1px;\n            --space-m: 1px;\n            --space-l: 1px;\n        }\n\n        body.nr-dashboard-theme {\n            background-color: var(--background);\n            font-family: 'Fira Sans', sans-serif;\n        }\n\n        body.nr-dashboard-theme md-content md-card {\n            background-color: #000000;\n            border-color: #000000;\n        }\n        \n        body.nr-dashboard-theme md-toolbar {\n            background-color: #191970;\n        }\n        \n        .nr-dashboard-theme ui-card-panel {\n            background-color: #000000;\n            border: 5px solid #000000;\n        }\n        \n        .md_card.nr-dashboard-template.nr-dashboard-ui_led.visible {\n            background-color: #000000;\n        }\n    </style>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1150,
+        "y": 1800,
+        "wires": [
+            []
+        ],
+        "icon": "node-red-dashboard/ui_colour_picker.png",
+        "info": "# Modern Dark Theme for node-red-dashboard\n\nInspired by Victor Lucachi with his [Node Red Dashboard Concept](https://dribbble.com/shots/10356530-Node-Red-Dashboard-Concept) on Dribbble. Thank you for your work.\n\n## Customize\n\n1. Go on dashboard customisation tab (At the right of Debug Console).\n2. Select the style `Dark`.\n3. Pick the color you want. Example `#66B5F8`\n\n## Buttons\n\nUse `2x2` size for buttons with icon and text on the screenshot"
+    }
+]
