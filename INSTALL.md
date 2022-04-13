@@ -238,7 +238,7 @@ Information on configuring TR4W to send the UDP broadcasts on the correct ports 
 
 I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, ```DO NOT USE SSH``` if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
 
-Name your project ```N1MM_Dashboard_<DATE>```.  Naming your project with the current date will help when upgrading to the latest version later. 
+Name your project ```Contest_Dashboard_<DATE>```.  Naming your project with the current date will help when upgrading to the latest version later. 
 
 ```
 https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
