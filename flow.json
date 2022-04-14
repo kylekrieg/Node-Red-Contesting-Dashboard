@@ -7923,7 +7923,7 @@
         "type": "debug",
         "z": "407d2b774fe67647",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7940,7 +7940,7 @@
         "type": "debug",
         "z": "407d2b774fe67647",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8260,7 +8260,7 @@
         "type": "debug",
         "z": "407d2b774fe67647",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -20461,7 +20461,7 @@
         "mapopt": "",
         "mapwms": false,
         "x": 1400,
-        "y": 600,
+        "y": 360,
         "wires": []
     },
     {
@@ -20912,12 +20912,12 @@
         "links": [
             "4320ff577c7cb858"
         ],
-        "x": 515,
-        "y": 500,
+        "x": 255,
+        "y": 480,
         "wires": [
             [
-                "1621cbc09402bd19",
-                "69d83cae2e4e6a4c"
+                "e08bbfefae9ae6c0",
+                "1621cbc09402bd19"
             ]
         ]
     },
@@ -20929,14 +20929,14 @@
         "links": [
             "8804affd65082b4f"
         ],
-        "x": 1015,
-        "y": 180,
+        "x": 755,
+        "y": 160,
         "wires": [
             [
                 "8c261ef14e000fab",
                 "4b288d63d33664da",
-                "c619ce9fa95f791b",
-                "0fe0e7c3dcbe97e9"
+                "0fe0e7c3dcbe97e9",
+                "cd4571df3441bb88"
             ]
         ]
     },
@@ -20999,7 +20999,7 @@
         "repair": false,
         "outputs": 2,
         "x": 820,
-        "y": 440,
+        "y": 520,
         "wires": [
             [
                 "6e8e001072beccc3"
@@ -21029,7 +21029,7 @@
         "to": "",
         "reg": false,
         "x": 1060,
-        "y": 460,
+        "y": 540,
         "wires": [
             [
                 "93c97ccaa3e53d22",
@@ -21059,13 +21059,122 @@
         "to": "",
         "reg": false,
         "x": 1070,
-        "y": 420,
+        "y": 500,
         "wires": [
             [
                 "93c97ccaa3e53d22",
                 "482152c92f2f5813",
                 "2f7d9a2d94268e97",
                 "34f4bf78ec8102ac"
+            ]
+        ]
+    },
+    {
+        "id": "1ff6df90c01046ae",
+        "type": "inject",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Inject Home Icon",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "69e686fc1a9e8f14"
+            ]
+        ]
+    },
+    {
+        "id": "69e686fc1a9e8f14",
+        "type": "function",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Inject Home",
+        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nreturn {payload : {name:\"home\", lat:lat, lon:lon, icon:\"fa-home\", layer:\"Home\"}};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 300,
+        "wires": [
+            [
+                "c619ce9fa95f791b",
+                "69d83cae2e4e6a4c"
+            ]
+        ]
+    },
+    {
+        "id": "e08bbfefae9ae6c0",
+        "type": "change",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Remove Contact Info",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload.label",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.band",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 360,
+        "wires": [
+            [
+                "69d83cae2e4e6a4c"
+            ]
+        ]
+    },
+    {
+        "id": "cd4571df3441bb88",
+        "type": "change",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Remove Contact Info",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload.label",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.band",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 240,
+        "wires": [
+            [
+                "c619ce9fa95f791b"
             ]
         ]
     },
