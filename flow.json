@@ -265,22 +265,30 @@
         ],
         "out": [
             {
-                "x": 3860,
-                "y": 260,
+                "x": 4760,
+                "y": 360,
                 "wires": [
                     {
-                        "id": "3762f0280985ea10",
+                        "id": "1c3ab9f47658b3eb",
                         "port": 0
                     },
                     {
-                        "id": "3762f0280985ea10",
-                        "port": 1
+                        "id": "1c8b4345f764571b",
+                        "port": 0
+                    },
+                    {
+                        "id": "25c39c91c41519af",
+                        "port": 0
+                    },
+                    {
+                        "id": "f5f512454cd1849d",
+                        "port": 0
                     }
                 ]
             },
             {
-                "x": 4580,
-                "y": 340,
+                "x": 4600,
+                "y": 800,
                 "wires": [
                     {
                         "id": "db552b47bb5f9064",
@@ -1303,7 +1311,7 @@
         "tab": "568305b092b67570",
         "order": 3,
         "disp": true,
-        "width": 6,
+        "width": 5,
         "collapse": false,
         "className": ""
     },
@@ -1498,6 +1506,99 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "ab90bdc2382e7735",
+        "type": "ui_group",
+        "name": "Chat Box",
+        "tab": "568305b092b67570",
+        "order": 5,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9e3f259da9c7796b",
+        "type": "ui_group",
+        "name": "User Defined Items",
+        "tab": "568305b092b67570",
+        "order": 6,
+        "disp": true,
+        "width": 37,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "61f1faff3469a80a",
+        "type": "ui_group",
+        "name": "Webcam",
+        "tab": "568305b092b67570",
+        "order": 7,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6f2ddabc7d56a64a",
+        "type": "ui_spacer",
+        "z": "b59d8b7ca43e59ce",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 2,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "47311920c29fad69",
+        "type": "ui_spacer",
+        "z": "b59d8b7ca43e59ce",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 3,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "5b0da3a8c05213d3",
+        "type": "ui_spacer",
+        "z": "b59d8b7ca43e59ce",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 4,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "e9ec6737c18940c6",
+        "type": "ui_spacer",
+        "z": "b59d8b7ca43e59ce",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 5,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "415f3b5ccdf888dd",
+        "type": "ui_spacer",
+        "z": "b59d8b7ca43e59ce",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 6,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "1fdc473d7ccdf940",
+        "type": "ui_spacer",
+        "z": "b59d8b7ca43e59ce",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 7,
+        "width": 4,
+        "height": 1
     },
     {
         "id": "db6c3ead34896ed7",
@@ -3110,8 +3211,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4270,
-        "y": 220,
+        "x": 4290,
+        "y": 680,
         "wires": [
             []
         ]
@@ -3149,8 +3250,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4270,
-        "y": 260,
+        "x": 4290,
+        "y": 720,
         "wires": [
             []
         ]
@@ -3188,8 +3289,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4280,
-        "y": 300,
+        "x": 4300,
+        "y": 760,
         "wires": [
             []
         ]
@@ -3227,8 +3328,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4280,
-        "y": 340,
+        "x": 4300,
+        "y": 800,
         "wires": [
             []
         ]
@@ -3266,8 +3367,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4270,
-        "y": 380,
+        "x": 4290,
+        "y": 840,
         "wires": [
             []
         ]
@@ -3305,8 +3406,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4270,
-        "y": 420,
+        "x": 4290,
+        "y": 880,
         "wires": [
             []
         ]
@@ -3344,8 +3445,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4280,
-        "y": 460,
+        "x": 4300,
+        "y": 920,
         "wires": [
             []
         ]
@@ -3383,8 +3484,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4280,
-        "y": 500,
+        "x": 4300,
+        "y": 960,
         "wires": [
             []
         ]
@@ -3415,8 +3516,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4280,
-        "y": 540,
+        "x": 4300,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -3492,8 +3593,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 9,
-        "x": 3950,
-        "y": 380,
+        "x": 3970,
+        "y": 840,
         "wires": [
             [
                 "db552b47bb5f9064"
@@ -4320,7 +4421,7 @@
         "id": "3762f0280985ea10",
         "type": "switch",
         "z": "bedd4acdc0e27dab",
-        "name": "QSO or Spot?",
+        "name": "QSO, Lookup or Spot?",
         "property": "qsotype",
         "propertyType": "msg",
         "rules": [
@@ -4343,11 +4444,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 3560,
-        "y": 360,
+        "x": 3520,
+        "y": 380,
         "wires": [
-            [],
-            [],
+            [
+                "b228e5cf7ea48308"
+            ],
+            [
+                "b228e5cf7ea48308"
+            ],
             [
                 "6dddf05a5c5aefea"
             ]
@@ -4766,9 +4871,9 @@
         ]
     },
     {
-        "id": "6961ddaf.bce294",
+        "id": "b228e5cf7ea48308",
         "type": "switch",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "Get Band",
         "property": "payload.band",
         "propertyType": "msg",
@@ -4820,42 +4925,42 @@
         "checkall": "true",
         "repair": false,
         "outputs": 9,
-        "x": 440,
+        "x": 3800,
         "y": 320,
         "wires": [
             [
-                "1f6207d2.7e1b88"
+                "12aaa60adbe53aa4"
             ],
             [
-                "161b20a8.f6a8bf"
+                "13d5c886dc925ca0"
             ],
             [
-                "93ee80e.13db38"
+                "425279b6d14c3da6"
             ],
             [
-                "c202fbba.8c7618"
+                "df3e87bc737f56b9"
             ],
             [
-                "8e05de8a.e54b4"
+                "3443249ce4903268"
             ],
             [
-                "253028d3.492758"
+                "de5b10a5ac9d33d4"
             ],
             [
-                "da462077.ba061"
+                "d7622297fb04e81f"
             ],
             [
-                "df4d2948.3e71e8"
+                "c73b6c786dbf3a47"
             ],
             [
-                "a55cf94b.bf6c58"
+                "81490e7666221ff4"
             ]
         ]
     },
     {
-        "id": "1ccdca53.045846",
+        "id": "ba4bfb65e8d9d957",
         "type": "switch",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "Get Mode",
         "property": "payload.mode",
         "propertyType": "msg",
@@ -4894,33 +4999,33 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 960,
+        "x": 4320,
         "y": 320,
         "wires": [
             [
-                "29346b4d.ba3fc4"
+                "1c3ab9f47658b3eb"
             ],
             [
-                "677cc5f0.94d0dc"
+                "1c8b4345f764571b"
             ],
             [
-                "677cc5f0.94d0dc"
+                "1c8b4345f764571b"
             ],
             [
-                "677cc5f0.94d0dc"
+                "1c8b4345f764571b"
             ],
             [
-                "8a9d728d.58091"
+                "25c39c91c41519af"
             ],
             [
-                "15b43297.d7016d"
+                "f5f512454cd1849d"
             ]
         ]
     },
     {
-        "id": "1f6207d2.7e1b88",
+        "id": "12aaa60adbe53aa4",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "160M Color Purple",
         "rules": [
             {
@@ -4950,18 +5055,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 4050,
         "y": 160,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "161b20a8.f6a8bf",
+        "id": "13d5c886dc925ca0",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "80M Color Green",
         "rules": [
             {
@@ -4991,18 +5096,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 4050,
         "y": 200,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "93ee80e.13db38",
+        "id": "425279b6d14c3da6",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "40M Color Blue",
         "rules": [
             {
@@ -5032,18 +5137,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 4060,
         "y": 240,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "c202fbba.8c7618",
+        "id": "df3e87bc737f56b9",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "20M Color Red",
         "rules": [
             {
@@ -5073,18 +5178,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 4060,
         "y": 280,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "8e05de8a.e54b4",
+        "id": "3443249ce4903268",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "15M Color Yellow",
         "rules": [
             {
@@ -5114,18 +5219,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 4050,
         "y": 320,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "253028d3.492758",
+        "id": "de5b10a5ac9d33d4",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "10M Color Orange",
         "rules": [
             {
@@ -5155,18 +5260,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 4050,
         "y": 360,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "da462077.ba061",
+        "id": "d7622297fb04e81f",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "6M Color White",
         "rules": [
             {
@@ -5196,18 +5301,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 4060,
         "y": 400,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "df4d2948.3e71e8",
+        "id": "c73b6c786dbf3a47",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "2M Color Lime",
         "rules": [
             {
@@ -5237,18 +5342,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 4060,
         "y": 440,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "a55cf94b.bf6c58",
+        "id": "81490e7666221ff4",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "Else Color Black",
         "rules": [
             {
@@ -5271,18 +5376,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 4060,
         "y": 480,
         "wires": [
             [
-                "1ccdca53.045846"
+                "ba4bfb65e8d9d957"
             ]
         ]
     },
     {
-        "id": "29346b4d.ba3fc4",
+        "id": "1c3ab9f47658b3eb",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "Label CW",
         "rules": [
             {
@@ -5298,18 +5403,16 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1160,
+        "x": 4520,
         "y": 280,
         "wires": [
-            [
-                "c9f5c786.410838"
-            ]
+            []
         ]
     },
     {
-        "id": "677cc5f0.94d0dc",
+        "id": "1c8b4345f764571b",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "Label SSB",
         "rules": [
             {
@@ -5325,18 +5428,16 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 4530,
         "y": 320,
         "wires": [
-            [
-                "c9f5c786.410838"
-            ]
+            []
         ]
     },
     {
-        "id": "8a9d728d.58091",
+        "id": "25c39c91c41519af",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "Label RTTY",
         "rules": [
             {
@@ -5352,18 +5453,16 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 4530,
         "y": 360,
         "wires": [
-            [
-                "c9f5c786.410838"
-            ]
+            []
         ]
     },
     {
-        "id": "15b43297.d7016d",
+        "id": "f5f512454cd1849d",
         "type": "change",
-        "z": "407d2b774fe67647",
+        "z": "bedd4acdc0e27dab",
         "name": "Label FM",
         "rules": [
             {
@@ -5379,12 +5478,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1160,
+        "x": 4520,
         "y": 400,
         "wires": [
-            [
-                "c9f5c786.410838"
-            ]
+            []
         ]
     },
     {
@@ -5398,15 +5495,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
-        "y": 320,
+        "x": 1010,
+        "y": 300,
         "wires": [
             [
                 "c0cc5426.3783b8",
                 "eaa8defdbb30a4cb",
                 "611bebabf791b26b",
                 "3617522441b640cb",
-                "a6f01856669d3e50"
+                "a6f01856669d3e50",
+                "4320ff577c7cb858"
             ]
         ]
     },
@@ -5423,8 +5521,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3120,
-        "y": 80,
+        "x": 2380,
+        "y": 60,
         "wires": []
     },
     {
@@ -5440,8 +5538,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.mode}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3130,
-        "y": 120,
+        "x": 2390,
+        "y": 100,
         "wires": []
     },
     {
@@ -5457,8 +5555,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.exchange}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3140,
-        "y": 200,
+        "x": 2400,
+        "y": 180,
         "wires": []
     },
     {
@@ -5481,8 +5579,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2240,
-        "y": 200,
+        "x": 1500,
+        "y": 180,
         "wires": [
             [
                 "689d9371.ad2e0c"
@@ -5511,8 +5609,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2570,
-        "y": 140,
+        "x": 1830,
+        "y": 120,
         "wires": [
             [
                 "586d604ba6bb4097"
@@ -5538,8 +5636,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2560,
-        "y": 180,
+        "x": 1820,
+        "y": 160,
         "wires": [
             [
                 "586d604ba6bb4097"
@@ -5559,8 +5657,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.band}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3130,
-        "y": 160,
+        "x": 2390,
+        "y": 140,
         "wires": []
     },
     {
@@ -5585,8 +5683,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2210,
-        "y": 400,
+        "x": 1470,
+        "y": 380,
         "wires": [
             [
                 "26d6dfc5398aed9a",
@@ -5605,8 +5703,8 @@
         "name": "",
         "persistId": "",
         "humanizeLocale": "",
-        "x": 2680,
-        "y": 480,
+        "x": 1940,
+        "y": 460,
         "wires": [
             [
                 "46edf21ad9fe8580"
@@ -5624,8 +5722,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2860,
-        "y": 480,
+        "x": 2120,
+        "y": 460,
         "wires": [
             [
                 "5a216be2bdc202b8"
@@ -5654,8 +5752,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "str",
-        "x": 2460,
-        "y": 360,
+        "x": 1720,
+        "y": 340,
         "wires": [
             [
                 "c4ca101c43ab8cb0",
@@ -5676,8 +5774,8 @@
         "format": "<font size = 50 font color=#FF8C00>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3080,
-        "y": 320,
+        "x": 2340,
+        "y": 300,
         "wires": []
     },
     {
@@ -5687,8 +5785,8 @@
         "name": "",
         "persistId": "",
         "humanizeLocale": "",
-        "x": 2680,
-        "y": 320,
+        "x": 1940,
+        "y": 300,
         "wires": [
             [
                 "78b62d696464ca78"
@@ -5706,8 +5804,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2860,
-        "y": 320,
+        "x": 2120,
+        "y": 300,
         "wires": [
             [
                 "6697e03dc0ecce50"
@@ -5733,8 +5831,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2510,
-        "y": 320,
+        "x": 1770,
+        "y": 300,
         "wires": [
             [
                 "1c23e47818d36917"
@@ -5760,8 +5858,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2510,
-        "y": 480,
+        "x": 1770,
+        "y": 460,
         "wires": [
             [
                 "c4ca101c43ab8cb0"
@@ -5781,8 +5879,8 @@
         "format": "<font size = 50 font color=#008000>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3100,
-        "y": 480,
+        "x": 2360,
+        "y": 460,
         "wires": []
     },
     {
@@ -5798,8 +5896,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3100,
-        "y": 600,
+        "x": 2360,
+        "y": 580,
         "wires": []
     },
     {
@@ -5809,8 +5907,8 @@
         "name": "",
         "persistId": "",
         "humanizeLocale": "",
-        "x": 2680,
-        "y": 600,
+        "x": 1940,
+        "y": 580,
         "wires": [
             [
                 "a0658e82121731a8"
@@ -5828,8 +5926,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2860,
-        "y": 600,
+        "x": 2120,
+        "y": 580,
         "wires": [
             [
                 "d253cee5fb3ba4b9"
@@ -5855,8 +5953,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2510,
-        "y": 600,
+        "x": 1770,
+        "y": 580,
         "wires": [
             [
                 "b77db70e05f8b1d9"
@@ -5880,8 +5978,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2230,
-        "y": 600,
+        "x": 1490,
+        "y": 580,
         "wires": [
             [
                 "774ff0257828e8ad"
@@ -5909,8 +6007,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 2480,
-        "y": 640,
+        "x": 1760,
+        "y": 620,
         "wires": [
             [
                 "b77db70e05f8b1d9"
@@ -5930,8 +6028,8 @@
         "format": "<font size = 50 font color=#FF8C00>{{msg.payload.name}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2500,
-        "y": 280,
+        "x": 1760,
+        "y": 260,
         "wires": []
     },
     {
@@ -5947,8 +6045,8 @@
         "format": "<font size = 50 font color=#008000>{{msg.payload.name}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2500,
-        "y": 520,
+        "x": 1760,
+        "y": 500,
         "wires": []
     },
     {
@@ -6063,8 +6161,8 @@
         "onceDelay": "1",
         "topic": "",
         "payloadType": "str",
-        "x": 2470,
-        "y": 400,
+        "x": 1730,
+        "y": 380,
         "wires": [
             [
                 "c4ca101c43ab8cb0",
@@ -6093,8 +6191,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 2490,
-        "y": 680,
+        "x": 1770,
+        "y": 660,
         "wires": [
             [
                 "b77db70e05f8b1d9"
@@ -6720,7 +6818,7 @@
         "type": "comment",
         "z": "407d2b774fe67647",
         "name": "Readme First!!!! First Time Install",
-        "info": "Please see the following install document located here : \n\nhttps://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/INSTALL.md",
+        "info": "Please see the following install document located here : \n\n[https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/INSTALL.md](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/INSTALL.md)",
         "x": 210,
         "y": 120,
         "wires": []
@@ -7523,8 +7621,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2830,
-        "y": 160,
+        "x": 2090,
+        "y": 140,
         "wires": [
             [
                 "6c3eca08.f081a4",
@@ -7550,8 +7648,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3070,
-        "y": 40,
+        "x": 2330,
+        "y": 20,
         "wires": []
     },
     {
@@ -7736,7 +7834,7 @@
         "type": "comment",
         "z": "407d2b774fe67647",
         "name": "To Do",
-        "info": "Graph or plot seen spots vs actual qsos in the log.\n\nSpectator dashboard where you can stream to YouTube/Twitch/FB to show off Amateur Radio and contesting without showing your score.\n\nPull in Onlinescoreboard stats.\n\nPopulate PC computers names automatically from the XML UDP packets and stick in global variable.\n\nSO2R or split mode based on the UDP packet coming in and showing that on the radio tab.\n\nShow what macro is being pressed in the radio tab.\n\n",
+        "info": "Graph or plot seen spots vs actual qsos in the log\n\nSpectator dashboard where you can stream to YouTube/Twitch/FB to show off Amateur Radio and contesting without showing your score\n\nPopulate PC computers names automatically from the XML UDP packets and stick in global variable\n\nChoropleth map for working states/sections/zones\n\nScoreboard integration in the top ribbon bar\n\nDXLog integration\n\n\n",
         "x": 150,
         "y": 60,
         "wires": []
@@ -7763,7 +7861,7 @@
         "type": "comment",
         "z": "407d2b774fe67647",
         "name": "Issues",
-        "info": "",
+        "info": "Please log issues at the following locations \n\n1) [https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/issues](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/issues)\n\n2) [https://groups.io/g/nodered-hamradio](https://groups.io/g/nodered-hamradio)",
         "x": 310,
         "y": 60,
         "wires": []
@@ -7810,12 +7908,12 @@
         "type": "subflow:bedd4acdc0e27dab",
         "z": "407d2b774fe67647",
         "name": "",
-        "x": 200,
-        "y": 320,
+        "x": 420,
+        "y": 300,
         "wires": [
             [
-                "6961ddaf.bce294",
-                "13d29b4154be030c"
+                "13d29b4154be030c",
+                "825f9b7a2b7fc6e2"
             ],
             []
         ]
@@ -7825,7 +7923,7 @@
         "type": "debug",
         "z": "407d2b774fe67647",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7833,8 +7931,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
-        "y": 200,
+        "x": 530,
+        "y": 140,
         "wires": []
     },
     {
@@ -7842,7 +7940,7 @@
         "type": "debug",
         "z": "407d2b774fe67647",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7850,8 +7948,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2210,
-        "y": 280,
+        "x": 1470,
+        "y": 260,
         "wires": []
     },
     {
@@ -7867,8 +7965,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.op}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3120,
-        "y": 280,
+        "x": 2380,
+        "y": 260,
         "wires": []
     },
     {
@@ -7896,8 +7994,8 @@
         "links": [
             "677d263669792c2d"
         ],
-        "x": 75,
-        "y": 320,
+        "x": 295,
+        "y": 300,
         "wires": [
             [
                 "cadea72441280e66",
@@ -7943,8 +8041,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 1840,
-        "y": 140,
+        "x": 1100,
+        "y": 120,
         "wires": [
             [
                 "a6f01856669d3e50"
@@ -8019,8 +8117,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1830,
-        "y": 100,
+        "x": 1090,
+        "y": 80,
         "wires": [
             [
                 "1fef8af3224d3ace"
@@ -8038,8 +8136,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2050,
-        "y": 100,
+        "x": 1310,
+        "y": 80,
         "wires": [
             [
                 "d822b32b0913c2e8",
@@ -8059,8 +8157,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2300,
-        "y": 60,
+        "x": 1560,
+        "y": 40,
         "wires": []
     },
     {
@@ -8084,8 +8182,8 @@
         "once": true,
         "onceDelay": ".1",
         "topic": "",
-        "x": 2470,
-        "y": 440,
+        "x": 1730,
+        "y": 420,
         "wires": [
             [
                 "1c23e47818d36917",
@@ -8114,8 +8212,8 @@
         "once": true,
         "onceDelay": ".1",
         "topic": "",
-        "x": 2490,
-        "y": 720,
+        "x": 1770,
+        "y": 700,
         "wires": [
             [
                 "b77db70e05f8b1d9"
@@ -8133,8 +8231,8 @@
             "b77db70e05f8b1d9"
         ],
         "uncaught": false,
-        "x": 2780,
-        "y": 720,
+        "x": 2060,
+        "y": 700,
         "wires": [
             [
                 "3d9090ccaadd42cb"
@@ -8153,8 +8251,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3020,
-        "y": 720,
+        "x": 2300,
+        "y": 700,
         "wires": []
     },
     {
@@ -8162,7 +8260,7 @@
         "type": "debug",
         "z": "407d2b774fe67647",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8170,8 +8268,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 300,
-        "y": 460,
+        "x": 390,
+        "y": 340,
         "wires": []
     },
     {
@@ -8187,8 +8285,8 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3340,
-        "y": 240,
+        "x": 2600,
+        "y": 220,
         "wires": []
     },
     {
@@ -8202,8 +8300,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3100,
-        "y": 240,
+        "x": 2360,
+        "y": 220,
         "wires": [
             [
                 "ce8f3cdfc915749d",
@@ -8224,8 +8322,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3460,
-        "y": 320,
+        "x": 2610,
+        "y": 180,
         "wires": []
     },
     {
@@ -8724,8 +8822,97 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 2340,
-        "y": 120,
+        "x": 1600,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "af6a11b52841ef4a",
+        "type": "comment",
+        "z": "407d2b774fe67647",
+        "name": "Standard Payload",
+        "info": "`{\n   \"payload\":{\n      \"contactinfo\":{\n         \"app\":[\n            \"N1MM\"\n         ],\n         \"contestname\":[\n            \"CQWPXSSB\"\n         ],\n         \"contestnr\":[\n            \"1\"\n         ],\n         \"timestamp\":[\n            \"2022-04-13 17:02:05\"\n         ],\n         \"mycall\":[\n            \"AA0Z\"\n         ],\n         \"band\":[\n            \"21\"\n         ],\n         \"rxfreq\":[\n            \"2130000\"\n         ],\n         \"txfreq\":[\n            \"2130000\"\n         ],\n         \"operator\":[\n            \"AA0Z\"\n         ],\n         \"mode\":[\n            \"USB\"\n         ],\n         \"call\":[\n            \"AA0Z\"\n         ],\n         \"countryprefix\":[\n            \"K\"\n         ],\n         \"wpxprefix\":[\n            \"AA0\"\n         ],\n         \"stationprefix\":[\n            \"AA0Z\"\n         ],\n         \"continent\":[\n            \"NA\"\n         ],\n         \"snt\":[\n            \"59\"\n         ],\n         \"sntnr\":[\n            \"62\"\n         ],\n         \"rcv\":[\n            \"59\"\n         ],\n         \"rcvnr\":[\n            \"7\"\n         ],\n         \"gridsquare\":[\n            \"\"\n         ],\n         \"exchange1\":[\n            \"\"\n         ],\n         \"section\":[\n            \"\"\n         ],\n         \"comment\":[\n            \"\"\n         ],\n         \"qth\":[\n            \"\"\n         ],\n         \"name\":[\n            \"\"\n         ],\n         \"power\":[\n            \"\"\n         ],\n         \"misctext\":[\n            \"\"\n         ],\n         \"zone\":[\n            \"4\"\n         ],\n         \"prec\":[\n            \"\"\n         ],\n         \"ck\":[\n            \"0\"\n         ],\n         \"ismultiplier1\":[\n            \"0\"\n         ],\n         \"ismultiplier2\":[\n            \"0\"\n         ],\n         \"ismultiplier3\":[\n            \"0\"\n         ],\n         \"points\":[\n            \"0\"\n         ],\n         \"radionr\":[\n            \"2\"\n         ],\n         \"run1run2\":[\n            \"1\"\n         ],\n         \"RoverLocation\":[\n            \"\"\n         ],\n         \"RadioInterfaced\":[\n            \"0\"\n         ],\n         \"NetworkedCompNr\":[\n            \"0\"\n         ],\n         \"IsOriginal\":[\n            \"True\"\n         ],\n         \"NetBiosName\":[\n            \"AA0Z-STREAM\"\n         ],\n         \"IsRunQSO\":[\n            \"1\"\n         ],\n         \"StationName\":[\n            \"AA0Z-STREAM\"\n         ],\n         \"ID\":[\n            \"fa753cd2ec5f4f5a82a46063e895d173\"\n         ],\n         \"IsClaimedQso\":[\n            \"1\"\n         ]\n      }\n   },\n   \"fromip\":\"192.168.1.119:57670\",\n   \"ip\":\"192.168.1.119\",\n   \"port\":57670,\n   \"_msgid\":\"1a3050bba95254c1\",\n   \"qsotype\":\"qso\",\n   \"_event\":\"node:677d263669792c2d\"\n}`",
+        "x": 370,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cf1edc41b5adc8be",
+        "type": "comment",
+        "z": "407d2b774fe67647",
+        "name": "Standard Payload",
+        "info": "`{\n   \"payload\":{\n      \"name\":\"AA0Z\",\n      \"lat\":\"38.58\",\n      \"lon\":\"-90.29\",\n      \"ttl\":\"1200\",\n      \"op\":\"AA0Z\",\n      \"band\":\"15M\",\n      \"mode\":\"SSB\",\n      \"isrunqso\":\"1\",\n      \"exchange\":\"7\",\n      \"section\":\"\",\n      \"ID\":\"fa753cd2ec5f4f5a82a46063e895d173\",\n      \"distance_km\":405,\n      \"distance_miles\":252,\n      \"iconColor\":\"#FFFF00\",\n      \"layer\":\"15M\",\n      \"label\":\"15M\",\n      \"ismultiplier\":0,\n      \"greatcircle\":[\n         [\n            35.295004,\n            -88.301451\n         ],\n         [\n            38.58,\n            -90.29\n         ]\n      ]\n   },\n   \"fromip\":\"192.168.1.119:57670\",\n   \"ip\":\"192.168.1.119\",\n   \"port\":57670,\n   \"_msgid\":\"1a3050bba95254c1\",\n   \"qsotype\":\"qso\",\n   \"_event\":\"node:677d263669792c2d\",\n   \"original\":{\n      \"app\":[\n         \"N1MM\"\n      ],\n      \"contestname\":[\n         \"CQWPXSSB\"\n      ],\n      \"contestnr\":[\n         \"1\"\n      ],\n      \"timestamp\":[\n         \"2022-04-13 17:02:05\"\n      ],\n      \"mycall\":[\n         \"AA0Z\"\n      ],\n      \"band\":[\n         \"21\"\n      ],\n      \"rxfreq\":[\n         \"2130000\"\n      ],\n      \"txfreq\":[\n         \"2130000\"\n      ],\n      \"operator\":[\n         \"AA0Z\"\n      ],\n      \"mode\":[\n         \"USB\"\n      ],\n      \"call\":[\n         \"AA0Z\"\n      ],\n      \"countryprefix\":[\n         \"K\"\n      ],\n      \"wpxprefix\":[\n         \"AA0\"\n      ],\n      \"stationprefix\":[\n         \"AA0Z\"\n      ],\n      \"continent\":[\n         \"NA\"\n      ],\n      \"snt\":[\n         \"59\"\n      ],\n      \"sntnr\":[\n         \"62\"\n      ],\n      \"rcv\":[\n         \"59\"\n      ],\n      \"rcvnr\":[\n         \"7\"\n      ],\n      \"gridsquare\":[\n         \"\"\n      ],\n      \"exchange1\":[\n         \"\"\n      ],\n      \"section\":[\n         \"\"\n      ],\n      \"comment\":[\n         \"\"\n      ],\n      \"qth\":[\n         \"\"\n      ],\n      \"name\":[\n         \"\"\n      ],\n      \"power\":[\n         \"\"\n      ],\n      \"misctext\":[\n         \"\"\n      ],\n      \"zone\":[\n         \"4\"\n      ],\n      \"prec\":[\n         \"\"\n      ],\n      \"ck\":[\n         \"0\"\n      ],\n      \"ismultiplier1\":[\n         \"0\"\n      ],\n      \"ismultiplier2\":[\n         \"0\"\n      ],\n      \"ismultiplier3\":[\n         \"0\"\n      ],\n      \"points\":[\n         \"0\"\n      ],\n      \"radionr\":[\n         \"2\"\n      ],\n      \"run1run2\":[\n         \"1\"\n      ],\n      \"RoverLocation\":[\n         \"\"\n      ],\n      \"RadioInterfaced\":[\n         \"0\"\n      ],\n      \"NetworkedCompNr\":[\n         \"0\"\n      ],\n      \"IsOriginal\":[\n         \"True\"\n      ],\n      \"NetBiosName\":[\n         \"AA0Z-STREAM\"\n      ],\n      \"IsRunQSO\":[\n         \"1\"\n      ],\n      \"StationName\":[\n         \"AA0Z-STREAM\"\n      ],\n      \"ID\":[\n         \"fa753cd2ec5f4f5a82a46063e895d173\"\n      ],\n      \"IsClaimedQso\":[\n         \"1\"\n      ]\n   },\n   \"hamqthkey\":\"062aa7cc923e58443c553a0d086319b29cefcde1\",\n   \"statusCode\":200,\n   \"headers\":{\n      \"date\":\"Wed, 13 Apr 2022 17:02:04 GMT\",\n      \"server\":\"Apache/2.4.18 (Ubuntu)\",\n      \"access-control-allow-origin\":\"*\",\n      \"expires\":\"Thu, 19 Nov 1981 08:52:00 GMT\",\n      \"cache-control\":\"no-store, no-cache, must-revalidate, post-check=0, pre-check=0\",\n      \"pragma\":\"no-cache\",\n      \"set-cookie\":[\n         \"nette-browser=r2gbbaxo71; path=/; domain=.hamqth.com; httponly\",\n         \"PHPSESSID=kup08664dnc4bu1bia82bi5ku4; expires=Fri, 13-May-2022 17:02:04 GMT; Max-Age=2592000; path=/; domain=.hamqth.com; HttpOnly\",\n         \"hamqthlang=en; expires=Fri, 22-Jul-2022 17:02:04 GMT; Max-Age=8640000\"\n      ],\n      \"vary\":\"Accept-Encoding\",\n      \"content-length\":\"1023\",\n      \"connection\":\"close\",\n      \"content-type\":\"application/xml\",\n      \"x-node-red-request-node\":\"3ffbed4d\"\n   },\n   \"responseUrl\":\"https://www.hamqth.com/xml.php?id=062aa7cc923e58443c553a0d086319b29cefcde1&callsign=AA0Z&prg=CONTEST_DASHBOARD\",\n   \"redirectList\":[\n      \n   ],\n   \"retry\":0,\n   \"responseCookies\":{\n      \"nette-browser\":{\n         \"path\":\"/\",\n         \"domain\":\".hamqth.com\",\n         \"value\":\"r2gbbaxo71\"\n      },\n      \"PHPSESSID\":{\n         \"expires\":\"Fri, 13-May-2022 17:02:04 GMT\",\n         \"Max-Age\":\"2592000\",\n         \"path\":\"/\",\n         \"domain\":\".hamqth.com\",\n         \"value\":\"kup08664dnc4bu1bia82bi5ku4\"\n      },\n      \"hamqthlang\":{\n         \"expires\":\"Fri, 22-Jul-2022 17:02:04 GMT\",\n         \"Max-Age\":\"8640000\",\n         \"value\":\"en\"\n      }\n   },\n   \"HamQTH\":{\n      \"$\":{\n         \"version\":\"2.8\",\n         \"xmlns\":\"https://www.hamqth.com\"\n      },\n      \"search\":[\n         {\n            \"callsign\":[\n               \"aa0z\"\n            ],\n            \"nick\":[\n               \"Kyle Krieg\"\n            ],\n            \"qth\":[\n               \"St. Louis\"\n            ],\n            \"country\":[\n               \"United States\"\n            ],\n            \"adif\":[\n               \"291\"\n            ],\n            \"itu\":[\n               \"7\"\n            ],\n            \"cq\":[\n               \"4\"\n            ],\n            \"grid\":[\n               \"EM48\"\n            ],\n            \"adr_name\":[\n               \"Kyle T Krieg\"\n            ],\n            \"adr_street1\":[\n               \"5620 Delor\"\n            ],\n            \"adr_city\":[\n               \"Saint Louis\"\n            ],\n            \"adr_zip\":[\n               \"63109\"\n            ],\n            \"adr_country\":[\n               \"United States\"\n            ],\n            \"adr_adif\":[\n               \"291\"\n            ],\n            \"us_state\":[\n               \"MO\"\n            ],\n            \"us_county\":[\n               \"St. Louis city\"\n            ],\n            \"lotw\":[\n               \"?\"\n            ],\n            \"qsldirect\":[\n               \"?\"\n            ],\n            \"qsl\":[\n               \"?\"\n            ],\n            \"eqsl\":[\n               \"?\"\n            ],\n            \"email\":[\n               \"kylekrieg@gmail.com\"\n            ],\n            \"latitude\":[\n               \n            ],\n            \"longitude\":[\n               \n            ],\n            \"continent\":[\n               \"\"\n            ],\n            \"utc_offset\":[\n               \"6\"\n            ],\n            \"picture\":[\n               \"https://www.hamqth.com/images/default/antennas6.png\"\n            ]\n         }\n      ]\n   }\n}`",
+        "x": 1010,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e7a05f31a1a776a2",
+        "type": "comment",
+        "z": "407d2b774fe67647",
+        "name": "Standard Output",
+        "info": "`{\n   \"payload\":{\n      \"name\":\"AA0Z\",\n      \"lat\":\"38.58\",\n      \"lon\":\"-90.29\",\n      \"ttl\":1200,\n      \"op\":\"AA0Z\",\n      \"band\":\"21\",\n      \"mode\":\"USB\",\n      \"isrunqso\":\"1\",\n      \"exchange\":\"\",\n      \"section\":\"\",\n      \"ID\":\"fa753cd2ec5f4f5a82a46063e895d173\",\n      \"distance_km\":405,\n      \"distance_miles\":252\n   },\n   \"fromip\":\"192.168.1.119:57670\",\n   \"ip\":\"192.168.1.119\",\n   \"port\":57670,\n   \"_msgid\":\"1a3050bba95254c1\",\n   \"qsotype\":\"qso\",\n   \"_event\":\"node:677d263669792c2d\",\n   \"original\":{\n      \"app\":[\n         \"N1MM\"\n      ],\n      \"contestname\":[\n         \"CQWPXSSB\"\n      ],\n      \"contestnr\":[\n         \"1\"\n      ],\n      \"timestamp\":[\n         \"2022-04-13 17:02:05\"\n      ],\n      \"mycall\":[\n         \"AA0Z\"\n      ],\n      \"band\":[\n         \"21\"\n      ],\n      \"rxfreq\":[\n         \"2130000\"\n      ],\n      \"txfreq\":[\n         \"2130000\"\n      ],\n      \"operator\":[\n         \"AA0Z\"\n      ],\n      \"mode\":[\n         \"USB\"\n      ],\n      \"call\":[\n         \"AA0Z\"\n      ],\n      \"countryprefix\":[\n         \"K\"\n      ],\n      \"wpxprefix\":[\n         \"AA0\"\n      ],\n      \"stationprefix\":[\n         \"AA0Z\"\n      ],\n      \"continent\":[\n         \"NA\"\n      ],\n      \"snt\":[\n         \"59\"\n      ],\n      \"sntnr\":[\n         \"62\"\n      ],\n      \"rcv\":[\n         \"59\"\n      ],\n      \"rcvnr\":[\n         \"7\"\n      ],\n      \"gridsquare\":[\n         \"\"\n      ],\n      \"exchange1\":[\n         \"\"\n      ],\n      \"section\":[\n         \"\"\n      ],\n      \"comment\":[\n         \"\"\n      ],\n      \"qth\":[\n         \"\"\n      ],\n      \"name\":[\n         \"\"\n      ],\n      \"power\":[\n         \"\"\n      ],\n      \"misctext\":[\n         \"\"\n      ],\n      \"zone\":[\n         \"4\"\n      ],\n      \"prec\":[\n         \"\"\n      ],\n      \"ck\":[\n         \"0\"\n      ],\n      \"ismultiplier1\":[\n         \"0\"\n      ],\n      \"ismultiplier2\":[\n         \"0\"\n      ],\n      \"ismultiplier3\":[\n         \"0\"\n      ],\n      \"points\":[\n         \"0\"\n      ],\n      \"radionr\":[\n         \"2\"\n      ],\n      \"run1run2\":[\n         \"1\"\n      ],\n      \"RoverLocation\":[\n         \"\"\n      ],\n      \"RadioInterfaced\":[\n         \"0\"\n      ],\n      \"NetworkedCompNr\":[\n         \"0\"\n      ],\n      \"IsOriginal\":[\n         \"True\"\n      ],\n      \"NetBiosName\":[\n         \"AA0Z-STREAM\"\n      ],\n      \"IsRunQSO\":[\n         \"1\"\n      ],\n      \"StationName\":[\n         \"AA0Z-STREAM\"\n      ],\n      \"ID\":[\n         \"fa753cd2ec5f4f5a82a46063e895d173\"\n      ],\n      \"IsClaimedQso\":[\n         \"1\"\n      ]\n   },\n   \"hamqthkey\":\"062aa7cc923e58443c553a0d086319b29cefcde1\",\n   \"statusCode\":200,\n   \"headers\":{\n      \"date\":\"Wed, 13 Apr 2022 17:02:04 GMT\",\n      \"server\":\"Apache/2.4.18 (Ubuntu)\",\n      \"access-control-allow-origin\":\"*\",\n      \"expires\":\"Thu, 19 Nov 1981 08:52:00 GMT\",\n      \"cache-control\":\"no-store, no-cache, must-revalidate, post-check=0, pre-check=0\",\n      \"pragma\":\"no-cache\",\n      \"set-cookie\":[\n         \"nette-browser=r2gbbaxo71; path=/; domain=.hamqth.com; httponly\",\n         \"PHPSESSID=kup08664dnc4bu1bia82bi5ku4; expires=Fri, 13-May-2022 17:02:04 GMT; Max-Age=2592000; path=/; domain=.hamqth.com; HttpOnly\",\n         \"hamqthlang=en; expires=Fri, 22-Jul-2022 17:02:04 GMT; Max-Age=8640000\"\n      ],\n      \"vary\":\"Accept-Encoding\",\n      \"content-length\":\"1023\",\n      \"connection\":\"close\",\n      \"content-type\":\"application/xml\",\n      \"x-node-red-request-node\":\"3ffbed4d\"\n   },\n   \"responseUrl\":\"https://www.hamqth.com/xml.php?id=062aa7cc923e58443c553a0d086319b29cefcde1&callsign=AA0Z&prg=CONTEST_DASHBOARD\",\n   \"redirectList\":[\n      \n   ],\n   \"retry\":0,\n   \"responseCookies\":{\n      \"nette-browser\":{\n         \"path\":\"/\",\n         \"domain\":\".hamqth.com\",\n         \"value\":\"r2gbbaxo71\"\n      },\n      \"PHPSESSID\":{\n         \"expires\":\"Fri, 13-May-2022 17:02:04 GMT\",\n         \"Max-Age\":\"2592000\",\n         \"path\":\"/\",\n         \"domain\":\".hamqth.com\",\n         \"value\":\"kup08664dnc4bu1bia82bi5ku4\"\n      },\n      \"hamqthlang\":{\n         \"expires\":\"Fri, 22-Jul-2022 17:02:04 GMT\",\n         \"Max-Age\":\"8640000\",\n         \"value\":\"en\"\n      }\n   },\n   \"HamQTH\":{\n      \"$\":{\n         \"version\":\"2.8\",\n         \"xmlns\":\"https://www.hamqth.com\"\n      },\n      \"search\":[\n         {\n            \"callsign\":[\n               \"aa0z\"\n            ],\n            \"nick\":[\n               \"Kyle Krieg\"\n            ],\n            \"qth\":[\n               \"St. Louis\"\n            ],\n            \"country\":[\n               \"United States\"\n            ],\n            \"adif\":[\n               \"291\"\n            ],\n            \"itu\":[\n               \"7\"\n            ],\n            \"cq\":[\n               \"4\"\n            ],\n            \"grid\":[\n               \"EM48\"\n            ],\n            \"adr_name\":[\n               \"Kyle T Krieg\"\n            ],\n            \"adr_street1\":[\n               \"5620 Delor\"\n            ],\n            \"adr_city\":[\n               \"Saint Louis\"\n            ],\n            \"adr_zip\":[\n               \"63109\"\n            ],\n            \"adr_country\":[\n               \"United States\"\n            ],\n            \"adr_adif\":[\n               \"291\"\n            ],\n            \"us_state\":[\n               \"MO\"\n            ],\n            \"us_county\":[\n               \"St. Louis city\"\n            ],\n            \"lotw\":[\n               \"?\"\n            ],\n            \"qsldirect\":[\n               \"?\"\n            ],\n            \"qsl\":[\n               \"?\"\n            ],\n            \"eqsl\":[\n               \"?\"\n            ],\n            \"email\":[\n               \"kylekrieg@gmail.com\"\n            ],\n            \"latitude\":[\n               \n            ],\n            \"longitude\":[\n               \n            ],\n            \"continent\":[\n               \"\"\n            ],\n            \"utc_offset\":[\n               \"6\"\n            ],\n            \"picture\":[\n               \"https://www.hamqth.com/images/default/antennas6.png\"\n            ]\n         }\n      ]\n   }\n}`",
+        "x": 520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4320ff577c7cb858",
+        "type": "link out",
+        "z": "407d2b774fe67647",
+        "name": "Worked QSO Stream OUT",
+        "mode": "link",
+        "links": [
+            "247347fc62633734"
+        ],
+        "x": 1275,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "825f9b7a2b7fc6e2",
+        "type": "switch",
+        "z": "407d2b774fe67647",
+        "name": "Lookup Type",
+        "property": "qsotype",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "qso",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "lookup",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 300,
+        "wires": [
+            [
+                "c9f5c786.410838"
+            ],
+            [
+                "8804affd65082b4f"
+            ]
+        ]
+    },
+    {
+        "id": "8804affd65082b4f",
+        "type": "link out",
+        "z": "407d2b774fe67647",
+        "name": "Dashboard Lookup OUT",
+        "mode": "link",
+        "links": [
+            "ed79aa0b1ff456e7"
+        ],
+        "x": 915,
+        "y": 400,
         "wires": []
     },
     {
@@ -20214,7 +20401,7 @@
         "group": "13e71f1ba641b9c9",
         "order": 5,
         "width": 16,
-        "height": 11,
+        "height": 9,
         "name": "QSO Being Worked",
         "lat": "",
         "lon": "",
@@ -20249,7 +20436,7 @@
         "group": "74f6d374fb94524c",
         "order": 6,
         "width": 16,
-        "height": 11,
+        "height": 9,
         "name": "Worked QSOs",
         "lat": "",
         "lon": "",
@@ -20319,12 +20506,12 @@
         "order": 4,
         "width": 6,
         "height": 2,
-        "name": "Being Worked Miles Away",
-        "label": "<font size = 6>Miles Away",
-        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.name}}</font>",
+        "name": "Being Worked Distance Away",
+        "label": "<font size = 6>Distance",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1430,
+        "x": 1660,
         "y": 220,
         "wires": []
     },
@@ -20405,12 +20592,12 @@
         "order": 5,
         "width": 4,
         "height": 2,
-        "name": "Worked Miles Away",
-        "label": "<font size = 6>Miles Away",
-        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload.distance}}</font>",
+        "name": "Worked Distance Away",
+        "label": "<font size = 6>Distance",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1410,
+        "x": 1620,
         "y": 560,
         "wires": []
     },
@@ -20438,7 +20625,7 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aff1f74aeb47511e",
         "order": 1,
-        "width": 6,
+        "width": 5,
         "height": 3,
         "name": "Total Score",
         "label": "<font size = 6>Total Score",
@@ -20455,7 +20642,7 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aff1f74aeb47511e",
         "order": 3,
-        "width": 6,
+        "width": 5,
         "height": 2,
         "name": "Total Mults",
         "label": "<font size = 6>Mults",
@@ -20472,7 +20659,7 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aff1f74aeb47511e",
         "order": 2,
-        "width": 6,
+        "width": 5,
         "height": 3,
         "name": "Total QSO's",
         "label": "<font size = 6>QSOs",
@@ -20509,7 +20696,7 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aff1f74aeb47511e",
         "order": 4,
-        "width": 6,
+        "width": 5,
         "height": 3,
         "name": "Total Points",
         "label": "<font size = 6>Points",
@@ -20616,67 +20803,9 @@
         "z": "b59d8b7ca43e59ce",
         "name": "Map Properties To Do",
         "info": "msg.command\n\nto position map to specific location\nlat\nlon\n\nto zoom into the map\nzoom\n\nadd great circle lines?\n\n\n\n\nmsg.payload = { \"command\": \n{ \n\"layer\":\"Esri Satellite\", \n\"lat\":51, \n\"lon\":3, \n\"zoom\":10 \n    \n}};\n\nTo clear map :\ndeleted : set to true to remove the named marker. (default false)\n\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n",
-        "x": 1040,
-        "y": 180,
+        "x": 160,
+        "y": 160,
         "wires": []
-    },
-    {
-        "id": "4b47257af760ef50",
-        "type": "inject",
-        "z": "b59d8b7ca43e59ce",
-        "name": "",
-        "props": [
-            {
-                "p": "payload.contest",
-                "v": "Work in Progress",
-                "vt": "str"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 240,
-        "y": 240,
-        "wires": [
-            [
-                "55bf9cdbda7ef90e"
-            ]
-        ]
-    },
-    {
-        "id": "9959ab388ecfa77e",
-        "type": "inject",
-        "z": "b59d8b7ca43e59ce",
-        "name": "",
-        "props": [
-            {
-                "p": "payload.contestgoal",
-                "v": "To work as many North American contacts as possible",
-                "vt": "str"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 240,
-        "y": 300,
-        "wires": [
-            [
-                "3ef90b9c62f3d682"
-            ]
-        ]
     },
     {
         "id": "55bf9cdbda7ef90e",
@@ -20684,32 +20813,15 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aafad41ae29aabef",
         "order": 1,
-        "width": "14",
+        "width": "40",
         "height": 1,
-        "name": "",
-        "label": "",
-        "format": "<font size = 6>Current Contest : {{msg.payload.contest}}",
+        "name": "Contest Info and Overlay",
+        "label": "Contest Info and Goal Overlay",
+        "format": "",
         "layout": "row-left",
         "className": "",
-        "x": 460,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "3ef90b9c62f3d682",
-        "type": "ui_text",
-        "z": "b59d8b7ca43e59ce",
-        "group": "aafad41ae29aabef",
-        "order": 2,
-        "width": "30",
-        "height": 1,
-        "name": "",
-        "label": "",
-        "format": "<font size = 6>Contest Goal : {{msg.payload.contestgoal}}",
-        "layout": "row-left",
-        "className": "",
-        "x": 460,
-        "y": 300,
+        "x": 170,
+        "y": 220,
         "wires": []
     },
     {
@@ -20718,8 +20830,8 @@
         "z": "b59d8b7ca43e59ce",
         "name": "FUTURE WORK ON DASHBOARD",
         "info": "",
-        "x": 380,
-        "y": 160,
+        "x": 330,
+        "y": 80,
         "wires": []
     },
     {
@@ -20738,6 +20850,222 @@
         "wires": [
             [
                 "c3e82d630ac3af74"
+            ]
+        ]
+    },
+    {
+        "id": "42d2b28a24a61f75",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "ab90bdc2382e7735",
+        "order": 1,
+        "width": 7,
+        "height": 11,
+        "name": "Chat Box Overlay",
+        "label": "Overlay Your Chat Box Here",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 150,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "15bffcca247104f2",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "9e3f259da9c7796b",
+        "order": 1,
+        "width": 33,
+        "height": 6,
+        "name": "Waterfall Overlay",
+        "label": "Overlay Your Waterfall Here",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 150,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "dacd6c121eb7a21a",
+        "type": "ui_text",
+        "z": "b59d8b7ca43e59ce",
+        "group": "61f1faff3469a80a",
+        "order": 1,
+        "width": 7,
+        "height": 6,
+        "name": "Webcam Overlay",
+        "label": "Overlay Your Webcam Here",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 150,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "247347fc62633734",
+        "type": "link in",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Worked QSO Stream IN",
+        "links": [
+            "4320ff577c7cb858"
+        ],
+        "x": 515,
+        "y": 500,
+        "wires": [
+            [
+                "1621cbc09402bd19",
+                "69d83cae2e4e6a4c"
+            ]
+        ]
+    },
+    {
+        "id": "ed79aa0b1ff456e7",
+        "type": "link in",
+        "z": "b59d8b7ca43e59ce",
+        "name": "QSO Lookup IN",
+        "links": [
+            "8804affd65082b4f"
+        ],
+        "x": 1015,
+        "y": 180,
+        "wires": [
+            [
+                "8c261ef14e000fab",
+                "4b288d63d33664da",
+                "c619ce9fa95f791b",
+                "0fe0e7c3dcbe97e9"
+            ]
+        ]
+    },
+    {
+        "id": "34f4bf78ec8102ac",
+        "type": "function",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Get Miles or KM",
+        "func": "let miles = msg.payload.distance_miles.toString();\nlet km = msg.payload.distance_km.toString();\n\nlet measurement = global.get('distance_measurement')\n\nif (measurement == undefined)\n{\n    msg.payload = miles + \"M\";\n    return msg;\n}\n\nif (measurement == 'miles')\n{\n    msg.payload = miles + \"M\";\n    return msg;\n}\n\nif (measurement == 'km')\n{\n    msg.payload = km + \"K\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 560,
+        "wires": [
+            [
+                "aafb155f821969bb"
+            ]
+        ]
+    },
+    {
+        "id": "0fe0e7c3dcbe97e9",
+        "type": "function",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Get Miles or KM",
+        "func": "let miles = msg.payload.distance_miles.toString();\nlet km = msg.payload.distance_km.toString();\n\nlet measurement = global.get('distance_measurement')\n\nif (measurement == undefined)\n{\n    msg.payload = miles + \"M\";\n    return msg;\n}\n\nif (measurement == 'miles')\n{\n    msg.payload = miles + \"M\";\n    return msg;\n}\n\nif (measurement == 'km')\n{\n    msg.payload = km + \"K\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 220,
+        "wires": [
+            [
+                "7465992a1b281676"
+            ]
+        ]
+    },
+    {
+        "id": "1621cbc09402bd19",
+        "type": "switch",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Set Exchange Color",
+        "property": "payload.ismultiplier",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 820,
+        "y": 440,
+        "wires": [
+            [
+                "6e8e001072beccc3"
+            ],
+            [
+                "0107aee122696217"
+            ]
+        ]
+    },
+    {
+        "id": "0107aee122696217",
+        "type": "change",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Otherwise Color White",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#FFFFFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 460,
+        "wires": [
+            [
+                "93c97ccaa3e53d22",
+                "482152c92f2f5813",
+                "2f7d9a2d94268e97",
+                "34f4bf78ec8102ac"
+            ]
+        ]
+    },
+    {
+        "id": "6e8e001072beccc3",
+        "type": "change",
+        "z": "b59d8b7ca43e59ce",
+        "name": "Is Multi Then Color Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#FF0000",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 420,
+        "wires": [
+            [
+                "93c97ccaa3e53d22",
+                "482152c92f2f5813",
+                "2f7d9a2d94268e97",
+                "34f4bf78ec8102ac"
             ]
         ]
     },
@@ -28609,8 +28937,8 @@
         "ret": "txt",
         "url": "https://query.yahooapis.com/v1/public/yql?q={{{query}}}&format=json",
         "tls": "",
-        "x": 590,
-        "y": 1100,
+        "x": 570,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -28638,8 +28966,8 @@
         "topic": "",
         "payload": "select astronomy.sunset from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"maui, hi\")",
         "payloadType": "str",
-        "x": 240,
-        "y": 1100,
+        "x": 200,
+        "y": 1280,
         "wires": [
             [
                 "b001d489.d8f818"
@@ -28665,8 +28993,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 1100,
+        "x": 380,
+        "y": 1280,
         "wires": [
             [
                 "e95c6faa.ab2e1"
@@ -28702,8 +29030,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 390,
-        "y": 940,
+        "x": 370,
+        "y": 1220,
         "wires": [
             [
                 "929f5044bccb8df7"
@@ -28731,8 +29059,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 200,
-        "y": 940,
+        "x": 180,
+        "y": 1220,
         "wires": [
             [
                 "a74f6cb9b8629f3e"
@@ -28751,8 +29079,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 940,
+        "x": 690,
+        "y": 1220,
         "wires": []
     },
     {
@@ -28763,8 +29091,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 550,
-        "y": 940,
+        "x": 530,
+        "y": 1220,
         "wires": [
             [
                 "9fc29b1d7f8667e6"
@@ -29014,8 +29342,8 @@
         "z": "bd8a446b999750f9",
         "name": "Future PSK Reporter and Geofencing ",
         "info": "",
-        "x": 290,
-        "y": 880,
+        "x": 270,
+        "y": 1160,
         "wires": []
     },
     {
@@ -29191,7 +29519,7 @@
         "type": "debug",
         "z": "bd8a446b999750f9",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
