@@ -218,8 +218,7 @@ On your contest station PCs, within the N1MM entry window, click on ```Config```
 
 Click the Radio, Contacts, Score & External Callsign Lookup check boxes.  This enables UDP packets to be sent to the Node Red server.  
 
-Type the following in the correct Radio, Contacts, Score & External Callsign Lookup text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  
-**Place a space after the default 127.0.0.1:12060 to start your IP address.**
+Type the following in the correct Radio, Contacts, Score & External Callsign Lookup text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  **Place a space after the default 127.0.0.1:12060 to start your IP address.**
 
 ```
 Radio to aaa.bbb.ccc.ddd:12060
