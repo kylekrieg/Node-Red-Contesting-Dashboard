@@ -216,15 +216,16 @@ On your contest station PCs, within the N1MM entry window, click on ```Config```
 
 ![N1MM Broadcast Tab Configuration](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/N1MM_broadcast_tab.jpg)
 
-Click the Radio, Contacts & Score check boxes.  This enables UDP packets to be sent to the Node Red server.  
+Click the Radio, Contacts, Score & External Callsign Lookup check boxes.  This enables UDP packets to be sent to the Node Red server.  
 
-Type the following in the correct Radio, Contacts & Score text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  
+Type the following in the correct Radio, Contacts, Score & External Callsign Lookup text boxes where the IP of the Node Red server is aaa.bbb.ccc.ddd.  
 **Place a space after the default 127.0.0.1:12060 to start your IP address.**
 
 ```
 Radio to aaa.bbb.ccc.ddd:12060
 Contacts to aaa.bbb.ccc.ddd:12061
 Score to aaa.bbb.ccc.ddd:12062
+External Callsign Lookup to aaa.bbb.ccc.ddd:12061
 ```
 
 **IMPORTANT** only enable the socre checkbox on the ```MASTER N1MM STATION!!!!```.  Only 1 computer should be sending score data to the Node Red server.
