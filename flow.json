@@ -741,7 +741,8 @@
             "9cc043acda88da3f",
             "d53bdbd6ba3fdfed",
             "8186c56328392551",
-            "0f2162dc3bfae19c"
+            "0f2162dc3bfae19c",
+            "68a40288d21cbfe9"
         ],
         "x": 2354,
         "y": 839,
@@ -6905,7 +6906,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total Multi Array Parse",
-        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
+        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10034,9 +10035,28 @@
         "y": 1260,
         "wires": [
             [
-                "a2c474948039215e"
+                "a2c474948039215e",
+                "68a40288d21cbfe9"
             ]
         ]
+    },
+    {
+        "id": "68a40288d21cbfe9",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3820,
+        "y": 1320,
+        "wires": []
     },
     {
         "id": "4079239a4fd5c11c",
