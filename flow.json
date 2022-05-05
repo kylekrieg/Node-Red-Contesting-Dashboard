@@ -362,7 +362,9 @@
             "ea4b0c4d43bbf2e8"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 255,
+        "h": 442
     },
     {
         "id": "52886121c9629e0b",
@@ -385,7 +387,9 @@
             "af65ab5234804a9a"
         ],
         "x": 754,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 442
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -408,7 +412,9 @@
             "34d492ab50541fdc"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 442
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -432,7 +438,9 @@
             "cd6e0fce6f62b9c5"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 442
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -447,7 +455,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -462,7 +472,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -485,7 +497,9 @@
             "7036aad4276a8131"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 442
     },
     {
         "id": "022672368830e427",
@@ -508,7 +522,9 @@
             "e6ae4df0ca620d74"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 442
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -540,10 +556,14 @@
             "e6fb0ef92036fc12",
             "3ba91bda918482b2",
             "2447aed577add90a",
-            "33b22679735f2e3c"
+            "33b22679735f2e3c",
+            "53becfe3676d44bd",
+            "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679
+        "y": 679,
+        "w": 2032,
+        "h": 282
     },
     {
         "id": "28877ac600fea8b9",
@@ -568,7 +588,9 @@
             "324101084f63a83e"
         ],
         "x": 234,
-        "y": 1019
+        "y": 1019,
+        "w": 622,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -583,7 +605,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -606,7 +630,9 @@
             "23d467e3525ec5a8"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 442
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -712,12 +738,12 @@
             "0664e8c97eaa69b8",
             "1eb0d9ba4d1bf8d6",
             "9757755f9abe81e5",
-            "ca90a985e711716b",
             "9cc043acda88da3f",
             "d53bdbd6ba3fdfed",
-            "8186c56328392551"
+            "8186c56328392551",
+            "0f2162dc3bfae19c"
         ],
-        "x": 2374,
+        "x": 2354,
         "y": 839,
         "w": 1872,
         "h": 602
@@ -5784,7 +5810,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3120,
+        "x": 3100,
         "y": 900,
         "wires": [
             [
@@ -5813,7 +5839,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 2490,
+        "x": 2470,
         "y": 900,
         "wires": [
             [
@@ -5833,7 +5859,7 @@
         "syntax": "mustache",
         "template": "select count(*) as rate from qsos where timestamp >= datetime('now','-1 hours');",
         "output": "str",
-        "x": 2910,
+        "x": 2890,
         "y": 900,
         "wires": [
             [
@@ -5855,7 +5881,7 @@
         "format": "<font size = 50 font color={{msg.color}}>{{msg.rate}}</font><font size = 4 font color={{msg.color}}> Q's/Hr</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3730,
+        "x": 3710,
         "y": 920,
         "wires": []
     },
@@ -5866,7 +5892,7 @@
         "g": "26cf0678322d1bb6",
         "name": "Calc Current QSO Rate",
         "info": "",
-        "x": 2540,
+        "x": 2520,
         "y": 980,
         "wires": []
     },
@@ -5947,7 +5973,7 @@
         "height": 3,
         "name": "Total Mults",
         "label": "<font size = 6>Mults",
-        "format": "<font size = 50 font color={{msg.color}}>{{payload.totalmult}}</font>",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.totalmults}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 2170,
@@ -5978,7 +6004,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total QSO Array Parse",
-        "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = msg.payload.dynamicresults.breakdown[0].qso[i]._;\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
+        "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos)\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6016,7 +6042,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total Points Array Parse",
-        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = msg.payload.dynamicresults.breakdown[0].point[i]._;\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
+        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6116,7 +6142,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 4060,
+        "x": 4040,
         "y": 980,
         "wires": [
             []
@@ -6142,7 +6168,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3700,
+        "x": 3680,
         "y": 880,
         "wires": [
             [
@@ -6172,7 +6198,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2570,
+        "x": 2550,
         "y": 1120,
         "wires": [
             [
@@ -6189,7 +6215,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3140,
+        "x": 3120,
         "y": 1120,
         "wires": [
             [
@@ -6209,7 +6235,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 3290,
+        "x": 3270,
         "y": 1120,
         "wires": [
             [
@@ -6229,7 +6255,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3480,
+        "x": 3460,
         "y": 1120,
         "wires": [
             [
@@ -6249,7 +6275,7 @@
         "syntax": "mustache",
         "template": "select count(band) as total, band as band from qsos group by band order by length(band) desc;",
         "output": "str",
-        "x": 2950,
+        "x": 2930,
         "y": 1120,
         "wires": [
             [
@@ -6268,10 +6294,10 @@
         "height": 3,
         "name": "Top OP Score/Distance",
         "label": "{{msg.label}}",
-        "format": "<font size = 10 font color=#FFFF00>{{msg.payload}}",
+        "format": "<font size = 9 font color=#FFFF00>{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 4110,
+        "x": 4090,
         "y": 1380,
         "wires": []
     },
@@ -6284,12 +6310,12 @@
         "order": 6,
         "width": 5,
         "height": 3,
-        "name": "Top OP Mults",
+        "name": "Top OP Mults/Mults Stats",
         "label": "{{msg.label}}",
-        "format": "<font size = 10 font color=#FFFF00>{{msg.payload[0].operator}}",
+        "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 4080,
+        "x": 4090,
         "y": 1260,
         "wires": []
     },
@@ -6319,7 +6345,7 @@
         "syntax": "mustache",
         "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-1 hours') group by band;",
         "output": "str",
-        "x": 2930,
+        "x": 2910,
         "y": 1040,
         "wires": [
             [
@@ -6348,7 +6374,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 2530,
+        "x": 2510,
         "y": 1040,
         "wires": [
             [
@@ -6365,7 +6391,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3140,
+        "x": 3120,
         "y": 1040,
         "wires": [
             [
@@ -6385,7 +6411,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 3290,
+        "x": 3270,
         "y": 1040,
         "wires": [
             [
@@ -6405,7 +6431,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3500,
+        "x": 3480,
         "y": 1040,
         "wires": [
             [
@@ -6452,7 +6478,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 4070,
+        "x": 4050,
         "y": 1040,
         "wires": [
             []
@@ -6497,7 +6523,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 4040,
+        "x": 4020,
         "y": 1120,
         "wires": [
             []
@@ -6521,7 +6547,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2750,
+        "x": 2730,
         "y": 1120,
         "wires": [
             [
@@ -6547,7 +6573,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2690,
+        "x": 2670,
         "y": 900,
         "wires": [
             [
@@ -6573,7 +6599,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2730,
+        "x": 2710,
         "y": 1040,
         "wires": [
             [
@@ -6603,7 +6629,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2550,
+        "x": 2530,
         "y": 1260,
         "wires": [
             [
@@ -6616,14 +6642,14 @@
         "type": "template",
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
-        "name": "SQL Top Operator Multi",
+        "name": "SQL Mults Rate per Hour",
         "field": "topic",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, operator as operator from qsos group by operator order by multiplier desc;",
+        "template": "select count(ismultiplier1+ismultiplier2+ismultiplier3) as rate from qsos where timestamp >= datetime('now','-1 hours');",
         "output": "str",
-        "x": 3170,
+        "x": 3150,
         "y": 1280,
         "wires": [
             [
@@ -6649,7 +6675,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2730,
+        "x": 2710,
         "y": 1260,
         "wires": [
             [
@@ -6679,7 +6705,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2550,
+        "x": 2530,
         "y": 1380,
         "wires": [
             [
@@ -6699,7 +6725,7 @@
         "syntax": "mustache",
         "template": "select operator as operator,\ntotal(points) as points,\ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos\ngroup by operator\norder by score desc;",
         "output": "str",
-        "x": 3170,
+        "x": 3150,
         "y": 1360,
         "wires": [
             [
@@ -6725,7 +6751,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2730,
+        "x": 2710,
         "y": 1380,
         "wires": [
             [
@@ -6770,7 +6796,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "",
-        "x": 3480,
+        "x": 3460,
         "y": 900,
         "wires": [
             [
@@ -6807,7 +6833,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3310,
+        "x": 3290,
         "y": 900,
         "wires": [
             [
@@ -6824,7 +6850,7 @@
         "links": [
             "5e1859619292b1b8"
         ],
-        "x": 3515,
+        "x": 3495,
         "y": 980,
         "wires": [
             [
@@ -6843,7 +6869,7 @@
         "links": [
             "5e1859619292b1b8"
         ],
-        "x": 3695,
+        "x": 3675,
         "y": 1180,
         "wires": [
             [
@@ -6879,7 +6905,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total Multi Array Parse",
-        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    return {\"payload\":{totalmult:\"N/A\"}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmult = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        total = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n        totalmult = totalmult + total;\n    }\n    \n}\n\nreturn {\"payload\":{totalmult:totalmult}};\n\n",
+        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7164,7 +7190,7 @@
         "start": "",
         "inout": "out",
         "septopics": true,
-        "property": "payload.totalmult",
+        "property": "payload.totalmults",
         "topi": "topic",
         "x": 1660,
         "y": 1160,
@@ -7372,26 +7398,6 @@
         "wires": []
     },
     {
-        "id": "ca90a985e711716b",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Set Label",
-        "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\")\n{\n    msg.label = \"<font size = 6>Top OP Mults\"\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    msg.label = \"<font size = 6>Something\"\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3600,
-        "y": 1260,
-        "wires": [
-            [
-                "a2c474948039215e"
-            ]
-        ]
-    },
-    {
         "id": "168faf5992e055d7",
         "type": "template",
         "z": "407d2b774fe67647",
@@ -7403,7 +7409,7 @@
         "syntax": "mustache",
         "template": "select max(cast(distance as integer)) as max_distance from qsos;",
         "output": "str",
-        "x": 3170,
+        "x": 3150,
         "y": 1400,
         "wires": [
             [
@@ -7420,7 +7426,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3420,
+        "x": 3400,
         "y": 1380,
         "wires": [
             [
@@ -7440,7 +7446,7 @@
         "syntax": "mustache",
         "template": "select total(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, operator as operator from qsos group by operator order by multiplier desc;",
         "output": "str",
-        "x": 3170,
+        "x": 3150,
         "y": 1240,
         "wires": [
             [
@@ -7457,11 +7463,11 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3420,
+        "x": 3400,
         "y": 1260,
         "wires": [
             [
-                "ca90a985e711716b"
+                "0f2162dc3bfae19c"
             ]
         ]
     },
@@ -7493,7 +7499,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 2910,
+        "x": 2890,
         "y": 1260,
         "wires": [
             [
@@ -7535,7 +7541,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 2910,
+        "x": 2890,
         "y": 1380,
         "wires": [
             [
@@ -7554,14 +7560,14 @@
         "type": "function",
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
-        "name": "Set Label",
+        "name": "Set Label & Payload",
         "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\nmsg.label = null\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"<font size = 6>Longest QSO\";\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3600,
+        "x": 3620,
         "y": 1380,
         "wires": [
             [
@@ -10009,6 +10015,26 @@
                 "6c1de6ee7473fac9",
                 "3f8df851.2a35e8",
                 "0ad5d91b01c01497"
+            ]
+        ]
+    },
+    {
+        "id": "0f2162dc3bfae19c",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Set Label & Payload",
+        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font size = 8 font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font size = 8 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font size = 6 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"<font size = 5>Mults/Hr | 1 Mult = \";\n    return msg;\n}\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3620,
+        "y": 1260,
+        "wires": [
+            [
+                "a2c474948039215e"
             ]
         ]
     },
@@ -16409,7 +16435,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP0_1HrTrendScore\");\nlet z = flow.get(\"OP0_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP0_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP0_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP0_TrendScore\",totalscore);\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP0_1HrTrendScore\");\nlet z = flow.get(\"OP0_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP0_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP0_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP0_TrendScore\",totalscore);\n\n\nif (msg.payload[0] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17329,7 +17355,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP0_1HRateCurrent\");\nflow.set([\"OP0_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[0] != null)\n{\n    msg.rate = msg.payload[0].rate\n    let call = msg.payload[0].operator\n    let rate = msg.payload[0].rate\n    flow.set([\"OP0\"],[call])\n    flow.set([\"OP0_1HRateCurrent\"],[rate])\n    return msg;\n}\n\n\nreturn;\n\n",
+        "func": "let previousrate = flow.get(\"OP0_1HRateCurrent\");\nflow.set([\"OP0_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[0] != null)\n{\n    msg.rate = msg.payload[0].rate\n    let call = msg.payload[0].operator\n    let rate = msg.payload[0].rate\n    flow.set([\"OP0\"],[call])\n    flow.set([\"OP0_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[0] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17348,7 +17374,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP0_2HRateCurrent\");\nflow.set([\"OP0_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[0] != null)\n{\n    msg.rate = msg.payload[0].rate\n    rate = msg.payload[0].rate\n    flow.set([\"OP0_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP0_2HRateCurrent\");\nflow.set([\"OP0_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[0] != null)\n{\n    msg.rate = msg.payload[0].rate\n    rate = msg.payload[0].rate\n    flow.set([\"OP0_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[0] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17367,7 +17393,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP1_2HRateCurrent\");\nflow.set([\"OP1_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[1] != null)\n{\n    msg.rate = msg.payload[1].rate\n    rate = msg.payload[1].rate\n    flow.set([\"OP1_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP1_2HRateCurrent\");\nflow.set([\"OP1_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[1] != null)\n{\n    msg.rate = msg.payload[1].rate\n    rate = msg.payload[1].rate\n    flow.set([\"OP1_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[1] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17386,7 +17412,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP2_2HRateCurrent\");\nflow.set([\"OP2_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[2] != null)\n{\n    msg.rate = msg.payload[2].rate\n    rate = msg.payload[2].rate\n    flow.set([\"OP2_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP2_2HRateCurrent\");\nflow.set([\"OP2_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[2] != null)\n{\n    msg.rate = msg.payload[2].rate\n    rate = msg.payload[2].rate\n    flow.set([\"OP2_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[2] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17405,7 +17431,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP3_2HRateCurrent\");\nflow.set([\"OP3_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[3] != null)\n{\n    msg.rate = msg.payload[3].rate\n    rate = msg.payload[3].rate\n    flow.set([\"OP3_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP3_2HRateCurrent\");\nflow.set([\"OP3_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[3] != null)\n{\n    msg.rate = msg.payload[3].rate\n    rate = msg.payload[3].rate\n    flow.set([\"OP3_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[3] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17424,7 +17450,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow rate",
-        "func": "let previousrate = flow.get(\"OP4_2HRateCurrent\");\nflow.set([\"OP4_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[4] != null)\n{\n    msg.rate = msg.payload[4].rate\n    rate = msg.payload[4].rate\n    flow.set([\"OP4_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP4_2HRateCurrent\");\nflow.set([\"OP4_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[4] != null)\n{\n    msg.rate = msg.payload[4].rate\n    rate = msg.payload[4].rate\n    flow.set([\"OP4_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[4] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17443,7 +17469,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow rate",
-        "func": "let previousrate = flow.get(\"OP5_2HRateCurrent\");\nflow.set([\"OP5_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[5] != null)\n{\n    msg.rate = msg.payload[5].rate\n    rate = msg.payload[5].rate\n    flow.set([\"OP5_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP5_2HRateCurrent\");\nflow.set([\"OP5_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[5] != null)\n{\n    msg.rate = msg.payload[5].rate\n    rate = msg.payload[5].rate\n    flow.set([\"OP5_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[5] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17462,7 +17488,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow rate",
-        "func": "let previousrate = flow.get(\"OP6_2HRateCurrent\");\nflow.set([\"OP6_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[6] != null)\n{\n    msg.rate = msg.payload[6].rate\n    rate = msg.payload[6].rate\n    flow.set([\"OP6_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP6_2HRateCurrent\");\nflow.set([\"OP6_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[6] != null)\n{\n    msg.rate = msg.payload[6].rate\n    rate = msg.payload[6].rate\n    flow.set([\"OP6_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[6] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17481,7 +17507,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow rate",
-        "func": "let previousrate = flow.get(\"OP7_2HRateCurrent\");\nflow.set([\"OP7_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[7] != null)\n{\n    msg.rate = msg.payload[7].rate\n    rate = msg.payload[7].rate\n    flow.set([\"OP7_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP7_2HRateCurrent\");\nflow.set([\"OP7_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[7] != null)\n{\n    msg.rate = msg.payload[7].rate\n    rate = msg.payload[7].rate\n    flow.set([\"OP7_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[7] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17500,7 +17526,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP1_1HRateCurrent\");\nflow.set([\"OP1_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[1] != null)\n{\n    msg.rate = msg.payload[1].rate\n    let call = msg.payload[1].operator\n    let rate = msg.payload[1].rate\n    flow.set([\"OP1\"],[call])\n    flow.set([\"OP1_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP1_1HRateCurrent\");\nflow.set([\"OP1_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[1] != null)\n{\n    msg.rate = msg.payload[1].rate\n    let call = msg.payload[1].operator\n    let rate = msg.payload[1].rate\n    flow.set([\"OP1\"],[call])\n    flow.set([\"OP1_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[1] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17519,7 +17545,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP3_1HRateCurrent\");\nflow.set([\"OP3_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[3] != null)\n{\n    msg.rate = msg.payload[3].rate\n    let call = msg.payload[3].operator\n    let rate = msg.payload[3].rate\n    flow.set([\"OP3\"],[call])\n    flow.set([\"OP3_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP3_1HRateCurrent\");\nflow.set([\"OP3_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[3] != null)\n{\n    msg.rate = msg.payload[3].rate\n    let call = msg.payload[3].operator\n    let rate = msg.payload[3].rate\n    flow.set([\"OP3\"],[call])\n    flow.set([\"OP3_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[3] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17538,7 +17564,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP4_1HRateCurrent\");\nflow.set([\"OP4_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[4] != null)\n{\n    msg.rate = msg.payload[4].rate\n    let call = msg.payload[4].operator\n    let rate = msg.payload[4].rate\n    flow.set([\"OP4\"],[call])\n    flow.set([\"OP4_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP4_1HRateCurrent\");\nflow.set([\"OP4_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[4] != null)\n{\n    msg.rate = msg.payload[4].rate\n    let call = msg.payload[4].operator\n    let rate = msg.payload[4].rate\n    flow.set([\"OP4\"],[call])\n    flow.set([\"OP4_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[4] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17557,7 +17583,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP5_1HRateCurrent\");\nflow.set([\"OP5_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[5] != null)\n{\n    msg.rate = msg.payload[5].rate\n    let call = msg.payload[5].operator\n    let rate = msg.payload[5].rate\n    flow.set([\"OP5\"],[call])\n    flow.set([\"OP5_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP5_1HRateCurrent\");\nflow.set([\"OP5_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[5] != null)\n{\n    msg.rate = msg.payload[5].rate\n    let call = msg.payload[5].operator\n    let rate = msg.payload[5].rate\n    flow.set([\"OP5\"],[call])\n    flow.set([\"OP5_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[5] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17576,7 +17602,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP6_1HRateCurrent\");\nflow.set([\"OP6_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[6] != null)\n{\n    msg.rate = msg.payload[6].rate\n    let call = msg.payload[6].operator\n    let rate = msg.payload[6].rate\n    flow.set([\"OP6\"],[call])\n    flow.set([\"OP6_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP6_1HRateCurrent\");\nflow.set([\"OP6_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[6] != null)\n{\n    msg.rate = msg.payload[6].rate\n    let call = msg.payload[6].operator\n    let rate = msg.payload[6].rate\n    flow.set([\"OP6\"],[call])\n    flow.set([\"OP6_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[6] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17595,7 +17621,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP7_1HRateCurrent\");\nflow.set([\"OP7_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[7] != null)\n{\n    msg.rate = msg.payload[7].rate\n    let call = msg.payload[7].operator\n    let rate = msg.payload[7].rate\n    flow.set([\"OP7\"],[call])\n    flow.set([\"OP7_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn;",
+        "func": "let previousrate = flow.get(\"OP7_1HRateCurrent\");\nflow.set([\"OP7_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[7] != null)\n{\n    msg.rate = msg.payload[7].rate\n    let call = msg.payload[7].operator\n    let rate = msg.payload[7].rate\n    flow.set([\"OP7\"],[call])\n    flow.set([\"OP7_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[7] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17614,7 +17640,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Set msg.rate & flow set",
-        "func": "let previousrate = flow.get(\"OP2_1HRateCurrent\");\nflow.set([\"OP2_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[2] != null)\n{\n    msg.rate = msg.payload[2].rate\n    let call = msg.payload[2].operator\n    let rate = msg.payload[2].rate\n    flow.set([\"OP2\"],[call])\n    flow.set([\"OP2_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nreturn msg;",
+        "func": "let previousrate = flow.get(\"OP2_1HRateCurrent\");\nflow.set([\"OP2_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[2] != null)\n{\n    msg.rate = msg.payload[2].rate\n    let call = msg.payload[2].operator\n    let rate = msg.payload[2].rate\n    flow.set([\"OP2\"],[call])\n    flow.set([\"OP2_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[2] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17777,7 +17803,8 @@
         "wires": [
             [
                 "f48d809a801528dc",
-                "ea093b5555301fc3"
+                "ea093b5555301fc3",
+                "48a3eb8596b10e96"
             ]
         ]
     },
@@ -18375,7 +18402,8 @@
                 "7a218c90f41660bb",
                 "0f2a696a3e1e9795",
                 "6fb6403fef98802f",
-                "ab0335159c22cdf3"
+                "ab0335159c22cdf3",
+                "c683557c7a6ec5e5"
             ]
         ]
     },
@@ -18696,7 +18724,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount(case when IsRunQSO <> 1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
         "output": "str",
         "x": 860,
         "y": 480,
@@ -19266,7 +19294,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP1_1HrTrendScore\");\nlet z = flow.get(\"OP1_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP1_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP1_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP1_TrendScore\",totalscore);\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP1_1HrTrendScore\");\nlet z = flow.get(\"OP1_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP1_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP1_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP1_TrendScore\",totalscore);\n\nif (msg.payload[1] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19286,7 +19314,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP2_1HrTrendScore\");\nlet z = flow.get(\"OP2_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP2_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP2_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP2_TrendScore\",totalscore);\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP2_1HrTrendScore\");\nlet z = flow.get(\"OP2_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP2_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP2_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP2_TrendScore\",totalscore);\n\nif (msg.payload[2] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19306,7 +19334,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP3_1HrTrendScore\");\nlet z = flow.get(\"OP3_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP3_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP3_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP3_TrendScore\",totalscore);\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP3_1HrTrendScore\");\nlet z = flow.get(\"OP3_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP3_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP3_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP3_TrendScore\",totalscore);\n\nif (msg.payload[3] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19326,7 +19354,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP4_1HrTrendScore\");\nlet z = flow.get(\"OP4_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP4_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP4_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP4_TrendScore\",totalscore);\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP4_1HrTrendScore\");\nlet z = flow.get(\"OP4_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP4_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP4_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP4_TrendScore\",totalscore);\n\nif (msg.payload[4] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19346,7 +19374,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP5_1HrTrendScore\");\nlet z = flow.get(\"OP5_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP5_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP5_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP5_TrendScore\",totalscore);\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP5_1HrTrendScore\");\nlet z = flow.get(\"OP5_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP5_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP5_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP5_TrendScore\",totalscore);\n\nif (msg.payload[5] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19366,7 +19394,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP6_1HrTrendScore\");\nlet z = flow.get(\"OP6_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP6_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP6_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP6_TrendScore\",totalscore);\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP6_1HrTrendScore\");\nlet z = flow.get(\"OP6_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP6_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP6_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP6_TrendScore\",totalscore);\n\nif (msg.payload[6] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19386,7 +19414,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP7_1HrTrendScore\");\nlet z = flow.get(\"OP7_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP7_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP7_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP7_TrendScore\",totalscore);\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP7_1HrTrendScore\");\nlet z = flow.get(\"OP7_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP7_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP7_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP7_TrendScore\",totalscore);\n\nif (msg.payload[7] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19618,6 +19646,89 @@
                 "04c095a340a5d105"
             ]
         ]
+    },
+    {
+        "id": "48a3eb8596b10e96",
+        "type": "function",
+        "z": "c8e1ef6f509cd75a",
+        "name": "Clear Stats",
+        "func": "let arr = []\nlet obj\nfor(let i=0;i<9;i++){\n    obj = {}\n    obj.points = null\n    obj.multiplier = null\n    obj.totalqsos = null\n    obj.busted = null\n    obj.totalrun = null\n    obj.totalsandp = null\n    obj.score = null\n    obj.operator = null\n    obj.rate = null\n    arr.push(obj)\n}\n//node.warn(arr)\nmsg.payload = arr\nreturn msg;\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "34008e11c64ab041",
+                "5c267064e9a5cfe5",
+                "fddd013b3adee514",
+                "568d906183a5bd04",
+                "3dfd2af79efe8194",
+                "e7b5e69e29f5048b",
+                "4469d749f5f64ed9",
+                "2697e5e8c3c7b86f",
+                "582eb93ec7687986",
+                "f10eaa69c05b8a4c",
+                "d89c6e30ca15bf1e",
+                "46a109ee0a2e75aa",
+                "0d32551591f4febb",
+                "4e25eef7a46062ed",
+                "74823dbc48c66f23",
+                "4e1d05c16ace0917",
+                "03065499f5880f2d",
+                "0e4729df09d27b3e",
+                "0abc9757ce66c40d",
+                "82ec57515e149fba",
+                "3167aedcb8f56641",
+                "89681b3be0afcbba",
+                "a19b646fa2396669",
+                "56cd5215dde42552",
+                "2ca6f5a68f913286",
+                "8ef98b522b186a8d",
+                "e6554b9bbe9cee0e",
+                "9b09738fe2ae4dd7",
+                "c7dc9ca647a536a0",
+                "b72cc44c1d574dce",
+                "b80a474784168d46",
+                "cfd51f2f87f96fa9",
+                "4bcf5aa1cae934bd",
+                "9c2f3625304166d0",
+                "b78c513f0baf3018",
+                "900630ff66352946",
+                "cca1c89c90290ebc",
+                "97a57d2397a978dc",
+                "cc5cb58dad3a8a3b",
+                "3acac32e8604c765",
+                "649570d869a2a319",
+                "35470e72a63127bd",
+                "f72d756d8c137aaa",
+                "4bec6621ee7e772f",
+                "9430cb53d80fa6b6",
+                "a6a25d3c59f7b679",
+                "b35683e6760d29f7",
+                "f03a0e31a77f68f2"
+            ]
+        ]
+    },
+    {
+        "id": "c683557c7a6ec5e5",
+        "type": "debug",
+        "z": "c8e1ef6f509cd75a",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 1520,
+        "wires": []
     },
     {
         "id": "425f3c637f4bf34a",
@@ -21508,12 +21619,12 @@
         "maxage": "",
         "usermenu": "show",
         "layers": "show",
-        "panit": "true",
+        "panit": "false",
         "panlock": "false",
         "zoomlock": "false",
         "hiderightclick": "true",
-        "coords": "gth",
-        "showgrid": "true",
+        "coords": "none",
+        "showgrid": "false",
         "allowFileDrop": "false",
         "path": "/beingworkedqso",
         "overlist": "DR,CO,RA,DN,HM",
@@ -34685,7 +34796,8 @@
         "y": 840,
         "wires": [
             [
-                "3ba91bda918482b2"
+                "3ba91bda918482b2",
+                "53becfe3676d44bd"
             ]
         ]
     },
@@ -36014,7 +36126,8 @@
         "y": 840,
         "wires": [
             [
-                "e6fb0ef92036fc12"
+                "e6fb0ef92036fc12",
+                "49c54051341840e3"
             ],
             [
                 "2447aed577add90a"
@@ -36066,5 +36179,41 @@
                 "d34ab878fcdc07ae"
             ]
         ]
+    },
+    {
+        "id": "53becfe3676d44bd",
+        "type": "debug",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "49c54051341840e3",
+        "type": "debug",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 780,
+        "wires": []
     }
 ]
