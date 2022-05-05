@@ -687,69 +687,6 @@
         "h": 462
     },
     {
-        "id": "26cf0678322d1bb6",
-        "type": "group",
-        "z": "407d2b774fe67647",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "b829243f42385969",
-            "ec43df8648bddaa2",
-            "870d2ff5a5b268a5",
-            "6d122d15af375ab6",
-            "22fe07a2c13d18ff",
-            "816d3f7e84dd1bf0",
-            "8a40e0fa64c5ad77",
-            "577c577fed5bf005",
-            "61fdced830d7a010",
-            "fc6208525bfd2db6",
-            "e616bcdb29792aa8",
-            "002dded44b1b5ee6",
-            "e7705b1d662e98c7",
-            "a2c474948039215e",
-            "ba28175bd864c273",
-            "a806469711612724",
-            "9ba2b748bca48ba8",
-            "fae0041199166dbc",
-            "1aa94adaa1790106",
-            "35dd8fcbbd78da95",
-            "5d54abefaa3f6011",
-            "c700f03ea974bf65",
-            "d3b97c2f3316c129",
-            "afcc0fe55c3cb07e",
-            "6897b580ee50b83f",
-            "64ca2307721f7954",
-            "be3cb3b9861c2e31",
-            "251ae3f24ba6c178",
-            "d1e531d474c42dde",
-            "33a1fe7f6bd59c25",
-            "bc62893a749a6116",
-            "d13e3608177fffc1",
-            "12b4fddb68795a01",
-            "3fc8a4c3201d42cc",
-            "168faf5992e055d7",
-            "0664e8c97eaa69b8",
-            "1eb0d9ba4d1bf8d6",
-            "9757755f9abe81e5",
-            "9cc043acda88da3f",
-            "d53bdbd6ba3fdfed",
-            "8186c56328392551",
-            "0f2162dc3bfae19c",
-            "68a40288d21cbfe9"
-        ],
-        "x": 2354,
-        "y": 839,
-        "w": 1872,
-        "h": 602
-    },
-    {
         "id": "81692a3cb68d6cde",
         "type": "group",
         "z": "407d2b774fe67647",
@@ -895,6 +832,68 @@
         "y": 19,
         "w": 2232,
         "h": 802
+    },
+    {
+        "id": "26cf0678322d1bb6",
+        "type": "group",
+        "z": "407d2b774fe67647",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b829243f42385969",
+            "ec43df8648bddaa2",
+            "870d2ff5a5b268a5",
+            "6d122d15af375ab6",
+            "22fe07a2c13d18ff",
+            "816d3f7e84dd1bf0",
+            "8a40e0fa64c5ad77",
+            "577c577fed5bf005",
+            "61fdced830d7a010",
+            "fc6208525bfd2db6",
+            "e616bcdb29792aa8",
+            "002dded44b1b5ee6",
+            "e7705b1d662e98c7",
+            "a2c474948039215e",
+            "ba28175bd864c273",
+            "a806469711612724",
+            "9ba2b748bca48ba8",
+            "fae0041199166dbc",
+            "1aa94adaa1790106",
+            "35dd8fcbbd78da95",
+            "5d54abefaa3f6011",
+            "c700f03ea974bf65",
+            "d3b97c2f3316c129",
+            "afcc0fe55c3cb07e",
+            "6897b580ee50b83f",
+            "64ca2307721f7954",
+            "be3cb3b9861c2e31",
+            "251ae3f24ba6c178",
+            "d1e531d474c42dde",
+            "33a1fe7f6bd59c25",
+            "bc62893a749a6116",
+            "d13e3608177fffc1",
+            "12b4fddb68795a01",
+            "3fc8a4c3201d42cc",
+            "168faf5992e055d7",
+            "0664e8c97eaa69b8",
+            "1eb0d9ba4d1bf8d6",
+            "9757755f9abe81e5",
+            "9cc043acda88da3f",
+            "d53bdbd6ba3fdfed",
+            "8186c56328392551",
+            "0f2162dc3bfae19c"
+        ],
+        "x": 2354,
+        "y": 839,
+        "w": 1872,
+        "h": 602
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -5803,101 +5802,6 @@
         ]
     },
     {
-        "id": "b829243f42385969",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSO Database",
-        "x": 3100,
-        "y": 900,
-        "wires": [
-            [
-                "d13e3608177fffc1"
-            ]
-        ]
-    },
-    {
-        "id": "ec43df8648bddaa2",
-        "type": "inject",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "1 Per Min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 2470,
-        "y": 900,
-        "wires": [
-            [
-                "d3b97c2f3316c129"
-            ]
-        ]
-    },
-    {
-        "id": "870d2ff5a5b268a5",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "SQL Select Rate",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(*) as rate from qsos where timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 2890,
-        "y": 900,
-        "wires": [
-            [
-                "b829243f42385969"
-            ]
-        ]
-    },
-    {
-        "id": "6d122d15af375ab6",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "group": "aeac5355e22fa2ee",
-        "order": 5,
-        "width": 5,
-        "height": 3,
-        "name": "Current Total QSO Rate",
-        "label": "<font size = 6><center>Current Total QSO Rate",
-        "format": "<font size = 50 font color={{msg.color}}>{{msg.rate}}</font><font size = 4 font color={{msg.color}}> Q's/Hr</font>",
-        "layout": "col-center",
-        "className": "",
-        "x": 3710,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "22fe07a2c13d18ff",
-        "type": "comment",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Calc Current QSO Rate",
-        "info": "",
-        "x": 2520,
-        "y": 980,
-        "wires": []
-    },
-    {
         "id": "0178697fb442d801",
         "type": "udp in",
         "z": "407d2b774fe67647",
@@ -6105,222 +6009,6 @@
         "wires": []
     },
     {
-        "id": "816d3f7e84dd1bf0",
-        "type": "ui_chart",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Total QSO Rate Chart",
-        "group": "c53924de5e016c59",
-        "order": 1,
-        "width": 10,
-        "height": 4,
-        "label": "",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": true,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 4040,
-        "y": 980,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8a40e0fa64c5ad77",
-        "type": "change",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Rate to Payload",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "rate",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3680,
-        "y": 880,
-        "wires": [
-            [
-                "816d3f7e84dd1bf0"
-            ]
-        ]
-    },
-    {
-        "id": "577c577fed5bf005",
-        "type": "inject",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "1 Per Min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2550,
-        "y": 1120,
-        "wires": [
-            [
-                "c700f03ea974bf65"
-            ]
-        ]
-    },
-    {
-        "id": "61fdced830d7a010",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSO Database",
-        "x": 3120,
-        "y": 1120,
-        "wires": [
-            [
-                "fc6208525bfd2db6"
-            ]
-        ]
-    },
-    {
-        "id": "fc6208525bfd2db6",
-        "type": "split",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 3270,
-        "y": 1120,
-        "wires": [
-            [
-                "e616bcdb29792aa8"
-            ]
-        ]
-    },
-    {
-        "id": "e616bcdb29792aa8",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Set Topic & Payload",
-        "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\nlet control = null\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3460,
-        "y": 1120,
-        "wires": [
-            [
-                "5d54abefaa3f6011"
-            ]
-        ]
-    },
-    {
-        "id": "002dded44b1b5ee6",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "SQL Select Band",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(band) as total, band as band from qsos group by band order by length(band) desc;",
-        "output": "str",
-        "x": 2930,
-        "y": 1120,
-        "wires": [
-            [
-                "61fdced830d7a010"
-            ]
-        ]
-    },
-    {
-        "id": "e7705b1d662e98c7",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "group": "aeac5355e22fa2ee",
-        "order": 6,
-        "width": 5,
-        "height": 3,
-        "name": "Top OP Score/Distance",
-        "label": "{{msg.label}}",
-        "format": "<font size = 9 font color=#FFFF00>{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 4090,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "a2c474948039215e",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "group": "ba8d90f0d4d46eb0",
-        "order": 6,
-        "width": 5,
-        "height": 3,
-        "name": "Top OP Mults/Mults Stats",
-        "label": "{{msg.label}}",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 4090,
-        "y": 1260,
-        "wires": []
-    },
-    {
         "id": "aec65d796aed9cee",
         "type": "link out",
         "z": "407d2b774fe67647",
@@ -6333,432 +6021,6 @@
         "x": 1295,
         "y": 980,
         "wires": []
-    },
-    {
-        "id": "ba28175bd864c273",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "SQL Select Rate",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-1 hours') group by band;",
-        "output": "str",
-        "x": 2910,
-        "y": 1040,
-        "wires": [
-            [
-                "9ba2b748bca48ba8"
-            ]
-        ]
-    },
-    {
-        "id": "a806469711612724",
-        "type": "inject",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "1 Per Min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 2510,
-        "y": 1040,
-        "wires": [
-            [
-                "afcc0fe55c3cb07e"
-            ]
-        ]
-    },
-    {
-        "id": "9ba2b748bca48ba8",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSO Database",
-        "x": 3120,
-        "y": 1040,
-        "wires": [
-            [
-                "fae0041199166dbc"
-            ]
-        ]
-    },
-    {
-        "id": "fae0041199166dbc",
-        "type": "split",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 3270,
-        "y": 1040,
-        "wires": [
-            [
-                "1aa94adaa1790106"
-            ]
-        ]
-    },
-    {
-        "id": "1aa94adaa1790106",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Set Topic & Payload",
-        "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3480,
-        "y": 1040,
-        "wires": [
-            [
-                "35dd8fcbbd78da95"
-            ]
-        ]
-    },
-    {
-        "id": "35dd8fcbbd78da95",
-        "type": "ui_chart",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "QSO Rate by Band Chart",
-        "group": "390d9212c8d39731",
-        "order": 1,
-        "width": 10,
-        "height": 5,
-        "label": "",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 4050,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5d54abefaa3f6011",
-        "type": "ui_chart",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "QSO Chart by Band",
-        "group": "6c1bd04fb9bfea48",
-        "order": 1,
-        "width": 10,
-        "height": 4,
-        "label": "",
-        "chartType": "bar",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 4020,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c700f03ea974bf65",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "30s Random Delay",
-        "pauseType": "random",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "30",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2730,
-        "y": 1120,
-        "wires": [
-            [
-                "002dded44b1b5ee6"
-            ]
-        ]
-    },
-    {
-        "id": "d3b97c2f3316c129",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "30s Random Delay",
-        "pauseType": "random",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "30",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2670,
-        "y": 900,
-        "wires": [
-            [
-                "870d2ff5a5b268a5"
-            ]
-        ]
-    },
-    {
-        "id": "afcc0fe55c3cb07e",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "30s Random Delay",
-        "pauseType": "random",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "30",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2710,
-        "y": 1040,
-        "wires": [
-            [
-                "ba28175bd864c273"
-            ]
-        ]
-    },
-    {
-        "id": "6897b580ee50b83f",
-        "type": "inject",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "1 Per Min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2530,
-        "y": 1260,
-        "wires": [
-            [
-                "be3cb3b9861c2e31"
-            ]
-        ]
-    },
-    {
-        "id": "64ca2307721f7954",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "SQL Mults Rate per Hour",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(ismultiplier1+ismultiplier2+ismultiplier3) as rate from qsos where timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 3150,
-        "y": 1280,
-        "wires": [
-            [
-                "8186c56328392551"
-            ]
-        ]
-    },
-    {
-        "id": "be3cb3b9861c2e31",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "30s Random Delay",
-        "pauseType": "random",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "30",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2710,
-        "y": 1260,
-        "wires": [
-            [
-                "1eb0d9ba4d1bf8d6"
-            ]
-        ]
-    },
-    {
-        "id": "251ae3f24ba6c178",
-        "type": "inject",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "1 Per Min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2530,
-        "y": 1380,
-        "wires": [
-            [
-                "33a1fe7f6bd59c25"
-            ]
-        ]
-    },
-    {
-        "id": "d1e531d474c42dde",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "SQL Top Operator Score",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select operator as operator,\ntotal(points) as points,\ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos\ngroup by operator\norder by score desc;",
-        "output": "str",
-        "x": 3150,
-        "y": 1360,
-        "wires": [
-            [
-                "0664e8c97eaa69b8"
-            ]
-        ]
-    },
-    {
-        "id": "33a1fe7f6bd59c25",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "30s Random Delay",
-        "pauseType": "random",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "30",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2710,
-        "y": 1380,
-        "wires": [
-            [
-                "9757755f9abe81e5"
-            ]
-        ]
     },
     {
         "id": "97ed253958c48009",
@@ -6788,95 +6050,6 @@
                 "bcb9b861df7e6958",
                 "aad501d4eeed3f6c",
                 "77a4afb43fb7bdbd"
-            ]
-        ]
-    },
-    {
-        "id": "bc62893a749a6116",
-        "type": "subflow:c967abe5be484ee6",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "",
-        "x": 3460,
-        "y": 900,
-        "wires": [
-            [
-                "6d122d15af375ab6",
-                "8a40e0fa64c5ad77"
-            ],
-            [
-                "6d122d15af375ab6",
-                "8a40e0fa64c5ad77"
-            ],
-            [
-                "6d122d15af375ab6",
-                "8a40e0fa64c5ad77"
-            ]
-        ]
-    },
-    {
-        "id": "d13e3608177fffc1",
-        "type": "change",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "rate",
-                "pt": "msg",
-                "to": "payload[0].rate",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3290,
-        "y": 900,
-        "wires": [
-            [
-                "bc62893a749a6116"
-            ]
-        ]
-    },
-    {
-        "id": "12b4fddb68795a01",
-        "type": "link in",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Dashboard to Total QSO Rate & QSO Rate by Band IN",
-        "links": [
-            "5e1859619292b1b8"
-        ],
-        "x": 3495,
-        "y": 980,
-        "wires": [
-            [
-                "816d3f7e84dd1bf0",
-                "6d122d15af375ab6",
-                "35dd8fcbbd78da95"
-            ]
-        ]
-    },
-    {
-        "id": "3fc8a4c3201d42cc",
-        "type": "link in",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Dashboard QSO Chart by Band IN",
-        "links": [
-            "5e1859619292b1b8"
-        ],
-        "x": 3675,
-        "y": 1180,
-        "wires": [
-            [
-                "5d54abefaa3f6011",
-                "a2c474948039215e",
-                "e7705b1d662e98c7"
             ]
         ]
     },
@@ -7397,184 +6570,6 @@
         "x": 140,
         "y": 420,
         "wires": []
-    },
-    {
-        "id": "168faf5992e055d7",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "SQL Top Distance",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select max(cast(distance as integer)) as max_distance from qsos;",
-        "output": "str",
-        "x": 3150,
-        "y": 1400,
-        "wires": [
-            [
-                "0664e8c97eaa69b8"
-            ]
-        ]
-    },
-    {
-        "id": "0664e8c97eaa69b8",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSO Database",
-        "x": 3400,
-        "y": 1380,
-        "wires": [
-            [
-                "9cc043acda88da3f"
-            ]
-        ]
-    },
-    {
-        "id": "d53bdbd6ba3fdfed",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "SQL Top Operator Multi",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select total(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, operator as operator from qsos group by operator order by multiplier desc;",
-        "output": "str",
-        "x": 3150,
-        "y": 1240,
-        "wires": [
-            [
-                "8186c56328392551"
-            ]
-        ]
-    },
-    {
-        "id": "8186c56328392551",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSO Database",
-        "x": 3400,
-        "y": 1260,
-        "wires": [
-            [
-                "0f2162dc3bfae19c"
-            ]
-        ]
-    },
-    {
-        "id": "1eb0d9ba4d1bf8d6",
-        "type": "switch",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Category?",
-        "property": "category",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "multiop",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "so1v",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "so2r",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 2890,
-        "y": 1260,
-        "wires": [
-            [
-                "d53bdbd6ba3fdfed"
-            ],
-            [
-                "64ca2307721f7954"
-            ],
-            [
-                "64ca2307721f7954"
-            ]
-        ]
-    },
-    {
-        "id": "9757755f9abe81e5",
-        "type": "switch",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Category?",
-        "property": "category",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "multiop",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "so1v",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "so2r",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 2890,
-        "y": 1380,
-        "wires": [
-            [
-                "d1e531d474c42dde"
-            ],
-            [
-                "168faf5992e055d7"
-            ],
-            [
-                "168faf5992e055d7"
-            ]
-        ]
-    },
-    {
-        "id": "9cc043acda88da3f",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\nmsg.label = null\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"<font size = 6>Longest QSO\";\n    return msg;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3620,
-        "y": 1380,
-        "wires": [
-            [
-                "e7705b1d662e98c7"
-            ]
-        ]
     },
     {
         "id": "1497c72e88a8f6b1",
@@ -10020,6 +9015,1010 @@
         ]
     },
     {
+        "id": "b829243f42385969",
+        "type": "sqlite",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "QSO Database",
+        "x": 3100,
+        "y": 900,
+        "wires": [
+            [
+                "d13e3608177fffc1"
+            ]
+        ]
+    },
+    {
+        "id": "ec43df8648bddaa2",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "1 Per Min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 2470,
+        "y": 900,
+        "wires": [
+            [
+                "d3b97c2f3316c129"
+            ]
+        ]
+    },
+    {
+        "id": "870d2ff5a5b268a5",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "SQL Select Rate",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(*) as rate from qsos where timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 2890,
+        "y": 900,
+        "wires": [
+            [
+                "b829243f42385969"
+            ]
+        ]
+    },
+    {
+        "id": "6d122d15af375ab6",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "group": "aeac5355e22fa2ee",
+        "order": 5,
+        "width": 5,
+        "height": 3,
+        "name": "Current Total QSO Rate",
+        "label": "<font size = 6><center>Current Total QSO Rate",
+        "format": "<font size = 50 font color={{msg.color}}>{{msg.rate}}</font><font size = 4 font color={{msg.color}}> Q's/Hr</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 3710,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "22fe07a2c13d18ff",
+        "type": "comment",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Calc Current QSO Rate",
+        "info": "",
+        "x": 2520,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "816d3f7e84dd1bf0",
+        "type": "ui_chart",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Total QSO Rate Chart",
+        "group": "c53924de5e016c59",
+        "order": 1,
+        "width": 10,
+        "height": 4,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 4040,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a40e0fa64c5ad77",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Rate to Payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "rate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3680,
+        "y": 880,
+        "wires": [
+            [
+                "816d3f7e84dd1bf0"
+            ]
+        ]
+    },
+    {
+        "id": "577c577fed5bf005",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "1 Per Min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2550,
+        "y": 1120,
+        "wires": [
+            [
+                "c700f03ea974bf65"
+            ]
+        ]
+    },
+    {
+        "id": "61fdced830d7a010",
+        "type": "sqlite",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "QSO Database",
+        "x": 3120,
+        "y": 1120,
+        "wires": [
+            [
+                "fc6208525bfd2db6"
+            ]
+        ]
+    },
+    {
+        "id": "fc6208525bfd2db6",
+        "type": "split",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 3270,
+        "y": 1120,
+        "wires": [
+            [
+                "e616bcdb29792aa8"
+            ]
+        ]
+    },
+    {
+        "id": "e616bcdb29792aa8",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Set Topic & Payload",
+        "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\nlet control = null\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3460,
+        "y": 1120,
+        "wires": [
+            [
+                "5d54abefaa3f6011"
+            ]
+        ]
+    },
+    {
+        "id": "002dded44b1b5ee6",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "SQL Select Band",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(band) as total, band as band from qsos group by band order by length(band) desc;",
+        "output": "str",
+        "x": 2930,
+        "y": 1120,
+        "wires": [
+            [
+                "61fdced830d7a010"
+            ]
+        ]
+    },
+    {
+        "id": "e7705b1d662e98c7",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "group": "aeac5355e22fa2ee",
+        "order": 6,
+        "width": 5,
+        "height": 3,
+        "name": "Top OP Score/Distance",
+        "label": "{{msg.label}}",
+        "format": "<font size = 9 font color=#FFFF00>{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 4090,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "a2c474948039215e",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "group": "ba8d90f0d4d46eb0",
+        "order": 6,
+        "width": 5,
+        "height": 3,
+        "name": "Top OP Mults/Mults Stats",
+        "label": "{{msg.label}}",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 4090,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "ba28175bd864c273",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "SQL Select Rate",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-1 hours') group by band;",
+        "output": "str",
+        "x": 2910,
+        "y": 1040,
+        "wires": [
+            [
+                "9ba2b748bca48ba8"
+            ]
+        ]
+    },
+    {
+        "id": "a806469711612724",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "1 Per Min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 2510,
+        "y": 1040,
+        "wires": [
+            [
+                "afcc0fe55c3cb07e"
+            ]
+        ]
+    },
+    {
+        "id": "9ba2b748bca48ba8",
+        "type": "sqlite",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "QSO Database",
+        "x": 3120,
+        "y": 1040,
+        "wires": [
+            [
+                "fae0041199166dbc"
+            ]
+        ]
+    },
+    {
+        "id": "fae0041199166dbc",
+        "type": "split",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 3270,
+        "y": 1040,
+        "wires": [
+            [
+                "1aa94adaa1790106"
+            ]
+        ]
+    },
+    {
+        "id": "1aa94adaa1790106",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Set Topic & Payload",
+        "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3480,
+        "y": 1040,
+        "wires": [
+            [
+                "35dd8fcbbd78da95"
+            ]
+        ]
+    },
+    {
+        "id": "35dd8fcbbd78da95",
+        "type": "ui_chart",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "QSO Rate by Band Chart",
+        "group": "390d9212c8d39731",
+        "order": 1,
+        "width": 10,
+        "height": 5,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 4050,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d54abefaa3f6011",
+        "type": "ui_chart",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "QSO Chart by Band",
+        "group": "6c1bd04fb9bfea48",
+        "order": 1,
+        "width": 10,
+        "height": 4,
+        "label": "",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 4020,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c700f03ea974bf65",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "30s Random Delay",
+        "pauseType": "random",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "30",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2730,
+        "y": 1120,
+        "wires": [
+            [
+                "002dded44b1b5ee6"
+            ]
+        ]
+    },
+    {
+        "id": "d3b97c2f3316c129",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "30s Random Delay",
+        "pauseType": "random",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "30",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2670,
+        "y": 900,
+        "wires": [
+            [
+                "870d2ff5a5b268a5"
+            ]
+        ]
+    },
+    {
+        "id": "afcc0fe55c3cb07e",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "30s Random Delay",
+        "pauseType": "random",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "30",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2710,
+        "y": 1040,
+        "wires": [
+            [
+                "ba28175bd864c273"
+            ]
+        ]
+    },
+    {
+        "id": "6897b580ee50b83f",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "1 Per Min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2530,
+        "y": 1260,
+        "wires": [
+            [
+                "be3cb3b9861c2e31"
+            ]
+        ]
+    },
+    {
+        "id": "64ca2307721f7954",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "SQL Mults Rate per Hour",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(ismultiplier1+ismultiplier2+ismultiplier3) as rate from qsos where timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 3150,
+        "y": 1280,
+        "wires": [
+            [
+                "8186c56328392551"
+            ]
+        ]
+    },
+    {
+        "id": "be3cb3b9861c2e31",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "30s Random Delay",
+        "pauseType": "random",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "30",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2710,
+        "y": 1260,
+        "wires": [
+            [
+                "1eb0d9ba4d1bf8d6"
+            ]
+        ]
+    },
+    {
+        "id": "251ae3f24ba6c178",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "1 Per Min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2530,
+        "y": 1380,
+        "wires": [
+            [
+                "33a1fe7f6bd59c25"
+            ]
+        ]
+    },
+    {
+        "id": "d1e531d474c42dde",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "SQL Top Operator Score",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select operator as operator,\ntotal(points) as points,\ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos\ngroup by operator\norder by score desc;",
+        "output": "str",
+        "x": 3150,
+        "y": 1360,
+        "wires": [
+            [
+                "0664e8c97eaa69b8"
+            ]
+        ]
+    },
+    {
+        "id": "33a1fe7f6bd59c25",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "30s Random Delay",
+        "pauseType": "random",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "30",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2710,
+        "y": 1380,
+        "wires": [
+            [
+                "9757755f9abe81e5"
+            ]
+        ]
+    },
+    {
+        "id": "bc62893a749a6116",
+        "type": "subflow:c967abe5be484ee6",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "",
+        "x": 3460,
+        "y": 900,
+        "wires": [
+            [
+                "6d122d15af375ab6",
+                "8a40e0fa64c5ad77"
+            ],
+            [
+                "6d122d15af375ab6",
+                "8a40e0fa64c5ad77"
+            ],
+            [
+                "6d122d15af375ab6",
+                "8a40e0fa64c5ad77"
+            ]
+        ]
+    },
+    {
+        "id": "d13e3608177fffc1",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rate",
+                "pt": "msg",
+                "to": "payload[0].rate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3290,
+        "y": 900,
+        "wires": [
+            [
+                "bc62893a749a6116"
+            ]
+        ]
+    },
+    {
+        "id": "12b4fddb68795a01",
+        "type": "link in",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Dashboard to Total QSO Rate & QSO Rate by Band IN",
+        "links": [
+            "5e1859619292b1b8"
+        ],
+        "x": 3495,
+        "y": 980,
+        "wires": [
+            [
+                "6d122d15af375ab6",
+                "816d3f7e84dd1bf0",
+                "35dd8fcbbd78da95"
+            ]
+        ]
+    },
+    {
+        "id": "3fc8a4c3201d42cc",
+        "type": "link in",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Dashboard QSO Chart by Band IN",
+        "links": [
+            "5e1859619292b1b8"
+        ],
+        "x": 3675,
+        "y": 1180,
+        "wires": [
+            [
+                "e7705b1d662e98c7",
+                "a2c474948039215e",
+                "5d54abefaa3f6011"
+            ]
+        ]
+    },
+    {
+        "id": "168faf5992e055d7",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "SQL Top Distance",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select max(cast(distance as integer)) as max_distance from qsos;",
+        "output": "str",
+        "x": 3150,
+        "y": 1400,
+        "wires": [
+            [
+                "0664e8c97eaa69b8"
+            ]
+        ]
+    },
+    {
+        "id": "0664e8c97eaa69b8",
+        "type": "sqlite",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "QSO Database",
+        "x": 3400,
+        "y": 1380,
+        "wires": [
+            [
+                "9cc043acda88da3f"
+            ]
+        ]
+    },
+    {
+        "id": "1eb0d9ba4d1bf8d6",
+        "type": "switch",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Category?",
+        "property": "category",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "multiop",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "so1v",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "so2r",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 2890,
+        "y": 1260,
+        "wires": [
+            [
+                "d53bdbd6ba3fdfed"
+            ],
+            [
+                "64ca2307721f7954"
+            ],
+            [
+                "64ca2307721f7954"
+            ]
+        ]
+    },
+    {
+        "id": "9757755f9abe81e5",
+        "type": "switch",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Category?",
+        "property": "category",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "multiop",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "so1v",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "so2r",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 2890,
+        "y": 1380,
+        "wires": [
+            [
+                "d1e531d474c42dde"
+            ],
+            [
+                "168faf5992e055d7"
+            ],
+            [
+                "168faf5992e055d7"
+            ]
+        ]
+    },
+    {
+        "id": "9cc043acda88da3f",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Set Label & Payload",
+        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\nmsg.label = null\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"<font size = 6>Longest QSO\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3620,
+        "y": 1380,
+        "wires": [
+            [
+                "e7705b1d662e98c7"
+            ]
+        ]
+    },
+    {
+        "id": "d53bdbd6ba3fdfed",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "SQL Top Operator Multi",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select total(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, operator as operator from qsos group by operator order by multiplier desc;",
+        "output": "str",
+        "x": 3150,
+        "y": 1240,
+        "wires": [
+            [
+                "8186c56328392551"
+            ]
+        ]
+    },
+    {
+        "id": "8186c56328392551",
+        "type": "sqlite",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "QSO Database",
+        "x": 3400,
+        "y": 1260,
+        "wires": [
+            [
+                "0f2162dc3bfae19c"
+            ]
+        ]
+    },
+    {
         "id": "0f2162dc3bfae19c",
         "type": "function",
         "z": "407d2b774fe67647",
@@ -10035,28 +10034,9 @@
         "y": 1260,
         "wires": [
             [
-                "a2c474948039215e",
-                "68a40288d21cbfe9"
+                "a2c474948039215e"
             ]
         ]
-    },
-    {
-        "id": "68a40288d21cbfe9",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3820,
-        "y": 1320,
-        "wires": []
     },
     {
         "id": "4079239a4fd5c11c",
