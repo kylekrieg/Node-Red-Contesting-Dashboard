@@ -298,7 +298,6 @@ All of the sections should line up nicely and look uniform except for the Config
 
 1) The Spectator Dashboard is still a work in progress.  The vision of this dashboard is for an operator to be able to use this dashboard to stream to YouTube or Twitch without violating any contest rules.  This dashboard will not give your frequency or band information away but allows the viewer to interact and learn more about contesting and ham radio.
 2) The trending arrows on the Operator Competition dashboard need some more work.  I'm not 100% satisified with the way they work.
-3) Configuration parameters get erased when re-starting the Pi or Node Red server.
 4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.
 5) On the line charts, the most recent data point time is typically in local time with the rest of the data points in UTC.  This is a known bug in the graphing dashboard node.
 6) The great circle lines in the Worldmap node currently have an issue with the international date line.  The developers are working on this bug.
@@ -313,9 +312,6 @@ The laundry list is huge.  These are just a few.
 
 1) Setup the dashboard for Field Day with every little effort.
 2) Be able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
-3) Use hamdb.org lookup for RBN spots.
-4) Online Scoreboard integration.  Be able chase your friends or a few stations in real time directly from the dashboard.
 5) Writelog and N3FJP integration.
-6) Be able to save the configuration settings in a text file on your Pi and recall them after rebooting or restarting Node Red.
 
 This program is released as-is.  Modify this program as you see fit. 
