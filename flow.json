@@ -362,9 +362,7 @@
             "ea4b0c4d43bbf2e8"
         ],
         "x": 474,
-        "y": 159,
-        "w": 255,
-        "h": 442
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -387,9 +385,7 @@
             "af65ab5234804a9a"
         ],
         "x": 754,
-        "y": 159,
-        "w": 252,
-        "h": 442
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -412,9 +408,7 @@
             "34d492ab50541fdc"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 442
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -438,9 +432,7 @@
             "cd6e0fce6f62b9c5"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 442
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -455,9 +447,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -472,9 +462,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -497,9 +485,7 @@
             "7036aad4276a8131"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 442
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -522,9 +508,7 @@
             "e6ae4df0ca620d74"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 442
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -561,9 +545,7 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679,
-        "w": 2032,
-        "h": 282
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -588,9 +570,7 @@
             "324101084f63a83e"
         ],
         "x": 234,
-        "y": 1019,
-        "w": 622,
-        "h": 262
+        "y": 1019
     },
     {
         "id": "c6a5789101548ba9",
@@ -605,9 +585,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -630,9 +608,7 @@
             "23d467e3525ec5a8"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 281,
-        "h": 442
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -3770,7 +3746,7 @@
         "type": "switch",
         "z": "bedd4acdc0e27dab",
         "name": "Band Parse",
-        "property": "payload.freq",
+        "property": "original.freq",
         "propertyType": "msg",
         "rules": [
             {
@@ -4626,8 +4602,7 @@
                 "b228e5cf7ea48308"
             ],
             [
-                "b228e5cf7ea48308",
-                "7e58b9783f50c4af"
+                "b228e5cf7ea48308"
             ],
             [
                 "6dddf05a5c5aefea"
@@ -5749,23 +5724,6 @@
                 "6ddd40d0ad448153"
             ]
         ]
-    },
-    {
-        "id": "7e58b9783f50c4af",
-        "type": "debug",
-        "z": "bedd4acdc0e27dab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3770,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "f8de5ff40046db44",
@@ -9300,7 +9258,7 @@
         "height": 3,
         "name": "Top OP Score/Distance",
         "label": "{{msg.label}}",
-        "format": "<font size = 9 font color=#FFFF00>{{msg.payload}}",
+        "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
         "x": 4090,
@@ -9642,10 +9600,10 @@
         "template": "select count(ismultiplier1+ismultiplier2+ismultiplier3) as rate from qsos where timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 3150,
-        "y": 1280,
+        "y": 1400,
         "wires": [
             [
-                "8186c56328392551"
+                "0664e8c97eaa69b8"
             ]
         ]
     },
@@ -9853,10 +9811,10 @@
         "template": "select max(cast(distance as integer)) as max_distance from qsos;",
         "output": "str",
         "x": 3150,
-        "y": 1400,
+        "y": 1280,
         "wires": [
             [
-                "0664e8c97eaa69b8"
+                "8186c56328392551"
             ]
         ]
     },
@@ -9912,10 +9870,10 @@
                 "d53bdbd6ba3fdfed"
             ],
             [
-                "64ca2307721f7954"
+                "168faf5992e055d7"
             ],
             [
-                "64ca2307721f7954"
+                "168faf5992e055d7"
             ]
         ]
     },
@@ -9954,10 +9912,10 @@
                 "d1e531d474c42dde"
             ],
             [
-                "168faf5992e055d7"
+                "64ca2307721f7954"
             ],
             [
-                "168faf5992e055d7"
+                "64ca2307721f7954"
             ]
         ]
     },
@@ -9967,7 +9925,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\nmsg.label = null\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"<font size = 6>Longest QSO\";\n    return msg;\n}\n",
+        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif (category == \"multiop\")\n{\n    msg.payload = msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font size = 8 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font size = 6 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"<font size = 6>M/Hr | 1 Mult = \";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10024,7 +9982,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font size = 8 font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font size = 8 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font size = 6 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"<font size = 5>Mults/Hr | 1 Mult = \";\n    return msg;\n}\n\n\n",
+        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font size = 8 font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = \"<font size = 9 font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = \"<font size = 9 font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"<font size = 6>Longest QSO\";\n    return msg;\n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -25381,7 +25339,7 @@
         "name": "Comptuer Name Input",
         "label": "",
         "group": "887ee2eadc46df9a",
-        "order": 1,
+        "order": 4,
         "width": 6,
         "height": 1,
         "options": [
@@ -25514,7 +25472,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 1,
         "name": "First Two PC Names Will Appear on the N1MM Dashboard With the Map",
@@ -25569,57 +25527,17 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Set Global Contest Callsign Used",
-        "func": "let x = msg.payload.callsign\n\nlet callsign = x.toUpperCase(x);\n\nglobal.set(\"callsign\",callsign)\n\nmsg.payload = callsign;\n\nreturn msg;",
+        "func": "let x = msg.payload.contestcallsign\n\nlet callsign = x.toUpperCase(x);\n\nglobal.set(\"contestcallsign\",callsign)\n\nmsg.payload = callsign;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
+        "x": 800,
         "y": 740,
         "wires": [
             [
                 "289eb29cd66ebe0f"
-            ]
-        ]
-    },
-    {
-        "id": "f3caf870f9fb26dc",
-        "type": "ui_toast",
-        "z": "204548a488401a1b",
-        "position": "dialog",
-        "displayTime": "",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "Cancel",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Show Contest Call Sign Input",
-        "x": 720,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d1a5ead8adc73c29",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Set payload to printout",
-        "func": "let x = msg.payload.callsign\n\nlet callsign = x.toUpperCase(x);\n\nmsg.payload = \"Callsign entered : \" + callsign;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 780,
-        "wires": [
-            [
-                "f3caf870f9fb26dc"
             ]
         ]
     },
@@ -25636,14 +25554,14 @@
         "options": [
             {
                 "label": "Contest Callsign",
-                "value": "callsign",
+                "value": "contestcallsign",
                 "type": "text",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "callsign": ""
+            "contestcallsign": ""
         },
         "payload": "",
         "submit": "submit",
@@ -25652,7 +25570,7 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 490,
+        "x": 530,
         "y": 740,
         "wires": [
             [
@@ -25878,7 +25796,7 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 1550,
+        "x": 1510,
         "y": 540,
         "wires": [
             [
@@ -25890,14 +25808,14 @@
         "id": "c7d7c4c8556569e3",
         "type": "function",
         "z": "204548a488401a1b",
-        "name": "Set Global Login",
+        "name": "Set Skimmer Login",
         "func": "let skimmercall = msg.payload.skimmercall\nglobal.set(\"skimmercall\",skimmercall);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1770,
+        "x": 1730,
         "y": 540,
         "wires": [
             [
@@ -26024,7 +25942,7 @@
         "name": "QRZ Database Login Form",
         "label": "",
         "group": "8a65c232b2637c6a",
-        "order": 5,
+        "order": 3,
         "width": 6,
         "height": 1,
         "options": [
@@ -26089,7 +26007,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "8a65c232b2637c6a",
-        "order": 6,
+        "order": 4,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -26449,34 +26367,6 @@
         "wires": []
     },
     {
-        "id": "a492eab92c9344f6",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "5 Sec",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 820,
-        "wires": [
-            [
-                "1a7a6b6fc5347cc1"
-            ]
-        ]
-    },
-    {
         "id": "289eb29cd66ebe0f",
         "type": "ui_text",
         "z": "204548a488401a1b",
@@ -26489,34 +26379,9 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1040,
+        "x": 1080,
         "y": 740,
         "wires": []
-    },
-    {
-        "id": "1a7a6b6fc5347cc1",
-        "type": "change",
-        "z": "204548a488401a1b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "callsign",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 360,
-        "y": 820,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "59afcb532e72d16e",
@@ -26605,7 +26470,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 5,
+        "order": 1,
         "width": 6,
         "height": 1,
         "name": "Current TTL Icon Value",
@@ -26624,7 +26489,7 @@
         "name": "QSO Map Icon TTL Form",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 6,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -26678,7 +26543,7 @@
         "name": "Lat & Lon Input",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 2,
+        "order": 6,
         "width": 6,
         "height": 1,
         "options": [
@@ -26812,7 +26677,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 1,
+        "order": 7,
         "width": 6,
         "height": 1,
         "name": "Current Lat & Lon",
@@ -26905,7 +26770,7 @@
         "label": "Map Labels On/Off",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 7,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -27098,7 +26963,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "54b59a095746559b",
-        "order": 4,
+        "order": 5,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -27336,7 +27201,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 2,
         "width": 6,
         "height": 2,
         "name": "Current Radio Names Text Box",
@@ -27421,7 +27286,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "887ee2eadc46df9a",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27679,7 +27544,7 @@
         "name": "1Q Per Hour Color Form",
         "label": "Q's Per 1 Hour Rates",
         "group": "c89d2b489a7ea747",
-        "order": 3,
+        "order": 6,
         "width": 6,
         "height": 1,
         "options": [
@@ -27724,7 +27589,7 @@
         "name": "2Q Per Hour Color Form",
         "label": "Q's Per 2 Hour Rates",
         "group": "c89d2b489a7ea747",
-        "order": 6,
+        "order": 5,
         "width": 6,
         "height": 1,
         "options": [
@@ -28035,7 +27900,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "c89d2b489a7ea747",
-        "order": 4,
+        "order": 3,
         "width": 3,
         "height": 1,
         "name": "Q Low 2 Hour Text",
@@ -28052,7 +27917,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "c89d2b489a7ea747",
-        "order": 5,
+        "order": 4,
         "width": 3,
         "height": 1,
         "name": "Q High 2 Hour Text",
@@ -28935,7 +28800,7 @@
         "name": "HamQTH Database Login Form",
         "label": "",
         "group": "8a65c232b2637c6a",
-        "order": 3,
+        "order": 5,
         "width": 6,
         "height": 1,
         "options": [
@@ -29000,7 +28865,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "group": "8a65c232b2637c6a",
-        "order": 4,
+        "order": 6,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -29512,7 +29377,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 3,
+        "order": 4,
         "width": 6,
         "height": 1,
         "name": "Map Label Type Text",
@@ -29528,14 +29393,14 @@
         "id": "ad4c547076b09ade",
         "type": "function",
         "z": "204548a488401a1b",
-        "name": "Get Distance Measurement",
+        "name": "Get Skimmer Call",
         "func": "msg.payload = global.get('skimmercall')\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1320,
+        "x": 1290,
         "y": 540,
         "wires": [
             [
@@ -29605,14 +29470,14 @@
         "id": "a54ca6e34027cc56",
         "type": "function",
         "z": "204548a488401a1b",
-        "name": "Get Callsign",
+        "name": "Get Contest Callsign",
         "func": "msg.payload = global.get('contestcallsign')\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
+        "x": 300,
         "y": 740,
         "wires": [
             [
@@ -31025,7 +30890,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "callsign",
+                "v": "contestcallsign",
                 "vt": "global"
             }
         ],
@@ -31140,7 +31005,7 @@
         "type": "function",
         "z": "bd8a446b999750f9",
         "name": "Table Format",
-        "func": "\nlet freq = msg.payload.freq;\nlet call = msg.payload.call;\nlet comment = msg.payload.comment;\nlet time = msg.payload.time;\n\n\nreturn {payload:{\n    command:\"addData\",\n    arguments:[\n        {\n            freq:freq,call:call,comment:comment,time:time\n        },\n        true\n    ],\n    returnPromise:true\n    }\n};",
+        "func": "\nlet freq = msg.payload.freq;\nlet call = msg.payload.call;\nlet comment = msg.payload.comment;\nlet time = msg.payload.time;\nlet de = msg.payload.de;\n\n\nreturn {payload:{\n    command:\"addData\",\n    arguments:[\n        {\n            de:de,freq:freq,call:call,comment:comment,time:time\n        },\n        true\n    ],\n    returnPromise:true\n    }\n};",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31893,7 +31758,7 @@
         "type": "function",
         "z": "2eedd966294071cc",
         "name": "Prep HTTP GET",
-        "func": "let contestname = global.get('contestname');\nlet contestcall = global.get('callsign');\nlet chasecall1 = global.get('chasecall1');\nlet chasecall2 = global.get('chasecall2');\nlet chasecall3 = global.get('chasecall3');\nlet chasecall4 = global.get('chasecall4');\nlet chasecall5 = global.get('chasecall5');\n\nif (contestname == null)\n{\n    return;\n}\n\nif (contestcall == null)\n{\n    return;\n}\n\nif (chasecall1 == null)\n{\n    msg.payload = contestcall\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall2 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall3 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall4 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall5 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4\n    msg.topic = contestname;\n    return msg;\n}\nelse {\n    \n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4+\",\"+chasecall5\n    msg.topic = contestname;\n    return msg;\n}\n\n//msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4+\",\"+chasecall5\n\n//let dummyString=\"890909.00\"\n//msg.payload = msg.payload.replace(/(,+$)/, '')\n//console.log(dummyString)\n\n//msg.topic = contestname;\n\n//return msg;",
+        "func": "let contestname = global.get('contestname');\nlet contestcall = global.get('contestcallsign');\nlet chasecall1 = global.get('chasecall1');\nlet chasecall2 = global.get('chasecall2');\nlet chasecall3 = global.get('chasecall3');\nlet chasecall4 = global.get('chasecall4');\nlet chasecall5 = global.get('chasecall5');\n\nif (contestname == null)\n{\n    return;\n}\n\nif (contestcall == null)\n{\n    return;\n}\n\nif (chasecall1 == null)\n{\n    msg.payload = contestcall\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall2 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall3 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall4 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall5 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4\n    msg.topic = contestname;\n    return msg;\n}\nelse {\n    \n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4+\",\"+chasecall5\n    msg.topic = contestname;\n    return msg;\n}\n\n//msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4+\",\"+chasecall5\n\n//let dummyString=\"890909.00\"\n//msg.payload = msg.payload.replace(/(,+$)/, '')\n//console.log(dummyString)\n\n//msg.topic = contestname;\n\n//return msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31929,7 +31794,7 @@
         "type": "function",
         "z": "2eedd966294071cc",
         "name": "Breakout Scores Contest Call",
-        "func": "let contestcall = global.get('callsign');\n\nif (contestcall == null)\n{\n    return;\n}\n\nlet score_total = msg.payload[contestcall].data.score_total;\nlet qso_total = msg.payload[contestcall].data.qso_total;\nlet mult_total = msg.payload[contestcall].data.mult_total;\nlet qso_160 = msg.payload[contestcall].data.qso_160;\nlet mult_160 = msg.payload[contestcall].data.mult_160;\nlet qso_80 = msg.payload[contestcall].data.qso_80;\nlet mult_80 = msg.payload[contestcall].data.mult_80;\nlet qso_40 = msg.payload[contestcall].data.qso_40;\nlet mult_40 = msg.payload[contestcall].data.mult_40;\nlet qso_20 = msg.payload[contestcall].data.qso_20;\nlet mult_20 = msg.payload[contestcall].data.mult_20;\nlet qso_15 = msg.payload[contestcall].data.qso_15;\nlet mult_15 = msg.payload[contestcall].data.mult_15;\nlet qso_10 = msg.payload[contestcall].data.qso_10;\nlet mult_10 = msg.payload[contestcall].data.mult_10;\nlet qso_6 = msg.payload[contestcall].data.qso_6;\nlet mult_6 = msg.payload[contestcall].data.mult_6;\nlet last = msg.payload[contestcall].data.last;\n\nflow.set('score_total',score_total);\nflow.set('qso_total',qso_total);\nflow.set('mult_total',mult_total);\n\nscore_total = Number(score_total).toLocaleString('US');\nqso_total = Number(qso_total).toLocaleString('US');\nmult_total = Number(mult_total).toLocaleString('US');\n\n\nmsg.payload = {\n    contestcall:contestcall,\n    score_total:score_total,\n    qso_total:qso_total,\n    mult_total:mult_total,\n    qso_160:qso_160,\n    mult_160:mult_160,\n    qso_80:qso_80,\n    mult_80:mult_80,\n    qso_40:qso_40,\n    mult_40:mult_40,\n    qso_20:qso_20,\n    mult_20:mult_20,\n    qso_15:qso_15,\n    mult_15:mult_15,\n    qso_10:qso_10,\n    mult_10:qso_10,\n    qso_6:qso_6,\n    mult_6:qso_6,\n    last:last\n}\n\nreturn msg;",
+        "func": "let contestcall = global.get('contestcallsign');\n\nif (contestcall == null)\n{\n    return;\n}\n\nlet score_total = msg.payload[contestcall].data.score_total;\nlet qso_total = msg.payload[contestcall].data.qso_total;\nlet mult_total = msg.payload[contestcall].data.mult_total;\nlet qso_160 = msg.payload[contestcall].data.qso_160;\nlet mult_160 = msg.payload[contestcall].data.mult_160;\nlet qso_80 = msg.payload[contestcall].data.qso_80;\nlet mult_80 = msg.payload[contestcall].data.mult_80;\nlet qso_40 = msg.payload[contestcall].data.qso_40;\nlet mult_40 = msg.payload[contestcall].data.mult_40;\nlet qso_20 = msg.payload[contestcall].data.qso_20;\nlet mult_20 = msg.payload[contestcall].data.mult_20;\nlet qso_15 = msg.payload[contestcall].data.qso_15;\nlet mult_15 = msg.payload[contestcall].data.mult_15;\nlet qso_10 = msg.payload[contestcall].data.qso_10;\nlet mult_10 = msg.payload[contestcall].data.mult_10;\nlet qso_6 = msg.payload[contestcall].data.qso_6;\nlet mult_6 = msg.payload[contestcall].data.mult_6;\nlet last = msg.payload[contestcall].data.last;\n\nflow.set('score_total',score_total);\nflow.set('qso_total',qso_total);\nflow.set('mult_total',mult_total);\n\nscore_total = Number(score_total).toLocaleString('US');\nqso_total = Number(qso_total).toLocaleString('US');\nmult_total = Number(mult_total).toLocaleString('US');\n\n\nmsg.payload = {\n    contestcall:contestcall,\n    score_total:score_total,\n    qso_total:qso_total,\n    mult_total:mult_total,\n    qso_160:qso_160,\n    mult_160:mult_160,\n    qso_80:qso_80,\n    mult_80:mult_80,\n    qso_40:qso_40,\n    mult_40:mult_40,\n    qso_20:qso_20,\n    mult_20:mult_20,\n    qso_15:qso_15,\n    mult_15:mult_15,\n    qso_10:qso_10,\n    mult_10:qso_10,\n    qso_6:qso_6,\n    mult_6:qso_6,\n    last:last\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -33300,7 +33165,7 @@
         "type": "function",
         "z": "3e52b5d54104d7f0",
         "name": "Prep data",
-        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;callsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
+        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -35287,7 +35152,7 @@
         "type": "ui_template",
         "z": "b73cc2bb5f424b69",
         "g": "02235a52f1d247d6",
-        "group": "aafad41ae29aabef",
+        "group": "9a1dd65e19bf97cb",
         "name": "updateServer K",
         "order": 7,
         "width": 0,
