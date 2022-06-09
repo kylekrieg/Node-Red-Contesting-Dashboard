@@ -1682,7 +1682,7 @@
     {
         "id": "568305b092b67570",
         "type": "ui_tab",
-        "name": "Spectator Dashboard",
+        "name": "Streaming Dashboard",
         "icon": "mi-visibility",
         "order": 2,
         "disabled": false,
