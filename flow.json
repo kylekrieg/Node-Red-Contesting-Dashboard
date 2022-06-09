@@ -868,7 +868,7 @@
         ],
         "x": 2354,
         "y": 839,
-        "w": 1872,
+        "w": 1912,
         "h": 602
     },
     {
@@ -7896,7 +7896,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Label +  Add Multis + Exchange",
-        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\n\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9256,12 +9256,12 @@
         "order": 6,
         "width": 5,
         "height": 3,
-        "name": "Top OP Score/Distance",
+        "name": "Top OP Score/Mults Per Hour",
         "label": "{{msg.label}}",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 4090,
+        "x": 4110,
         "y": 1380,
         "wires": []
     },
@@ -9274,12 +9274,12 @@
         "order": 6,
         "width": 5,
         "height": 3,
-        "name": "Top OP Mults/Mults Stats",
+        "name": "Top OP Mults/Distance Stats",
         "label": "{{msg.label}}",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 4090,
+        "x": 4100,
         "y": 1260,
         "wires": []
     },
@@ -9982,7 +9982,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font size = 8 font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = \"<font size = 9 font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = \"<font size = 9 font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"<font size = 6>Longest QSO\";\n    return msg;\n}\n\n\n",
+        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font size = 8 font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = \"<font size = 9 font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = \"<font size = 9 font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"<font size = 6>Furthest QSO\";\n    return msg;\n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -27155,6 +27155,11 @@
                 "label": "Power",
                 "value": "power",
                 "type": "str"
+            },
+            {
+                "label": "Do Not Show Exchange",
+                "value": "blank",
+                "type": "str"
             }
         ],
         "payload": "",
@@ -31431,9 +31436,9 @@
         "z": "2eedd966294071cc",
         "name": "",
         "method": "GET",
-        "ret": "txt",
+        "ret": "obj",
         "paytoqs": "ignore",
-        "url": "https://contestonlinescore.com/tools/api/?key=3450792384502938475&contest=CW-Ops&call=K2SX",
+        "url": "https://contestonlinescore.com/tools/api/?key=3450792384502938475&contest=CQ-M&call=VE2FK,AB3B,AI6O",
         "tls": "465f5622aae04ed5",
         "persist": false,
         "proxy": "",
@@ -31444,7 +31449,8 @@
         "wires": [
             [
                 "9cf0a4108c9933dd",
-                "acfeee3b87307fc0"
+                "acfeee3b87307fc0",
+                "fbfcea8b946db837"
             ]
         ]
     },
@@ -31510,7 +31516,7 @@
         "type": "debug",
         "z": "2eedd966294071cc",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -33129,6 +33135,22 @@
         "info": "",
         "x": 280,
         "y": 700,
+        "wires": []
+    },
+    {
+        "id": "fbfcea8b946db837",
+        "type": "debug",
+        "z": "2eedd966294071cc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 40,
         "wires": []
     },
     {
