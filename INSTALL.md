@@ -292,7 +292,7 @@ A few things as we work through the BETA phase of testing.
 
 ## Dashboard Display Zoom
 
-All of the sections should line up nicely and look uniform except for the Configuration & Resets tab.  If your dashboard doesn't look like the sample screenshots, you might need to adjust the **Zoom** level on your browser to around 70% for the dashboard to look correct.  Your browswer should ***remember*** this setting next time you pull up the dashboard.
+All of the sections should line up nicely and look uniform except for the Configuration & Resets tab.  If your dashboard doesn't look like the sample screenshots, you might need to adjust the **Zoom** level on your browser to around 70% for the dashboard to look correct on a 1920 x 1080 screen. If you are in full screen mode, 75% might be the right setting.  If your browser is not allowing you to select a custom zoom setting, check the support pages for the broswer as they are usually configurable. Your browswer should ***remember*** this setting next time you pull up the dashboard.
 
 ## Known Issues
 
