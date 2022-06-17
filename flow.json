@@ -864,7 +864,9 @@
             "9cc043acda88da3f",
             "d53bdbd6ba3fdfed",
             "8186c56328392551",
-            "0f2162dc3bfae19c"
+            "0f2162dc3bfae19c",
+            "f0dbae81ebaf286e",
+            "9d0e444ab32a06f9"
         ],
         "x": 2354,
         "y": 839,
@@ -9925,7 +9927,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif (category == \"multiop\")\n{\n    msg.payload = msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font size = 8 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font size = 6 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"<font size = 6>M/Hr | 1 Mult = \";\n    return msg;\n}",
+        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font size = 8 font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font size = 8 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font size = 6 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"<font size = 6>M/Hr | 1 Mult = \";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9935,7 +9937,8 @@
         "y": 1380,
         "wires": [
             [
-                "e7705b1d662e98c7"
+                "e7705b1d662e98c7",
+                "9d0e444ab32a06f9"
             ]
         ]
     },
@@ -9992,9 +9995,46 @@
         "y": 1260,
         "wires": [
             [
-                "a2c474948039215e"
+                "a2c474948039215e",
+                "f0dbae81ebaf286e"
             ]
         ]
+    },
+    {
+        "id": "f0dbae81ebaf286e",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4080,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "9d0e444ab32a06f9",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4030,
+        "y": 1320,
+        "wires": []
     },
     {
         "id": "4079239a4fd5c11c",
