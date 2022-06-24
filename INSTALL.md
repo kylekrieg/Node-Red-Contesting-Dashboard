@@ -232,20 +232,6 @@ External Callsign Lookup to aaa.bbb.ccc.ddd:12061
 ### TR4W Configuration
 Information on configuring TR4W to send the UDP broadcasts on the correct ports is available on the TR4W GitHub Wiki here: https://github.com/n4af/TR4W/wiki/Configuring-TR4W-for-Node-Red-Contesting-Dashboard
 
-## Download the N1MM Dashboard JSON From GitHub
-
-[Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
-
-I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, ```DO NOT USE SSH``` if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
-
-Name your project ```Contest_Dashboard_<DATE>```.  Naming your project with the current date will help when upgrading to the latest version later. 
-
-```
-https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
-```
-
-![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.jpg)
-
 ## Loading Node Dependencies
 
 As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below.
@@ -269,6 +255,20 @@ node-red-contrib-moment
 After installing these node dependencies (which you should receive a pop up message asking you to resolve node dependencies after you clone the project), you'll need to restart Node Red for the nodes to work properly.  From a command prompt, issue the following command.  Note : some dashboard nodes will only populate in your node palette after a restart. 
 
 ```sudo systemctl restart nodered.service```
+
+## Download the N1MM Dashboard JSON From GitHub
+
+[Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
+
+I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, ```DO NOT USE SSH``` if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
+
+Name your project ```Contest_Dashboard_<DATE>```.  Naming your project with the current date will help when upgrading to the latest version later. 
+
+```
+https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
+```
+
+![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.jpg)
 
 ## SQLITE Node Configuration
 
