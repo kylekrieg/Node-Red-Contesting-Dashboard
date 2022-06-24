@@ -256,7 +256,7 @@ After installing these node dependencies (which you should receive a pop up mess
 
 ```sudo systemctl restart nodered.service```
 
-## Download the N1MM Dashboard JSON From GitHub
+## Download the Dashboard JSON From GitHub
 
 [Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
 
