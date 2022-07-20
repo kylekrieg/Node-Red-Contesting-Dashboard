@@ -359,10 +359,13 @@
             "53692007691b251a",
             "4f76379f46c13673",
             "dbcb9a738301da97",
-            "ea4b0c4d43bbf2e8"
+            "ea4b0c4d43bbf2e8",
+            "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 255,
+        "h": 482
     },
     {
         "id": "52886121c9629e0b",
@@ -382,10 +385,13 @@
             "fb4aa4fd72787370",
             "d500857eefbcea4a",
             "a110c5259531418b",
-            "af65ab5234804a9a"
+            "af65ab5234804a9a",
+            "66a43145427ca537"
         ],
-        "x": 754,
-        "y": 159
+        "x": 774,
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -405,10 +411,13 @@
             "431c69a2758e9d6f",
             "0c5b09ac8217c8e8",
             "72c0143cb2801842",
-            "34d492ab50541fdc"
+            "34d492ab50541fdc",
+            "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -429,10 +438,13 @@
             "e35b27050e23f4fe",
             "58b4f87e7d17a9b2",
             "1c0e963122e30bc8",
-            "cd6e0fce6f62b9c5"
+            "cd6e0fce6f62b9c5",
+            "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 482
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -447,7 +459,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -462,7 +476,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -482,10 +498,13 @@
             "36ed085a21d6315d",
             "95613fb05341082e",
             "2100cfc9553c38ba",
-            "7036aad4276a8131"
+            "7036aad4276a8131",
+            "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -505,10 +524,13 @@
             "85db86a67be75656",
             "66a441672a2af592",
             "54fd1aa0f1e76bb0",
-            "e6ae4df0ca620d74"
+            "e6ae4df0ca620d74",
+            "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -545,7 +567,9 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679
+        "y": 679,
+        "w": 2032,
+        "h": 282
     },
     {
         "id": "28877ac600fea8b9",
@@ -569,8 +593,10 @@
             "41b71b195d25cc36",
             "324101084f63a83e"
         ],
-        "x": 234,
-        "y": 1019
+        "x": 224,
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -585,7 +611,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -605,10 +633,13 @@
             "0b122154cd902313",
             "beebf164a6058fc0",
             "05db91002fb4d67a",
-            "23d467e3525ec5a8"
+            "23d467e3525ec5a8",
+            "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 282,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -919,7 +950,7 @@
         "tab": "200297fa.9ab198",
         "order": 8,
         "disp": true,
-        "width": 23,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -930,7 +961,7 @@
         "tab": "200297fa.9ab198",
         "order": 9,
         "disp": true,
-        "width": 23,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -1048,7 +1079,7 @@
         "tab": "200297fa.9ab198",
         "order": 4,
         "disp": true,
-        "width": 10,
+        "width": 12,
         "collapse": false,
         "className": ""
     },
@@ -1059,7 +1090,7 @@
         "tab": "200297fa.9ab198",
         "order": 6,
         "disp": true,
-        "width": "10",
+        "width": 12,
         "collapse": false,
         "className": ""
     },
@@ -1134,7 +1165,7 @@
         "tab": "200297fa.9ab198",
         "order": 5,
         "disp": true,
-        "width": "10",
+        "width": 12,
         "collapse": false,
         "className": ""
     },
@@ -1302,7 +1333,7 @@
         "tab": "ecc5f14b5a3d677e",
         "order": 7,
         "disp": true,
-        "width": "30",
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -1313,7 +1344,7 @@
         "tab": "ecc5f14b5a3d677e",
         "order": 2,
         "disp": true,
-        "width": 30,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -1324,7 +1355,7 @@
         "tab": "ecc5f14b5a3d677e",
         "order": 3,
         "disp": true,
-        "width": 30,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -1335,7 +1366,7 @@
         "tab": "ecc5f14b5a3d677e",
         "order": 4,
         "disp": true,
-        "width": 30,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -1346,7 +1377,7 @@
         "tab": "ecc5f14b5a3d677e",
         "order": 5,
         "disp": true,
-        "width": 30,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -1357,7 +1388,7 @@
         "tab": "ecc5f14b5a3d677e",
         "order": 6,
         "disp": true,
-        "width": 30,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
@@ -1608,7 +1639,7 @@
         "tab": "200297fa.9ab198",
         "order": 7,
         "disp": true,
-        "width": 10,
+        "width": 12,
         "collapse": false,
         "className": ""
     },
@@ -1955,7 +1986,7 @@
         "type": "ui_tab",
         "name": "Banner Bar Layout",
         "icon": "dashboard",
-        "order": 10,
+        "order": 11,
         "disabled": true,
         "hidden": true
     },
@@ -2001,126 +2032,6 @@
         "width": "1",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "ea8581bc786a8e5b",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "ba5556bd38a9b0dc",
-        "order": 6,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "60d042c86c877850",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "ba5556bd38a9b0dc",
-        "order": 7,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "e5cd97a48f153a34",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "33f39234d06022c4",
-        "order": 6,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "f1e3d2be57807805",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "33f39234d06022c4",
-        "order": 7,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "5b61cf28017595dd",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "16293e8283ac8032",
-        "order": 6,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "14d71c235d0fa2e3",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "16293e8283ac8032",
-        "order": 7,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "0f2326476db5f0d5",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "b058bc1a30b324a8",
-        "order": 6,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "77f3d137d539c5e9",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "b058bc1a30b324a8",
-        "order": 7,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "069c6a6bd8361ccb",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "7f3af38546f365bf",
-        "order": 6,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "41deb698c42b4cc9",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "7f3af38546f365bf",
-        "order": 7,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "8071d6321c1b2fbf",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "b597a92689c997ee",
-        "order": 6,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "ef037a5f2c600405",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "b597a92689c997ee",
-        "order": 7,
-        "width": 6,
-        "height": 1
     },
     {
         "id": "b163f197cad6f693",
@@ -2191,6 +2102,26 @@
         "order": 7,
         "width": 4,
         "height": 1
+    },
+    {
+        "id": "1ea34d06.1438c3",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "5e2e41aa.9826b",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "5e2e41aa.9826b",
+        "type": "ui_tab",
+        "name": "CSS_Code",
+        "icon": "dashboard",
+        "order": 10,
+        "disabled": false,
+        "hidden": true
     },
     {
         "id": "db6c3ead34896ed7",
@@ -7509,7 +7440,7 @@
         "g": "81692a3cb68d6cde",
         "order": 7,
         "group": "d5edca762660bedf",
-        "width": 2,
+        "width": 3,
         "height": 1,
         "label": "TX",
         "labelPlacement": "left",
@@ -7536,7 +7467,7 @@
         "g": "81692a3cb68d6cde",
         "order": 7,
         "group": "1fd9d5a5d988cd1e",
-        "width": 2,
+        "width": 3,
         "height": 1,
         "label": "TX",
         "labelPlacement": "left",
@@ -7643,7 +7574,7 @@
         "g": "81692a3cb68d6cde",
         "order": 8,
         "group": "d5edca762660bedf",
-        "width": 2,
+        "width": 3,
         "height": 1,
         "label": "Focus",
         "labelPlacement": "left",
@@ -7670,7 +7601,7 @@
         "g": "81692a3cb68d6cde",
         "order": 8,
         "group": "1fd9d5a5d988cd1e",
-        "width": 2,
+        "width": 3,
         "height": 1,
         "label": "Focus",
         "labelPlacement": "left",
@@ -9077,7 +9008,7 @@
         "name": "Total QSO Rate Chart",
         "group": "c53924de5e016c59",
         "order": 1,
-        "width": 10,
+        "width": 12,
         "height": 4,
         "label": "",
         "chartType": "line",
@@ -9399,7 +9330,7 @@
         "name": "QSO Rate by Band Chart",
         "group": "390d9212c8d39731",
         "order": 1,
-        "width": 10,
+        "width": 12,
         "height": 5,
         "label": "",
         "chartType": "line",
@@ -9444,7 +9375,7 @@
         "name": "QSO Chart by Band",
         "group": "6c1bd04fb9bfea48",
         "order": 1,
-        "width": 10,
+        "width": 12,
         "height": 4,
         "label": "",
         "chartType": "bar",
@@ -21395,7 +21326,7 @@
         "z": "9ed270102b553c75",
         "group": "1d924a93b9821236",
         "order": 4,
-        "width": 3,
+        "width": 4,
         "height": 1,
         "name": "160M N1MM Dashboard Spot Rate",
         "label": "",
@@ -21412,7 +21343,7 @@
         "z": "9ed270102b553c75",
         "group": "1d924a93b9821236",
         "order": 1,
-        "width": 3,
+        "width": 4,
         "height": 1,
         "name": "80M N1MM Dashboard Spot Rate",
         "label": "",
@@ -21446,7 +21377,7 @@
         "z": "9ed270102b553c75",
         "group": "1d924a93b9821236",
         "order": 3,
-        "width": 3,
+        "width": 4,
         "height": 1,
         "name": "20M N1MM Dashboard Spot Rate",
         "label": "",
@@ -21480,7 +21411,7 @@
         "z": "9ed270102b553c75",
         "group": "1d924a93b9821236",
         "order": 6,
-        "width": 3,
+        "width": 4,
         "height": 1,
         "name": "10M N1MM Dashboard Spot Rate",
         "label": "",
@@ -33926,7 +33857,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 870,
+        "x": 890,
         "y": 240,
         "wires": [
             [
@@ -33951,7 +33882,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 880,
+        "x": 900,
         "y": 200,
         "wires": [
             [
@@ -33975,7 +33906,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 870,
+        "x": 890,
         "y": 280,
         "wires": [
             [
@@ -33999,7 +33930,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 870,
+        "x": 890,
         "y": 320,
         "wires": [
             [
@@ -34023,7 +33954,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 870,
+        "x": 890,
         "y": 360,
         "wires": [
             [
@@ -34047,7 +33978,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 870,
+        "x": 890,
         "y": 400,
         "wires": [
             [
@@ -34768,7 +34699,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 850,
+        "x": 870,
         "y": 440,
         "wires": [
             [
@@ -35344,7 +35275,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 860,
+        "x": 880,
         "y": 480,
         "wires": [
             [
@@ -35622,7 +35553,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 870,
+        "x": 890,
         "y": 520,
         "wires": [
             [
@@ -35745,7 +35676,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 880,
+        "x": 900,
         "y": 560,
         "wires": [
             [
@@ -36142,5 +36073,171 @@
         "x": 1290,
         "y": 780,
         "wires": []
+    },
+    {
+        "id": "a8a10cc2.9d0ae",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "02235a52f1d247d6",
+        "group": "1ea34d06.1438c3",
+        "name": "ScoreBoard CSS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 590,
+        "y": 600,
+        "wires": [
+            [
+                "66a43145427ca537"
+            ]
+        ]
+    },
+    {
+        "id": "52d0f0a78929438e",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "c6e09ffb3c5a1ce6",
+        "group": "1ea34d06.1438c3",
+        "name": "Default CSS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\nbody.nr-dashboard-theme {\n    font-size: 20px !important;\n}\n.md-toolbar-tools h1 {\n    font-size: 35px !important;\n}\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [
+                "a8a10cc2.9d0ae"
+            ]
+        ]
+    },
+    {
+        "id": "66a43145427ca537",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "52886121c9629e0b",
+        "group": "1ea34d06.1438c3",
+        "name": "Dashboard CSS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n#Tab_Dashboard {\nfont-size: 25px;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 880,
+        "y": 600,
+        "wires": [
+            [
+                "de48727be275102f"
+            ]
+        ]
+    },
+    {
+        "id": "de48727be275102f",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "bebfe5d7e4f0feb0",
+        "group": "1ea34d06.1438c3",
+        "name": "Spectator Dashboard CSS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1180,
+        "y": 600,
+        "wires": [
+            [
+                "c2d7711a7d230637"
+            ]
+        ]
+    },
+    {
+        "id": "c2d7711a7d230637",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "23eb39063da69706",
+        "group": "1ea34d06.1438c3",
+        "name": "RBN Spots CSS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1480,
+        "y": 600,
+        "wires": [
+            [
+                "c4561e5c31134c5d"
+            ]
+        ]
+    },
+    {
+        "id": "c4561e5c31134c5d",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "022672368830e427",
+        "group": "1ea34d06.1438c3",
+        "name": "Band Stats CSS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1760,
+        "y": 600,
+        "wires": [
+            [
+                "89b2058720d8fb99"
+            ]
+        ]
+    },
+    {
+        "id": "89b2058720d8fb99",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "18a3020b4a12ae60",
+        "group": "1ea34d06.1438c3",
+        "name": "Op Competion CSS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 2070,
+        "y": 600,
+        "wires": [
+            []
+        ]
     }
 ]
