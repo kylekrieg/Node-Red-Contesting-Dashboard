@@ -29,17 +29,19 @@ y
 !
 wait
 clear
-printf "**NodeRed Dashboard Status**\nUpdating and Upgrading your Pi to newest standards  Y\nInstall and Update NodeRed  Y\n"
+echo "**NodeRed Dashboard Status**"
+echo "Updating and Upgrading your Pi to newest standards  Y"
+echo "Install and Update NodeRed  Y"
 # Start NodeRed
 sudo systemctl start nodered.service
 sudo systemctl enable nodered.service
 # Install git & Sqlite3
 sudo apt-get install git sqlite3 -qq > /dev/null
-printf "Install Git & Sqlite  Y\n"
+echo "Install Git & Sqlite  Y"
 fi
 wait
 # Configure SQLITE
-cd /home/pi
+cd $HOME
 if [[ ! -f qsos ]] ; then
 
 sqlite3 qsos<<!
@@ -132,8 +134,8 @@ fi
 #configure NodeRed
 sudo systemctl stop nodered.service
 wait
-cd /home/pi/.node-red
-npm install @node-red-contrib-themes/theme-collection --silent
+cd $HOME/.node-red
+npm install @node-red-contrib-themes/theme-collection --silent &> /dev/null
 curl -s -o settings.js https://settings.nodered.kd9lsv.me
 if [[ ! -d projects ]] ; then 
   mkdir projects 
@@ -177,8 +179,10 @@ cat > .config.users.json <<EOL
 EOL
 git clone https://github.com/kylekrieg/Node-Red-Contesting-Dashboard.git --quiet
 cd Node-Red-Contesting-Dashboard
-echo -n "  Y\n**The next step will take around 10 minutes. Please be patient.** \n Install modules for Contesting Dashboard."
-npm --prefix ~/.node-red/ install ~/.node-red/projects/Node-Red-Contesting-Dashboard/ > /dev/null
+echo "  Y" 
+echo "**The next step will take around 10 minutes. Please be patient.**"
+echo  -n "Install modules for Contesting Dashboard."
+npm --prefix ~/.node-red/ install ~/.node-red/projects/Node-Red-Contesting-Dashboard/ --silent &> /dev/null
 cd ~/.node-red/
 cat > .config.projects.json <<EOL  
 {
@@ -193,4 +197,4 @@ HOSTIP=`hostname -I | cut -d ' ' -f 1`
     if [ "$HOSTIP" = "" ]; then
         HOSTIP="127.0.0.1"
     fi
-printf "Node Red has Completed. Head to http://$HOSTIP:1880/ui to access the Contest Dashboard.\n"
+echo "Node Red has Completed. Head to http://$HOSTIP:1880/ui to access the Contest Dashboard."
