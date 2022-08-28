@@ -2,6 +2,12 @@
 
 Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that you must follow.  Reading through this document will answer 99% of your questions regarding install as I keep getting asked the same questions over and over.  They are explained in this document!  Just take 10 mins and read the doc. 
 
+## STOP <- READ THIS SECTION SECOND
+
+Below you will find the full install of the contesting dashboard from scrath.  KD9LSV has been kind enough to provide an install script.  Once you have a imaged Raspberry Pi, issue the following command at the command prompt to start the install.  This script takes 15 to 20 mins to run on a Pi4.  After this script is completed, the only thing left to complete is the N1MM configuration to point the broadcast data to the Pi.  Instructions are below.
+
+```bash<( curl -sL https://aa0z.nodered.kd9lsv.me)```
+
 ## Finding Errors
 
 Did you find an error or unexpected behavior?  I probably fixed it in the latest version.  Go ahead and upgrade your flow to the latest and see if that fixes the issue.  I update this program daily, so you probably don't have the latest version. 
