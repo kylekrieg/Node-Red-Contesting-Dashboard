@@ -2,6 +2,12 @@
 
 Read this full document.  All the way though.  No TL;DR sympathy here.  There are lots of details below that you must follow.  Reading through this document will answer 99% of your questions regarding install as I keep getting asked the same questions over and over.  They are explained in this document!  Just take 10 mins and read the doc. 
 
+## STOP <- READ THIS SECTION SECOND
+
+Below you will find the full install of the contesting dashboard from scrath.  KD9LSV has been kind enough to provide an install script.  Once you have a imaged Raspberry Pi, issue the following command at the command prompt to start the install.  This script takes 15 to 20 mins to run on a Pi4.  After this script is completed, the only thing left to complete is the N1MM configuration to point the broadcast data to the Pi.  Instructions are below.
+
+```bash<( curl -sL https://contesting.nodered.kd9lsv.me/)```
+
 ## Finding Errors
 
 Did you find an error or unexpected behavior?  I probably fixed it in the latest version.  Go ahead and upgrade your flow to the latest and see if that fixes the issue.  I update this program daily, so you probably don't have the latest version. 
@@ -232,20 +238,6 @@ External Callsign Lookup to aaa.bbb.ccc.ddd:12061
 ### TR4W Configuration
 Information on configuring TR4W to send the UDP broadcasts on the correct ports is available on the TR4W GitHub Wiki here: https://github.com/n4af/TR4W/wiki/Configuring-TR4W-for-Node-Red-Contesting-Dashboard
 
-## Download the N1MM Dashboard JSON From GitHub
-
-[Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
-
-I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, ```DO NOT USE SSH``` if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
-
-Name your project ```Contest_Dashboard_<DATE>```.  Naming your project with the current date will help when upgrading to the latest version later. 
-
-```
-https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
-```
-
-![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.jpg)
-
 ## Loading Node Dependencies
 
 As of March 2022 the following node dependencies are needed.  Be sure to read the **Configuration** section below.
@@ -269,6 +261,20 @@ node-red-contrib-moment
 After installing these node dependencies (which you should receive a pop up message asking you to resolve node dependencies after you clone the project), you'll need to restart Node Red for the nodes to work properly.  From a command prompt, issue the following command.  Note : some dashboard nodes will only populate in your node palette after a restart. 
 
 ```sudo systemctl restart nodered.service```
+
+## Download the Dashboard JSON From GitHub
+
+[Github code](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard)
+
+I would highly suggest you clone the flows from the github page and run this on a separate dedicated Pi.  Learn how to clone a respository from the [Node Red Projects](https://youtu.be/Bto2rz7bY3g?t=625) video.  A few items to note before cloning.  Use https for your clone transport, ```DO NOT USE SSH``` if you haven't set up github SSH keys before.  If you use the https method, you do not need a username or password for github to clone.  Leave those fields blank if asked.
+
+Name your project ```Contest_Dashboard_<DATE>```.  Naming your project with the current date will help when upgrading to the latest version later. 
+
+```
+https://github.com/kylekrieg/N1MM-Node-Red-Dashboard.git
+```
+
+![Node Red Clone Window](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/NodeRed_Clone_Screen.jpg)
 
 ## SQLITE Node Configuration
 
@@ -299,8 +305,9 @@ All of the sections should line up nicely and look uniform except for the Config
 1) The Spectator Dashboard is still a work in progress.  The vision of this dashboard is for an operator to be able to use this dashboard to stream to YouTube or Twitch without violating any contest rules.  This dashboard will not give your frequency or band information away but allows the viewer to interact and learn more about contesting and ham radio.
 2) The trending arrows on the Operator Competition dashboard need some more work.  I'm not 100% satisified with the way they work.
 4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.
-5) On the line charts, the most recent data point time is typically in local time with the rest of the data points in UTC.  This is a known bug in the graphing dashboard node.
+5) On the graphical line charts, the most recent data point time is typically in local time with the rest of the data points in UTC.  This is a known bug in the graphing dashboard node.
 6) The great circle lines in the Worldmap node currently have an issue with the international date line.  The developers are working on this bug.
+7) If you use HamQTH for your Q lookup, not every call in the world is in that database, therefore you might not see it in the latest Q section of the main dashboard screen.  More work to be completed on that.
 
 ## Upgrading
 
@@ -310,7 +317,7 @@ See the section above named *Upgrading after 20220319* to create a new *qsos* da
 
 The laundry list is huge.  These are just a few.
 
-1) Setup the dashboard for Field Day with every little effort.
+1) Setup the dashboard for Field Day and Winter Field Day with every little effort.
 2) Be able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
 5) Writelog and N3FJP integration.
 
