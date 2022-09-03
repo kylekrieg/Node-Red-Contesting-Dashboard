@@ -737,7 +737,9 @@
             "bd50342bd0c916fa",
             "bb5538fd7ccf2b59",
             "f6305d04b2aeb44c",
-            "6351dc9d0c3ec453"
+            "6351dc9d0c3ec453",
+            "eb5d10e3d8e57f2d",
+            "e4e19daf40493fb9"
         ],
         "x": 14,
         "y": 1459,
@@ -5762,6 +5764,16 @@
         ]
     },
     {
+        "id": "d85d8e2af7ff9df8",
+        "type": "comment",
+        "z": "bedd4acdc0e27dab",
+        "name": "To do",
+        "info": "If contact is not found in hamqth or you not using a lookup table, \n\nTake a look at the prefix and map country capital to put it on the map.  \n\n",
+        "x": 600,
+        "y": 100,
+        "wires": []
+    },
+    {
         "id": "0178697fb442d801",
         "type": "udp in",
         "z": "407d2b774fe67647",
@@ -7300,7 +7312,8 @@
                 "d0b1af6883fc61b1",
                 "e60f3cadbc4e78ff",
                 "06389f3eea5c1260",
-                "b39377b110c0549b"
+                "b39377b110c0549b",
+                "e4e19daf40493fb9"
             ],
             [
                 "a74a987615dd4bb9",
@@ -7572,7 +7585,8 @@
         "y": 1860,
         "wires": [
             [
-                "72403bb4391a1d55"
+                "72403bb4391a1d55",
+                "eb5d10e3d8e57f2d"
             ]
         ]
     },
@@ -9927,7 +9941,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font size = 8 font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font size = 8 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font size = 6 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"<font size = 6>M/Hr | 1 Mult = \";\n    return msg;\n}",
+        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif(msg.payload == undefined)\n{\n    msg.payload = 'n/a'\n    return msg;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font size = 8 font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"<font size = 6>Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font size = 8 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font size = 6 font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"<font size = 6>M/Hr | 1 Mult = \";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10032,8 +10046,44 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4030,
+        "x": 3850,
         "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "eb5d10e3d8e57f2d",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "81692a3cb68d6cde",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1990,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "e4e19daf40493fb9",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "81692a3cb68d6cde",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 1800,
         "wires": []
     },
     {
@@ -23909,7 +23959,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "QSO Data Raw",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24040,7 +24090,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "DB Insert",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24085,26 +24135,6 @@
         ]
     },
     {
-        "id": "33f7f725b5fb698a",
-        "type": "template",
-        "z": "1c66bd27e16a3fec",
-        "name": "Replaced info DB",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "insert into qsos (app, contestname, contestnr, timestamp, mycall, band, \nrxfreq, txfreq, operator, mode, call, countryprefix, wpxprefix, stationprefix,\ncontinent, snt, sntnr, rcv, rcvnr, gridsquare, exchange1, section, comment, qth, name, power, \nmisctext, zone, prec, ck, ismultiplier1, ismultiplier2, ismultiplier3,\npoints, radionr, run1run2, RoverLocation, RadioInterfaced, NetworkedCompNr, IsOriginal,\nNetBiosName, IsRunQSO, StationName, ID, IsClaimedQso) values \n('{{{payload.contactreplace.app}}}',\n'{{{payload.contactreplace.contestname}}}',\n'{{{payload.contactreplace.contestnr}}}',\n'{{{payload.contactreplace.timestamp}}}',\n'{{{payload.contactreplace.mycall}}}',\n'{{{payload.contactreplace.band}}}',\n'{{{payload.contactreplace.rxfreq}}}',\n'{{{payload.contactreplace.txfreq}}}',\n'{{{payload.contactreplace.operator}}}',\n'{{{payload.contactreplace.mode}}}',\n'{{{payload.contactreplace.call}}}',\n'{{{payload.contactreplace.countryprefix}}}',\n'{{{payload.contactreplace.wpxprefix}}}',\n'{{{payload.contactreplace.stationprefix}}}',\n'{{{payload.contactreplace.continent}}}',\n'{{{payload.contactreplace.snt}}}',\n'{{{payload.contactreplace.sntnr}}}',\n'{{{payload.contactreplace.rcv}}}',\n'{{{payload.contactreplace.rcvnr}}}',\n'{{{payload.contactreplace.gridsquare}}}',\n'{{{payload.contactreplace.exchange1}}}',\n'{{{payload.contactreplace.section}}}',\n'{{{payload.contactreplace.comment}}}',\n'{{{payload.contactreplace.qth}}}',\n'{{{payload.contactreplace.name}}}',\n'{{{payload.contactreplace.power}}}',\n'{{{payload.contactreplace.misctext}}}',\n'{{{payload.contactreplace.zone}}}',\n'{{{payload.contactreplace.prec}}}',\n'{{{payload.contactreplace.ck}}}',\n'{{{payload.contactreplace.ismultiplier1}}}',\n'{{{payload.contactreplace.ismultiplier2}}}',\n'{{{payload.contactreplace.ismultiplier3}}}',\n'{{{payload.contactreplace.points}}}',\n'{{{payload.contactreplace.radionr}}}',\n'{{{payload.contactreplace.run1run2}}}',\n'{{{payload.contactreplace.RoverLocation}}}',\n'{{{payload.contactreplace.RadioInterfaced}}}',\n'{{{payload.contactreplace.NetworkedCompNr}}}',\n'{{{payload.contactreplace.IsOriginal}}}',\n'{{{payload.contactreplace.NetBiosName}}}',\n'{{{payload.contactreplace.IsRunQSO}}}',\n'{{{payload.contactreplace.StationName}}}',\n'{{{payload.contactreplace.ID}}}',\n'{{{payload.contactreplace.IsClaimedQso}}}');\n\n",
-        "output": "str",
-        "x": 1270,
-        "y": 520,
-        "wires": [
-            [
-                "589f1d4180adfc19",
-                "ec8cad684cf4500a"
-            ]
-        ]
-    },
-    {
         "id": "4ae0a908ac9a4dce",
         "type": "delay",
         "z": "1c66bd27e16a3fec",
@@ -24124,7 +24154,7 @@
         "y": 520,
         "wires": [
             [
-                "33f7f725b5fb698a"
+                "aa50254808a938c8"
             ]
         ]
     },
@@ -24141,7 +24171,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1530,
+        "x": 1610,
         "y": 520,
         "wires": []
     },
@@ -24916,7 +24946,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24936,6 +24966,36 @@
         "voice": "0",
         "x": 1600,
         "y": 240,
+        "wires": []
+    },
+    {
+        "id": "aa50254808a938c8",
+        "type": "template",
+        "z": "1c66bd27e16a3fec",
+        "name": "Update Record Info SQL",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "update qsos set \n\napp = '{{{payload.contactreplace.app}}}',\ncontestname = '{{{payload.contactreplace.contestname}}}',\ncontestnr = '{{{payload.contactreplace.contestnr}}}',\ntimestamp = '{{{payload.contactreplace.timestamp}}}',\nmycall = '{{{payload.contactreplace.mycall}}}',\nband = '{{{payload.contactreplace.band}}}',\nrxfreq = '{{{payload.contactreplace.rxfreq}}}',\ntxfreq = '{{{payload.contactreplace.txfreq}}}',\noperator = '{{{payload.contactreplace.operator}}}',\nmode = '{{{payload.contactreplace.mode}}}',\ncall = '{{{payload.contactreplace.call}}}',\ncountryprefix = '{{{payload.contactreplace.countryprefix}}}',\nwpxprefix = '{{{payload.contactreplace.wpxprefix}}}',\nstationprefix = '{{{payload.contactreplace.stationprefix}}}',\ncontinent = '{{{payload.contactreplace.continent}}}',\nsnt = '{{{payload.contactreplace.snt}}}',\nsntnr = '{{{payload.contactreplace.sntnr}}}',\nrcv = '{{{payload.contactreplace.rcv}}}',\nrcvnr = '{{{payload.contactreplace.rcvnr}}}',\ngridsquare = '{{{payload.contactreplace.gridsquare}}}',\nexchange1 = '{{{payload.contactreplace.exchange1}}}',\nsection = '{{{payload.contactreplace.section}}}',\ncomment = '{{{payload.contactreplace.comment}}}',\nqth = '{{{payload.contactreplace.qth}}}',\nname = '{{{payload.contactreplace.name}}}',\npower = '{{{payload.contactreplace.power}}}',\nmisctext = '{{{payload.contactreplace.misctext}}}',\nzone = '{{{payload.contactreplace.zone}}}',\nprec = '{{{payload.contactreplace.prec}}}',\nck = '{{{payload.contactreplace.ck}}}',\nismultiplier1 = '{{{payload.contactreplace.ismultiplier1}}}',\nismultiplier2 = '{{{payload.contactreplace.ismultiplier2}}}',\nismultiplier3 = '{{{payload.contactreplace.ismultiplier3}}}',\npoints = '{{{payload.contactreplace.points}}}',\nradionr = '{{{payload.contactreplace.radionr}}}',\nrun1run2 = '{{{payload.contactreplace.run1run2}}}',\nRoverLocation = '{{{payload.contactreplace.RoverLocation}}}',\nRadioInterfaced = '{{{payload.contactreplace.RadioInterfaced}}}',\nNetworkedCompNr = '{{{payload.contactreplace.NetworkedCompNr}}}',\nIsOriginal = '{{{payload.contactreplace.IsOriginal}}}',\nNetBiosName = '{{{payload.contactreplace.NetBiosName}}}',\nIsRunQSO = '{{{payload.contactreplace.IsRunQSO}}}',\nStationName = '{{{payload.contactreplace.StationName}}}',\nIsClaimedQso = '{{{payload.contactreplace.IsClaimedQso}}}'\n\nwhere ID = '{{{payload.contactreplace.ID}}}';\n",
+        "output": "str",
+        "x": 1270,
+        "y": 520,
+        "wires": [
+            [
+                "589f1d4180adfc19",
+                "ec8cad684cf4500a"
+            ]
+        ]
+    },
+    {
+        "id": "1edd5af6eed6044f",
+        "type": "comment",
+        "z": "1c66bd27e16a3fec",
+        "name": "To do",
+        "info": "Change flow for a QSO update/change based on new N1MM process. ",
+        "x": 460,
+        "y": 120,
         "wires": []
     },
     {
