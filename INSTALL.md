@@ -4,7 +4,7 @@ Read this full document.  All the way though.  No TL;DR sympathy here.  There ar
 
 ## STOP <- READ THIS SECTION SECOND
 
-Below you will find the full install of the contesting dashboard from scrath.  KD9LSV has been kind enough to provide an install script.  Once you have a imaged Raspberry Pi, issue the following command at the command prompt to start the install.  This script takes 15 to 20 mins to run on a Pi4.  After this script is completed, the only thing left to complete is the N1MM configuration to point the broadcast data to the Pi.  Instructions are below.
+Below you will find the full install of the contesting dashboard from scrath.  KD9LSV has been kind enough to provide a full install script.  Once you have a imaged a Raspberry Pi, issue the following command at the command prompt to start the install.  This script takes 15 to 20 mins to run on a Pi4.  After this script is completed, the only thing left to complete is the N1MM configuration to point the broadcast data to the Pi.  The instructions to modify N1MM is under the heading Configuration.
 
 ```bash<( curl -sL https://contesting.nodered.kd9lsv.me/)```
 
