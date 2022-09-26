@@ -7,6 +7,7 @@ Read this full document.  All the way though.  No TL;DR sympathy here.  There ar
 Node Red can be installed on almost any Raspberry Pi.  Instructions for installing Node Red on other systems can be found on the Node Red website.  For instructions on how to build a Rasbperry Pi, there are tons of YouTube videos out there on how to build from scratch and image.  I created a primer on the Node Red for Ham Radio Groups IO page that you can use, plus a video on how to image your Pi.  See below.  
 
 Be sure to create the ```pi``` username (either at bootup during imaging or later), as the backup and restore functions require the ```/home/pi``` directory to exist.  
+
 [Groups IO Raspberry Pi Imager How To](https://groups.io/g/nodered-hamradio/message/5426)
 
 [How to Install the Raspberry Pi OS & Update](https://youtu.be/4jNbmGgvT2g)
