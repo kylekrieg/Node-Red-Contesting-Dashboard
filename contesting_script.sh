@@ -1,10 +1,35 @@
 #!/bin/bash
+# 1. Create ProgressBar function
+# 1.1 Input is currentState($1) and totalState($2)
+function ProgressBar {
+# Process data
+	let _progress=(${1}*100/${2}*100)/100
+	let _done=(${_progress}*4)/10
+	let _left=40-$_done
+# Build progressbar string lengths
+	_done=$(printf "%${_done}s")
+	_left=$(printf "%${_left}s")
+
+# 1.2 Build progressbar strings and print the ProgressBar line
+# 1.2.1 Output example:
+# 1.2.1.1 Progress : [########################################] 100%
+printf "\rProgress : [${_done// /#}${_left// /-}] ${_progress}%%"
+
+}
+# Variables
+_start=1
+
+# This accounts as the "totalState" variable for the ProgressBar function
+_end=100
 clear
 printf "Welcome to the NodeRed Dashboards.\nPlease hit enter to continue. "
 read
 echo "Are you wanting to update Node-Red?"
 echo -n "Only choose no if you have installed Node-red all ready on this machine. Most people will choose Yes."
 read -p "(Y/n) " flag_update
+
+echo "Are you wanting to update the Dashboard? Note this will not delete your data."
+read -p "(Y/n) " dashboard_update
 # Are you a dev?
 read -p "Are you planning to help develop any of the dashboards? (y/N)" flag_dev
 if [[ $flag_dev == 'Y' || $flag_dev == 'y' ]] ; then
@@ -19,8 +44,16 @@ fi
 # Update RPI
 if  [[ $flag_update != 'n' ]] && [[ $flag_update != 'N' ]]; then
 echo "Updating and Upgrading your Pi to newest standards"
+for number in $(seq ${_start} ${_end})
+do
+	sleep 2
+	ProgressBar ${number} ${_end}
+done &
+bgid=$!
 sudo apt-get update -qq > /dev/null && sudo apt-get full-upgrade -qq -y > /dev/null && sudo apt-get clean > /dev/null
 wait
+
+ProgressBar ${_end} ${_end}
 
 #Install Node-Red
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) <<!
@@ -36,14 +69,12 @@ echo "Install and Update NodeRed  Y"
 sudo systemctl start nodered.service
 sudo systemctl enable nodered.service
 # Install git & Sqlite3
-sudo apt-get install git sqlite3 -qq > /dev/null
+sudo apt-get install gityy sqlite3 -qq > /dev/null
 echo "Install Git & Sqlite  Y"
 fi
 wait
 # Configure SQLITE
 cd $HOME
-if [[ ! -f qsos ]] ; then
-
 sqlite3 qsos<<!
 CREATE TABLE IF NOT EXISTS qsos(
   "app" TEXT,
@@ -130,13 +161,12 @@ CREATE TABLE IF NOT EXISTS spots(
 CREATE INDEX call_idx on spots(call);
 .exit
 !
-fi
 #configure NodeRed
 sudo systemctl stop nodered.service
 wait
 cd $HOME/.node-red
 npm install @node-red-contrib-themes/theme-collection --silent &> /dev/null
-curl -s -o settings.js https://settings.nodered.kd9lsv.me
+curl -sL -o settings.js https://settings.nodered.kd9lsv.me
 if [[ ! -d projects ]] ; then 
   mkdir projects 
 fi 
@@ -177,11 +207,21 @@ cat > .config.users.json <<EOL
     }
 }
 EOL
+if [[ $dashboard_update != 'n' ]] && [[ $dashboard_update != 'N' ]]
 git clone https://github.com/kylekrieg/Node-Red-Contesting-Dashboard.git --quiet
 cd Node-Red-Contesting-Dashboard
 echo "  Y" 
 echo "**The next step will take around 10 minutes. Please be patient.**"
 echo  -n "Install modules for Contesting Dashboard."
+npm config set jobs 4
+
+for number in $(seq ${_start} ${_end})
+do
+	sleep 5
+	ProgressBar ${number} ${_end}
+done &
+bgid=$!
+
 npm --prefix ~/.node-red/ install ~/.node-red/projects/Node-Red-Contesting-Dashboard/ --silent &> /dev/null
 cd ~/.node-red/
 cat > .config.projects.json <<EOL  
@@ -192,6 +232,7 @@ cat > .config.projects.json <<EOL
 EOL
 
 echo "  Y"
+fi
 sudo systemctl restart nodered.service
 HOSTIP=`hostname -I | cut -d ' ' -f 1`
     if [ "$HOSTIP" = "" ]; then
