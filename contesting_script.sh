@@ -207,7 +207,7 @@ cat > .config.users.json <<EOL
     }
 }
 EOL
-if [[ $dashboard_update != 'n' ]] && [[ $dashboard_update != 'N' ]]
+if [[ $dashboard_update != 'n' ]] && [[ $dashboard_update != 'N' ]]; then
 git clone https://github.com/kylekrieg/Node-Red-Contesting-Dashboard.git --quiet
 cd Node-Red-Contesting-Dashboard
 echo "  Y" 
