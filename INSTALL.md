@@ -20,6 +20,8 @@ Below you will find the full install of the contesting dashboard from scrath.  K
 
 ```bash<( curl -sL https://contesting.nodered.kd9lsv.me/)```
 
+If you would like to install everything manually, please see this [install document](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/blob/master/Manual_INSTALL.md)
+
 ## Configuration
 
 ### N1MM Configuration
