@@ -223,6 +223,7 @@ done &
 bgid=$!
 
 npm --prefix ~/.node-red/ install ~/.node-red/projects/Node-Red-Contesting-Dashboard/ --silent &> /dev/null
+wait
 cd ~/.node-red/
 cat > .config.projects.json <<EOL  
 {
