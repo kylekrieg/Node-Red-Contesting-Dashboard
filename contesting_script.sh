@@ -67,7 +67,7 @@ echo "Updating and Upgrading your Pi to newest standards  Y"
 echo "Install and Update NodeRed  Y"
 
 # -- Install git & Sqlite3 -- #
-sudo apt-get install gityy sqlite3 -qq > /dev/null
+sudo apt-get install git sqlite3 -y -qq > /dev/null
 echo "Install Git & Sqlite  Y"
 fi
 wait
