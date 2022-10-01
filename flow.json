@@ -10038,7 +10038,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -33720,7 +33720,8 @@
         "y": 780,
         "wires": [
             [
-                "821bb77829102950"
+                "821bb77829102950",
+                "31c0e60b35bb3fe2"
             ]
         ]
     },
@@ -33728,7 +33729,7 @@
         "id": "821bb77829102950",
         "type": "exec",
         "z": "3e52b5d54104d7f0",
-        "command": "",
+        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git pull",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -33736,11 +33737,57 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 570,
+        "x": 760,
         "y": 780,
         "wires": [
             [],
             [],
+            []
+        ]
+    },
+    {
+        "id": "31c0e60b35bb3fe2",
+        "type": "delay",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 610,
+        "y": 880,
+        "wires": [
+            [
+                "b7489dd59685c7a3"
+            ]
+        ]
+    },
+    {
+        "id": "b7489dd59685c7a3",
+        "type": "ui_toast",
+        "z": "3e52b5d54104d7f0",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Upgrade Complete - Please Reboot Your Pi",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 880,
+        "y": 880,
+        "wires": [
             []
         ]
     },
