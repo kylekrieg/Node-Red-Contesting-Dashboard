@@ -50,6 +50,7 @@ do
 done &
 bgid=$!
 sudo apt-get update -qq > /dev/null && sudo apt-get full-upgrade -qq -y > /dev/null && sudo apt-get clean > /dev/null
+kill $bgid
 wait
 
 ProgressBar ${_end} ${_end}
@@ -72,8 +73,8 @@ fi
 wait
 # Configure SQLITE
 cd $HOME
-curl -sL https://raw.githubusercontent.com/kylekrieg/Node-Red-Contesting-Dashboard/master/schema.db > schema_init.db
-sqlite3 qsos < schema_init.db
+curl -sL https://raw.githubusercontent.com/kylekrieg/Node-Red-Contesting-Dashboard/master/schema.db > schema_init
+sqlite3 qsos < schema_init
 
 #configure NodeRed
 sudo systemctl stop nodered.service
@@ -139,9 +140,13 @@ do
 	sleep 5
 	ProgressBar ${number} ${_end}
 done &
+
 bgid=$!
+ProgressBar ${_end} ${_end}
 
 npm --prefix ~/.node-red/ install ~/.node-red/projects/Node-Red-Contesting-Dashboard/ --silent &> /dev/null
+kill $bgid
+
 wait
 cd ~/.node-red/
 cat > .config.projects.json <<EOL  
