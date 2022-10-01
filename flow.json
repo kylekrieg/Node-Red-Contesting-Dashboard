@@ -362,7 +362,9 @@
             "ea4b0c4d43bbf2e8"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 255,
+        "h": 442
     },
     {
         "id": "52886121c9629e0b",
@@ -385,7 +387,9 @@
             "af65ab5234804a9a"
         ],
         "x": 754,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 442
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -408,7 +412,9 @@
             "34d492ab50541fdc"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 442
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -432,7 +438,9 @@
             "cd6e0fce6f62b9c5"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 442
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -447,7 +455,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -462,7 +472,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -485,7 +497,9 @@
             "7036aad4276a8131"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 442
     },
     {
         "id": "022672368830e427",
@@ -508,7 +522,9 @@
             "e6ae4df0ca620d74"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 442
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -545,7 +561,9 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679
+        "y": 679,
+        "w": 2032,
+        "h": 282
     },
     {
         "id": "28877ac600fea8b9",
@@ -570,7 +588,9 @@
             "324101084f63a83e"
         ],
         "x": 234,
-        "y": 1019
+        "y": 1019,
+        "w": 622,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -585,7 +605,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -608,7 +630,9 @@
             "23d467e3525ec5a8"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 442
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -1619,7 +1643,7 @@
         "type": "ui_group",
         "name": "Call Lookup Engine & Login ",
         "tab": "08eed6c3517c624e",
-        "order": 11,
+        "order": 10,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1677,7 +1701,7 @@
         "type": "ui_group",
         "name": "Map Configuration",
         "tab": "08eed6c3517c624e",
-        "order": 10,
+        "order": 9,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1741,7 +1765,7 @@
         "type": "ui_group",
         "name": "Announcements",
         "tab": "08eed6c3517c624e",
-        "order": 13,
+        "order": 12,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1752,7 +1776,7 @@
         "type": "ui_group",
         "name": "OP Competition Sort By",
         "tab": "08eed6c3517c624e",
-        "order": 12,
+        "order": 11,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1902,7 +1926,7 @@
         "type": "ui_group",
         "name": "Distance Measurement",
         "tab": "08eed6c3517c624e",
-        "order": 14,
+        "order": 13,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1913,7 +1937,7 @@
         "type": "ui_group",
         "name": "Backup & Restore",
         "tab": "08eed6c3517c624e",
-        "order": 15,
+        "order": 14,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -2199,7 +2223,7 @@
         "type": "ui_group",
         "name": "Dashboard Upgrade",
         "tab": "08eed6c3517c624e",
-        "order": 9,
+        "order": 15,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -33740,7 +33764,7 @@
         "id": "821bb77829102950",
         "type": "exec",
         "z": "3e52b5d54104d7f0",
-        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git pull",
+        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -33748,7 +33772,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 760,
+        "x": 840,
         "y": 780,
         "wires": [
             [],
@@ -33790,7 +33814,7 @@
         "highlight": "",
         "sendall": true,
         "outputs": 1,
-        "ok": "Upgrade Complete - Please Reboot Your Pi",
+        "ok": "Upgrade Complete - Refresh Your Browser",
         "cancel": "",
         "raw": false,
         "className": "",
@@ -33800,52 +33824,6 @@
         "y": 880,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "622ebef762e3eaa6",
-        "type": "exec",
-        "z": "3e52b5d54104d7f0",
-        "command": "sudo reboot",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "",
-        "timer": "",
-        "name": "Reboot",
-        "x": 520,
-        "y": 980,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "c5187776a186889b",
-        "type": "ui_button",
-        "z": "3e52b5d54104d7f0",
-        "name": "Reboot the Pi Button",
-        "group": "71cb3368617e6c9e",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Reboot the Pi",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "red",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 299.7777786254883,
-        "y": 980.0000238418579,
-        "wires": [
-            [
-                "622ebef762e3eaa6"
-            ]
         ]
     },
     {
