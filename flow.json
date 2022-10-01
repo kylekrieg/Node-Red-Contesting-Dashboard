@@ -1619,7 +1619,7 @@
         "type": "ui_group",
         "name": "Call Lookup Engine & Login ",
         "tab": "08eed6c3517c624e",
-        "order": 13,
+        "order": 11,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1741,7 +1741,7 @@
         "type": "ui_group",
         "name": "Announcements",
         "tab": "08eed6c3517c624e",
-        "order": 18,
+        "order": 13,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1752,7 +1752,7 @@
         "type": "ui_group",
         "name": "OP Competition Sort By",
         "tab": "08eed6c3517c624e",
-        "order": 16,
+        "order": 12,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1902,7 +1902,7 @@
         "type": "ui_group",
         "name": "Distance Measurement",
         "tab": "08eed6c3517c624e",
-        "order": 20,
+        "order": 14,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1913,7 +1913,7 @@
         "type": "ui_group",
         "name": "Backup & Restore",
         "tab": "08eed6c3517c624e",
-        "order": 22,
+        "order": 15,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -2193,6 +2193,17 @@
         "order": 7,
         "width": 4,
         "height": 1
+    },
+    {
+        "id": "71cb3368617e6c9e",
+        "type": "ui_group",
+        "name": "Dashboard Upgrade",
+        "tab": "08eed6c3517c624e",
+        "order": 9,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "db6c3ead34896ed7",
@@ -33700,8 +33711,8 @@
         "id": "41b5fcb7d3468568",
         "type": "ui_button",
         "z": "3e52b5d54104d7f0",
-        "name": "Upgrade Contest Dashboard",
-        "group": "c6e931ac92d6f697",
+        "name": "Upgrade Contest Dashboard Button",
+        "group": "71cb3368617e6c9e",
         "order": 4,
         "width": 6,
         "height": 1,
@@ -33716,7 +33727,7 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 280,
+        "x": 300,
         "y": 780,
         "wires": [
             [
@@ -33789,6 +33800,52 @@
         "y": 880,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "622ebef762e3eaa6",
+        "type": "exec",
+        "z": "3e52b5d54104d7f0",
+        "command": "sudo reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Reboot",
+        "x": 520,
+        "y": 980,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c5187776a186889b",
+        "type": "ui_button",
+        "z": "3e52b5d54104d7f0",
+        "name": "Reboot the Pi Button",
+        "group": "71cb3368617e6c9e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reboot the Pi",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 299.7777786254883,
+        "y": 980.0000238418579,
+        "wires": [
+            [
+                "622ebef762e3eaa6"
+            ]
         ]
     },
     {
