@@ -1,6 +1,8 @@
 #!/bin/bash
-# 1. Create ProgressBar function
-# 1.1 Input is currentState($1) and totalState($2)
+
+## ---- Functions ----- ##
+#Create ProgressBar function
+
 function ProgressBar {
 # Process data
 	let _progress=(${1}*100/${2}*100)/100
@@ -9,19 +11,17 @@ function ProgressBar {
 # Build progressbar string lengths
 	_done=$(printf "%${_done}s")
 	_left=$(printf "%${_left}s")
-
-# 1.2 Build progressbar strings and print the ProgressBar line
-# 1.2.1 Output example:
-# 1.2.1.1 Progress : [########################################] 100%
-printf "\rProgress : [${_done// /#}${_left// /-}] ${_progress}%%"
-
+# Output example:
+# Progress : [########################################] 100%
+    printf "\rProgress : [${_done// /#}${_left// /-}] ${_progress}%%"
 }
+
 # Variables
 _start=1
-
-# This accounts as the "totalState" variable for the ProgressBar function
 _end=100
 clear
+
+## ---- Initial Questioning ---- ##
 printf "Welcome to the NodeRed Dashboards.\nPlease hit enter to continue. "
 read
 echo "Are you wanting to update Node-Red?"
@@ -39,9 +39,8 @@ else
 git_username=nobody
 git_email=example@example.com
 fi
-# Ask which Dashboard are you looking for?
 
-# Update RPI
+## ---- Update RPI ---- ##
 if  [[ $flag_update != 'n' ]] && [[ $flag_update != 'N' ]]; then
 echo "Updating and Upgrading your Pi to newest standards"
 for number in $(seq ${_start} ${_end})
@@ -55,7 +54,7 @@ wait
 
 ProgressBar ${_end} ${_end}
 
-#Install Node-Red
+# -- Install Node-Red -- #
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) <<!
 y
 y
@@ -65,102 +64,17 @@ clear
 echo "**NodeRed Dashboard Status**"
 echo "Updating and Upgrading your Pi to newest standards  Y"
 echo "Install and Update NodeRed  Y"
-# Start NodeRed
-sudo systemctl start nodered.service
-sudo systemctl enable nodered.service
-# Install git & Sqlite3
+
+# -- Install git & Sqlite3 -- #
 sudo apt-get install gityy sqlite3 -qq > /dev/null
 echo "Install Git & Sqlite  Y"
 fi
 wait
 # Configure SQLITE
 cd $HOME
-sqlite3 qsos<<!
-CREATE TABLE IF NOT EXISTS qsos(
-  "app" TEXT,
-  "contestname" TEXT,
-  "contestnr" TEXT,
-  "timestamp" TEXT,
-  "mycall" TEXT,
-  "band" TEXT,
-  "rxfreq" TEXT,
-  "txfreq" TEXT,
-  "operator" TEXT,
-  "mode" TEXT,
-  "call" TEXT,
-  "countryprefix" TEXT,
-  "wpxprefix" TEXT,
-  "stationprefix" TEXT,
-  "continent" TEXT,
-  "snt" TEXT,
-  "sntnr" TEXT,
-  "rcv" TEXT,
-  "rcvnr" TEXT,
-  "gridsquare" TEXT,
-  "exchange1" TEXT,
-  "section" TEXT,
-  "comment" TEXT,
-  "qth" TEXT,
-  "name" TEXT,
-  "power" TEXT,
-  "misctext" TEXT,
-  "zone" TEXT,
-  "prec" TEXT,
-  "ck" TEXT,
-  "ismultiplier1" TEXT,
-  "ismultiplier2" TEXT,
-  "ismultiplier3" TEXT,
-  "points" TEXT,
-  "radionr" TEXT,
-  "run1run2" TEXT,
-  "RoverLocation" TEXT,
-  "RadioInterfaced" TEXT,
-  "NetworkedCompNr" TEXT,
-  "IsOriginal" TEXT,
-  "NetBiosName" TEXT,
-  "IsRunQSO" TEXT,
-  "StationName" TEXT,
-  "ID" TEXT,
-  "IsClaimedQso" TEXT,
-  "lat" TEXT,
-  "lon" TEXT,
-  "isbusted" TEXT,
-  "distance" TEXT
-);
-CREATE TABLE IF NOT EXISTS radio(
-  "timestamp" TEXT,
-  "app" TEXT,
-  "StationName" TEXT,
-  "RadioNr" TEXT,
-  "Freq" TEXT,
-  "TXFreq" TEXT,
-  "Mode" TEXT,
-  "OpCall" TEXT,
-  "IsRunning" TEXT,
-  "FocusEntry" TEXT,
-  "EntryWindowHwnd" TEXT,
-  "antenna" TEXT,
-  "Rotors" TEXT,
-  "FocusRadioNr" TEXT,
-  "IsStereo" TEXT,
-  "IsSplit" TEXT,
-  "ActiveRadioNr" TEXT,
-  "IsTransmitting" TEXT,
-  "FunctionKeyCaption" TEXT,
-  "RadioName" TEXT,
-  "AuxAntSelected" TEXT,
-  "AuxAntSelectedName" TEXT
-);
-CREATE TABLE IF NOT EXISTS spots(
-  "timestamp" TEXT,
-  "call" TEXT type UNIQUE,
-  "lat" TEXT,
-  "lon" TEXT,
-  "grid" TEXT
-);
-CREATE INDEX call_idx on spots(call);
-.exit
-!
+curl -sL https://raw.githubusercontent.com/kylekrieg/Node-Red-Contesting-Dashboard/master/schema.db > schema_init.db
+sqlite3 qsos < schema_init.db
+
 #configure NodeRed
 sudo systemctl stop nodered.service
 wait
@@ -208,8 +122,13 @@ cat > .config.users.json <<EOL
 }
 EOL
 if [[ $dashboard_update != 'n' ]] && [[ $dashboard_update != 'N' ]]; then
+if [[ ! -d Node-Red-Contesting-Dashboard ]] ; then 
 git clone https://github.com/kylekrieg/Node-Red-Contesting-Dashboard.git --quiet
 cd Node-Red-Contesting-Dashboard
+else 
+cd Node-Red-Contesting-Dashboard
+git pull
+fi
 echo "  Y" 
 echo "**The next step will take around 10 minutes. Please be patient.**"
 echo  -n "Install modules for Contesting Dashboard."
