@@ -129,7 +129,7 @@ cd ~/.node-red/projects/Node-Red-Contesting-Dashboard
 else 
 cd ~/.node-red/projects/Node-Red-Contesting-Dashboard
 git config pull.rebase true
-git pull
+git pull &> /dev/null
 fi
 echo "  Y" 
 echo "**The next step will take around 10 minutes. Please be patient.**"
