@@ -65,11 +65,11 @@ clear
 echo "**NodeRed Dashboard Status**"
 echo "Updating and Upgrading your Pi to newest standards  Y"
 echo "Install and Update NodeRed  Y"
-
+fi
 # -- Install git & Sqlite3 -- #
 sudo apt-get install git sqlite3 -y -qq > /dev/null
 echo "Install Git & Sqlite  Y"
-fi
+
 wait
 # Configure SQLITE
 cd $HOME
