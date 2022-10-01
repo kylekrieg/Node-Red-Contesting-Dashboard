@@ -125,9 +125,10 @@ EOL
 if [[ $dashboard_update != 'n' ]] && [[ $dashboard_update != 'N' ]]; then
 if [[ ! -d Node-Red-Contesting-Dashboard ]] ; then 
 git clone https://github.com/kylekrieg/Node-Red-Contesting-Dashboard.git --quiet
-cd Node-Red-Contesting-Dashboard
+cd ~/.node-red/projects/Node-Red-Contesting-Dashboard
 else 
-cd Node-Red-Contesting-Dashboard
+cd ~/.node-red/projects/Node-Red-Contesting-Dashboard
+git config pull.rebase true
 git pull
 fi
 echo "  Y" 
