@@ -53,7 +53,7 @@ sudo apt-get update -qq > /dev/null && sudo apt-get full-upgrade -qq -y > /dev/n
 kill $bgid
 wait
 
-ProgressBar ${_end} ${_end}
+ProgressBar ${_end}  ${_end}
 
 # -- Install Node-Red -- #
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) <<!
@@ -142,9 +142,9 @@ do
 done &
 
 bgid=$!
-ProgressBar ${_end} ${_end}
 
 npm --prefix ~/.node-red/ install ~/.node-red/projects/Node-Red-Contesting-Dashboard/ --silent &> /dev/null
+ProgressBar ${_end} ${_end}
 kill $bgid
 
 wait
