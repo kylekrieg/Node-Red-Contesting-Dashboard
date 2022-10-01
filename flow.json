@@ -33747,16 +33747,15 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "",
-        "payloadType": "date",
+        "payload": "This Upgrade Will Reboot Your Pi - Continue?",
+        "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
         "x": 300,
         "y": 780,
         "wires": [
             [
-                "821bb77829102950",
-                "31c0e60b35bb3fe2"
+                "b7489dd59685c7a3"
             ]
         ]
     },
@@ -33764,7 +33763,7 @@
         "id": "821bb77829102950",
         "type": "exec",
         "z": "3e52b5d54104d7f0",
-        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull",
+        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull && sudo reboot",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -33772,37 +33771,12 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 840,
+        "x": 1330,
         "y": 780,
         "wires": [
             [],
             [],
             []
-        ]
-    },
-    {
-        "id": "31c0e60b35bb3fe2",
-        "type": "delay",
-        "z": "3e52b5d54104d7f0",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 610,
-        "y": 880,
-        "wires": [
-            [
-                "b7489dd59685c7a3"
-            ]
         ]
     },
     {
@@ -33812,18 +33786,108 @@
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
-        "sendall": true,
+        "sendall": false,
         "outputs": 1,
-        "ok": "Upgrade Complete - Refresh Your Browser",
-        "cancel": "",
+        "ok": "OK",
+        "cancel": "Cancel",
         "raw": false,
         "className": "",
         "topic": "",
         "name": "",
-        "x": 880,
-        "y": 880,
+        "x": 570,
+        "y": 780,
         "wires": [
+            [
+                "a5d3c0fbf1549f70"
+            ]
+        ]
+    },
+    {
+        "id": "b3e878177c786d3c",
+        "type": "exec",
+        "z": "3e52b5d54104d7f0",
+        "command": "sudo reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Reboot",
+        "x": 520,
+        "y": 1000,
+        "wires": [
+            [],
+            [],
             []
+        ]
+    },
+    {
+        "id": "f14da265f561b94b",
+        "type": "ui_button",
+        "z": "3e52b5d54104d7f0",
+        "name": "Manual Reboot Button",
+        "group": "71cb3368617e6c9e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Manual Reboot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 299.7777786254883,
+        "y": 1000.0000238418579,
+        "wires": [
+            [
+                "b3e878177c786d3c"
+            ]
+        ]
+    },
+    {
+        "id": "e5ca3a2218a318ed",
+        "type": "debug",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "a5d3c0fbf1549f70",
+        "type": "switch",
+        "z": "3e52b5d54104d7f0",
+        "name": "If OK",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 780,
+        "wires": [
+            [
+                "e5ca3a2218a318ed",
+                "821bb77829102950"
+            ]
         ]
     },
     {
