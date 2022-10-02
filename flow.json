@@ -913,9 +913,9 @@
         "tab": "200297fa.9ab198",
         "order": 2,
         "disp": true,
-        "width": 26,
+        "width": "26",
         "collapse": false,
-        "className": ""
+        "className": "dashboard_current_qsos"
     },
     {
         "id": "ba8d90f0d4d46eb0",
@@ -924,9 +924,9 @@
         "tab": "200297fa.9ab198",
         "order": 1,
         "disp": true,
-        "width": 5,
+        "width": "5",
         "collapse": false,
-        "className": ""
+        "className": "dashboard_last_qsos"
     },
     {
         "id": "54f43a06.56d7b4",
@@ -941,9 +941,9 @@
         "tab": "200297fa.9ab198",
         "order": 3,
         "disp": true,
-        "width": 5,
+        "width": "5",
         "collapse": false,
-        "className": ""
+        "className": "dashboard_contest_stats"
     },
     {
         "id": "d5edca762660bedf",
@@ -952,9 +952,9 @@
         "tab": "200297fa.9ab198",
         "order": 8,
         "disp": true,
-        "width": 24,
+        "width": "24",
         "collapse": false,
-        "className": ""
+        "className": "dashboard_radio_data"
     },
     {
         "id": "1fd9d5a5d988cd1e",
@@ -963,9 +963,9 @@
         "tab": "200297fa.9ab198",
         "order": 9,
         "disp": true,
-        "width": 24,
+        "width": "24",
         "collapse": false,
-        "className": ""
+        "className": "dashboard_radio_data"
     },
     {
         "id": "200297fa.9ab198",
@@ -980,7 +980,7 @@
         "id": "6bee760b7642c108",
         "type": "ui_base",
         "theme": {
-            "name": "theme-dark",
+            "name": "theme-custom",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
@@ -990,7 +990,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#097479",
+                "baseColor": "#0035d5",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -998,29 +998,30 @@
             "customTheme": {
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                "baseColor": "#0035d5",
+                "baseFont": "Tahoma,Geneva,sans-serif",
+                "reset": false
             },
             "themeState": {
                 "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
+                    "default": "#4B7930",
+                    "value": "#0035d5",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
+                    "value": "#0035d5",
+                    "edited": true
                 },
                 "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
+                    "value": "#3c9bed",
+                    "edited": true
                 },
                 "page-sidebar-backgroundColor": {
                     "value": "#333333",
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#0eb8c0",
+                    "value": "#2259ff",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1036,7 +1037,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#0035d5",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -1044,7 +1045,7 @@
                     "edited": false
                 },
                 "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                    "value": "Tahoma,Geneva,sans-serif"
                 }
             },
             "angularTheme": {
@@ -1063,8 +1064,8 @@
             "allowTempTheme": "false",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
-                "sx": 30,
-                "sy": 30,
+                "sx": 33,
+                "sy": 33,
                 "gx": 6,
                 "gy": 6,
                 "cx": 6,
@@ -1081,9 +1082,9 @@
         "tab": "200297fa.9ab198",
         "order": 4,
         "disp": true,
-        "width": 12,
+        "width": "12",
         "collapse": false,
-        "className": ""
+        "className": "dashboard_qsos_by_band"
     },
     {
         "id": "c53924de5e016c59",
@@ -1112,9 +1113,9 @@
         "tab": "698e42d7f0c75db1",
         "order": 1,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "radio_info"
     },
     {
         "id": "04f517e9db4307d1",
@@ -1123,9 +1124,9 @@
         "tab": "698e42d7f0c75db1",
         "order": 2,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "radio_info"
     },
     {
         "id": "9851a548b3e9a744",
@@ -1134,9 +1135,9 @@
         "tab": "698e42d7f0c75db1",
         "order": 3,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "radio_info"
     },
     {
         "id": "57f3a809cabd43f5",
@@ -1145,9 +1146,9 @@
         "tab": "698e42d7f0c75db1",
         "order": 4,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "radio_info"
     },
     {
         "id": "e0604be1629095c1",
@@ -1187,9 +1188,9 @@
         "tab": "d36058f98fbac69f",
         "order": 1,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "op_compete"
     },
     {
         "id": "dea9d7ac.0cefc8",
@@ -1238,20 +1239,20 @@
         "tab": "d36058f98fbac69f",
         "order": 4,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "op_compete"
     },
     {
         "id": "4349237f79c6ee9d",
         "type": "ui_group",
         "name": "3rd Place",
         "tab": "d36058f98fbac69f",
-        "order": 6,
+        "order": 7,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "op_compete"
     },
     {
         "id": "de79e0318aecd9cc",
@@ -1260,20 +1261,20 @@
         "tab": "d36058f98fbac69f",
         "order": 9,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "op_compete"
     },
     {
         "id": "ec08fadc8d1d73bf",
         "type": "ui_group",
         "name": "5th Place",
         "tab": "d36058f98fbac69f",
-        "order": 11,
+        "order": 12,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "op_compete"
     },
     {
         "id": "3dad506044ed2f24",
@@ -1282,20 +1283,20 @@
         "tab": "d36058f98fbac69f",
         "order": 14,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "op_compete"
     },
     {
         "id": "fbe68cb50c200a91",
         "type": "ui_group",
         "name": "7th Place",
         "tab": "d36058f98fbac69f",
-        "order": 16,
+        "order": 17,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "op_compete"
     },
     {
         "id": "84c8e4f24085b4d7",
@@ -1304,9 +1305,9 @@
         "tab": "d36058f98fbac69f",
         "order": 19,
         "disp": true,
-        "width": 30,
+        "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "op_compete"
     },
     {
         "id": "4fe32a048d3e8016",
@@ -1315,9 +1316,9 @@
         "tab": "d36058f98fbac69f",
         "order": 2,
         "disp": true,
-        "width": 4,
+        "width": "4",
         "collapse": false,
-        "className": ""
+        "className": "op_compete_trending"
     },
     {
         "id": "ecc5f14b5a3d677e",
@@ -1333,11 +1334,11 @@
         "type": "ui_group",
         "name": "160M",
         "tab": "ecc5f14b5a3d677e",
-        "order": 7,
+        "order": 9,
         "disp": true,
-        "width": 24,
+        "width": "28",
         "collapse": false,
-        "className": ""
+        "className": "band_stats"
     },
     {
         "id": "ba5556bd38a9b0dc",
@@ -1346,53 +1347,53 @@
         "tab": "ecc5f14b5a3d677e",
         "order": 2,
         "disp": true,
-        "width": 24,
+        "width": "28",
         "collapse": false,
-        "className": ""
+        "className": "band_stats"
     },
     {
         "id": "33f39234d06022c4",
         "type": "ui_group",
         "name": "40M",
         "tab": "ecc5f14b5a3d677e",
-        "order": 3,
+        "order": 5,
         "disp": true,
-        "width": 24,
+        "width": "28",
         "collapse": false,
-        "className": ""
+        "className": "band_stats"
     },
     {
         "id": "16293e8283ac8032",
         "type": "ui_group",
         "name": "20M",
         "tab": "ecc5f14b5a3d677e",
-        "order": 4,
+        "order": 6,
         "disp": true,
-        "width": 24,
+        "width": "28",
         "collapse": false,
-        "className": ""
+        "className": "band_stats"
     },
     {
         "id": "b058bc1a30b324a8",
         "type": "ui_group",
         "name": "15M",
         "tab": "ecc5f14b5a3d677e",
-        "order": 5,
+        "order": 7,
         "disp": true,
-        "width": 24,
+        "width": "28",
         "collapse": false,
-        "className": ""
+        "className": "band_stats"
     },
     {
         "id": "7f3af38546f365bf",
         "type": "ui_group",
         "name": "10M",
         "tab": "ecc5f14b5a3d677e",
-        "order": 6,
+        "order": 8,
         "disp": true,
-        "width": 24,
+        "width": "28",
         "collapse": false,
-        "className": ""
+        "className": "band_stats"
     },
     {
         "id": "cf0fd8137d27fde9",
@@ -1401,20 +1402,20 @@
         "tab": "d36058f98fbac69f",
         "order": 5,
         "disp": true,
-        "width": 4,
+        "width": "4",
         "collapse": false,
-        "className": ""
+        "className": "op_compete_trending"
     },
     {
         "id": "a54565f26ef859a6",
         "type": "ui_group",
         "name": "3rd Place Trending",
         "tab": "d36058f98fbac69f",
-        "order": 7,
+        "order": 8,
         "disp": true,
-        "width": 4,
+        "width": "4",
         "collapse": false,
-        "className": ""
+        "className": "op_compete_trending"
     },
     {
         "id": "53db3fa281c44012",
@@ -1423,20 +1424,20 @@
         "tab": "d36058f98fbac69f",
         "order": 10,
         "disp": true,
-        "width": 4,
+        "width": "4",
         "collapse": false,
-        "className": ""
+        "className": "op_compete_trending"
     },
     {
         "id": "5ea99b2ffafa1455",
         "type": "ui_group",
         "name": "5th Place Trending",
         "tab": "d36058f98fbac69f",
-        "order": 12,
+        "order": 13,
         "disp": true,
-        "width": 4,
+        "width": "4",
         "collapse": false,
-        "className": ""
+        "className": "op_compete_trending"
     },
     {
         "id": "2083f5d4aa25f442",
@@ -1445,20 +1446,20 @@
         "tab": "d36058f98fbac69f",
         "order": 15,
         "disp": true,
-        "width": 4,
+        "width": "4",
         "collapse": false,
-        "className": ""
+        "className": "op_compete_trending"
     },
     {
         "id": "1f8381235f15779f",
         "type": "ui_group",
         "name": "7th Place Trending",
         "tab": "d36058f98fbac69f",
-        "order": 17,
+        "order": 18,
         "disp": true,
-        "width": 4,
+        "width": "4",
         "collapse": false,
-        "className": ""
+        "className": "op_compete_trending"
     },
     {
         "id": "49e8559f5916fe38",
@@ -1467,9 +1468,9 @@
         "tab": "d36058f98fbac69f",
         "order": 20,
         "disp": true,
-        "width": 4,
+        "width": "4",
         "collapse": false,
-        "className": ""
+        "className": "op_compete_trending"
     },
     {
         "id": "5b0b0f97dd6d2e04",
@@ -1487,7 +1488,7 @@
         "type": "ui_group",
         "name": "OP QSO Rate by Band - 1 Hr",
         "tab": "ecc5f14b5a3d677e",
-        "order": 8,
+        "order": 3,
         "disp": true,
         "width": "8",
         "collapse": false,
@@ -1522,7 +1523,7 @@
         "tab": "d36058f98fbac69f",
         "order": 3,
         "disp": true,
-        "width": "12",
+        "width": 13,
         "collapse": false,
         "className": ""
     },
@@ -1531,9 +1532,9 @@
         "type": "ui_group",
         "name": "Operators 2Hr Q's/Hr",
         "tab": "d36058f98fbac69f",
-        "order": 8,
+        "order": 16,
         "disp": true,
-        "width": "12",
+        "width": 13,
         "collapse": false,
         "className": ""
     },
@@ -1542,9 +1543,9 @@
         "type": "ui_group",
         "name": "Operators Score",
         "tab": "d36058f98fbac69f",
-        "order": 18,
+        "order": 11,
         "disp": true,
-        "width": "12",
+        "width": 13,
         "collapse": false,
         "className": ""
     },
@@ -1553,9 +1554,9 @@
         "type": "ui_group",
         "name": "Operators QSOs",
         "tab": "d36058f98fbac69f",
-        "order": 13,
+        "order": 6,
         "disp": true,
-        "width": "12",
+        "width": 13,
         "collapse": false,
         "className": ""
     },
@@ -1617,11 +1618,11 @@
         "type": "ui_group",
         "name": "Spot Rate by Band per Min",
         "tab": "ecc5f14b5a3d677e",
-        "order": 9,
+        "order": 4,
         "disp": true,
         "width": "8",
         "collapse": false,
-        "className": ""
+        "className": "band_stats_spot_rate"
     },
     {
         "id": "6e223ca6f2986fea",
@@ -1641,9 +1642,9 @@
         "tab": "200297fa.9ab198",
         "order": 7,
         "disp": true,
-        "width": 12,
+        "width": "12",
         "collapse": false,
-        "className": ""
+        "className": "dashboard_spot_rate"
     },
     {
         "id": "8a65c232b2637c6a",
@@ -1690,7 +1691,7 @@
         "disp": true,
         "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "radio_info"
     },
     {
         "id": "5ccfd9f2fc20c888",
@@ -1701,7 +1702,7 @@
         "disp": true,
         "width": "30",
         "collapse": false,
-        "className": ""
+        "className": "radio_info"
     },
     {
         "id": "54b59a095746559b",
@@ -1739,7 +1740,7 @@
         "type": "ui_group",
         "name": "QSO Being Worked",
         "tab": "568305b092b67570",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": 16,
         "collapse": false,
@@ -1750,11 +1751,11 @@
         "type": "ui_group",
         "name": "Contest Score",
         "tab": "568305b092b67570",
-        "order": 3,
+        "order": 2,
         "disp": true,
-        "width": 5,
+        "width": "5",
         "collapse": false,
-        "className": ""
+        "className": "streaming_contest_score"
     },
     {
         "id": "aafad41ae29aabef",
@@ -1763,9 +1764,9 @@
         "tab": "568305b092b67570",
         "order": 1,
         "disp": true,
-        "width": "44",
+        "width": 34,
         "collapse": false,
-        "className": ""
+        "className": "streaming_contest_info"
     },
     {
         "id": "4ef10134c121cf09",
@@ -1869,9 +1870,9 @@
         "tab": "eb1487788861989b",
         "order": 1,
         "disp": true,
-        "width": 6,
+        "width": 9,
         "collapse": false,
-        "className": ""
+        "className": "scoreboard"
     },
     {
         "id": "02cd9912aaf9c5c2",
@@ -1880,9 +1881,9 @@
         "tab": "eb1487788861989b",
         "order": 2,
         "disp": true,
-        "width": 9,
+        "width": "9",
         "collapse": false,
-        "className": ""
+        "className": "scoreboard"
     },
     {
         "id": "cc8d9c65bb6053c8",
@@ -1891,9 +1892,9 @@
         "tab": "eb1487788861989b",
         "order": 4,
         "disp": true,
-        "width": 9,
+        "width": "9",
         "collapse": false,
-        "className": ""
+        "className": "scoreboard"
     },
     {
         "id": "eff3603f5f8c17cf",
@@ -1902,9 +1903,9 @@
         "tab": "eb1487788861989b",
         "order": 5,
         "disp": true,
-        "width": 9,
+        "width": "9",
         "collapse": false,
-        "className": ""
+        "className": "scoreboard"
     },
     {
         "id": "089bc41bee57baf2",
@@ -1913,9 +1914,9 @@
         "tab": "eb1487788861989b",
         "order": 6,
         "disp": true,
-        "width": 9,
+        "width": "9",
         "collapse": false,
-        "className": ""
+        "className": "scoreboard"
     },
     {
         "id": "8fb11826e4a47fc9",
@@ -2036,76 +2037,6 @@
         "className": ""
     },
     {
-        "id": "b163f197cad6f693",
-        "type": "ui_spacer",
-        "z": "b59d8b7ca43e59ce",
-        "name": "spacer",
-        "group": "aafad41ae29aabef",
-        "order": 2,
-        "width": 44,
-        "height": 1
-    },
-    {
-        "id": "af71209824c6da36",
-        "type": "ui_spacer",
-        "z": "b59d8b7ca43e59ce",
-        "name": "spacer",
-        "group": "9e3f259da9c7796b",
-        "order": 2,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "eaab5885af771c73",
-        "type": "ui_spacer",
-        "z": "b59d8b7ca43e59ce",
-        "name": "spacer",
-        "group": "9e3f259da9c7796b",
-        "order": 3,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "7f86b2c3298361c1",
-        "type": "ui_spacer",
-        "z": "b59d8b7ca43e59ce",
-        "name": "spacer",
-        "group": "9e3f259da9c7796b",
-        "order": 4,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "b0ddc56fd8510f9b",
-        "type": "ui_spacer",
-        "z": "b59d8b7ca43e59ce",
-        "name": "spacer",
-        "group": "9e3f259da9c7796b",
-        "order": 5,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "6d97a4b8db831167",
-        "type": "ui_spacer",
-        "z": "b59d8b7ca43e59ce",
-        "name": "spacer",
-        "group": "9e3f259da9c7796b",
-        "order": 6,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "20a6439ec09a5c5b",
-        "type": "ui_spacer",
-        "z": "b59d8b7ca43e59ce",
-        "name": "spacer",
-        "group": "9e3f259da9c7796b",
-        "order": 7,
-        "width": 4,
-        "height": 1
-    },
-    {
         "id": "71cb3368617e6c9e",
         "type": "ui_group",
         "name": "Dashboard Upgrade",
@@ -2115,6 +2046,96 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "1ea34d06.1438c3",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "5e2e41aa.9826b",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "5e2e41aa.9826b",
+        "type": "ui_tab",
+        "name": "CSS_Code",
+        "icon": "dashboard",
+        "order": 10,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "5fbbdd7ee574998e",
+        "type": "ui_spacer",
+        "z": "b73cc2bb5f424b69",
+        "name": "spacer",
+        "group": "aafad41ae29aabef",
+        "order": 3,
+        "width": 34,
+        "height": 1
+    },
+    {
+        "id": "97ff2fe567e6e56e",
+        "type": "ui_spacer",
+        "z": "b73cc2bb5f424b69",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 2,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "dbed62b7e5d06ad5",
+        "type": "ui_spacer",
+        "z": "b73cc2bb5f424b69",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 3,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "1e87c6f36a37c6cf",
+        "type": "ui_spacer",
+        "z": "b73cc2bb5f424b69",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 4,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "898d37be7ac2375c",
+        "type": "ui_spacer",
+        "z": "b73cc2bb5f424b69",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 5,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "dd7c69d49b9c6e3a",
+        "type": "ui_spacer",
+        "z": "b73cc2bb5f424b69",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 6,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "f0dec55cafdd0ef9",
+        "type": "ui_spacer",
+        "z": "b73cc2bb5f424b69",
+        "name": "spacer",
+        "group": "9e3f259da9c7796b",
+        "order": 7,
+        "width": 4,
+        "height": 1
     },
     {
         "id": "db6c3ead34896ed7",
@@ -9336,7 +9357,7 @@
         "group": "390d9212c8d39731",
         "order": 1,
         "width": 12,
-        "height": 5,
+        "height": 4,
         "label": "",
         "chartType": "line",
         "legend": "true",
@@ -17015,7 +17036,7 @@
         "name": "Operator 1Hr Q's/Hr",
         "group": "2da8694540143f9a",
         "order": 1,
-        "width": 12,
+        "width": 13,
         "height": 5,
         "label": "",
         "chartType": "line",
@@ -17059,7 +17080,7 @@
         "name": "Operators 2Hr Q's/Hr",
         "group": "ba191f5b911d96f8",
         "order": 1,
-        "width": 12,
+        "width": 13,
         "height": 5,
         "label": "",
         "chartType": "line",
@@ -17103,7 +17124,7 @@
         "name": "Operators Score Chart",
         "group": "6c301c05c13a5e40",
         "order": 1,
-        "width": 12,
+        "width": 13,
         "height": 5,
         "label": "",
         "chartType": "line",
@@ -17147,7 +17168,7 @@
         "name": "Operators QSOs Chart",
         "group": "1d57c18be03cdf58",
         "order": 1,
-        "width": 12,
+        "width": 13,
         "height": 5,
         "label": "",
         "chartType": "line",
@@ -19776,7 +19797,7 @@
         "z": "9ed270102b553c75",
         "group": "b597a92689c997ee",
         "order": 4,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "160M Points",
         "label": "Points",
@@ -19793,7 +19814,7 @@
         "z": "9ed270102b553c75",
         "group": "33f39234d06022c4",
         "order": 4,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "40M Points",
         "label": "Points",
@@ -19810,7 +19831,7 @@
         "z": "9ed270102b553c75",
         "group": "16293e8283ac8032",
         "order": 4,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "20M Points",
         "label": "Points",
@@ -19827,7 +19848,7 @@
         "z": "9ed270102b553c75",
         "group": "b058bc1a30b324a8",
         "order": 4,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "15M Points",
         "label": "Points",
@@ -19844,7 +19865,7 @@
         "z": "9ed270102b553c75",
         "group": "7f3af38546f365bf",
         "order": 4,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "10M Points",
         "label": "Points",
@@ -19861,7 +19882,7 @@
         "z": "9ed270102b553c75",
         "group": "ba5556bd38a9b0dc",
         "order": 4,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "80M Points",
         "label": "Points",
@@ -20210,7 +20231,7 @@
         "z": "9ed270102b553c75",
         "group": "b597a92689c997ee",
         "order": 3,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "160M Multis",
         "label": "Multi",
@@ -20227,7 +20248,7 @@
         "z": "9ed270102b553c75",
         "group": "33f39234d06022c4",
         "order": 3,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "40M Multi",
         "label": "Multi",
@@ -20244,7 +20265,7 @@
         "z": "9ed270102b553c75",
         "group": "16293e8283ac8032",
         "order": 3,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "20M Multis",
         "label": "Multi",
@@ -20261,7 +20282,7 @@
         "z": "9ed270102b553c75",
         "group": "b058bc1a30b324a8",
         "order": 3,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "15M Multis",
         "label": "Multi",
@@ -20278,7 +20299,7 @@
         "z": "9ed270102b553c75",
         "group": "7f3af38546f365bf",
         "order": 3,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "10M Multis",
         "label": "Multi",
@@ -20295,7 +20316,7 @@
         "z": "9ed270102b553c75",
         "group": "ba5556bd38a9b0dc",
         "order": 3,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "80M Multis",
         "label": "Multi",
@@ -20414,7 +20435,7 @@
         "z": "9ed270102b553c75",
         "group": "b597a92689c997ee",
         "order": 1,
-        "width": 6,
+        "width": 7,
         "height": 2,
         "name": "160M Score",
         "label": "Score",
@@ -20431,7 +20452,7 @@
         "z": "9ed270102b553c75",
         "group": "33f39234d06022c4",
         "order": 1,
-        "width": 6,
+        "width": 7,
         "height": 2,
         "name": "40M Score",
         "label": "Score",
@@ -20448,7 +20469,7 @@
         "z": "9ed270102b553c75",
         "group": "16293e8283ac8032",
         "order": 1,
-        "width": 6,
+        "width": 7,
         "height": 2,
         "name": "20M Score",
         "label": "Score",
@@ -20465,7 +20486,7 @@
         "z": "9ed270102b553c75",
         "group": "b058bc1a30b324a8",
         "order": 1,
-        "width": 6,
+        "width": 7,
         "height": 2,
         "name": "15M Score",
         "label": "Score",
@@ -20482,7 +20503,7 @@
         "z": "9ed270102b553c75",
         "group": "7f3af38546f365bf",
         "order": 1,
-        "width": 6,
+        "width": 7,
         "height": 2,
         "name": "10M Score",
         "label": "Score",
@@ -20499,7 +20520,7 @@
         "z": "9ed270102b553c75",
         "group": "ba5556bd38a9b0dc",
         "order": 1,
-        "width": 6,
+        "width": 7,
         "height": 2,
         "name": "80M Score",
         "label": "Score",
@@ -20744,7 +20765,7 @@
         "z": "9ed270102b553c75",
         "group": "b597a92689c997ee",
         "order": 5,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "160M 1Hr Rate",
         "label": "1 Hr Rate",
@@ -20761,7 +20782,7 @@
         "z": "9ed270102b553c75",
         "group": "33f39234d06022c4",
         "order": 5,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "40M 1Hr Rate",
         "label": "1 Hr Rate",
@@ -20778,7 +20799,7 @@
         "z": "9ed270102b553c75",
         "group": "16293e8283ac8032",
         "order": 5,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "20M 1Hr Rate",
         "label": "1 Hr Rate",
@@ -20795,7 +20816,7 @@
         "z": "9ed270102b553c75",
         "group": "b058bc1a30b324a8",
         "order": 5,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "15M 1Hr Rate",
         "label": "1 Hr Rate",
@@ -20812,7 +20833,7 @@
         "z": "9ed270102b553c75",
         "group": "7f3af38546f365bf",
         "order": 5,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "10M 1Hr Rate",
         "label": "1 Hr Rate",
@@ -20829,7 +20850,7 @@
         "z": "9ed270102b553c75",
         "group": "ba5556bd38a9b0dc",
         "order": 5,
-        "width": 4,
+        "width": 5,
         "height": 2,
         "name": "80M 1Hr Rate",
         "label": "1 Hr Rate",
@@ -21989,8 +22010,8 @@
         "z": "b59d8b7ca43e59ce",
         "group": "aafad41ae29aabef",
         "order": 1,
-        "width": 44,
-        "height": 1,
+        "width": 0,
+        "height": 0,
         "name": "Contest Info and Overlay",
         "label": "Contest Info and Goal Overlay",
         "format": "",
@@ -24925,12 +24946,12 @@
         "id": "43d361d9eba3f06e",
         "type": "tcp out",
         "z": "1c66bd27e16a3fec",
+        "name": "",
         "host": "${Connect_IP}",
         "port": "12060",
         "beserver": "client",
         "base64": false,
         "end": false,
-        "name": "",
         "x": 730,
         "y": 480,
         "wires": []
@@ -31632,7 +31653,7 @@
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
         "order": 2,
-        "width": 6,
+        "width": 9,
         "height": 2,
         "name": "Contest Call Total Score",
         "label": "<font color=#FFFF00>Total Score",
@@ -31649,7 +31670,7 @@
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
         "order": 4,
-        "width": 6,
+        "width": 9,
         "height": 2,
         "name": "Contest Call Total Mults",
         "label": "<font color=#FFFF00>Total Mults",
@@ -31666,7 +31687,7 @@
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
         "order": 3,
-        "width": 6,
+        "width": 9,
         "height": 2,
         "name": "Contest Call Total QSO's",
         "label": "<font color=#FFFF00>Total Qs",
@@ -31683,7 +31704,7 @@
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
         "order": 6,
-        "width": 6,
+        "width": 9,
         "height": 2,
         "name": "Contest Call 80",
         "label": "<font color=#FFFF00>80M Qs/Mults",
@@ -31700,7 +31721,7 @@
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
         "order": 7,
-        "width": 6,
+        "width": 9,
         "height": 2,
         "name": "Contest Call 40",
         "label": "<font color=#FFFF00>40M Qs/Mults",
@@ -31716,8 +31737,8 @@
         "type": "ui_text",
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
-        "order": 8,
-        "width": 6,
+        "order": 9,
+        "width": 9,
         "height": 2,
         "name": "Contest Call 20",
         "label": "<font color=#FFFF00>20M Qs/Mults",
@@ -31733,8 +31754,8 @@
         "type": "ui_text",
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
-        "order": 9,
-        "width": 6,
+        "order": 10,
+        "width": 9,
         "height": 2,
         "name": "Contest Call 15",
         "label": "<font color=#FFFF00>15M Qs/Mults",
@@ -31750,8 +31771,8 @@
         "type": "ui_text",
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
-        "order": 10,
-        "width": 6,
+        "order": 11,
+        "width": 9,
         "height": 2,
         "name": "Contest Call 10",
         "label": "<font color=#FFFF00>10M Qs/Mults",
@@ -31767,8 +31788,8 @@
         "type": "ui_text",
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
-        "order": 11,
-        "width": 6,
+        "order": 12,
+        "width": 9,
         "height": 2,
         "name": "Contest Call Last Update",
         "label": "<font color=#FFFF00>Last Update",
@@ -31785,7 +31806,7 @@
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
         "order": 5,
-        "width": 6,
+        "width": 9,
         "height": 2,
         "name": "Contest Call 160",
         "label": "<font color=#FFFF00>160M Qs/Mults",
@@ -31821,7 +31842,7 @@
         "z": "2eedd966294071cc",
         "group": "9a1dd65e19bf97cb",
         "order": 1,
-        "width": 6,
+        "width": 9,
         "height": 2,
         "name": "Contest Call",
         "label": "<font color=#FFFF00>Call",
@@ -32795,7 +32816,7 @@
         "type": "debug",
         "z": "2eedd966294071cc",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -33806,7 +33827,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "updateContestCall",
-        "order": 15,
+        "order": 16,
         "width": 0,
         "height": 0,
         "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-contestcall\").text(msg.payload.contestcall).prop('title','Contest Call');\n              //  $(\"#header-contestcall\").prop('title','Contest Call');\n                $(\"#header-score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Contest Call Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-contestcall\").text(\"\");\n                $(\"#header-score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>",
@@ -33831,7 +33852,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "UpdateContestName",
-        "order": 14,
+        "order": 15,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"7eceb14e06091850\"]').hide();\n        scope.$watch('msg', function(msg) {\n        if ((msg.payload.contestname) != null){\n            $(\"#header-contestname\").text(msg.payload.contestname);\n             }\n        if ((msg.payload.contestname) == null){\n            $(\"#header-contestname\").text(\"No Active Contest\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -33855,7 +33876,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "UpdateChaseCall1",
-        "order": 16,
+        "order": 17,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase1_call\").text(msg.payload.contestcall).prop('title','Call 1');\n                $(\"#header-chase1_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 1 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase1_call\").text(\"\");\n                $(\"#header-chase1_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -33879,7 +33900,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "UpdateChaseCall2",
-        "order": 17,
+        "order": 18,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase2_call\").text(msg.payload.contestcall).prop('title','Call 2');\n                $(\"#header-chase2_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 2 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase2_call\").text(\"\");\n                $(\"#header-chase2_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -33903,7 +33924,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "UpdateChaseCall3",
-        "order": 18,
+        "order": 19,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase3_call\").text(msg.payload.contestcall).prop('title','Call 3');\n                $(\"#header-chase3_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 3 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase3_call\").text(\"\");\n                $(\"#header-chase3_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -33927,7 +33948,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "UpdateChaseCall4",
-        "order": 19,
+        "order": 20,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase4_call\").text(msg.payload.contestcall).prop('title','Call 4');\n                $(\"#header-chase4_score_total\").text(msg.payload.score_total).prop('title','Call 4 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase4_call\").text(\"\");\n                $(\"#header-chase4_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -34267,7 +34288,7 @@
         "g": "bebfe5d7e4f0feb0",
         "group": "aafad41ae29aabef",
         "name": "UpdateChaseCall1",
-        "order": 9,
+        "order": 8,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase1_call\").text(msg.payload.contestcall).prop('title','Call 1');\n                $(\"#header-chase1_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 1 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase1_call\").text(\"\");\n                $(\"#header-chase1_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -34291,7 +34312,7 @@
         "g": "bebfe5d7e4f0feb0",
         "group": "aafad41ae29aabef",
         "name": "UpdateChaseCall2",
-        "order": 10,
+        "order": 9,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase2_call\").text(msg.payload.contestcall).prop('title','Call 2');\n                $(\"#header-chase2_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 2 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase2_call\").text(\"\");\n                $(\"#header-chase2_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -34315,7 +34336,7 @@
         "g": "bebfe5d7e4f0feb0",
         "group": "aafad41ae29aabef",
         "name": "UpdateChaseCall3",
-        "order": 11,
+        "order": 10,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase3_call\").text(msg.payload.contestcall).prop('title','Call 3');\n                $(\"#header-chase3_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 3 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase3_call\").text(\"\");\n                $(\"#header-chase3_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -34339,7 +34360,7 @@
         "g": "bebfe5d7e4f0feb0",
         "group": "aafad41ae29aabef",
         "name": "UpdateChaseCall4",
-        "order": 12,
+        "order": 11,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase4_call\").text(msg.payload.contestcall).prop('title','Call 4');\n                $(\"#header-chase4_score_total\").text(msg.payload.score_total).prop('title','Call 4 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase4_call\").text(\"\");\n                $(\"#header-chase4_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
@@ -34891,7 +34912,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "BlitzunorgUi",
-        "order": 12,
+        "order": 13,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"a86c0f808507a0cc\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg.payload.length !== 0) {\n                $(\"#header-icon\").html(\"<i class='fa fa-bolt fa-2x' aria-hidden='true'></i>\").css(\"color\",(msg.color));\n                $(\"#header-lightning\").text(msg.payload); \n            }\n        });\n    })(scope);\n</script>",
@@ -35007,7 +35028,7 @@
         "g": "bebfe5d7e4f0feb0",
         "group": "aafad41ae29aabef",
         "name": "BlitzunorgUi",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"a86c0f808507a0cc\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg.payload.length !== 0) {\n                $(\"#header-icon\").html(\"<i class='fa fa-bolt fa-2x' aria-hidden='true'></i>\").css(\"color\",(msg.color));\n                $(\"#header-lightning\").text(msg.payload); \n            }\n        });\n    })(scope);\n</script>",
@@ -35347,7 +35368,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "updateServer Aindex",
-        "order": 20,
+        "order": 21,
         "width": 0,
         "height": 0,
         "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"28807f2ea8989c55\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"Aindex\") {\n                $(\"#header-Aindex\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
@@ -35372,7 +35393,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "updateServer K",
-        "order": 7,
+        "order": 8,
         "width": 0,
         "height": 0,
         "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"ebbabd8a26718f21\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"kdx\") {\n                $(\"#header-kdx\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
@@ -35397,7 +35418,7 @@
         "g": "02235a52f1d247d6",
         "group": "9a1dd65e19bf97cb",
         "name": "updateServer SFi",
-        "order": 13,
+        "order": 14,
         "width": 0,
         "height": 0,
         "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"6b98b8d2d329e253\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"sfi\") {\n                $(\"#header-sfi\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
@@ -35516,7 +35537,7 @@
         "g": "bebfe5d7e4f0feb0",
         "group": "aafad41ae29aabef",
         "name": "updateServer K",
-        "order": 8,
+        "order": 7,
         "width": 0,
         "height": 0,
         "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"ebbabd8a26718f21\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"kdx\") {\n                $(\"#header-kdx\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
@@ -35917,7 +35938,7 @@
         "g": "bebfe5d7e4f0feb0",
         "group": "aafad41ae29aabef",
         "name": "updateServer Aindex",
-        "order": 13,
+        "order": 12,
         "width": 0,
         "height": 0,
         "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"28807f2ea8989c55\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"Aindex\") {\n                $(\"#header-Aindex\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
@@ -36300,26 +36321,6 @@
         "wires": []
     },
     {
-        "id": "1ea34d06.1438c3",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "5e2e41aa.9826b",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "5e2e41aa.9826b",
-        "type": "ui_tab",
-        "name": "CSS_Code",
-        "icon": "dashboard",
-        "order": 10,
-        "disabled": false,
-        "hidden": true
-    },
-    {
         "id": "a8a10cc2.9d0ae",
         "type": "ui_template",
         "z": "b73cc2bb5f424b69",
@@ -36353,7 +36354,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\nbody.nr-dashboard-theme {\n    font-size: 20px !important;\n}\n.md-toolbar-tools h1 {\n    font-size: 35px !important;\n}\n}\n</style>",
+        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_current_qsos{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats{\nfont-size: 22px;\n}\n.dashboard_radio_data{ \nfont-size: 18px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_spot_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n.op_compete_trending{\nfont-size: 14px;\n}\n.op_compete{\nfont-size: 20px;\n}\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -36377,7 +36378,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n#Tab_Dashboard {\nfont-size: 25px;\n}\n</style>",
+        "format": "<style>\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
