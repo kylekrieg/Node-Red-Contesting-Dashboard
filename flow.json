@@ -363,9 +363,7 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159,
-        "w": 255,
-        "h": 482
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -389,9 +387,7 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -415,9 +411,7 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 482
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -442,9 +436,7 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 482
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -459,9 +451,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -476,9 +466,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -502,9 +490,7 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -528,9 +514,7 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -567,9 +551,7 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679,
-        "w": 2032,
-        "h": 282
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -594,9 +576,7 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019,
-        "w": 632,
-        "h": 262
+        "y": 1019
     },
     {
         "id": "c6a5789101548ba9",
@@ -611,9 +591,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -637,9 +615,7 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 282,
-        "h": 482
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -980,7 +956,7 @@
         "id": "6bee760b7642c108",
         "type": "ui_base",
         "theme": {
-            "name": "theme-custom",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
@@ -1004,16 +980,16 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#4B7930",
-                    "value": "#0035d5",
+                    "default": "#097479",
+                    "value": "#097479",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0035d5",
+                    "value": "#097479",
                     "edited": true
                 },
                 "page-backgroundColor": {
-                    "value": "#3c9bed",
+                    "value": "#111111",
                     "edited": true
                 },
                 "page-sidebar-backgroundColor": {
@@ -1021,7 +997,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#2259ff",
+                    "value": "#0eb8c0",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1037,7 +1013,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0035d5",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -1045,7 +1021,7 @@
                     "edited": false
                 },
                 "base-font": {
-                    "value": "Tahoma,Geneva,sans-serif"
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
                 }
             },
             "angularTheme": {
