@@ -96,6 +96,14 @@
         "env": []
     },
     {
+        "id": "1acc5730a82cbfc7",
+        "type": "tab",
+        "label": "WAC Logger",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c967abe5be484ee6",
         "type": "subflow",
         "name": "1Hr Rate Color",
@@ -767,7 +775,7 @@
         ],
         "x": 14,
         "y": 1459,
-        "w": 2472,
+        "w": 2552,
         "h": 982
     },
     {
@@ -826,7 +834,6 @@
             "4320ff577c7cb858",
             "825f9b7a2b7fc6e2",
             "8804affd65082b4f",
-            "cd862dc4b3cf9391",
             "6c1de6ee7473fac9",
             "fdfd9133ae52097f"
         ],
@@ -898,6 +905,24 @@
         "y": 839,
         "w": 1912,
         "h": 602
+    },
+    {
+        "id": "f830dd821e0240f4",
+        "type": "group",
+        "z": "b73cc2bb5f424b69",
+        "name": "Master CSS - Remove If Do Not Like",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6e5f192ff0fd2d39",
+            "aa0566f8a8d9dbfd",
+            "925cebb6bacad025"
+        ],
+        "x": 974,
+        "y": 999,
+        "w": 592,
+        "h": 82
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -2226,6 +2251,132 @@
         "order": 15,
         "disp": true,
         "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6ae284209bc95605",
+        "type": "ui_tab",
+        "name": "WAC Logger",
+        "icon": "dashboard",
+        "order": 11,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "81e8affa751a7503",
+        "type": "ui_group",
+        "name": "Log Window Radio 1",
+        "tab": "6ae284209bc95605",
+        "order": 1,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ccc9bbbb7e8b28a7",
+        "type": "ui_group",
+        "name": "Radio 1 Map",
+        "tab": "6ae284209bc95605",
+        "order": 5,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e0bfac7798af6224",
+        "type": "ui_group",
+        "name": "Radio 2 Map",
+        "tab": "6ae284209bc95605",
+        "order": 6,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9189f146c1798eef",
+        "type": "ui_group",
+        "name": "Radio 1 VFO",
+        "tab": "6ae284209bc95605",
+        "order": 3,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9acb32ddd0144d0f",
+        "type": "ui_group",
+        "name": "Radio 2 VFO",
+        "tab": "6ae284209bc95605",
+        "order": 4,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cb8b64280b7ce16e",
+        "type": "ui_group",
+        "name": "Contest Log",
+        "tab": "6ae284209bc95605",
+        "order": 7,
+        "disp": true,
+        "width": "36",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "386ebcadf0c976ae",
+        "type": "ui_spacer",
+        "z": "1acc5730a82cbfc7",
+        "name": "spacer",
+        "group": "9189f146c1798eef",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "75a98d2fc7441f20",
+        "type": "ui_spacer",
+        "z": "1acc5730a82cbfc7",
+        "name": "spacer",
+        "group": "9189f146c1798eef",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "5d48b991eb1eaaf5",
+        "type": "ui_spacer",
+        "z": "1acc5730a82cbfc7",
+        "name": "spacer",
+        "group": "9acb32ddd0144d0f",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "675380346d3c6481",
+        "type": "ui_spacer",
+        "z": "1acc5730a82cbfc7",
+        "name": "spacer",
+        "group": "9acb32ddd0144d0f",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "31fa72ab1ae3828f",
+        "type": "ui_group",
+        "name": "Log Window Radio 2",
+        "tab": "6ae284209bc95605",
+        "order": 2,
+        "disp": true,
+        "width": "18",
         "collapse": false,
         "className": ""
     },
@@ -6587,12 +6738,12 @@
         "order": 1,
         "width": 4,
         "height": 2,
-        "name": "Radio 1 Operator",
+        "name": "Radio 1 Operator Dashboard",
         "label": "<font size = 5>Operator",
         "format": "<font size = 40 font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1490,
+        "x": 1520,
         "y": 1680,
         "wires": []
     },
@@ -6605,12 +6756,12 @@
         "order": 1,
         "width": 4,
         "height": 2,
-        "name": "Radio 2 Operator",
+        "name": "Radio 2 Operator Dashboard",
         "label": "<font size = 5>Operator",
         "format": "<font size = 40 font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1510,
+        "x": 1540,
         "y": 2220,
         "wires": []
     },
@@ -6712,12 +6863,12 @@
         "order": 3,
         "width": 5,
         "height": 2,
-        "name": "Radio 1 Freq",
+        "name": "Radio 1 Freq Dashboard",
         "label": "<font size = 5>Freq",
         "format": "<font size = 40 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1730,
+        "x": 1770,
         "y": 1720,
         "wires": []
     },
@@ -6730,12 +6881,12 @@
         "order": 3,
         "width": 5,
         "height": 2,
-        "name": "Radio 2 Freq",
+        "name": "Radio 2 Freq Dashboard",
         "label": "<font size = 5>Freq",
         "format": "<font size = 40 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1750,
+        "x": 1790,
         "y": 2180,
         "wires": []
     },
@@ -6748,12 +6899,12 @@
         "order": 2,
         "width": 3,
         "height": 2,
-        "name": "Radio 1 Mode",
+        "name": "Radio 1 Mode Dashboard",
         "label": "<font size = 5>Mode",
         "format": "<font size = 40 font color={{msg.color}}>{{payload.RadioInfo.Mode[0]}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
+        "x": 1510,
         "y": 1640,
         "wires": []
     },
@@ -6786,12 +6937,12 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "Radio 1 Status",
+        "name": "Radio 1 Status Dashboard",
         "label": "<font size = 5>Status",
         "format": "<font size = 40 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1480,
+        "x": 1520,
         "y": 1600,
         "wires": []
     },
@@ -6804,12 +6955,12 @@
         "order": 4,
         "width": 3,
         "height": 2,
-        "name": "Radio 2 Status",
+        "name": "Radio 2 Status Dashboard",
         "label": "<font size = 5>Status",
         "format": "<font size = 40 font color={{msg.color}}>{{msg.payload}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1500,
+        "x": 1540,
         "y": 2300,
         "wires": []
     },
@@ -6822,12 +6973,12 @@
         "order": 2,
         "width": 3,
         "height": 2,
-        "name": "Radio 2 Mode",
+        "name": "Radio 2 Mode Dashboard",
         "label": "<font size = 5>Mode",
         "format": "<font size = 40 font color={{msg.color}}>{{payload.RadioInfo.Mode[0]}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1500,
+        "x": 1530,
         "y": 2260,
         "wires": []
     },
@@ -6908,12 +7059,12 @@
         "order": 6,
         "width": 3,
         "height": 2,
-        "name": "Radio 1 QSO Rate",
+        "name": "Radio 1 QSO Rate Dashboard",
         "label": "{{msg.label}}",
         "format": "<font size = 50 font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2370,
+        "x": 2410,
         "y": 1540,
         "wires": []
     },
@@ -7055,7 +7206,8 @@
         "mode": "link",
         "links": [
             "93a6eb43a0cd1622",
-            "b2e62889b54520fd"
+            "b2e62889b54520fd",
+            "254a70483d8805dc"
         ],
         "x": 875,
         "y": 1660,
@@ -7307,7 +7459,8 @@
         "mode": "link",
         "links": [
             "facc381ab8ee58c9",
-            "93a6eb43a0cd1622"
+            "93a6eb43a0cd1622",
+            "935c9a16abfdf6b5"
         ],
         "x": 855,
         "y": 1760,
@@ -7401,12 +7554,12 @@
         "order": 5,
         "width": 3,
         "height": 2,
-        "name": "Radio 1 Macro",
+        "name": "Radio 1 Macro Dashboard",
         "label": "<font size = 5>Macro",
         "format": "<font size=6 font color={{msg.color}}>{{msg.payload.RadioInfo.FunctionKeyCaption[0]}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1960,
+        "x": 1990,
         "y": 1760,
         "wires": []
     },
@@ -7495,12 +7648,12 @@
         "order": 5,
         "width": 3,
         "height": 2,
-        "name": "Radio 2 Macro",
+        "name": "Radio 2 Macro Dashboard",
         "label": "<font size = 5>Macro",
         "format": "<font size=6 font color={{msg.color}}>{{msg.payload.RadioInfo.FunctionKeyCaption[0]}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1960,
+        "x": 1990,
         "y": 2100,
         "wires": []
     },
@@ -7919,8 +8072,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1540,
-        "y": 1640,
+        "x": 820,
+        "y": 2040,
         "wires": []
     },
     {
@@ -8907,10 +9060,11 @@
         "type": "link out",
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
-        "name": "Worked QSO Stream OUT",
+        "name": "Logged QSO Stream OUT",
         "mode": "link",
         "links": [
-            "247347fc62633734"
+            "247347fc62633734",
+            "f3117ed04c2dd2ff"
         ],
         "x": 1295,
         "y": 240,
@@ -8963,19 +9117,6 @@
         "x": 935,
         "y": 440,
         "wires": []
-    },
-    {
-        "id": "cd862dc4b3cf9391",
-        "type": "link in",
-        "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "",
-        "links": [],
-        "x": 735,
-        "y": 200,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "6c1de6ee7473fac9",
@@ -10584,7 +10725,8 @@
         "z": "63d876401a56f871",
         "name": "MultiOP Radio Data IN",
         "links": [
-            "3e86130caa4f1f80"
+            "3e86130caa4f1f80",
+            "a96e781180e6e778"
         ],
         "x": 155,
         "y": 920,
@@ -15428,7 +15570,8 @@
         "z": "63d876401a56f871",
         "name": "S02R Radio Info IN",
         "links": [
-            "15fa6dac50ec3359"
+            "15fa6dac50ec3359",
+            "94303f00b0074ac4"
         ],
         "x": 285,
         "y": 200,
@@ -23994,7 +24137,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "QSO Data Raw",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24125,7 +24268,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "DB Insert",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24480,7 +24623,9 @@
         "name": "Database Radio IN",
         "links": [
             "15fa6dac50ec3359",
-            "3e86130caa4f1f80"
+            "3e86130caa4f1f80",
+            "a96e781180e6e778",
+            "94303f00b0074ac4"
         ],
         "x": 135,
         "y": 840,
@@ -26163,8 +26308,8 @@
         "passthru": false,
         "label": "Clear QRZ XML Login Data",
         "tooltip": "",
-        "color": "",
-        "bgcolor": "",
+        "color": "#FFFFFF",
+        "bgcolor": "#FF0000",
         "className": "",
         "icon": "",
         "payload": "",
@@ -28462,8 +28607,8 @@
         "passthru": false,
         "label": "Reset All Fields",
         "tooltip": "",
-        "color": "",
-        "bgcolor": "",
+        "color": "#FFFFFF",
+        "bgcolor": "#FF0000",
         "className": "",
         "icon": "",
         "payload": "",
@@ -29026,8 +29171,8 @@
         "passthru": false,
         "label": "Clear HamQTH XML Login Data",
         "tooltip": "",
-        "color": "",
-        "bgcolor": "",
+        "color": "#FFFFFF",
+        "bgcolor": "#FF0000",
         "className": "",
         "icon": "",
         "payload": "",
@@ -30163,7 +30308,7 @@
         "width": 6,
         "height": 1,
         "passthru": false,
-        "label": "No Dups Connect Skimmer",
+        "label": "Connect Skimmer NO Dupes",
         "tooltip": "Connect to Cluster",
         "color": "",
         "bgcolor": "Green",
@@ -30637,7 +30782,7 @@
         "width": 6,
         "height": 1,
         "passthru": false,
-        "label": "With Dups Connect Skimmer",
+        "label": "Connect Skimmer With Dupes",
         "tooltip": "Connect to Cluster",
         "color": "",
         "bgcolor": "Green",
@@ -31477,7 +31622,7 @@
         "width": 5,
         "height": 1,
         "passthru": false,
-        "label": "With Dups Connect Skimmer",
+        "label": "Connect Skimmer Dupes",
         "tooltip": "Connect to Cluster",
         "color": "",
         "bgcolor": "Green",
@@ -33832,8 +33977,8 @@
         "passthru": false,
         "label": "Manual Reboot",
         "tooltip": "",
-        "color": "",
-        "bgcolor": "",
+        "color": "#FFFFFF",
+        "bgcolor": "#FF0000",
         "className": "",
         "icon": "",
         "payload": "",
@@ -36411,5 +36556,846 @@
         "x": 1290,
         "y": 780,
         "wires": []
+    },
+    {
+        "id": "6e5f192ff0fd2d39",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "f830dd821e0240f4",
+        "group": "",
+        "name": "css",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n/* unvisited link */\na:link {\n  color: white;\n    text-decoration: none;\n    vertical-align: bottom;\n}\n\n/* visited link */\na:visited {\n  color: white;\n    text-decoration: none;\n    vertical-align: bottom;    \n}\n\n/* mouse over link */\na:hover {\n  color: white;\n    text-decoration: none;\n        vertical-align: bottom;\n}\n\n/* selected link */\na:active {\n  color: white;\n    text-decoration: none;\n        vertical-align: bottom;\n}\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1490,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa0566f8a8d9dbfd",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "f830dd821e0240f4",
+        "group": "ba8d90f0d4d46eb0",
+        "name": "Master style override",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\nbody.nr-dashboard-theme {\n background-color: #333333;\n font-family: Calibri;\n}\nbutton { \n  width: 50px; \n  color: #d0d0d0;\n  /*box-shadow: 2px 2px 2px rgba(0,0, 0, 0.4);*/\n  /*border-radius: 1px;*/\n  /*transform: scale(1.0);*/\n  background-color: #707070;\n  background-image: linear-gradient(to bottom right, #8a8a8a6e, #00000070);\n\n}\nbutton, html, input, select, textarea {\n font-family: Calibri;\n}\nbody.nr-dashboard-theme md-content md-card {\n /*background-color: #33333300;*/\n color: #d0d0d0;\n}\n\n/* Set header background style */\nbody.remove.nr-dashboard-theme md-toolbar {\n background-image: linear-gradient(to right,#8a8a8a6e, #00000070);\n box-shadow: 0px 1px 20px #0000008a;\n}\n/* Set groups background style */\n.remove.nr-dashboard-theme ui-card-panel {\n background-image: linear-gradient(to bottom right, #8a8a8a6e, #00000070);\n border: 1px solid #555555;\n box-shadow: 0 0 20px #00000066;\n}\n\n/* Set group titles text */\n.nr-dashboard-theme ui-card-panel p.nr-dashboard-cardtitle {\n color: #2eb82e;\n text-shadow: 0 0 2px black;\n}\n\n.nr-dashboard-theme .nr-dashboard-form-button {\n background-image: linear-gradient(to bottom right,  #8a8a8a6e, #00000070);\n background-color: #00ad03;\n color: #d0d0d0;\n text-shadow: 0 0 2px #525252;\n border-radius:6px;\n}\n\n.nr-dashboard-theme .nr-dashboard-button .md-button {\n background-image: linear-gradient(to bottom right,  #8a8a8a6e, #00000070);\n background-color: #707070;\n color: #d0d0d0;\n text-shadow: 0 0 2px #525252;\n border-radius:6px;\n}\n.nr-dashboard-theme .nr-dashboard-button .md-button:hover {\n background-color: #00de00;\n}\n\n.nr-dashboard-theme .nr-dashboard-switch md-switch .md-thumb {\n background-image: linear-gradient(to bottom right, #8a8a8a6e, #00000070);\n}\n.nr-dashboard-button .md-button {\n box-shadow: 0 1px 3px 0 rgba(0,0,0,.26)!important;\n width: 100%!important;\n height: 100%!important;\n margin: 0!important;\n min-width: 0!important;\n min-height: 0!important;\n}\n.nr-dashboard-theme .nr-dashboard-slider .md-thumb:after {\n background-image: linear-gradient(to bottom right, #8a8a8a6e, #00000070);\n border-style: none;\n}\n.nr-dashboard-theme .nr-dashboard-numeric .value {\n background-color: #33333300;\n color:#d0d0d0;\n}\n\n.nr-dashboard-numeric .value {\n font-weight: 700;\n text-align: center;\n border: 0;\n}\n\n\n.nr-dashboard-form {\n display: inline-block;\n width: 100%;\n overflow-y: visible;\n}\n#SETTINGS_TEATED_cards {\n min-height: 260px;\n}\n\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1100,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "925cebb6bacad025",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "f830dd821e0240f4",
+        "group": "",
+        "name": "button template",
+        "order": 10,
+        "width": 8,
+        "height": 6,
+        "format": "<style>\n  .filled { \n      height: 100% !important;\n\n      padding: 0 !important;\n      margin: 0 !important;\n\n  }\n  .nr-dashboard-template {\n      padding: 0;\n      margin: 0;\n\n  }\n  \n  .rounded {\n  border-radius: 12px 12px 12px 12px;\n\n}\n \n   .bigfont {\n  font-size: 18px;\n  color: white;\n}\n\n   .smallfont {\n  font-size: 12px;\n  color: white;\n}\n  \n</style>\n\n<script>\n$('.vibrate').on('click', function() {\n  navigator.vibrate(100);\n});\n\nfunction restore_bg(x) {\n            $(this).css(\"background-color\", x);\n    };\n\n$('.touched').on('mousedown', function() {\n    \n    var x= $(this).css(\"background-color\");\n    $(this).css(\"background-color\", \"yellow\");\n    \n    setTimeout(restore_bg.bind(this,x),100);\n    navigator.vibrate(80);\n    });\n    \n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1320,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e4d47c711482436",
+        "type": "debug",
+        "z": "1acc5730a82cbfc7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "021703c7316a1e27",
+        "type": "ui_form",
+        "z": "1acc5730a82cbfc7",
+        "name": "Log Window Radio 1",
+        "label": "",
+        "group": "81e8affa751a7503",
+        "order": 3,
+        "width": "18",
+        "height": "5",
+        "options": [
+            {
+                "label": "Call",
+                "value": "call",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Exchange",
+                "value": "exchange",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Comment",
+                "value": "comment",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "call": "",
+            "exchange": "",
+            "comment": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "clear",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "808f2658365d7b53"
+            ]
+        ]
+    },
+    {
+        "id": "808f2658365d7b53",
+        "type": "function",
+        "z": "1acc5730a82cbfc7",
+        "name": "To Upper Case",
+        "func": "if (msg.payload.op != null)\n{\n    msg.payload.op = msg.payload.op.toUpperCase();\n}\n\nif (msg.payload.call != null)\n{\n    msg.payload.call = msg.payload.call.toUpperCase();\n}\n\nif (msg.payload.exchange != null)\n{\n    msg.payload.exchange = msg.payload.exchange.toUpperCase();\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 100,
+        "wires": [
+            [
+                "5e4d47c711482436"
+            ]
+        ]
+    },
+    {
+        "id": "0d4939fd1b443df7",
+        "type": "ui_worldmap",
+        "z": "1acc5730a82cbfc7",
+        "group": "ccc9bbbb7e8b28a7",
+        "order": 1,
+        "width": 18,
+        "height": 12,
+        "name": "Worked QSOs Map Radio 1",
+        "lat": "40.3426",
+        "lon": "-92.8554",
+        "zoom": "4",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/radio_1_qsos",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,OSMH,EsriC,EsriS,EsriT,EsriO,EsriDG,NatGeo,UKOS,OpTop,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 900,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "835468c5369f80a6",
+        "type": "ui_table",
+        "z": "1acc5730a82cbfc7",
+        "group": "cb8b64280b7ce16e",
+        "name": "",
+        "order": 1,
+        "width": 36,
+        "height": 15,
+        "columns": [
+            {
+                "field": "date",
+                "title": "Date",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "time",
+                "title": "Z Time",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "op",
+                "title": "Operator",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "call",
+                "title": "Logged QSO",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "exchange",
+                "title": "Exchange",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "contest",
+                "title": "Contest",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1220,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "06abd170778921c0",
+        "type": "ui_worldmap",
+        "z": "1acc5730a82cbfc7",
+        "group": "e0bfac7798af6224",
+        "order": 1,
+        "width": 18,
+        "height": 12,
+        "name": "Worked QSOs Map Radio 2",
+        "lat": "40.3426",
+        "lon": "-92.8554",
+        "zoom": "4",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/radio_2_qsos",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,OSMH,EsriC,EsriS,EsriT,EsriO,EsriDG,NatGeo,UKOS,OpTop,SW",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 900,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dcc66a0ffc77f407",
+        "type": "inject",
+        "z": "1acc5730a82cbfc7",
+        "name": "Inject Home Icon",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 440,
+        "wires": [
+            [
+                "8b0b0d14d9dda579"
+            ]
+        ]
+    },
+    {
+        "id": "8b0b0d14d9dda579",
+        "type": "function",
+        "z": "1acc5730a82cbfc7",
+        "name": "Inject Home",
+        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nreturn {payload : {name:\"home\", lat:lat, lon:lon, icon:\"fa-home\", layer:\"Home\"}};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "0d4939fd1b443df7",
+                "06abd170778921c0"
+            ]
+        ]
+    },
+    {
+        "id": "ef4061add664155b",
+        "type": "inject",
+        "z": "1acc5730a82cbfc7",
+        "name": "Inject Legend",
+        "props": [
+            {
+                "p": "payload.command",
+                "v": "{ \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \" }",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 560,
+        "y": 480,
+        "wires": [
+            [
+                "0d4939fd1b443df7",
+                "06abd170778921c0"
+            ]
+        ]
+    },
+    {
+        "id": "f3117ed04c2dd2ff",
+        "type": "link in",
+        "z": "1acc5730a82cbfc7",
+        "name": "",
+        "links": [
+            "4320ff577c7cb858"
+        ],
+        "x": 435,
+        "y": 320,
+        "wires": [
+            [
+                "f2c3d24d797e17f4"
+            ]
+        ]
+    },
+    {
+        "id": "f2c3d24d797e17f4",
+        "type": "switch",
+        "z": "1acc5730a82cbfc7",
+        "name": "Station Name",
+        "property": "payload.contactinfo.StationName[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PC1",
+                "vt": "global"
+            },
+            {
+                "t": "eq",
+                "v": "PC2",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [
+                "0d4939fd1b443df7"
+            ],
+            [
+                "06abd170778921c0"
+            ]
+        ]
+    },
+    {
+        "id": "bf0a5331052b7fab",
+        "type": "ui_text",
+        "z": "1acc5730a82cbfc7",
+        "group": "9acb32ddd0144d0f",
+        "order": 1,
+        "width": 4,
+        "height": 2,
+        "name": "Radio 2 Operator WAC",
+        "label": "<font size = 5>Operator",
+        "format": "<font size = 40 font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1460,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "2dce50188ca09ef4",
+        "type": "switch",
+        "z": "1acc5730a82cbfc7",
+        "name": "Station Name",
+        "property": "payload.RadioInfo.StationName[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PC1",
+                "vt": "global"
+            },
+            {
+                "t": "eq",
+                "v": "PC2",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 880,
+        "y": 820,
+        "wires": [
+            [
+                "86950fd353197ba7",
+                "c96642834818d2a9",
+                "1f81f53556dacaa7",
+                "0cd3112afd5d6d5e"
+            ],
+            [
+                "bf0a5331052b7fab",
+                "7dd0c082685c4b0d",
+                "8292be93f0d40e09",
+                "a1c2798293e18138"
+            ]
+        ]
+    },
+    {
+        "id": "86950fd353197ba7",
+        "type": "function",
+        "z": "1acc5730a82cbfc7",
+        "name": "Get Spot Freq",
+        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 820,
+        "wires": [
+            [
+                "0fc4c3d34a12f7a1"
+            ]
+        ]
+    },
+    {
+        "id": "7dd0c082685c4b0d",
+        "type": "function",
+        "z": "1acc5730a82cbfc7",
+        "name": "Get Spot Freq",
+        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 860,
+        "wires": [
+            [
+                "b7e4e85982983c1d"
+            ]
+        ]
+    },
+    {
+        "id": "b7e4e85982983c1d",
+        "type": "ui_text",
+        "z": "1acc5730a82cbfc7",
+        "group": "9acb32ddd0144d0f",
+        "order": 2,
+        "width": 5,
+        "height": 2,
+        "name": "Radio 2 Freq",
+        "label": "<font size = 5>Freq",
+        "format": "<font size = 40 font color={{msg.color}}>{{msg.payload}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1630,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "c96642834818d2a9",
+        "type": "function",
+        "z": "1acc5730a82cbfc7",
+        "name": "Get Status",
+        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 700,
+        "wires": [
+            [
+                "2d3aa2841dfaac62"
+            ]
+        ]
+    },
+    {
+        "id": "633014cf1bf22985",
+        "type": "ui_text",
+        "z": "1acc5730a82cbfc7",
+        "group": "9acb32ddd0144d0f",
+        "order": 4,
+        "width": 3,
+        "height": 2,
+        "name": "Radio 2 Status WAC",
+        "label": "<font size = 5>Status",
+        "format": "<font size = 40 font color={{msg.color}}>{{msg.payload}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1460,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "8292be93f0d40e09",
+        "type": "ui_text",
+        "z": "1acc5730a82cbfc7",
+        "group": "9acb32ddd0144d0f",
+        "order": 3,
+        "width": 3,
+        "height": 2,
+        "name": "Radio 2 Mode WAC",
+        "label": "<font size = 5>Mode",
+        "format": "<font size = 40 font color={{msg.color}}>{{payload.RadioInfo.Mode[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1450,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "a1c2798293e18138",
+        "type": "function",
+        "z": "1acc5730a82cbfc7",
+        "name": "Get Status",
+        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 980,
+        "wires": [
+            [
+                "633014cf1bf22985"
+            ]
+        ]
+    },
+    {
+        "id": "e5c3a3c29d749481",
+        "type": "switch",
+        "z": "1acc5730a82cbfc7",
+        "name": "Radio 1 or 2?",
+        "property": "payload.RadioInfo.RadioNr[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 880,
+        "y": 940,
+        "wires": [
+            [
+                "86950fd353197ba7",
+                "c96642834818d2a9",
+                "1f81f53556dacaa7",
+                "0cd3112afd5d6d5e"
+            ],
+            [
+                "bf0a5331052b7fab",
+                "7dd0c082685c4b0d",
+                "8292be93f0d40e09",
+                "a1c2798293e18138"
+            ]
+        ]
+    },
+    {
+        "id": "2d3aa2841dfaac62",
+        "type": "ui_text",
+        "z": "1acc5730a82cbfc7",
+        "group": "9189f146c1798eef",
+        "order": 4,
+        "width": 3,
+        "height": 2,
+        "name": "Radio 1 Status WAC",
+        "label": "<font size = 5>Status",
+        "format": "<font size = 40 font color={{msg.color}}>{{msg.payload}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1440,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1f81f53556dacaa7",
+        "type": "ui_text",
+        "z": "1acc5730a82cbfc7",
+        "group": "9189f146c1798eef",
+        "order": 1,
+        "width": 4,
+        "height": 2,
+        "name": "Radio 1 Operator WAC",
+        "label": "<font size = 5>Operator",
+        "format": "<font size = 40 font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1440,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "0fc4c3d34a12f7a1",
+        "type": "ui_text",
+        "z": "1acc5730a82cbfc7",
+        "group": "9189f146c1798eef",
+        "order": 2,
+        "width": 5,
+        "height": 2,
+        "name": "Radio 1 Freq WAC",
+        "label": "<font size = 5>Freq",
+        "format": "<font size = 40 font color={{msg.color}}>{{msg.payload}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1650,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "0cd3112afd5d6d5e",
+        "type": "ui_text",
+        "z": "1acc5730a82cbfc7",
+        "group": "9189f146c1798eef",
+        "order": 3,
+        "width": 3,
+        "height": 2,
+        "name": "Radio 1 Mode WAC",
+        "label": "<font size = 5>Mode",
+        "format": "<font size = 40 font color={{msg.color}}>{{payload.RadioInfo.Mode[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1430,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "254a70483d8805dc",
+        "type": "link in",
+        "z": "1acc5730a82cbfc7",
+        "name": "",
+        "links": [
+            "3e86130caa4f1f80"
+        ],
+        "x": 715,
+        "y": 820,
+        "wires": [
+            [
+                "2dce50188ca09ef4"
+            ]
+        ]
+    },
+    {
+        "id": "935c9a16abfdf6b5",
+        "type": "link in",
+        "z": "1acc5730a82cbfc7",
+        "name": "",
+        "links": [
+            "15fa6dac50ec3359"
+        ],
+        "x": 715,
+        "y": 940,
+        "wires": [
+            [
+                "e5c3a3c29d749481"
+            ]
+        ]
+    },
+    {
+        "id": "31bfa8df7d22233b",
+        "type": "debug",
+        "z": "1acc5730a82cbfc7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "0e5779d2ab52e631",
+        "type": "ui_form",
+        "z": "1acc5730a82cbfc7",
+        "name": "Log Windown Radio 2",
+        "label": "",
+        "group": "31fa72ab1ae3828f",
+        "order": 3,
+        "width": "18",
+        "height": "5",
+        "options": [
+            {
+                "label": "Call",
+                "value": "call",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Exchange",
+                "value": "exchange",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Comment",
+                "value": "comment",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "call": "",
+            "exchange": "",
+            "comment": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "clear",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 280,
+        "y": 160,
+        "wires": [
+            [
+                "7c4c1ae36f7719f6"
+            ]
+        ]
+    },
+    {
+        "id": "7c4c1ae36f7719f6",
+        "type": "function",
+        "z": "1acc5730a82cbfc7",
+        "name": "To Upper Case",
+        "func": "if (msg.payload.op != null)\n{\n    msg.payload.op = msg.payload.op.toUpperCase();\n}\n\nif (msg.payload.call != null)\n{\n    msg.payload.call = msg.payload.call.toUpperCase();\n}\n\nif (msg.payload.exchange != null)\n{\n    msg.payload.exchange = msg.payload.exchange.toUpperCase();\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "31bfa8df7d22233b"
+            ]
+        ]
     }
 ]
