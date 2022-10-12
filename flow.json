@@ -275,6 +275,9 @@
                 "wires": [
                     {
                         "id": "a5cb9c557a70448b"
+                    },
+                    {
+                        "id": "b236aa33286d2108"
                     }
                 ]
             }
@@ -370,9 +373,7 @@
             "ea4b0c4d43bbf2e8"
         ],
         "x": 474,
-        "y": 159,
-        "w": 255,
-        "h": 442
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -395,9 +396,7 @@
             "af65ab5234804a9a"
         ],
         "x": 754,
-        "y": 159,
-        "w": 252,
-        "h": 442
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -420,9 +419,7 @@
             "34d492ab50541fdc"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 442
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -446,9 +443,7 @@
             "cd6e0fce6f62b9c5"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 442
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -463,9 +458,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -480,9 +473,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -505,9 +496,7 @@
             "7036aad4276a8131"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 442
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -530,9 +519,7 @@
             "e6ae4df0ca620d74"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 442
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -569,9 +556,7 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679,
-        "w": 2032,
-        "h": 282
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -596,9 +581,7 @@
             "324101084f63a83e"
         ],
         "x": 234,
-        "y": 1019,
-        "w": 622,
-        "h": 262
+        "y": 1019
     },
     {
         "id": "c6a5789101548ba9",
@@ -613,9 +596,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -638,9 +619,7 @@
             "23d467e3525ec5a8"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 281,
-        "h": 442
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -687,7 +666,8 @@
             "03b3b4cadbdf9e34",
             "a7dc412af8237000",
             "8d406adaa39170fb",
-            "3c4c7e4533b41d22"
+            "3c4c7e4533b41d22",
+            "0a5bfb881c2f3bca"
         ],
         "x": 434,
         "y": 879,
@@ -920,9 +900,7 @@
             "925cebb6bacad025"
         ],
         "x": 974,
-        "y": 999,
-        "w": 592,
-        "h": 82
+        "y": 999
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -2971,7 +2949,7 @@
         "id": "716b0a1e81f4c143",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "Set Key & Payload",
+        "name": "Set QRZ Key",
         "rules": [
             {
                 "t": "set",
@@ -2986,7 +2964,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
+        "x": 1030,
         "y": 400,
         "wires": [
             [
@@ -4038,7 +4016,7 @@
         "id": "48ede867c6197d86",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "Set Key & Payload",
+        "name": "Set HamQTH Key",
         "rules": [
             {
                 "t": "set",
@@ -5960,6 +5938,23 @@
         "wires": []
     },
     {
+        "id": "b236aa33286d2108",
+        "type": "debug",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 280,
+        "wires": []
+    },
+    {
         "id": "0178697fb442d801",
         "type": "udp in",
         "z": "407d2b774fe67647",
@@ -6003,7 +5998,8 @@
         "y": 1080,
         "wires": [
             [
-                "622fed8ae8f6a5d2"
+                "622fed8ae8f6a5d2",
+                "0a5bfb881c2f3bca"
             ]
         ]
     },
@@ -6157,16 +6153,6 @@
         ]
     },
     {
-        "id": "414221bb1dc710ba",
-        "type": "comment",
-        "z": "407d2b774fe67647",
-        "name": "Readme First!!!! First Time Install",
-        "info": "Please see the following install document located here : \n\n[https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/INSTALL.md](https://github.com/kylekrieg/N1MM-Node-Red-Dashboard/blob/master/INSTALL.md)",
-        "x": 130,
-        "y": 360,
-        "wires": []
-    },
-    {
         "id": "aec65d796aed9cee",
         "type": "link out",
         "z": "407d2b774fe67647",
@@ -6263,8 +6249,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 1140,
+        "x": 1080,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -8100,7 +8086,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Label +  Add Multis + Exchange",
-        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10260,6 +10246,24 @@
         "statusType": "auto",
         "x": 1400,
         "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "0a5bfb881c2f3bca",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 1000,
         "wires": []
     },
     {
@@ -24190,7 +24194,9 @@
         "x": 1600,
         "y": 400,
         "wires": [
-            []
+            [
+                "0cadcaf22f887a0e"
+            ]
         ]
     },
     {
@@ -24341,7 +24347,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "DB Replace",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24358,7 +24364,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "DB Delete",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -25191,6 +25197,23 @@
         "name": "",
         "x": 730,
         "y": 480,
+        "wires": []
+    },
+    {
+        "id": "0cadcaf22f887a0e",
+        "type": "debug",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1860,
+        "y": 380,
         "wires": []
     },
     {
@@ -27277,6 +27300,11 @@
             {
                 "label": "Mode Only",
                 "value": "modeonly",
+                "type": "str"
+            },
+            {
+                "label": "Call Only",
+                "value": "callonly",
                 "type": "str"
             }
         ],
