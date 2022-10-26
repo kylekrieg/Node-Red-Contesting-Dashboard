@@ -104,6 +104,14 @@
         "env": []
     },
     {
+        "id": "8a7fcbcd28d37f15",
+        "type": "tab",
+        "label": "Test_N3FJP",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c967abe5be484ee6",
         "type": "subflow",
         "name": "1Hr Rate Color",
@@ -371,9 +379,7 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159,
-        "w": 255,
-        "h": 482
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -397,9 +403,7 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -423,9 +427,7 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 482
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -450,9 +452,7 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 482
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -467,9 +467,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -484,9 +482,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -510,9 +506,7 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -536,9 +530,7 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -575,9 +567,7 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679,
-        "w": 2032,
-        "h": 282
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -602,9 +592,7 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019,
-        "w": 632,
-        "h": 262
+        "y": 1019
     },
     {
         "id": "c6a5789101548ba9",
@@ -619,9 +607,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -645,9 +631,7 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 282,
-        "h": 482
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -697,8 +681,8 @@
             "3c4c7e4533b41d22",
             "0a5bfb881c2f3bca"
         ],
-        "x": 434,
-        "y": 879,
+        "x": 274,
+        "y": 859,
         "w": 1832,
         "h": 462
     },
@@ -779,7 +763,8 @@
             "f6305d04b2aeb44c",
             "6351dc9d0c3ec453",
             "eb5d10e3d8e57f2d",
-            "e4e19daf40493fb9"
+            "e4e19daf40493fb9",
+            "6176c210be856fa7"
         ],
         "x": 14,
         "y": 1459,
@@ -5932,8 +5917,8 @@
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 520,
-        "y": 1080,
+        "x": 360,
+        "y": 1060,
         "wires": [
             [
                 "1e6f9143a325a577"
@@ -5947,8 +5932,8 @@
         "g": "4f4b9f0c82968b60",
         "name": "UDP Score XML",
         "info": "",
-        "x": 640,
-        "y": 1040,
+        "x": 480,
+        "y": 1020,
         "wires": []
     },
     {
@@ -5960,8 +5945,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 810,
-        "y": 1080,
+        "x": 650,
+        "y": 1060,
         "wires": [
             [
                 "622fed8ae8f6a5d2",
@@ -5983,8 +5968,8 @@
         "format": "<font color={{msg.color}}>{{payload.dynamicresults.score[0]}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1990,
-        "y": 960,
+        "x": 1830,
+        "y": 940,
         "wires": []
     },
     {
@@ -6001,8 +5986,8 @@
         "format": "<font color={{msg.color}}>{{payload.totalmults}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2170,
-        "y": 1160,
+        "x": 2010,
+        "y": 1140,
         "wires": []
     },
     {
@@ -6019,8 +6004,8 @@
         "format": "<font color={{msg.color}}>{{payload.totalnoqsos}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2170,
-        "y": 1060,
+        "x": 2010,
+        "y": 1040,
         "wires": []
     },
     {
@@ -6035,8 +6020,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1460,
-        "y": 1060,
+        "x": 1300,
+        "y": 1040,
         "wires": [
             [
                 "3ba4521f148eac8c"
@@ -6057,8 +6042,8 @@
         "format": "<font color={{msg.color}}>{{payload.totalpoints}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2170,
-        "y": 1260,
+        "x": 2010,
+        "y": 1240,
         "wires": []
     },
     {
@@ -6073,8 +6058,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 1260,
+        "x": 1290,
+        "y": 1240,
         "wires": [
             [
                 "03b3b4cadbdf9e34"
@@ -6095,8 +6080,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1480,
-        "y": 920,
+        "x": 1320,
+        "y": 900,
         "wires": []
     },
     {
@@ -6110,8 +6095,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 670,
-        "y": 1080,
+        "x": 510,
+        "y": 1060,
         "wires": [
             [
                 "d2cdb7808cce0e9c"
@@ -6128,8 +6113,8 @@
         "links": [
             "9ac6b8134108e3b3"
         ],
-        "x": 1295,
-        "y": 980,
+        "x": 1135,
+        "y": 960,
         "wires": []
     },
     {
@@ -6150,8 +6135,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1210,
-        "y": 1080,
+        "x": 1050,
+        "y": 1060,
         "wires": [
             [
                 "31d7202b2b50131d",
@@ -6195,8 +6180,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1460,
-        "y": 1160,
+        "x": 1300,
+        "y": 1140,
         "wires": [
             [
                 "ba53f01105c0383d"
@@ -6215,8 +6200,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
-        "y": 1260,
+        "x": 540,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -6237,8 +6222,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1010,
-        "y": 1080,
+        "x": 850,
+        "y": 1060,
         "wires": [
             [
                 "97ed253958c48009"
@@ -6268,8 +6253,8 @@
         "septopics": true,
         "property": "payload.dynamicresults.score[0]",
         "topi": "topic",
-        "x": 1480,
-        "y": 960,
+        "x": 1320,
+        "y": 940,
         "wires": [
             [
                 "7d8436d8a3a5422b",
@@ -6295,8 +6280,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1660,
-        "y": 1000,
+        "x": 1500,
+        "y": 980,
         "wires": [
             [
                 "49c503a250b35428"
@@ -6323,8 +6308,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1730,
-        "y": 960,
+        "x": 1570,
+        "y": 940,
         "wires": [
             [
                 "2cdd5ffb3ac01f73"
@@ -6351,8 +6336,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1810,
-        "y": 1000,
+        "x": 1650,
+        "y": 980,
         "wires": [
             [
                 "2cdd5ffb3ac01f73"
@@ -6372,8 +6357,8 @@
         "septopics": true,
         "property": "payload.totalnoqsos",
         "topi": "topic",
-        "x": 1670,
-        "y": 1060,
+        "x": 1510,
+        "y": 1040,
         "wires": [
             [
                 "e21c45667c4cb46a",
@@ -6399,8 +6384,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1840,
-        "y": 1100,
+        "x": 1680,
+        "y": 1080,
         "wires": [
             [
                 "a08bd99d57f55d64"
@@ -6427,8 +6412,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1850,
-        "y": 1060,
+        "x": 1690,
+        "y": 1040,
         "wires": [
             [
                 "9b7d271988034596"
@@ -6455,8 +6440,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 1100,
+        "x": 1830,
+        "y": 1080,
         "wires": [
             [
                 "9b7d271988034596"
@@ -6476,8 +6461,8 @@
         "septopics": true,
         "property": "payload.totalmults",
         "topi": "topic",
-        "x": 1660,
-        "y": 1160,
+        "x": 1500,
+        "y": 1140,
         "wires": [
             [
                 "91decfc57d48218c",
@@ -6503,8 +6488,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1820,
-        "y": 1200,
+        "x": 1660,
+        "y": 1180,
         "wires": [
             [
                 "eecdc889bd3900f6"
@@ -6531,8 +6516,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1830,
-        "y": 1160,
+        "x": 1670,
+        "y": 1140,
         "wires": [
             [
                 "289442fe7c0d95f9"
@@ -6559,8 +6544,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1970,
-        "y": 1200,
+        "x": 1810,
+        "y": 1180,
         "wires": [
             [
                 "289442fe7c0d95f9"
@@ -6580,8 +6565,8 @@
         "septopics": true,
         "property": "payload.totalpoints",
         "topi": "topic",
-        "x": 1670,
-        "y": 1260,
+        "x": 1510,
+        "y": 1240,
         "wires": [
             [
                 "8d406adaa39170fb",
@@ -6607,8 +6592,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1840,
-        "y": 1300,
+        "x": 1680,
+        "y": 1280,
         "wires": [
             [
                 "3c4c7e4533b41d22"
@@ -6635,8 +6620,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1850,
-        "y": 1260,
+        "x": 1690,
+        "y": 1240,
         "wires": [
             [
                 "ff83b125cd4af97b"
@@ -6663,8 +6648,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 1300,
+        "x": 1830,
+        "y": 1280,
         "wires": [
             [
                 "ff83b125cd4af97b"
@@ -10209,7 +10194,7 @@
         "y": 1800,
         "wires": []
     },
-    {
+    {    
         "id": "0a5bfb881c2f3bca",
         "type": "debug",
         "z": "407d2b774fe67647",
@@ -10226,6 +10211,23 @@
         "x": 950,
         "y": 1000,
         "wires": []
+    },
+    {
+        "id": "6176c210be856fa7",
+        "type": "link in",
+        "z": "407d2b774fe67647",
+        "g": "81692a3cb68d6cde",
+        "name": "Radio_N3FJP",
+        "links": [
+            "0820988fa43b8a4b"
+        ],
+        "x": 125,
+        "y": 1800,
+        "wires": [
+            [
+                "bd61ab676c6f7232"
+            ]
+        ]
     },
     {
         "id": "4079239a4fd5c11c",
@@ -23109,11 +23111,13 @@
         "id": "dffc242.cc36fd8",
         "type": "exec",
         "z": "db5600520bb7f279",
+        "d": true,
         "command": "vcgencmd measure_temp",
         "addpay": false,
         "append": "",
         "useSpawn": "",
         "timer": "",
+        "winHide": false,
         "name": "RPi Temp.",
         "x": 490,
         "y": 320,
@@ -25176,6 +25180,22 @@
         "x": 1860,
         "y": 380,
         "wires": []
+    },
+    {    
+        "id": "21fe16ca5cbfc06b",
+        "type": "link in",
+        "z": "1c66bd27e16a3fec",
+        "name": "Score_N3FJP",
+        "links": [
+            "47245c8acbda8034"
+        ],
+        "x": 235,
+        "y": 420,
+        "wires": [
+            [
+                "8d88aedc41864cf8"
+            ]
+        ]
     },
     {
         "id": "185defa19c9fea72",
@@ -36755,8 +36775,8 @@
         "wires": [
             []
         ]
-        },
-        {
+    },
+    {
         "id": "925cebb6bacad025",
         "type": "ui_template",
         "z": "b73cc2bb5f424b69",
@@ -36767,7 +36787,7 @@
         "width": 8,
         "height": 6,
         "format": "<style>\n  .filled { \n      height: 100% !important;\n\n      padding: 0 !important;\n      margin: 0 !important;\n\n  }\n  .nr-dashboard-template {\n      padding: 0;\n      margin: 0;\n\n  }\n  \n  .rounded {\n  border-radius: 12px 12px 12px 12px;\n\n}\n \n   .bigfont {\n  font-size: 18px;\n  color: white;\n}\n\n   .smallfont {\n  font-size: 12px;\n  color: white;\n}\n  \n</style>\n\n<script>\n$('.vibrate').on('click', function() {\n  navigator.vibrate(100);\n});\n\nfunction restore_bg(x) {\n            $(this).css(\"background-color\", x);\n    };\n\n$('.touched').on('mousedown', function() {\n    \n    var x= $(this).css(\"background-color\");\n    $(this).css(\"background-color\", \"yellow\");\n    \n    setTimeout(restore_bg.bind(this,x),100);\n    navigator.vibrate(80);\n    });\n    \n</script>",
-                "storeOutMessages": true,
+        "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "global",
@@ -36780,12 +36800,6 @@
             ]
         ]
         },
-        "x": 1320,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
     {
         "id": "5e4d47c711482436",
         "type": "debug",
@@ -36871,10 +36885,27 @@
         "y": 100,
         "wires": [
             [
-                "5e4d47c711482436"
+                "5e4d47c711482436"            ]
             ]
-        ]
-    },
+        },
+    {
+        "id": "e4eed7024d3622a5",
+        "type": "function",
+        "z": "8a7fcbcd28d37f15",
+        "name": "UTF8",
+        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 400,
+        "wires": [
+            [
+                "30e1a46d12dc5f35"            ]
+            ]
+        },
     {
         "id": "0d4939fd1b443df7",
         "type": "ui_worldmap",
@@ -37023,10 +37054,48 @@
         "wires": []
     },
     {
-        "id": "dcc66a0ffc77f407",
+        "id": "1ebfe3ebc5bf8590",
+        "type": "debug",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "202712a1bbc4f0f5",
+        "type": "tcp request",
+        "z": "8a7fcbcd28d37f15",
+        "name": "N3FJP TCP Connection",
+        "server": "10.25.0.30",
+        "port": "1100",
+        "out": "sit",
+        "ret": "string",
+        "splitc": " ",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 1030,
+        "y": 340,
+        "wires": [
+            [
+                "85c1dc7164266f2e"
+            ]
+        ]
+    },
+    {
+        "id": "cf6f7be54da33e10",
         "type": "inject",
-        "z": "1acc5730a82cbfc7",
-        "name": "Inject Home Icon",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
         "props": [
             {
                 "p": "payload"
@@ -37036,7 +37105,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "5",
+        "repeat": "25",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -37051,7 +37120,37 @@
             ]
         ]
     },
+
     {
+        "id": "dcc66a0ffc77f407",
+        "type": "inject",
+        "z": "1acc5730a82cbfc7",
+        "name": "Inject Home Icon",        
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5", 
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "47c8c03f861b6051"
+            ]
+        ]
+    },
+    {  
         "id": "8b0b0d14d9dda579",
         "type": "function",
         "z": "1acc5730a82cbfc7",
@@ -37067,7 +37166,130 @@
         "wires": [
             [
                 "0d4939fd1b443df7",
-                "06abd170778921c0"
+                "06abd170778921c0" 
+            ]
+            ]
+        },
+    {
+        "id": "b9f582c9e21d35ee",
+        "type": "template",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RadioInfo>\n    <app>N3FJP</app>\n    <StationName></StationName>\n    <RadioNr></RadioNr>\n    <Freq>{{payload.ENTEREVENT.FREQ}}</Freq>\n    <TXFreq>{{payload.ENTEREVENT.FREQ}}</TXFreq>\n    <Mode>{{payload.ENTEREVENT.MODE}}</Mode>\n    <OpCall></OpCall>\n    <IsRunning></IsRunning>\n    <FocusEntry></FocusEntry>\n    <EntryWindowHwnd></EntryWindowHwnd>\n    <Antenna></Antenna>\n    <Rotors></Rotors>\n    <FocusRadioNr></FocusRadioNr>\n    <IsStereo></IsStereo>\n    <IsSplit></IsSplit>\n    <ActiveRadioNr></ActiveRadioNr>\n    <IsTransmitting></IsTransmitting>\n    <FunctionKeyCaption>{{flow.radiomacro}}</FunctionKeyCaption>\n    <RadioName></RadioName>\n    <AuxAntSelected>-</AuxAntSelected>\n    <AuxAntSelectedName></AuxAntSelectedName>\n    <IsConnected></IsConnected>\n</RadioInfo>",
+        "output": "str",
+        "x": 1860,
+        "y": 300,
+        "wires": [
+            [
+                "5c3095bc3a4ea9de"
+            ]
+        ]
+    },
+    {
+        "id": "053d751488b839b5",
+        "type": "template",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<contactinfo>\n    <app>N3FJP</app>\n    <contestname></contestname>\n    <contestnr></contestnr>\n    <timestamp>{{payload.ENTEREVENT.QSO_DATE}}_{{payload.ENTEREVENT.TIME_ON}}</timestamp>\n    <mycall></mycall>\n    <band>{{payload.ENTEREVENT.BAND}}</band>\n    <rxfreq></rxfreq>\n    <txfreq></txfreq>\n    <operator></operator>\n    <mode>{{payload.ENTEREVENT.MODE}}</mode>\n    <call>{{payload.ENTEREVENT.CALL}}</call>\n    <countryprefix></countryprefix>\n    <wpxprefix></wpxprefix>\n    <stationprefix></stationprefix>\n    <continent>{{payload.ENTEREVENT.CONT}}</continent>\n    <snt></snt>\n    <sntnr></sntnr>\n    <rcv></rcv>\n    <rcvnr></rcvnr>\n    <gridsquare></gridsquare>\n    <exchangel></exchangel>\n    <section></section>\n    <comment></comment>\n    <qth></qth>\n    <name></name>\n    <power></power>\n    <misctext></misctext>\n    <zone></zone>\n    <prec></prec>\n    <ck></ck>\n    <ismultiplierl></ismultiplierl>\n    <ismultiplier2></ismultiplier2>\n    <ismultiplier3></ismultiplier3>\n    <points></points>\n    <radionr></radionr>\n    <run1run2></run1run2>\n    <RoverLocation></RoverLocation>\n    <RadioInterfaced></RadioInterfaced>\n    <NetworkedCompNr></NetworkedCompNr>\n    <IsOriginal></IsOriginal>\n    <NetBiosName></NetBiosName>\n    <IsRunQSO></IsRunQSO>\n    <StationName></StationName>\n    <ID></ID>\n    <IsClaimedQSO>TRUE</IsClaimedQSO>\n</contactinfo>\n",
+        "output": "str",
+        "x": 1860,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0db757f6483493e8",
+        "type": "switch",
+        "z": "8a7fcbcd28d37f15",
+        "name": "Split for Dashboard Topics",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "READBMFRESPONSE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KEYDOWN",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ENTEREVENT",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "QSORATERESPONSE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "QSOCOUNTRESPONSE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "CALLTABEVENT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 1570,
+        "y": 360,
+        "wires": [
+            [
+                "b9f582c9e21d35ee"
+            ],
+            [
+                "0897917f366ec6b0"
+            ],
+            [
+                "053d751488b839b5"
+            ],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "Radio",
+            "Macros",
+            "Contacts",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": "5c3095bc3a4ea9de",
+        "type": "function",
+        "z": "8a7fcbcd28d37f15",
+        "name": "CLEAR MACRO",
+        "func": "msg.payload;\nflow.radiomacro=\"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2040,
+        "y": 300,
+        "wires": [
+            [
+                "0820988fa43b8a4b",
+                "050a55975cb170be"
             ]
         ]
     },
@@ -37080,14 +37302,12 @@
             {
                 "p": "payload.command",
                 "v": "{ \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \" }",
-                "vt": "json"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
+                "vt": "json"            },
+                {
+                    "p": "topic",
+                    "vt": "str"
+                }
+            ],        "repeat": "10",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -37097,7 +37317,95 @@
         "wires": [
             [
                 "0d4939fd1b443df7",
-                "06abd170778921c0"
+                "06abd170778921c0"            ]
+            ]
+        },
+    {
+        "id": "0820988fa43b8a4b",
+        "type": "link out",
+        "z": "8a7fcbcd28d37f15",
+        "name": "Radio_N3FJP",
+        "mode": "link",
+        "links": [
+            "6176c210be856fa7"
+        ],
+        "x": 2440,
+        "y": 300,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "47245c8acbda8034",
+        "type": "link out",
+        "z": "8a7fcbcd28d37f15",
+        "name": "N3FJP_ Contacts",
+        "mode": "link",
+        "links": [
+            "21fe16ca5cbfc06b"
+        ],
+        "x": 2450,
+        "y": 460,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "050a55975cb170be",
+        "type": "debug",
+        "z": "8a7fcbcd28d37f15",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2360,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "171b5f61e95c8f53",
+        "type": "debug",
+        "z": "8a7fcbcd28d37f15",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1940,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7f2aeaade7ae7f0d",
+        "type": "inject",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "<CMD><OPINFO></CMD>",
+        "payloadType": "str",
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "ce908f1c75618192"
             ]
         ]
     },
@@ -37146,7 +37454,55 @@
                 "0d4939fd1b443df7"
             ],
             [
-                "06abd170778921c0"
+                "06abd170778921c0"            ]
+            ]
+        },
+    {
+        "id": "ce908f1c75618192",
+        "type": "tcp out",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "host": "10.25.0.30",
+        "port": "1100",
+        "beserver": "client",
+        "base64": false,
+        "end": true,
+        "tls": "",
+        "x": 900,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4937b51a0bc9358e",
+        "type": "string",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "prop": "payload",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 1430,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85c1dc7164266f2e",
+        "type": "function",
+        "z": "8a7fcbcd28d37f15",
+        "name": "Reformat all to XML",
+        "func": "var backup=msg.payload;\nmsg.payload=msg.payload.replace(\"<CMD>\",\"\");\nvar right_mark=msg.payload.search(\">\");\nmsg.topic=msg.payload.substring(1,msg.payload.search(\">\"));\nmsg.payload=msg.payload.replace(\"CMD\",msg.topic);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 340,
+        "wires": [
+            [
+                "e4eed7024d3622a5"
             ]
         ]
     },
@@ -37557,7 +37913,101 @@
         "y": 160,
         "wires": [
             [
-                "31bfa8df7d22233b"
+                "31bfa8df7d22233b"            ]
+            ]
+        }
+    {
+        "id": "30e1a46d12dc5f35",
+        "type": "xml",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1370,
+        "y": 400,
+        "wires": [
+            [
+                "0db757f6483493e8",
+                "1ebfe3ebc5bf8590"
+            ]
+        ]
+    },
+    {
+        "id": "5bbd05ce44ff7e7a",
+        "type": "template",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<contactinfo>\n    <app>N3FJP</app>\n    <contestname></contestname>\n    <contestnr></contestnr>\n    <timestamp>{{payload.ENTEREVENT.QSO_DATE}}_{{payload.ENTEREVENT.TIME_ON}}</timestamp>\n    <mycall></mycall>\n    <band>{{payload.ENTEREVENT.BAND}}</band>\n    <rxfreq></rxfreq>\n    <txfreq></txfreq>\n    <operator></operator>\n    <mode>{{payload.ENTEREVENT.MODE}}</mode>\n    <call>{{payload.ENTEREVENT.CALL}}</call>\n    <countryprefix></countryprefix>\n    <wpxprefix></wpxprefix>\n    <stationprefix></stationprefix>\n    <continent>{{payload.ENTEREVENT.CONT}}</continent>\n    <snt></snt>\n    <sntnr></sntnr>\n    <rcv></rcv>\n    <rcvnr></rcvnr>\n    <gridsquare></gridsquare>\n    <exchangel></exchangel>\n    <section></section>\n    <comment></comment>\n    <qth></qth>\n    <name></name>\n    <power></power>\n    <misctext></misctext>\n    <zone></zone>\n    <prec></prec>\n    <ck></ck>\n    <ismultiplierl></ismultiplierl>\n    <ismultiplier2></ismultiplier2>\n    <ismultiplier3></ismultiplier3>\n    <points></points>\n    <radionr></radionr>\n    <run1run2></run1run2>\n    <RoverLocation></RoverLocation>\n    <RadioInterfaced></RadioInterfaced>\n    <NetworkedCompNr></NetworkedCompNr>\n    <IsOriginal></IsOriginal>\n    <NetBiosName></NetBiosName>\n    <IsRunQSO></IsRunQSO>\n    <StationName></StationName>\n    <ID></ID>\n    <IsClaimedQSO>TRUE</IsClaimedQSO>\n</contactinfo>\n",
+        "output": "str",
+        "x": 1860,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0897917f366ec6b0",
+        "type": "function",
+        "z": "8a7fcbcd28d37f15",
+        "name": "Store Macro",
+        "func": "flow.radiomacro=msg.payload.KEYDOWN.KEYCODE[0];\nmsg.payload=\"<CMD><READBMF></CMD>\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1870,
+        "y": 340,
+        "wires": [
+            [
+                "62eb0aa317a6c1c8"
+            ]
+        ]
+    },
+    {
+        "id": "62eb0aa317a6c1c8",
+        "type": "tcp out",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "host": "10.25.0.30",
+        "port": "1100",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 2060,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "47c8c03f861b6051",
+        "type": "change",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "N3FJP",
+                "pt": "flow",
+                "to": "10.25.0.30",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 200,
+        "wires": [
+            [
+                "202712a1bbc4f0f5"
             ]
         ]
     }
