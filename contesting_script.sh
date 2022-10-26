@@ -129,6 +129,7 @@ cd ~/.node-red/projects/Node-Red-Contesting-Dashboard
 else 
 cd ~/.node-red/projects/Node-Red-Contesting-Dashboard
 git config pull.rebase true
+git restore flow.json
 git pull &> /dev/null
 fi
 echo "  Y" 
