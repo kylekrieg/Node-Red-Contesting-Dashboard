@@ -275,9 +275,6 @@
                 "wires": [
                     {
                         "id": "a5cb9c557a70448b"
-                    },
-                    {
-                        "id": "b236aa33286d2108"
                     }
                 ]
             }
@@ -2737,9 +2734,9 @@
         "z": "bedd4acdc0e27dab",
         "name": "QSO Hamdb Lookup",
         "method": "GET",
-        "ret": "obj",
+        "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://api.hamdb.org/{{payload.call}}/json/nodered",
+        "url": "http://api.hamdb.org/{{{payload.call}}}/json/nodered",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2760,24 +2757,31 @@
         "name": "",
         "rules": [
             {
-                "t": "move",
-                "p": "payload.hamdb.callsign.call",
+                "t": "set",
+                "p": "payload.name",
                 "pt": "msg",
-                "to": "payload.name",
+                "to": "payload.hamdb.callsign.call",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.lat",
+                "pt": "msg",
+                "to": "payload.hamdb.callsign.lat",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.lon",
+                "pt": "msg",
+                "to": "payload.hamdb.callsign.lon",
                 "tot": "msg"
             },
             {
                 "t": "move",
-                "p": "payload.hamdb.callsign.lat",
+                "p": "payload.hamdb",
                 "pt": "msg",
-                "to": "payload.lat",
-                "tot": "msg"
-            },
-            {
-                "t": "move",
-                "p": "payload.hamdb.callsign.lon",
-                "pt": "msg",
-                "to": "payload.lon",
+                "to": "hamdb",
                 "tot": "msg"
             },
             {
@@ -2840,7 +2844,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1720,
+        "x": 1690,
         "y": 80,
         "wires": [
             [
@@ -3017,13 +3021,16 @@
                 "c931e624363ed9cd"
             ],
             [
-                "48307e071458f6a1"
+                "48307e071458f6a1",
+                "1cbf491f09f5b57e"
             ],
             [
-                "48307e071458f6a1"
+                "48307e071458f6a1",
+                "1cbf491f09f5b57e"
             ],
             [
-                "020edd3ba15d0ea4"
+                "020edd3ba15d0ea4",
+                "1cbf491f09f5b57e"
             ]
         ]
     },
@@ -3083,24 +3090,24 @@
         "name": "",
         "rules": [
             {
-                "t": "move",
-                "p": "payload.QRZDatabase.Callsign[0].call[0]",
+                "t": "set",
+                "p": "payload.name",
                 "pt": "msg",
-                "to": "payload.name",
+                "to": "payload.QRZDatabase.Callsign[0].call[0]",
                 "tot": "msg"
             },
             {
-                "t": "move",
-                "p": "payload.QRZDatabase.Callsign[0].lat[0]",
+                "t": "set",
+                "p": "payload.lat",
                 "pt": "msg",
-                "to": "payload.lat",
+                "to": "payload.QRZDatabase.Callsign[0].lat[0]",
                 "tot": "msg"
             },
             {
-                "t": "move",
-                "p": "payload.QRZDatabase.Callsign[0].lon[0]",
+                "t": "set",
+                "p": "payload.lon",
                 "pt": "msg",
-                "to": "payload.lon",
+                "to": "payload.QRZDatabase.Callsign[0].lon[0]",
                 "tot": "msg"
             },
             {
@@ -4122,13 +4129,16 @@
                 "2f56fea52ed41388"
             ],
             [
-                "a1369cd58e8ea395"
+                "a1369cd58e8ea395",
+                "7f886053cdd16a70"
             ],
             [
-                "a1369cd58e8ea395"
+                "a1369cd58e8ea395",
+                "7f886053cdd16a70"
             ],
             [
-                "6153738ced412e5b"
+                "6153738ced412e5b",
+                "7f886053cdd16a70"
             ]
         ]
     },
@@ -4146,17 +4156,17 @@
                 "tot": "msg"
             },
             {
-                "t": "move",
-                "p": "payload.HamQTH.search[0].latitude[0]",
+                "t": "set",
+                "p": "payload.lat",
                 "pt": "msg",
-                "to": "payload.lat",
+                "to": "payload.HamQTH.search[0].latitude[0]",
                 "tot": "msg"
             },
             {
-                "t": "move",
-                "p": "payload.HamQTH.search[0].longitude[0]",
+                "t": "set",
+                "p": "payload.lon",
                 "pt": "msg",
-                "to": "payload.lon",
+                "to": "payload.HamQTH.search[0].longitude[0]",
                 "tot": "msg"
             },
             {
@@ -4672,8 +4682,8 @@
         "links": [
             "60dd7391ca919902"
         ],
-        "x": 735,
-        "y": 1020,
+        "x": 875,
+        "y": 980,
         "wires": [
             [
                 "48ede867c6197d86"
@@ -5938,20 +5948,46 @@
         "wires": []
     },
     {
-        "id": "b236aa33286d2108",
-        "type": "debug",
+        "id": "1cbf491f09f5b57e",
+        "type": "link out",
         "z": "bedd4acdc0e27dab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 280,
+        "name": "QRZ Error OUT",
+        "mode": "link",
+        "links": [
+            "2f0871ab61146734"
+        ],
+        "x": 1735,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2f0871ab61146734",
+        "type": "link in",
+        "z": "bedd4acdc0e27dab",
+        "name": "From DB Call IN",
+        "links": [
+            "1cbf491f09f5b57e",
+            "7f886053cdd16a70"
+        ],
+        "x": 3305,
+        "y": 320,
+        "wires": [
+            [
+                "3762f0280985ea10"
+            ]
+        ]
+    },
+    {
+        "id": "7f886053cdd16a70",
+        "type": "link out",
+        "z": "bedd4acdc0e27dab",
+        "name": "HamQTH DB Error OUT",
+        "mode": "link",
+        "links": [
+            "2f0871ab61146734"
+        ],
+        "x": 1785,
+        "y": 960,
         "wires": []
     },
     {
@@ -8086,13 +8122,13 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Label +  Add Multis + Exchange",
-        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\ndelete msg.payload.ID\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n    msg.payload.distance_km = 0;\n    msg.payload.distance_miles = 0;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1030,
+        "x": 1150,
         "y": 340,
         "wires": [
             [
@@ -8669,7 +8705,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "",
-        "x": 440,
+        "x": 680,
         "y": 340,
         "wires": [
             [
@@ -8693,7 +8729,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
+        "x": 770,
         "y": 280,
         "wires": []
     },
@@ -8922,7 +8958,7 @@
             "b77db70e05f8b1d9"
         ],
         "uncaught": false,
-        "x": 2100,
+        "x": 2080,
         "y": 740,
         "wires": [
             [
@@ -8961,8 +8997,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
-        "y": 380,
+        "x": 450,
+        "y": 500,
         "wires": []
     },
     {
@@ -9079,7 +9115,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 750,
+        "x": 890,
         "y": 340,
         "wires": [
             [
@@ -24347,7 +24383,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "DB Replace",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -24364,7 +24400,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "DB Delete",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -25204,7 +25240,7 @@
         "type": "debug",
         "z": "1c66bd27e16a3fec",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -26437,7 +26473,7 @@
         "className": "",
         "topic": "",
         "name": "Check QRZ Username & Password",
-        "x": 1560,
+        "x": 1580,
         "y": 1320,
         "wires": [
             []
@@ -26504,7 +26540,7 @@
         "className": "",
         "topic": "",
         "name": "Correct QRZ Username & Password",
-        "x": 1550,
+        "x": 1590,
         "y": 1360,
         "wires": [
             []
@@ -27365,8 +27401,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 2300,
-        "y": 1400,
+        "x": 2540,
+        "y": 1380,
         "wires": [
             [
                 "851fa5920b751886"
@@ -27384,8 +27420,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2490,
-        "y": 1400,
+        "x": 2730,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -27411,8 +27447,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1850,
-        "y": 1400,
+        "x": 2090,
+        "y": 1380,
         "wires": [
             [
                 "289a920a73d6b6e2"
@@ -28263,8 +28299,8 @@
         "z": "204548a488401a1b",
         "name": "Speak Multiplier On/Off",
         "info": "",
-        "x": 2000,
-        "y": 1340,
+        "x": 2240,
+        "y": 1320,
         "wires": []
     },
     {
@@ -28328,7 +28364,7 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 2010,
+        "x": 2230,
         "y": 1660,
         "wires": [
             [
@@ -28390,7 +28426,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2740,
+        "x": 2960,
         "y": 1660,
         "wires": [
             []
@@ -28402,7 +28438,7 @@
         "z": "204548a488401a1b",
         "name": "Online Scoreboard Call Entry",
         "info": "",
-        "x": 2000,
+        "x": 2220,
         "y": 1560,
         "wires": []
     },
@@ -28615,7 +28651,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2290,
+        "x": 2510,
         "y": 1660,
         "wires": [
             [
@@ -28643,7 +28679,7 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2060,
+        "x": 2280,
         "y": 1620,
         "wires": [
             [
@@ -28662,7 +28698,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2290,
+        "x": 2510,
         "y": 1620,
         "wires": [
             [
@@ -28961,7 +28997,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2520,
+        "x": 2740,
         "y": 1660,
         "wires": [
             [
@@ -28978,7 +29014,7 @@
         "links": [
             "113bf358539c5697"
         ],
-        "x": 2495,
+        "x": 2715,
         "y": 1620,
         "wires": []
     },
@@ -30066,8 +30102,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2020,
-        "y": 1400,
+        "x": 2260,
+        "y": 1380,
         "wires": [
             [
                 "4a7ab19bd2fdaf09"
