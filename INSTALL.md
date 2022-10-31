@@ -41,8 +41,13 @@ Score to aaa.bbb.ccc.ddd:12062
 External Callsign Lookup to aaa.bbb.ccc.ddd:12061
 ```
 
-**IMPORTANT** only enable the socre checkbox on the ```MASTER N1MM STATION!!!!```.  Only 1 computer should be sending score data to the Node Red server.
-
+**IMPORTANT** when in networking mode:
+1) ONLY enable the socre checkbox on the ```MASTER N1MM STATION!!!!```.  Only 1 computer should be sending score data to the Node Red server.  
+2) For contacts either do 1 of the following so duplicate QSO's are not logged to the database
+    2A) Check the Contacts box to send QSO data to the dashboard from each networked PC or
+    2B) Uncheck the Contacts checkbox on all networked computers AND check the Contacts ALL COMPUTERS on the MASTER N1MM station
+    
+    
 ### TR4W Configuration
 Information on configuring TR4W to send the UDP broadcasts on the correct ports is available on the TR4W GitHub Wiki here: https://github.com/n4af/TR4W/wiki/Configuring-TR4W-for-Node-Red-Contesting-Dashboard
 
