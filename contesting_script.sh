@@ -160,7 +160,7 @@ EOL
 
 echo "  Y"
 fi
-sudo systemctl restart nodered.service
+sudo systemctl enable nodered.service
 HOSTIP=`hostname -I | cut -d ' ' -f 1`
     if [ "$HOSTIP" = "" ]; then
         HOSTIP="127.0.0.1"
