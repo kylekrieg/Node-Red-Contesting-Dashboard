@@ -769,12 +769,15 @@
             "8804affd65082b4f",
             "6c1de6ee7473fac9",
             "fdfd9133ae52097f",
-            "f2b91a5dc28385a9"
+            "f2b91a5dc28385a9",
+            "b0d18fa59cc49c12",
+            "0d35873cadebf97f",
+            "aa3604030c538a2a"
         ],
         "x": 274,
-        "y": 19,
+        "y": -1,
         "w": 2232,
-        "h": 802
+        "h": 822
     },
     {
         "id": "26cf0678322d1bb6",
@@ -8097,7 +8100,7 @@
         "props": [
             {
                 "p": "payload.command",
-                "v": "{ \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \" }",
+                "v": "{\"legend\":\"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \"}",
                 "vt": "json"
             },
             {
@@ -9567,8 +9570,8 @@
         "links": [
             "8f4d88abb858be08"
         ],
-        "x": 1375,
-        "y": 80,
+        "x": 1435,
+        "y": 40,
         "wires": [
             [
                 "a6f01856669d3e50"
@@ -10315,6 +10318,72 @@
         "x": 2440,
         "y": 1620,
         "wires": []
+    },
+    {
+        "id": "b0d18fa59cc49c12",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "Center Map to Lat/Lon",
+        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nif (msg.payload.name == \"Center Map\")\n{\n\nreturn {payload : {\"command\":{\"lat\":lat, \"lon\":lon, \"zoom\":4}}}\n}\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 200,
+        "wires": [
+            [
+                "a6f01856669d3e50"
+            ]
+        ]
+    },
+    {
+        "id": "0d35873cadebf97f",
+        "type": "worldmap in",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "",
+        "path": "/qsos",
+        "events": "connect,disconnect,point,layer,bounds,files,draw,other",
+        "x": 1020,
+        "y": 200,
+        "wires": [
+            [
+                "b0d18fa59cc49c12"
+            ]
+        ]
+    },
+    {
+        "id": "aa3604030c538a2a",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "Center Map Button",
+        "props": [
+            {
+                "p": "payload.command",
+                "v": "{ \"button\": { \"name\":\"Center Map\", \"icon\":\"ma-home\", \"position\":\"topleft\"} }",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1170,
+        "y": 80,
+        "wires": [
+            [
+                "a6f01856669d3e50"
+            ]
+        ]
     },
     {
         "id": "4079239a4fd5c11c",
