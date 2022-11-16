@@ -8096,11 +8096,11 @@
         "type": "inject",
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
-        "name": "Inject Legend",
+        "name": "Inject Legend and Center Button",
         "props": [
             {
                 "p": "payload.command",
-                "v": "{\"legend\":\"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \"}",
+                "v": "{\"legend\":\"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \",\"button\":{\"name\":\"Center Map\",\"icon\":\"fa-square\",\"position\":\"topleft\"}}",
                 "vt": "json"
             },
             {
@@ -8111,9 +8111,9 @@
         "repeat": "10",
         "crontab": "",
         "once": true,
-        "onceDelay": "1",
+        "onceDelay": "2",
         "topic": "",
-        "x": 1120,
+        "x": 1320,
         "y": 160,
         "wires": [
             [
@@ -8143,8 +8143,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1110,
-        "y": 120,
+        "x": 1170,
+        "y": 40,
         "wires": [
             [
                 "1fef8af3224d3ace"
@@ -10360,28 +10360,24 @@
         "type": "inject",
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
-        "name": "Center Map Button",
+        "name": "Center Map Command",
         "props": [
             {
-                "p": "payload.command",
-                "v": "{ \"button\": { \"name\":\"Center Map\", \"icon\":\"ma-home\", \"position\":\"topleft\"} }",
-                "vt": "json"
-            },
-            {
-                "p": "topic",
+                "p": "payload.name",
+                "v": "Center Map",
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "6",
         "topic": "",
-        "x": 1170,
-        "y": 80,
+        "x": 1020,
+        "y": 140,
         "wires": [
             [
-                "a6f01856669d3e50"
+                "b0d18fa59cc49c12"
             ]
         ]
     },
@@ -27118,7 +27114,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lat & Lon",
-        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat == '' || homelon == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\"\n}\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
+        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n }\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
