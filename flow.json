@@ -34075,7 +34075,8 @@
         "type": "file",
         "z": "3e52b5d54104d7f0",
         "name": "",
-        "filename": "/home/pi/global.json",
+        "filename": "global.json",
+        "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
@@ -34094,8 +34095,10 @@
         "type": "file in",
         "z": "3e52b5d54104d7f0",
         "name": "",
-        "filename": "/home/pi/global.json",
+        "filename": "global.json",
+        "filenameType": "str",
         "format": "utf8",
+        "allProps": false,
         "x": 580,
         "y": 500,
         "wires": [
@@ -37403,7 +37406,7 @@
             ]
         ]
     },
-    {
+    { 
         "id": "8fef24f610992b8e",
         "type": "gate",
         "z": "3968f5792af364de",
