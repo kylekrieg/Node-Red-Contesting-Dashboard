@@ -772,7 +772,10 @@
             "f2b91a5dc28385a9",
             "b0d18fa59cc49c12",
             "0d35873cadebf97f",
-            "aa3604030c538a2a"
+            "415b4ee138125e2e",
+            "aa3604030c538a2a",
+            "bc661ac4152269b3",
+            "ae7413cce68dfffa"
         ],
         "x": 274,
         "y": -1,
@@ -10356,6 +10359,21 @@
         ]
     },
     {
+        "id": "415b4ee138125e2e",
+        "type": "ui_ui_control",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "",
+        "events": "all",
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "bc661ac4152269b3"
+            ]
+        ]
+    },
+    {
         "id": "aa3604030c538a2a",
         "type": "inject",
         "z": "407d2b774fe67647",
@@ -10364,17 +10382,71 @@
         "props": [
             {
                 "p": "payload.name",
-                "v": "Center Map",
+                "v": "",
                 "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "6",
+        "onceDelay": "15",
         "topic": "",
-        "x": 1020,
-        "y": 140,
+        "x": 880,
+        "y": 100,
+        "wires": [
+            [
+                "415b4ee138125e2e"
+            ]
+        ]
+    },
+    {
+        "id": "bc661ac4152269b3",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Center Map\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 160,
+        "wires": [
+            [
+                "ae7413cce68dfffa"
+            ]
+        ]
+    },
+    {
+        "id": "ae7413cce68dfffa",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 160,
         "wires": [
             [
                 "b0d18fa59cc49c12"
@@ -27114,7 +27186,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lat & Lon",
-        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n }\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
+        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -30575,12 +30647,12 @@
         "id": "1f45eb9a.6f2614",
         "type": "tcp request",
         "z": "bd8a446b999750f9",
+        "name": "NO DUPS VE7CC",
         "server": "dxc.ve7cc.net",
         "port": "23",
         "out": "sit",
         "ret": "buffer",
         "splitc": " ",
-        "name": "NO DUPS VE7CC",
         "x": 850,
         "y": 320,
         "wires": [
@@ -31059,12 +31131,12 @@
         "id": "d5736e14014e7e71",
         "type": "tcp request",
         "z": "bd8a446b999750f9",
+        "name": "Wtih DUPS W3LPL",
         "server": "w3lpl.net",
         "port": "7373",
         "out": "sit",
         "ret": "buffer",
         "splitc": " ",
-        "name": "Wtih DUPS W3LPL",
         "x": 810,
         "y": 620,
         "wires": [
@@ -37406,28 +37478,6 @@
             ]
         ]
     },
-    { 
-        "id": "8fef24f610992b8e",
-        "type": "gate",
-        "z": "3968f5792af364de",
-        "name": "",
-        "controlTopic": "control",
-        "defaultState": "open",
-        "openCmd": "open",
-        "closeCmd": "close",
-        "toggleCmd": "toggle",
-        "defaultCmd": "default",
-        "statusCmd": "status",
-        "persist": true,
-        "storeName": "memory",
-        "x": 830,
-        "y": 180,
-        "wires": [
-            [
-                "3b6d91307549713b"
-            ]
-        ]
-    },
     {
         "id": "3b6d91307549713b",
         "type": "udp out",
@@ -37591,28 +37641,6 @@
             [
                 "54931d388d71eb79",
                 "bcb48af62a6314d3"
-            ]
-        ]
-    },
-    {
-        "id": "7cc70ad33a74db3e",
-        "type": "gate",
-        "z": "3968f5792af364de",
-        "name": "",
-        "controlTopic": "control",
-        "defaultState": "open",
-        "openCmd": "open",
-        "closeCmd": "close",
-        "toggleCmd": "toggle",
-        "defaultCmd": "default",
-        "statusCmd": "status",
-        "persist": true,
-        "storeName": "memory",
-        "x": 1010,
-        "y": 380,
-        "wires": [
-            [
-                "508fa6db79205795"
             ]
         ]
     },
@@ -37808,28 +37836,6 @@
         ]
     },
     {
-        "id": "34159e15a003b83e",
-        "type": "gate",
-        "z": "3968f5792af364de",
-        "name": "",
-        "controlTopic": "control",
-        "defaultState": "open",
-        "openCmd": "open",
-        "closeCmd": "close",
-        "toggleCmd": "toggle",
-        "defaultCmd": "default",
-        "statusCmd": "status",
-        "persist": true,
-        "storeName": "memory",
-        "x": 1010,
-        "y": 600,
-        "wires": [
-            [
-                "b5e6b3c2f3728989"
-            ]
-        ]
-    },
-    {
         "id": "b5e6b3c2f3728989",
         "type": "udp out",
         "z": "3968f5792af364de",
@@ -37891,6 +37897,72 @@
         "x": 1620,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "8fef24f610992b8e",
+        "type": "gate",
+        "z": "3968f5792af364de",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": true,
+        "storeName": "memory",
+        "x": 830,
+        "y": 180,
+        "wires": [
+            [
+                "3b6d91307549713b"
+            ]
+        ]
+    },
+    {
+        "id": "7cc70ad33a74db3e",
+        "type": "gate",
+        "z": "3968f5792af364de",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": true,
+        "storeName": "memory",
+        "x": 1010,
+        "y": 380,
+        "wires": [
+            [
+                "508fa6db79205795"
+            ]
+        ]
+    },
+    {
+        "id": "34159e15a003b83e",
+        "type": "gate",
+        "z": "3968f5792af364de",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": true,
+        "storeName": "memory",
+        "x": 1010,
+        "y": 600,
+        "wires": [
+            [
+                "b5e6b3c2f3728989"
+            ]
+        ]
     },
     {
         "id": "5e4d47c711482436",
