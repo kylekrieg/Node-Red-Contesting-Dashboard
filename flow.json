@@ -707,9 +707,7 @@
             "9ed94619f709cb71"
         ],
         "x": 14,
-        "y": 1459,
-        "w": 2552,
-        "h": 982
+        "y": 1459
     },
     {
         "id": "d48758cdf0c8991d",
@@ -778,9 +776,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 274,
-        "y": -1,
-        "w": 2232,
-        "h": 822
+        "y": -1
     },
     {
         "id": "26cf0678322d1bb6",
@@ -842,9 +838,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2354,
-        "y": 839,
-        "w": 1912,
-        "h": 602
+        "y": 839
     },
     {
         "id": "f830dd821e0240f4",
@@ -909,9 +903,7 @@
             "3c4c7e4533b41d22"
         ],
         "x": 434,
-        "y": 879,
-        "w": 1832,
-        "h": 462
+        "y": 879
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -8046,7 +8038,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -30274,7 +30266,7 @@
         "z": "204548a488401a1b",
         "name": "radiosport.live flow",
         "info": "",
-        "x": 210,
+        "x": 370,
         "y": 2820,
         "wires": []
     },
@@ -30304,7 +30296,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 230,
+        "x": 490,
         "y": 2880,
         "wires": [
             [
@@ -30324,7 +30316,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 680,
         "y": 2880,
         "wires": [
             []
@@ -30335,7 +30327,7 @@
         "type": "debug",
         "z": "204548a488401a1b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -30343,7 +30335,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
+        "x": 670,
         "y": 2840,
         "wires": []
     },
@@ -30640,6 +30632,54 @@
         "wires": [
             [
                 "536753de214930c5"
+            ]
+        ]
+    },
+    {
+        "id": "ae73011dbaa0f1ee",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 2880,
+        "wires": [
+            [
+                "dc4625ed1bfbf5df"
+            ]
+        ]
+    },
+    {
+        "id": "dc4625ed1bfbf5df",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Status",
+        "func": "msg.payload = global.get('livedata')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"true\";\n    return msg;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 2880,
+        "wires": [
+            [
+                "1d2e0efe1531b4eb"
             ]
         ]
     },
@@ -34079,7 +34119,7 @@
         "type": "function",
         "z": "3e52b5d54104d7f0",
         "name": "Prep data",
-        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
+        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category;class;OS_Type;livedata\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
