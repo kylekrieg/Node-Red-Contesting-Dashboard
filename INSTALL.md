@@ -18,7 +18,7 @@ After you build your Pi, it probably has a DHCP address on your network.  If you
 
 Below you will find the full install of the contesting dashboard from scrath.  KD9LSV has been kind enough to provide a full install script.  Once you have a imaged a Raspberry Pi, issue the following command at the command prompt to start the install.  This script takes 15 to 20 mins to run on a Pi4.  After this script is completed, the only thing left to complete is the N1MM configuration to point the broadcast data to the Pi.  
 
-```bash<( curl -sL https://contesting.nodered.kd9lsv.me/)```
+```bash <( curl -sL https://contesting.nodered.kd9lsv.me/)```
 
 If you would like to install everything manually, please see this [install document](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/blob/master/Manual_INSTALL.md)
 
@@ -64,13 +64,13 @@ A few things as we work through the BETA phase of testing.
 
 ## Dashboard Display Zoom
 
-All of the sections should line up nicely and look uniform except for the Configuration & Resets tab.  If your dashboard doesn't look like the sample screenshots, you might need to adjust the **Zoom** level on your browser to around 70% for the dashboard to look correct on a 1920 x 1080 screen. If you are in full screen mode, 75% might be the right setting.  If your browser is not allowing you to select a custom zoom setting, check the support pages for the broswer as they are usually configurable. Your browswer should ***remember*** this setting next time you pull up the dashboard.
+All of the sections should line up nicely and look uniform except for the Configuration & Resets tab on a 1080p screen.  If your dashboard doesn't look like the [sample screenshots here](https://photos.app.goo.gl/J67xuLADBU3CMHYh7), you might need to adjust the **Zoom** level on your browser to around for the dashboard to look correct on a 1920 x 1080p screen. If you are in full screen mode (hit F11 for full screen mode), 75% might be the right setting.  If your browser is not allowing you to select a custom zoom setting, check the support pages for the broswer as they are usually configurable. Your browswer should ***remember*** this setting next time you pull up the dashboard.  If your browser does not remember the zoom level, there are plug-ins that allow custom zoom and persistence.  
 
 ## Known Issues
 
-1) The Spectator Dashboard is still a work in progress.  The vision of this dashboard is for an operator to be able to use this dashboard to stream to YouTube or Twitch without violating any contest rules.  This dashboard will not give your frequency or band information away but allows the viewer to interact and learn more about contesting and ham radio.
+1) The Spectator Dashboard is still a work in progress.  The vision of this screen is for an operator to be able to use this dashboard to stream to YouTube or Twitch without violating any contest rules.  This dashboard will not give your frequency or band information away but allows the viewer to interact and learn more about contesting and ham radio.
 2) The trending arrows on the Operator Competition dashboard need some more work.  I'm not 100% satisified with the way they work.
-4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.
+4) Resize your browser tab (zoom in/out) to get all the dashboard groups to align correctly on the page.  You can hit F11 to go full screen.  We are working on CSS coding to allow the screen to look correct on an HD screen.
 5) On the graphical line charts, the most recent data point time is typically in local time with the rest of the data points in UTC.  This is a known bug in the graphing dashboard node.
 6) The great circle lines in the Worldmap node currently have an issue with the international date line.  The developers are working on this bug.
 7) If you use HamQTH for your Q lookup, not every call in the world is in that database, therefore you might not see it in the latest Q section of the main dashboard screen.  More work to be completed on that.
@@ -83,9 +83,10 @@ See the section above named *Upgrading after 20220319* to create a new *qsos* da
 
 The laundry list is huge.  These are just a few.
 
-1) Setup the dashboard for Field Day and Winter Field Day with every little effort.
+1) Setup the dashboard for Field Day and Winter Field Day.
 2) Be able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
 5) Writelog and N3FJP integration.
+6) WAC (Work All Contests) entry window.  This would be a basic entry window to allow an operator to work all the contests happening during the operating time no matter of the exchange and be able to create a Cabrillo file for each contest.
 
 This program is released as-is.  Modify this program as you see fit. 
 
