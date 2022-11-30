@@ -10,12 +10,13 @@
         "node-red-node-smooth": "0.1.2",
         "node-red-node-sqlite": "1.0.3",
         "node-red-node-ui-table": "0.4.3",
-        "node-red-contrib-web-worldmap": "2.30.1",
+        "node-red-contrib-web-worldmap": "2.31.0",
         "node-red-dashboard": "3.2.0",
         "node-red-contrib-string": "1.0.0",
         "node-red-contrib-ui-led": "0.4.11",
         "node-red-contrib-unit-converter": "0.0.3",
-        "node-red-contrib-moment": "4.0.0"
+        "node-red-contrib-moment": "4.0.0",
+        "node-red-contrib-simple-gate": "0.5.2"
     },
     "node-red": {
         "settings": {

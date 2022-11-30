@@ -96,6 +96,22 @@
         "env": []
     },
     {
+        "id": "3968f5792af364de",
+        "type": "tab",
+        "label": "Radiosport.live",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1acc5730a82cbfc7",
+        "type": "tab",
+        "label": "WAC Logger",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c967abe5be484ee6",
         "type": "subflow",
         "name": "1Hr Rate Color",
@@ -748,12 +764,11 @@
             "6351dc9d0c3ec453",
             "eb5d10e3d8e57f2d",
             "e4e19daf40493fb9",
-            "6176c210be856fa7"
+            "6176c210be856fa7",
+            "9ed94619f709cb71"
         ],
         "x": 14,
-        "y": 1459,
-        "w": 2552,
-        "h": 982
+        "y": 1459
     },
     {
         "id": "d48758cdf0c8991d",
@@ -812,12 +827,17 @@
             "825f9b7a2b7fc6e2",
             "8804affd65082b4f",
             "6c1de6ee7473fac9",
-            "fdfd9133ae52097f"
+            "fdfd9133ae52097f",
+            "f2b91a5dc28385a9",
+            "b0d18fa59cc49c12",
+            "0d35873cadebf97f",
+            "415b4ee138125e2e",
+            "aa3604030c538a2a",
+            "bc661ac4152269b3",
+            "ae7413cce68dfffa"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": -1
     },
     {
         "id": "26cf0678322d1bb6",
@@ -839,7 +859,6 @@
             "6d122d15af375ab6",
             "22fe07a2c13d18ff",
             "816d3f7e84dd1bf0",
-            "8a40e0fa64c5ad77",
             "577c577fed5bf005",
             "61fdced830d7a010",
             "fc6208525bfd2db6",
@@ -876,12 +895,76 @@
             "8186c56328392551",
             "0f2162dc3bfae19c",
             "f0dbae81ebaf286e",
-            "9d0e444ab32a06f9"
+            "9d0e444ab32a06f9",
+            "8834c50bc7d9a366"
         ],
         "x": 2354,
-        "y": 839,
-        "w": 1912,
-        "h": 602
+        "y": 839
+    },
+    {
+        "id": "f830dd821e0240f4",
+        "type": "group",
+        "z": "b73cc2bb5f424b69",
+        "name": "Master CSS - Remove If Do Not Like",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6e5f192ff0fd2d39",
+            "aa0566f8a8d9dbfd",
+            "925cebb6bacad025"
+        ],
+        "x": 974,
+        "y": 999
+    },
+    {
+        "id": "4f4b9f0c82968b60",
+        "type": "group",
+        "z": "407d2b774fe67647",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "0178697fb442d801",
+            "fb32d39142880f19",
+            "d2cdb7808cce0e9c",
+            "2cdd5ffb3ac01f73",
+            "289442fe7c0d95f9",
+            "9b7d271988034596",
+            "31d7202b2b50131d",
+            "ff83b125cd4af97b",
+            "06ef39d063a5a0f6",
+            "bcb9b861df7e6958",
+            "1e6f9143a325a577",
+            "aec65d796aed9cee",
+            "97ed253958c48009",
+            "aad501d4eeed3f6c",
+            "622fed8ae8f6a5d2",
+            "77a4afb43fb7bdbd",
+            "a9c362fc3c6ac624",
+            "7d8436d8a3a5422b",
+            "49c503a250b35428",
+            "3ba4521f148eac8c",
+            "e2f41f09bb088749",
+            "e21c45667c4cb46a",
+            "a08bd99d57f55d64",
+            "ba53f01105c0383d",
+            "db019a0c1478765c",
+            "91decfc57d48218c",
+            "eecdc889bd3900f6",
+            "03b3b4cadbdf9e34",
+            "a7dc412af8237000",
+            "8d406adaa39170fb",
+            "3c4c7e4533b41d22"
+        ],
+        "x": 434,
+        "y": 879
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -2115,6 +2198,17 @@
         "height": 1
     },
     {
+        "id": "8e8e61b9e41627e8",
+        "type": "ui_group",
+        "name": "Radiosport.live Data ",
+        "tab": "08eed6c3517c624e",
+        "order": 16,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "db6c3ead34896ed7",
         "type": "switch",
         "z": "c967abe5be484ee6",
@@ -2493,7 +2587,7 @@
         "z": "bedd4acdc0e27dab",
         "name": "QSO Hamdb Lookup",
         "method": "GET",
-        "ret": "txt",
+        "ret": "obj",
         "paytoqs": "ignore",
         "url": "http://api.hamdb.org/{{{payload.call}}}/json/nodered",
         "tls": "",
@@ -5116,7 +5210,7 @@
         "id": "12aaa60adbe53aa4",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "160M Color Purple",
+        "name": "Set 160M Purple Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5145,7 +5239,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4050,
+        "x": 4060,
         "y": 160,
         "wires": [
             [
@@ -5157,7 +5251,7 @@
         "id": "13d5c886dc925ca0",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "80M Color Green",
+        "name": "Set 80M Green Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5186,7 +5280,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4050,
+        "x": 4060,
         "y": 200,
         "wires": [
             [
@@ -5198,7 +5292,7 @@
         "id": "425279b6d14c3da6",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "40M Color Blue",
+        "name": "Set 40M Blue Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5227,7 +5321,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4060,
+        "x": 4050,
         "y": 240,
         "wires": [
             [
@@ -5239,7 +5333,7 @@
         "id": "df3e87bc737f56b9",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "20M Color Red",
+        "name": "Set 20M Red Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5268,7 +5362,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4060,
+        "x": 4050,
         "y": 280,
         "wires": [
             [
@@ -5280,7 +5374,7 @@
         "id": "3443249ce4903268",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "15M Color Yellow",
+        "name": "Set 15M Yellow Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5309,7 +5403,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4050,
+        "x": 4060,
         "y": 320,
         "wires": [
             [
@@ -5321,7 +5415,7 @@
         "id": "de5b10a5ac9d33d4",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "10M Color Orange",
+        "name": "Set 10M Orange Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5350,7 +5444,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4050,
+        "x": 4060,
         "y": 360,
         "wires": [
             [
@@ -5362,7 +5456,7 @@
         "id": "d7622297fb04e81f",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "6M Color White",
+        "name": "Set 6m White Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5391,7 +5485,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4060,
+        "x": 4050,
         "y": 400,
         "wires": [
             [
@@ -5403,7 +5497,7 @@
         "id": "c73b6c786dbf3a47",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "2M Color Lime",
+        "name": "Set 2M Lime Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5432,7 +5526,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4060,
+        "x": 4050,
         "y": 440,
         "wires": [
             [
@@ -5444,7 +5538,7 @@
         "id": "81490e7666221ff4",
         "type": "change",
         "z": "bedd4acdc0e27dab",
-        "name": "Else Color Black",
+        "name": "Set Else Black Band Layer",
         "rules": [
             {
                 "t": "set",
@@ -5706,6 +5800,7 @@
         "y": 100,
         "wires": []
     },
+    
     {
         "id": "0178697fb442d801",
         "type": "udp in",
@@ -5918,6 +6013,50 @@
         "y": 960,
         "wires": []
     },
+    {  
+        "id": "1cbf491f09f5b57e",
+        "type": "link out",
+        "z": "bedd4acdc0e27dab",
+        "name": "QRZ Error OUT",
+        "mode": "link",
+        "links": [
+            "2f0871ab61146734"
+        ],
+        "x": 1735,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2f0871ab61146734",
+        "type": "link in",
+        "z": "bedd4acdc0e27dab",
+        "name": "From DB Call IN",
+        "links": [
+            "1cbf491f09f5b57e",
+            "7f886053cdd16a70"
+        ],
+        "x": 3305,
+        "y": 320,
+        "wires": [
+            [
+                "3762f0280985ea10"
+            ]
+        ]
+    },
+    {
+        "id": "7f886053cdd16a70",
+        "type": "link out",
+        "z": "bedd4acdc0e27dab",
+        "name": "HamQTH DB Error OUT",
+        "mode": "link",
+        "links": [
+            "2f0871ab61146734"
+        ],
+        "x": 1785,
+        "y": 960,
+        "wires": []
+    },
+
     {
         "id": "97ed253958c48009",
         "type": "switch",
@@ -6945,7 +7084,8 @@
         "links": [
             "93a6eb43a0cd1622",
             "b2e62889b54520fd",
-            "254a70483d8805dc"
+            "254a70483d8805dc",
+            "ec08c4c0b055d4fe"
         ],
         "x": 875,
         "y": 1660,
@@ -7198,7 +7338,8 @@
         "links": [
             "facc381ab8ee58c9",
             "93a6eb43a0cd1622",
-            "935c9a16abfdf6b5"
+            "935c9a16abfdf6b5",
+            "ec08c4c0b055d4fe"
         ],
         "x": 855,
         "y": 1760,
@@ -7699,7 +7840,7 @@
         "z": "407d2b774fe67647",
         "g": "81692a3cb68d6cde",
         "name": "Set Label",
-        "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\nreturn msg;",
+        "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\n//radiosport.live data\nlet rate = msg.rate;\nglobal.set(\"#radio1rate\",rate);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7709,7 +7850,8 @@
         "y": 1540,
         "wires": [
             [
-                "0baeb2e7ae556661"
+                "0baeb2e7ae556661",
+                "9ed94619f709cb71"
             ]
         ]
     },
@@ -7782,7 +7924,7 @@
         "z": "407d2b774fe67647",
         "g": "81692a3cb68d6cde",
         "name": "Set Label",
-        "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\nreturn msg;",
+        "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\n//radiosport.live data\nlet rate = msg.rate;\nglobal.set(\"#radio12ate\",rate);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8508,11 +8650,11 @@
         "type": "inject",
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
-        "name": "Inject Legend",
+        "name": "Inject Legend and Center Button",
         "props": [
             {
                 "p": "payload.command",
-                "v": "{ \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \" }",
+                "v": "{\"legend\":\"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \",\"button\":{\"name\":\"Center Map\",\"icon\":\"fa-square\",\"position\":\"topleft\"}}",
                 "vt": "json"
             },
             {
@@ -8523,9 +8665,9 @@
         "repeat": "10",
         "crontab": "",
         "once": true,
-        "onceDelay": "1",
+        "onceDelay": "2",
         "topic": "",
-        "x": 1120,
+        "x": 1320,
         "y": 160,
         "wires": [
             [
@@ -8555,8 +8697,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1110,
-        "y": 120,
+        "x": 1170,
+        "y": 40,
         "wires": [
             [
                 "1fef8af3224d3ace"
@@ -8802,7 +8944,8 @@
         "mode": "link",
         "links": [
             "247347fc62633734",
-            "f3117ed04c2dd2ff"
+            "f3117ed04c2dd2ff",
+            "fd220d20c3727d7e"
         ],
         "x": 1295,
         "y": 240,
@@ -9043,34 +9186,6 @@
         ]
     },
     {
-        "id": "8a40e0fa64c5ad77",
-        "type": "change",
-        "z": "407d2b774fe67647",
-        "g": "26cf0678322d1bb6",
-        "name": "Rate to Payload",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "rate",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3680,
-        "y": 880,
-        "wires": [
-            [
-                "816d3f7e84dd1bf0"
-            ]
-        ]
-    },
-    {
         "id": "577c577fed5bf005",
         "type": "inject",
         "z": "407d2b774fe67647",
@@ -9305,7 +9420,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Topic & Payload",
-        "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\nreturn msg;",
+        "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9650,15 +9765,15 @@
         "wires": [
             [
                 "6d122d15af375ab6",
-                "8a40e0fa64c5ad77"
+                "8834c50bc7d9a366"
             ],
             [
                 "6d122d15af375ab6",
-                "8a40e0fa64c5ad77"
+                "8834c50bc7d9a366"
             ],
             [
                 "6d122d15af375ab6",
-                "8a40e0fa64c5ad77"
+                "8834c50bc7d9a366"
             ]
         ]
     },
@@ -9999,6 +10114,895 @@
         "x": 1400,
         "y": 1800,
         "wires": []
+    },
+    {
+        "id": "f2b91a5dc28385a9",
+        "type": "link in",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "Clear Map IN",
+        "links": [
+            "8f4d88abb858be08"
+        ],
+        "x": 1435,
+        "y": 40,
+        "wires": [
+            [
+                "a6f01856669d3e50"
+            ]
+        ]
+    },
+    {
+        "id": "8834c50bc7d9a366",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "26cf0678322d1bb6",
+        "name": "Set Rate to Payload",
+        "func": "msg.payload = msg.rate\n\n//radiosport.live data\nglobal.set('#currentQrate',msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3720,
+        "y": 880,
+        "wires": [
+            [
+                "816d3f7e84dd1bf0"
+            ]
+        ]
+    },
+    {
+        "id": "0178697fb442d801",
+        "type": "udp in",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "",
+        "iface": "",
+        "port": "12062",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 520,
+        "y": 1080,
+        "wires": [
+            [
+                "1e6f9143a325a577"
+            ]
+        ]
+    },
+    {
+        "id": "fb32d39142880f19",
+        "type": "comment",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "UDP Score XML",
+        "info": "",
+        "x": 640,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "d2cdb7808cce0e9c",
+        "type": "xml",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 810,
+        "y": 1080,
+        "wires": [
+            [
+                "622fed8ae8f6a5d2"
+            ]
+        ]
+    },
+    {
+        "id": "2cdd5ffb3ac01f73",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "group": "aeac5355e22fa2ee",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "name": "Total Score",
+        "label": "<font size = 6>Total Score",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.dynamicresults.score[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1990,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "289442fe7c0d95f9",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "group": "aeac5355e22fa2ee",
+        "order": 3,
+        "width": 5,
+        "height": 3,
+        "name": "Total Mults",
+        "label": "<font size = 6>Mults",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.totalmults}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 2170,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "9b7d271988034596",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "group": "aeac5355e22fa2ee",
+        "order": 2,
+        "width": 5,
+        "height": 3,
+        "name": "Total QSO's",
+        "label": "<font size = 6>QSOs",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.totalnoqsos}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 2170,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "31d7202b2b50131d",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Total QSO Array Parse",
+        "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos)\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 1060,
+        "wires": [
+            [
+                "3ba4521f148eac8c"
+            ]
+        ]
+    },
+    {
+        "id": "ff83b125cd4af97b",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "group": "aeac5355e22fa2ee",
+        "order": 4,
+        "width": 5,
+        "height": 3,
+        "name": "Total Points",
+        "label": "<font size = 6>Points",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.totalpoints}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 2170,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "06ef39d063a5a0f6",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Total Points Array Parse",
+        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 1260,
+        "wires": [
+            [
+                "03b3b4cadbdf9e34"
+            ]
+        ]
+    },
+    {
+        "id": "bcb9b861df7e6958",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Score Data Raw",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1480,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "1e6f9143a325a577",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "UTF8",
+        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 1080,
+        "wires": [
+            [
+                "d2cdb7808cce0e9c"
+            ]
+        ]
+    },
+    {
+        "id": "aec65d796aed9cee",
+        "type": "link out",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Score OUT",
+        "mode": "link",
+        "links": [
+            "9ac6b8134108e3b3",
+            "77252a3ad3a5f5aa"
+        ],
+        "x": 1295,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "97ed253958c48009",
+        "type": "switch",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "If Score != 0",
+        "property": "payload.dynamicresults.score[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1210,
+        "y": 1080,
+        "wires": [
+            [
+                "31d7202b2b50131d",
+                "06ef39d063a5a0f6",
+                "bcb9b861df7e6958",
+                "aec65d796aed9cee",
+                "aad501d4eeed3f6c",
+                "77a4afb43fb7bdbd"
+            ]
+        ]
+    },
+    {
+        "id": "aad501d4eeed3f6c",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Total Multi Array Parse",
+        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 1160,
+        "wires": [
+            [
+                "ba53f01105c0383d"
+            ]
+        ]
+    },
+    {
+        "id": "622fed8ae8f6a5d2",
+        "type": "switch",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Contest != Empty",
+        "property": "payload.dynamicresults.contest",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1080,
+        "wires": [
+            [
+                "97ed253958c48009"
+            ]
+        ]
+    },
+    {
+        "id": "77a4afb43fb7bdbd",
+        "type": "rbe",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "RBE Total Score",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.dynamicresults.score[0]",
+        "topi": "topic",
+        "x": 1480,
+        "y": 960,
+        "wires": [
+            [
+                "7d8436d8a3a5422b",
+                "a9c362fc3c6ac624"
+            ]
+        ]
+    },
+    {
+        "id": "a9c362fc3c6ac624",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1660,
+        "y": 1000,
+        "wires": [
+            [
+                "49c503a250b35428"
+            ]
+        ]
+    },
+    {
+        "id": "7d8436d8a3a5422b",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Color Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#62FF52",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1730,
+        "y": 960,
+        "wires": [
+            [
+                "2cdd5ffb3ac01f73"
+            ]
+        ]
+    },
+    {
+        "id": "49c503a250b35428",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Color White",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#FFFFFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1810,
+        "y": 1000,
+        "wires": [
+            [
+                "2cdd5ffb3ac01f73"
+            ]
+        ]
+    },
+    {
+        "id": "3ba4521f148eac8c",
+        "type": "rbe",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "RBE Total QSOs",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.totalnoqsos",
+        "topi": "topic",
+        "x": 1670,
+        "y": 1060,
+        "wires": [
+            [
+                "e21c45667c4cb46a",
+                "e2f41f09bb088749"
+            ]
+        ]
+    },
+    {
+        "id": "e2f41f09bb088749",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1840,
+        "y": 1100,
+        "wires": [
+            [
+                "a08bd99d57f55d64"
+            ]
+        ]
+    },
+    {
+        "id": "e21c45667c4cb46a",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Color Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#62FF52",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1850,
+        "y": 1060,
+        "wires": [
+            [
+                "9b7d271988034596"
+            ]
+        ]
+    },
+    {
+        "id": "a08bd99d57f55d64",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Color White",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#FFFFFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1990,
+        "y": 1100,
+        "wires": [
+            [
+                "9b7d271988034596"
+            ]
+        ]
+    },
+    {
+        "id": "ba53f01105c0383d",
+        "type": "rbe",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "RBE Total Mults",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.totalmults",
+        "topi": "topic",
+        "x": 1660,
+        "y": 1160,
+        "wires": [
+            [
+                "91decfc57d48218c",
+                "db019a0c1478765c"
+            ]
+        ]
+    },
+    {
+        "id": "db019a0c1478765c",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1820,
+        "y": 1200,
+        "wires": [
+            [
+                "eecdc889bd3900f6"
+            ]
+        ]
+    },
+    {
+        "id": "91decfc57d48218c",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Color Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#62FF52",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1830,
+        "y": 1160,
+        "wires": [
+            [
+                "289442fe7c0d95f9"
+            ]
+        ]
+    },
+    {
+        "id": "eecdc889bd3900f6",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Color White",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#FFFFFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1970,
+        "y": 1200,
+        "wires": [
+            [
+                "289442fe7c0d95f9"
+            ]
+        ]
+    },
+    {
+        "id": "03b3b4cadbdf9e34",
+        "type": "rbe",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "RBE Total Points",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.totalpoints",
+        "topi": "topic",
+        "x": 1670,
+        "y": 1260,
+        "wires": [
+            [
+                "8d406adaa39170fb",
+                "a7dc412af8237000"
+            ]
+        ]
+    },
+    {
+        "id": "a7dc412af8237000",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1840,
+        "y": 1300,
+        "wires": [
+            [
+                "3c4c7e4533b41d22"
+            ]
+        ]
+    },
+    {
+        "id": "8d406adaa39170fb",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Color Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#62FF52",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1850,
+        "y": 1260,
+        "wires": [
+            [
+                "ff83b125cd4af97b"
+            ]
+        ]
+    },
+    {
+        "id": "3c4c7e4533b41d22",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Color White",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "#FFFFFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1990,
+        "y": 1300,
+        "wires": [
+            [
+                "ff83b125cd4af97b"
+            ]
+        ]
+    },
+    {
+        "id": "9ed94619f709cb71",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "81692a3cb68d6cde",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2440,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "b0d18fa59cc49c12",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "Center Map to Lat/Lon",
+        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nif (msg.payload.name == \"Center Map\")\n{\n\nreturn {payload : {\"command\":{\"lat\":lat, \"lon\":lon, \"zoom\":4}}}\n}\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 200,
+        "wires": [
+            [
+                "a6f01856669d3e50"
+            ]
+        ]
+    },
+    {
+        "id": "0d35873cadebf97f",
+        "type": "worldmap in",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "",
+        "path": "/qsos",
+        "events": "connect,disconnect,point,layer,bounds,files,draw,other",
+        "x": 1020,
+        "y": 200,
+        "wires": [
+            [
+                "b0d18fa59cc49c12"
+            ]
+        ]
+    },
+    {
+        "id": "415b4ee138125e2e",
+        "type": "ui_ui_control",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "",
+        "events": "all",
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "bc661ac4152269b3"
+            ]
+        ]
+    },
+    {
+        "id": "aa3604030c538a2a",
+        "type": "inject",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "Center Map Command",
+        "props": [
+            {
+                "p": "payload.name",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "15",
+        "topic": "",
+        "x": 880,
+        "y": 100,
+        "wires": [
+            [
+                "415b4ee138125e2e"
+            ]
+        ]
+    },
+    {
+        "id": "bc661ac4152269b3",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Center Map\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 160,
+        "wires": [
+            [
+                "ae7413cce68dfffa"
+            ]
+        ]
+    },
+    {
+        "id": "ae7413cce68dfffa",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 160,
+        "wires": [
+            [
+                "b0d18fa59cc49c12"
+            ]
+        ]
     },
     {
         "id": "4079239a4fd5c11c",
@@ -24210,8 +25214,7 @@
         "wires": [
             [
                 "63b9afc11deec0ca",
-                "7d228ea50d42e333",
-                "43d361d9eba3f06e"
+                "7d228ea50d42e333"
             ]
         ]
     },
@@ -24936,6 +25939,23 @@
         "wires": []
     },
     {
+        "id": "0cadcaf22f887a0e",
+        "type": "debug",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1860,
+        "y": 380,
+        "wires": []
+    },
+    {
         "id": "185defa19c9fea72",
         "type": "template",
         "z": "204548a488401a1b",
@@ -25043,7 +26063,8 @@
                 "185defa19c9fea72",
                 "be733be1c4eca984",
                 "42dd8e9dba4bcdf2",
-                "45b435ab9c8504ec"
+                "45b435ab9c8504ec",
+                "93aec0ede1f81f3a"
             ]
         ]
     },
@@ -25365,7 +26386,8 @@
         "y": 80,
         "wires": [
             [
-                "be733be1c4eca984"
+                "be733be1c4eca984",
+                "93aec0ede1f81f3a"
             ]
         ]
     },
@@ -25373,10 +26395,10 @@
         "id": "75548936064e3eff",
         "type": "ui_form",
         "z": "204548a488401a1b",
-        "name": "Comptuer Name Input",
+        "name": "2 Comptuer Name Input",
         "label": "",
         "group": "887ee2eadc46df9a",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -25438,7 +26460,7 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 180,
+        "x": 190,
         "y": 420,
         "wires": [
             [
@@ -25509,10 +26531,10 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 1,
-        "name": "First Two PC Names Will Appear on the N1MM Dashboard With the Map",
+        "name": "1 First Two PC Names Will Appear on the N1MM Dashboard With the Map",
         "label": "The First Two PC Names Will Appear on the N1MM Dashboard With the Map",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -26731,7 +27753,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lat & Lon",
-        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat == '' || homelon == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\"\n}\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
+        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -27248,15 +28270,15 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 3,
         "width": 6,
         "height": 2,
-        "name": "Current Radio Names Text Box",
+        "name": "3 Current Radio Names Text Box",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 710,
+        "x": 720,
         "y": 540,
         "wires": []
     },
@@ -27331,9 +28353,9 @@
         "id": "eeb023c41384541c",
         "type": "ui_button",
         "z": "204548a488401a1b",
-        "name": "",
+        "name": "4 Clear All Computer Names",
         "group": "887ee2eadc46df9a",
-        "order": 2,
+        "order": 4,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27362,7 +28384,7 @@
         "name": "Contest Type Dropdown",
         "label": "",
         "tooltip": "",
-        "place": "OP Sort Type",
+        "place": "Select OP Sort Type",
         "group": "52728e3a5743376c",
         "order": 2,
         "width": 6,
@@ -27688,9 +28710,7 @@
         "x": 2190,
         "y": 140,
         "wires": [
-            [
-                "57e8f8342132ab65"
-            ]
+            []
         ]
     },
     {
@@ -27707,9 +28727,7 @@
         "x": 2120,
         "y": 420,
         "wires": [
-            [
-                "d0d6cb3a3ee4b556"
-            ]
+            []
         ]
     },
     {
@@ -27752,22 +28770,6 @@
         "wires": []
     },
     {
-        "id": "57e8f8342132ab65",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2410,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "f2bbdfe4d64051e4",
         "type": "function",
         "z": "204548a488401a1b",
@@ -27783,22 +28785,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "d0d6cb3a3ee4b556",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 420,
-        "wires": []
     },
     {
         "id": "a44147bde4d3c26b",
@@ -29790,6 +30776,485 @@
         "wires": [
             [
                 "4a7ab19bd2fdaf09"
+            ]
+        ]
+    },
+    {
+        "id": "8f4d88abb858be08",
+        "type": "link out",
+        "z": "204548a488401a1b",
+        "name": "Clear Map OUT",
+        "mode": "link",
+        "links": [
+            "f2b91a5dc28385a9"
+        ],
+        "x": 1635,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "93aec0ede1f81f3a",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Clear Map",
+        "func": "msg1 = {\"command\":{\"clear\":\"160M\"}};\nmsg2 = {\"command\":{\"clear\":\"80M\"}};\nmsg3 = {\"command\":{\"clear\":\"40M\"}};\nmsg4 = {\"command\":{\"clear\":\"20M\"}};\nmsg5 = {\"command\":{\"clear\":\"15M\"}};\nmsg6 = {\"command\":{\"clear\":\"10M\"}};\nmsg7 = {\"command\":{\"clear\":\"6M\"}};\nmsg8 = {\"command\":{\"clear\":\"2M\"}};\nmsg9 = {\"command\":{\"clear\":\"Other\"}}\n\nreturn msg1, msg2, msg3, msg4, msg5, msg6, msg7, msg8, msg9;\n\n",
+        "outputs": 9,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 80,
+        "wires": [
+            [
+                "8f4d88abb858be08"
+            ],
+            [
+                "8f4d88abb858be08"
+            ],
+            [
+                "8f4d88abb858be08"
+            ],
+            [
+                "8f4d88abb858be08"
+            ],
+            [
+                "8f4d88abb858be08"
+            ],
+            [
+                "8f4d88abb858be08"
+            ],
+            [
+                "8f4d88abb858be08"
+            ],
+            [
+                "8f4d88abb858be08"
+            ],
+            [
+                "8f4d88abb858be08"
+            ]
+        ]
+    },
+    {
+        "id": "3347013ea6fb5df5",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "radiosport.live flow",
+        "info": "",
+        "x": 370,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "1d2e0efe1531b4eb",
+        "type": "ui_switch",
+        "z": "204548a488401a1b",
+        "name": "1 Send Data",
+        "label": "Send Data ",
+        "tooltip": "",
+        "group": "8e8e61b9e41627e8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 490,
+        "y": 2880,
+        "wires": [
+            [
+                "ddaf9e252db55cd5",
+                "9704203146ffc3de"
+            ]
+        ]
+    },
+    {
+        "id": "9704203146ffc3de",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store Live Data",
+        "func": "livedata = msg.payload;\n\nglobal.set('livedata',livedata);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 2880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddaf9e252db55cd5",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 2840,
+        "wires": []
+    },
+    {
+        "id": "fcf9a277e446974e",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "3 Power Drop Down",
+        "label": "Power",
+        "tooltip": "Select Your Power",
+        "place": "Select Power",
+        "group": "8e8e61b9e41627e8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "QRP",
+                "value": "qrp",
+                "type": "str"
+            },
+            {
+                "label": "LP",
+                "value": "lp",
+                "type": "str"
+            },
+            {
+                "label": "HP",
+                "value": "hp",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 540,
+        "y": 2940,
+        "wires": [
+            [
+                "f8a20f731520adc2"
+            ]
+        ]
+    },
+    {
+        "id": "fde6b716b846a1b9",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "5 Class Drop Down",
+        "label": "Class",
+        "tooltip": "",
+        "place": "Select Class",
+        "group": "8e8e61b9e41627e8",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "SOSB",
+                "value": "sosb",
+                "type": "str"
+            },
+            {
+                "label": "SOAB",
+                "value": "soab",
+                "type": "str"
+            },
+            {
+                "label": "SOUAB",
+                "value": "souab",
+                "type": "str"
+            },
+            {
+                "label": "M/S",
+                "value": "ms",
+                "type": "str"
+            },
+            {
+                "label": "M/2",
+                "value": "m2",
+                "type": "str"
+            },
+            {
+                "label": "M/M",
+                "value": "mm",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 470,
+        "y": 2980,
+        "wires": [
+            [
+                "a73ec5e28a6628d4"
+            ]
+        ]
+    },
+    {
+        "id": "f8a20f731520adc2",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store Power",
+        "func": "power = msg.payload;\n\nglobal.set('power',power);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 2940,
+        "wires": [
+            [
+                "4f77896f8379011c"
+            ]
+        ]
+    },
+    {
+        "id": "a73ec5e28a6628d4",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store Class",
+        "func": "opclass = msg.payload;\n\nglobal.set('class',opclass);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 2980,
+        "wires": [
+            [
+                "6d31d7c582997a74"
+            ]
+        ]
+    },
+    {
+        "id": "a72c526751b53a5f",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Power",
+        "func": "msg.payload = global.get('power');\n\nif (msg.payload == undefined);\n{\n    msg.payload = undefined\n    return msg;\n}\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 2940,
+        "wires": [
+            [
+                "fcf9a277e446974e"
+            ]
+        ]
+    },
+    {
+        "id": "4f77896f8379011c",
+        "type": "change",
+        "z": "204548a488401a1b",
+        "name": "Set Power",
+        "rules": [
+            {
+                "t": "set",
+                "p": "power",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 2940,
+        "wires": [
+            [
+                "41a9dc57deb3d22d"
+            ]
+        ]
+    },
+    {
+        "id": "41a9dc57deb3d22d",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "8e8e61b9e41627e8",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "2 Power Lookup Text",
+        "label": "Power",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1160,
+        "y": 2940,
+        "wires": []
+    },
+    {
+        "id": "6d31d7c582997a74",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "8e8e61b9e41627e8",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "4 Class Lookup Text",
+        "label": "Class",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 920,
+        "y": 2980,
+        "wires": []
+    },
+    {
+        "id": "536753de214930c5",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Class",
+        "func": "msg.payload = global.get('class');\n\nif (msg.payload == undefined);\n{\n    msg.payload = undefined\n    return msg;\n}\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 2980,
+        "wires": [
+            [
+                "fde6b716b846a1b9"
+            ]
+        ]
+    },
+    {
+        "id": "301aa47149e30630",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 2940,
+        "wires": [
+            [
+                "a72c526751b53a5f"
+            ]
+        ]
+    },
+    {
+        "id": "1809c2b3d5f2e56c",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 2980,
+        "wires": [
+            [
+                "536753de214930c5"
+            ]
+        ]
+    },
+    {
+        "id": "ae73011dbaa0f1ee",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 2880,
+        "wires": [
+            [
+                "dc4625ed1bfbf5df"
+            ]
+        ]
+    },
+    {
+        "id": "dc4625ed1bfbf5df",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Status",
+        "func": "msg.payload = global.get('livedata')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"true\";\n    return msg;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 2880,
+        "wires": [
+            [
+                "1d2e0efe1531b4eb"
             ]
         ]
     },
@@ -33216,7 +34681,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 350,
+        "x": 150,
         "y": 220,
         "wires": [
             [
@@ -33229,13 +34694,13 @@
         "type": "function",
         "z": "3e52b5d54104d7f0",
         "name": "Prep data",
-        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
+        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category;class;OS_Type;livedata\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 400,
         "y": 220,
         "wires": [
             [
@@ -33249,7 +34714,7 @@
         "z": "3e52b5d54104d7f0",
         "name": "Save global variables",
         "info": "",
-        "x": 372,
+        "x": 172,
         "y": 175,
         "wires": []
     },
@@ -33279,12 +34744,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": "",
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 290,
+        "x": 300,
         "y": 500,
         "wires": [
             [
@@ -33297,16 +34762,17 @@
         "type": "file",
         "z": "3e52b5d54104d7f0",
         "name": "",
-        "filename": "/home/pi/global.json",
+        "filename": "global.json",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "x": 960,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "e58232f49764e24f",
-                "80a3a373ae6e2eda"
+                "80a3a373ae6e2eda",
+                "ff541f0fdc6e0813"
             ]
         ]
     },
@@ -33315,8 +34781,9 @@
         "type": "file in",
         "z": "3e52b5d54104d7f0",
         "name": "",
-        "filename": "/home/pi/global.json",
+        "filename": "global.json",
         "format": "utf8",
+        "allProps": false,
         "x": 580,
         "y": 500,
         "wires": [
@@ -33347,11 +34814,11 @@
         "type": "json",
         "z": "3e52b5d54104d7f0",
         "name": "",
-        "x": 750,
+        "x": 550,
         "y": 220,
         "wires": [
             [
-                "4cb14d0.afc25b4"
+                "e2445f2b80bc515e"
             ]
         ]
     },
@@ -33377,10 +34844,12 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1290,
-        "y": 220,
+        "x": 1450,
+        "y": 180,
         "wires": [
-            []
+            [
+                "7d9aa86aac29d6cd"
+            ]
         ]
     },
     {
@@ -33389,7 +34858,7 @@
         "z": "3e52b5d54104d7f0",
         "name": "",
         "group": "535f5d4509d91b5e",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -33403,7 +34872,7 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 360,
+        "x": 160,
         "y": 280,
         "wires": [
             [
@@ -33430,8 +34899,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 280,
+        "x": 1440,
+        "y": 260,
         "wires": [
             [
                 "7d74c21038089afd"
@@ -33453,7 +34922,7 @@
         "className": "",
         "topic": "",
         "name": "Backup Dialog Box",
-        "x": 1650,
+        "x": 1750,
         "y": 280,
         "wires": [
             []
@@ -33465,7 +34934,7 @@
         "z": "3e52b5d54104d7f0",
         "name": "",
         "group": "535f5d4509d91b5e",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -33497,7 +34966,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Backup File Complete From global.json",
+                "to": "Restore Complete From global.json",
                 "tot": "str"
             }
         ],
@@ -33629,7 +35098,7 @@
         "z": "3e52b5d54104d7f0",
         "name": "Upgrade Contest Dashboard Button",
         "group": "71cb3368617e6c9e",
-        "order": 4,
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -33718,7 +35187,7 @@
         "z": "3e52b5d54104d7f0",
         "name": "Manual Reboot Button",
         "group": "71cb3368617e6c9e",
-        "order": 6,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -33781,6 +35250,227 @@
                 "821bb77829102950"
             ]
         ]
+    },
+    {
+        "id": "ac04ed91a725685c",
+        "type": "ui_dropdown",
+        "z": "3e52b5d54104d7f0",
+        "name": "OS Type Dropdown",
+        "label": "OS Type",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "535f5d4509d91b5e",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Linux",
+                "value": "linux",
+                "type": "str"
+            },
+            {
+                "label": "Windows",
+                "value": "windows",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "4ef75448c0a0727e"
+            ]
+        ]
+    },
+    {
+        "id": "4ef75448c0a0727e",
+        "type": "function",
+        "z": "3e52b5d54104d7f0",
+        "name": "Set OS",
+        "func": "x = msg.payload\nglobal.set('OS_Type',x)\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 100,
+        "wires": [
+            [
+                "b1ecb8f1e850c3aa"
+            ]
+        ]
+    },
+    {
+        "id": "4563a2255fd10963",
+        "type": "inject",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "d92537707e675d78"
+            ]
+        ]
+    },
+    {
+        "id": "4ebc90a89d058982",
+        "type": "comment",
+        "z": "3e52b5d54104d7f0",
+        "name": "OS Type",
+        "info": "",
+        "x": 180,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d92537707e675d78",
+        "type": "function",
+        "z": "3e52b5d54104d7f0",
+        "name": "Get OS Type",
+        "func": "msg.payload = global.get('OS_Type')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"linux\";\n    return msg;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "ac04ed91a725685c"
+            ]
+        ]
+    },
+    {
+        "id": "b1ecb8f1e850c3aa",
+        "type": "ui_text",
+        "z": "3e52b5d54104d7f0",
+        "group": "535f5d4509d91b5e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "OS Type",
+        "label": "OS Type",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 920,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e2445f2b80bc515e",
+        "type": "switch",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "property": "OS_Type",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "linux",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OSX",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "windows",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "4cb14d0.afc25b4"
+            ],
+            [],
+            [
+                "9d6f6c5738444b27"
+            ]
+        ]
+    },
+    {
+        "id": "9d6f6c5738444b27",
+        "type": "file",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "filename": "%USERPROFILE%\\documents\\global.json",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 1030,
+        "y": 240,
+        "wires": [
+            [
+                "e58232f49764e24f",
+                "80a3a373ae6e2eda"
+            ]
+        ]
+    },
+    {
+        "id": "ff541f0fdc6e0813",
+        "type": "debug",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7d9aa86aac29d6cd",
+        "type": "debug",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 140,
+        "wires": []
     },
     {
         "id": "bb1f3c069392c7e7",
@@ -36822,6 +38512,528 @@
         "wires": [
             [
                 "de48727be275102f"
+            ]
+        ]
+    },
+    {
+        "id": "1e2b62f78c981761",
+        "type": "function",
+        "z": "3968f5792af364de",
+        "name": "radiosport.live score data",
+        "func": "\n// This node receives the score packet from N1MM and then pulls out the following items\n// Total # of QSOs\n// Total # of Mults\n// Total # of Points\n// The function then that data plus other data that is calculated in SQL commands and sends that data out in JSON format.\n\n// Total # of QSOs\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos)\n        \n    }\n    \n}\n\n\n//Total # of Mults\nif (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',0)\n}\n\narraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\n\n\n//Total # of Points\nif (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n}\n\narraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        \n    }\n    \n}\n\n\nlet currentQrate = global.get(\"#currentQrate\");\n\n\n\nmsg.payload = {\n    \"type\":\"score\",\n    \"contest\":msg.payload.dynamicresults.contest[0],\n    \"call\":msg.payload.dynamicresults.call[0],\n    \"power\":msg.payload.dynamicresults.class[0].$.power,\n    \"assisted\":msg.payload.dynamicresults.class[0].$.assisted,\n    \"transmitter\":msg.payload.dynamicresults.class[0].$.transmitter,\n    \"ops\":msg.payload.dynamicresults.class[0].$.ops,\n    \"bands\":msg.payload.dynamicresults.class[0].$.bands,\n    \"mode\":msg.payload.dynamicresults.class[0].$.mode,\n    \"totalnoqsos\":totalnoqsos, \n    \"totalmults\":totalmults, \n    \"totalpoints\":totalpoints,\n    \"currentQrate\":currentQrate,\n    \"timestamp\":msg.payload.dynamicresults.timestamp[0]\n};\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "0cb5764a0d3bb049",
+                "56bdc7c920799869"
+            ]
+        ]
+    },
+    {
+        "id": "0cb5764a0d3bb049",
+        "type": "json",
+        "z": "3968f5792af364de",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 690,
+        "y": 180,
+        "wires": [
+            [
+                "8fef24f610992b8e"
+            ]
+        ]
+    },
+    {
+        "id": "3b6d91307549713b",
+        "type": "udp out",
+        "z": "3968f5792af364de",
+        "name": "",
+        "addr": "144.202.50.198",
+        "iface": "",
+        "port": "12062",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 1020,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "77252a3ad3a5f5aa",
+        "type": "link in",
+        "z": "3968f5792af364de",
+        "name": "Radiosport Score IN",
+        "links": [
+            "aec65d796aed9cee"
+        ],
+        "x": 255,
+        "y": 180,
+        "wires": [
+            [
+                "1e2b62f78c981761",
+                "269d0dd2e42cd701"
+            ]
+        ]
+    },
+    {
+        "id": "56bdc7c920799869",
+        "type": "debug",
+        "z": "3968f5792af364de",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "269d0dd2e42cd701",
+        "type": "debug",
+        "z": "3968f5792af364de",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "fd220d20c3727d7e",
+        "type": "link in",
+        "z": "3968f5792af364de",
+        "name": "Radiosport QSO & Home IN",
+        "links": [
+            "4320ff577c7cb858"
+        ],
+        "x": 255,
+        "y": 380,
+        "wires": [
+            [
+                "42d44fa7c3361f83",
+                "e142261fff9cee08",
+                "da61edac06f1db38"
+            ]
+        ]
+    },
+    {
+        "id": "4f2368c8ae71312b",
+        "type": "comment",
+        "z": "3968f5792af364de",
+        "name": "Score Data",
+        "info": "",
+        "x": 250,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ccf77a386d6afdb1",
+        "type": "debug",
+        "z": "3968f5792af364de",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "bcb48af62a6314d3",
+        "type": "json",
+        "z": "3968f5792af364de",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 850,
+        "y": 380,
+        "wires": [
+            [
+                "ccf77a386d6afdb1",
+                "7cc70ad33a74db3e"
+            ]
+        ]
+    },
+    {
+        "id": "54931d388d71eb79",
+        "type": "debug",
+        "z": "3968f5792af364de",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "42d44fa7c3361f83",
+        "type": "function",
+        "z": "3968f5792af364de",
+        "name": "radiosport.live qso data",
+        "func": "\n\n\nmsg.original.type = \"qso\";\nmsg.original.homelat = [global.get(\"homelat\")];\nmsg.original.homelon = [global.get(\"homelon\")];\nmsg.original.qsolat = [msg.payload.lat];\nmsg.original.qsolon = [msg.payload.lon];\nmsg.original.distance_km = [msg.payload.km];\nmsg.original.distance_miles = [msg.payload.distance_miles];\n\nmsg.payload = msg.original;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "54931d388d71eb79",
+                "bcb48af62a6314d3"
+            ]
+        ]
+    },
+    {
+        "id": "508fa6db79205795",
+        "type": "udp out",
+        "z": "3968f5792af364de",
+        "name": "",
+        "addr": "144.202.50.198",
+        "iface": "",
+        "port": "12061",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 1240,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "da61edac06f1db38",
+        "type": "function",
+        "z": "3968f5792af364de",
+        "name": "radiosport.live home data",
+        "func": "let homelat = global.get(\"homelat\");\nlet homelon = global.get(\"homelon\");\nlet contestcall = global.get(\"contestcallsign\");\nlet currentQrate = global.get(\"currentQrate\");\nlet radio1rate = global.get(\"#radio1rate\");\nlet radio2rate = global.get(\"#radio2rate\");\n\nmsg.payload = {\n    \"type\":\"home\",\n    \"contestcall\":contestcall,\n    \"currentqrate\":currentQrate,\n    \"op\":msg.payload.op,\n    \"band\":msg.payload.band,\n    \"mode\":msg.payload.band,\n    \"section\":msg.payload.section,\n    \"homelat\":homelat,\n    \"homelon\":homelon,\n    \"radio1rate\":radio1rate,\n    \"radio2rate\":radio2rate\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "b631127b17805704"
+            ]
+        ]
+    },
+    {
+        "id": "e142261fff9cee08",
+        "type": "debug",
+        "z": "3968f5792af364de",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b631127b17805704",
+        "type": "delay",
+        "z": "3968f5792af364de",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 420,
+        "wires": [
+            [
+                "bcb48af62a6314d3",
+                "2f5cf65419073efa"
+            ]
+        ]
+    },
+    {
+        "id": "ec08c4c0b055d4fe",
+        "type": "link in",
+        "z": "3968f5792af364de",
+        "name": "Radiosport Radio IN",
+        "links": [
+            "15fa6dac50ec3359",
+            "3e86130caa4f1f80"
+        ],
+        "x": 255,
+        "y": 600,
+        "wires": [
+            [
+                "d1c86a13d02bc955"
+            ]
+        ]
+    },
+    {
+        "id": "e7d6e6ba63fea092",
+        "type": "debug",
+        "z": "3968f5792af364de",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d1c86a13d02bc955",
+        "type": "function",
+        "z": "3968f5792af364de",
+        "name": "radiosport.live radio data",
+        "func": "msg.original = msg.payload;\n\ncontestcallsign = global.get(\"contestcallsign\");\n\nmsg.original.RadioInfo.contestcallsign = [contestcallsign];\nmsg.original.type = \"radio\"\n\nmsg.payload = msg.original;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 600,
+        "wires": [
+            [
+                "207636eeb861d24a",
+                "e7d6e6ba63fea092"
+            ]
+        ]
+    },
+    {
+        "id": "207636eeb861d24a",
+        "type": "delay",
+        "z": "3968f5792af364de",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 600,
+        "wires": [
+            [
+                "d3ebf7655158fdc9"
+            ]
+        ]
+    },
+    {
+        "id": "46597bbb893f9a11",
+        "type": "debug",
+        "z": "3968f5792af364de",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "d3ebf7655158fdc9",
+        "type": "json",
+        "z": "3968f5792af364de",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 850,
+        "y": 600,
+        "wires": [
+            [
+                "46597bbb893f9a11",
+                "34159e15a003b83e"
+            ]
+        ]
+    },
+    {
+        "id": "b5e6b3c2f3728989",
+        "type": "udp out",
+        "z": "3968f5792af364de",
+        "name": "",
+        "addr": "144.202.50.198",
+        "iface": "",
+        "port": "12061",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 1240,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2f5cf65419073efa",
+        "type": "debug",
+        "z": "3968f5792af364de",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "dee918ea1d22ebe9",
+        "type": "comment",
+        "z": "3968f5792af364de",
+        "name": "QSO & Home Data",
+        "info": "",
+        "x": 320,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c78fefeefe826f96",
+        "type": "comment",
+        "z": "3968f5792af364de",
+        "name": "Radio Data",
+        "info": "",
+        "x": 290,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "232d36733b246d85",
+        "type": "comment",
+        "z": "3968f5792af364de",
+        "name": "Sending to Radiosport.live via UDP",
+        "info": "",
+        "x": 1620,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8fef24f610992b8e",
+        "type": "gate",
+        "z": "3968f5792af364de",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": true,
+        "storeName": "memory",
+        "x": 830,
+        "y": 180,
+        "wires": [
+            [
+                "3b6d91307549713b"
+            ]
+        ]
+    },
+    {
+        "id": "7cc70ad33a74db3e",
+        "type": "gate",
+        "z": "3968f5792af364de",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": true,
+        "storeName": "memory",
+        "x": 1010,
+        "y": 380,
+        "wires": [
+            [
+                "508fa6db79205795"
+            ]
+        ]
+    },
+    {
+        "id": "34159e15a003b83e",
+        "type": "gate",
+        "z": "3968f5792af364de",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": true,
+        "storeName": "memory",
+        "x": 1010,
+        "y": 600,
+        "wires": [
+            [
+                "b5e6b3c2f3728989"
             ]
         ]
     },
