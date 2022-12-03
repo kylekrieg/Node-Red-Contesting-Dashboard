@@ -387,9 +387,7 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159,
-        "w": 255,
-        "h": 482
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -413,9 +411,7 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -439,9 +435,7 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 482
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -466,9 +460,7 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 482
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -483,9 +475,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -500,9 +490,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -526,9 +514,7 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -552,9 +538,7 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -591,9 +575,7 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679,
-        "w": 2032,
-        "h": 282
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -635,9 +617,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -661,9 +641,7 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 281,
-        "h": 482
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -887,9 +865,7 @@
             "925cebb6bacad025"
         ],
         "x": 774,
-        "y": 559,
-        "w": 792,
-        "h": 522
+        "y": 559
     },
     {
         "id": "f01baabf4527b6e5",
@@ -936,9 +912,7 @@
             "21fe16ca5cbfc06b"
         ],
         "x": 134,
-        "y": 39,
-        "w": 1822,
-        "h": 482
+        "y": 39
     },
     {
         "id": "6c1673638929b26d",
@@ -977,9 +951,7 @@
             "5c60f3c47791458b"
         ],
         "x": 94,
-        "y": 659,
-        "w": 1792,
-        "h": 322
+        "y": 659
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -8237,7 +8209,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Label +  Add Multis + Exchange",
-        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\ndelete msg.payload.ID\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n    msg.payload.distance_km = 0;\n    msg.payload.distance_miles = 0;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\ndelete msg.payload.ID\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\" || contesttype == \"all\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n    msg.payload.distance_km = 0;\n    msg.payload.distance_miles = 0;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -27826,6 +27798,11 @@
                 "label": "Do Not Show Exchange",
                 "value": "blank",
                 "type": "str"
+            },
+            {
+                "label": "Full Exchange",
+                "value": "all",
+                "type": "str"
             }
         ],
         "payload": "",
@@ -27855,7 +27832,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Set Contest Type",
-        "func": "x = msg.payload\nglobal.set('contesttype',x)\nreturn;",
+        "func": "let x = msg.payload\nglobal.set('contesttype',x)\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -28083,7 +28060,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Contest Type",
-        "func": "contesttype = global.get('contesttype')\n\nif (contesttype == null)\n{\n    global.set('contesttype','stateonly')\n    msg.payload = \"statesonly\"\n}\n\nmsg.payload = contesttype;\n\nreturn msg;",
+        "func": "let contesttype = global.get('contesttype')\n\nif (contesttype == null)\n{\n    global.set('contesttype','stateonly')\n    msg.payload = \"statesonly\"\n}\n\nmsg.payload = contesttype;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
