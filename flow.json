@@ -669,14 +669,12 @@
         "id": "4f4b9f0c82968b60",
         "type": "group",
         "z": "407d2b774fe67647",
+        "name": "Score UDP",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
+            "fill": "#c8e7a7",
             "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label-position": "ne",
+            "color": "#000000"
         },
         "nodes": [
             "0178697fb442d801",
@@ -718,87 +716,36 @@
         "id": "81692a3cb68d6cde",
         "type": "group",
         "z": "407d2b774fe67647",
+        "name": "Radio UDP",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
+            "fill": "#c8e7a7",
             "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "label-position": "ne",
+            "color": "#000000"
         },
         "nodes": [
-            "1497c72e88a8f6b1",
-            "a74a987615dd4bb9",
             "4fdbbfe296a88bce",
-            "cab897702f8a6f57",
-            "fb911af0905d8f5d",
-            "144f676e5802f76c",
-            "f9c9ed275443b030",
-            "b946bc8caa8d1dfa",
-            "b9e129bdae4de517",
-            "323b33d53e2baade",
-            "5c688773c88f9f41",
-            "ccb12f5a5e87937a",
-            "27f4e52f97117294",
             "f56678090927861d",
-            "b1abd7f75fd32f6f",
-            "3d1ebae60e058858",
-            "0baeb2e7ae556661",
-            "89588cb6bf69a8d0",
-            "97aba946591c7289",
-            "d37ea6046424b974",
             "5d82a0a17d0f57ea",
             "bd61ab676c6f7232",
             "3d795eb91a1d2b3d",
             "d67c999eabb4aba0",
             "3e86130caa4f1f80",
-            "d9503f18f29524db",
-            "5bbc72a4e604df32",
-            "5a5a85080d107e92",
-            "8a9601bf0a7a7faa",
-            "572d2215a6ea16bb",
-            "7aa65e21deb3bbf5",
             "3105183456c5bc51",
             "6eccad64a2223ff8",
             "334aadb089f6f0c0",
             "15fa6dac50ec3359",
             "bb7fdde37dcf367e",
-            "d0b1af6883fc61b1",
-            "644bc9391ec895bf",
-            "9ac7455179b0e1d0",
-            "41776f0e7dfe6145",
-            "214b730a1dfad6cb",
-            "d6a02ccab960310f",
-            "379a02b32eb2de49",
-            "88be1b74fa6788be",
-            "72403bb4391a1d55",
-            "d87f990426df6b87",
-            "e60f3cadbc4e78ff",
-            "68eee47c38859dda",
-            "90474210b68e90b0",
-            "06389f3eea5c1260",
-            "8de09b93172d4977",
-            "c28f1c9baeeba95d",
-            "451c0f81249ee073",
-            "b39377b110c0549b",
-            "79320f61b0466a60",
-            "ea7ca8bfbf26850d",
-            "470f388df8203a1f",
-            "743d6a9744bd2b9f",
-            "bd50342bd0c916fa",
-            "bb5538fd7ccf2b59",
             "f6305d04b2aeb44c",
             "6351dc9d0c3ec453",
-            "eb5d10e3d8e57f2d",
-            "e4e19daf40493fb9",
             "6176c210be856fa7",
-            "9ed94619f709cb71"
+            "a9afc3cb2db49407",
+            "94f44b7ea0e29d1d"
         ],
         "x": 14,
-        "y": 1459,
-        "w": 2552,
-        "h": 982
+        "y": 1453,
+        "w": 2578,
+        "h": 1034
     },
     {
         "id": "d48758cdf0c8991d",
@@ -806,7 +753,9 @@
         "z": "407d2b774fe67647",
         "name": "Dashboard Map, QSO Exchange & Timers",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#ffdf7f",
+            "color": "#000000"
         },
         "nodes": [
             "c9f5c786.410838",
@@ -919,7 +868,7 @@
             "9d0e444ab32a06f9",
             "8834c50bc7d9a366"
         ],
-        "x": 2354,
+        "x": 2314,
         "y": 839,
         "w": 1912,
         "h": 602
@@ -953,7 +902,7 @@
             "label": true,
             "label-position": "ne",
             "color": "#000000",
-            "fill-opacity": "0.55"
+            "fill-opacity": "0.94"
         },
         "nodes": [
             "b560bd86dc5c87f6",
@@ -970,6 +919,185 @@
         "y": 79,
         "w": 1032,
         "h": 162
+    },
+    {
+        "id": "a9afc3cb2db49407",
+        "type": "group",
+        "z": "407d2b774fe67647",
+        "g": "81692a3cb68d6cde",
+        "name": "Radio1",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000",
+            "label-position": "ne"
+        },
+        "nodes": [
+            "8de09b93172d4977",
+            "06389f3eea5c1260",
+            "e60f3cadbc4e78ff",
+            "72403bb4391a1d55",
+            "eb5d10e3d8e57f2d",
+            "41776f0e7dfe6145",
+            "9ac7455179b0e1d0",
+            "644bc9391ec895bf",
+            "144f676e5802f76c",
+            "d0b1af6883fc61b1",
+            "cab897702f8a6f57",
+            "1497c72e88a8f6b1",
+            "b946bc8caa8d1dfa",
+            "323b33d53e2baade",
+            "b9e129bdae4de517",
+            "b1abd7f75fd32f6f",
+            "79320f61b0466a60",
+            "b39377b110c0549b",
+            "5bbc72a4e604df32",
+            "e4e19daf40493fb9",
+            "3d1ebae60e058858",
+            "451c0f81249ee073",
+            "572d2215a6ea16bb",
+            "5a5a85080d107e92",
+            "ea7ca8bfbf26850d",
+            "0baeb2e7ae556661",
+            "9ed94619f709cb71"
+        ],
+        "x": 1014,
+        "y": 1479,
+        "w": 1552,
+        "h": 482
+    },
+    {
+        "id": "94f44b7ea0e29d1d",
+        "type": "group",
+        "z": "407d2b774fe67647",
+        "g": "81692a3cb68d6cde",
+        "name": "Radio2",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "label-position": "ne",
+            "color": "#000000"
+        },
+        "nodes": [
+            "c28f1c9baeeba95d",
+            "d87f990426df6b87",
+            "68eee47c38859dda",
+            "90474210b68e90b0",
+            "214b730a1dfad6cb",
+            "379a02b32eb2de49",
+            "88be1b74fa6788be",
+            "d6a02ccab960310f",
+            "f9c9ed275443b030",
+            "fb911af0905d8f5d",
+            "a74a987615dd4bb9",
+            "ccb12f5a5e87937a",
+            "5c688773c88f9f41",
+            "97aba946591c7289",
+            "bd50342bd0c916fa",
+            "7aa65e21deb3bbf5",
+            "8a9601bf0a7a7faa",
+            "bb5538fd7ccf2b59",
+            "d37ea6046424b974",
+            "89588cb6bf69a8d0",
+            "743d6a9744bd2b9f",
+            "470f388df8203a1f",
+            "d9503f18f29524db",
+            "27f4e52f97117294"
+        ],
+        "x": 1074,
+        "y": 1979,
+        "w": 1392,
+        "h": 482
+    },
+    {
+        "id": "f01baabf4527b6e5",
+        "type": "group",
+        "z": "1c66bd27e16a3fec",
+        "name": "Score UDP",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true,
+            "label-position": "ne",
+            "color": "#000000"
+        },
+        "nodes": [
+            "1e5d975d4f33a469",
+            "7d228ea50d42e333",
+            "95dee3dbb21d6492",
+            "1af14f7f89b29f60",
+            "589f1d4180adfc19",
+            "63b9afc11deec0ca",
+            "40f7b8d29f1a593a",
+            "826117837339278a",
+            "a8d691c04ea6cbf7",
+            "4ae0a908ac9a4dce",
+            "ec8cad684cf4500a",
+            "812f9d1a536fe289",
+            "740fa20ee427ed88",
+            "71ba52668f48ab6c",
+            "407e8deceb6ad9d3",
+            "91e3a9b7825238b6",
+            "677d263669792c2d",
+            "8d88aedc41864cf8",
+            "547cf705c08f3fee",
+            "41f8c81cbde2390b",
+            "90a21e8778a42633",
+            "03b5ea45a14bec38",
+            "76624f15bec4c509",
+            "11439f8ac4e3b895",
+            "9b5ffa967054d1a9",
+            "f4935efee5594591",
+            "aa50254808a938c8",
+            "1edd5af6eed6044f",
+            "43d361d9eba3f06e",
+            "0cadcaf22f887a0e",
+            "21fe16ca5cbfc06b"
+        ],
+        "x": 134,
+        "y": 39,
+        "w": 1822,
+        "h": 482
+    },
+    {
+        "id": "6c1673638929b26d",
+        "type": "group",
+        "z": "1c66bd27e16a3fec",
+        "name": "Radio UDP Extension",
+        "style": {
+            "label": true,
+            "fill": "#c8e7a7",
+            "fill-opacity": "0.61",
+            "label-position": "ne",
+            "color": "#000000"
+        },
+        "nodes": [
+            "93a6eb43a0cd1622",
+            "130b2eeddfbf75b0",
+            "3b9f0341530d56a7",
+            "95f6f96670a6b08a",
+            "9cfd21c0bd51285b",
+            "fed8216c6cda245c",
+            "91725949fc3edaf2",
+            "a819ca8d3f060472",
+            "7f90d48a29cf7912",
+            "4f839ad8b80a0658",
+            "c61ab508b6b82808",
+            "81242aec4c4bf65a",
+            "d1da622b197520ac",
+            "d5b128cfd798ac47",
+            "ded47173803bd33e",
+            "de40d8ac2d9026c8",
+            "ec4d056dcc3db216",
+            "96690058796bd634",
+            "71ef26e8c3355bec",
+            "93963dc560fcab1e",
+            "3e0f5f6001e77450",
+            "5c60f3c47791458b"
+        ],
+        "x": 94,
+        "y": 659,
+        "w": 1792,
+        "h": 322
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -6739,7 +6867,7 @@
         "id": "1497c72e88a8f6b1",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "group": "d5edca762660bedf",
         "order": 1,
         "width": 4,
@@ -6750,14 +6878,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1520,
-        "y": 1680,
+        "y": 1700,
         "wires": []
     },
     {
         "id": "a74a987615dd4bb9",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "group": "1fd9d5a5d988cd1e",
         "order": 1,
         "width": 4,
@@ -6768,7 +6896,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1540,
-        "y": 2220,
+        "y": 2240,
         "wires": []
     },
     {
@@ -6795,7 +6923,7 @@
         "repair": false,
         "outputs": 2,
         "x": 920,
-        "y": 1720,
+        "y": 1740,
         "wires": [
             [
                 "1497c72e88a8f6b1",
@@ -6824,7 +6952,7 @@
         "id": "cab897702f8a6f57",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "Get Spot Freq",
         "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
         "outputs": 1,
@@ -6833,7 +6961,7 @@
         "finalize": "",
         "libs": [],
         "x": 1480,
-        "y": 1720,
+        "y": 1740,
         "wires": [
             [
                 "144f676e5802f76c"
@@ -6844,7 +6972,7 @@
         "id": "fb911af0905d8f5d",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "Get Spot Freq",
         "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
         "outputs": 1,
@@ -6853,7 +6981,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 2180,
+        "y": 2200,
         "wires": [
             [
                 "f9c9ed275443b030"
@@ -6864,7 +6992,7 @@
         "id": "144f676e5802f76c",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "group": "d5edca762660bedf",
         "order": 3,
         "width": 5,
@@ -6875,14 +7003,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1770,
-        "y": 1720,
+        "y": 1740,
         "wires": []
     },
     {
         "id": "f9c9ed275443b030",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "group": "1fd9d5a5d988cd1e",
         "order": 3,
         "width": 5,
@@ -6893,14 +7021,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1750,
-        "y": 2180,
+        "y": 2200,
         "wires": []
     },
     {
         "id": "b946bc8caa8d1dfa",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "group": "d5edca762660bedf",
         "order": 2,
         "width": 3,
@@ -6911,14 +7039,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1510,
-        "y": 1640,
+        "y": 1660,
         "wires": []
     },
     {
         "id": "b9e129bdae4de517",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "Get Status",
         "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
         "outputs": 1,
@@ -6927,7 +7055,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 1600,
+        "y": 1620,
         "wires": [
             [
                 "323b33d53e2baade"
@@ -6938,7 +7066,7 @@
         "id": "323b33d53e2baade",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "group": "d5edca762660bedf",
         "order": 4,
         "width": 3,
@@ -6949,14 +7077,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1520,
-        "y": 1600,
+        "y": 1620,
         "wires": []
     },
     {
         "id": "5c688773c88f9f41",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "group": "1fd9d5a5d988cd1e",
         "order": 4,
         "width": 3,
@@ -6967,14 +7095,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1540,
-        "y": 2300,
+        "y": 2320,
         "wires": []
     },
     {
         "id": "ccb12f5a5e87937a",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "group": "1fd9d5a5d988cd1e",
         "order": 2,
         "width": 3,
@@ -6985,14 +7113,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1530,
-        "y": 2260,
+        "y": 2280,
         "wires": []
     },
     {
         "id": "27f4e52f97117294",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "Get Status",
         "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
         "outputs": 1,
@@ -7001,7 +7129,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 2300,
+        "y": 2320,
         "wires": [
             [
                 "5c688773c88f9f41"
@@ -7016,14 +7144,14 @@
         "name": "UDP Radio Data XML",
         "info": "",
         "x": 180,
-        "y": 1660,
+        "y": 1680,
         "wires": []
     },
     {
         "id": "b1abd7f75fd32f6f",
         "type": "template",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "SQL Select Rate",
         "field": "topic",
         "fieldType": "msg",
@@ -7032,7 +7160,7 @@
         "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 1370,
-        "y": 1540,
+        "y": 1560,
         "wires": [
             [
                 "3d1ebae60e058858"
@@ -7043,13 +7171,13 @@
         "id": "3d1ebae60e058858",
         "type": "sqlite",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "mydb": "54f43a06.56d7b4",
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
         "x": 1600,
-        "y": 1540,
+        "y": 1560,
         "wires": [
             [
                 "572d2215a6ea16bb"
@@ -7060,7 +7188,7 @@
         "id": "0baeb2e7ae556661",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "group": "d5edca762660bedf",
         "order": 6,
         "width": 3,
@@ -7071,14 +7199,14 @@
         "layout": "col-center",
         "className": "",
         "x": 2410,
-        "y": 1540,
+        "y": 1560,
         "wires": []
     },
     {
         "id": "89588cb6bf69a8d0",
         "type": "template",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "SQL Select Rate",
         "field": "topic",
         "fieldType": "msg",
@@ -7087,7 +7215,7 @@
         "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 1410,
-        "y": 2360,
+        "y": 2380,
         "wires": [
             [
                 "97aba946591c7289"
@@ -7098,13 +7226,13 @@
         "id": "97aba946591c7289",
         "type": "sqlite",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "mydb": "54f43a06.56d7b4",
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
         "x": 1620,
-        "y": 2360,
+        "y": 2380,
         "wires": [
             [
                 "7aa65e21deb3bbf5"
@@ -7115,7 +7243,7 @@
         "id": "d37ea6046424b974",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "group": "1fd9d5a5d988cd1e",
         "order": 6,
         "width": 3,
@@ -7126,7 +7254,7 @@
         "layout": "col-center",
         "className": "",
         "x": 2350,
-        "y": 2360,
+        "y": 2380,
         "wires": []
     },
     {
@@ -7142,7 +7270,7 @@
         "group": "",
         "datatype": "utf8",
         "x": 100,
-        "y": 1720,
+        "y": 1740,
         "wires": [
             [
                 "bd61ab676c6f7232"
@@ -7161,7 +7289,7 @@
         "initialize": "",
         "finalize": "",
         "x": 230,
-        "y": 1720,
+        "y": 1740,
         "wires": [
             [
                 "3d795eb91a1d2b3d"
@@ -7178,7 +7306,7 @@
         "attr": "",
         "chr": "",
         "x": 350,
-        "y": 1720,
+        "y": 1740,
         "wires": [
             [
                 "6eccad64a2223ff8"
@@ -7200,7 +7328,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 720,
-        "y": 1660,
+        "y": 1680,
         "wires": []
     },
     {
@@ -7216,15 +7344,15 @@
             "254a70483d8805dc",
             "ec08c4c0b055d4fe"
         ],
-        "x": 875,
-        "y": 1660,
+        "x": 905,
+        "y": 1700,
         "wires": []
     },
     {
         "id": "d9503f18f29524db",
         "type": "delay",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "30S Drop Limit",
         "pauseType": "rate",
         "timeout": "30",
@@ -7239,7 +7367,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1180,
-        "y": 2360,
+        "y": 2380,
         "wires": [
             [
                 "89588cb6bf69a8d0"
@@ -7250,7 +7378,7 @@
         "id": "5bbc72a4e604df32",
         "type": "delay",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "30S Drop Limit",
         "pauseType": "rate",
         "timeout": "30",
@@ -7265,7 +7393,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1120,
-        "y": 1540,
+        "y": 1560,
         "wires": [
             [
                 "b1abd7f75fd32f6f"
@@ -7276,10 +7404,10 @@
         "id": "5a5a85080d107e92",
         "type": "subflow:c967abe5be484ee6",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "",
         "x": 1980,
-        "y": 1540,
+        "y": 1560,
         "wires": [
             [
                 "ea7ca8bfbf26850d"
@@ -7296,10 +7424,10 @@
         "id": "8a9601bf0a7a7faa",
         "type": "subflow:c967abe5be484ee6",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "",
         "x": 1980,
-        "y": 2360,
+        "y": 2380,
         "wires": [
             [
                 "bb5538fd7ccf2b59"
@@ -7316,7 +7444,7 @@
         "id": "572d2215a6ea16bb",
         "type": "change",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "",
         "rules": [
             {
@@ -7333,7 +7461,7 @@
         "to": "",
         "reg": false,
         "x": 1810,
-        "y": 1540,
+        "y": 1560,
         "wires": [
             [
                 "5a5a85080d107e92"
@@ -7344,7 +7472,7 @@
         "id": "7aa65e21deb3bbf5",
         "type": "change",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "",
         "rules": [
             {
@@ -7361,7 +7489,7 @@
         "to": "",
         "reg": false,
         "x": 1790,
-        "y": 2360,
+        "y": 2380,
         "wires": [
             [
                 "8a9601bf0a7a7faa"
@@ -7381,7 +7509,7 @@
         "template": "select max(cast(distance as int)) as distance, operator as operator from qsos;",
         "output": "str",
         "x": 450,
-        "y": 1860,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -7403,7 +7531,7 @@
         "repair": false,
         "outputs": 1,
         "x": 510,
-        "y": 1720,
+        "y": 1740,
         "wires": [
             [
                 "d67c999eabb4aba0",
@@ -7440,7 +7568,7 @@
         "repair": false,
         "outputs": 3,
         "x": 710,
-        "y": 1720,
+        "y": 1740,
         "wires": [
             [
                 "4fdbbfe296a88bce",
@@ -7471,7 +7599,7 @@
             "ec08c4c0b055d4fe"
         ],
         "x": 855,
-        "y": 1760,
+        "y": 1780,
         "wires": []
     },
     {
@@ -7498,7 +7626,7 @@
         "repair": false,
         "outputs": 2,
         "x": 920,
-        "y": 1840,
+        "y": 1860,
         "wires": [
             [
                 "1497c72e88a8f6b1",
@@ -7527,7 +7655,7 @@
         "id": "d0b1af6883fc61b1",
         "type": "switch",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "Function Key Is Empty?",
         "property": "payload.RadioInfo.FunctionKeyCaption[0]",
         "propertyType": "msg",
@@ -7543,7 +7671,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1510,
-        "y": 1760,
+        "y": 1780,
         "wires": [
             [
                 "9ac7455179b0e1d0"
@@ -7557,7 +7685,7 @@
         "id": "644bc9391ec895bf",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "group": "d5edca762660bedf",
         "order": 5,
         "width": 3,
@@ -7568,14 +7696,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1990,
-        "y": 1760,
+        "y": 1780,
         "wires": []
     },
     {
         "id": "9ac7455179b0e1d0",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "Color Change",
         "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
         "outputs": 1,
@@ -7584,7 +7712,7 @@
         "finalize": "",
         "libs": [],
         "x": 1740,
-        "y": 1760,
+        "y": 1780,
         "wires": [
             [
                 "644bc9391ec895bf"
@@ -7595,7 +7723,7 @@
         "id": "41776f0e7dfe6145",
         "type": "delay",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "",
         "pauseType": "delay",
         "timeout": "4",
@@ -7610,7 +7738,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1740,
-        "y": 1800,
+        "y": 1820,
         "wires": [
             [
                 "644bc9391ec895bf"
@@ -7621,7 +7749,7 @@
         "id": "214b730a1dfad6cb",
         "type": "switch",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "Function Key Is Empty?",
         "property": "payload.RadioInfo.FunctionKeyCaption[0]",
         "propertyType": "msg",
@@ -7637,7 +7765,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1510,
-        "y": 2100,
+        "y": 2120,
         "wires": [
             [
                 "379a02b32eb2de49"
@@ -7651,7 +7779,7 @@
         "id": "d6a02ccab960310f",
         "type": "ui_text",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "group": "1fd9d5a5d988cd1e",
         "order": 5,
         "width": 3,
@@ -7662,14 +7790,14 @@
         "layout": "col-center",
         "className": "",
         "x": 1990,
-        "y": 2100,
+        "y": 2120,
         "wires": []
     },
     {
         "id": "379a02b32eb2de49",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "Color Change",
         "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
         "outputs": 1,
@@ -7678,7 +7806,7 @@
         "finalize": "",
         "libs": [],
         "x": 1740,
-        "y": 2100,
+        "y": 2120,
         "wires": [
             [
                 "d6a02ccab960310f"
@@ -7689,7 +7817,7 @@
         "id": "88be1b74fa6788be",
         "type": "delay",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "",
         "pauseType": "delay",
         "timeout": "4",
@@ -7704,7 +7832,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1740,
-        "y": 2140,
+        "y": 2160,
         "wires": [
             [
                 "d6a02ccab960310f"
@@ -7715,7 +7843,7 @@
         "id": "72403bb4391a1d55",
         "type": "ui_led",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "order": 7,
         "group": "d5edca762660bedf",
         "width": 3,
@@ -7735,14 +7863,14 @@
         "showGlow": true,
         "name": "Radio 1 TX Transmit LED",
         "x": 1770,
-        "y": 1860,
+        "y": 1880,
         "wires": []
     },
     {
         "id": "d87f990426df6b87",
         "type": "ui_led",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "order": 7,
         "group": "1fd9d5a5d988cd1e",
         "width": 3,
@@ -7762,14 +7890,14 @@
         "showGlow": true,
         "name": "Radio 2 TX Transmit LED",
         "x": 1770,
-        "y": 2000,
+        "y": 2020,
         "wires": []
     },
     {
         "id": "e60f3cadbc4e78ff",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "Is TX?",
         "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
         "outputs": 1,
@@ -7778,7 +7906,7 @@
         "finalize": "",
         "libs": [],
         "x": 1490,
-        "y": 1860,
+        "y": 1880,
         "wires": [
             [
                 "72403bb4391a1d55",
@@ -7790,7 +7918,7 @@
         "id": "68eee47c38859dda",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "Is TX?",
         "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
         "outputs": 1,
@@ -7799,7 +7927,7 @@
         "finalize": "",
         "libs": [],
         "x": 1490,
-        "y": 2000,
+        "y": 2020,
         "wires": [
             [
                 "d87f990426df6b87"
@@ -7810,7 +7938,7 @@
         "id": "90474210b68e90b0",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "Is Focus?",
         "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\n",
         "outputs": 1,
@@ -7819,7 +7947,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 2040,
+        "y": 2060,
         "wires": [
             [
                 "c28f1c9baeeba95d"
@@ -7830,7 +7958,7 @@
         "id": "06389f3eea5c1260",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "Is Focus?",
         "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
         "outputs": 1,
@@ -7839,7 +7967,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1900,
+        "y": 1920,
         "wires": [
             [
                 "8de09b93172d4977"
@@ -7850,7 +7978,7 @@
         "id": "8de09b93172d4977",
         "type": "ui_led",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "order": 8,
         "group": "d5edca762660bedf",
         "width": 3,
@@ -7870,14 +7998,14 @@
         "showGlow": true,
         "name": "Radio 1 Focus LED",
         "x": 1750,
-        "y": 1900,
+        "y": 1920,
         "wires": []
     },
     {
         "id": "c28f1c9baeeba95d",
         "type": "ui_led",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "order": 8,
         "group": "1fd9d5a5d988cd1e",
         "width": 3,
@@ -7897,20 +8025,20 @@
         "showGlow": true,
         "name": "Radio 2 Focus LED",
         "x": 1750,
-        "y": 2040,
+        "y": 2060,
         "wires": []
     },
     {
         "id": "451c0f81249ee073",
         "type": "sqlite",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "mydb": "54f43a06.56d7b4",
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
         "x": 1600,
-        "y": 1500,
+        "y": 1520,
         "wires": [
             [
                 "572d2215a6ea16bb"
@@ -7921,7 +8049,7 @@
         "id": "b39377b110c0549b",
         "type": "delay",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "30S Drop Limit",
         "pauseType": "rate",
         "timeout": "30",
@@ -7936,7 +8064,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1120,
-        "y": 1500,
+        "y": 1520,
         "wires": [
             [
                 "79320f61b0466a60"
@@ -7947,7 +8075,7 @@
         "id": "79320f61b0466a60",
         "type": "template",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "SQL Select Radio 1 Rate",
         "field": "topic",
         "fieldType": "msg",
@@ -7956,7 +8084,7 @@
         "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and radionr='1' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 1370,
-        "y": 1500,
+        "y": 1520,
         "wires": [
             [
                 "451c0f81249ee073"
@@ -7967,7 +8095,7 @@
         "id": "ea7ca8bfbf26850d",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "Set Label",
         "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\n//radiosport.live data\nlet rate = msg.rate;\nglobal.set(\"#radio1rate\",rate);\n\nreturn msg;",
         "outputs": 1,
@@ -7976,7 +8104,7 @@
         "finalize": "",
         "libs": [],
         "x": 2180,
-        "y": 1540,
+        "y": 1560,
         "wires": [
             [
                 "0baeb2e7ae556661",
@@ -7988,7 +8116,7 @@
         "id": "470f388df8203a1f",
         "type": "delay",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "30S Drop Limit",
         "pauseType": "rate",
         "timeout": "30",
@@ -8003,7 +8131,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1180,
-        "y": 2400,
+        "y": 2420,
         "wires": [
             [
                 "743d6a9744bd2b9f"
@@ -8014,7 +8142,7 @@
         "id": "743d6a9744bd2b9f",
         "type": "template",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "SQL Select Radio 2 Rate",
         "field": "topic",
         "fieldType": "msg",
@@ -8023,7 +8151,7 @@
         "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and radionr='2' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 1390,
-        "y": 2400,
+        "y": 2420,
         "wires": [
             [
                 "bd50342bd0c916fa"
@@ -8034,13 +8162,13 @@
         "id": "bd50342bd0c916fa",
         "type": "sqlite",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "mydb": "54f43a06.56d7b4",
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
         "x": 1620,
-        "y": 2400,
+        "y": 2420,
         "wires": [
             [
                 "7aa65e21deb3bbf5"
@@ -8051,7 +8179,7 @@
         "id": "bb5538fd7ccf2b59",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "94f44b7ea0e29d1d",
         "name": "Set Label",
         "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\n//radiosport.live data\nlet rate = msg.rate;\nglobal.set(\"#radio12ate\",rate);\n\nreturn msg;",
         "outputs": 1,
@@ -8060,7 +8188,7 @@
         "finalize": "",
         "libs": [],
         "x": 2180,
-        "y": 2360,
+        "y": 2380,
         "wires": [
             [
                 "d37ea6046424b974"
@@ -8082,7 +8210,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 820,
-        "y": 2040,
+        "y": 2060,
         "wires": []
     },
     {
@@ -8099,8 +8227,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1040,
-        "y": 1620,
+        "x": 910,
+        "y": 1640,
         "wires": []
     },
     {
@@ -9135,7 +9263,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3100,
+        "x": 3060,
         "y": 900,
         "wires": [
             [
@@ -9164,7 +9292,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 2470,
+        "x": 2430,
         "y": 900,
         "wires": [
             [
@@ -9184,7 +9312,7 @@
         "syntax": "mustache",
         "template": "select count(*) as rate from qsos where timestamp >= datetime('now','-1 hours');",
         "output": "str",
-        "x": 2890,
+        "x": 2850,
         "y": 900,
         "wires": [
             [
@@ -9206,7 +9334,7 @@
         "format": "<font color={{msg.color}}>{{msg.rate}}</font><font color={{msg.color}}> Q's/Hr</font>",
         "layout": "col-center",
         "className": "",
-        "x": 3710,
+        "x": 3670,
         "y": 920,
         "wires": []
     },
@@ -9217,7 +9345,7 @@
         "g": "26cf0678322d1bb6",
         "name": "Calc Current QSO Rate",
         "info": "",
-        "x": 2520,
+        "x": 2480,
         "y": 980,
         "wires": []
     },
@@ -9260,7 +9388,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 4040,
+        "x": 4000,
         "y": 980,
         "wires": [
             []
@@ -9288,7 +9416,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2550,
+        "x": 2510,
         "y": 1120,
         "wires": [
             [
@@ -9305,7 +9433,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3120,
+        "x": 3080,
         "y": 1120,
         "wires": [
             [
@@ -9325,7 +9453,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 3270,
+        "x": 3230,
         "y": 1120,
         "wires": [
             [
@@ -9345,7 +9473,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3460,
+        "x": 3420,
         "y": 1120,
         "wires": [
             [
@@ -9365,7 +9493,7 @@
         "syntax": "mustache",
         "template": "select count(band) as total, band as band from qsos group by band order by length(band) desc;",
         "output": "str",
-        "x": 2930,
+        "x": 2890,
         "y": 1120,
         "wires": [
             [
@@ -9387,7 +9515,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 4110,
+        "x": 4070,
         "y": 1380,
         "wires": []
     },
@@ -9405,7 +9533,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 4100,
+        "x": 4060,
         "y": 1260,
         "wires": []
     },
@@ -9421,7 +9549,7 @@
         "syntax": "mustache",
         "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-1 hours') group by band;",
         "output": "str",
-        "x": 2910,
+        "x": 2870,
         "y": 1040,
         "wires": [
             [
@@ -9450,7 +9578,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 2510,
+        "x": 2470,
         "y": 1040,
         "wires": [
             [
@@ -9467,7 +9595,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3120,
+        "x": 3080,
         "y": 1040,
         "wires": [
             [
@@ -9487,7 +9615,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 3270,
+        "x": 3230,
         "y": 1040,
         "wires": [
             [
@@ -9507,7 +9635,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3480,
+        "x": 3440,
         "y": 1040,
         "wires": [
             [
@@ -9554,7 +9682,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 4050,
+        "x": 4010,
         "y": 1040,
         "wires": [
             []
@@ -9599,7 +9727,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 4020,
+        "x": 3980,
         "y": 1120,
         "wires": [
             []
@@ -9623,7 +9751,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2730,
+        "x": 2690,
         "y": 1120,
         "wires": [
             [
@@ -9649,7 +9777,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2670,
+        "x": 2630,
         "y": 900,
         "wires": [
             [
@@ -9675,7 +9803,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2710,
+        "x": 2670,
         "y": 1040,
         "wires": [
             [
@@ -9705,7 +9833,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2530,
+        "x": 2490,
         "y": 1260,
         "wires": [
             [
@@ -9725,7 +9853,7 @@
         "syntax": "mustache",
         "template": "select count(ismultiplier1+ismultiplier2+ismultiplier3) as rate from qsos where timestamp >= datetime('now','-1 hours');",
         "output": "str",
-        "x": 3150,
+        "x": 3110,
         "y": 1400,
         "wires": [
             [
@@ -9751,7 +9879,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2710,
+        "x": 2670,
         "y": 1260,
         "wires": [
             [
@@ -9781,7 +9909,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2530,
+        "x": 2490,
         "y": 1380,
         "wires": [
             [
@@ -9801,7 +9929,7 @@
         "syntax": "mustache",
         "template": "select operator as operator,\ntotal(points) as points,\ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos\ngroup by operator\norder by score desc;",
         "output": "str",
-        "x": 3150,
+        "x": 3110,
         "y": 1360,
         "wires": [
             [
@@ -9827,7 +9955,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2710,
+        "x": 2670,
         "y": 1380,
         "wires": [
             [
@@ -9841,7 +9969,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "",
-        "x": 3460,
+        "x": 3420,
         "y": 900,
         "wires": [
             [
@@ -9878,7 +10006,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3290,
+        "x": 3250,
         "y": 900,
         "wires": [
             [
@@ -9895,7 +10023,7 @@
         "links": [
             "5e1859619292b1b8"
         ],
-        "x": 3495,
+        "x": 3455,
         "y": 980,
         "wires": [
             [
@@ -9914,7 +10042,7 @@
         "links": [
             "5e1859619292b1b8"
         ],
-        "x": 3675,
+        "x": 3635,
         "y": 1180,
         "wires": [
             [
@@ -9936,7 +10064,7 @@
         "syntax": "mustache",
         "template": "select max(cast(distance as integer)) as max_distance from qsos;",
         "output": "str",
-        "x": 3150,
+        "x": 3110,
         "y": 1280,
         "wires": [
             [
@@ -9953,7 +10081,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3400,
+        "x": 3360,
         "y": 1380,
         "wires": [
             [
@@ -9989,7 +10117,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 2890,
+        "x": 2850,
         "y": 1260,
         "wires": [
             [
@@ -10031,7 +10159,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 2890,
+        "x": 2850,
         "y": 1380,
         "wires": [
             [
@@ -10057,7 +10185,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3620,
+        "x": 3580,
         "y": 1380,
         "wires": [
             [
@@ -10078,7 +10206,7 @@
         "syntax": "mustache",
         "template": "select total(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, operator as operator from qsos group by operator order by multiplier desc;",
         "output": "str",
-        "x": 3150,
+        "x": 3110,
         "y": 1240,
         "wires": [
             [
@@ -10095,7 +10223,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 3400,
+        "x": 3360,
         "y": 1260,
         "wires": [
             [
@@ -10115,7 +10243,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3620,
+        "x": 3580,
         "y": 1260,
         "wires": [
             [
@@ -10138,7 +10266,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4080,
+        "x": 4040,
         "y": 1200,
         "wires": []
     },
@@ -10156,7 +10284,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3850,
+        "x": 3810,
         "y": 1320,
         "wires": []
     },
@@ -10164,7 +10292,7 @@
         "id": "eb5d10e3d8e57f2d",
         "type": "debug",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -10175,14 +10303,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1990,
-        "y": 1820,
+        "y": 1840,
         "wires": []
     },
     {
         "id": "e4e19daf40493fb9",
         "type": "debug",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -10193,7 +10321,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1400,
-        "y": 1800,
+        "y": 1820,
         "wires": []
     },
     {
@@ -10225,7 +10353,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3720,
+        "x": 3680,
         "y": 880,
         "wires": [
             [
@@ -10237,7 +10365,7 @@
         "id": "9ed94619f709cb71",
         "type": "debug",
         "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
+        "g": "a9afc3cb2db49407",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -10248,7 +10376,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2440,
-        "y": 1620,
+        "y": 1640,
         "wires": []
     },
     {
@@ -10385,7 +10513,7 @@
             "f6dcf7276d984efc"
         ],
         "x": 125,
-        "y": 1800,
+        "y": 1820,
         "wires": [
             [
                 "bd61ab676c6f7232"
@@ -24266,6 +24394,7 @@
         "id": "1e5d975d4f33a469",
         "type": "udp in",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "iface": "",
         "port": "12061",
@@ -24285,6 +24414,7 @@
         "id": "7d228ea50d42e333",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "QSO Data Raw",
         "active": false,
         "tosidebar": true,
@@ -24302,6 +24432,7 @@
         "id": "95dee3dbb21d6492",
         "type": "comment",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "UDP XML Score Data",
         "info": "",
         "x": 280,
@@ -24312,6 +24443,7 @@
         "id": "1af14f7f89b29f60",
         "type": "template",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Insert info DB",
         "field": "topic",
         "fieldType": "msg",
@@ -24332,6 +24464,7 @@
         "id": "589f1d4180adfc19",
         "type": "sqlite",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "mydb": "54f43a06.56d7b4",
         "sqlquery": "msg.topic",
         "sql": "",
@@ -24348,6 +24481,7 @@
         "id": "63b9afc11deec0ca",
         "type": "switch",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Add - Delete - Replace - Lookup",
         "property": "payload",
         "propertyType": "msg",
@@ -24398,6 +24532,7 @@
         "id": "40f7b8d29f1a593a",
         "type": "template",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Delete QSO",
         "field": "topic",
         "fieldType": "msg",
@@ -24418,6 +24553,7 @@
         "id": "826117837339278a",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "DB Insert",
         "active": false,
         "tosidebar": true,
@@ -24435,6 +24571,7 @@
         "id": "a8d691c04ea6cbf7",
         "type": "string",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Replace - ",
         "methods": [
             {
@@ -24467,6 +24604,7 @@
         "id": "4ae0a908ac9a4dce",
         "type": "delay",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -24491,6 +24629,7 @@
         "id": "ec8cad684cf4500a",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "DB Replace",
         "active": false,
         "tosidebar": true,
@@ -24508,6 +24647,7 @@
         "id": "812f9d1a536fe289",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "DB Delete",
         "active": false,
         "tosidebar": true,
@@ -24525,6 +24665,7 @@
         "id": "740fa20ee427ed88",
         "type": "xml",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "property": "payload",
         "attr": "",
@@ -24541,6 +24682,7 @@
         "id": "71ba52668f48ab6c",
         "type": "xml",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "property": "payload",
         "attr": "",
@@ -24557,6 +24699,7 @@
         "id": "407e8deceb6ad9d3",
         "type": "xml",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "property": "payload",
         "attr": "",
@@ -24574,6 +24717,7 @@
         "id": "91e3a9b7825238b6",
         "type": "function",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "If Mult Say Mult",
         "func": "let m1 = msg.payload.contactinfo.ismultiplier1[0];\nlet m2 = msg.payload.contactinfo.ismultiplier2[0];\nlet m3 = msg.payload.contactinfo.ismultiplier3[0];\nlet category = global.get('category');\n\nlet op = msg.payload.contactinfo.operator[0];\nlet band1 = msg.payload.contactinfo.band[0];\n\n\nif (m1 == \"1\" || m2 == '1' || m3 == '1')\n{\n    \n    if (category == 'multiop')\n    {\n    msg.payload = \"New Multiplyer from \" + op;\n    return msg;\n    }\n\n    if (category == 'so1v' || category == 'so2r')\n    {\n    msg.payload = \"New Multiplyer\"\n    return msg;\n    }\n    \n}\n\n",
         "outputs": 1,
@@ -24593,6 +24737,7 @@
         "id": "677d263669792c2d",
         "type": "link out",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "QSOs From N1MM OUT",
         "mode": "link",
         "links": [
@@ -24607,6 +24752,7 @@
         "id": "8d88aedc41864cf8",
         "type": "function",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "UTF8",
         "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
         "outputs": 1,
@@ -24627,6 +24773,7 @@
         "id": "547cf705c08f3fee",
         "type": "switch",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "contact or lookup?",
         "property": "payload",
         "propertyType": "msg",
@@ -24660,6 +24807,7 @@
         "id": "41f8c81cbde2390b",
         "type": "change",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Set Type to QSO",
         "rules": [
             {
@@ -24687,6 +24835,7 @@
         "id": "90a21e8778a42633",
         "type": "change",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Set Type to Lookup",
         "rules": [
             {
@@ -24715,6 +24864,7 @@
         "id": "03b5ea45a14bec38",
         "type": "xml",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "property": "payload",
         "attr": "",
@@ -24731,6 +24881,7 @@
         "id": "76624f15bec4c509",
         "type": "xml",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "property": "payload",
         "attr": "",
@@ -24747,6 +24898,7 @@
         "id": "11439f8ac4e3b895",
         "type": "switch",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Say Multi",
         "property": "saymulti",
         "propertyType": "global",
@@ -24770,6 +24922,7 @@
         "id": "93a6eb43a0cd1622",
         "type": "link in",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "Database Radio IN",
         "links": [
             "15fa6dac50ec3359",
@@ -24789,6 +24942,7 @@
         "id": "130b2eeddfbf75b0",
         "type": "template",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "Insert info DB",
         "field": "topic",
         "fieldType": "msg",
@@ -24809,6 +24963,7 @@
         "id": "3b9f0341530d56a7",
         "type": "moment",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "topic": "",
         "input": "payload.timestamp",
@@ -24834,6 +24989,7 @@
         "id": "95f6f96670a6b08a",
         "type": "sqlite",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "mydb": "54f43a06.56d7b4",
         "sqlquery": "msg.topic",
         "sql": "",
@@ -24850,6 +25006,7 @@
         "id": "9cfd21c0bd51285b",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -24866,6 +25023,7 @@
         "id": "fed8216c6cda245c",
         "type": "switch",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "Station Name",
         "property": "payload.RadioInfo.StationName[0]",
         "propertyType": "msg",
@@ -24931,6 +25089,7 @@
         "id": "91725949fc3edaf2",
         "type": "rbe",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "PC1 RBE",
         "func": "rbe",
         "gap": "",
@@ -24952,6 +25111,7 @@
         "id": "a819ca8d3f060472",
         "type": "rbe",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "PC2 RBE",
         "func": "rbe",
         "gap": "",
@@ -24972,6 +25132,7 @@
         "id": "7f90d48a29cf7912",
         "type": "rbe",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "PC3 RBE",
         "func": "rbe",
         "gap": "",
@@ -24992,6 +25153,7 @@
         "id": "4f839ad8b80a0658",
         "type": "rbe",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "PC4 RBE",
         "func": "rbe",
         "gap": "",
@@ -25012,6 +25174,7 @@
         "id": "c61ab508b6b82808",
         "type": "rbe",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "PC5 RBE",
         "func": "rbe",
         "gap": "",
@@ -25032,6 +25195,7 @@
         "id": "81242aec4c4bf65a",
         "type": "rbe",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "PC6 RBE",
         "func": "rbe",
         "gap": "",
@@ -25052,6 +25216,7 @@
         "id": "d1da622b197520ac",
         "type": "change",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "rules": [
             {
@@ -25079,6 +25244,7 @@
         "id": "d5b128cfd798ac47",
         "type": "change",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "rules": [
             {
@@ -25107,6 +25273,7 @@
         "id": "ded47173803bd33e",
         "type": "change",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "rules": [
             {
@@ -25134,6 +25301,7 @@
         "id": "de40d8ac2d9026c8",
         "type": "change",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "rules": [
             {
@@ -25161,6 +25329,7 @@
         "id": "ec4d056dcc3db216",
         "type": "change",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "rules": [
             {
@@ -25188,6 +25357,7 @@
         "id": "96690058796bd634",
         "type": "change",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "rules": [
             {
@@ -25215,6 +25385,7 @@
         "id": "71ef26e8c3355bec",
         "type": "comment",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "UDP Radio Info",
         "info": "This flow inserts the radio data into the qsos database radio table.  Only if the data has changed will the flow log data into the database. \n\nThe filter node is used on each RadioNr to filter out S02R non-changed data.",
         "x": 320,
@@ -25225,6 +25396,7 @@
         "id": "93963dc560fcab1e",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -25242,6 +25414,7 @@
         "id": "3e0f5f6001e77450",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -25259,6 +25432,7 @@
         "id": "5c60f3c47791458b",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "6c1673638929b26d",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -25276,6 +25450,7 @@
         "id": "9b5ffa967054d1a9",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -25293,6 +25468,7 @@
         "id": "f4935efee5594591",
         "type": "play audio",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "voice": "0",
         "x": 1600,
@@ -25303,6 +25479,7 @@
         "id": "aa50254808a938c8",
         "type": "template",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Update Record Info SQL",
         "field": "topic",
         "fieldType": "msg",
@@ -25323,6 +25500,7 @@
         "id": "1edd5af6eed6044f",
         "type": "comment",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "To do",
         "info": "Change flow for a QSO update/change based on new N1MM process. ",
         "x": 460,
@@ -25330,9 +25508,24 @@
         "wires": []
     },
     {
+        "id": "43d361d9eba3f06e",
+        "type": "tcp out",
+        "z": "1c66bd27e16a3fec",
+        "name": "",
+        "host": "${Connect_IP}",
+        "port": "12060",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
         "id": "0cadcaf22f887a0e",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -25350,6 +25543,7 @@
         "id": "21fe16ca5cbfc06b",
         "type": "link in",
         "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
         "name": "Score_N3FJP",
         "links": [
             "47245c8acbda8034"
