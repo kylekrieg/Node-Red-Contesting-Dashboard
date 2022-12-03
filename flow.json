@@ -892,6 +892,96 @@
         "h": 522
     },
     {
+        "id": "f01baabf4527b6e5",
+        "type": "group",
+        "z": "1c66bd27e16a3fec",
+        "name": "Score UDP",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true,
+            "label-position": "ne",
+            "color": "#000000"
+        },
+        "nodes": [
+            "1e5d975d4f33a469",
+            "7d228ea50d42e333",
+            "95dee3dbb21d6492",
+            "1af14f7f89b29f60",
+            "589f1d4180adfc19",
+            "63b9afc11deec0ca",
+            "40f7b8d29f1a593a",
+            "826117837339278a",
+            "a8d691c04ea6cbf7",
+            "4ae0a908ac9a4dce",
+            "ec8cad684cf4500a",
+            "812f9d1a536fe289",
+            "740fa20ee427ed88",
+            "71ba52668f48ab6c",
+            "407e8deceb6ad9d3",
+            "91e3a9b7825238b6",
+            "677d263669792c2d",
+            "8d88aedc41864cf8",
+            "547cf705c08f3fee",
+            "41f8c81cbde2390b",
+            "90a21e8778a42633",
+            "03b5ea45a14bec38",
+            "76624f15bec4c509",
+            "11439f8ac4e3b895",
+            "9b5ffa967054d1a9",
+            "f4935efee5594591",
+            "aa50254808a938c8",
+            "1edd5af6eed6044f",
+            "43d361d9eba3f06e",
+            "0cadcaf22f887a0e",
+            "21fe16ca5cbfc06b"
+        ],
+        "x": 134,
+        "y": 39,
+        "w": 1822,
+        "h": 482
+    },
+    {
+        "id": "6c1673638929b26d",
+        "type": "group",
+        "z": "1c66bd27e16a3fec",
+        "name": "Radio UDP Extension",
+        "style": {
+            "label": true,
+            "fill": "#c8e7a7",
+            "fill-opacity": "0.61",
+            "label-position": "ne",
+            "color": "#000000"
+        },
+        "nodes": [
+            "93a6eb43a0cd1622",
+            "130b2eeddfbf75b0",
+            "3b9f0341530d56a7",
+            "95f6f96670a6b08a",
+            "9cfd21c0bd51285b",
+            "fed8216c6cda245c",
+            "91725949fc3edaf2",
+            "a819ca8d3f060472",
+            "7f90d48a29cf7912",
+            "4f839ad8b80a0658",
+            "c61ab508b6b82808",
+            "81242aec4c4bf65a",
+            "d1da622b197520ac",
+            "d5b128cfd798ac47",
+            "ded47173803bd33e",
+            "de40d8ac2d9026c8",
+            "ec4d056dcc3db216",
+            "96690058796bd634",
+            "71ef26e8c3355bec",
+            "93963dc560fcab1e",
+            "3e0f5f6001e77450",
+            "5c60f3c47791458b"
+        ],
+        "x": 94,
+        "y": 659,
+        "w": 1792,
+        "h": 322
+    },
+    {
         "id": "b5a72874a2f95ce4",
         "type": "group",
         "z": "407d2b774fe67647",
@@ -1008,96 +1098,6 @@
         "y": 1979,
         "w": 1392,
         "h": 482
-    },
-    {
-        "id": "f01baabf4527b6e5",
-        "type": "group",
-        "z": "1c66bd27e16a3fec",
-        "name": "Score UDP",
-        "style": {
-            "fill": "#c8e7a7",
-            "label": true,
-            "label-position": "ne",
-            "color": "#000000"
-        },
-        "nodes": [
-            "1e5d975d4f33a469",
-            "7d228ea50d42e333",
-            "95dee3dbb21d6492",
-            "1af14f7f89b29f60",
-            "589f1d4180adfc19",
-            "63b9afc11deec0ca",
-            "40f7b8d29f1a593a",
-            "826117837339278a",
-            "a8d691c04ea6cbf7",
-            "4ae0a908ac9a4dce",
-            "ec8cad684cf4500a",
-            "812f9d1a536fe289",
-            "740fa20ee427ed88",
-            "71ba52668f48ab6c",
-            "407e8deceb6ad9d3",
-            "91e3a9b7825238b6",
-            "677d263669792c2d",
-            "8d88aedc41864cf8",
-            "547cf705c08f3fee",
-            "41f8c81cbde2390b",
-            "90a21e8778a42633",
-            "03b5ea45a14bec38",
-            "76624f15bec4c509",
-            "11439f8ac4e3b895",
-            "9b5ffa967054d1a9",
-            "f4935efee5594591",
-            "aa50254808a938c8",
-            "1edd5af6eed6044f",
-            "43d361d9eba3f06e",
-            "0cadcaf22f887a0e",
-            "21fe16ca5cbfc06b"
-        ],
-        "x": 134,
-        "y": 39,
-        "w": 1822,
-        "h": 482
-    },
-    {
-        "id": "6c1673638929b26d",
-        "type": "group",
-        "z": "1c66bd27e16a3fec",
-        "name": "Radio UDP Extension",
-        "style": {
-            "label": true,
-            "fill": "#c8e7a7",
-            "fill-opacity": "0.61",
-            "label-position": "ne",
-            "color": "#000000"
-        },
-        "nodes": [
-            "93a6eb43a0cd1622",
-            "130b2eeddfbf75b0",
-            "3b9f0341530d56a7",
-            "95f6f96670a6b08a",
-            "9cfd21c0bd51285b",
-            "fed8216c6cda245c",
-            "91725949fc3edaf2",
-            "a819ca8d3f060472",
-            "7f90d48a29cf7912",
-            "4f839ad8b80a0658",
-            "c61ab508b6b82808",
-            "81242aec4c4bf65a",
-            "d1da622b197520ac",
-            "d5b128cfd798ac47",
-            "ded47173803bd33e",
-            "de40d8ac2d9026c8",
-            "ec4d056dcc3db216",
-            "96690058796bd634",
-            "71ef26e8c3355bec",
-            "93963dc560fcab1e",
-            "3e0f5f6001e77450",
-            "5c60f3c47791458b"
-        ],
-        "x": 94,
-        "y": 659,
-        "w": 1792,
-        "h": 322
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -25708,7 +25708,7 @@
         "id": "b638298b6d42ea25",
         "type": "ui_button",
         "z": "204548a488401a1b",
-        "name": "Query All Contests in DB",
+        "name": "Query All Contests and Radios in DB",
         "group": "c6e931ac92d6f697",
         "order": 2,
         "width": 6,
@@ -25724,11 +25724,12 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 210,
+        "x": 170,
         "y": 300,
         "wires": [
             [
-                "9e3ed0af8dd3311e"
+                "9e3ed0af8dd3311e",
+                "996242b2a362222b"
             ]
         ]
     },
@@ -25841,7 +25842,7 @@
         "name": "Get IU Control",
         "events": "all",
         "x": 880,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "3e32507cf496c14e",
@@ -25862,7 +25863,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "57273c6d705dbfce",
@@ -26061,8 +26062,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 190,
-        "y": 420,
+        "x": 490,
+        "y": 680,
         "wires": [
             [
                 "1c46a9079b39b6af",
@@ -26081,8 +26082,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 380,
+        "x": 780,
+        "y": 640,
         "wires": [
             []
         ]
@@ -26102,8 +26103,8 @@
         "className": "",
         "topic": "",
         "name": "Show Computer Name Input",
-        "x": 720,
-        "y": 420,
+        "x": 1040,
+        "y": 680,
         "wires": [
             []
         ]
@@ -26119,8 +26120,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 420,
+        "x": 800,
+        "y": 680,
         "wires": [
             [
                 "59239e08c7dcd682"
@@ -26140,8 +26141,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 340,
-        "y": 460,
+        "x": 360,
+        "y": 720,
         "wires": []
     },
     {
@@ -26159,8 +26160,8 @@
         "className": "",
         "topic": "",
         "name": "Show Get Radio Computer Names",
-        "x": 760,
-        "y": 500,
+        "x": 780,
+        "y": 760,
         "wires": [
             []
         ]
@@ -26179,7 +26180,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 1080,
+        "y": 1180,
         "wires": []
     },
     {
@@ -26193,8 +26194,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 800,
-        "y": 740,
+        "x": 840,
+        "y": 920,
         "wires": [
             [
                 "289eb29cd66ebe0f"
@@ -26230,8 +26231,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 530,
-        "y": 740,
+        "x": 570,
+        "y": 920,
         "wires": [
             [
                 "44ad2f416930e4e9"
@@ -26277,7 +26278,7 @@
         "splitLayout": "",
         "className": "",
         "x": 120,
-        "y": 1000,
+        "y": 1100,
         "wires": [
             [
                 "80b7b6186bcf121d",
@@ -26297,7 +26298,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 1000,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -26319,7 +26320,7 @@
         "topic": "",
         "name": "Show Socket ID",
         "x": 580,
-        "y": 1040,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -26336,7 +26337,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 1040,
+        "y": 1140,
         "wires": [
             [
                 "87bbe35110f717a1"
@@ -26358,7 +26359,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1100,
-        "y": 1020,
+        "y": 1120,
         "wires": []
     },
     {
@@ -26375,7 +26376,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 980,
+        "y": 1080,
         "wires": []
     },
     {
@@ -26393,7 +26394,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 1080,
-        "y": 1060,
+        "y": 1160,
         "wires": []
     },
     {
@@ -26403,7 +26404,7 @@
         "name": "Rotate UI Control",
         "events": "change",
         "x": 630,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "c473245f3df6387a"
@@ -26424,7 +26425,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-        "y": 1120,
+        "y": 1220,
         "wires": []
     },
     {
@@ -26868,8 +26869,8 @@
         "z": "204548a488401a1b",
         "name": "Computer Name Input",
         "info": "Computer Name Input - These are the computer names running N1MM for each radio.  Input the computer names EXACTLY how they defined on the computer name.  Be aware of upper and lower case names.  You can find the computer name by typing 'computername' in the search bar beside the start menu.  \n\nGet Radio Computer Names - This will dispaly the computer names in the database.  \n\nNote : the first two computer names entered into the input fields will be displayed on the N1MM Dashboard main screen (contest overview & map).\n\n",
-        "x": 180,
-        "y": 360,
+        "x": 440,
+        "y": 460,
         "wires": []
     },
     {
@@ -26878,8 +26879,8 @@
         "z": "204548a488401a1b",
         "name": "Contest Call Sign",
         "info": "Contest Call Sign - This input will be used to show Reverse Beacon Spots (RBN) on the map on where that call sign is being spotted FROM.  Callsign can be entered in lower or upper case.  \n\nAs spots come in from the spotting network, it searches for the contesting callsign being used.  If it matches, it takes the DE callsign, looks that call up in a database of known RBN callsigns or looked up the DE callsign via QRZ or Hamdb.org based on your preference in which lookup database to use.",
-        "x": 200,
-        "y": 680,
+        "x": 240,
+        "y": 860,
         "wires": []
     },
     {
@@ -26959,7 +26960,7 @@
         "name": "Rotate 2nd Tab/Window - NOT IN USE",
         "info": "",
         "x": 230,
-        "y": 920,
+        "y": 1020,
         "wires": []
     },
     {
@@ -27039,8 +27040,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1080,
-        "y": 740,
+        "x": 1120,
+        "y": 920,
         "wires": []
     },
     {
@@ -27879,8 +27880,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 720,
-        "y": 540,
+        "x": 740,
+        "y": 800,
         "wires": []
     },
     {
@@ -27894,8 +27895,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 540,
+        "x": 460,
+        "y": 800,
         "wires": [
             [
                 "4bd54f4532cfb4e4"
@@ -27923,8 +27924,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
-        "y": 540,
+        "x": 190,
+        "y": 800,
         "wires": [
             [
                 "f9aa65c20f157f8e"
@@ -27942,8 +27943,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 500,
+        "x": 490,
+        "y": 760,
         "wires": [
             [
                 "848cb7d74a2a8ede"
@@ -27970,8 +27971,8 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 200,
-        "y": 500,
+        "x": 220,
+        "y": 760,
         "wires": [
             [
                 "57e3618bf14fa9ab"
@@ -30092,8 +30093,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 90,
-        "y": 740,
+        "x": 130,
+        "y": 920,
         "wires": [
             [
                 "a54ca6e34027cc56",
@@ -30112,8 +30113,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 740,
+        "x": 340,
+        "y": 920,
         "wires": [
             [
                 "cb4f88b22ac357e7"
@@ -30867,13 +30868,12 @@
         "mydb": "54f43a06.56d7b4",
         "sqlquery": "fixed",
         "sql": "SELECT DISTINCT mycall from qsos ORDER BY `timestamp`;",
-        "name": "",
-        "x": 270,
-        "y": 800,
+        "name": "Choose latest Contest Callsign from DB",
+        "x": 280,
+        "y": 980,
         "wires": [
             [
-                "4f3549d3d03b998b",
-                "c5f42609b0e0aaa4"
+                "88aac0d0567f84d0"
             ]
         ]
     },
@@ -30882,7 +30882,7 @@
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
         "name": "",
-        "label": "",
+        "label": "Contest Callsign",
         "tooltip": "",
         "place": "Select option",
         "group": "475c1eff5d97ffe5",
@@ -30902,30 +30902,287 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 520,
-        "y": 800,
+        "x": 740,
+        "y": 980,
         "wires": [
             [
-                "44ad2f416930e4e9",
-                "c5f42609b0e0aaa4"
+                "44ad2f416930e4e9"
             ]
         ]
     },
     {
-        "id": "c5f42609b0e0aaa4",
-        "type": "debug",
+        "id": "996242b2a362222b",
+        "type": "sqlite",
         "z": "204548a488401a1b",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 840,
-        "wires": []
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "fixed",
+        "sql": "SELECT DISTINCT StationName from radio ORDER BY `timestamp`;",
+        "name": "Choose PCs from DB",
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "8f87ecfb66cec63d"
+            ]
+        ]
+    },
+    {
+        "id": "3160a3cf965792b6",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Radio3",
+        "label": "Radio3",
+        "tooltip": "",
+        "place": "",
+        "group": "887ee2eadc46df9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "radio3",
+        "topicType": "str",
+        "className": "",
+        "x": 660,
+        "y": 440,
+        "wires": [
+            [
+                "92906228f23e7753"
+            ]
+        ]
+    },
+    {
+        "id": "88aac0d0567f84d0",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "change to options",
+        "func": "msg.payload= msg.options;\nmsg.payload={};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 980,
+        "wires": [
+            [
+                "4f3549d3d03b998b"
+            ]
+        ]
+    },
+    {
+        "id": "52b9731345e98156",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Radio2",
+        "label": "Radio2",
+        "tooltip": "",
+        "place": "",
+        "group": "887ee2eadc46df9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "radio2",
+        "topicType": "str",
+        "className": "",
+        "x": 660,
+        "y": 400,
+        "wires": [
+            [
+                "92906228f23e7753"
+            ]
+        ]
+    },
+    {
+        "id": "45487adfd2506609",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Radio1",
+        "label": "Radio1",
+        "tooltip": "",
+        "place": "",
+        "group": "887ee2eadc46df9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "radio1",
+        "topicType": "str",
+        "className": "",
+        "x": 660,
+        "y": 360,
+        "wires": [
+            [
+                "92906228f23e7753"
+            ]
+        ]
+    },
+    {
+        "id": "0310b67c0342c959",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Radio4",
+        "label": "Radio4",
+        "tooltip": "",
+        "place": "",
+        "group": "887ee2eadc46df9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "radio4",
+        "topicType": "str",
+        "className": "",
+        "x": 660,
+        "y": 480,
+        "wires": [
+            [
+                "92906228f23e7753"
+            ]
+        ]
+    },
+    {
+        "id": "131a5c94a9d2d0e6",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Radio5",
+        "label": "Radio5",
+        "tooltip": "",
+        "place": "",
+        "group": "887ee2eadc46df9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "radio5",
+        "topicType": "str",
+        "className": "",
+        "x": 660,
+        "y": 520,
+        "wires": [
+            [
+                "92906228f23e7753"
+            ]
+        ]
+    },
+    {
+        "id": "8f87ecfb66cec63d",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "change to options",
+        "func": "msg.payload= msg.options;\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null) {\n    P1 = \"\"\n}\nif (P2 == null) {\n    P2 = \"\"\n}\nif (P3 == null) {\n    P3 = \"\"\n}\nif (P4 == null) {\n    P4 = \"\"\n}\nif (P5 == null) {\n    P5 = \"\"\n}\nif (P6 == null) {\n    P6 = \"\"\n}\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "45487adfd2506609",
+                "52b9731345e98156",
+                "3160a3cf965792b6",
+                "0310b67c0342c959",
+                "131a5c94a9d2d0e6",
+                "e16bc4a1666da6df"
+            ]
+        ]
+    },
+    {
+        "id": "e16bc4a1666da6df",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Radio6",
+        "label": "Radio6",
+        "tooltip": "",
+        "place": "",
+        "group": "887ee2eadc46df9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "radio6",
+        "topicType": "str",
+        "className": "",
+        "x": 660,
+        "y": 560,
+        "wires": [
+            [
+                "92906228f23e7753"
+            ]
+        ]
+    },
+    {
+        "id": "92906228f23e7753",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Global PC Names",
+        "func": "\nif (msg.payload != \"\"){\n    if (msg.topic==\"radio1\"){\n        let PC1 = msg.payload\n        global.set(\"PC1\",PC1)\n    }\n    if (msg.topic == \"radio2\")\n    {\n        let PC2 = msg.payload\n        global.set(\"PC2\",PC2)\n    }\n\n    if (msg.topic != \"radio3\")\n    {\n        let PC3 = msg.payload\n        global.set(\"PC3\",PC3)\n    }\n\n    if (msg.topic == \"radio4\")\n    {\n        let PC4 = msg.payload\n        global.set(\"PC4\",PC4)\n    }\n\n    if (msg.topic == \"radio5\")\n    {\n        let PC5 = msg.payload\n        global.set(\"PC5\",PC5)\n    }\n\n    if (msg.topic== \"radio6\")\n    {\n        let PC6 = msg.payload\n        global.set(\"PC6\",PC6)\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 360,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "1f45eb9a.6f2614",
