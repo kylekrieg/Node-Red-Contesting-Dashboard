@@ -693,7 +693,6 @@
             "aec65d796aed9cee",
             "97ed253958c48009",
             "aad501d4eeed3f6c",
-            "7f7e224622dc09f5",
             "622fed8ae8f6a5d2",
             "77a4afb43fb7bdbd",
             "a9c362fc3c6ac624",
@@ -710,8 +709,7 @@
             "03b3b4cadbdf9e34",
             "a7dc412af8237000",
             "8d406adaa39170fb",
-            "3c4c7e4533b41d22",
-            "39b7ba7404fb4193"
+            "3c4c7e4533b41d22"
         ],
         "x": 274,
         "y": 859
@@ -798,7 +796,9 @@
             "9ed94619f709cb71"
         ],
         "x": 14,
-        "y": 1459
+        "y": 1459,
+        "w": 2552,
+        "h": 982
     },
     {
         "id": "d48758cdf0c8991d",
@@ -840,17 +840,12 @@
             "3617522441b640cb",
             "9b9d60245cebf80a",
             "e4e81a5987819415",
-            "5af8b84a9901ebd0",
-            "b560bd86dc5c87f6",
-            "1fef8af3224d3ace",
-            "d822b32b0913c2e8",
             "593016df038ddee5",
             "696566009ad9261d",
             "adb1747255633e97",
             "3d9090ccaadd42cb",
             "12de6739c2037829",
             "ce8f3cdfc915749d",
-            "a6f01856669d3e50",
             "af6a11b52841ef4a",
             "cf1edc41b5adc8be",
             "4320ff577c7cb858",
@@ -858,16 +853,12 @@
             "8804affd65082b4f",
             "6c1de6ee7473fac9",
             "fdfd9133ae52097f",
-            "f2b91a5dc28385a9",
-            "b0d18fa59cc49c12",
-            "0d35873cadebf97f",
-            "415b4ee138125e2e",
-            "aa3604030c538a2a",
-            "bc661ac4152269b3",
-            "ae7413cce68dfffa"
+            "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": -1
+        "y": 19,
+        "w": 2232,
+        "h": 802
     },
     {
         "id": "26cf0678322d1bb6",
@@ -929,7 +920,9 @@
             "8834c50bc7d9a366"
         ],
         "x": 2354,
-        "y": 839
+        "y": 839,
+        "w": 1912,
+        "h": 602
     },
     {
         "id": "f830dd821e0240f4",
@@ -948,6 +941,35 @@
         "y": 559,
         "w": 792,
         "h": 522
+    },
+    {
+        "id": "b5a72874a2f95ce4",
+        "type": "group",
+        "z": "407d2b774fe67647",
+        "g": "d48758cdf0c8991d",
+        "name": "Map",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "label-position": "ne",
+            "color": "#000000",
+            "fill-opacity": "0.55"
+        },
+        "nodes": [
+            "b560bd86dc5c87f6",
+            "1fef8af3224d3ace",
+            "a6f01856669d3e50",
+            "f2b91a5dc28385a9",
+            "b0d18fa59cc49c12",
+            "0d35873cadebf97f",
+            "415b4ee138125e2e",
+            "bc661ac4152269b3",
+            "ae7413cce68dfffa"
+        ],
+        "x": 914,
+        "y": 79,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -5964,8 +5986,8 @@
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 360,
-        "y": 1060,
+        "x": 520,
+        "y": 1080,
         "wires": [
             [
                 "1e6f9143a325a577"
@@ -5979,8 +6001,8 @@
         "g": "4f4b9f0c82968b60",
         "name": "UDP Score XML",
         "info": "",
-        "x": 480,
-        "y": 1020,
+        "x": 520,
+        "y": 940,
         "wires": []
     },
     {
@@ -5992,12 +6014,11 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 650,
-        "y": 1060,
+        "x": 810,
+        "y": 1080,
         "wires": [
             [
-                "622fed8ae8f6a5d2",
-                "0a5bfb881c2f3bca"
+                "622fed8ae8f6a5d2"
             ]
         ]
     },
@@ -6011,12 +6032,12 @@
         "width": 5,
         "height": 3,
         "name": "Total Score",
-        "label": "Total Score",
-        "format": "<font color={{msg.color}}>{{payload.dynamicresults.score[0]}}</font>",
+        "label": "<font size = 6>Total Score",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.dynamicresults.score[0]}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 1830,
-        "y": 940,
+        "x": 1990,
+        "y": 960,
         "wires": []
     },
     {
@@ -6029,12 +6050,12 @@
         "width": 5,
         "height": 3,
         "name": "Total Mults",
-        "label": "Mults",
-        "format": "<font color={{msg.color}}>{{payload.totalmults}}</font>",
+        "label": "<font size = 6>Mults",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.totalmults}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2010,
-        "y": 1140,
+        "x": 2170,
+        "y": 1160,
         "wires": []
     },
     {
@@ -6047,12 +6068,12 @@
         "width": 5,
         "height": 3,
         "name": "Total QSO's",
-        "label": "QSOs",
-        "format": "<font color={{msg.color}}>{{payload.totalnoqsos}}</font>",
+        "label": "<font size = 6>QSOs",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.totalnoqsos}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2010,
-        "y": 1040,
+        "x": 2170,
+        "y": 1060,
         "wires": []
     },
     {
@@ -6067,8 +6088,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1300,
-        "y": 1040,
+        "x": 1460,
+        "y": 1060,
         "wires": [
             [
                 "3ba4521f148eac8c"
@@ -6085,12 +6106,12 @@
         "width": 5,
         "height": 3,
         "name": "Total Points",
-        "label": "Points",
-        "format": "<font color={{msg.color}}>{{payload.totalpoints}}</font>",
+        "label": "<font size = 6>Points",
+        "format": "<font size = 50 font color={{msg.color}}>{{payload.totalpoints}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2010,
-        "y": 1240,
+        "x": 2170,
+        "y": 1260,
         "wires": []
     },
     {
@@ -6105,8 +6126,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
-        "y": 1240,
+        "x": 1450,
+        "y": 1260,
         "wires": [
             [
                 "03b3b4cadbdf9e34"
@@ -6127,8 +6148,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1320,
-        "y": 900,
+        "x": 1480,
+        "y": 920,
         "wires": []
     },
     {
@@ -6142,8 +6163,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 510,
-        "y": 1060,
+        "x": 670,
+        "y": 1080,
         "wires": [
             [
                 "d2cdb7808cce0e9c"
@@ -6158,10 +6179,11 @@
         "name": "Score OUT",
         "mode": "link",
         "links": [
-            "9ac6b8134108e3b3"
+            "9ac6b8134108e3b3",
+            "77252a3ad3a5f5aa"
         ],
-        "x": 1135,
-        "y": 960,
+        "x": 1295,
+        "y": 980,
         "wires": []
     },
     {
@@ -6182,14 +6204,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1050,
-        "y": 1060,
+        "x": 1210,
+        "y": 1080,
         "wires": [
             [
                 "31d7202b2b50131d",
                 "06ef39d063a5a0f6",
-                "aec65d796aed9cee",
                 "bcb9b861df7e6958",
+                "aec65d796aed9cee",
                 "aad501d4eeed3f6c",
                 "77a4afb43fb7bdbd"
             ]
@@ -6227,8 +6249,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1300,
-        "y": 1140,
+        "x": 1460,
+        "y": 1160,
         "wires": [
             [
                 "ba53f01105c0383d"
@@ -6269,8 +6291,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 850,
-        "y": 1060,
+        "x": 1010,
+        "y": 1080,
         "wires": [
             [
                 "97ed253958c48009"
@@ -6300,8 +6322,8 @@
         "septopics": true,
         "property": "payload.dynamicresults.score[0]",
         "topi": "topic",
-        "x": 1320,
-        "y": 940,
+        "x": 1480,
+        "y": 960,
         "wires": [
             [
                 "7d8436d8a3a5422b",
@@ -6327,8 +6349,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1500,
-        "y": 980,
+        "x": 1660,
+        "y": 1000,
         "wires": [
             [
                 "49c503a250b35428"
@@ -6355,8 +6377,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1570,
-        "y": 940,
+        "x": 1730,
+        "y": 960,
         "wires": [
             [
                 "2cdd5ffb3ac01f73"
@@ -6383,8 +6405,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1650,
-        "y": 980,
+        "x": 1810,
+        "y": 1000,
         "wires": [
             [
                 "2cdd5ffb3ac01f73"
@@ -6404,8 +6426,8 @@
         "septopics": true,
         "property": "payload.totalnoqsos",
         "topi": "topic",
-        "x": 1510,
-        "y": 1040,
+        "x": 1670,
+        "y": 1060,
         "wires": [
             [
                 "e21c45667c4cb46a",
@@ -6431,8 +6453,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1680,
-        "y": 1080,
+        "x": 1840,
+        "y": 1100,
         "wires": [
             [
                 "a08bd99d57f55d64"
@@ -6459,8 +6481,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1690,
-        "y": 1040,
+        "x": 1850,
+        "y": 1060,
         "wires": [
             [
                 "9b7d271988034596"
@@ -6487,8 +6509,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1830,
-        "y": 1080,
+        "x": 1990,
+        "y": 1100,
         "wires": [
             [
                 "9b7d271988034596"
@@ -6508,8 +6530,8 @@
         "septopics": true,
         "property": "payload.totalmults",
         "topi": "topic",
-        "x": 1500,
-        "y": 1140,
+        "x": 1660,
+        "y": 1160,
         "wires": [
             [
                 "91decfc57d48218c",
@@ -6535,8 +6557,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1660,
-        "y": 1180,
+        "x": 1820,
+        "y": 1200,
         "wires": [
             [
                 "eecdc889bd3900f6"
@@ -6563,8 +6585,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1670,
-        "y": 1140,
+        "x": 1830,
+        "y": 1160,
         "wires": [
             [
                 "289442fe7c0d95f9"
@@ -6591,8 +6613,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1810,
-        "y": 1180,
+        "x": 1970,
+        "y": 1200,
         "wires": [
             [
                 "289442fe7c0d95f9"
@@ -6612,8 +6634,8 @@
         "septopics": true,
         "property": "payload.totalpoints",
         "topi": "topic",
-        "x": 1510,
-        "y": 1240,
+        "x": 1670,
+        "y": 1260,
         "wires": [
             [
                 "8d406adaa39170fb",
@@ -6639,8 +6661,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1680,
-        "y": 1280,
+        "x": 1840,
+        "y": 1300,
         "wires": [
             [
                 "3c4c7e4533b41d22"
@@ -6667,8 +6689,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1690,
-        "y": 1240,
+        "x": 1850,
+        "y": 1260,
         "wires": [
             [
                 "ff83b125cd4af97b"
@@ -6695,8 +6717,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1830,
-        "y": 1280,
+        "x": 1990,
+        "y": 1300,
         "wires": [
             [
                 "ff83b125cd4af97b"
@@ -8093,7 +8115,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
+        "x": 1010,
         "y": 340,
         "wires": [
             [
@@ -8670,7 +8692,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "",
-        "x": 680,
+        "x": 520,
         "y": 340,
         "wires": [
             [
@@ -8712,8 +8734,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
-        "y": 300,
+        "x": 1470,
+        "y": 380,
         "wires": []
     },
     {
@@ -8753,41 +8775,11 @@
         ]
     },
     {
-        "id": "5af8b84a9901ebd0",
-        "type": "inject",
-        "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "Inject Legend and Center Button",
-        "props": [
-            {
-                "p": "payload.command",
-                "v": "{\"legend\":\"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \",\"button\":{\"name\":\"Center Map\",\"icon\":\"fa-square\",\"position\":\"topleft\"}}",
-                "vt": "json"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "2",
-        "topic": "",
-        "x": 1320,
-        "y": 160,
-        "wires": [
-            [
-                "a6f01856669d3e50"
-            ]
-        ]
-    },
-    {
         "id": "b560bd86dc5c87f6",
         "type": "inject",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "Inject Home Icon",
+        "g": "b5a72874a2f95ce4",
+        "name": "Inject Init Layer",
         "props": [
             {
                 "p": "payload"
@@ -8804,8 +8796,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1170,
-        "y": 40,
+        "x": 1360,
+        "y": 120,
         "wires": [
             [
                 "1fef8af3224d3ace"
@@ -8816,39 +8808,21 @@
         "id": "1fef8af3224d3ace",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "Inject Home",
-        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nreturn {payload : {name:\"home\", lat:lat, lon:lon, icon:\"fa-home\", layer:\"Home\"}};",
+        "g": "b5a72874a2f95ce4",
+        "name": "Inject Init Layer",
+        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\nvar command_legend = {\n    \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \",\n    \"button\": {\n        \"name\": \"Center Map\",\n        \"icon\": \"fa-square\",\n        \"position\": \"topleft\"\n    }\n}\nreturn { payload: { name: \"home\", lat: lat, lon: lon, icon: \"fa-home\", layer: \"Home\", command: command_legend } };",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1330,
+        "x": 1580,
         "y": 120,
         "wires": [
             [
-                "d822b32b0913c2e8",
                 "a6f01856669d3e50"
             ]
         ]
-    },
-    {
-        "id": "d822b32b0913c2e8",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1580,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "593016df038ddee5",
@@ -8988,7 +8962,7 @@
         "id": "a6f01856669d3e50",
         "type": "ui_worldmap",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
+        "g": "b5a72874a2f95ce4",
         "group": "b8ba38b3.abfb98",
         "order": 7,
         "width": 26,
@@ -9016,8 +8990,8 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 1620,
-        "y": 140,
+        "x": 1830,
+        "y": 180,
         "wires": []
     },
     {
@@ -9054,8 +9028,8 @@
             "f3117ed04c2dd2ff",
             "fd220d20c3727d7e"
         ],
-        "x": 1295,
-        "y": 240,
+        "x": 1185,
+        "y": 400,
         "wires": []
     },
     {
@@ -9081,7 +9055,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 890,
+        "x": 730,
         "y": 340,
         "wires": [
             [
@@ -9102,8 +9076,8 @@
         "links": [
             "ed79aa0b1ff456e7"
         ],
-        "x": 935,
-        "y": 440,
+        "x": 845,
+        "y": 380,
         "wires": []
     },
     {
@@ -9138,8 +9112,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1820,
-        "y": 180,
+        "x": 1860,
+        "y": 300,
         "wires": [
             [
                 "6c3eca08.f081a4",
@@ -10226,13 +10200,13 @@
         "id": "f2b91a5dc28385a9",
         "type": "link in",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
+        "g": "b5a72874a2f95ce4",
         "name": "Clear Map IN",
         "links": [
             "8f4d88abb858be08"
         ],
-        "x": 1435,
-        "y": 40,
+        "x": 1725,
+        "y": 120,
         "wires": [
             [
                 "a6f01856669d3e50"
@@ -10281,7 +10255,7 @@
         "id": "b0d18fa59cc49c12",
         "type": "function",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
+        "g": "b5a72874a2f95ce4",
         "name": "Center Map to Lat/Lon",
         "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nif (msg.payload.name == \"Center Map\")\n{\n\nreturn {payload : {\"command\":{\"lat\":lat, \"lon\":lon, \"zoom\":4}}}\n}\n\n\n\n",
         "outputs": 1,
@@ -10289,8 +10263,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1260,
-        "y": 200,
+        "x": 1560,
+        "y": 160,
         "wires": [
             [
                 "a6f01856669d3e50"
@@ -10301,11 +10275,11 @@
         "id": "0d35873cadebf97f",
         "type": "worldmap in",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
+        "g": "b5a72874a2f95ce4",
         "name": "",
         "path": "/qsos",
         "events": "connect,disconnect,point,layer,bounds,files,draw,other",
-        "x": 1020,
+        "x": 1390,
         "y": 200,
         "wires": [
             [
@@ -10317,10 +10291,10 @@
         "id": "415b4ee138125e2e",
         "type": "ui_ui_control",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "",
+        "g": "b5a72874a2f95ce4",
+        "name": "Watch Refresh",
         "events": "all",
-        "x": 700,
+        "x": 1020,
         "y": 160,
         "wires": [
             [
@@ -10329,37 +10303,11 @@
         ]
     },
     {
-        "id": "aa3604030c538a2a",
-        "type": "inject",
-        "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "Center Map Command",
-        "props": [
-            {
-                "p": "payload.name",
-                "v": "",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "15",
-        "topic": "",
-        "x": 880,
-        "y": 100,
-        "wires": [
-            [
-                "415b4ee138125e2e"
-            ]
-        ]
-    },
-    {
         "id": "bc661ac4152269b3",
         "type": "change",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "",
+        "g": "b5a72874a2f95ce4",
+        "name": "Center Flag",
         "rules": [
             {
                 "t": "set",
@@ -10374,7 +10322,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
+        "x": 1190,
         "y": 160,
         "wires": [
             [
@@ -10386,8 +10334,8 @@
         "id": "ae7413cce68dfffa",
         "type": "delay",
         "z": "407d2b774fe67647",
-        "g": "d48758cdf0c8991d",
-        "name": "",
+        "g": "b5a72874a2f95ce4",
+        "name": "3s",
         "pauseType": "delay",
         "timeout": "3",
         "timeoutUnits": "seconds",
@@ -10400,7 +10348,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1060,
+        "x": 1350,
         "y": 160,
         "wires": [
             [
