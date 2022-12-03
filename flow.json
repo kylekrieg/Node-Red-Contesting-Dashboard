@@ -30096,7 +30096,8 @@
         "y": 740,
         "wires": [
             [
-                "a54ca6e34027cc56"
+                "a54ca6e34027cc56",
+                "926305a899f616de"
             ]
         ]
     },
@@ -30858,6 +30859,73 @@
                 "1d2e0efe1531b4eb"
             ]
         ]
+    },
+    {
+        "id": "926305a899f616de",
+        "type": "sqlite",
+        "z": "204548a488401a1b",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "fixed",
+        "sql": "SELECT DISTINCT mycall from qsos ORDER BY `timestamp`;",
+        "name": "",
+        "x": 270,
+        "y": 800,
+        "wires": [
+            [
+                "4f3549d3d03b998b",
+                "c5f42609b0e0aaa4"
+            ]
+        ]
+    },
+    {
+        "id": "4f3549d3d03b998b",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "475c1eff5d97ffe5",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 520,
+        "y": 800,
+        "wires": [
+            [
+                "44ad2f416930e4e9",
+                "c5f42609b0e0aaa4"
+            ]
+        ]
+    },
+    {
+        "id": "c5f42609b0e0aaa4",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 840,
+        "wires": []
     },
     {
         "id": "1f45eb9a.6f2614",
