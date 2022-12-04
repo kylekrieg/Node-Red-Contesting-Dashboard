@@ -31166,6 +31166,115 @@
         "wires": []
     },
     {
+        "id": "6e559dd79c64492f",
+        "type": "ui_switch",
+        "z": "204548a488401a1b",
+        "name": "",
+        "label": "Great Circle Lines On/Off",
+        "tooltip": "",
+        "group": "4ef10134c121cf09",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 2310,
+        "y": 1500,
+        "wires": [
+            [
+                "ace109ff1f054325"
+            ]
+        ]
+    },
+    {
+        "id": "ace109ff1f054325",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Great Circle Lines On/Off",
+        "func": "x = msg.payload\nglobal.set('greatcirclelines',x)\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2590,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63171c22105ccdfd",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1810,
+        "y": 1500,
+        "wires": [
+            [
+                "d424d57bdf57571e"
+            ]
+        ]
+    },
+    {
+        "id": "3e1254ec4b44dfdb",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Turn Great Circle Lines On/Off",
+        "info": "",
+        "x": 1980,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "d424d57bdf57571e",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Great Circle Lines",
+        "func": "msg.payload = global.get('greatcirclelines')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"true\";\n    return msg;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2040,
+        "y": 1500,
+        "wires": [
+            [
+                "6e559dd79c64492f"
+            ]
+        ]
+    },
+    {
         "id": "1f45eb9a.6f2614",
         "type": "tcp request",
         "z": "bd8a446b999750f9",
