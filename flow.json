@@ -709,7 +709,6 @@
             "3d795eb91a1d2b3d",
             "d67c999eabb4aba0",
             "3e86130caa4f1f80",
-            "3105183456c5bc51",
             "6eccad64a2223ff8",
             "334aadb089f6f0c0",
             "15fa6dac50ec3359",
@@ -7007,7 +7006,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
+        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 1410,
         "y": 2380,
@@ -7218,24 +7217,6 @@
         ]
     },
     {
-        "id": "3105183456c5bc51",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
-        "name": "Select Max Distance & Operator",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select max(cast(distance as int)) as distance, operator as operator from qsos;",
-        "output": "str",
-        "x": 450,
-        "y": 1880,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6eccad64a2223ff8",
         "type": "switch",
         "z": "407d2b774fe67647",
@@ -7357,7 +7338,8 @@
                 "1497c72e88a8f6b1",
                 "b946bc8caa8d1dfa",
                 "b9e129bdae4de517",
-                "e4e19daf40493fb9"
+                "e4e19daf40493fb9",
+                "5bbc72a4e604df32"
             ],
             [
                 "a74a987615dd4bb9",
@@ -7366,7 +7348,8 @@
                 "27f4e52f97117294",
                 "214b730a1dfad6cb",
                 "68eee47c38859dda",
-                "90474210b68e90b0"
+                "90474210b68e90b0",
+                "d9503f18f29524db"
             ]
         ]
     },
@@ -7600,7 +7583,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Label +  Add Multis + Exchange",
-        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\nlet greatcircle = global.get('greatcirclelines')\n\ndelete msg.payload.ID\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\" || contesttype == \"all\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n    msg.payload.distance_km = 0;\n    msg.payload.distance_miles = 0;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\nlet greatcircle = global.get('greatcirclelines')\n\ndelete msg.payload.ID\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\" || contesttype == \"all\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nif (greatcirclelines == true)\n{\n    msg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\n    if (msg.payload.greatcircle[0][0] == undefined)\n    {\n        delete msg.payload.greatcircle;\n        msg.payload.distance_km = 0;\n        msg.payload.distance_miles = 0;\n    }\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10175,7 +10158,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and timestamp >= datetime('now','-1 hours');",
+        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 1370,
         "y": 1560,
