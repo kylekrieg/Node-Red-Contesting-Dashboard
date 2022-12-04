@@ -387,9 +387,7 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159,
-        "w": 255,
-        "h": 482
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -413,9 +411,7 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -439,9 +435,7 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 482
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -466,9 +460,7 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 482
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -483,9 +475,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -500,9 +490,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -526,9 +514,7 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -552,9 +538,7 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -591,9 +575,7 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679,
-        "w": 2032,
-        "h": 282
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -618,9 +600,7 @@
             "324101084f63a83e"
         ],
         "x": 234,
-        "y": 1019,
-        "w": 622,
-        "h": 262
+        "y": 1019
     },
     {
         "id": "c6a5789101548ba9",
@@ -635,9 +615,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -661,9 +639,7 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 281,
-        "h": 482
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -741,13 +717,13 @@
             "f6305d04b2aeb44c",
             "6351dc9d0c3ec453",
             "6176c210be856fa7",
-            "a9afc3cb2db49407",
-            "94f44b7ea0e29d1d"
+            "94f44b7ea0e29d1d",
+            "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1453,
-        "w": 2578,
-        "h": 1034
+        "y": 1485.5,
+        "w": 2458,
+        "h": 969
     },
     {
         "id": "d48758cdf0c8991d",
@@ -889,9 +865,7 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "f01baabf4527b6e5",
@@ -1008,6 +982,45 @@
         "h": 162
     },
     {
+        "id": "94f44b7ea0e29d1d",
+        "type": "group",
+        "z": "407d2b774fe67647",
+        "g": "81692a3cb68d6cde",
+        "name": "Radio2",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "label-position": "ne",
+            "color": "#000000"
+        },
+        "nodes": [
+            "c28f1c9baeeba95d",
+            "d87f990426df6b87",
+            "68eee47c38859dda",
+            "90474210b68e90b0",
+            "214b730a1dfad6cb",
+            "379a02b32eb2de49",
+            "88be1b74fa6788be",
+            "d6a02ccab960310f",
+            "f9c9ed275443b030",
+            "fb911af0905d8f5d",
+            "a74a987615dd4bb9",
+            "ccb12f5a5e87937a",
+            "5c688773c88f9f41",
+            "97aba946591c7289",
+            "7aa65e21deb3bbf5",
+            "8a9601bf0a7a7faa",
+            "d37ea6046424b974",
+            "89588cb6bf69a8d0",
+            "d9503f18f29524db",
+            "27f4e52f97117294"
+        ],
+        "x": 1074,
+        "y": 1979,
+        "w": 1272,
+        "h": 449.5
+    },
+    {
         "id": "a9afc3cb2db49407",
         "type": "group",
         "z": "407d2b774fe67647",
@@ -1036,65 +1049,17 @@
             "323b33d53e2baade",
             "b9e129bdae4de517",
             "b1abd7f75fd32f6f",
-            "79320f61b0466a60",
-            "b39377b110c0549b",
             "5bbc72a4e604df32",
             "e4e19daf40493fb9",
             "3d1ebae60e058858",
-            "451c0f81249ee073",
             "572d2215a6ea16bb",
             "5a5a85080d107e92",
-            "ea7ca8bfbf26850d",
-            "0baeb2e7ae556661",
-            "9ed94619f709cb71"
+            "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1479,
-        "w": 1552,
-        "h": 482
-    },
-    {
-        "id": "94f44b7ea0e29d1d",
-        "type": "group",
-        "z": "407d2b774fe67647",
-        "g": "81692a3cb68d6cde",
-        "name": "Radio2",
-        "style": {
-            "fill": "#7fb7df",
-            "label": true,
-            "label-position": "ne",
-            "color": "#000000"
-        },
-        "nodes": [
-            "c28f1c9baeeba95d",
-            "d87f990426df6b87",
-            "68eee47c38859dda",
-            "90474210b68e90b0",
-            "214b730a1dfad6cb",
-            "379a02b32eb2de49",
-            "88be1b74fa6788be",
-            "d6a02ccab960310f",
-            "f9c9ed275443b030",
-            "fb911af0905d8f5d",
-            "a74a987615dd4bb9",
-            "ccb12f5a5e87937a",
-            "5c688773c88f9f41",
-            "97aba946591c7289",
-            "bd50342bd0c916fa",
-            "7aa65e21deb3bbf5",
-            "8a9601bf0a7a7faa",
-            "bb5538fd7ccf2b59",
-            "d37ea6046424b974",
-            "89588cb6bf69a8d0",
-            "743d6a9744bd2b9f",
-            "470f388df8203a1f",
-            "d9503f18f29524db",
-            "27f4e52f97117294"
-        ],
-        "x": 1074,
-        "y": 1979,
-        "w": 1392,
-        "h": 482
+        "y": 1511.5,
+        "w": 1432,
+        "h": 449.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -1211,7 +1176,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#0eb8c0",
+                    "value": "#2259ff",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1227,7 +1192,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#0035d5",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -6861,24 +6826,6 @@
         "wires": []
     },
     {
-        "id": "1497c72e88a8f6b1",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "group": "d5edca762660bedf",
-        "order": 1,
-        "width": 4,
-        "height": 2,
-        "name": "Radio 1 Operator Dashboard",
-        "label": "Operator",
-        "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
-        "layout": "col-center",
-        "className": "",
-        "x": 1520,
-        "y": 1700,
-        "wires": []
-    },
-    {
         "id": "a74a987615dd4bb9",
         "type": "ui_text",
         "z": "407d2b774fe67647",
@@ -6923,15 +6870,15 @@
         "y": 1740,
         "wires": [
             [
-                "1497c72e88a8f6b1",
+                "f6305d04b2aeb44c",
+                "06389f3eea5c1260",
+                "e60f3cadbc4e78ff",
+                "d0b1af6883fc61b1",
                 "cab897702f8a6f57",
+                "1497c72e88a8f6b1",
                 "b946bc8caa8d1dfa",
                 "b9e129bdae4de517",
-                "5bbc72a4e604df32",
-                "d0b1af6883fc61b1",
-                "e60f3cadbc4e78ff",
-                "06389f3eea5c1260",
-                "f6305d04b2aeb44c"
+                "5bbc72a4e604df32"
             ],
             [
                 "a74a987615dd4bb9",
@@ -6942,26 +6889,6 @@
                 "214b730a1dfad6cb",
                 "68eee47c38859dda",
                 "90474210b68e90b0"
-            ]
-        ]
-    },
-    {
-        "id": "cab897702f8a6f57",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Get Spot Freq",
-        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1480,
-        "y": 1740,
-        "wires": [
-            [
-                "144f676e5802f76c"
             ]
         ]
     },
@@ -6986,24 +6913,6 @@
         ]
     },
     {
-        "id": "144f676e5802f76c",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "group": "d5edca762660bedf",
-        "order": 3,
-        "width": 5,
-        "height": 2,
-        "name": "Radio 1 Freq Dashboard",
-        "label": "Freq",
-        "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
-        "layout": "col-center",
-        "className": "",
-        "x": 1770,
-        "y": 1740,
-        "wires": []
-    },
-    {
         "id": "f9c9ed275443b030",
         "type": "ui_text",
         "z": "407d2b774fe67647",
@@ -7019,62 +6928,6 @@
         "className": "",
         "x": 1750,
         "y": 2200,
-        "wires": []
-    },
-    {
-        "id": "b946bc8caa8d1dfa",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "group": "d5edca762660bedf",
-        "order": 2,
-        "width": 3,
-        "height": 2,
-        "name": "Radio 1 Mode Dashboard",
-        "label": "Mode",
-        "format": "<font color={{msg.color}}>{{payload.RadioInfo.Mode[0]}}</font>",
-        "layout": "col-center",
-        "className": "",
-        "x": 1510,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "b9e129bdae4de517",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Get Status",
-        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1270,
-        "y": 1620,
-        "wires": [
-            [
-                "323b33d53e2baade"
-            ]
-        ]
-    },
-    {
-        "id": "323b33d53e2baade",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "group": "d5edca762660bedf",
-        "order": 4,
-        "width": 3,
-        "height": 2,
-        "name": "Radio 1 Status Dashboard",
-        "label": "Status",
-        "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
-        "layout": "col-center",
-        "className": "",
-        "x": 1520,
-        "y": 1620,
         "wires": []
     },
     {
@@ -7145,61 +6998,6 @@
         "wires": []
     },
     {
-        "id": "b1abd7f75fd32f6f",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "SQL Select Rate",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1370,
-        "y": 1560,
-        "wires": [
-            [
-                "3d1ebae60e058858"
-            ]
-        ]
-    },
-    {
-        "id": "3d1ebae60e058858",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSO Database",
-        "x": 1600,
-        "y": 1560,
-        "wires": [
-            [
-                "572d2215a6ea16bb"
-            ]
-        ]
-    },
-    {
-        "id": "0baeb2e7ae556661",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "group": "d5edca762660bedf",
-        "order": 6,
-        "width": 3,
-        "height": 2,
-        "name": "Radio 1 QSO Rate Dashboard",
-        "label": "{{msg.label}}",
-        "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
-        "layout": "col-center",
-        "className": "",
-        "x": 2410,
-        "y": 1560,
-        "wires": []
-    },
-    {
         "id": "89588cb6bf69a8d0",
         "type": "template",
         "z": "407d2b774fe67647",
@@ -7246,11 +7044,11 @@
         "width": 3,
         "height": 2,
         "name": "Radio 2 QSO Rate",
-        "label": "{{msg.label}}",
+        "label": "Q's/Hr",
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2350,
+        "x": 2230,
         "y": 2380,
         "wires": []
     },
@@ -7372,52 +7170,6 @@
         ]
     },
     {
-        "id": "5bbc72a4e604df32",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "30S Drop Limit",
-        "pauseType": "rate",
-        "timeout": "30",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "30",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1120,
-        "y": 1560,
-        "wires": [
-            [
-                "b1abd7f75fd32f6f"
-            ]
-        ]
-    },
-    {
-        "id": "5a5a85080d107e92",
-        "type": "subflow:c967abe5be484ee6",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "",
-        "x": 1980,
-        "y": 1560,
-        "wires": [
-            [
-                "ea7ca8bfbf26850d"
-            ],
-            [
-                "ea7ca8bfbf26850d"
-            ],
-            [
-                "ea7ca8bfbf26850d"
-            ]
-        ]
-    },
-    {
         "id": "8a9601bf0a7a7faa",
         "type": "subflow:c967abe5be484ee6",
         "z": "407d2b774fe67647",
@@ -7427,41 +7179,13 @@
         "y": 2380,
         "wires": [
             [
-                "bb5538fd7ccf2b59"
+                "d37ea6046424b974"
             ],
             [
-                "bb5538fd7ccf2b59"
+                "d37ea6046424b974"
             ],
             [
-                "bb5538fd7ccf2b59"
-            ]
-        ]
-    },
-    {
-        "id": "572d2215a6ea16bb",
-        "type": "change",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "rate",
-                "pt": "msg",
-                "to": "payload[0].rate",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1810,
-        "y": 1560,
-        "wires": [
-            [
-                "5a5a85080d107e92"
+                "d37ea6046424b974"
             ]
         ]
     },
@@ -7626,14 +7350,13 @@
         "y": 1860,
         "wires": [
             [
-                "1497c72e88a8f6b1",
+                "06389f3eea5c1260",
+                "e60f3cadbc4e78ff",
+                "d0b1af6883fc61b1",
                 "cab897702f8a6f57",
+                "1497c72e88a8f6b1",
                 "b946bc8caa8d1dfa",
                 "b9e129bdae4de517",
-                "d0b1af6883fc61b1",
-                "e60f3cadbc4e78ff",
-                "06389f3eea5c1260",
-                "b39377b110c0549b",
                 "e4e19daf40493fb9"
             ],
             [
@@ -7643,102 +7366,7 @@
                 "27f4e52f97117294",
                 "214b730a1dfad6cb",
                 "68eee47c38859dda",
-                "90474210b68e90b0",
-                "470f388df8203a1f"
-            ]
-        ]
-    },
-    {
-        "id": "d0b1af6883fc61b1",
-        "type": "switch",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Function Key Is Empty?",
-        "property": "payload.RadioInfo.FunctionKeyCaption[0]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            },
-            {
-                "t": "empty"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1510,
-        "y": 1780,
-        "wires": [
-            [
-                "9ac7455179b0e1d0"
-            ],
-            [
-                "41776f0e7dfe6145"
-            ]
-        ]
-    },
-    {
-        "id": "644bc9391ec895bf",
-        "type": "ui_text",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "group": "d5edca762660bedf",
-        "order": 5,
-        "width": 3,
-        "height": 2,
-        "name": "Radio 1 Macro Dashboard",
-        "label": "Macro",
-        "format": "<font size=6 font color={{msg.color}}>{{msg.payload.RadioInfo.FunctionKeyCaption[0]}}</font>",
-        "layout": "col-center",
-        "className": "",
-        "x": 1990,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "9ac7455179b0e1d0",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Color Change",
-        "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1740,
-        "y": 1780,
-        "wires": [
-            [
-                "644bc9391ec895bf"
-            ]
-        ]
-    },
-    {
-        "id": "41776f0e7dfe6145",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "4",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "3",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1740,
-        "y": 1820,
-        "wires": [
-            [
-                "644bc9391ec895bf"
+                "90474210b68e90b0"
             ]
         ]
     },
@@ -7837,33 +7465,6 @@
         ]
     },
     {
-        "id": "72403bb4391a1d55",
-        "type": "ui_led",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "order": 7,
-        "group": "d5edca762660bedf",
-        "width": 3,
-        "height": 1,
-        "label": "TX",
-        "labelPlacement": "left",
-        "labelAlignment": "right",
-        "colorForValue": [
-            {
-                "color": "#ff0000",
-                "value": "True",
-                "valueType": "str"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "Radio 1 TX Transmit LED",
-        "x": 1770,
-        "y": 1880,
-        "wires": []
-    },
-    {
         "id": "d87f990426df6b87",
         "type": "ui_led",
         "z": "407d2b774fe67647",
@@ -7889,27 +7490,6 @@
         "x": 1770,
         "y": 2020,
         "wires": []
-    },
-    {
-        "id": "e60f3cadbc4e78ff",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Is TX?",
-        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1490,
-        "y": 1880,
-        "wires": [
-            [
-                "72403bb4391a1d55",
-                "eb5d10e3d8e57f2d"
-            ]
-        ]
     },
     {
         "id": "68eee47c38859dda",
@@ -7952,53 +7532,6 @@
         ]
     },
     {
-        "id": "06389f3eea5c1260",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Is Focus?",
-        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1500,
-        "y": 1920,
-        "wires": [
-            [
-                "8de09b93172d4977"
-            ]
-        ]
-    },
-    {
-        "id": "8de09b93172d4977",
-        "type": "ui_led",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "order": 8,
-        "group": "d5edca762660bedf",
-        "width": 3,
-        "height": 1,
-        "label": "Focus",
-        "labelPlacement": "left",
-        "labelAlignment": "right",
-        "colorForValue": [
-            {
-                "color": "#0000ff",
-                "value": "True",
-                "valueType": "str"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": true,
-        "name": "Radio 1 Focus LED",
-        "x": 1750,
-        "y": 1920,
-        "wires": []
-    },
-    {
         "id": "c28f1c9baeeba95d",
         "type": "ui_led",
         "z": "407d2b774fe67647",
@@ -8024,173 +7557,6 @@
         "x": 1750,
         "y": 2060,
         "wires": []
-    },
-    {
-        "id": "451c0f81249ee073",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSO Database",
-        "x": 1600,
-        "y": 1520,
-        "wires": [
-            [
-                "572d2215a6ea16bb"
-            ]
-        ]
-    },
-    {
-        "id": "b39377b110c0549b",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "30S Drop Limit",
-        "pauseType": "rate",
-        "timeout": "30",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "30",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1120,
-        "y": 1520,
-        "wires": [
-            [
-                "79320f61b0466a60"
-            ]
-        ]
-    },
-    {
-        "id": "79320f61b0466a60",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "SQL Select Radio 1 Rate",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and radionr='1' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1370,
-        "y": 1520,
-        "wires": [
-            [
-                "451c0f81249ee073"
-            ]
-        ]
-    },
-    {
-        "id": "ea7ca8bfbf26850d",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Set Label",
-        "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\n//radiosport.live data\nlet rate = msg.rate;\nglobal.set(\"#radio1rate\",rate);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2180,
-        "y": 1560,
-        "wires": [
-            [
-                "0baeb2e7ae556661",
-                "9ed94619f709cb71"
-            ]
-        ]
-    },
-    {
-        "id": "470f388df8203a1f",
-        "type": "delay",
-        "z": "407d2b774fe67647",
-        "g": "94f44b7ea0e29d1d",
-        "name": "30S Drop Limit",
-        "pauseType": "rate",
-        "timeout": "30",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "30",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1180,
-        "y": 2420,
-        "wires": [
-            [
-                "743d6a9744bd2b9f"
-            ]
-        ]
-    },
-    {
-        "id": "743d6a9744bd2b9f",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "94f44b7ea0e29d1d",
-        "name": "SQL Select Radio 2 Rate",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and radionr='2' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1390,
-        "y": 2420,
-        "wires": [
-            [
-                "bd50342bd0c916fa"
-            ]
-        ]
-    },
-    {
-        "id": "bd50342bd0c916fa",
-        "type": "sqlite",
-        "z": "407d2b774fe67647",
-        "g": "94f44b7ea0e29d1d",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "QSO Database",
-        "x": 1620,
-        "y": 2420,
-        "wires": [
-            [
-                "7aa65e21deb3bbf5"
-            ]
-        ]
-    },
-    {
-        "id": "bb5538fd7ccf2b59",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "94f44b7ea0e29d1d",
-        "name": "Set Label",
-        "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\n//radiosport.live data\nlet rate = msg.rate;\nglobal.set(\"#radio12ate\",rate);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2180,
-        "y": 2380,
-        "wires": [
-            [
-                "d37ea6046424b974"
-            ]
-        ]
     },
     {
         "id": "f6305d04b2aeb44c",
@@ -8851,7 +8217,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -9330,7 +8696,7 @@
         "label": "<center>Current Total QSO Rate",
         "format": "<font color={{msg.color}}>{{msg.rate}}</font><font color={{msg.color}}> Q's/Hr</font>",
         "layout": "col-center",
-        "className": "",
+        "className": "dashboard_large_value",
         "x": 3670,
         "y": 920,
         "wires": []
@@ -9354,8 +8720,8 @@
         "name": "Total QSO Rate Chart",
         "group": "c53924de5e016c59",
         "order": 1,
-        "width": 12,
-        "height": 4,
+        "width": "12",
+        "height": "4",
         "label": "",
         "chartType": "line",
         "legend": "false",
@@ -9648,8 +9014,8 @@
         "name": "QSO Rate by Band Chart",
         "group": "390d9212c8d39731",
         "order": 1,
-        "width": 12,
-        "height": 4,
+        "width": "12",
+        "height": "4",
         "label": "",
         "chartType": "line",
         "legend": "true",
@@ -9679,7 +9045,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 4010,
+        "x": 3990,
         "y": 1040,
         "wires": [
             []
@@ -9693,8 +9059,8 @@
         "name": "QSO Chart by Band",
         "group": "6c1bd04fb9bfea48",
         "order": 1,
-        "width": 12,
-        "height": 4,
+        "width": "12",
+        "height": "4",
         "label": "",
         "chartType": "bar",
         "legend": "false",
@@ -10286,42 +9652,6 @@
         "wires": []
     },
     {
-        "id": "eb5d10e3d8e57f2d",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1990,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "e4e19daf40493fb9",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1400,
-        "y": 1820,
-        "wires": []
-    },
-    {
         "id": "f2b91a5dc28385a9",
         "type": "link in",
         "z": "407d2b774fe67647",
@@ -10357,24 +9687,6 @@
                 "816d3f7e84dd1bf0"
             ]
         ]
-    },
-    {
-        "id": "9ed94619f709cb71",
-        "type": "debug",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2440,
-        "y": 1640,
-        "wires": []
     },
     {
         "id": "b0d18fa59cc49c12",
@@ -10533,6 +9845,472 @@
                 "1e6f9143a325a577"
             ]
         ]
+    },
+    {
+        "id": "8de09b93172d4977",
+        "type": "ui_led",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "order": 8,
+        "group": "d5edca762660bedf",
+        "width": 3,
+        "height": 1,
+        "label": "Focus",
+        "labelPlacement": "left",
+        "labelAlignment": "right",
+        "colorForValue": [
+            {
+                "color": "#0000ff",
+                "value": "True",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Radio 1 Focus LED",
+        "x": 1750,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "06389f3eea5c1260",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Is Focus?",
+        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 1920,
+        "wires": [
+            [
+                "8de09b93172d4977"
+            ]
+        ]
+    },
+    {
+        "id": "e60f3cadbc4e78ff",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Is TX?",
+        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 1880,
+        "wires": [
+            [
+                "72403bb4391a1d55",
+                "eb5d10e3d8e57f2d"
+            ]
+        ]
+    },
+    {
+        "id": "72403bb4391a1d55",
+        "type": "ui_led",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "order": 7,
+        "group": "d5edca762660bedf",
+        "width": 3,
+        "height": 1,
+        "label": "TX",
+        "labelPlacement": "left",
+        "labelAlignment": "right",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "True",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Radio 1 TX Transmit LED",
+        "x": 1770,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "eb5d10e3d8e57f2d",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1990,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "41776f0e7dfe6145",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "3",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1740,
+        "y": 1820,
+        "wires": [
+            [
+                "644bc9391ec895bf"
+            ]
+        ]
+    },
+    {
+        "id": "9ac7455179b0e1d0",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Color Change",
+        "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 1780,
+        "wires": [
+            [
+                "644bc9391ec895bf"
+            ]
+        ]
+    },
+    {
+        "id": "644bc9391ec895bf",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "group": "d5edca762660bedf",
+        "order": 5,
+        "width": 3,
+        "height": 2,
+        "name": "Radio 1 Macro Dashboard",
+        "label": "Macro",
+        "format": "<font size=6 font color={{msg.color}}>{{msg.payload.RadioInfo.FunctionKeyCaption[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1990,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "144f676e5802f76c",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "group": "d5edca762660bedf",
+        "order": 3,
+        "width": 5,
+        "height": 2,
+        "name": "Radio 1 Freq Dashboard",
+        "label": "Freq",
+        "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1770,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "d0b1af6883fc61b1",
+        "type": "switch",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Function Key Is Empty?",
+        "property": "payload.RadioInfo.FunctionKeyCaption[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1510,
+        "y": 1780,
+        "wires": [
+            [
+                "9ac7455179b0e1d0"
+            ],
+            [
+                "41776f0e7dfe6145"
+            ]
+        ]
+    },
+    {
+        "id": "cab897702f8a6f57",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Get Spot Freq",
+        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 1740,
+        "wires": [
+            [
+                "144f676e5802f76c"
+            ]
+        ]
+    },
+    {
+        "id": "1497c72e88a8f6b1",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "group": "d5edca762660bedf",
+        "order": 1,
+        "width": 4,
+        "height": 2,
+        "name": "Radio 1 Operator Dashboard",
+        "label": "Operator",
+        "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1520,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "b946bc8caa8d1dfa",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "group": "d5edca762660bedf",
+        "order": 2,
+        "width": 3,
+        "height": 2,
+        "name": "Radio 1 Mode Dashboard",
+        "label": "Mode",
+        "format": "<font color={{msg.color}}>{{payload.RadioInfo.Mode[0]}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1510,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "323b33d53e2baade",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "group": "d5edca762660bedf",
+        "order": 4,
+        "width": 3,
+        "height": 2,
+        "name": "Radio 1 Status Dashboard",
+        "label": "Status",
+        "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1520,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "b9e129bdae4de517",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Get Status",
+        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 1620,
+        "wires": [
+            [
+                "323b33d53e2baade"
+            ]
+        ]
+    },
+    {
+        "id": "b1abd7f75fd32f6f",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "SQL Select Rate",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 1370,
+        "y": 1560,
+        "wires": [
+            [
+                "3d1ebae60e058858"
+            ]
+        ]
+    },
+    {
+        "id": "5bbc72a4e604df32",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "30S Drop Limit",
+        "pauseType": "rate",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "30",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1120,
+        "y": 1560,
+        "wires": [
+            [
+                "b1abd7f75fd32f6f"
+            ]
+        ]
+    },
+    {
+        "id": "e4e19daf40493fb9",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "3d1ebae60e058858",
+        "type": "sqlite",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "QSO Database",
+        "x": 1600,
+        "y": 1560,
+        "wires": [
+            [
+                "572d2215a6ea16bb"
+            ]
+        ]
+    },
+    {
+        "id": "572d2215a6ea16bb",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rate",
+                "pt": "msg",
+                "to": "payload[0].rate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1810,
+        "y": 1560,
+        "wires": [
+            [
+                "5a5a85080d107e92"
+            ]
+        ]
+    },
+    {
+        "id": "5a5a85080d107e92",
+        "type": "subflow:c967abe5be484ee6",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "",
+        "x": 1980,
+        "y": 1560,
+        "wires": [
+            [
+                "0baeb2e7ae556661"
+            ],
+            [
+                "0baeb2e7ae556661"
+            ],
+            [
+                "0baeb2e7ae556661"
+            ]
+        ]
+    },
+    {
+        "id": "0baeb2e7ae556661",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "group": "d5edca762660bedf",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "Radio 1 QSO Rate Dashboard",
+        "label": "Q's/Hr",
+        "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 2290,
+        "y": 1560,
+        "wires": []
     },
     {
         "id": "4079239a4fd5c11c",
