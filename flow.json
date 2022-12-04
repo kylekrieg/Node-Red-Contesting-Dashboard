@@ -907,7 +907,6 @@
             "f4935efee5594591",
             "aa50254808a938c8",
             "1edd5af6eed6044f",
-            "43d361d9eba3f06e",
             "0cadcaf22f887a0e",
             "21fe16ca5cbfc06b"
         ],
@@ -25480,20 +25479,6 @@
         "wires": []
     },
     {
-        "id": "43d361d9eba3f06e",
-        "type": "tcp out",
-        "z": "1c66bd27e16a3fec",
-        "name": "",
-        "host": "${Connect_IP}",
-        "port": "12060",
-        "beserver": "client",
-        "base64": false,
-        "end": false,
-        "x": 730,
-        "y": 480,
-        "wires": []
-    },
-    {
         "id": "0cadcaf22f887a0e",
         "type": "debug",
         "z": "1c66bd27e16a3fec",
@@ -25701,7 +25686,8 @@
         "wires": [
             [
                 "9e3ed0af8dd3311e",
-                "996242b2a362222b"
+                "996242b2a362222b",
+                "926305a899f616de"
             ]
         ]
     },
@@ -30074,8 +30060,7 @@
         "y": 920,
         "wires": [
             [
-                "a54ca6e34027cc56",
-                "926305a899f616de"
+                "a54ca6e34027cc56"
             ]
         ]
     },
@@ -30899,7 +30884,8 @@
         "y": 360,
         "wires": [
             [
-                "8f87ecfb66cec63d"
+                "8f87ecfb66cec63d",
+                "a7bc1748fc23defa"
             ]
         ]
     },
@@ -30941,7 +30927,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "change to options",
-        "func": "msg.payload= msg.options;\nmsg.payload={};\nreturn msg;",
+        "func": "msg.options=\"\";\nmsg.options = msg.payload[0][\"mycall\"];\nmsg.payload={};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31092,7 +31078,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "change to options",
-        "func": "msg.payload= msg.options;\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null) {\n    P1 = \"\"\n}\nif (P2 == null) {\n    P2 = \"\"\n}\nif (P3 == null) {\n    P3 = \"\"\n}\nif (P4 == null) {\n    P4 = \"\"\n}\nif (P5 == null) {\n    P5 = \"\"\n}\nif (P6 == null) {\n    P6 = \"\"\n}\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6)\nreturn msg;",
+        "func": "let length=msg.payload.length;\nmsg.options =[];\nfor (let i=0;i=length-1;i++){\n    msg.options.push(msg.payload[i].StationName)\n}\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null) {\n    P1 = \"\"\n}\nif (P2 == null) {\n    P2 = \"\"\n}\nif (P3 == null) {\n    P3 = \"\"\n}\nif (P4 == null) {\n    P4 = \"\"\n}\nif (P5 == null) {\n    P5 = \"\"\n}\nif (P6 == null) {\n    P6 = \"\"\n}\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31107,7 +31093,8 @@
                 "3160a3cf965792b6",
                 "0310b67c0342c959",
                 "131a5c94a9d2d0e6",
-                "e16bc4a1666da6df"
+                "e16bc4a1666da6df",
+                "a7bc1748fc23defa"
             ]
         ]
     },
@@ -31160,6 +31147,23 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a7bc1748fc23defa",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 540,
+        "wires": []
     },
     {
         "id": "1f45eb9a.6f2614",
@@ -34685,9 +34689,10 @@
         "z": "3e52b5d54104d7f0",
         "name": "",
         "filename": "global.json",
+        "filenameType": "str",
         "format": "utf8",
         "allProps": false,
-        "x": 580,
+        "x": 590,
         "y": 500,
         "wires": [
             [
@@ -40046,5 +40051,19 @@
         "y": 420,
         "wires": [],
         "l": true
+    },
+    {
+        "id": "43d361d9eba3f06e",
+        "type": "tcp out",
+        "z": "8a7fcbcd28d37f15",
+        "name": "",
+        "host": "${Connect_IP}",
+        "port": "12060",
+        "beserver": "client",
+        "base64": false,
+        "end": false,
+        "x": 1030,
+        "y": 500,
+        "wires": []
     }
 ]
