@@ -3,6 +3,7 @@
     "description": "Dashboard for N1MM Contesting",
     "version": "0.0.1",
     "dependencies": {
+	"node-red":"3.0.2",
         "node-red-contrib-hourglass": "1.5.0",
         "node-red-contrib-msg-speed": "2.1.0",
         "node-red-contrib-play-audio": "2.5.0",
@@ -16,7 +17,8 @@
         "node-red-contrib-ui-led": "0.4.11",
         "node-red-contrib-unit-converter": "0.0.3",
         "node-red-contrib-moment": "4.0.0",
-        "node-red-contrib-simple-gate": "0.5.2"
+        "node-red-contrib-simple-gate": "0.5.2",
+	"node-red-contrib-flow-manager":"0.7.4"
     },
     "node-red": {
         "settings": {
