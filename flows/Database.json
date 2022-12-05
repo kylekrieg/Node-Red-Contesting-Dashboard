@@ -1,0 +1,1247 @@
+[
+  {
+    "id": "1c66bd27e16a3fec",
+    "type": "tab",
+    "label": "Database",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "f01baabf4527b6e5",
+    "type": "group",
+    "z": "1c66bd27e16a3fec",
+    "name": "Score UDP",
+    "style": {
+      "fill": "#c8e7a7",
+      "label": true,
+      "label-position": "ne",
+      "color": "#000000"
+    },
+    "nodes": [
+      "1e5d975d4f33a469",
+      "7d228ea50d42e333",
+      "95dee3dbb21d6492",
+      "1af14f7f89b29f60",
+      "589f1d4180adfc19",
+      "63b9afc11deec0ca",
+      "40f7b8d29f1a593a",
+      "826117837339278a",
+      "a8d691c04ea6cbf7",
+      "4ae0a908ac9a4dce",
+      "ec8cad684cf4500a",
+      "812f9d1a536fe289",
+      "740fa20ee427ed88",
+      "71ba52668f48ab6c",
+      "407e8deceb6ad9d3",
+      "91e3a9b7825238b6",
+      "677d263669792c2d",
+      "8d88aedc41864cf8",
+      "547cf705c08f3fee",
+      "41f8c81cbde2390b",
+      "90a21e8778a42633",
+      "03b5ea45a14bec38",
+      "76624f15bec4c509",
+      "11439f8ac4e3b895",
+      "9b5ffa967054d1a9",
+      "f4935efee5594591",
+      "aa50254808a938c8",
+      "1edd5af6eed6044f",
+      "0cadcaf22f887a0e",
+      "21fe16ca5cbfc06b"
+    ],
+    "x": 134,
+    "y": 39
+  },
+  {
+    "id": "6c1673638929b26d",
+    "type": "group",
+    "z": "1c66bd27e16a3fec",
+    "name": "Radio UDP Extension",
+    "style": {
+      "label": true,
+      "fill": "#c8e7a7",
+      "fill-opacity": "0.61",
+      "label-position": "ne",
+      "color": "#000000"
+    },
+    "nodes": [
+      "93a6eb43a0cd1622",
+      "130b2eeddfbf75b0",
+      "3b9f0341530d56a7",
+      "95f6f96670a6b08a",
+      "9cfd21c0bd51285b",
+      "fed8216c6cda245c",
+      "91725949fc3edaf2",
+      "a819ca8d3f060472",
+      "7f90d48a29cf7912",
+      "4f839ad8b80a0658",
+      "c61ab508b6b82808",
+      "81242aec4c4bf65a",
+      "d1da622b197520ac",
+      "d5b128cfd798ac47",
+      "ded47173803bd33e",
+      "de40d8ac2d9026c8",
+      "ec4d056dcc3db216",
+      "96690058796bd634",
+      "71ef26e8c3355bec",
+      "93963dc560fcab1e",
+      "3e0f5f6001e77450",
+      "5c60f3c47791458b"
+    ],
+    "x": 94,
+    "y": 659
+  },
+  {
+    "id": "1e5d975d4f33a469",
+    "type": "udp in",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "iface": "",
+    "port": "12061",
+    "ipv": "udp4",
+    "multicast": "false",
+    "group": "",
+    "datatype": "utf8",
+    "x": 220,
+    "y": 360,
+    "wires": [
+      [
+        "8d88aedc41864cf8"
+      ]
+    ]
+  },
+  {
+    "id": "7d228ea50d42e333",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "QSO Data Raw",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 680,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "95dee3dbb21d6492",
+    "type": "comment",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "UDP XML Score Data",
+    "info": "",
+    "x": 280,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "1af14f7f89b29f60",
+    "type": "template",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Insert info DB",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "insert into qsos (app, contestname, contestnr, timestamp, mycall, band, \nrxfreq, txfreq, operator, mode, call, countryprefix, wpxprefix, stationprefix,\ncontinent, snt, sntnr, rcv, rcvnr, gridsquare, exchange1, section, comment, qth, name, power, \nmisctext, zone, prec, ck, ismultiplier1, ismultiplier2, ismultiplier3,\npoints, radionr, run1run2, RoverLocation, RadioInterfaced, NetworkedCompNr, IsOriginal,\nNetBiosName, IsRunQSO, StationName, ID, IsClaimedQso) values \n('{{{payload.contactinfo.app}}}',\n'{{{payload.contactinfo.contestname}}}',\n'{{{payload.contactinfo.contestnr}}}',\n'{{{payload.contactinfo.timestamp}}}',\n'{{{payload.contactinfo.mycall}}}',\n'{{{payload.contactinfo.band}}}',\n'{{{payload.contactinfo.rxfreq}}}',\n'{{{payload.contactinfo.txfreq}}}',\n'{{{payload.contactinfo.operator}}}',\n'{{{payload.contactinfo.mode}}}',\n'{{{payload.contactinfo.call}}}',\n'{{{payload.contactinfo.countryprefix}}}',\n'{{{payload.contactinfo.wpxprefix}}}',\n'{{{payload.contactinfo.stationprefix}}}',\n'{{{payload.contactinfo.continent}}}',\n'{{{payload.contactinfo.snt}}}',\n'{{{payload.contactinfo.sntnr}}}',\n'{{{payload.contactinfo.rcv}}}',\n'{{{payload.contactinfo.rcvnr}}}',\n'{{{payload.contactinfo.gridsquare}}}',\n'{{{payload.contactinfo.exchange1}}}',\n'{{{payload.contactinfo.section}}}',\n'{{{payload.contactinfo.comment}}}',\n'{{{payload.contactinfo.qth}}}',\n'{{{payload.contactinfo.name}}}',\n'{{{payload.contactinfo.power}}}',\n'{{{payload.contactinfo.misctext}}}',\n'{{{payload.contactinfo.zone}}}',\n'{{{payload.contactinfo.prec}}}',\n'{{{payload.contactinfo.ck}}}',\n'{{{payload.contactinfo.ismultiplier1}}}',\n'{{{payload.contactinfo.ismultiplier2}}}',\n'{{{payload.contactinfo.ismultiplier3}}}',\n'{{{payload.contactinfo.points}}}',\n'{{{payload.contactinfo.radionr}}}',\n'{{{payload.contactinfo.run1run2}}}',\n'{{{payload.contactinfo.RoverLocation}}}',\n'{{{payload.contactinfo.RadioInterfaced}}}',\n'{{{payload.contactinfo.NetworkedCompNr}}}',\n'{{{payload.contactinfo.IsOriginal}}}',\n'{{{payload.contactinfo.NetBiosName}}}',\n'{{{payload.contactinfo.IsRunQSO}}}',\n'{{{payload.contactinfo.StationName}}}',\n'{{{payload.contactinfo.ID}}}',\n'{{{payload.contactinfo.IsClaimedQso}}}');\n\n",
+    "output": "str",
+    "x": 1200,
+    "y": 320,
+    "wires": [
+      [
+        "589f1d4180adfc19",
+        "826117837339278a"
+      ]
+    ]
+  },
+  {
+    "id": "589f1d4180adfc19",
+    "type": "sqlite",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1600,
+    "y": 400,
+    "wires": [
+      [
+        "0cadcaf22f887a0e"
+      ]
+    ]
+  },
+  {
+    "id": "63b9afc11deec0ca",
+    "type": "switch",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Add - Delete - Replace - Lookup",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "cont",
+        "v": "lookupinfo",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "contactinfo",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "contactdelete",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "contactreplace",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 4,
+    "x": 650,
+    "y": 360,
+    "wires": [
+      [
+        "547cf705c08f3fee"
+      ],
+      [
+        "407e8deceb6ad9d3",
+        "547cf705c08f3fee"
+      ],
+      [
+        "71ba52668f48ab6c"
+      ],
+      [
+        "740fa20ee427ed88"
+      ]
+    ]
+  },
+  {
+    "id": "40f7b8d29f1a593a",
+    "type": "template",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Delete QSO",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "delete from qsos where ID=('{{{payload.contactdelete.ID}}}');",
+    "output": "str",
+    "x": 1290,
+    "y": 360,
+    "wires": [
+      [
+        "589f1d4180adfc19",
+        "812f9d1a536fe289"
+      ]
+    ]
+  },
+  {
+    "id": "826117837339278a",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "DB Insert",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1580,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "a8d691c04ea6cbf7",
+    "type": "string",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Replace - ",
+    "methods": [
+      {
+        "name": "replaceAll",
+        "params": [
+          {
+            "type": "str",
+            "value": "-"
+          },
+          {
+            "type": "str",
+            "value": ""
+          }
+        ]
+      }
+    ],
+    "prop": "payload.contactdelete.ID",
+    "propout": "payload.contactdelete.ID",
+    "object": "msg",
+    "objectout": "msg",
+    "x": 1120,
+    "y": 360,
+    "wires": [
+      [
+        "40f7b8d29f1a593a"
+      ]
+    ]
+  },
+  {
+    "id": "4ae0a908ac9a4dce",
+    "type": "delay",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "outputs": 1,
+    "x": 1100,
+    "y": 400,
+    "wires": [
+      [
+        "aa50254808a938c8"
+      ]
+    ]
+  },
+  {
+    "id": "ec8cad684cf4500a",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "DB Replace",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1590,
+    "y": 440,
+    "wires": []
+  },
+  {
+    "id": "812f9d1a536fe289",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "DB Delete",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1590,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "740fa20ee427ed88",
+    "type": "xml",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 930,
+    "y": 400,
+    "wires": [
+      [
+        "4ae0a908ac9a4dce"
+      ]
+    ]
+  },
+  {
+    "id": "71ba52668f48ab6c",
+    "type": "xml",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 930,
+    "y": 360,
+    "wires": [
+      [
+        "a8d691c04ea6cbf7"
+      ]
+    ]
+  },
+  {
+    "id": "407e8deceb6ad9d3",
+    "type": "xml",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 930,
+    "y": 320,
+    "wires": [
+      [
+        "1af14f7f89b29f60",
+        "91e3a9b7825238b6"
+      ]
+    ]
+  },
+  {
+    "id": "91e3a9b7825238b6",
+    "type": "function",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "If Mult Say Mult",
+    "func": "let m1 = msg.payload.contactinfo.ismultiplier1[0];\nlet m2 = msg.payload.contactinfo.ismultiplier2[0];\nlet m3 = msg.payload.contactinfo.ismultiplier3[0];\nlet category = global.get('category');\n\nlet op = msg.payload.contactinfo.operator[0];\nlet band1 = msg.payload.contactinfo.band[0];\n\n\nif (m1 == \"1\" || m2 == '1' || m3 == '1')\n{\n    \n    if (category == 'multiop')\n    {\n    msg.payload = \"New Multiplyer from \" + op;\n    return msg;\n    }\n\n    if (category == 'so1v' || category == 'so2r')\n    {\n    msg.payload = \"New Multiplyer\"\n    return msg;\n    }\n    \n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1140,
+    "y": 240,
+    "wires": [
+      [
+        "11439f8ac4e3b895"
+      ]
+    ]
+  },
+  {
+    "id": "677d263669792c2d",
+    "type": "link out",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "QSOs From N1MM OUT",
+    "mode": "link",
+    "links": [
+      "e4e81a5987819415",
+      "311b6207c07e5013"
+    ],
+    "x": 1595,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "8d88aedc41864cf8",
+    "type": "function",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "UTF8",
+    "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 370,
+    "y": 360,
+    "wires": [
+      [
+        "63b9afc11deec0ca",
+        "7d228ea50d42e333"
+      ]
+    ]
+  },
+  {
+    "id": "547cf705c08f3fee",
+    "type": "switch",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "contact or lookup?",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "cont",
+        "v": "contactinfo",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "lookupinfo",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 910,
+    "y": 100,
+    "wires": [
+      [
+        "03b5ea45a14bec38"
+      ],
+      [
+        "76624f15bec4c509"
+      ]
+    ]
+  },
+  {
+    "id": "41f8c81cbde2390b",
+    "type": "change",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Set Type to QSO",
+    "rules": [
+      {
+        "t": "set",
+        "p": "qsotype",
+        "pt": "msg",
+        "to": "qso",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1330,
+    "y": 80,
+    "wires": [
+      [
+        "677d263669792c2d"
+      ]
+    ]
+  },
+  {
+    "id": "90a21e8778a42633",
+    "type": "change",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Set Type to Lookup",
+    "rules": [
+      {
+        "t": "set",
+        "p": "qsotype",
+        "pt": "msg",
+        "to": "lookup",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1330,
+    "y": 120,
+    "wires": [
+      [
+        "677d263669792c2d",
+        "9b5ffa967054d1a9"
+      ]
+    ]
+  },
+  {
+    "id": "03b5ea45a14bec38",
+    "type": "xml",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 1130,
+    "y": 80,
+    "wires": [
+      [
+        "41f8c81cbde2390b"
+      ]
+    ]
+  },
+  {
+    "id": "76624f15bec4c509",
+    "type": "xml",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 1130,
+    "y": 120,
+    "wires": [
+      [
+        "90a21e8778a42633"
+      ]
+    ]
+  },
+  {
+    "id": "11439f8ac4e3b895",
+    "type": "switch",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Say Multi",
+    "property": "saymulti",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "true"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 1320,
+    "y": 240,
+    "wires": [
+      [
+        "f4935efee5594591"
+      ]
+    ]
+  },
+  {
+    "id": "93a6eb43a0cd1622",
+    "type": "link in",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "Database Radio IN",
+    "links": [
+      "15fa6dac50ec3359",
+      "3e86130caa4f1f80",
+      "a96e781180e6e778",
+      "94303f00b0074ac4"
+    ],
+    "x": 135,
+    "y": 840,
+    "wires": [
+      [
+        "fed8216c6cda245c"
+      ]
+    ]
+  },
+  {
+    "id": "130b2eeddfbf75b0",
+    "type": "template",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "Insert info DB",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "insert into radio (timestamp, app, StationName, RadioNr, Freq, TXFreq, Mode, OpCall, IsRunning, FocusEntry, EntryWindowHwnd,\nAntenna, Rotors, FocusRadioNr, IsStereo, IsSplit, ActiveRadioNr, IsTransmitting, FunctionKeyCaption, RadioName,\nAuxAntSelected, AuxAntSelectedName) values \n('{{{payload.timestamp}}}',\n'{{{payload.RadioInfo.app}}}',\n'{{{payload.RadioInfo.StationName}}}',\n'{{{payload.RadioInfo.RadioNr}}}',\n'{{{payload.RadioInfo.Freq}}}',\n'{{{payload.RadioInfo.TXFreq}}}',\n'{{{payload.RadioInfo.Mode}}}',\n'{{{payload.RadioInfo.OpCall}}}',\n'{{{payload.RadioInfo.IsRunning}}}',\n'{{{payload.RadioInfo.FocusEntry}}}',\n'{{{payload.RadioInfo.EntryWindowHwnd}}}',\n'{{{payload.RadioInfo.Antenna}}}',\n'{{{payload.RadioInfo.Rotors}}}',\n'{{{payload.RadioInfo.FocusRadioNr}}}',\n'{{{payload.RadioInfo.IsStereo}}}',\n'{{{payload.RadioInfo.IsSplit}}}',\n'{{{payload.RadioInfo.ActiveRadioNr}}}',\n'{{{payload.RadioInfo.IsTransmitting}}}',\n'{{{payload.RadioInfo.FunctionKeyCaption}}}',\n'{{{payload.RadioInfo.RadioName}}}',\n'{{{payload.RadioInfo.AuxAntSelected}}}',\n'{{{payload.RadioInfo.AuxAntSelectedName}}}'\n);\n\n",
+    "output": "str",
+    "x": 1380,
+    "y": 820,
+    "wires": [
+      [
+        "95f6f96670a6b08a",
+        "93963dc560fcab1e"
+      ]
+    ]
+  },
+  {
+    "id": "3b9f0341530d56a7",
+    "type": "moment",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "topic": "",
+    "input": "payload.timestamp",
+    "inputType": "msg",
+    "inTz": "America/Chicago",
+    "adjAmount": 0,
+    "adjType": "days",
+    "adjDir": "add",
+    "format": "",
+    "locale": "en-GB",
+    "output": "payload.timestamp",
+    "outputType": "msg",
+    "outTz": "America/Chicago",
+    "x": 1160,
+    "y": 820,
+    "wires": [
+      [
+        "130b2eeddfbf75b0"
+      ]
+    ]
+  },
+  {
+    "id": "95f6f96670a6b08a",
+    "type": "sqlite",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1580,
+    "y": 820,
+    "wires": [
+      [
+        "9cfd21c0bd51285b"
+      ]
+    ]
+  },
+  {
+    "id": "9cfd21c0bd51285b",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1770,
+    "y": 820,
+    "wires": []
+  },
+  {
+    "id": "fed8216c6cda245c",
+    "type": "switch",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "Station Name",
+    "property": "payload.RadioInfo.StationName[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "PC1",
+        "vt": "global"
+      },
+      {
+        "t": "eq",
+        "v": "PC2",
+        "vt": "global"
+      },
+      {
+        "t": "eq",
+        "v": "PC3",
+        "vt": "global"
+      },
+      {
+        "t": "eq",
+        "v": "PC4",
+        "vt": "global"
+      },
+      {
+        "t": "eq",
+        "v": "PC5",
+        "vt": "global"
+      },
+      {
+        "t": "eq",
+        "v": "PC6",
+        "vt": "global"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 6,
+    "x": 330,
+    "y": 840,
+    "wires": [
+      [
+        "d5b128cfd798ac47"
+      ],
+      [
+        "d1da622b197520ac"
+      ],
+      [
+        "ded47173803bd33e"
+      ],
+      [
+        "de40d8ac2d9026c8"
+      ],
+      [
+        "ec4d056dcc3db216"
+      ],
+      [
+        "96690058796bd634"
+      ]
+    ]
+  },
+  {
+    "id": "91725949fc3edaf2",
+    "type": "rbe",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "PC1 RBE",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.RadioInfo",
+    "topi": "topic",
+    "x": 800,
+    "y": 740,
+    "wires": [
+      [
+        "3b9f0341530d56a7",
+        "5c60f3c47791458b"
+      ]
+    ]
+  },
+  {
+    "id": "a819ca8d3f060472",
+    "type": "rbe",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "PC2 RBE",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload",
+    "topi": "topic",
+    "x": 800,
+    "y": 780,
+    "wires": [
+      [
+        "3b9f0341530d56a7"
+      ]
+    ]
+  },
+  {
+    "id": "7f90d48a29cf7912",
+    "type": "rbe",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "PC3 RBE",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload",
+    "topi": "topic",
+    "x": 800,
+    "y": 820,
+    "wires": [
+      [
+        "3b9f0341530d56a7"
+      ]
+    ]
+  },
+  {
+    "id": "4f839ad8b80a0658",
+    "type": "rbe",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "PC4 RBE",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload",
+    "topi": "topic",
+    "x": 800,
+    "y": 860,
+    "wires": [
+      [
+        "3b9f0341530d56a7"
+      ]
+    ]
+  },
+  {
+    "id": "c61ab508b6b82808",
+    "type": "rbe",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "PC5 RBE",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload",
+    "topi": "topic",
+    "x": 800,
+    "y": 900,
+    "wires": [
+      [
+        "3b9f0341530d56a7"
+      ]
+    ]
+  },
+  {
+    "id": "81242aec4c4bf65a",
+    "type": "rbe",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "PC6 RBE",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload",
+    "topi": "topic",
+    "x": 800,
+    "y": 940,
+    "wires": [
+      [
+        "3b9f0341530d56a7"
+      ]
+    ]
+  },
+  {
+    "id": "d1da622b197520ac",
+    "type": "change",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "payload.RadioInfo.RadioNr",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 630,
+    "y": 780,
+    "wires": [
+      [
+        "a819ca8d3f060472"
+      ]
+    ]
+  },
+  {
+    "id": "d5b128cfd798ac47",
+    "type": "change",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "payload.RadioInfo.RadioNr",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 630,
+    "y": 740,
+    "wires": [
+      [
+        "91725949fc3edaf2",
+        "3e0f5f6001e77450"
+      ]
+    ]
+  },
+  {
+    "id": "ded47173803bd33e",
+    "type": "change",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "payload.RadioInfo.RadioNr",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 630,
+    "y": 820,
+    "wires": [
+      [
+        "7f90d48a29cf7912"
+      ]
+    ]
+  },
+  {
+    "id": "de40d8ac2d9026c8",
+    "type": "change",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "payload.RadioInfo.RadioNr",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 630,
+    "y": 860,
+    "wires": [
+      [
+        "4f839ad8b80a0658"
+      ]
+    ]
+  },
+  {
+    "id": "ec4d056dcc3db216",
+    "type": "change",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "payload.RadioInfo.RadioNr",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 630,
+    "y": 900,
+    "wires": [
+      [
+        "c61ab508b6b82808"
+      ]
+    ]
+  },
+  {
+    "id": "96690058796bd634",
+    "type": "change",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "payload.RadioInfo.RadioNr",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 630,
+    "y": 940,
+    "wires": [
+      [
+        "81242aec4c4bf65a"
+      ]
+    ]
+  },
+  {
+    "id": "71ef26e8c3355bec",
+    "type": "comment",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "UDP Radio Info",
+    "info": "This flow inserts the radio data into the qsos database radio table.  Only if the data has changed will the flow log data into the database. \n\nThe filter node is used on each RadioNr to filter out S02R non-changed data.",
+    "x": 320,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "93963dc560fcab1e",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1590,
+    "y": 780,
+    "wires": []
+  },
+  {
+    "id": "3e0f5f6001e77450",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 810,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "5c60f3c47791458b",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "6c1673638929b26d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1030,
+    "y": 720,
+    "wires": []
+  },
+  {
+    "id": "9b5ffa967054d1a9",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1570,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "f4935efee5594591",
+    "type": "play audio",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "voice": "0",
+    "x": 1600,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "aa50254808a938c8",
+    "type": "template",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Update Record Info SQL",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "update qsos set \n\napp = '{{{payload.contactreplace.app}}}',\ncontestname = '{{{payload.contactreplace.contestname}}}',\ncontestnr = '{{{payload.contactreplace.contestnr}}}',\ntimestamp = '{{{payload.contactreplace.timestamp}}}',\nmycall = '{{{payload.contactreplace.mycall}}}',\nband = '{{{payload.contactreplace.band}}}',\nrxfreq = '{{{payload.contactreplace.rxfreq}}}',\ntxfreq = '{{{payload.contactreplace.txfreq}}}',\noperator = '{{{payload.contactreplace.operator}}}',\nmode = '{{{payload.contactreplace.mode}}}',\ncall = '{{{payload.contactreplace.call}}}',\ncountryprefix = '{{{payload.contactreplace.countryprefix}}}',\nwpxprefix = '{{{payload.contactreplace.wpxprefix}}}',\nstationprefix = '{{{payload.contactreplace.stationprefix}}}',\ncontinent = '{{{payload.contactreplace.continent}}}',\nsnt = '{{{payload.contactreplace.snt}}}',\nsntnr = '{{{payload.contactreplace.sntnr}}}',\nrcv = '{{{payload.contactreplace.rcv}}}',\nrcvnr = '{{{payload.contactreplace.rcvnr}}}',\ngridsquare = '{{{payload.contactreplace.gridsquare}}}',\nexchange1 = '{{{payload.contactreplace.exchange1}}}',\nsection = '{{{payload.contactreplace.section}}}',\ncomment = '{{{payload.contactreplace.comment}}}',\nqth = '{{{payload.contactreplace.qth}}}',\nname = '{{{payload.contactreplace.name}}}',\npower = '{{{payload.contactreplace.power}}}',\nmisctext = '{{{payload.contactreplace.misctext}}}',\nzone = '{{{payload.contactreplace.zone}}}',\nprec = '{{{payload.contactreplace.prec}}}',\nck = '{{{payload.contactreplace.ck}}}',\nismultiplier1 = '{{{payload.contactreplace.ismultiplier1}}}',\nismultiplier2 = '{{{payload.contactreplace.ismultiplier2}}}',\nismultiplier3 = '{{{payload.contactreplace.ismultiplier3}}}',\npoints = '{{{payload.contactreplace.points}}}',\nradionr = '{{{payload.contactreplace.radionr}}}',\nrun1run2 = '{{{payload.contactreplace.run1run2}}}',\nRoverLocation = '{{{payload.contactreplace.RoverLocation}}}',\nRadioInterfaced = '{{{payload.contactreplace.RadioInterfaced}}}',\nNetworkedCompNr = '{{{payload.contactreplace.NetworkedCompNr}}}',\nIsOriginal = '{{{payload.contactreplace.IsOriginal}}}',\nNetBiosName = '{{{payload.contactreplace.NetBiosName}}}',\nIsRunQSO = '{{{payload.contactreplace.IsRunQSO}}}',\nStationName = '{{{payload.contactreplace.StationName}}}',\nIsClaimedQso = '{{{payload.contactreplace.IsClaimedQso}}}'\n\nwhere ID = '{{{payload.contactreplace.ID}}}';\n",
+    "output": "str",
+    "x": 1290,
+    "y": 400,
+    "wires": [
+      [
+        "589f1d4180adfc19",
+        "ec8cad684cf4500a"
+      ]
+    ]
+  },
+  {
+    "id": "1edd5af6eed6044f",
+    "type": "comment",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "To do",
+    "info": "Change flow for a QSO update/change based on new N1MM process. ",
+    "x": 460,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "0cadcaf22f887a0e",
+    "type": "debug",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1860,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "21fe16ca5cbfc06b",
+    "type": "link in",
+    "z": "1c66bd27e16a3fec",
+    "g": "f01baabf4527b6e5",
+    "name": "Score_N3FJP",
+    "links": [
+      "47245c8acbda8034"
+    ],
+    "x": 235,
+    "y": 420,
+    "wires": [
+      [
+        "8d88aedc41864cf8"
+      ]
+    ]
+  }
+]

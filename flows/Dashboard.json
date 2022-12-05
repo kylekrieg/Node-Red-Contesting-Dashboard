@@ -1,0 +1,4773 @@
+[
+  {
+    "id": "407d2b774fe67647",
+    "type": "tab",
+    "label": "Dashboard",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "4f4b9f0c82968b60",
+    "type": "group",
+    "z": "407d2b774fe67647",
+    "name": "Score UDP",
+    "style": {
+      "fill": "#c8e7a7",
+      "label": true,
+      "label-position": "ne",
+      "color": "#000000"
+    },
+    "nodes": [
+      "0178697fb442d801",
+      "fb32d39142880f19",
+      "d2cdb7808cce0e9c",
+      "2cdd5ffb3ac01f73",
+      "289442fe7c0d95f9",
+      "9b7d271988034596",
+      "31d7202b2b50131d",
+      "ff83b125cd4af97b",
+      "06ef39d063a5a0f6",
+      "bcb9b861df7e6958",
+      "1e6f9143a325a577",
+      "aec65d796aed9cee",
+      "97ed253958c48009",
+      "aad501d4eeed3f6c",
+      "622fed8ae8f6a5d2",
+      "77a4afb43fb7bdbd",
+      "a9c362fc3c6ac624",
+      "7d8436d8a3a5422b",
+      "49c503a250b35428",
+      "3ba4521f148eac8c",
+      "e2f41f09bb088749",
+      "e21c45667c4cb46a",
+      "a08bd99d57f55d64",
+      "ba53f01105c0383d",
+      "db019a0c1478765c",
+      "91decfc57d48218c",
+      "eecdc889bd3900f6",
+      "03b3b4cadbdf9e34",
+      "a7dc412af8237000",
+      "8d406adaa39170fb",
+      "3c4c7e4533b41d22"
+    ],
+    "x": 414,
+    "y": 879,
+    "w": 1852,
+    "h": 462
+  },
+  {
+    "id": "81692a3cb68d6cde",
+    "type": "group",
+    "z": "407d2b774fe67647",
+    "name": "Radio UDP",
+    "style": {
+      "fill": "#c8e7a7",
+      "label": true,
+      "label-position": "ne",
+      "color": "#000000"
+    },
+    "nodes": [
+      "4fdbbfe296a88bce",
+      "f56678090927861d",
+      "5d82a0a17d0f57ea",
+      "bd61ab676c6f7232",
+      "3d795eb91a1d2b3d",
+      "d67c999eabb4aba0",
+      "3e86130caa4f1f80",
+      "3105183456c5bc51",
+      "6eccad64a2223ff8",
+      "334aadb089f6f0c0",
+      "15fa6dac50ec3359",
+      "bb7fdde37dcf367e",
+      "f6305d04b2aeb44c",
+      "6351dc9d0c3ec453",
+      "6176c210be856fa7",
+      "a9afc3cb2db49407",
+      "94f44b7ea0e29d1d"
+    ],
+    "x": 14,
+    "y": 1453,
+    "w": 2578,
+    "h": 1034
+  },
+  {
+    "id": "d48758cdf0c8991d",
+    "type": "group",
+    "z": "407d2b774fe67647",
+    "name": "Dashboard Map, QSO Exchange & Timers",
+    "style": {
+      "label": true,
+      "fill": "#ffdf7f",
+      "color": "#000000"
+    },
+    "nodes": [
+      "c9f5c786.410838",
+      "6c3eca08.f081a4",
+      "df39f838.a40908",
+      "3f8df851.2a35e8",
+      "9f9db1ca.0200a",
+      "eaa8defdbb30a4cb",
+      "c4ca101c43ab8cb0",
+      "46edf21ad9fe8580",
+      "7663a3961ad647b3",
+      "6697e03dc0ecce50",
+      "1c23e47818d36917",
+      "78b62d696464ca78",
+      "26d6dfc5398aed9a",
+      "8150e2eee30748c6",
+      "5a216be2bdc202b8",
+      "d253cee5fb3ba4b9",
+      "b77db70e05f8b1d9",
+      "a0658e82121731a8",
+      "774ff0257828e8ad",
+      "611bebabf791b26b",
+      "64a0de9783f751b5",
+      "17f8857f30cdf7aa",
+      "86194a7969acae11",
+      "56dc3f83cf57a080",
+      "fcf9482ddad8b592",
+      "0ad5d91b01c01497",
+      "cadea72441280e66",
+      "13d29b4154be030c",
+      "3617522441b640cb",
+      "9b9d60245cebf80a",
+      "e4e81a5987819415",
+      "593016df038ddee5",
+      "696566009ad9261d",
+      "adb1747255633e97",
+      "3d9090ccaadd42cb",
+      "12de6739c2037829",
+      "ce8f3cdfc915749d",
+      "af6a11b52841ef4a",
+      "cf1edc41b5adc8be",
+      "4320ff577c7cb858",
+      "825f9b7a2b7fc6e2",
+      "8804affd65082b4f",
+      "6c1de6ee7473fac9",
+      "fdfd9133ae52097f",
+      "b5a72874a2f95ce4"
+    ],
+    "x": 274,
+    "y": 19,
+    "w": 2232,
+    "h": 802
+  },
+  {
+    "id": "26cf0678322d1bb6",
+    "type": "group",
+    "z": "407d2b774fe67647",
+    "style": {
+      "stroke": "#999999",
+      "stroke-opacity": "1",
+      "fill": "none",
+      "fill-opacity": "1",
+      "label": true,
+      "label-position": "nw",
+      "color": "#a4a4a4"
+    },
+    "nodes": [
+      "b829243f42385969",
+      "ec43df8648bddaa2",
+      "870d2ff5a5b268a5",
+      "6d122d15af375ab6",
+      "22fe07a2c13d18ff",
+      "816d3f7e84dd1bf0",
+      "577c577fed5bf005",
+      "61fdced830d7a010",
+      "fc6208525bfd2db6",
+      "e616bcdb29792aa8",
+      "002dded44b1b5ee6",
+      "e7705b1d662e98c7",
+      "a2c474948039215e",
+      "ba28175bd864c273",
+      "a806469711612724",
+      "9ba2b748bca48ba8",
+      "fae0041199166dbc",
+      "1aa94adaa1790106",
+      "35dd8fcbbd78da95",
+      "5d54abefaa3f6011",
+      "c700f03ea974bf65",
+      "d3b97c2f3316c129",
+      "afcc0fe55c3cb07e",
+      "6897b580ee50b83f",
+      "64ca2307721f7954",
+      "be3cb3b9861c2e31",
+      "251ae3f24ba6c178",
+      "d1e531d474c42dde",
+      "33a1fe7f6bd59c25",
+      "bc62893a749a6116",
+      "d13e3608177fffc1",
+      "12b4fddb68795a01",
+      "3fc8a4c3201d42cc",
+      "168faf5992e055d7",
+      "0664e8c97eaa69b8",
+      "1eb0d9ba4d1bf8d6",
+      "9757755f9abe81e5",
+      "9cc043acda88da3f",
+      "d53bdbd6ba3fdfed",
+      "8186c56328392551",
+      "0f2162dc3bfae19c",
+      "f0dbae81ebaf286e",
+      "9d0e444ab32a06f9",
+      "8834c50bc7d9a366"
+    ],
+    "x": 2314,
+    "y": 839,
+    "w": 1912,
+    "h": 602
+  },
+  {
+    "id": "b5a72874a2f95ce4",
+    "type": "group",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Map",
+    "style": {
+      "fill": "#7fb7df",
+      "label": true,
+      "label-position": "ne",
+      "color": "#000000",
+      "fill-opacity": "0.94"
+    },
+    "nodes": [
+      "b560bd86dc5c87f6",
+      "1fef8af3224d3ace",
+      "a6f01856669d3e50",
+      "f2b91a5dc28385a9",
+      "b0d18fa59cc49c12",
+      "0d35873cadebf97f",
+      "415b4ee138125e2e",
+      "bc661ac4152269b3",
+      "ae7413cce68dfffa"
+    ],
+    "x": 914,
+    "y": 79,
+    "w": 1032,
+    "h": 162
+  },
+  {
+    "id": "a9afc3cb2db49407",
+    "type": "group",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "Radio1",
+    "style": {
+      "fill": "#7fb7df",
+      "label": true,
+      "color": "#000000",
+      "label-position": "ne"
+    },
+    "nodes": [
+      "8de09b93172d4977",
+      "06389f3eea5c1260",
+      "e60f3cadbc4e78ff",
+      "72403bb4391a1d55",
+      "eb5d10e3d8e57f2d",
+      "41776f0e7dfe6145",
+      "9ac7455179b0e1d0",
+      "644bc9391ec895bf",
+      "144f676e5802f76c",
+      "d0b1af6883fc61b1",
+      "cab897702f8a6f57",
+      "1497c72e88a8f6b1",
+      "b946bc8caa8d1dfa",
+      "323b33d53e2baade",
+      "b9e129bdae4de517",
+      "b1abd7f75fd32f6f",
+      "79320f61b0466a60",
+      "b39377b110c0549b",
+      "5bbc72a4e604df32",
+      "e4e19daf40493fb9",
+      "3d1ebae60e058858",
+      "451c0f81249ee073",
+      "572d2215a6ea16bb",
+      "5a5a85080d107e92",
+      "ea7ca8bfbf26850d",
+      "0baeb2e7ae556661",
+      "9ed94619f709cb71"
+    ],
+    "x": 1014,
+    "y": 1479,
+    "w": 1552,
+    "h": 482
+  },
+  {
+    "id": "94f44b7ea0e29d1d",
+    "type": "group",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "Radio2",
+    "style": {
+      "fill": "#7fb7df",
+      "label": true,
+      "label-position": "ne",
+      "color": "#000000"
+    },
+    "nodes": [
+      "c28f1c9baeeba95d",
+      "d87f990426df6b87",
+      "68eee47c38859dda",
+      "90474210b68e90b0",
+      "214b730a1dfad6cb",
+      "379a02b32eb2de49",
+      "88be1b74fa6788be",
+      "d6a02ccab960310f",
+      "f9c9ed275443b030",
+      "fb911af0905d8f5d",
+      "a74a987615dd4bb9",
+      "ccb12f5a5e87937a",
+      "5c688773c88f9f41",
+      "97aba946591c7289",
+      "bd50342bd0c916fa",
+      "7aa65e21deb3bbf5",
+      "8a9601bf0a7a7faa",
+      "bb5538fd7ccf2b59",
+      "d37ea6046424b974",
+      "89588cb6bf69a8d0",
+      "743d6a9744bd2b9f",
+      "470f388df8203a1f",
+      "d9503f18f29524db",
+      "27f4e52f97117294"
+    ],
+    "x": 1074,
+    "y": 1979,
+    "w": 1392,
+    "h": 482
+  },
+  {
+    "id": "0178697fb442d801",
+    "type": "udp in",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "",
+    "iface": "",
+    "port": "12062",
+    "ipv": "udp4",
+    "multicast": "false",
+    "group": "",
+    "datatype": "utf8",
+    "x": 520,
+    "y": 1080,
+    "wires": [
+      [
+        "1e6f9143a325a577"
+      ]
+    ]
+  },
+  {
+    "id": "fb32d39142880f19",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "UDP Score XML",
+    "info": "",
+    "x": 520,
+    "y": 940,
+    "wires": []
+  },
+  {
+    "id": "d2cdb7808cce0e9c",
+    "type": "xml",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 810,
+    "y": 1080,
+    "wires": [
+      [
+        "622fed8ae8f6a5d2"
+      ]
+    ]
+  },
+  {
+    "id": "2cdd5ffb3ac01f73",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "group": "aeac5355e22fa2ee",
+    "order": 1,
+    "width": 5,
+    "height": 3,
+    "name": "Total Score",
+    "label": "<font size = 6>Total Score",
+    "format": "<font size = 50 font color={{msg.color}}>{{payload.dynamicresults.score[0]}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1990,
+    "y": 960,
+    "wires": []
+  },
+  {
+    "id": "289442fe7c0d95f9",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "group": "aeac5355e22fa2ee",
+    "order": 3,
+    "width": 5,
+    "height": 3,
+    "name": "Total Mults",
+    "label": "<font size = 6>Mults",
+    "format": "<font size = 50 font color={{msg.color}}>{{payload.totalmults}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2170,
+    "y": 1160,
+    "wires": []
+  },
+  {
+    "id": "9b7d271988034596",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "group": "aeac5355e22fa2ee",
+    "order": 2,
+    "width": 5,
+    "height": 3,
+    "name": "Total QSO's",
+    "label": "<font size = 6>QSOs",
+    "format": "<font size = 50 font color={{msg.color}}>{{payload.totalnoqsos}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2170,
+    "y": 1060,
+    "wires": []
+  },
+  {
+    "id": "31d7202b2b50131d",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Total QSO Array Parse",
+    "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos)\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1460,
+    "y": 1060,
+    "wires": [
+      [
+        "3ba4521f148eac8c"
+      ]
+    ]
+  },
+  {
+    "id": "ff83b125cd4af97b",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "group": "aeac5355e22fa2ee",
+    "order": 4,
+    "width": 5,
+    "height": 3,
+    "name": "Total Points",
+    "label": "<font size = 6>Points",
+    "format": "<font size = 50 font color={{msg.color}}>{{payload.totalpoints}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2170,
+    "y": 1260,
+    "wires": []
+  },
+  {
+    "id": "06ef39d063a5a0f6",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Total Points Array Parse",
+    "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1450,
+    "y": 1260,
+    "wires": [
+      [
+        "03b3b4cadbdf9e34"
+      ]
+    ]
+  },
+  {
+    "id": "bcb9b861df7e6958",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Score Data Raw",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1480,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "1e6f9143a325a577",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "UTF8",
+    "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 670,
+    "y": 1080,
+    "wires": [
+      [
+        "d2cdb7808cce0e9c"
+      ]
+    ]
+  },
+  {
+    "id": "aec65d796aed9cee",
+    "type": "link out",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Score OUT",
+    "mode": "link",
+    "links": [
+      "9ac6b8134108e3b3",
+      "77252a3ad3a5f5aa"
+    ],
+    "x": 1295,
+    "y": 980,
+    "wires": []
+  },
+  {
+    "id": "97ed253958c48009",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "If Score != 0",
+    "property": "payload.dynamicresults.score[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "neq",
+        "v": "0",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 1210,
+    "y": 1080,
+    "wires": [
+      [
+        "31d7202b2b50131d",
+        "06ef39d063a5a0f6",
+        "bcb9b861df7e6958",
+        "aec65d796aed9cee",
+        "aad501d4eeed3f6c",
+        "77a4afb43fb7bdbd"
+      ]
+    ]
+  },
+  {
+    "id": "1f0aa7e6a472bfd6",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "name": "To Do",
+    "info": "Graph or plot seen spots vs actual qsos in the log\n\nSpectator dashboard where you can stream to YouTube/Twitch/FB to show off Amateur Radio and contesting without showing your score\n\nPopulate PC computers names automatically from the XML UDP packets and stick in global variable\n\nChoropleth map for working states/sections/zones\n\nScoreboard integration in the top ribbon bar\n\nDXLog integration\n\n\n",
+    "x": 170,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "16d0479e79379b72",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "name": "Issues",
+    "info": "Please log issues at the following locations \n\n1) [https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/issues](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/issues)\n\n2) [https://groups.io/g/nodered-hamradio](https://groups.io/g/nodered-hamradio)",
+    "x": 150,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "aad501d4eeed3f6c",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Total Multi Array Parse",
+    "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1460,
+    "y": 1160,
+    "wires": [
+      [
+        "ba53f01105c0383d"
+      ]
+    ]
+  },
+  {
+    "id": "7f7e224622dc09f5",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Total Multi Array Parse_old",
+    "func": "//if (msg.payload.score == 0)\n//{\n//    return {\"payload\":{totalmult:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmult = 0;\n//return {\"payload\":{arraylength:arraylength}};\n\n\nif (arraylength == 0)\n{\n\ttotalmult = msg.payload.dynamicresults.breakdown[0].mult[0]._\n\treturn {\"payload\":{totalmult:totalmult}}\n}\n\ntotalmult = msg.payload.dynamicresults.breakdown[0].mult[arraylength-2]._;\n\nreturn {\"payload\":{totalmult:totalmult}};\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 1120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "622fed8ae8f6a5d2",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Contest != Empty",
+    "property": "payload.dynamicresults.contest",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "nempty"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 1010,
+    "y": 1080,
+    "wires": [
+      [
+        "97ed253958c48009"
+      ]
+    ]
+  },
+  {
+    "id": "e7a05f31a1a776a2",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "name": "Standard Output",
+    "info": "`{\n   \"payload\":{\n      \"name\":\"AA0Z\",\n      \"lat\":\"38.58\",\n      \"lon\":\"-90.29\",\n      \"ttl\":1200,\n      \"op\":\"AA0Z\",\n      \"band\":\"21\",\n      \"mode\":\"USB\",\n      \"isrunqso\":\"1\",\n      \"exchange\":\"\",\n      \"section\":\"\",\n      \"ID\":\"fa753cd2ec5f4f5a82a46063e895d173\",\n      \"distance_km\":405,\n      \"distance_miles\":252\n   },\n   \"fromip\":\"192.168.1.119:57670\",\n   \"ip\":\"192.168.1.119\",\n   \"port\":57670,\n   \"_msgid\":\"1a3050bba95254c1\",\n   \"qsotype\":\"qso\",\n   \"_event\":\"node:677d263669792c2d\",\n   \"original\":{\n      \"app\":[\n         \"N1MM\"\n      ],\n      \"contestname\":[\n         \"CQWPXSSB\"\n      ],\n      \"contestnr\":[\n         \"1\"\n      ],\n      \"timestamp\":[\n         \"2022-04-13 17:02:05\"\n      ],\n      \"mycall\":[\n         \"AA0Z\"\n      ],\n      \"band\":[\n         \"21\"\n      ],\n      \"rxfreq\":[\n         \"2130000\"\n      ],\n      \"txfreq\":[\n         \"2130000\"\n      ],\n      \"operator\":[\n         \"AA0Z\"\n      ],\n      \"mode\":[\n         \"USB\"\n      ],\n      \"call\":[\n         \"AA0Z\"\n      ],\n      \"countryprefix\":[\n         \"K\"\n      ],\n      \"wpxprefix\":[\n         \"AA0\"\n      ],\n      \"stationprefix\":[\n         \"AA0Z\"\n      ],\n      \"continent\":[\n         \"NA\"\n      ],\n      \"snt\":[\n         \"59\"\n      ],\n      \"sntnr\":[\n         \"62\"\n      ],\n      \"rcv\":[\n         \"59\"\n      ],\n      \"rcvnr\":[\n         \"7\"\n      ],\n      \"gridsquare\":[\n         \"\"\n      ],\n      \"exchange1\":[\n         \"\"\n      ],\n      \"section\":[\n         \"\"\n      ],\n      \"comment\":[\n         \"\"\n      ],\n      \"qth\":[\n         \"\"\n      ],\n      \"name\":[\n         \"\"\n      ],\n      \"power\":[\n         \"\"\n      ],\n      \"misctext\":[\n         \"\"\n      ],\n      \"zone\":[\n         \"4\"\n      ],\n      \"prec\":[\n         \"\"\n      ],\n      \"ck\":[\n         \"0\"\n      ],\n      \"ismultiplier1\":[\n         \"0\"\n      ],\n      \"ismultiplier2\":[\n         \"0\"\n      ],\n      \"ismultiplier3\":[\n         \"0\"\n      ],\n      \"points\":[\n         \"0\"\n      ],\n      \"radionr\":[\n         \"2\"\n      ],\n      \"run1run2\":[\n         \"1\"\n      ],\n      \"RoverLocation\":[\n         \"\"\n      ],\n      \"RadioInterfaced\":[\n         \"0\"\n      ],\n      \"NetworkedCompNr\":[\n         \"0\"\n      ],\n      \"IsOriginal\":[\n         \"True\"\n      ],\n      \"NetBiosName\":[\n         \"AA0Z-STREAM\"\n      ],\n      \"IsRunQSO\":[\n         \"1\"\n      ],\n      \"StationName\":[\n         \"AA0Z-STREAM\"\n      ],\n      \"ID\":[\n         \"fa753cd2ec5f4f5a82a46063e895d173\"\n      ],\n      \"IsClaimedQso\":[\n         \"1\"\n      ]\n   },\n   \"hamqthkey\":\"062aa7cc923e58443c553a0d086319b29cefcde1\",\n   \"statusCode\":200,\n   \"headers\":{\n      \"date\":\"Wed, 13 Apr 2022 17:02:04 GMT\",\n      \"server\":\"Apache/2.4.18 (Ubuntu)\",\n      \"access-control-allow-origin\":\"*\",\n      \"expires\":\"Thu, 19 Nov 1981 08:52:00 GMT\",\n      \"cache-control\":\"no-store, no-cache, must-revalidate, post-check=0, pre-check=0\",\n      \"pragma\":\"no-cache\",\n      \"set-cookie\":[\n         \"nette-browser=r2gbbaxo71; path=/; domain=.hamqth.com; httponly\",\n         \"PHPSESSID=kup08664dnc4bu1bia82bi5ku4; expires=Fri, 13-May-2022 17:02:04 GMT; Max-Age=2592000; path=/; domain=.hamqth.com; HttpOnly\",\n         \"hamqthlang=en; expires=Fri, 22-Jul-2022 17:02:04 GMT; Max-Age=8640000\"\n      ],\n      \"vary\":\"Accept-Encoding\",\n      \"content-length\":\"1023\",\n      \"connection\":\"close\",\n      \"content-type\":\"application/xml\",\n      \"x-node-red-request-node\":\"3ffbed4d\"\n   },\n   \"responseUrl\":\"https://www.hamqth.com/xml.php?id=062aa7cc923e58443c553a0d086319b29cefcde1&callsign=AA0Z&prg=CONTEST_DASHBOARD\",\n   \"redirectList\":[\n      \n   ],\n   \"retry\":0,\n   \"responseCookies\":{\n      \"nette-browser\":{\n         \"path\":\"/\",\n         \"domain\":\".hamqth.com\",\n         \"value\":\"r2gbbaxo71\"\n      },\n      \"PHPSESSID\":{\n         \"expires\":\"Fri, 13-May-2022 17:02:04 GMT\",\n         \"Max-Age\":\"2592000\",\n         \"path\":\"/\",\n         \"domain\":\".hamqth.com\",\n         \"value\":\"kup08664dnc4bu1bia82bi5ku4\"\n      },\n      \"hamqthlang\":{\n         \"expires\":\"Fri, 22-Jul-2022 17:02:04 GMT\",\n         \"Max-Age\":\"8640000\",\n         \"value\":\"en\"\n      }\n   },\n   \"HamQTH\":{\n      \"$\":{\n         \"version\":\"2.8\",\n         \"xmlns\":\"https://www.hamqth.com\"\n      },\n      \"search\":[\n         {\n            \"callsign\":[\n               \"aa0z\"\n            ],\n            \"nick\":[\n               \"Kyle Krieg\"\n            ],\n            \"qth\":[\n               \"St. Louis\"\n            ],\n            \"country\":[\n               \"United States\"\n            ],\n            \"adif\":[\n               \"291\"\n            ],\n            \"itu\":[\n               \"7\"\n            ],\n            \"cq\":[\n               \"4\"\n            ],\n            \"grid\":[\n               \"EM48\"\n            ],\n            \"adr_name\":[\n               \"Kyle T Krieg\"\n            ],\n            \"adr_street1\":[\n               \"5620 Delor\"\n            ],\n            \"adr_city\":[\n               \"Saint Louis\"\n            ],\n            \"adr_zip\":[\n               \"63109\"\n            ],\n            \"adr_country\":[\n               \"United States\"\n            ],\n            \"adr_adif\":[\n               \"291\"\n            ],\n            \"us_state\":[\n               \"MO\"\n            ],\n            \"us_county\":[\n               \"St. Louis city\"\n            ],\n            \"lotw\":[\n               \"?\"\n            ],\n            \"qsldirect\":[\n               \"?\"\n            ],\n            \"qsl\":[\n               \"?\"\n            ],\n            \"eqsl\":[\n               \"?\"\n            ],\n            \"email\":[\n               \"kylekrieg@gmail.com\"\n            ],\n            \"latitude\":[\n               \n            ],\n            \"longitude\":[\n               \n            ],\n            \"continent\":[\n               \"\"\n            ],\n            \"utc_offset\":[\n               \"6\"\n            ],\n            \"picture\":[\n               \"https://www.hamqth.com/images/default/antennas6.png\"\n            ]\n         }\n      ]\n   }\n}`",
+    "x": 160,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "77a4afb43fb7bdbd",
+    "type": "rbe",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "RBE Total Score",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.dynamicresults.score[0]",
+    "topi": "topic",
+    "x": 1480,
+    "y": 960,
+    "wires": [
+      [
+        "7d8436d8a3a5422b",
+        "a9c362fc3c6ac624"
+      ]
+    ]
+  },
+  {
+    "id": "a9c362fc3c6ac624",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1660,
+    "y": 1000,
+    "wires": [
+      [
+        "49c503a250b35428"
+      ]
+    ]
+  },
+  {
+    "id": "7d8436d8a3a5422b",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#62FF52",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1730,
+    "y": 960,
+    "wires": [
+      [
+        "2cdd5ffb3ac01f73"
+      ]
+    ]
+  },
+  {
+    "id": "49c503a250b35428",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1810,
+    "y": 1000,
+    "wires": [
+      [
+        "2cdd5ffb3ac01f73"
+      ]
+    ]
+  },
+  {
+    "id": "3ba4521f148eac8c",
+    "type": "rbe",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "RBE Total QSOs",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.totalnoqsos",
+    "topi": "topic",
+    "x": 1670,
+    "y": 1060,
+    "wires": [
+      [
+        "e21c45667c4cb46a",
+        "e2f41f09bb088749"
+      ]
+    ]
+  },
+  {
+    "id": "e2f41f09bb088749",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1840,
+    "y": 1100,
+    "wires": [
+      [
+        "a08bd99d57f55d64"
+      ]
+    ]
+  },
+  {
+    "id": "e21c45667c4cb46a",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#62FF52",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1850,
+    "y": 1060,
+    "wires": [
+      [
+        "9b7d271988034596"
+      ]
+    ]
+  },
+  {
+    "id": "a08bd99d57f55d64",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1990,
+    "y": 1100,
+    "wires": [
+      [
+        "9b7d271988034596"
+      ]
+    ]
+  },
+  {
+    "id": "ba53f01105c0383d",
+    "type": "rbe",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "RBE Total Mults",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.totalmults",
+    "topi": "topic",
+    "x": 1660,
+    "y": 1160,
+    "wires": [
+      [
+        "91decfc57d48218c",
+        "db019a0c1478765c"
+      ]
+    ]
+  },
+  {
+    "id": "db019a0c1478765c",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1820,
+    "y": 1200,
+    "wires": [
+      [
+        "eecdc889bd3900f6"
+      ]
+    ]
+  },
+  {
+    "id": "91decfc57d48218c",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#62FF52",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1830,
+    "y": 1160,
+    "wires": [
+      [
+        "289442fe7c0d95f9"
+      ]
+    ]
+  },
+  {
+    "id": "eecdc889bd3900f6",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1970,
+    "y": 1200,
+    "wires": [
+      [
+        "289442fe7c0d95f9"
+      ]
+    ]
+  },
+  {
+    "id": "03b3b4cadbdf9e34",
+    "type": "rbe",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "RBE Total Points",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.totalpoints",
+    "topi": "topic",
+    "x": 1670,
+    "y": 1260,
+    "wires": [
+      [
+        "8d406adaa39170fb",
+        "a7dc412af8237000"
+      ]
+    ]
+  },
+  {
+    "id": "a7dc412af8237000",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1840,
+    "y": 1300,
+    "wires": [
+      [
+        "3c4c7e4533b41d22"
+      ]
+    ]
+  },
+  {
+    "id": "8d406adaa39170fb",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#62FF52",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1850,
+    "y": 1260,
+    "wires": [
+      [
+        "ff83b125cd4af97b"
+      ]
+    ]
+  },
+  {
+    "id": "3c4c7e4533b41d22",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1990,
+    "y": 1300,
+    "wires": [
+      [
+        "ff83b125cd4af97b"
+      ]
+    ]
+  },
+  {
+    "id": "0a74b80e63e37b51",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "name": "Version Control",
+    "info": "",
+    "x": 140,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "1497c72e88a8f6b1",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "group": "d5edca762660bedf",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "Radio 1 Operator Dashboard",
+    "label": "Operator",
+    "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 1700,
+    "wires": []
+  },
+  {
+    "id": "a74a987615dd4bb9",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "group": "1fd9d5a5d988cd1e",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "Radio 2 Operator Dashboard",
+    "label": "Operator",
+    "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1540,
+    "y": 2240,
+    "wires": []
+  },
+  {
+    "id": "4fdbbfe296a88bce",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "Station Name",
+    "property": "payload.RadioInfo.StationName[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "PC1",
+        "vt": "global"
+      },
+      {
+        "t": "eq",
+        "v": "PC2",
+        "vt": "global"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 920,
+    "y": 1740,
+    "wires": [
+      [
+        "1497c72e88a8f6b1",
+        "cab897702f8a6f57",
+        "b946bc8caa8d1dfa",
+        "b9e129bdae4de517",
+        "5bbc72a4e604df32",
+        "d0b1af6883fc61b1",
+        "e60f3cadbc4e78ff",
+        "06389f3eea5c1260",
+        "f6305d04b2aeb44c"
+      ],
+      [
+        "a74a987615dd4bb9",
+        "fb911af0905d8f5d",
+        "ccb12f5a5e87937a",
+        "27f4e52f97117294",
+        "d9503f18f29524db",
+        "214b730a1dfad6cb",
+        "68eee47c38859dda",
+        "90474210b68e90b0"
+      ]
+    ]
+  },
+  {
+    "id": "cab897702f8a6f57",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "Get Spot Freq",
+    "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1480,
+    "y": 1740,
+    "wires": [
+      [
+        "144f676e5802f76c"
+      ]
+    ]
+  },
+  {
+    "id": "fb911af0905d8f5d",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "Get Spot Freq",
+    "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1500,
+    "y": 2200,
+    "wires": [
+      [
+        "f9c9ed275443b030"
+      ]
+    ]
+  },
+  {
+    "id": "144f676e5802f76c",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "group": "d5edca762660bedf",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "Radio 1 Freq Dashboard",
+    "label": "Freq",
+    "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1770,
+    "y": 1740,
+    "wires": []
+  },
+  {
+    "id": "f9c9ed275443b030",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "group": "1fd9d5a5d988cd1e",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "Radio 2 Freq",
+    "label": "Freq",
+    "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1750,
+    "y": 2200,
+    "wires": []
+  },
+  {
+    "id": "b946bc8caa8d1dfa",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "group": "d5edca762660bedf",
+    "order": 2,
+    "width": 3,
+    "height": 2,
+    "name": "Radio 1 Mode Dashboard",
+    "label": "Mode",
+    "format": "<font color={{msg.color}}>{{payload.RadioInfo.Mode[0]}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1510,
+    "y": 1660,
+    "wires": []
+  },
+  {
+    "id": "b9e129bdae4de517",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "Get Status",
+    "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1270,
+    "y": 1620,
+    "wires": [
+      [
+        "323b33d53e2baade"
+      ]
+    ]
+  },
+  {
+    "id": "323b33d53e2baade",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "group": "d5edca762660bedf",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "Radio 1 Status Dashboard",
+    "label": "Status",
+    "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 1620,
+    "wires": []
+  },
+  {
+    "id": "5c688773c88f9f41",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "group": "1fd9d5a5d988cd1e",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "Radio 2 Status Dashboard",
+    "label": "Status",
+    "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1540,
+    "y": 2320,
+    "wires": []
+  },
+  {
+    "id": "ccb12f5a5e87937a",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "group": "1fd9d5a5d988cd1e",
+    "order": 2,
+    "width": 3,
+    "height": 2,
+    "name": "Radio 2 Mode Dashboard",
+    "label": "Mode",
+    "format": "<font color={{msg.color}}>{{payload.RadioInfo.Mode[0]}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1530,
+    "y": 2280,
+    "wires": []
+  },
+  {
+    "id": "27f4e52f97117294",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "Get Status",
+    "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1270,
+    "y": 2320,
+    "wires": [
+      [
+        "5c688773c88f9f41"
+      ]
+    ]
+  },
+  {
+    "id": "f56678090927861d",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "UDP Radio Data XML",
+    "info": "",
+    "x": 180,
+    "y": 1680,
+    "wires": []
+  },
+  {
+    "id": "b1abd7f75fd32f6f",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "SQL Select Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and timestamp >= datetime('now','-1 hours');",
+    "output": "str",
+    "x": 1370,
+    "y": 1560,
+    "wires": [
+      [
+        "3d1ebae60e058858"
+      ]
+    ]
+  },
+  {
+    "id": "3d1ebae60e058858",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1600,
+    "y": 1560,
+    "wires": [
+      [
+        "572d2215a6ea16bb"
+      ]
+    ]
+  },
+  {
+    "id": "0baeb2e7ae556661",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "group": "d5edca762660bedf",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "Radio 1 QSO Rate Dashboard",
+    "label": "{{msg.label}}",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2410,
+    "y": 1560,
+    "wires": []
+  },
+  {
+    "id": "89588cb6bf69a8d0",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "SQL Select Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
+    "output": "str",
+    "x": 1410,
+    "y": 2380,
+    "wires": [
+      [
+        "97aba946591c7289"
+      ]
+    ]
+  },
+  {
+    "id": "97aba946591c7289",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1620,
+    "y": 2380,
+    "wires": [
+      [
+        "7aa65e21deb3bbf5"
+      ]
+    ]
+  },
+  {
+    "id": "d37ea6046424b974",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "group": "1fd9d5a5d988cd1e",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "Radio 2 QSO Rate",
+    "label": "{{msg.label}}",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2350,
+    "y": 2380,
+    "wires": []
+  },
+  {
+    "id": "5d82a0a17d0f57ea",
+    "type": "udp in",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "",
+    "iface": "",
+    "port": "12060",
+    "ipv": "udp4",
+    "multicast": "false",
+    "group": "",
+    "datatype": "utf8",
+    "x": 100,
+    "y": 1740,
+    "wires": [
+      [
+        "bd61ab676c6f7232"
+      ]
+    ]
+  },
+  {
+    "id": "bd61ab676c6f7232",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "UTF8",
+    "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 230,
+    "y": 1740,
+    "wires": [
+      [
+        "3d795eb91a1d2b3d"
+      ]
+    ]
+  },
+  {
+    "id": "3d795eb91a1d2b3d",
+    "type": "xml",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 350,
+    "y": 1740,
+    "wires": [
+      [
+        "6eccad64a2223ff8"
+      ]
+    ]
+  },
+  {
+    "id": "d67c999eabb4aba0",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "Radio Data Raw",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 720,
+    "y": 1680,
+    "wires": []
+  },
+  {
+    "id": "3e86130caa4f1f80",
+    "type": "link out",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "MultiOP Radio Data OUT",
+    "mode": "link",
+    "links": [
+      "93a6eb43a0cd1622",
+      "b2e62889b54520fd",
+      "254a70483d8805dc",
+      "ec08c4c0b055d4fe"
+    ],
+    "x": 905,
+    "y": 1700,
+    "wires": []
+  },
+  {
+    "id": "d9503f18f29524db",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "30S Drop Limit",
+    "pauseType": "rate",
+    "timeout": "30",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "30",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1180,
+    "y": 2380,
+    "wires": [
+      [
+        "89588cb6bf69a8d0"
+      ]
+    ]
+  },
+  {
+    "id": "5bbc72a4e604df32",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "30S Drop Limit",
+    "pauseType": "rate",
+    "timeout": "30",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "30",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1120,
+    "y": 1560,
+    "wires": [
+      [
+        "b1abd7f75fd32f6f"
+      ]
+    ]
+  },
+  {
+    "id": "5a5a85080d107e92",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "",
+    "x": 1980,
+    "y": 1560,
+    "wires": [
+      [
+        "ea7ca8bfbf26850d"
+      ],
+      [
+        "ea7ca8bfbf26850d"
+      ],
+      [
+        "ea7ca8bfbf26850d"
+      ]
+    ]
+  },
+  {
+    "id": "8a9601bf0a7a7faa",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "",
+    "x": 1980,
+    "y": 2380,
+    "wires": [
+      [
+        "bb5538fd7ccf2b59"
+      ],
+      [
+        "bb5538fd7ccf2b59"
+      ],
+      [
+        "bb5538fd7ccf2b59"
+      ]
+    ]
+  },
+  {
+    "id": "572d2215a6ea16bb",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "rate",
+        "pt": "msg",
+        "to": "payload[0].rate",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1810,
+    "y": 1560,
+    "wires": [
+      [
+        "5a5a85080d107e92"
+      ]
+    ]
+  },
+  {
+    "id": "7aa65e21deb3bbf5",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "rate",
+        "pt": "msg",
+        "to": "payload[0].rate",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1790,
+    "y": 2380,
+    "wires": [
+      [
+        "8a9601bf0a7a7faa"
+      ]
+    ]
+  },
+  {
+    "id": "3105183456c5bc51",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "Select Max Distance & Operator",
+    "field": "payload",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select max(cast(distance as int)) as distance, operator as operator from qsos;",
+    "output": "str",
+    "x": 450,
+    "y": 1880,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6eccad64a2223ff8",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "RadioInfo != Null",
+    "property": "payload.RadioInfo",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "nnull"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 510,
+    "y": 1740,
+    "wires": [
+      [
+        "d67c999eabb4aba0",
+        "334aadb089f6f0c0"
+      ]
+    ]
+  },
+  {
+    "id": "334aadb089f6f0c0",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "Category?",
+    "property": "category",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "multiop",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "so1v",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "so2r",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 710,
+    "y": 1740,
+    "wires": [
+      [
+        "4fdbbfe296a88bce",
+        "3e86130caa4f1f80",
+        "6351dc9d0c3ec453"
+      ],
+      [
+        "4fdbbfe296a88bce",
+        "3e86130caa4f1f80"
+      ],
+      [
+        "15fa6dac50ec3359",
+        "bb7fdde37dcf367e"
+      ]
+    ]
+  },
+  {
+    "id": "15fa6dac50ec3359",
+    "type": "link out",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "SO2R Radio Info OUT",
+    "mode": "link",
+    "links": [
+      "facc381ab8ee58c9",
+      "93a6eb43a0cd1622",
+      "935c9a16abfdf6b5",
+      "ec08c4c0b055d4fe"
+    ],
+    "x": 855,
+    "y": 1780,
+    "wires": []
+  },
+  {
+    "id": "bb7fdde37dcf367e",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "Radio 1 or 2?",
+    "property": "payload.RadioInfo.RadioNr[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "1",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "2",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 920,
+    "y": 1860,
+    "wires": [
+      [
+        "1497c72e88a8f6b1",
+        "cab897702f8a6f57",
+        "b946bc8caa8d1dfa",
+        "b9e129bdae4de517",
+        "d0b1af6883fc61b1",
+        "e60f3cadbc4e78ff",
+        "06389f3eea5c1260",
+        "b39377b110c0549b",
+        "e4e19daf40493fb9"
+      ],
+      [
+        "a74a987615dd4bb9",
+        "fb911af0905d8f5d",
+        "ccb12f5a5e87937a",
+        "27f4e52f97117294",
+        "214b730a1dfad6cb",
+        "68eee47c38859dda",
+        "90474210b68e90b0",
+        "470f388df8203a1f"
+      ]
+    ]
+  },
+  {
+    "id": "d0b1af6883fc61b1",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "Function Key Is Empty?",
+    "property": "payload.RadioInfo.FunctionKeyCaption[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "nempty"
+      },
+      {
+        "t": "empty"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1510,
+    "y": 1780,
+    "wires": [
+      [
+        "9ac7455179b0e1d0"
+      ],
+      [
+        "41776f0e7dfe6145"
+      ]
+    ]
+  },
+  {
+    "id": "644bc9391ec895bf",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "group": "d5edca762660bedf",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "Radio 1 Macro Dashboard",
+    "label": "Macro",
+    "format": "<font size=6 font color={{msg.color}}>{{msg.payload.RadioInfo.FunctionKeyCaption[0]}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1990,
+    "y": 1780,
+    "wires": []
+  },
+  {
+    "id": "9ac7455179b0e1d0",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "Color Change",
+    "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1740,
+    "y": 1780,
+    "wires": [
+      [
+        "644bc9391ec895bf"
+      ]
+    ]
+  },
+  {
+    "id": "41776f0e7dfe6145",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "4",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "3",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1740,
+    "y": 1820,
+    "wires": [
+      [
+        "644bc9391ec895bf"
+      ]
+    ]
+  },
+  {
+    "id": "214b730a1dfad6cb",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "Function Key Is Empty?",
+    "property": "payload.RadioInfo.FunctionKeyCaption[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "nempty"
+      },
+      {
+        "t": "empty"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1510,
+    "y": 2120,
+    "wires": [
+      [
+        "379a02b32eb2de49"
+      ],
+      [
+        "88be1b74fa6788be"
+      ]
+    ]
+  },
+  {
+    "id": "d6a02ccab960310f",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "group": "1fd9d5a5d988cd1e",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "Radio 2 Macro Dashboard",
+    "label": "Macro",
+    "format": "<font size=6 font color={{msg.color}}>{{msg.payload.RadioInfo.FunctionKeyCaption[0]}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1990,
+    "y": 2120,
+    "wires": []
+  },
+  {
+    "id": "379a02b32eb2de49",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "Color Change",
+    "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1740,
+    "y": 2120,
+    "wires": [
+      [
+        "d6a02ccab960310f"
+      ]
+    ]
+  },
+  {
+    "id": "88be1b74fa6788be",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "4",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "3",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1740,
+    "y": 2160,
+    "wires": [
+      [
+        "d6a02ccab960310f"
+      ]
+    ]
+  },
+  {
+    "id": "72403bb4391a1d55",
+    "type": "ui_led",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "order": 7,
+    "group": "d5edca762660bedf",
+    "width": 3,
+    "height": 1,
+    "label": "TX",
+    "labelPlacement": "left",
+    "labelAlignment": "right",
+    "colorForValue": [
+      {
+        "color": "#ff0000",
+        "value": "True",
+        "valueType": "str"
+      }
+    ],
+    "allowColorForValueInMessage": false,
+    "shape": "circle",
+    "showGlow": true,
+    "name": "Radio 1 TX Transmit LED",
+    "x": 1770,
+    "y": 1880,
+    "wires": []
+  },
+  {
+    "id": "d87f990426df6b87",
+    "type": "ui_led",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "order": 7,
+    "group": "1fd9d5a5d988cd1e",
+    "width": 3,
+    "height": 1,
+    "label": "TX",
+    "labelPlacement": "left",
+    "labelAlignment": "right",
+    "colorForValue": [
+      {
+        "color": "#ff0000",
+        "value": "True",
+        "valueType": "str"
+      }
+    ],
+    "allowColorForValueInMessage": false,
+    "shape": "circle",
+    "showGlow": true,
+    "name": "Radio 2 TX Transmit LED",
+    "x": 1770,
+    "y": 2020,
+    "wires": []
+  },
+  {
+    "id": "e60f3cadbc4e78ff",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "Is TX?",
+    "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1490,
+    "y": 1880,
+    "wires": [
+      [
+        "72403bb4391a1d55",
+        "eb5d10e3d8e57f2d"
+      ]
+    ]
+  },
+  {
+    "id": "68eee47c38859dda",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "Is TX?",
+    "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1490,
+    "y": 2020,
+    "wires": [
+      [
+        "d87f990426df6b87"
+      ]
+    ]
+  },
+  {
+    "id": "90474210b68e90b0",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "Is Focus?",
+    "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1500,
+    "y": 2060,
+    "wires": [
+      [
+        "c28f1c9baeeba95d"
+      ]
+    ]
+  },
+  {
+    "id": "06389f3eea5c1260",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "Is Focus?",
+    "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1500,
+    "y": 1920,
+    "wires": [
+      [
+        "8de09b93172d4977"
+      ]
+    ]
+  },
+  {
+    "id": "8de09b93172d4977",
+    "type": "ui_led",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "order": 8,
+    "group": "d5edca762660bedf",
+    "width": 3,
+    "height": 1,
+    "label": "Focus",
+    "labelPlacement": "left",
+    "labelAlignment": "right",
+    "colorForValue": [
+      {
+        "color": "#0000ff",
+        "value": "True",
+        "valueType": "str"
+      }
+    ],
+    "allowColorForValueInMessage": false,
+    "shape": "circle",
+    "showGlow": true,
+    "name": "Radio 1 Focus LED",
+    "x": 1750,
+    "y": 1920,
+    "wires": []
+  },
+  {
+    "id": "c28f1c9baeeba95d",
+    "type": "ui_led",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "order": 8,
+    "group": "1fd9d5a5d988cd1e",
+    "width": 3,
+    "height": 1,
+    "label": "Focus",
+    "labelPlacement": "left",
+    "labelAlignment": "right",
+    "colorForValue": [
+      {
+        "color": "#0000ff",
+        "value": "True",
+        "valueType": "str"
+      }
+    ],
+    "allowColorForValueInMessage": false,
+    "shape": "circle",
+    "showGlow": true,
+    "name": "Radio 2 Focus LED",
+    "x": 1750,
+    "y": 2060,
+    "wires": []
+  },
+  {
+    "id": "451c0f81249ee073",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1600,
+    "y": 1520,
+    "wires": [
+      [
+        "572d2215a6ea16bb"
+      ]
+    ]
+  },
+  {
+    "id": "b39377b110c0549b",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "30S Drop Limit",
+    "pauseType": "rate",
+    "timeout": "30",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "30",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1120,
+    "y": 1520,
+    "wires": [
+      [
+        "79320f61b0466a60"
+      ]
+    ]
+  },
+  {
+    "id": "79320f61b0466a60",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "SQL Select Radio 1 Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and radionr='1' and timestamp >= datetime('now','-1 hours');",
+    "output": "str",
+    "x": 1370,
+    "y": 1520,
+    "wires": [
+      [
+        "451c0f81249ee073"
+      ]
+    ]
+  },
+  {
+    "id": "ea7ca8bfbf26850d",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "Set Label",
+    "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\n//radiosport.live data\nlet rate = msg.rate;\nglobal.set(\"#radio1rate\",rate);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2180,
+    "y": 1560,
+    "wires": [
+      [
+        "0baeb2e7ae556661",
+        "9ed94619f709cb71"
+      ]
+    ]
+  },
+  {
+    "id": "470f388df8203a1f",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "30S Drop Limit",
+    "pauseType": "rate",
+    "timeout": "30",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "30",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1180,
+    "y": 2420,
+    "wires": [
+      [
+        "743d6a9744bd2b9f"
+      ]
+    ]
+  },
+  {
+    "id": "743d6a9744bd2b9f",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "SQL Select Radio 2 Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(operator) as rate from qsos where operator='{{{payload.RadioInfo.OpCall}}}' and radionr='2' and timestamp >= datetime('now','-1 hours');",
+    "output": "str",
+    "x": 1390,
+    "y": 2420,
+    "wires": [
+      [
+        "bd50342bd0c916fa"
+      ]
+    ]
+  },
+  {
+    "id": "bd50342bd0c916fa",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1620,
+    "y": 2420,
+    "wires": [
+      [
+        "7aa65e21deb3bbf5"
+      ]
+    ]
+  },
+  {
+    "id": "bb5538fd7ccf2b59",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "94f44b7ea0e29d1d",
+    "name": "Set Label",
+    "func": "let category = global.get('category')\nlet label = null\n\nif (category == \"multiop\" | category == \"so1v\")\n{\n    msg.label = \"OP Q's/Hr\"\n}\n\nif (category == \"so2r\")\n{\n    msg.label = \"Radio Q's/Hr\"\n}\n\n//radiosport.live data\nlet rate = msg.rate;\nglobal.set(\"#radio12ate\",rate);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2180,
+    "y": 2380,
+    "wires": [
+      [
+        "d37ea6046424b974"
+      ]
+    ]
+  },
+  {
+    "id": "f6305d04b2aeb44c",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload.RadioInfo.IsTransmitting[0]",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 2060,
+    "wires": []
+  },
+  {
+    "id": "6351dc9d0c3ec453",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 910,
+    "y": 1640,
+    "wires": []
+  },
+  {
+    "id": "c9f5c786.410838",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Label +  Add Multis + Exchange",
+    "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\ndelete msg.payload.ID\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\" || contesttype == \"all\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n    msg.payload.distance_km = 0;\n    msg.payload.distance_miles = 0;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1010,
+    "y": 340,
+    "wires": [
+      [
+        "eaa8defdbb30a4cb",
+        "611bebabf791b26b",
+        "3617522441b640cb",
+        "a6f01856669d3e50",
+        "4320ff577c7cb858",
+        "fdfd9133ae52097f"
+      ]
+    ]
+  },
+  {
+    "id": "6c3eca08.f081a4",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "b8ba38b3.abfb98",
+    "order": 1,
+    "width": 5,
+    "height": 2,
+    "name": "Last QSO Call Display",
+    "label": "Last QSO",
+    "format": "<font color={{msg.color}}>{{msg.payload.name}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2140,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "df39f838.a40908",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "b8ba38b3.abfb98",
+    "order": 3,
+    "width": 3,
+    "height": 2,
+    "name": "Last QSO Mode Display",
+    "label": "Mode",
+    "format": "<font color={{msg.color}}>{{msg.payload.mode}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2150,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "3f8df851.2a35e8",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "b8ba38b3.abfb98",
+    "order": 4,
+    "width": 6,
+    "height": 2,
+    "name": "Last QSO Exchange Display",
+    "label": "Exchange",
+    "format": "< font color={{msg.color}}>{{msg.payload.exchange}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2160,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "9f9db1ca.0200a",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "b8ba38b3.abfb98",
+    "order": 2,
+    "width": 3,
+    "height": 2,
+    "name": "Last QSO Band Display",
+    "label": "Band",
+    "format": "<font color={{msg.color}}>{{msg.payload.band}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2150,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "eaa8defdbb30a4cb",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Is Running?",
+    "property": "payload.isrunqso",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "0",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "1",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1490,
+    "y": 460,
+    "wires": [
+      [
+        "26d6dfc5398aed9a",
+        "17f8857f30cdf7aa"
+      ],
+      [
+        "8150e2eee30748c6",
+        "86194a7969acae11"
+      ]
+    ]
+  },
+  {
+    "id": "c4ca101c43ab8cb0",
+    "type": "hourglass",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "persistId": "",
+    "humanizeLocale": "",
+    "x": 1960,
+    "y": 540,
+    "wires": [
+      [
+        "46edf21ad9fe8580"
+      ]
+    ]
+  },
+  {
+    "id": "46edf21ad9fe8580",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Add 0 to Countdown",
+    "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2140,
+    "y": 540,
+    "wires": [
+      [
+        "5a216be2bdc202b8"
+      ]
+    ]
+  },
+  {
+    "id": "7663a3961ad647b3",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Status",
+    "props": [
+      {
+        "p": "command",
+        "v": "status",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "1",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payloadType": "str",
+    "x": 1740,
+    "y": 420,
+    "wires": [
+      [
+        "c4ca101c43ab8cb0",
+        "1c23e47818d36917"
+      ]
+    ]
+  },
+  {
+    "id": "6697e03dc0ecce50",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "ba8d90f0d4d46eb0",
+    "order": 3,
+    "width": 5,
+    "height": 3,
+    "name": "Last S&P QSO Time",
+    "label": "Last S&P QSO",
+    "format": "<font color=#FF8C00>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2360,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "1c23e47818d36917",
+    "type": "hourglass",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "persistId": "",
+    "humanizeLocale": "",
+    "x": 1960,
+    "y": 380,
+    "wires": [
+      [
+        "78b62d696464ca78"
+      ]
+    ]
+  },
+  {
+    "id": "78b62d696464ca78",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Add 0 to Countdown",
+    "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2140,
+    "y": 380,
+    "wires": [
+      [
+        "6697e03dc0ecce50"
+      ]
+    ]
+  },
+  {
+    "id": "26d6dfc5398aed9a",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Reset Timer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "command",
+        "pt": "msg",
+        "to": "reset",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1790,
+    "y": 380,
+    "wires": [
+      [
+        "1c23e47818d36917"
+      ]
+    ]
+  },
+  {
+    "id": "8150e2eee30748c6",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Reset Timer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "command",
+        "pt": "msg",
+        "to": "reset",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1790,
+    "y": 540,
+    "wires": [
+      [
+        "c4ca101c43ab8cb0"
+      ]
+    ]
+  },
+  {
+    "id": "5a216be2bdc202b8",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "ba8d90f0d4d46eb0",
+    "order": 1,
+    "width": 5,
+    "height": 3,
+    "name": "Last Run QSO Time",
+    "label": "Last Run QSO",
+    "format": "<font color=#008000>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2380,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "d253cee5fb3ba4b9",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "ba8d90f0d4d46eb0",
+    "order": 5,
+    "width": 5,
+    "height": 3,
+    "name": "Last Multi QSO Time",
+    "label": "Last Mult QSO",
+    "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2380,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "b77db70e05f8b1d9",
+    "type": "hourglass",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "persistId": "",
+    "humanizeLocale": "",
+    "x": 1960,
+    "y": 660,
+    "wires": [
+      [
+        "a0658e82121731a8"
+      ]
+    ]
+  },
+  {
+    "id": "a0658e82121731a8",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Add 0 to Countdown",
+    "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2140,
+    "y": 660,
+    "wires": [
+      [
+        "d253cee5fb3ba4b9"
+      ]
+    ]
+  },
+  {
+    "id": "774ff0257828e8ad",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Reset Timer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "command",
+        "pt": "msg",
+        "to": "reset",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1790,
+    "y": 660,
+    "wires": [
+      [
+        "b77db70e05f8b1d9"
+      ]
+    ]
+  },
+  {
+    "id": "611bebabf791b26b",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Is Multiplier?",
+    "property": "payload.ismultiplier",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "gte",
+        "v": "1",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 1510,
+    "y": 660,
+    "wires": [
+      [
+        "774ff0257828e8ad"
+      ]
+    ]
+  },
+  {
+    "id": "64a0de9783f751b5",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Status",
+    "props": [
+      {
+        "p": "command",
+        "v": "status",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "1",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 1780,
+    "y": 700,
+    "wires": [
+      [
+        "b77db70e05f8b1d9"
+      ]
+    ]
+  },
+  {
+    "id": "17f8857f30cdf7aa",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "ba8d90f0d4d46eb0",
+    "order": 4,
+    "width": 5,
+    "height": 3,
+    "name": "Last S&P QSO",
+    "label": "Last S&P QSO",
+    "format": "<font color=#FF8C00>{{msg.payload.name}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1780,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "86194a7969acae11",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "ba8d90f0d4d46eb0",
+    "order": 2,
+    "width": 5,
+    "height": 3,
+    "name": "Last Run QSO",
+    "label": "Last Run QSO",
+    "format": "<font color=#008000>{{msg.payload.name}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1780,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "56dc3f83cf57a080",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Reset",
+    "props": [
+      {
+        "p": "command",
+        "v": "reset",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "",
+    "payloadType": "str",
+    "x": 1750,
+    "y": 460,
+    "wires": [
+      [
+        "c4ca101c43ab8cb0",
+        "1c23e47818d36917"
+      ]
+    ]
+  },
+  {
+    "id": "fcf9482ddad8b592",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Reset",
+    "props": [
+      {
+        "p": "command",
+        "v": "reset",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "",
+    "x": 1790,
+    "y": 740,
+    "wires": [
+      [
+        "b77db70e05f8b1d9"
+      ]
+    ]
+  },
+  {
+    "id": "0ad5d91b01c01497",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2090,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "cadea72441280e66",
+    "type": "subflow:bedd4acdc0e27dab",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "x": 520,
+    "y": 340,
+    "wires": [
+      [
+        "13d29b4154be030c",
+        "825f9b7a2b7fc6e2"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "13d29b4154be030c",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 770,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "3617522441b640cb",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1470,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "9b9d60245cebf80a",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "b8ba38b3.abfb98",
+    "order": 6,
+    "width": 5,
+    "height": 2,
+    "name": "Last QSO OP Display",
+    "label": "OP",
+    "format": "<font color={{msg.color}}>{{msg.payload.op}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2140,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "e4e81a5987819415",
+    "type": "link in",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Dashboard IN",
+    "links": [
+      "677d263669792c2d"
+    ],
+    "x": 315,
+    "y": 340,
+    "wires": [
+      [
+        "cadea72441280e66",
+        "12de6739c2037829"
+      ]
+    ]
+  },
+  {
+    "id": "b560bd86dc5c87f6",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "name": "Inject Init Layer",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1360,
+    "y": 120,
+    "wires": [
+      [
+        "1fef8af3224d3ace"
+      ]
+    ]
+  },
+  {
+    "id": "1fef8af3224d3ace",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "name": "Inject Init Layer",
+    "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\nvar command_legend = {\n    \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \",\n    \"button\": {\n        \"name\": \"Center Map\",\n        \"icon\": \"fa-square\",\n        \"position\": \"topleft\"\n    }\n}\nreturn { payload: { name: \"home\", lat: lat, lon: lon, icon: \"fa-home\", layer: \"Home\", command: command_legend } };",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1580,
+    "y": 120,
+    "wires": [
+      [
+        "a6f01856669d3e50"
+      ]
+    ]
+  },
+  {
+    "id": "593016df038ddee5",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Start",
+    "props": [
+      {
+        "p": "command",
+        "v": "start",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": ".1",
+    "topic": "",
+    "x": 1750,
+    "y": 500,
+    "wires": [
+      [
+        "c4ca101c43ab8cb0",
+        "1c23e47818d36917"
+      ]
+    ]
+  },
+  {
+    "id": "696566009ad9261d",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Start",
+    "props": [
+      {
+        "p": "command",
+        "v": "start",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": ".1",
+    "topic": "",
+    "x": 1790,
+    "y": 780,
+    "wires": [
+      [
+        "b77db70e05f8b1d9"
+      ]
+    ]
+  },
+  {
+    "id": "adb1747255633e97",
+    "type": "catch",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Hourglass Error Catch",
+    "scope": [
+      "c4ca101c43ab8cb0",
+      "1c23e47818d36917",
+      "b77db70e05f8b1d9"
+    ],
+    "uncaught": false,
+    "x": 2080,
+    "y": 740,
+    "wires": [
+      [
+        "3d9090ccaadd42cb"
+      ]
+    ]
+  },
+  {
+    "id": "3d9090ccaadd42cb",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2310,
+    "y": 740,
+    "wires": []
+  },
+  {
+    "id": "12de6739c2037829",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 450,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "ce8f3cdfc915749d",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "group": "b8ba38b3.abfb98",
+    "order": 5,
+    "width": 4,
+    "height": 2,
+    "name": "Last QSO Distance Display",
+    "label": "Distance",
+    "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2360,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "a6f01856669d3e50",
+    "type": "ui_worldmap",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "group": "b8ba38b3.abfb98",
+    "order": 7,
+    "width": 26,
+    "height": 16,
+    "name": "Worked QSOs Map",
+    "lat": "40.3426",
+    "lon": "-92.8554",
+    "zoom": "4",
+    "layer": "OSMG",
+    "cluster": "",
+    "maxage": "",
+    "usermenu": "show",
+    "layers": "show",
+    "panit": "false",
+    "panlock": "false",
+    "zoomlock": "false",
+    "hiderightclick": "true",
+    "coords": "none",
+    "showgrid": "false",
+    "allowFileDrop": "false",
+    "path": "/qsos",
+    "overlist": "DR,CO,RA,DN,HM",
+    "maplist": "OSMG,OSMC,OSMH,EsriC,EsriS,EsriT,EsriO,EsriDG,NatGeo,UKOS,OpTop,SW",
+    "mapname": "",
+    "mapurl": "",
+    "mapopt": "",
+    "mapwms": false,
+    "x": 1830,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "af6a11b52841ef4a",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Standard Payload",
+    "info": "`{\n   \"payload\":{\n      \"contactinfo\":{\n         \"app\":[\n            \"N1MM\"\n         ],\n         \"contestname\":[\n            \"CQWPXSSB\"\n         ],\n         \"contestnr\":[\n            \"1\"\n         ],\n         \"timestamp\":[\n            \"2022-04-13 17:02:05\"\n         ],\n         \"mycall\":[\n            \"AA0Z\"\n         ],\n         \"band\":[\n            \"21\"\n         ],\n         \"rxfreq\":[\n            \"2130000\"\n         ],\n         \"txfreq\":[\n            \"2130000\"\n         ],\n         \"operator\":[\n            \"AA0Z\"\n         ],\n         \"mode\":[\n            \"USB\"\n         ],\n         \"call\":[\n            \"AA0Z\"\n         ],\n         \"countryprefix\":[\n            \"K\"\n         ],\n         \"wpxprefix\":[\n            \"AA0\"\n         ],\n         \"stationprefix\":[\n            \"AA0Z\"\n         ],\n         \"continent\":[\n            \"NA\"\n         ],\n         \"snt\":[\n            \"59\"\n         ],\n         \"sntnr\":[\n            \"62\"\n         ],\n         \"rcv\":[\n            \"59\"\n         ],\n         \"rcvnr\":[\n            \"7\"\n         ],\n         \"gridsquare\":[\n            \"\"\n         ],\n         \"exchange1\":[\n            \"\"\n         ],\n         \"section\":[\n            \"\"\n         ],\n         \"comment\":[\n            \"\"\n         ],\n         \"qth\":[\n            \"\"\n         ],\n         \"name\":[\n            \"\"\n         ],\n         \"power\":[\n            \"\"\n         ],\n         \"misctext\":[\n            \"\"\n         ],\n         \"zone\":[\n            \"4\"\n         ],\n         \"prec\":[\n            \"\"\n         ],\n         \"ck\":[\n            \"0\"\n         ],\n         \"ismultiplier1\":[\n            \"0\"\n         ],\n         \"ismultiplier2\":[\n            \"0\"\n         ],\n         \"ismultiplier3\":[\n            \"0\"\n         ],\n         \"points\":[\n            \"0\"\n         ],\n         \"radionr\":[\n            \"2\"\n         ],\n         \"run1run2\":[\n            \"1\"\n         ],\n         \"RoverLocation\":[\n            \"\"\n         ],\n         \"RadioInterfaced\":[\n            \"0\"\n         ],\n         \"NetworkedCompNr\":[\n            \"0\"\n         ],\n         \"IsOriginal\":[\n            \"True\"\n         ],\n         \"NetBiosName\":[\n            \"AA0Z-STREAM\"\n         ],\n         \"IsRunQSO\":[\n            \"1\"\n         ],\n         \"StationName\":[\n            \"AA0Z-STREAM\"\n         ],\n         \"ID\":[\n            \"fa753cd2ec5f4f5a82a46063e895d173\"\n         ],\n         \"IsClaimedQso\":[\n            \"1\"\n         ]\n      }\n   },\n   \"fromip\":\"192.168.1.119:57670\",\n   \"ip\":\"192.168.1.119\",\n   \"port\":57670,\n   \"_msgid\":\"1a3050bba95254c1\",\n   \"qsotype\":\"qso\",\n   \"_event\":\"node:677d263669792c2d\"\n}`",
+    "x": 390,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "cf1edc41b5adc8be",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Standard Payload",
+    "info": "`{\n   \"payload\":{\n      \"name\":\"AA0Z\",\n      \"lat\":\"38.58\",\n      \"lon\":\"-90.29\",\n      \"ttl\":\"1200\",\n      \"op\":\"AA0Z\",\n      \"band\":\"15M\",\n      \"mode\":\"SSB\",\n      \"isrunqso\":\"1\",\n      \"exchange\":\"7\",\n      \"section\":\"\",\n      \"ID\":\"fa753cd2ec5f4f5a82a46063e895d173\",\n      \"distance_km\":405,\n      \"distance_miles\":252,\n      \"iconColor\":\"#FFFF00\",\n      \"layer\":\"15M\",\n      \"label\":\"15M\",\n      \"ismultiplier\":0,\n      \"greatcircle\":[\n         [\n            35.295004,\n            -88.301451\n         ],\n         [\n            38.58,\n            -90.29\n         ]\n      ]\n   },\n   \"fromip\":\"192.168.1.119:57670\",\n   \"ip\":\"192.168.1.119\",\n   \"port\":57670,\n   \"_msgid\":\"1a3050bba95254c1\",\n   \"qsotype\":\"qso\",\n   \"_event\":\"node:677d263669792c2d\",\n   \"original\":{\n      \"app\":[\n         \"N1MM\"\n      ],\n      \"contestname\":[\n         \"CQWPXSSB\"\n      ],\n      \"contestnr\":[\n         \"1\"\n      ],\n      \"timestamp\":[\n         \"2022-04-13 17:02:05\"\n      ],\n      \"mycall\":[\n         \"AA0Z\"\n      ],\n      \"band\":[\n         \"21\"\n      ],\n      \"rxfreq\":[\n         \"2130000\"\n      ],\n      \"txfreq\":[\n         \"2130000\"\n      ],\n      \"operator\":[\n         \"AA0Z\"\n      ],\n      \"mode\":[\n         \"USB\"\n      ],\n      \"call\":[\n         \"AA0Z\"\n      ],\n      \"countryprefix\":[\n         \"K\"\n      ],\n      \"wpxprefix\":[\n         \"AA0\"\n      ],\n      \"stationprefix\":[\n         \"AA0Z\"\n      ],\n      \"continent\":[\n         \"NA\"\n      ],\n      \"snt\":[\n         \"59\"\n      ],\n      \"sntnr\":[\n         \"62\"\n      ],\n      \"rcv\":[\n         \"59\"\n      ],\n      \"rcvnr\":[\n         \"7\"\n      ],\n      \"gridsquare\":[\n         \"\"\n      ],\n      \"exchange1\":[\n         \"\"\n      ],\n      \"section\":[\n         \"\"\n      ],\n      \"comment\":[\n         \"\"\n      ],\n      \"qth\":[\n         \"\"\n      ],\n      \"name\":[\n         \"\"\n      ],\n      \"power\":[\n         \"\"\n      ],\n      \"misctext\":[\n         \"\"\n      ],\n      \"zone\":[\n         \"4\"\n      ],\n      \"prec\":[\n         \"\"\n      ],\n      \"ck\":[\n         \"0\"\n      ],\n      \"ismultiplier1\":[\n         \"0\"\n      ],\n      \"ismultiplier2\":[\n         \"0\"\n      ],\n      \"ismultiplier3\":[\n         \"0\"\n      ],\n      \"points\":[\n         \"0\"\n      ],\n      \"radionr\":[\n         \"2\"\n      ],\n      \"run1run2\":[\n         \"1\"\n      ],\n      \"RoverLocation\":[\n         \"\"\n      ],\n      \"RadioInterfaced\":[\n         \"0\"\n      ],\n      \"NetworkedCompNr\":[\n         \"0\"\n      ],\n      \"IsOriginal\":[\n         \"True\"\n      ],\n      \"NetBiosName\":[\n         \"AA0Z-STREAM\"\n      ],\n      \"IsRunQSO\":[\n         \"1\"\n      ],\n      \"StationName\":[\n         \"AA0Z-STREAM\"\n      ],\n      \"ID\":[\n         \"fa753cd2ec5f4f5a82a46063e895d173\"\n      ],\n      \"IsClaimedQso\":[\n         \"1\"\n      ]\n   },\n   \"hamqthkey\":\"062aa7cc923e58443c553a0d086319b29cefcde1\",\n   \"statusCode\":200,\n   \"headers\":{\n      \"date\":\"Wed, 13 Apr 2022 17:02:04 GMT\",\n      \"server\":\"Apache/2.4.18 (Ubuntu)\",\n      \"access-control-allow-origin\":\"*\",\n      \"expires\":\"Thu, 19 Nov 1981 08:52:00 GMT\",\n      \"cache-control\":\"no-store, no-cache, must-revalidate, post-check=0, pre-check=0\",\n      \"pragma\":\"no-cache\",\n      \"set-cookie\":[\n         \"nette-browser=r2gbbaxo71; path=/; domain=.hamqth.com; httponly\",\n         \"PHPSESSID=kup08664dnc4bu1bia82bi5ku4; expires=Fri, 13-May-2022 17:02:04 GMT; Max-Age=2592000; path=/; domain=.hamqth.com; HttpOnly\",\n         \"hamqthlang=en; expires=Fri, 22-Jul-2022 17:02:04 GMT; Max-Age=8640000\"\n      ],\n      \"vary\":\"Accept-Encoding\",\n      \"content-length\":\"1023\",\n      \"connection\":\"close\",\n      \"content-type\":\"application/xml\",\n      \"x-node-red-request-node\":\"3ffbed4d\"\n   },\n   \"responseUrl\":\"https://www.hamqth.com/xml.php?id=062aa7cc923e58443c553a0d086319b29cefcde1&callsign=AA0Z&prg=CONTEST_DASHBOARD\",\n   \"redirectList\":[\n      \n   ],\n   \"retry\":0,\n   \"responseCookies\":{\n      \"nette-browser\":{\n         \"path\":\"/\",\n         \"domain\":\".hamqth.com\",\n         \"value\":\"r2gbbaxo71\"\n      },\n      \"PHPSESSID\":{\n         \"expires\":\"Fri, 13-May-2022 17:02:04 GMT\",\n         \"Max-Age\":\"2592000\",\n         \"path\":\"/\",\n         \"domain\":\".hamqth.com\",\n         \"value\":\"kup08664dnc4bu1bia82bi5ku4\"\n      },\n      \"hamqthlang\":{\n         \"expires\":\"Fri, 22-Jul-2022 17:02:04 GMT\",\n         \"Max-Age\":\"8640000\",\n         \"value\":\"en\"\n      }\n   },\n   \"HamQTH\":{\n      \"$\":{\n         \"version\":\"2.8\",\n         \"xmlns\":\"https://www.hamqth.com\"\n      },\n      \"search\":[\n         {\n            \"callsign\":[\n               \"aa0z\"\n            ],\n            \"nick\":[\n               \"Kyle Krieg\"\n            ],\n            \"qth\":[\n               \"St. Louis\"\n            ],\n            \"country\":[\n               \"United States\"\n            ],\n            \"adif\":[\n               \"291\"\n            ],\n            \"itu\":[\n               \"7\"\n            ],\n            \"cq\":[\n               \"4\"\n            ],\n            \"grid\":[\n               \"EM48\"\n            ],\n            \"adr_name\":[\n               \"Kyle T Krieg\"\n            ],\n            \"adr_street1\":[\n               \"5620 Delor\"\n            ],\n            \"adr_city\":[\n               \"Saint Louis\"\n            ],\n            \"adr_zip\":[\n               \"63109\"\n            ],\n            \"adr_country\":[\n               \"United States\"\n            ],\n            \"adr_adif\":[\n               \"291\"\n            ],\n            \"us_state\":[\n               \"MO\"\n            ],\n            \"us_county\":[\n               \"St. Louis city\"\n            ],\n            \"lotw\":[\n               \"?\"\n            ],\n            \"qsldirect\":[\n               \"?\"\n            ],\n            \"qsl\":[\n               \"?\"\n            ],\n            \"eqsl\":[\n               \"?\"\n            ],\n            \"email\":[\n               \"kylekrieg@gmail.com\"\n            ],\n            \"latitude\":[\n               \n            ],\n            \"longitude\":[\n               \n            ],\n            \"continent\":[\n               \"\"\n            ],\n            \"utc_offset\":[\n               \"6\"\n            ],\n            \"picture\":[\n               \"https://www.hamqth.com/images/default/antennas6.png\"\n            ]\n         }\n      ]\n   }\n}`",
+    "x": 1030,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "4320ff577c7cb858",
+    "type": "link out",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Logged QSO Stream OUT",
+    "mode": "link",
+    "links": [
+      "247347fc62633734",
+      "f3117ed04c2dd2ff",
+      "fd220d20c3727d7e"
+    ],
+    "x": 1185,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "825f9b7a2b7fc6e2",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Lookup Type",
+    "property": "qsotype",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "qso",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "lookup",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 730,
+    "y": 340,
+    "wires": [
+      [
+        "c9f5c786.410838"
+      ],
+      [
+        "8804affd65082b4f"
+      ]
+    ]
+  },
+  {
+    "id": "8804affd65082b4f",
+    "type": "link out",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Dashboard Lookup OUT",
+    "mode": "link",
+    "links": [
+      "ed79aa0b1ff456e7"
+    ],
+    "x": 845,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "6c1de6ee7473fac9",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Get Miles or KM",
+    "func": "let miles = msg.payload.distance_miles.toString();\nlet km = msg.payload.distance_km.toString();\n\nlet measurement = global.get('distance_measurement')\n\nif (measurement == undefined)\n{\n    msg.payload = miles + \" M\";\n    return msg;\n}\n\nif (measurement == 'miles')\n{\n    msg.payload = miles + \" M\";\n    return msg;\n}\n\nif (measurement == 'km')\n{\n    msg.payload = km + \" K\";\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2120,
+    "y": 260,
+    "wires": [
+      [
+        "ce8f3cdfc915749d"
+      ]
+    ]
+  },
+  {
+    "id": "fdfd9133ae52097f",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "d48758cdf0c8991d",
+    "name": "Set Exchange Color",
+    "func": "if (msg.payload.ismultiplier >= 1)\n{\n    msg.color = '#FF0000'\n}\nelse\n{\n    msg.color = '#FFFFFF'\n}\nreturn msg;\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1860,
+    "y": 300,
+    "wires": [
+      [
+        "6c3eca08.f081a4",
+        "df39f838.a40908",
+        "9f9db1ca.0200a",
+        "9b9d60245cebf80a",
+        "6c1de6ee7473fac9",
+        "3f8df851.2a35e8",
+        "0ad5d91b01c01497"
+      ]
+    ]
+  },
+  {
+    "id": "b829243f42385969",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 3060,
+    "y": 900,
+    "wires": [
+      [
+        "d13e3608177fffc1"
+      ]
+    ]
+  },
+  {
+    "id": "ec43df8648bddaa2",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "1 Per Min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payloadType": "date",
+    "x": 2430,
+    "y": 900,
+    "wires": [
+      [
+        "d3b97c2f3316c129"
+      ]
+    ]
+  },
+  {
+    "id": "870d2ff5a5b268a5",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "SQL Select Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(*) as rate from qsos where timestamp >= datetime('now','-1 hours');",
+    "output": "str",
+    "x": 2850,
+    "y": 900,
+    "wires": [
+      [
+        "b829243f42385969"
+      ]
+    ]
+  },
+  {
+    "id": "6d122d15af375ab6",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "group": "aeac5355e22fa2ee",
+    "order": 5,
+    "width": 5,
+    "height": 3,
+    "name": "Current Total QSO Rate",
+    "label": "<center>Current Total QSO Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font><font color={{msg.color}}> Q's/Hr</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 3670,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "22fe07a2c13d18ff",
+    "type": "comment",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Calc Current QSO Rate",
+    "info": "",
+    "x": 2480,
+    "y": 980,
+    "wires": []
+  },
+  {
+    "id": "816d3f7e84dd1bf0",
+    "type": "ui_chart",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Total QSO Rate Chart",
+    "group": "c53924de5e016c59",
+    "order": 1,
+    "width": 12,
+    "height": 4,
+    "label": "",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "",
+    "removeOlder": "1",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 4000,
+    "y": 980,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "577c577fed5bf005",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "1 Per Min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 2510,
+    "y": 1120,
+    "wires": [
+      [
+        "c700f03ea974bf65"
+      ]
+    ]
+  },
+  {
+    "id": "61fdced830d7a010",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 3080,
+    "y": 1120,
+    "wires": [
+      [
+        "fc6208525bfd2db6"
+      ]
+    ]
+  },
+  {
+    "id": "fc6208525bfd2db6",
+    "type": "split",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 3230,
+    "y": 1120,
+    "wires": [
+      [
+        "e616bcdb29792aa8"
+      ]
+    ]
+  },
+  {
+    "id": "e616bcdb29792aa8",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Set Topic & Payload",
+    "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\nlet control = null\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 3420,
+    "y": 1120,
+    "wires": [
+      [
+        "5d54abefaa3f6011"
+      ]
+    ]
+  },
+  {
+    "id": "002dded44b1b5ee6",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "SQL Select Band",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(band) as total, band as band from qsos group by band order by length(band) desc;",
+    "output": "str",
+    "x": 2890,
+    "y": 1120,
+    "wires": [
+      [
+        "61fdced830d7a010"
+      ]
+    ]
+  },
+  {
+    "id": "e7705b1d662e98c7",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "group": "aeac5355e22fa2ee",
+    "order": 6,
+    "width": 5,
+    "height": 3,
+    "name": "Top OP Score/Mults Per Hour",
+    "label": "{{msg.label}}",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 4070,
+    "y": 1380,
+    "wires": []
+  },
+  {
+    "id": "a2c474948039215e",
+    "type": "ui_text",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "group": "ba8d90f0d4d46eb0",
+    "order": 6,
+    "width": 5,
+    "height": 3,
+    "name": "Top OP Mults/Distance Stats",
+    "label": "{{msg.label}}",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 4060,
+    "y": 1260,
+    "wires": []
+  },
+  {
+    "id": "ba28175bd864c273",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "SQL Select Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-1 hours') group by band;",
+    "output": "str",
+    "x": 2870,
+    "y": 1040,
+    "wires": [
+      [
+        "9ba2b748bca48ba8"
+      ]
+    ]
+  },
+  {
+    "id": "a806469711612724",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "1 Per Min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payloadType": "date",
+    "x": 2470,
+    "y": 1040,
+    "wires": [
+      [
+        "afcc0fe55c3cb07e"
+      ]
+    ]
+  },
+  {
+    "id": "9ba2b748bca48ba8",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 3080,
+    "y": 1040,
+    "wires": [
+      [
+        "fae0041199166dbc"
+      ]
+    ]
+  },
+  {
+    "id": "fae0041199166dbc",
+    "type": "split",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 3230,
+    "y": 1040,
+    "wires": [
+      [
+        "1aa94adaa1790106"
+      ]
+    ]
+  },
+  {
+    "id": "1aa94adaa1790106",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Set Topic & Payload",
+    "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 3440,
+    "y": 1040,
+    "wires": [
+      [
+        "35dd8fcbbd78da95"
+      ]
+    ]
+  },
+  {
+    "id": "35dd8fcbbd78da95",
+    "type": "ui_chart",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "QSO Rate by Band Chart",
+    "group": "390d9212c8d39731",
+    "order": 1,
+    "width": 12,
+    "height": 4,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "",
+    "removeOlder": "1",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 4010,
+    "y": 1040,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5d54abefaa3f6011",
+    "type": "ui_chart",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "QSO Chart by Band",
+    "group": "6c1bd04fb9bfea48",
+    "order": 1,
+    "width": 12,
+    "height": 4,
+    "label": "",
+    "chartType": "bar",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 3980,
+    "y": 1120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c700f03ea974bf65",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "30s Random Delay",
+    "pauseType": "random",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "30",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 2690,
+    "y": 1120,
+    "wires": [
+      [
+        "002dded44b1b5ee6"
+      ]
+    ]
+  },
+  {
+    "id": "d3b97c2f3316c129",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "30s Random Delay",
+    "pauseType": "random",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "30",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 2630,
+    "y": 900,
+    "wires": [
+      [
+        "870d2ff5a5b268a5"
+      ]
+    ]
+  },
+  {
+    "id": "afcc0fe55c3cb07e",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "30s Random Delay",
+    "pauseType": "random",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "30",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 2670,
+    "y": 1040,
+    "wires": [
+      [
+        "ba28175bd864c273"
+      ]
+    ]
+  },
+  {
+    "id": "6897b580ee50b83f",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "1 Per Min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 2490,
+    "y": 1260,
+    "wires": [
+      [
+        "be3cb3b9861c2e31"
+      ]
+    ]
+  },
+  {
+    "id": "64ca2307721f7954",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "SQL Mults Rate per Hour",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(ismultiplier1+ismultiplier2+ismultiplier3) as rate from qsos where timestamp >= datetime('now','-1 hours');",
+    "output": "str",
+    "x": 3110,
+    "y": 1400,
+    "wires": [
+      [
+        "0664e8c97eaa69b8"
+      ]
+    ]
+  },
+  {
+    "id": "be3cb3b9861c2e31",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "30s Random Delay",
+    "pauseType": "random",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "30",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 2670,
+    "y": 1260,
+    "wires": [
+      [
+        "1eb0d9ba4d1bf8d6"
+      ]
+    ]
+  },
+  {
+    "id": "251ae3f24ba6c178",
+    "type": "inject",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "1 Per Min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 2490,
+    "y": 1380,
+    "wires": [
+      [
+        "33a1fe7f6bd59c25"
+      ]
+    ]
+  },
+  {
+    "id": "d1e531d474c42dde",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "SQL Top Operator Score",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select operator as operator,\ntotal(points) as points,\ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos\ngroup by operator\norder by score desc;",
+    "output": "str",
+    "x": 3110,
+    "y": 1360,
+    "wires": [
+      [
+        "0664e8c97eaa69b8"
+      ]
+    ]
+  },
+  {
+    "id": "33a1fe7f6bd59c25",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "30s Random Delay",
+    "pauseType": "random",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "30",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 2670,
+    "y": 1380,
+    "wires": [
+      [
+        "9757755f9abe81e5"
+      ]
+    ]
+  },
+  {
+    "id": "bc62893a749a6116",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "",
+    "x": 3420,
+    "y": 900,
+    "wires": [
+      [
+        "6d122d15af375ab6",
+        "8834c50bc7d9a366"
+      ],
+      [
+        "6d122d15af375ab6",
+        "8834c50bc7d9a366"
+      ],
+      [
+        "6d122d15af375ab6",
+        "8834c50bc7d9a366"
+      ]
+    ]
+  },
+  {
+    "id": "d13e3608177fffc1",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "rate",
+        "pt": "msg",
+        "to": "payload[0].rate",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 3250,
+    "y": 900,
+    "wires": [
+      [
+        "bc62893a749a6116"
+      ]
+    ]
+  },
+  {
+    "id": "12b4fddb68795a01",
+    "type": "link in",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Dashboard to Total QSO Rate & QSO Rate by Band IN",
+    "links": [
+      "5e1859619292b1b8"
+    ],
+    "x": 3455,
+    "y": 980,
+    "wires": [
+      [
+        "6d122d15af375ab6",
+        "816d3f7e84dd1bf0",
+        "35dd8fcbbd78da95"
+      ]
+    ]
+  },
+  {
+    "id": "3fc8a4c3201d42cc",
+    "type": "link in",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Dashboard QSO Chart by Band IN",
+    "links": [
+      "5e1859619292b1b8"
+    ],
+    "x": 3635,
+    "y": 1180,
+    "wires": [
+      [
+        "e7705b1d662e98c7",
+        "a2c474948039215e",
+        "5d54abefaa3f6011"
+      ]
+    ]
+  },
+  {
+    "id": "168faf5992e055d7",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "SQL Top Distance",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select max(cast(distance as integer)) as max_distance from qsos;",
+    "output": "str",
+    "x": 3110,
+    "y": 1280,
+    "wires": [
+      [
+        "8186c56328392551"
+      ]
+    ]
+  },
+  {
+    "id": "0664e8c97eaa69b8",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 3360,
+    "y": 1380,
+    "wires": [
+      [
+        "9cc043acda88da3f"
+      ]
+    ]
+  },
+  {
+    "id": "1eb0d9ba4d1bf8d6",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Category?",
+    "property": "category",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "multiop",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "so1v",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "so2r",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 2850,
+    "y": 1260,
+    "wires": [
+      [
+        "d53bdbd6ba3fdfed"
+      ],
+      [
+        "168faf5992e055d7"
+      ],
+      [
+        "168faf5992e055d7"
+      ]
+    ]
+  },
+  {
+    "id": "9757755f9abe81e5",
+    "type": "switch",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Category?",
+    "property": "category",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "multiop",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "so1v",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "so2r",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 2850,
+    "y": 1380,
+    "wires": [
+      [
+        "d1e531d474c42dde"
+      ],
+      [
+        "64ca2307721f7954"
+      ],
+      [
+        "64ca2307721f7954"
+      ]
+    ]
+  },
+  {
+    "id": "9cc043acda88da3f",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Set Label & Payload",
+    "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif(msg.payload == undefined)\n{\n    msg.payload = 'n/a'\n    return msg;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"M/Hr | 1 Mult = \";\n    return msg;\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 3580,
+    "y": 1380,
+    "wires": [
+      [
+        "e7705b1d662e98c7",
+        "9d0e444ab32a06f9"
+      ]
+    ]
+  },
+  {
+    "id": "d53bdbd6ba3fdfed",
+    "type": "template",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "SQL Top Operator Multi",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, operator as operator from qsos group by operator order by multiplier desc;",
+    "output": "str",
+    "x": 3110,
+    "y": 1240,
+    "wires": [
+      [
+        "8186c56328392551"
+      ]
+    ]
+  },
+  {
+    "id": "8186c56328392551",
+    "type": "sqlite",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 3360,
+    "y": 1260,
+    "wires": [
+      [
+        "0f2162dc3bfae19c"
+      ]
+    ]
+  },
+  {
+    "id": "0f2162dc3bfae19c",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Set Label & Payload",
+    "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"Furthest QSO\";\n    return msg;\n}\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 3580,
+    "y": 1260,
+    "wires": [
+      [
+        "a2c474948039215e",
+        "f0dbae81ebaf286e"
+      ]
+    ]
+  },
+  {
+    "id": "f0dbae81ebaf286e",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 4040,
+    "y": 1200,
+    "wires": []
+  },
+  {
+    "id": "9d0e444ab32a06f9",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 3810,
+    "y": 1320,
+    "wires": []
+  },
+  {
+    "id": "eb5d10e3d8e57f2d",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1990,
+    "y": 1840,
+    "wires": []
+  },
+  {
+    "id": "e4e19daf40493fb9",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1400,
+    "y": 1820,
+    "wires": []
+  },
+  {
+    "id": "f2b91a5dc28385a9",
+    "type": "link in",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "name": "Clear Map IN",
+    "links": [
+      "8f4d88abb858be08"
+    ],
+    "x": 1725,
+    "y": 120,
+    "wires": [
+      [
+        "a6f01856669d3e50"
+      ]
+    ]
+  },
+  {
+    "id": "8834c50bc7d9a366",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "26cf0678322d1bb6",
+    "name": "Set Rate to Payload",
+    "func": "msg.payload = msg.rate\n\n//radiosport.live data\nglobal.set('#currentQrate',msg.payload)\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 3680,
+    "y": 880,
+    "wires": [
+      [
+        "816d3f7e84dd1bf0"
+      ]
+    ]
+  },
+  {
+    "id": "9ed94619f709cb71",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "a9afc3cb2db49407",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2440,
+    "y": 1640,
+    "wires": []
+  },
+  {
+    "id": "b0d18fa59cc49c12",
+    "type": "function",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "name": "Center Map to Lat/Lon",
+    "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nif (msg.payload.name == \"Center Map\")\n{\n\nreturn {payload : {\"command\":{\"lat\":lat, \"lon\":lon, \"zoom\":4}}}\n}\n\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1560,
+    "y": 160,
+    "wires": [
+      [
+        "a6f01856669d3e50"
+      ]
+    ]
+  },
+  {
+    "id": "0d35873cadebf97f",
+    "type": "worldmap in",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "name": "",
+    "path": "/qsos",
+    "events": "connect,disconnect,point,layer,bounds,files,draw,other",
+    "x": 1390,
+    "y": 200,
+    "wires": [
+      [
+        "b0d18fa59cc49c12"
+      ]
+    ]
+  },
+  {
+    "id": "415b4ee138125e2e",
+    "type": "ui_ui_control",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "name": "Watch Refresh",
+    "events": "all",
+    "x": 1020,
+    "y": 160,
+    "wires": [
+      [
+        "bc661ac4152269b3"
+      ]
+    ]
+  },
+  {
+    "id": "bc661ac4152269b3",
+    "type": "change",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "name": "Center Flag",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "{\"name\":\"Center Map\"}",
+        "tot": "json"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1190,
+    "y": 160,
+    "wires": [
+      [
+        "ae7413cce68dfffa"
+      ]
+    ]
+  },
+  {
+    "id": "ae7413cce68dfffa",
+    "type": "delay",
+    "z": "407d2b774fe67647",
+    "g": "b5a72874a2f95ce4",
+    "name": "3s",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1350,
+    "y": 160,
+    "wires": [
+      [
+        "b0d18fa59cc49c12"
+      ]
+    ]
+  },
+  {
+    "id": "0a5bfb881c2f3bca",
+    "type": "debug",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 950,
+    "y": 1000,
+    "wires": []
+  },
+  {
+    "id": "6176c210be856fa7",
+    "type": "link in",
+    "z": "407d2b774fe67647",
+    "g": "81692a3cb68d6cde",
+    "name": "Radio_N3FJP",
+    "links": [
+      "0820988fa43b8a4b",
+      "f6dcf7276d984efc"
+    ],
+    "x": 125,
+    "y": 1820,
+    "wires": [
+      [
+        "bd61ab676c6f7232"
+      ]
+    ]
+  },
+  {
+    "id": "39b7ba7404fb4193",
+    "type": "link in",
+    "z": "407d2b774fe67647",
+    "g": "4f4b9f0c82968b60",
+    "name": "link in 1",
+    "links": [
+      "f6dcf7276d984efc"
+    ],
+    "x": 545,
+    "y": 1020,
+    "wires": [
+      [
+        "1e6f9143a325a577"
+      ]
+    ]
+  }
+]

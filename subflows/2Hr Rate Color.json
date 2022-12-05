@@ -1,0 +1,173 @@
+[
+  {
+    "id": "7d3bb9d663bb9f7c",
+    "type": "subflow",
+    "name": "2Hr Rate Color",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 180,
+        "y": 200,
+        "wires": [
+          {
+            "id": "b01f668b580f9487"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 920,
+        "y": 160,
+        "wires": [
+          {
+            "id": "ec6b89c6f0f98386",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 920,
+        "y": 200,
+        "wires": [
+          {
+            "id": "b37e2740349a3ef5",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 920,
+        "y": 240,
+        "wires": [
+          {
+            "id": "99cf51f0604626bf",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "b01f668b580f9487",
+    "type": "switch",
+    "z": "7d3bb9d663bb9f7c",
+    "name": "QSO Rate",
+    "property": "rate",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "lte",
+        "v": "Q2hrlow",
+        "vt": "global"
+      },
+      {
+        "t": "btwn",
+        "v": "Q2hrmedlow",
+        "vt": "global",
+        "v2": "Q2hrmedhigh",
+        "v2t": "global"
+      },
+      {
+        "t": "gte",
+        "v": "Q2hrhigh",
+        "vt": "global"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 350,
+    "y": 200,
+    "wires": [
+      [
+        "ec6b89c6f0f98386"
+      ],
+      [
+        "b37e2740349a3ef5"
+      ],
+      [
+        "99cf51f0604626bf"
+      ]
+    ]
+  },
+  {
+    "id": "ec6b89c6f0f98386",
+    "type": "change",
+    "z": "7d3bb9d663bb9f7c",
+    "name": "Red < global.Q2hrlow",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FF0000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 680,
+    "y": 160,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "b37e2740349a3ef5",
+    "type": "change",
+    "z": "7d3bb9d663bb9f7c",
+    "name": "Yellow for Between global.Q2hrmed",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFF00",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 720,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "99cf51f0604626bf",
+    "type": "change",
+    "z": "7d3bb9d663bb9f7c",
+    "name": "Green > global.Q2hrhigh",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#008000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 690,
+    "y": 240,
+    "wires": [
+      []
+    ]
+  }
+]

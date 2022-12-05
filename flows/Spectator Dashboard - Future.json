@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "b59d8b7ca43e59ce",
+    "type": "tab",
+    "label": "Spectator Dashboard - Future",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "c619ce9fa95f791b",
+    "type": "ui_worldmap",
+    "z": "b59d8b7ca43e59ce",
+    "group": "13e71f1ba641b9c9",
+    "order": 5,
+    "width": 16,
+    "height": 9,
+    "name": "QSO Being Worked",
+    "lat": "40.3426",
+    "lon": "-92.8554",
+    "zoom": "4",
+    "layer": "OSMG",
+    "cluster": "",
+    "maxage": "",
+    "usermenu": "show",
+    "layers": "show",
+    "panit": "false",
+    "panlock": "false",
+    "zoomlock": "false",
+    "hiderightclick": "true",
+    "coords": "none",
+    "showgrid": "false",
+    "allowFileDrop": "false",
+    "path": "/beingworkedqso",
+    "overlist": "DR,CO,RA,DN,HM",
+    "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
+    "mapname": "",
+    "mapurl": "",
+    "mapopt": "",
+    "mapwms": false,
+    "x": 1670,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "69d83cae2e4e6a4c",
+    "type": "ui_worldmap",
+    "z": "b59d8b7ca43e59ce",
+    "group": "74f6d374fb94524c",
+    "order": 6,
+    "width": 16,
+    "height": 9,
+    "name": "Worked QSOs",
+    "lat": "40.3426",
+    "lon": "-92.8554",
+    "zoom": "4",
+    "layer": "OSMG",
+    "cluster": "",
+    "maxage": "",
+    "usermenu": "show",
+    "layers": "show",
+    "panit": "false",
+    "panlock": "false",
+    "zoomlock": "false",
+    "hiderightclick": "true",
+    "coords": "none",
+    "showgrid": "false",
+    "allowFileDrop": "false",
+    "path": "/workedqso",
+    "overlist": "DR,CO,RA,DN,HM",
+    "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
+    "mapname": "",
+    "mapurl": "",
+    "mapopt": "",
+    "mapwms": false,
+    "x": 1640,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "8c261ef14e000fab",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "13e71f1ba641b9c9",
+    "order": 2,
+    "width": 5,
+    "height": 2,
+    "name": "Being Worked Call Sign",
+    "label": "Call Sign",
+    "format": "<font color={{msg.color}}>{{msg.payload.name}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1690,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "4b288d63d33664da",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "13e71f1ba641b9c9",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "Being Worked Mode",
+    "label": "Mode",
+    "format": "<font color={{msg.color}}>{{msg.payload.mode}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1680,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "7465992a1b281676",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "13e71f1ba641b9c9",
+    "order": 4,
+    "width": 6,
+    "height": 2,
+    "name": "Being Worked Distance Away",
+    "label": "Distance",
+    "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1920,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "6b2eb9fe84b9ab5b",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "d": true,
+    "group": "13e71f1ba641b9c9",
+    "order": 1,
+    "width": 16,
+    "height": 1,
+    "name": "Title Being Worked",
+    "label": "Current Call Sign Being Contacted NOW!",
+    "format": "<font color={{msg.color}}>{{msg.payload.name}}</font>",
+    "layout": "row-center",
+    "className": "",
+    "x": 1670,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "93c97ccaa3e53d22",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "74f6d374fb94524c",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "Worked Call Sign",
+    "label": "Call Sign",
+    "format": "<font color={{msg.color}}>{{msg.payload.name}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1650,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "482152c92f2f5813",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "74f6d374fb94524c",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "Worked Mode",
+    "label": "Mode",
+    "format": "<font color={{msg.color}}>{{msg.payload.mode}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1640,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "2f7d9a2d94268e97",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "74f6d374fb94524c",
+    "order": 4,
+    "width": 4,
+    "height": 2,
+    "name": "Worked Exchange",
+    "label": "Exchange",
+    "format": "<font color={{msg.color}}>{{msg.payload.exchange}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1650,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "aafb155f821969bb",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "74f6d374fb94524c",
+    "order": 5,
+    "width": 4,
+    "height": 2,
+    "name": "Worked Distance Away",
+    "label": "Distance",
+    "format": "<font color={{msg.color}}>{{msg.payload}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1860,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "485ec414a558aa92",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "d": true,
+    "group": "74f6d374fb94524c",
+    "order": 1,
+    "width": 16,
+    "height": 1,
+    "name": "Title QSO Just Worked",
+    "label": "Call Sign Just Logged",
+    "format": "<font color={{msg.color}}>{{msg.payload.name}}</font>",
+    "layout": "row-center",
+    "className": "",
+    "x": 1660,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "957eae866ade3bf2",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "aff1f74aeb47511e",
+    "order": 1,
+    "width": 5,
+    "height": 3,
+    "name": "Total Score",
+    "label": "Total Score",
+    "format": "{{payload.dynamicresults.score[0]}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1110,
+    "y": 780,
+    "wires": []
+  },
+  {
+    "id": "c3e82d630ac3af74",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "aff1f74aeb47511e",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "Total Mults",
+    "label": "Mults",
+    "format": "{{payload.totalmult}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1370,
+    "y": 1040,
+    "wires": []
+  },
+  {
+    "id": "ecd6ccdaad69204f",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "aff1f74aeb47511e",
+    "order": 2,
+    "width": 5,
+    "height": 3,
+    "name": "Total QSO's",
+    "label": "QSOs",
+    "format": "{{payload.totalnoqsos}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1370,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "405c8aa66e5e4591",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Total QSO Array Parse",
+    "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = msg.payload.dynamicresults.breakdown[0].qso[i]._;\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 660,
+    "y": 920,
+    "wires": [
+      [
+        "ef0a05338aaec349"
+      ]
+    ]
+  },
+  {
+    "id": "ebcd86a7c9742a58",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "aff1f74aeb47511e",
+    "order": 4,
+    "width": 5,
+    "height": 3,
+    "name": "Total Points",
+    "label": "Points",
+    "format": "{{payload.totalpoints}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 1390,
+    "y": 1160,
+    "wires": []
+  },
+  {
+    "id": "4296adaf5ac5e757",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Total Points Array Parse",
+    "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = msg.payload.dynamicresults.breakdown[0].point[i]._;\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 1160,
+    "wires": [
+      [
+        "3b834e94e10842af"
+      ]
+    ]
+  },
+  {
+    "id": "dec2582d441f407c",
+    "type": "debug",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1550,
+    "y": 860,
+    "wires": []
+  },
+  {
+    "id": "a7b7e69e5128e9c5",
+    "type": "debug",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1550,
+    "y": 900,
+    "wires": []
+  },
+  {
+    "id": "d01e4f6e8082c23c",
+    "type": "debug",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1550,
+    "y": 940,
+    "wires": []
+  },
+  {
+    "id": "9ac6b8134108e3b3",
+    "type": "link in",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Spectator Dashboard Score IN",
+    "links": [
+      "aec65d796aed9cee"
+    ],
+    "x": 245,
+    "y": 900,
+    "wires": [
+      [
+        "405c8aa66e5e4591",
+        "4296adaf5ac5e757",
+        "f307470858320eea",
+        "48978d41ef0f8847"
+      ]
+    ]
+  },
+  {
+    "id": "325531df7894f668",
+    "type": "comment",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Map Properties To Do",
+    "info": "msg.command\n\nto position map to specific location\nlat\nlon\n\nto zoom into the map\nzoom\n\nadd great circle lines?\n\n\n\n\nmsg.payload = { \"command\": \n{ \n\"layer\":\"Esri Satellite\", \n\"lat\":51, \n\"lon\":3, \n\"zoom\":10 \n    \n}};\n\nTo clear map :\ndeleted : set to true to remove the named marker. (default false)\n\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n",
+    "x": 160,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "55bf9cdbda7ef90e",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "aafad41ae29aabef",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "name": "Contest Info and Overlay",
+    "label": "Contest Info and Goal Overlay",
+    "format": "",
+    "layout": "row-left",
+    "className": "",
+    "x": 170,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "b80f7e753e4d50bb",
+    "type": "comment",
+    "z": "b59d8b7ca43e59ce",
+    "name": "FUTURE WORK ON DASHBOARD",
+    "info": "",
+    "x": 330,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "f307470858320eea",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Total Multi Array Parse",
+    "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    return {\"payload\":{totalmult:\"N/A\"}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmult = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        total = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n        totalmult = totalmult + total;\n    }\n    \n}\n\nreturn {\"payload\":{totalmult:totalmult}};\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 660,
+    "y": 1040,
+    "wires": [
+      [
+        "6b43d48adeb344f8"
+      ]
+    ]
+  },
+  {
+    "id": "42d2b28a24a61f75",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "ab90bdc2382e7735",
+    "order": 1,
+    "width": 7,
+    "height": 11,
+    "name": "Chat Box Overlay",
+    "label": "Overlay Your Chat Box Here",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 150,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "15bffcca247104f2",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "9e3f259da9c7796b",
+    "order": 1,
+    "width": 33,
+    "height": 6,
+    "name": "Waterfall Overlay",
+    "label": "Overlay Your Waterfall Here",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 150,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "dacd6c121eb7a21a",
+    "type": "ui_text",
+    "z": "b59d8b7ca43e59ce",
+    "group": "61f1faff3469a80a",
+    "order": 1,
+    "width": 7,
+    "height": 6,
+    "name": "Webcam Overlay",
+    "label": "Overlay Your Webcam Here",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 150,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "247347fc62633734",
+    "type": "link in",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Worked QSO Stream IN",
+    "links": [
+      "4320ff577c7cb858"
+    ],
+    "x": 215,
+    "y": 560,
+    "wires": [
+      [
+        "e08bbfefae9ae6c0",
+        "1621cbc09402bd19"
+      ]
+    ]
+  },
+  {
+    "id": "ed79aa0b1ff456e7",
+    "type": "link in",
+    "z": "b59d8b7ca43e59ce",
+    "name": "QSO Lookup IN",
+    "links": [
+      "8804affd65082b4f"
+    ],
+    "x": 415,
+    "y": 180,
+    "wires": [
+      [
+        "8c261ef14e000fab",
+        "4b288d63d33664da",
+        "0fe0e7c3dcbe97e9",
+        "98e7482ec778ed6c",
+        "b36078808a8a6ad3",
+        "b14a4de771554740"
+      ]
+    ]
+  },
+  {
+    "id": "34f4bf78ec8102ac",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Get Miles or KM",
+    "func": "let miles = msg.payload.distance_miles.toString();\nlet km = msg.payload.distance_km.toString();\n\nlet measurement = global.get('distance_measurement')\n\nif (measurement == undefined)\n{\n    msg.payload = miles + \"M\";\n    return msg;\n}\n\nif (measurement == 'miles')\n{\n    msg.payload = miles + \"M\";\n    return msg;\n}\n\nif (measurement == 'km')\n{\n    msg.payload = km + \"K\";\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1640,
+    "y": 700,
+    "wires": [
+      [
+        "aafb155f821969bb"
+      ]
+    ]
+  },
+  {
+    "id": "0fe0e7c3dcbe97e9",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Get Miles or KM",
+    "func": "let miles = msg.payload.distance_miles.toString();\nlet km = msg.payload.distance_km.toString();\n\nlet measurement = global.get('distance_measurement')\n\nif (measurement == undefined)\n{\n    msg.payload = miles + \"M\";\n    return msg;\n}\n\nif (measurement == 'miles')\n{\n    msg.payload = miles + \"M\";\n    return msg;\n}\n\nif (measurement == 'km')\n{\n    msg.payload = km + \"K\";\n    return msg;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1680,
+    "y": 220,
+    "wires": [
+      [
+        "7465992a1b281676"
+      ]
+    ]
+  },
+  {
+    "id": "1621cbc09402bd19",
+    "type": "switch",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Set Exchange Color",
+    "property": "payload.ismultiplier",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "gte",
+        "v": "1",
+        "vt": "str"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 780,
+    "y": 600,
+    "wires": [
+      [
+        "6e8e001072beccc3"
+      ],
+      [
+        "0107aee122696217"
+      ]
+    ]
+  },
+  {
+    "id": "0107aee122696217",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Otherwise Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1020,
+    "y": 620,
+    "wires": [
+      [
+        "93c97ccaa3e53d22",
+        "482152c92f2f5813",
+        "2f7d9a2d94268e97",
+        "34f4bf78ec8102ac"
+      ]
+    ]
+  },
+  {
+    "id": "6e8e001072beccc3",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Is Multi Then Color Red",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FF0000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1030,
+    "y": 580,
+    "wires": [
+      [
+        "93c97ccaa3e53d22",
+        "482152c92f2f5813",
+        "2f7d9a2d94268e97",
+        "34f4bf78ec8102ac"
+      ]
+    ]
+  },
+  {
+    "id": "1ff6df90c01046ae",
+    "type": "inject",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Inject Home Icon",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 950,
+    "y": 380,
+    "wires": [
+      [
+        "69e686fc1a9e8f14"
+      ]
+    ]
+  },
+  {
+    "id": "69e686fc1a9e8f14",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Inject Home",
+    "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nreturn {payload : {name:\"home\", lat:lat, lon:lon, icon:\"fa-home\", layer:\"Home\"}};",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1150,
+    "y": 380,
+    "wires": [
+      [
+        "c619ce9fa95f791b",
+        "69d83cae2e4e6a4c"
+      ]
+    ]
+  },
+  {
+    "id": "e08bbfefae9ae6c0",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Remove Contact Info",
+    "rules": [
+      {
+        "t": "delete",
+        "p": "payload.label",
+        "pt": "msg"
+      },
+      {
+        "t": "delete",
+        "p": "payload.band",
+        "pt": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 920,
+    "y": 500,
+    "wires": [
+      [
+        "d3d6702c318319cb"
+      ]
+    ]
+  },
+  {
+    "id": "cd4571df3441bb88",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Remove Contact Info",
+    "rules": [
+      {
+        "t": "delete",
+        "p": "payload.label",
+        "pt": "msg"
+      },
+      {
+        "t": "delete",
+        "p": "payload.band",
+        "pt": "msg"
+      },
+      {
+        "t": "delete",
+        "p": "payload.ID",
+        "pt": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "lookup",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 920,
+    "y": 260,
+    "wires": [
+      [
+        "7163c86597a36265"
+      ]
+    ]
+  },
+  {
+    "id": "48978d41ef0f8847",
+    "type": "rbe",
+    "z": "b59d8b7ca43e59ce",
+    "name": "RBE Total Score",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.dynamicresults.score[0]",
+    "topi": "topic",
+    "x": 580,
+    "y": 780,
+    "wires": [
+      [
+        "7ab0d467c7b76a81",
+        "cac88b428ea7e6e0"
+      ]
+    ]
+  },
+  {
+    "id": "cac88b428ea7e6e0",
+    "type": "delay",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "2",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 760,
+    "y": 820,
+    "wires": [
+      [
+        "13fe729c7aabf5b5"
+      ]
+    ]
+  },
+  {
+    "id": "7ab0d467c7b76a81",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#008000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 830,
+    "y": 780,
+    "wires": [
+      [
+        "957eae866ade3bf2"
+      ]
+    ]
+  },
+  {
+    "id": "13fe729c7aabf5b5",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 910,
+    "y": 820,
+    "wires": [
+      [
+        "957eae866ade3bf2"
+      ]
+    ]
+  },
+  {
+    "id": "ef0a05338aaec349",
+    "type": "rbe",
+    "z": "b59d8b7ca43e59ce",
+    "name": "RBE Total QSOs",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.totalnoqsos",
+    "topi": "topic",
+    "x": 870,
+    "y": 920,
+    "wires": [
+      [
+        "b19c87c226aec28a",
+        "4906c59bcd04142f"
+      ]
+    ]
+  },
+  {
+    "id": "4906c59bcd04142f",
+    "type": "delay",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "2",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1040,
+    "y": 960,
+    "wires": [
+      [
+        "9bb9e5c1ae1bf3d5"
+      ]
+    ]
+  },
+  {
+    "id": "b19c87c226aec28a",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#008000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1050,
+    "y": 920,
+    "wires": [
+      [
+        "ecd6ccdaad69204f"
+      ]
+    ]
+  },
+  {
+    "id": "9bb9e5c1ae1bf3d5",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1190,
+    "y": 960,
+    "wires": [
+      [
+        "ecd6ccdaad69204f"
+      ]
+    ]
+  },
+  {
+    "id": "6b43d48adeb344f8",
+    "type": "rbe",
+    "z": "b59d8b7ca43e59ce",
+    "name": "RBE Total Mults",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.totalmult",
+    "topi": "topic",
+    "x": 880,
+    "y": 1040,
+    "wires": [
+      [
+        "9e5ee1840a1b5563",
+        "0256c5da5a588d7a"
+      ]
+    ]
+  },
+  {
+    "id": "0256c5da5a588d7a",
+    "type": "delay",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "2",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1040,
+    "y": 1080,
+    "wires": [
+      [
+        "2c37c2173a08b611"
+      ]
+    ]
+  },
+  {
+    "id": "9e5ee1840a1b5563",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#008000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1050,
+    "y": 1040,
+    "wires": [
+      [
+        "c3e82d630ac3af74"
+      ]
+    ]
+  },
+  {
+    "id": "2c37c2173a08b611",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1190,
+    "y": 1080,
+    "wires": [
+      [
+        "c3e82d630ac3af74"
+      ]
+    ]
+  },
+  {
+    "id": "3b834e94e10842af",
+    "type": "rbe",
+    "z": "b59d8b7ca43e59ce",
+    "name": "RBE Total Points",
+    "func": "rbe",
+    "gap": "",
+    "start": "",
+    "inout": "out",
+    "septopics": true,
+    "property": "payload.totalpoints",
+    "topi": "topic",
+    "x": 890,
+    "y": 1160,
+    "wires": [
+      [
+        "71c4ab9fccab69ff",
+        "6e284ec98ce3bf08"
+      ]
+    ]
+  },
+  {
+    "id": "6e284ec98ce3bf08",
+    "type": "delay",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "2",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1060,
+    "y": 1200,
+    "wires": [
+      [
+        "5e523473ba049748"
+      ]
+    ]
+  },
+  {
+    "id": "71c4ab9fccab69ff",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#008000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1070,
+    "y": 1160,
+    "wires": [
+      [
+        "ebcd86a7c9742a58"
+      ]
+    ]
+  },
+  {
+    "id": "5e523473ba049748",
+    "type": "change",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1210,
+    "y": 1200,
+    "wires": [
+      [
+        "ebcd86a7c9742a58"
+      ]
+    ]
+  },
+  {
+    "id": "98e7482ec778ed6c",
+    "type": "debug",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 960,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "8680b1c875cebcb6",
+    "type": "debug",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1630,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "b36078808a8a6ad3",
+    "type": "delay",
+    "z": "b59d8b7ca43e59ce",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 700,
+    "y": 260,
+    "wires": [
+      [
+        "cd4571df3441bb88"
+      ]
+    ]
+  },
+  {
+    "id": "b14a4de771554740",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Reset Map",
+    "func": "msg.payload = {command:{clear:\"lookup\"}};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 930,
+    "y": 200,
+    "wires": [
+      [
+        "c619ce9fa95f791b"
+      ]
+    ]
+  },
+  {
+    "id": "7163c86597a36265",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Draw Great Circle Lines",
+    "func": "let lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1190,
+    "y": 260,
+    "wires": [
+      [
+        "c619ce9fa95f791b"
+      ]
+    ]
+  },
+  {
+    "id": "d3d6702c318319cb",
+    "type": "function",
+    "z": "b59d8b7ca43e59ce",
+    "name": "Draw Great Circle Lines",
+    "func": "let lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nmsg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\nif (msg.payload.greatcircle[0][0] == undefined)\n{\n    delete msg.payload.greatcircle;\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1190,
+    "y": 500,
+    "wires": [
+      [
+        "69d83cae2e4e6a4c"
+      ]
+    ]
+  }
+]

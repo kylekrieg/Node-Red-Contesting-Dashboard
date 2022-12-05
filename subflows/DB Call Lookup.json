@@ -1,0 +1,3351 @@
+[
+  {
+    "id": "bedd4acdc0e27dab",
+    "type": "subflow",
+    "name": "DB Call Lookup",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 60,
+        "y": 480,
+        "wires": [
+          {
+            "id": "a5cb9c557a70448b"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 4760,
+        "y": 360,
+        "wires": [
+          {
+            "id": "1c3ab9f47658b3eb",
+            "port": 0
+          },
+          {
+            "id": "1c8b4345f764571b",
+            "port": 0
+          },
+          {
+            "id": "25c39c91c41519af",
+            "port": 0
+          },
+          {
+            "id": "f5f512454cd1849d",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 4600,
+        "y": 800,
+        "wires": [
+          {
+            "id": "db552b47bb5f9064",
+            "port": 0
+          },
+          {
+            "id": "bc778edd341cbc84",
+            "port": 0
+          },
+          {
+            "id": "96275f869825c27d",
+            "port": 0
+          },
+          {
+            "id": "2cf32f5a31aed22a",
+            "port": 0
+          },
+          {
+            "id": "260ab9255da1050e",
+            "port": 0
+          },
+          {
+            "id": "82696bd88fd60c22",
+            "port": 0
+          },
+          {
+            "id": "5e19bf265b499836",
+            "port": 0
+          },
+          {
+            "id": "885ec7953d91b737",
+            "port": 0
+          },
+          {
+            "id": "588111625a4f2458",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "8cb98df85d0b0525",
+    "type": "http request",
+    "z": "bedd4acdc0e27dab",
+    "name": "QSO Hamdb Lookup",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://api.hamdb.org/{{{payload.call}}}/json/nodered",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 1060,
+    "y": 80,
+    "wires": [
+      [
+        "2e3b45dcd4f0134a"
+      ]
+    ]
+  },
+  {
+    "id": "70b6de0f1840a35d",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.name",
+        "pt": "msg",
+        "to": "payload.hamdb.callsign.call",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.lat",
+        "pt": "msg",
+        "to": "payload.hamdb.callsign.lat",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.lon",
+        "pt": "msg",
+        "to": "payload.hamdb.callsign.lon",
+        "tot": "msg"
+      },
+      {
+        "t": "move",
+        "p": "payload.hamdb",
+        "pt": "msg",
+        "to": "hamdb",
+        "tot": "msg"
+      },
+      {
+        "t": "delete",
+        "p": "payload.hamdb",
+        "pt": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ttl",
+        "pt": "msg",
+        "to": "ttl",
+        "tot": "global"
+      },
+      {
+        "t": "set",
+        "p": "payload.op",
+        "pt": "msg",
+        "to": "original.operator[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "original.band[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "original.mode[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isrunqso",
+        "pt": "msg",
+        "to": "original.IsRunQSO[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.exchange",
+        "pt": "msg",
+        "to": "original.exchange1[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.section",
+        "pt": "msg",
+        "to": "original.section[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1690,
+    "y": 80,
+    "wires": [
+      [
+        "b8b4fdfbdc3584ae"
+      ]
+    ]
+  },
+  {
+    "id": "4982fd45c8dc3e9b",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Which Lookup DB?",
+    "property": "dblookup",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "hamdb",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "qrz",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "hamqth",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 690,
+    "y": 480,
+    "wires": [
+      [
+        "8cb98df85d0b0525"
+      ],
+      [
+        "716b0a1e81f4c143"
+      ],
+      [
+        "48ede867c6197d86"
+      ]
+    ]
+  },
+  {
+    "id": "03ebd72fe284b0c5",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Original Payload Copy",
+    "rules": [
+      {
+        "t": "move",
+        "p": "payload.contactinfo",
+        "pt": "msg",
+        "to": "original",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.call",
+        "pt": "msg",
+        "to": "original.call[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 440,
+    "y": 440,
+    "wires": [
+      [
+        "4982fd45c8dc3e9b"
+      ]
+    ]
+  },
+  {
+    "id": "c3ba057b922e94e4",
+    "type": "http request",
+    "z": "bedd4acdc0e27dab",
+    "name": "QRZ DB Lookup",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://xmldata.qrz.com/xml/current/?s={{{qrzkey}}};callsign={{{payload.call}}}",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 1260,
+    "y": 400,
+    "wires": [
+      [
+        "88b7cee26ec2a13e"
+      ]
+    ]
+  },
+  {
+    "id": "716b0a1e81f4c143",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set QRZ Key",
+    "rules": [
+      {
+        "t": "set",
+        "p": "qrzkey",
+        "pt": "msg",
+        "to": "qrzkey",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1030,
+    "y": 400,
+    "wires": [
+      [
+        "c3ba057b922e94e4"
+      ]
+    ]
+  },
+  {
+    "id": "635e74837740d203",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Error?",
+    "property": "payload.QRZDatabase.Session[0].Error[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "istype",
+        "v": "undefined",
+        "vt": "undefined"
+      },
+      {
+        "t": "cont",
+        "v": "Not found",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "Session Timeout",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "Username / password required",
+        "vt": "str"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 5,
+    "x": 1570,
+    "y": 400,
+    "wires": [
+      [
+        "ce43ae734fc9b55d"
+      ],
+      [
+        "c931e624363ed9cd"
+      ],
+      [
+        "48307e071458f6a1",
+        "1cbf491f09f5b57e"
+      ],
+      [
+        "48307e071458f6a1",
+        "1cbf491f09f5b57e"
+      ],
+      [
+        "020edd3ba15d0ea4",
+        "1cbf491f09f5b57e"
+      ]
+    ]
+  },
+  {
+    "id": "2e3b45dcd4f0134a",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Is Error?",
+    "property": "payload.hamdb.messages.status",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "OK",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "NOT_FOUND",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1300,
+    "y": 80,
+    "wires": [
+      [
+        "70b6de0f1840a35d"
+      ],
+      [
+        "69248291ef2a5439"
+      ]
+    ]
+  },
+  {
+    "id": "88b7cee26ec2a13e",
+    "type": "xml",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 1430,
+    "y": 400,
+    "wires": [
+      [
+        "635e74837740d203"
+      ]
+    ]
+  },
+  {
+    "id": "ce43ae734fc9b55d",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.name",
+        "pt": "msg",
+        "to": "payload.QRZDatabase.Callsign[0].call[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.lat",
+        "pt": "msg",
+        "to": "payload.QRZDatabase.Callsign[0].lat[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.lon",
+        "pt": "msg",
+        "to": "payload.QRZDatabase.Callsign[0].lon[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "move",
+        "p": "payload.QRZDatabase",
+        "pt": "msg",
+        "to": "QRZDatabase",
+        "tot": "msg"
+      },
+      {
+        "t": "delete",
+        "p": "payload.QRZDatabase",
+        "pt": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ttl",
+        "pt": "msg",
+        "to": "ttl",
+        "tot": "global"
+      },
+      {
+        "t": "set",
+        "p": "payload.op",
+        "pt": "msg",
+        "to": "original.operator[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "original.band[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "original.mode[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isrunqso",
+        "pt": "msg",
+        "to": "original.IsRunQSO[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.exchange",
+        "pt": "msg",
+        "to": "original.exchange1[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.section",
+        "pt": "msg",
+        "to": "original.section[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ID",
+        "pt": "msg",
+        "to": "original.ID[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1810,
+    "y": 300,
+    "wires": [
+      [
+        "c758ca8231477389"
+      ]
+    ]
+  },
+  {
+    "id": "c0c81bc9589bbb2e",
+    "type": "template",
+    "z": "bedd4acdc0e27dab",
+    "name": "Update isbusted DB",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "update qsos\nset isbusted='1'\nwhere ID='{{{payload.ID}}}';",
+    "output": "str",
+    "x": 2520,
+    "y": 420,
+    "wires": [
+      [
+        "ae62ec7640f60321"
+      ]
+    ]
+  },
+  {
+    "id": "ae62ec7640f60321",
+    "type": "sqlite",
+    "z": "bedd4acdc0e27dab",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 2960,
+    "y": 420,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6ddd40d0ad448153",
+    "type": "template",
+    "z": "bedd4acdc0e27dab",
+    "name": "Update lat, lon & distance DB",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "update qsos set lon='{{{payload.lon}}}',lat='{{{payload.lat}}}',distance='{{{payload.distance}}}' where ID='{{{payload.ID}}}';",
+    "output": "str",
+    "x": 2720,
+    "y": 360,
+    "wires": [
+      [
+        "ae62ec7640f60321"
+      ]
+    ]
+  },
+  {
+    "id": "3df3ddad593e6199",
+    "type": "delay",
+    "z": "bedd4acdc0e27dab",
+    "name": "1 Msg Per Hour",
+    "pauseType": "rate",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "hour",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 2180,
+    "y": 520,
+    "wires": [
+      [
+        "6b5361caafc5b871"
+      ]
+    ]
+  },
+  {
+    "id": "c758ca8231477389",
+    "type": "function",
+    "z": "bedd4acdc0e27dab",
+    "name": "Get Distance",
+    "func": "function deg2rad(deg) {\n  return deg * (Math.PI/180)\n}\n\nlet lat1 = global.get('homelat');\nlet lat2 = msg.payload.lat\nlet lon1 = global.get('homelon');\nlet lon2 = msg.payload.lon;\n\nvar R = 6371; // Radius of the earth in km\nvar dLat = deg2rad(lat2-lat1);  // deg2rad below\nvar dLon = deg2rad(lon2-lon1); \n//var deglat1 = lat1 * (Math.PI/180);\n//var deglat2 = lat2 * (Math.PI/180);\nvar a = \n    Math.sin(dLat/2) * Math.sin(dLat/2) +\n    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * \n    Math.sin(dLon/2) * Math.sin(dLon/2)\n    ; \nvar c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); \nvar d = R * c; // Distance in km\nmsg.payload.distance_km = parseInt(d);\n\n\nvar miles = d * 0.62137; //convert to miles\nmsg.payload.distance_miles = parseInt(miles);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2010,
+    "y": 300,
+    "wires": [
+      [
+        "3762f0280985ea10",
+        "1e5bda5f5c322537"
+      ]
+    ]
+  },
+  {
+    "id": "b8b4fdfbdc3584ae",
+    "type": "function",
+    "z": "bedd4acdc0e27dab",
+    "name": "Get Distance",
+    "func": "function deg2rad(deg) {\n  return deg * (Math.PI/180)\n}\n\nlet lat1 = global.get('homelat');\nlet lat2 = msg.payload.lat\nlet lon1 = global.get('homelon');\nlet lon2 = msg.payload.lon;\n\nvar R = 6371; // Radius of the earth in km\nvar dLat = deg2rad(lat2-lat1);  // deg2rad below\nvar dLon = deg2rad(lon2-lon1); \n//var deglat1 = lat1 * (Math.PI/180);\n//var deglat2 = lat2 * (Math.PI/180);\nvar a = \n    Math.sin(dLat/2) * Math.sin(dLat/2) +\n    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * \n    Math.sin(dLon/2) * Math.sin(dLon/2)\n    ; \nvar c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); \nvar d = R * c; // Distance in km\nmsg.payload.distance_km = parseInt(d);\n\nvar miles = d * 0.62137; //convert to miles\nmsg.payload.distance_miles = parseInt(miles);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1930,
+    "y": 80,
+    "wires": [
+      [
+        "3762f0280985ea10",
+        "1e5bda5f5c322537"
+      ]
+    ]
+  },
+  {
+    "id": "020edd3ba15d0ea4",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "QRZ Error.  Please check the configuration.",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1780,
+    "y": 580,
+    "wires": [
+      [
+        "c0bf1ae508c68ea2"
+      ]
+    ]
+  },
+  {
+    "id": "c0bf1ae508c68ea2",
+    "type": "delay",
+    "z": "bedd4acdc0e27dab",
+    "name": "1 Msg Per Hour",
+    "pauseType": "rate",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "hour",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1980,
+    "y": 580,
+    "wires": [
+      [
+        "ca9eb5a0ae68b3f7"
+      ]
+    ]
+  },
+  {
+    "id": "ca9eb5a0ae68b3f7",
+    "type": "ui_toast",
+    "z": "bedd4acdc0e27dab",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "QRZ Session General Error",
+    "x": 2220,
+    "y": 580,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "48307e071458f6a1",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Username null?",
+    "property": "qrzusername",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "nnull"
+      },
+      {
+        "t": "null"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1780,
+    "y": 500,
+    "wires": [
+      [
+        "df7aeb880271e9ab"
+      ],
+      [
+        "f8fca14f8348f52a"
+      ]
+    ]
+  },
+  {
+    "id": "f8fca14f8348f52a",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set Error Msg",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Please enter in your QRZ username & password on the configuration dashboard.",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1980,
+    "y": 520,
+    "wires": [
+      [
+        "3df3ddad593e6199"
+      ]
+    ]
+  },
+  {
+    "id": "6b5361caafc5b871",
+    "type": "ui_toast",
+    "z": "bedd4acdc0e27dab",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": true,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Enter in Your QRZ Username & Password",
+    "x": 2480,
+    "y": 520,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ec02285ebc182563",
+    "type": "http request",
+    "z": "bedd4acdc0e27dab",
+    "name": "Get QRZ XML Key",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://xmldata.qrz.com/xml/current/?username={{payload.qrzusername}};password={{payload.qrzpassword}};agent=q5.0",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 2290,
+    "y": 460,
+    "wires": [
+      [
+        "9b81b34ea7eab20b"
+      ]
+    ]
+  },
+  {
+    "id": "9b81b34ea7eab20b",
+    "type": "xml",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 2470,
+    "y": 460,
+    "wires": [
+      [
+        "2585664f7f4bcded"
+      ]
+    ]
+  },
+  {
+    "id": "2585664f7f4bcded",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "qrzkey",
+        "pt": "global",
+        "to": "payload.QRZDatabase.Session[0].Key[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "qrzkeyexpire",
+        "pt": "global",
+        "to": "payload.QRZDatabase.Session[0].SubExp[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "qrzkey",
+        "pt": "msg",
+        "to": "qrzkey",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2640,
+    "y": 460,
+    "wires": [
+      [
+        "9d7ff286257e9ee1"
+      ]
+    ]
+  },
+  {
+    "id": "df7aeb880271e9ab",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set QRZ Username & Password",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.qrzusername",
+        "pt": "msg",
+        "to": "qrzusername",
+        "tot": "global"
+      },
+      {
+        "t": "set",
+        "p": "payload.qrzpassword",
+        "pt": "msg",
+        "to": "qrzpassword",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2030,
+    "y": 460,
+    "wires": [
+      [
+        "ec02285ebc182563"
+      ]
+    ]
+  },
+  {
+    "id": "db552b47bb5f9064",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "160M Color Purple",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#800080",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "160M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "160M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4290,
+    "y": 680,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "bc778edd341cbc84",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "80M Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#008000",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "80M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "80M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4290,
+    "y": 720,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "96275f869825c27d",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "40M Color Blue",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#0000FF",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "40M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "40M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4300,
+    "y": 760,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "2cf32f5a31aed22a",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "20M Color Red",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#FF0000",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "20M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "20M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4300,
+    "y": 800,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "260ab9255da1050e",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "15M Color Yellow",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#FFFF00",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "15M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "15M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4290,
+    "y": 840,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "82696bd88fd60c22",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "10M Color Orange",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#FF8C00",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "10M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "10M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4290,
+    "y": 880,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5e19bf265b499836",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "6M Color White",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "6M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "6M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4300,
+    "y": 920,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "885ec7953d91b737",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "2M Color Lime",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#00FF00",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "2M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "2M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4300,
+    "y": 960,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "588111625a4f2458",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Else Color Black",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#000000",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "Other",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4300,
+    "y": 1000,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6dddf05a5c5aefea",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Band Parse",
+    "property": "original.freq",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "btwn",
+        "v": "1800",
+        "vt": "num",
+        "v2": "2000",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "3500",
+        "vt": "num",
+        "v2": "4000",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "7000",
+        "vt": "num",
+        "v2": "7200",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "14000",
+        "vt": "num",
+        "v2": "14350",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "21000",
+        "vt": "num",
+        "v2": "21450",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "28000",
+        "vt": "num",
+        "v2": "29700",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "50000",
+        "vt": "num",
+        "v2": "54000",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "144000",
+        "vt": "num",
+        "v2": "148000",
+        "v2t": "num"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 9,
+    "x": 3970,
+    "y": 840,
+    "wires": [
+      [
+        "db552b47bb5f9064"
+      ],
+      [
+        "bc778edd341cbc84"
+      ],
+      [
+        "96275f869825c27d"
+      ],
+      [
+        "2cf32f5a31aed22a"
+      ],
+      [
+        "260ab9255da1050e"
+      ],
+      [
+        "82696bd88fd60c22"
+      ],
+      [
+        "5e19bf265b499836"
+      ],
+      [
+        "885ec7953d91b737"
+      ],
+      [
+        "588111625a4f2458"
+      ]
+    ]
+  },
+  {
+    "id": "48ede867c6197d86",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set HamQTH Key",
+    "rules": [
+      {
+        "t": "set",
+        "p": "hamqthkey",
+        "pt": "msg",
+        "to": "hamqthkey",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1050,
+    "y": 860,
+    "wires": [
+      [
+        "1d3a3564f6016e6a"
+      ]
+    ]
+  },
+  {
+    "id": "1d3a3564f6016e6a",
+    "type": "http request",
+    "z": "bedd4acdc0e27dab",
+    "name": "HamQTH DB Lookup",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://www.hamqth.com/xml.php?id={{{hamqthkey}}}&callsign={{{payload.call}}}&prg=CONTEST_DASHBOARD",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 1280,
+    "y": 860,
+    "wires": [
+      [
+        "3ea240042a33dd07"
+      ]
+    ]
+  },
+  {
+    "id": "3ea240042a33dd07",
+    "type": "xml",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 1470,
+    "y": 860,
+    "wires": [
+      [
+        "49f99e887e82cc60"
+      ]
+    ]
+  },
+  {
+    "id": "49f99e887e82cc60",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Error?",
+    "property": "payload.HamQTH.session[0].error[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "istype",
+        "v": "undefined",
+        "vt": "undefined"
+      },
+      {
+        "t": "cont",
+        "v": "Callsign not found",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "Session does not exist or expired",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "Wrong user name or password",
+        "vt": "str"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 5,
+    "x": 1610,
+    "y": 860,
+    "wires": [
+      [
+        "84896f6b71dd7adc"
+      ],
+      [
+        "2f56fea52ed41388"
+      ],
+      [
+        "a1369cd58e8ea395",
+        "7f886053cdd16a70"
+      ],
+      [
+        "a1369cd58e8ea395",
+        "7f886053cdd16a70"
+      ],
+      [
+        "6153738ced412e5b",
+        "7f886053cdd16a70"
+      ]
+    ]
+  },
+  {
+    "id": "84896f6b71dd7adc",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.name",
+        "pt": "msg",
+        "to": "original.call[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.lat",
+        "pt": "msg",
+        "to": "payload.HamQTH.search[0].latitude[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.lon",
+        "pt": "msg",
+        "to": "payload.HamQTH.search[0].longitude[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "move",
+        "p": "payload.HamQTH",
+        "pt": "msg",
+        "to": "HamQTH",
+        "tot": "msg"
+      },
+      {
+        "t": "delete",
+        "p": "payload.HamQTH",
+        "pt": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ttl",
+        "pt": "msg",
+        "to": "ttl",
+        "tot": "global"
+      },
+      {
+        "t": "set",
+        "p": "payload.op",
+        "pt": "msg",
+        "to": "original.operator[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "original.band[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "original.mode[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isrunqso",
+        "pt": "msg",
+        "to": "original.IsRunQSO[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.exchange",
+        "pt": "msg",
+        "to": "original.exchange1[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.section",
+        "pt": "msg",
+        "to": "original.section[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ID",
+        "pt": "msg",
+        "to": "original.ID[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1830,
+    "y": 800,
+    "wires": [
+      [
+        "1560843a2ed68c93"
+      ]
+    ]
+  },
+  {
+    "id": "1560843a2ed68c93",
+    "type": "function",
+    "z": "bedd4acdc0e27dab",
+    "name": "Get Distance",
+    "func": "function deg2rad(deg) {\n  return deg * (Math.PI/180)\n}\n\nlet lat1 = global.get('homelat');\nlet lat2 = msg.payload.lat\nlet lon1 = global.get('homelon');\nlet lon2 = msg.payload.lon;\n\nvar R = 6371; // Radius of the earth in km\nvar dLat = deg2rad(lat2-lat1);  // deg2rad below\nvar dLon = deg2rad(lon2-lon1); \n//var deglat1 = lat1 * (Math.PI/180);\n//var deglat2 = lat2 * (Math.PI/180);\nvar a = \n    Math.sin(dLat/2) * Math.sin(dLat/2) +\n    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * \n    Math.sin(dLon/2) * Math.sin(dLon/2)\n    ; \nvar c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); \nvar d = R * c; // Distance in km\nmsg.payload.distance_km = parseInt(d);\n\nvar miles = d * 0.62137; //convert to miles\nmsg.payload.distance_miles = parseInt(miles);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2070,
+    "y": 800,
+    "wires": [
+      [
+        "3762f0280985ea10",
+        "8b9096cac8bf440d"
+      ]
+    ]
+  },
+  {
+    "id": "a1369cd58e8ea395",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Usernam null?",
+    "property": "hamqthusername",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "nnull"
+      },
+      {
+        "t": "null"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1880,
+    "y": 1020,
+    "wires": [
+      [
+        "f9d62c1874c03e4a"
+      ],
+      [
+        "3bcabbe732cbc16b"
+      ]
+    ]
+  },
+  {
+    "id": "f9d62c1874c03e4a",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set HamQTH Username & Password",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.hamqthusername",
+        "pt": "msg",
+        "to": "hamqthusername",
+        "tot": "global"
+      },
+      {
+        "t": "set",
+        "p": "payload.hamqthpassword",
+        "pt": "msg",
+        "to": "hamqthpassword",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2150,
+    "y": 980,
+    "wires": [
+      [
+        "77f7cadf4c5bf2f4"
+      ]
+    ]
+  },
+  {
+    "id": "3bcabbe732cbc16b",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set Error Msg",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Please enter in your HamQTH username & password on the configuration dashboard.",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2080,
+    "y": 1040,
+    "wires": [
+      [
+        "b9d3f9f8898a0e26"
+      ]
+    ]
+  },
+  {
+    "id": "77f7cadf4c5bf2f4",
+    "type": "http request",
+    "z": "bedd4acdc0e27dab",
+    "name": "Get HamQTH XML Key",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://www.hamqth.com/xml.php?u={{payload.hamqthusername}}&p={{payload.hamqthpassword}}",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 2470,
+    "y": 980,
+    "wires": [
+      [
+        "b77e89a9e0d724f4"
+      ]
+    ]
+  },
+  {
+    "id": "b77e89a9e0d724f4",
+    "type": "xml",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 2670,
+    "y": 980,
+    "wires": [
+      [
+        "19d4a70bcf695fc1"
+      ]
+    ]
+  },
+  {
+    "id": "19d4a70bcf695fc1",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "hamqthkey",
+        "pt": "global",
+        "to": "payload.HamQTH.session[0].session_id[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "hamqthkey",
+        "pt": "msg",
+        "to": "hamqthkey",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2840,
+    "y": 980,
+    "wires": [
+      [
+        "915c95f6d75c0fe8"
+      ]
+    ]
+  },
+  {
+    "id": "b9d3f9f8898a0e26",
+    "type": "delay",
+    "z": "bedd4acdc0e27dab",
+    "name": "1 Msg Per Hour",
+    "pauseType": "rate",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "hour",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 2280,
+    "y": 1040,
+    "wires": [
+      [
+        "513fcdfab19e24de"
+      ]
+    ]
+  },
+  {
+    "id": "513fcdfab19e24de",
+    "type": "ui_toast",
+    "z": "bedd4acdc0e27dab",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": true,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Enter in Your HamQTH Username & Password",
+    "x": 2600,
+    "y": 1040,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6153738ced412e5b",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "HamQTH Error.  Please check the configuration.",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1840,
+    "y": 1100,
+    "wires": [
+      [
+        "3fa239790d7f8a1d"
+      ]
+    ]
+  },
+  {
+    "id": "3fa239790d7f8a1d",
+    "type": "delay",
+    "z": "bedd4acdc0e27dab",
+    "name": "1 Msg Per Hour",
+    "pauseType": "rate",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "hour",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 2060,
+    "y": 1100,
+    "wires": [
+      [
+        "08a9c92f75154ca7"
+      ]
+    ]
+  },
+  {
+    "id": "08a9c92f75154ca7",
+    "type": "ui_toast",
+    "z": "bedd4acdc0e27dab",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "HamQTH Session General Error",
+    "x": 2330,
+    "y": 1100,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "2b7ee973eaf53963",
+    "type": "template",
+    "z": "bedd4acdc0e27dab",
+    "name": "Update isbusted DB",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "update qsos\nset isbusted='1'\nwhere ID='{{{payload.ID}}}';",
+    "output": "str",
+    "x": 2520,
+    "y": 900,
+    "wires": [
+      [
+        "b288e29620a6d810"
+      ]
+    ]
+  },
+  {
+    "id": "b288e29620a6d810",
+    "type": "sqlite",
+    "z": "bedd4acdc0e27dab",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 3040,
+    "y": 900,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "1bf49b1ee0e4bb6d",
+    "type": "template",
+    "z": "bedd4acdc0e27dab",
+    "name": "Update lat, lon & distance DB",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "update qsos set lon='{{{payload.lon}}}',lat='{{{payload.lat}}}',distance='{{{payload.distance}}}' where ID='{{{payload.ID}}}';",
+    "output": "str",
+    "x": 2760,
+    "y": 820,
+    "wires": [
+      [
+        "b288e29620a6d810"
+      ]
+    ]
+  },
+  {
+    "id": "605d06d0f3758622",
+    "type": "comment",
+    "z": "bedd4acdc0e27dab",
+    "name": "HamDB Flow",
+    "info": "",
+    "x": 1030,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "3ea653b66b729fa5",
+    "type": "comment",
+    "z": "bedd4acdc0e27dab",
+    "name": "QRZ Flow",
+    "info": "",
+    "x": 1040,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "9347f2a457d75d25",
+    "type": "comment",
+    "z": "bedd4acdc0e27dab",
+    "name": "HamQTH Flow",
+    "info": "",
+    "x": 1040,
+    "y": 800,
+    "wires": []
+  },
+  {
+    "id": "915c95f6d75c0fe8",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Original Payload Copy",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.call",
+        "pt": "msg",
+        "to": "original.call[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 3060,
+    "y": 980,
+    "wires": [
+      [
+        "60dd7391ca919902"
+      ]
+    ]
+  },
+  {
+    "id": "60dd7391ca919902",
+    "type": "link out",
+    "z": "bedd4acdc0e27dab",
+    "name": "HamQTH Link OUT",
+    "mode": "link",
+    "links": [
+      "2649a46a33c14d96"
+    ],
+    "x": 3315,
+    "y": 980,
+    "wires": []
+  },
+  {
+    "id": "2649a46a33c14d96",
+    "type": "link in",
+    "z": "bedd4acdc0e27dab",
+    "name": "HamQTH Link IN",
+    "links": [
+      "60dd7391ca919902"
+    ],
+    "x": 875,
+    "y": 980,
+    "wires": [
+      [
+        "48ede867c6197d86"
+      ]
+    ]
+  },
+  {
+    "id": "9d7ff286257e9ee1",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Original Payload Copy",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.call",
+        "pt": "msg",
+        "to": "original.call[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2860,
+    "y": 460,
+    "wires": [
+      [
+        "9757185c6956eb89"
+      ]
+    ]
+  },
+  {
+    "id": "9757185c6956eb89",
+    "type": "link out",
+    "z": "bedd4acdc0e27dab",
+    "name": "QRZ Link OUT",
+    "mode": "link",
+    "links": [
+      "dd043779d2451db2"
+    ],
+    "x": 3055,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "dd043779d2451db2",
+    "type": "link in",
+    "z": "bedd4acdc0e27dab",
+    "name": "QRZ Link IN",
+    "links": [
+      "9757185c6956eb89"
+    ],
+    "x": 875,
+    "y": 500,
+    "wires": [
+      [
+        "716b0a1e81f4c143"
+      ]
+    ]
+  },
+  {
+    "id": "3762f0280985ea10",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "QSO, Lookup or Spot?",
+    "property": "qsotype",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "qso",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "lookup",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "spot",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 3520,
+    "y": 380,
+    "wires": [
+      [
+        "b228e5cf7ea48308"
+      ],
+      [
+        "b228e5cf7ea48308"
+      ],
+      [
+        "6dddf05a5c5aefea"
+      ]
+    ]
+  },
+  {
+    "id": "a5cb9c557a70448b",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "QSO or Spot?",
+    "property": "qsotype",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "qso",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "lookup",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "spot",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 200,
+    "y": 480,
+    "wires": [
+      [
+        "03ebd72fe284b0c5"
+      ],
+      [
+        "f8de5ff40046db44"
+      ],
+      [
+        "957891a996803850"
+      ]
+    ]
+  },
+  {
+    "id": "957891a996803850",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Original Payload Copy",
+    "rules": [
+      {
+        "t": "move",
+        "p": "payload",
+        "pt": "msg",
+        "to": "original",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.call",
+        "pt": "msg",
+        "to": "original.de",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.freq",
+        "pt": "msg",
+        "to": "original.freq",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 440,
+    "y": 520,
+    "wires": [
+      [
+        "4982fd45c8dc3e9b"
+      ]
+    ]
+  },
+  {
+    "id": "69248291ef2a5439",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.name",
+        "pt": "msg",
+        "to": "original.call[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "delete",
+        "p": "payload.hamdb",
+        "pt": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ttl",
+        "pt": "msg",
+        "to": "0",
+        "tot": "num"
+      },
+      {
+        "t": "set",
+        "p": "payload.op",
+        "pt": "msg",
+        "to": "original.operator[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "original.band[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "original.mode[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isrunqso",
+        "pt": "msg",
+        "to": "original.IsRunQSO[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.exchange",
+        "pt": "msg",
+        "to": "original.exchange1[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.section",
+        "pt": "msg",
+        "to": "original.section[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ID",
+        "pt": "msg",
+        "to": "original.ID[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isbusted",
+        "pt": "msg",
+        "to": "1",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.distance_km",
+        "pt": "msg",
+        "to": "0",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "msg.payload.distance_miles",
+        "pt": "msg",
+        "to": "0",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1930,
+    "y": 120,
+    "wires": [
+      [
+        "3762f0280985ea10",
+        "1e5bda5f5c322537"
+      ]
+    ]
+  },
+  {
+    "id": "c931e624363ed9cd",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.name",
+        "pt": "msg",
+        "to": "original.call[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ttl",
+        "pt": "msg",
+        "to": "0",
+        "tot": "num"
+      },
+      {
+        "t": "set",
+        "p": "payload.op",
+        "pt": "msg",
+        "to": "original.operator[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "original.band[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "original.mode[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isrunqso",
+        "pt": "msg",
+        "to": "original.IsRunQSO[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.exchange",
+        "pt": "msg",
+        "to": "original.exchange1[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.section",
+        "pt": "msg",
+        "to": "original.section[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ID",
+        "pt": "msg",
+        "to": "original.ID[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isbusted",
+        "pt": "msg",
+        "to": "1",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.distance_km",
+        "pt": "msg",
+        "to": "0",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "msg.payload.distance_miles",
+        "pt": "msg",
+        "to": "0",
+        "tot": "str"
+      },
+      {
+        "t": "delete",
+        "p": "payload.QRZDatabase",
+        "pt": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1830,
+    "y": 400,
+    "wires": [
+      [
+        "3762f0280985ea10",
+        "1e5bda5f5c322537",
+        "c0c81bc9589bbb2e"
+      ]
+    ]
+  },
+  {
+    "id": "2f56fea52ed41388",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.name",
+        "pt": "msg",
+        "to": "original.call[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ttl",
+        "pt": "msg",
+        "to": "0",
+        "tot": "num"
+      },
+      {
+        "t": "set",
+        "p": "payload.op",
+        "pt": "msg",
+        "to": "original.operator[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "original.band[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "original.mode[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isrunqso",
+        "pt": "msg",
+        "to": "original.IsRunQSO[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.exchange",
+        "pt": "msg",
+        "to": "original.exchange1[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.section",
+        "pt": "msg",
+        "to": "original.section[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.ID",
+        "pt": "msg",
+        "to": "original.ID[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.isbusted",
+        "pt": "msg",
+        "to": "1",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.distance_km",
+        "pt": "msg",
+        "to": "0",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "msg.payload.distance_miles",
+        "pt": "msg",
+        "to": "0",
+        "tot": "str"
+      },
+      {
+        "t": "delete",
+        "p": "payload.HamQTH",
+        "pt": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1890,
+    "y": 880,
+    "wires": [
+      [
+        "3762f0280985ea10",
+        "8b9096cac8bf440d",
+        "2b7ee973eaf53963"
+      ]
+    ]
+  },
+  {
+    "id": "b228e5cf7ea48308",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Get Band",
+    "property": "payload.band",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "1.8",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "3.5",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "7",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "14",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "21",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "28",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "50",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "144",
+        "vt": "str"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 9,
+    "x": 3800,
+    "y": 320,
+    "wires": [
+      [
+        "12aaa60adbe53aa4"
+      ],
+      [
+        "13d5c886dc925ca0"
+      ],
+      [
+        "425279b6d14c3da6"
+      ],
+      [
+        "df3e87bc737f56b9"
+      ],
+      [
+        "3443249ce4903268"
+      ],
+      [
+        "de5b10a5ac9d33d4"
+      ],
+      [
+        "d7622297fb04e81f"
+      ],
+      [
+        "c73b6c786dbf3a47"
+      ],
+      [
+        "81490e7666221ff4"
+      ]
+    ]
+  },
+  {
+    "id": "ba4bfb65e8d9d957",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "Get Mode",
+    "property": "payload.mode",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "CW",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "SSB",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "USB",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "LSB",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "RTTY",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "FM",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 6,
+    "x": 4320,
+    "y": 320,
+    "wires": [
+      [
+        "1c3ab9f47658b3eb"
+      ],
+      [
+        "1c8b4345f764571b"
+      ],
+      [
+        "1c8b4345f764571b"
+      ],
+      [
+        "1c8b4345f764571b"
+      ],
+      [
+        "25c39c91c41519af"
+      ],
+      [
+        "f5f512454cd1849d"
+      ]
+    ]
+  },
+  {
+    "id": "12aaa60adbe53aa4",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set 160M Purple Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#800080",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "160M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "160M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4060,
+    "y": 160,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "13d5c886dc925ca0",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set 80M Green Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#008000",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "80M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "80M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4060,
+    "y": 200,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "425279b6d14c3da6",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set 40M Blue Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#0000FF",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "40M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "40M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4050,
+    "y": 240,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "df3e87bc737f56b9",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set 20M Red Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#FF0000",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "20M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "20M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4050,
+    "y": 280,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "3443249ce4903268",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set 15M Yellow Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#FFFF00",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "15M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "15M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4060,
+    "y": 320,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "de5b10a5ac9d33d4",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set 10M Orange Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#FF8C00",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "10M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "10M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4060,
+    "y": 360,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "d7622297fb04e81f",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set 6m White Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#FFFFFF",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "6M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "6M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4050,
+    "y": 400,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "c73b6c786dbf3a47",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set 2M Lime Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#00FF00",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.band",
+        "pt": "msg",
+        "to": "2M",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "2M",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4050,
+    "y": 440,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "81490e7666221ff4",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Set Else Black Band Layer",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.iconColor",
+        "pt": "msg",
+        "to": "#000000",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload.layer",
+        "pt": "msg",
+        "to": "Other",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4060,
+    "y": 480,
+    "wires": [
+      [
+        "ba4bfb65e8d9d957"
+      ]
+    ]
+  },
+  {
+    "id": "1c3ab9f47658b3eb",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Label CW",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "CW",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4520,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "1c8b4345f764571b",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Label SSB",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "SSB",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4530,
+    "y": 320,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "25c39c91c41519af",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Label RTTY",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "RTTY",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4530,
+    "y": 360,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f5f512454cd1849d",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Label FM",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.mode",
+        "pt": "msg",
+        "to": "FM",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 4520,
+    "y": 400,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8b9096cac8bf440d",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "QSO?",
+    "property": "qsotype",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "qso",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 2290,
+    "y": 840,
+    "wires": [
+      [
+        "984d66d9e9e78171"
+      ]
+    ]
+  },
+  {
+    "id": "1e5bda5f5c322537",
+    "type": "switch",
+    "z": "bedd4acdc0e27dab",
+    "name": "QSO?",
+    "property": "qsotype",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "qso",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 2250,
+    "y": 340,
+    "wires": [
+      [
+        "dfec16afaa4f638b"
+      ]
+    ]
+  },
+  {
+    "id": "984d66d9e9e78171",
+    "type": "function",
+    "z": "bedd4acdc0e27dab",
+    "name": "Distance DB Prep",
+    "func": "let distance = global.get('distance_measurement');\n\nif (distance == \"miles\")\n{\n    msg.payload.distance = msg.payload.distance_miles;\n}\n\nif (distance == \"km\")\n{\n    msg.payload.distance = msg.payload.distance_km;\n}\n\nif (msg.payload.distance == null)\n{\n    msg.payload.distance = 0;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2510,
+    "y": 820,
+    "wires": [
+      [
+        "1bf49b1ee0e4bb6d"
+      ]
+    ]
+  },
+  {
+    "id": "dfec16afaa4f638b",
+    "type": "function",
+    "z": "bedd4acdc0e27dab",
+    "name": "Distance DB Prep",
+    "func": "let distance = global.get('distance_measurement');\n\nif (distance == \"miles\")\n{\n    msg.payload.distance = msg.payload.distance_miles;\n}\n\nif (distance == \"km\")\n{\n    msg.payload.distance = msg.payload.distance_km;\n}\n\nif (msg.payload.distance == null)\n{\n    msg.payload.distance = 0;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2470,
+    "y": 360,
+    "wires": [
+      [
+        "6ddd40d0ad448153"
+      ]
+    ]
+  },
+  {
+    "id": "f8de5ff40046db44",
+    "type": "change",
+    "z": "bedd4acdc0e27dab",
+    "name": "Original Payload Copy",
+    "rules": [
+      {
+        "t": "move",
+        "p": "payload.lookupinfo",
+        "pt": "msg",
+        "to": "original",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload.call",
+        "pt": "msg",
+        "to": "original.call[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 440,
+    "y": 480,
+    "wires": [
+      [
+        "4982fd45c8dc3e9b"
+      ]
+    ]
+  },
+  {
+    "id": "d85d8e2af7ff9df8",
+    "type": "comment",
+    "z": "bedd4acdc0e27dab",
+    "name": "To do",
+    "info": "If contact is not found in hamqth or you not using a lookup table, \n\nTake a look at the prefix and map country capital to put it on the map.  \n\n",
+    "x": 600,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "1cbf491f09f5b57e",
+    "type": "link out",
+    "z": "bedd4acdc0e27dab",
+    "name": "QRZ Error OUT",
+    "mode": "link",
+    "links": [
+      "2f0871ab61146734"
+    ],
+    "x": 1735,
+    "y": 440,
+    "wires": []
+  },
+  {
+    "id": "2f0871ab61146734",
+    "type": "link in",
+    "z": "bedd4acdc0e27dab",
+    "name": "From DB Call IN",
+    "links": [
+      "1cbf491f09f5b57e",
+      "7f886053cdd16a70"
+    ],
+    "x": 3305,
+    "y": 320,
+    "wires": [
+      [
+        "3762f0280985ea10"
+      ]
+    ]
+  },
+  {
+    "id": "7f886053cdd16a70",
+    "type": "link out",
+    "z": "bedd4acdc0e27dab",
+    "name": "HamQTH DB Error OUT",
+    "mode": "link",
+    "links": [
+      "2f0871ab61146734"
+    ],
+    "x": 1785,
+    "y": 960,
+    "wires": []
+  }
+]

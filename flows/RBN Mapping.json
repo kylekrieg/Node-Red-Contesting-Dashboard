@@ -1,0 +1,1660 @@
+[
+  {
+    "id": "bd8a446b999750f9",
+    "type": "tab",
+    "label": "RBN Mapping",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "1f45eb9a.6f2614",
+    "type": "tcp request",
+    "z": "bd8a446b999750f9",
+    "name": "NO DUPS VE7CC",
+    "server": "dxc.ve7cc.net",
+    "port": "23",
+    "out": "sit",
+    "ret": "buffer",
+    "splitc": " ",
+    "x": 850,
+    "y": 320,
+    "wires": [
+      [
+        "92740895.fefa38"
+      ]
+    ]
+  },
+  {
+    "id": "c33632d.535ced",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Send Call",
+    "func": "let call = global.get('skimmercall')\nmsg.payload = call+'\\r\\n'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 480,
+    "y": 360,
+    "wires": [
+      [
+        "1f45eb9a.6f2614"
+      ]
+    ]
+  },
+  {
+    "id": "92740895.fefa38",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "UTF8",
+    "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 1030,
+    "y": 320,
+    "wires": [
+      [
+        "dca4380d.f27d08",
+        "faa25645f7481b44"
+      ]
+    ]
+  },
+  {
+    "id": "bdd14b96.c32268",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Disconnect",
+    "func": "msg.payload = 'bye\\r\\n'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 590,
+    "y": 280,
+    "wires": [
+      [
+        "1f45eb9a.6f2614"
+      ]
+    ]
+  },
+  {
+    "id": "dca4380d.f27d08",
+    "type": "switch",
+    "z": "bd8a446b999750f9",
+    "name": "DX de",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "cont",
+        "v": "BEACON",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "NCDXF",
+        "vt": "str"
+      },
+      {
+        "t": "regex",
+        "v": "DX de",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "nempty"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "outputs": 4,
+    "x": 1170,
+    "y": 320,
+    "wires": [
+      [
+        "3bbc288a.102268"
+      ],
+      [
+        "3bbc288a.102268"
+      ],
+      [
+        "007dc6753e62a4e5"
+      ],
+      [
+        "c7e59d9b.a362d"
+      ]
+    ]
+  },
+  {
+    "id": "a7b1f6ab.793a98",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "CW Skim Raw Out",
+    "info": "",
+    "x": 1690,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "153c9aaf.be2785",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "w3lpl.net:7373 - With Dups",
+    "info": "",
+    "x": 870,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "d6c40087.76579",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Send Call",
+    "func": "let call = global.get('skimmercall')\nmsg.payload = call+'\\r\\n'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 480,
+    "y": 320,
+    "wires": [
+      [
+        "dc943c3e.fcfb7"
+      ]
+    ]
+  },
+  {
+    "id": "dc943c3e.fcfb7",
+    "type": "delay",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "outputs": 1,
+    "x": 620,
+    "y": 320,
+    "wires": [
+      [
+        "1f45eb9a.6f2614"
+      ]
+    ]
+  },
+  {
+    "id": "b699b75c.199d28",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "dxc.nc7j.com:23 - Skimmer Only",
+    "info": "",
+    "x": 890,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "ea898f38.00b13",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "dxc.ve7cc.net:23 - Skimmer no Dups",
+    "info": "",
+    "x": 900,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "a8c5ae34.4c595",
+    "type": "inject",
+    "z": "bd8a446b999750f9",
+    "name": "KA Every 5 Mins",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 280,
+    "y": 240,
+    "wires": [
+      [
+        "cd14107d.014f9"
+      ]
+    ]
+  },
+  {
+    "id": "cd14107d.014f9",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "'\\r\\n' Inject",
+    "func": "msg.payload = '\\r\\n'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 600,
+    "y": 240,
+    "wires": [
+      [
+        "1f45eb9a.6f2614"
+      ]
+    ]
+  },
+  {
+    "id": "64a3cfee.f2795",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "No Dups Connect RBN",
+    "group": "089f422fb01043ec",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Connect Skimmer NO Dupes",
+    "tooltip": "Connect to Cluster",
+    "color": "",
+    "bgcolor": "Green",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 290,
+    "y": 320,
+    "wires": [
+      [
+        "c33632d.535ced",
+        "d6c40087.76579"
+      ]
+    ]
+  },
+  {
+    "id": "c7e59d9b.a362d",
+    "type": "ui_text",
+    "z": "bd8a446b999750f9",
+    "group": "089f422fb01043ec",
+    "order": 4,
+    "width": 12,
+    "height": 3,
+    "name": "Skimmer Cluster No Dupe Output",
+    "label": "No Dups Output",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1480,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "4e828cc3.012de4",
+    "type": "ui_table",
+    "z": "bd8a446b999750f9",
+    "group": "089f422fb01043ec",
+    "name": "CW Skimmer Spots with No Dupes",
+    "order": 1,
+    "width": 12,
+    "height": 6,
+    "columns": [
+      {
+        "field": "freq",
+        "title": "Freq",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "call",
+        "title": "Call",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "comment",
+        "title": "Comment",
+        "width": "175",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "time",
+        "title": "Time",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      }
+    ],
+    "outputs": 1,
+    "cts": true,
+    "x": 1900,
+    "y": 240,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "3bbc288a.102268",
+    "type": "debug",
+    "z": "bd8a446b999750f9",
+    "name": "Contains BEACON",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1350,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "2ecf905e890b9caf",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Table Format",
+    "func": "let spot = msg.payload\n\nlet freq = spot.freq;\nlet call = spot.call;\nlet comment = spot.comment;\nlet time = spot.time;\n\n\nreturn {payload:{\n    command:\"addData\",\n    arguments:[\n        {\n            freq:freq,call:call,comment:comment,time:time\n        },\n        true\n    ],\n    returnPromise:true\n    }\n};",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1570,
+    "y": 300,
+    "wires": [
+      [
+        "4e828cc3.012de4"
+      ]
+    ]
+  },
+  {
+    "id": "007dc6753e62a4e5",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Format Spot",
+    "func": "let spot = msg.payload\nlet regex1 = /:/gm;\nlet regex2 = /\\-.*$/gm;\nlet regex3 = /\\/.*$/gm;\n\nlet de1 = spot.toString().substr(6,10);\nlet de2 = de1.trimRight();\nlet de3 = de2.replace(regex2,'');\nlet de4 = de3.replace(regex1,'');\nlet de = de4.replace(regex3,'');\nlet freq = spot.toString().substr(17,9).trimRight();\n//let freq = freqx.trimRight();\nlet call = spot.toString().substr(26,8).trimRight();\n//let call = callx.trimRight();\nlet comment = spot.toString().substr(39,25);\nlet time = spot.toString().substr(70,5);\nlet calllength = call.length;\nlet type = \"spot\";\n\nreturn {payload : {de:de,type:type,freq:freq,call:call,comment:comment,time:time,calllength:calllength}};\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1370,
+    "y": 300,
+    "wires": [
+      [
+        "2ecf905e890b9caf",
+        "768dc6ddbf584637",
+        "8b67a949f2e70ade"
+      ]
+    ]
+  },
+  {
+    "id": "faa25645f7481b44",
+    "type": "debug",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1270,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "768dc6ddbf584637",
+    "type": "debug",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1710,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "828d6cbb9bd8790b",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "Disconnect RBN",
+    "group": "089f422fb01043ec",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Disconnect Skimmer",
+    "tooltip": "Connect to Cluster",
+    "color": "",
+    "bgcolor": "Red",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 280,
+    "y": 280,
+    "wires": [
+      [
+        "bdd14b96.c32268"
+      ]
+    ]
+  },
+  {
+    "id": "7c9fbe89fc227b77",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "Process Flow",
+    "info": "Spot comes into the flow via telnet\n\nSpot is broken out via properties\n - DE station\n - Spot station\n - Freq\n - Comment\n - Time\n\nIf spot = contest callsign\n - Send DE station through XML to get lat & lon\n - Map DE station on map with color\n\nSpot is run through XML to get lat and lon\n\nIf spot staton is withing Geofence\n - Send DE station through XML to get lat and lon\n - Map DE station on map with color\n\n \n",
+    "x": 250,
+    "y": 20,
+    "wires": []
+  },
+  {
+    "id": "d5736e14014e7e71",
+    "type": "tcp request",
+    "z": "bd8a446b999750f9",
+    "name": "Wtih DUPS W3LPL",
+    "server": "w3lpl.net",
+    "port": "7373",
+    "out": "sit",
+    "ret": "buffer",
+    "splitc": " ",
+    "x": 810,
+    "y": 620,
+    "wires": [
+      [
+        "fa3c6d75a781222e"
+      ]
+    ]
+  },
+  {
+    "id": "dc4467b4a3e34448",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Send Call",
+    "func": "let call = global.get('skimmercall')\nmsg.payload = call+'\\r\\n'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 480,
+    "y": 660,
+    "wires": [
+      [
+        "d5736e14014e7e71"
+      ]
+    ]
+  },
+  {
+    "id": "fa3c6d75a781222e",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "UTF8",
+    "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 1010,
+    "y": 620,
+    "wires": [
+      [
+        "a94f1c72a896ec4f",
+        "02ff1171cdb9bf81"
+      ]
+    ]
+  },
+  {
+    "id": "44f33dc5166cd510",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Disconnect",
+    "func": "msg.payload = 'bye\\r\\n'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 590,
+    "y": 580,
+    "wires": [
+      [
+        "d5736e14014e7e71"
+      ]
+    ]
+  },
+  {
+    "id": "a94f1c72a896ec4f",
+    "type": "switch",
+    "z": "bd8a446b999750f9",
+    "name": "DX de",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "cont",
+        "v": "BEACON",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "NCDXF",
+        "vt": "str"
+      },
+      {
+        "t": "regex",
+        "v": "DX de",
+        "vt": "str",
+        "case": false
+      },
+      {
+        "t": "nempty"
+      }
+    ],
+    "checkall": "false",
+    "repair": false,
+    "outputs": 4,
+    "x": 1170,
+    "y": 620,
+    "wires": [
+      [
+        "42ebd981310e69f8"
+      ],
+      [
+        "42ebd981310e69f8"
+      ],
+      [
+        "2c10ebb5203d3319"
+      ],
+      [
+        "4b7a2c2227febc65"
+      ]
+    ]
+  },
+  {
+    "id": "b053a17c956fab5f",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "w3lpl.net:7373 - With Dups",
+    "info": "",
+    "x": 870,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "916b557836ad4d49",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Send Call",
+    "func": "let call = global.get('skimmercall')\nmsg.payload = call+'\\r\\n'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 480,
+    "y": 620,
+    "wires": [
+      [
+        "dfd1245aaeb60337"
+      ]
+    ]
+  },
+  {
+    "id": "dfd1245aaeb60337",
+    "type": "delay",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "outputs": 1,
+    "x": 620,
+    "y": 620,
+    "wires": [
+      [
+        "d5736e14014e7e71"
+      ]
+    ]
+  },
+  {
+    "id": "c99fde1fde164b97",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "dxc.nc7j.com:23 - Skimmer Only",
+    "info": "",
+    "x": 890,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "47bda6f7f914d0ac",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "dxc.ve7cc.net:23 - Skimmer no Dups",
+    "info": "",
+    "x": 900,
+    "y": 560,
+    "wires": []
+  },
+  {
+    "id": "2515cd17bea570a0",
+    "type": "inject",
+    "z": "bd8a446b999750f9",
+    "name": "KA Every 5 Mins",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 280,
+    "y": 540,
+    "wires": [
+      [
+        "a60d412613a646a7"
+      ]
+    ]
+  },
+  {
+    "id": "a60d412613a646a7",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "'\\r\\n' Inject",
+    "func": "msg.payload = '\\r\\n'\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 600,
+    "y": 540,
+    "wires": [
+      [
+        "d5736e14014e7e71"
+      ]
+    ]
+  },
+  {
+    "id": "47388dcfb09b5146",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "With Dups Connect RBN",
+    "group": "b5c190b1c6ec4907",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Connect Skimmer With Dupes",
+    "tooltip": "Connect to Cluster",
+    "color": "",
+    "bgcolor": "Green",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 190,
+    "y": 660,
+    "wires": [
+      [
+        "dc4467b4a3e34448",
+        "916b557836ad4d49"
+      ]
+    ]
+  },
+  {
+    "id": "4b7a2c2227febc65",
+    "type": "ui_text",
+    "z": "bd8a446b999750f9",
+    "group": "b5c190b1c6ec4907",
+    "order": 4,
+    "width": 12,
+    "height": 3,
+    "name": "Skimmer Cluster Dupe Output",
+    "label": "Dups Output",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1490,
+    "y": 860,
+    "wires": []
+  },
+  {
+    "id": "c3bc961d0c04b8a5",
+    "type": "ui_table",
+    "z": "bd8a446b999750f9",
+    "group": "b5c190b1c6ec4907",
+    "name": "CW Skimmer Spots with Dupes",
+    "order": 1,
+    "width": 12,
+    "height": 6,
+    "columns": [
+      {
+        "field": "freq",
+        "title": "Freq",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "call",
+        "title": "Call",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "comment",
+        "title": "Comment",
+        "width": "175",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "time",
+        "title": "Time",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      }
+    ],
+    "outputs": 1,
+    "cts": true,
+    "x": 2010,
+    "y": 560,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "42ebd981310e69f8",
+    "type": "debug",
+    "z": "bd8a446b999750f9",
+    "name": "Contains BEACON",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1410,
+    "y": 560,
+    "wires": []
+  },
+  {
+    "id": "370c72e23c2e0186",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Table Format",
+    "func": "let freq = msg.payload.freq;\nlet call = msg.payload.call;\nlet comment = msg.payload.comment;\nlet time = msg.payload.time;\n\n\nreturn {payload:{\n    command:\"addData\",\n    arguments:[\n        {\n            freq:freq,call:call,comment:comment,time:time\n        },\n        true\n    ],\n    returnPromise:true\n    }\n};",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 600,
+    "wires": [
+      [
+        "c3bc961d0c04b8a5",
+        "3c9f5ebc0b376e95"
+      ]
+    ]
+  },
+  {
+    "id": "2c10ebb5203d3319",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Format Spot",
+    "func": "let spot = msg.payload\nlet regex1 = /:/gm;\nlet regex2 = /\\-.*$/gm;\nlet regex3 = /\\/.*$/gm;\n\nlet de1 = spot.toString().substr(6,10);\nlet de2 = de1.trimRight();\nlet de3 = de2.replace(regex2,'');\nlet de4 = de3.replace(regex1,'');\nlet de = de4.replace(regex3,'');\nlet freq = spot.toString().substr(17,9).trimRight();\n//let freq = freqx.trimRight();\nlet call = spot.toString().substr(26,8).trimRight();\n//let call = callx.trimRight();\nlet comment = spot.toString().substr(39,25);\nlet time = spot.toString().substr(70,5);\nlet calllength = call.length;\nlet type = \"spot\";\n\nreturn {payload : {de:de,type:type,freq:freq,call:call,comment:comment,time:time,calllength:calllength}};\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1450,
+    "y": 600,
+    "wires": [
+      [
+        "370c72e23c2e0186",
+        "d9d2281122964125",
+        "de8b711aa20ad228"
+      ]
+    ]
+  },
+  {
+    "id": "02ff1171cdb9bf81",
+    "type": "debug",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1190,
+    "y": 560,
+    "wires": []
+  },
+  {
+    "id": "d9d2281122964125",
+    "type": "debug",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1730,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "e16dd817858e8974",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "Disconnect RBN",
+    "group": "b5c190b1c6ec4907",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Disconnect Skimmer",
+    "tooltip": "Connect to Cluster",
+    "color": "",
+    "bgcolor": "Red",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 280,
+    "y": 580,
+    "wires": [
+      [
+        "44f33dc5166cd510"
+      ]
+    ]
+  },
+  {
+    "id": "8b67a949f2e70ade",
+    "type": "link out",
+    "z": "bd8a446b999750f9",
+    "name": "RBN Spots OUT",
+    "mode": "link",
+    "links": [
+      "62e83a7590098e1b"
+    ],
+    "x": 1555,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "e95c6faa.ab2e1",
+    "type": "http request",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "method": "GET",
+    "ret": "txt",
+    "url": "https://query.yahooapis.com/v1/public/yql?q={{{query}}}&format=json",
+    "tls": "",
+    "x": 570,
+    "y": 1280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "637d3c55.eb3084",
+    "type": "inject",
+    "z": "bd8a446b999750f9",
+    "name": "query parameter",
+    "props": [
+      {
+        "p": "payload",
+        "v": "select astronomy.sunset from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"maui, hi\")",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "v": "",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "topic": "",
+    "payload": "select astronomy.sunset from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"maui, hi\")",
+    "payloadType": "str",
+    "x": 200,
+    "y": 1280,
+    "wires": [
+      [
+        "b001d489.d8f818"
+      ]
+    ]
+  },
+  {
+    "id": "b001d489.d8f818",
+    "type": "change",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "query",
+        "pt": "msg",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 380,
+    "y": 1280,
+    "wires": [
+      [
+        "e95c6faa.ab2e1"
+      ]
+    ]
+  },
+  {
+    "id": "868dd09f205ab8ef",
+    "type": "subflow:bedd4acdc0e27dab",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "x": 2120,
+    "y": 760,
+    "wires": [
+      [],
+      [
+        "067c389c641a7d44",
+        "1397296e012cd980"
+      ]
+    ]
+  },
+  {
+    "id": "a74f6cb9b8629f3e",
+    "type": "http request",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://retrieve.pskreporter.info/query?senderCallsign={{payload.contestcallsign}}",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 370,
+    "y": 1220,
+    "wires": [
+      [
+        "929f5044bccb8df7"
+      ]
+    ]
+  },
+  {
+    "id": "a5070f7cb70d485a",
+    "type": "inject",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "props": [
+      {
+        "p": "payload.contestcallsign",
+        "v": "W2ZMZ",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 180,
+    "y": 1220,
+    "wires": [
+      [
+        "a74f6cb9b8629f3e"
+      ]
+    ]
+  },
+  {
+    "id": "9fc29b1d7f8667e6",
+    "type": "debug",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 690,
+    "y": 1220,
+    "wires": []
+  },
+  {
+    "id": "929f5044bccb8df7",
+    "type": "xml",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 530,
+    "y": 1220,
+    "wires": [
+      [
+        "9fc29b1d7f8667e6"
+      ]
+    ]
+  },
+  {
+    "id": "de8b711aa20ad228",
+    "type": "switch",
+    "z": "bd8a446b999750f9",
+    "name": "Contest Callsign Check",
+    "property": "payload.call",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "contestcallsign",
+        "vt": "global"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 1650,
+    "y": 760,
+    "wires": [
+      [
+        "e4d94c370273fe6e",
+        "64b178d24983c797"
+      ]
+    ]
+  },
+  {
+    "id": "067c389c641a7d44",
+    "type": "ui_worldmap",
+    "z": "bd8a446b999750f9",
+    "group": "a55f6d343a61c86b",
+    "order": 1,
+    "width": 24,
+    "height": 13,
+    "name": "Contest Call RBN Spots Map",
+    "lat": "",
+    "lon": "",
+    "zoom": "",
+    "layer": "OSMG",
+    "cluster": "",
+    "maxage": "",
+    "usermenu": "show",
+    "layers": "show",
+    "panit": "false",
+    "panlock": "false",
+    "zoomlock": "false",
+    "hiderightclick": "true",
+    "coords": "gth",
+    "showgrid": "false",
+    "allowFileDrop": "false",
+    "path": "/rbnspots",
+    "overlist": "DR,CO,RA,DN,HM",
+    "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS,SW",
+    "mapname": "",
+    "mapurl": "",
+    "mapopt": "",
+    "mapwms": false,
+    "x": 2420,
+    "y": 760,
+    "wires": []
+  },
+  {
+    "id": "3c9f5ebc0b376e95",
+    "type": "ui_table",
+    "z": "bd8a446b999750f9",
+    "group": "ebbb538ba5d86639",
+    "name": "Skimmer Spots with Dupes RBN Dashboard",
+    "order": 1,
+    "width": 10,
+    "height": 13,
+    "columns": [
+      {
+        "field": "freq",
+        "title": "Freq",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "call",
+        "title": "Call",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "comment",
+        "title": "Comment",
+        "width": "175",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "time",
+        "title": "Time",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      }
+    ],
+    "outputs": 1,
+    "cts": true,
+    "x": 2050,
+    "y": 600,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e4d94c370273fe6e",
+    "type": "function",
+    "z": "bd8a446b999750f9",
+    "name": "Table Format",
+    "func": "\nlet freq = msg.payload.freq;\nlet call = msg.payload.call;\nlet comment = msg.payload.comment;\nlet time = msg.payload.time;\nlet de = msg.payload.de;\n\n\nreturn {payload:{\n    command:\"addData\",\n    arguments:[\n        {\n            de:de,freq:freq,call:call,comment:comment,time:time\n        },\n        true\n    ],\n    returnPromise:true\n    }\n};",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1970,
+    "y": 700,
+    "wires": [
+      [
+        "0ac54405c9b0dc1d"
+      ]
+    ]
+  },
+  {
+    "id": "0ac54405c9b0dc1d",
+    "type": "ui_table",
+    "z": "bd8a446b999750f9",
+    "group": "4f4191b752633a96",
+    "name": "Skimmer Spots with Contest Call",
+    "order": 1,
+    "width": 10,
+    "height": 13,
+    "columns": [
+      {
+        "field": "de",
+        "title": "DE",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "freq",
+        "title": "Freq",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "call",
+        "title": "Call",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "comment",
+        "title": "Comment",
+        "width": "175",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      },
+      {
+        "field": "time",
+        "title": "Time",
+        "width": "",
+        "align": "left",
+        "formatter": "plaintext",
+        "formatterParams": {
+          "target": "_blank"
+        }
+      }
+    ],
+    "outputs": 1,
+    "cts": true,
+    "x": 2240,
+    "y": 660,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f177b983ed87b46b",
+    "type": "inject",
+    "z": "bd8a446b999750f9",
+    "name": "Inject Legend",
+    "props": [
+      {
+        "p": "payload.command",
+        "v": "{ \"legend\": \"<b>Band Pin Color</b></br> <i style=\\\"background: #00FF00\\\"></i> 2M<br> <i style=\\\"background: #FFFFFF\\\"></i> 6M<br> <i style=\\\"background: #FF8C00\\\"></i> 10M<br> <i style=\\\"background: #FFFF00\\\"></i> 15M<br> <i style=\\\"background: #FF0000\\\"></i> 20M<br> <i style=\\\"background: #0000FF\\\"></i> 40M<br> <i style=\\\"background: #008000\\\"></i> 80M<br> <i style=\\\"background: #800080\\\"></i> 160M<br> <i style=\\\"background: #000000\\\"></i> Else<br> \" }",
+        "vt": "json"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "",
+    "x": 2140,
+    "y": 820,
+    "wires": [
+      [
+        "067c389c641a7d44"
+      ]
+    ]
+  },
+  {
+    "id": "bc3287083b12a7ca",
+    "type": "comment",
+    "z": "bd8a446b999750f9",
+    "name": "Future PSK Reporter and Geofencing ",
+    "info": "",
+    "x": 270,
+    "y": 1160,
+    "wires": []
+  },
+  {
+    "id": "ed01ad0d611af2e8",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "group": "a55f6d343a61c86b",
+    "order": 2,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear 160M",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "{\"command\": {\"clear\":\"160M\"}}",
+    "payloadType": "json",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 2150,
+    "y": 860,
+    "wires": [
+      [
+        "067c389c641a7d44"
+      ]
+    ]
+  },
+  {
+    "id": "21b2378ddb32e8d0",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "group": "a55f6d343a61c86b",
+    "order": 3,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear 80M",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "{\"command\": {\"clear\":\"80M\"}}",
+    "payloadType": "json",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 2150,
+    "y": 900,
+    "wires": [
+      [
+        "067c389c641a7d44"
+      ]
+    ]
+  },
+  {
+    "id": "4d31d4a9c53afe4f",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "group": "a55f6d343a61c86b",
+    "order": 4,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear 40M",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "{\"command\": {\"clear\":\"40M\"}}",
+    "payloadType": "json",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 2150,
+    "y": 940,
+    "wires": [
+      [
+        "067c389c641a7d44"
+      ]
+    ]
+  },
+  {
+    "id": "a6b5ad646d7025a4",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "group": "a55f6d343a61c86b",
+    "order": 5,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear 20M",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "{\"command\": {\"clear\":\"20M\"}}",
+    "payloadType": "json",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 2150,
+    "y": 980,
+    "wires": [
+      [
+        "067c389c641a7d44"
+      ]
+    ]
+  },
+  {
+    "id": "5e6d60773e75cb3c",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "group": "a55f6d343a61c86b",
+    "order": 6,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear 15M",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "{\"command\": {\"clear\":\"15M\"}}",
+    "payloadType": "json",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 2150,
+    "y": 1020,
+    "wires": [
+      [
+        "067c389c641a7d44"
+      ]
+    ]
+  },
+  {
+    "id": "ca4c1b984c05e419",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "group": "a55f6d343a61c86b",
+    "order": 7,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear 10M",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "{\"command\": {\"clear\":\"10M\"}}",
+    "payloadType": "json",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 2150,
+    "y": 1060,
+    "wires": [
+      [
+        "067c389c641a7d44"
+      ]
+    ]
+  },
+  {
+    "id": "1397296e012cd980",
+    "type": "debug",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2350,
+    "y": 720,
+    "wires": []
+  },
+  {
+    "id": "ccd8d5999e7fc33e",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "With Dups Connect RBN",
+    "group": "ebbb538ba5d86639",
+    "order": 2,
+    "width": 5,
+    "height": 1,
+    "passthru": false,
+    "label": "Connect Skimmer Dupes",
+    "tooltip": "Connect to Cluster",
+    "color": "",
+    "bgcolor": "Green",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 190,
+    "y": 700,
+    "wires": [
+      [
+        "916b557836ad4d49",
+        "dc4467b4a3e34448"
+      ]
+    ]
+  },
+  {
+    "id": "a8f3929e04ebdd16",
+    "type": "ui_button",
+    "z": "bd8a446b999750f9",
+    "name": "Disconnect RBN",
+    "group": "ebbb538ba5d86639",
+    "order": 3,
+    "width": 5,
+    "height": 1,
+    "passthru": false,
+    "label": "Disconnect Skimmer",
+    "tooltip": "Connect to Cluster",
+    "color": "",
+    "bgcolor": "Red",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 280,
+    "y": 620,
+    "wires": [
+      [
+        "44f33dc5166cd510"
+      ]
+    ]
+  },
+  {
+    "id": "64b178d24983c797",
+    "type": "change",
+    "z": "bd8a446b999750f9",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "qsotype",
+        "pt": "msg",
+        "to": "spot",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1900,
+    "y": 760,
+    "wires": [
+      [
+        "868dd09f205ab8ef"
+      ]
+    ]
+  }
+]

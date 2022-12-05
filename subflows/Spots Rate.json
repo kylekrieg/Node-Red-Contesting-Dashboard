@@ -1,0 +1,192 @@
+[
+  {
+    "id": "74c92a5f32f17459",
+    "type": "subflow",
+    "name": "Spots Rate",
+    "info": "",
+    "category": "",
+    "in": [
+      {
+        "x": 60,
+        "y": 120,
+        "wires": [
+          {
+            "id": "3fb3f1760ba82348"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 1020,
+        "y": 60,
+        "wires": [
+          {
+            "id": "809e27880c7a6898",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 1020,
+        "y": 120,
+        "wires": [
+          {
+            "id": "6bb4d0ed1ea29d84",
+            "port": 0
+          }
+        ]
+      },
+      {
+        "x": 1020,
+        "y": 180,
+        "wires": [
+          {
+            "id": "a808ff72796c1b03",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [],
+    "meta": {},
+    "color": "#DDAA99"
+  },
+  {
+    "id": "0f73adb4da97836e",
+    "type": "switch",
+    "z": "74c92a5f32f17459",
+    "name": "Spot Rate",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "lte",
+        "v": "60",
+        "vt": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "61",
+        "vt": "num",
+        "v2": "119",
+        "v2t": "num"
+      },
+      {
+        "t": "gte",
+        "v": "120",
+        "vt": "num"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 540,
+    "y": 120,
+    "wires": [
+      [
+        "809e27880c7a6898"
+      ],
+      [
+        "6bb4d0ed1ea29d84"
+      ],
+      [
+        "a808ff72796c1b03"
+      ]
+    ]
+  },
+  {
+    "id": "809e27880c7a6898",
+    "type": "change",
+    "z": "74c92a5f32f17459",
+    "name": "<= 60 Then Color Red",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FF0000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 840,
+    "y": 60,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6bb4d0ed1ea29d84",
+    "type": "change",
+    "z": "74c92a5f32f17459",
+    "name": "61 to 119 Then Color Yellow",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#FFFF00",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 820,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "a808ff72796c1b03",
+    "type": "change",
+    "z": "74c92a5f32f17459",
+    "name": ">= 120 Then Color Green",
+    "rules": [
+      {
+        "t": "set",
+        "p": "color",
+        "pt": "msg",
+        "to": "#008000",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 830,
+    "y": 180,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "3fb3f1760ba82348",
+    "type": "smooth",
+    "z": "74c92a5f32f17459",
+    "name": "",
+    "property": "payload",
+    "action": "mean",
+    "count": "5",
+    "round": "0",
+    "mult": "single",
+    "reduce": false,
+    "x": 320,
+    "y": 120,
+    "wires": [
+      [
+        "0f73adb4da97836e"
+      ]
+    ]
+  }
+]

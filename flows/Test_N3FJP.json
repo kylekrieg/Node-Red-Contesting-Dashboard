@@ -1,0 +1,653 @@
+[
+  {
+    "id": "8a7fcbcd28d37f15",
+    "type": "tab",
+    "label": "Test_N3FJP",
+    "disabled": true,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "e4eed7024d3622a5",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "UTF8",
+    "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1230,
+    "y": 400,
+    "wires": [
+      [
+        "30e1a46d12dc5f35"
+      ]
+    ]
+  },
+  {
+    "id": "1ebfe3ebc5bf8590",
+    "type": "debug",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload",
+    "statusType": "auto",
+    "x": 1490,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "202712a1bbc4f0f5",
+    "type": "tcp request",
+    "z": "8a7fcbcd28d37f15",
+    "name": "N3FJP TCP Connection",
+    "server": "10.25.0.30",
+    "port": "1100",
+    "out": "sit",
+    "ret": "string",
+    "splitc": " ",
+    "newline": "",
+    "trim": false,
+    "tls": "",
+    "x": 1030,
+    "y": 340,
+    "wires": [
+      [
+        "85c1dc7164266f2e"
+      ]
+    ]
+  },
+  {
+    "id": "cf6f7be54da33e10",
+    "type": "inject",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "25",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 330,
+    "y": 440,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "053d751488b839b5",
+    "type": "template",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "field": "n3fjp.udp.contact",
+    "fieldType": "global",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<contactinfo>\n    <app>N3FJP</app>\n    <contestname></contestname>\n    <contestnr></contestnr>\n    <timestamp>{{payload.ENTEREVENT.QSO_DATE}}_{{payload.ENTEREVENT.TIME_ON}}</timestamp>\n    <mycall>{{global.n3fjp.GETUSERSETTINGSRESPONSE.CALLSIGN}}</mycall>\n    <band>{{payload.ENTEREVENT.BAND}}</band>\n    <rxfreq>{{global.n3fjp.READBMFRESPONSE.FREQ}}</rxfreq>\n    <txfreq>{{global.n3fjp.READBMFRESPONSE.FREQ]}}}</txfreq>\n    <operator>{{flow.operatorcall}}</operator>\n    <mode>{{payload.ENTEREVENT.MODE}}</mode>\n    <call>{{payload.ENTEREVENT.CALL}}</call>\n    <countryprefix></countryprefix>\n    <wpxprefix>{{global.n3fjp.CALLTABEVENT.PFX}}</wpxprefix>\n    <stationprefix></stationprefix>\n    <continent>{{payload.ENTEREVENT.CONT}}</continent>\n    <snt></snt>\n    <sntnr></sntnr>\n    <rcv></rcv>\n    <rcvnr></rcvnr>\n    <gridsquare></gridsquare>\n    <exchangel></exchangel>\n    <section></section>\n    <comment></comment>\n    <qth></qth>\n    <name></name>\n    <power></power>\n    <misctext></misctext>\n    <zone></zone>\n    <prec></prec>\n    <ck></ck>\n    <ismultiplierl></ismultiplierl>\n    <ismultiplier2></ismultiplier2>\n    <ismultiplier3></ismultiplier3>\n    <points></points>\n    <radionr></radionr>\n    <run1run2></run1run2>\n    <RoverLocation></RoverLocation>\n    <RadioInterfaced></RadioInterfaced>\n    <NetworkedCompNr></NetworkedCompNr>\n    <IsOriginal></IsOriginal>\n    <NetBiosName></NetBiosName>\n    <IsRunQSO></IsRunQSO>\n    <StationName></StationName>\n    <ID></ID>\n    <IsClaimedQSO>TRUE</IsClaimedQSO>\n</contactinfo>\n",
+    "output": "str",
+    "x": 1860,
+    "y": 380,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "0db757f6483493e8",
+    "type": "switch",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Split for Dashboard Topics",
+    "property": "topic",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "GETUSERSETTINGSRESPONSE",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "READBMFRESPONSE",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "KEYDOWN",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "ENTEREVENT",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "QSORATERESPONSE",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "QSOCOUNTRESPONSE",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "CALLTABEVENT",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "LIST",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 8,
+    "x": 1570,
+    "y": 380,
+    "wires": [
+      [
+        "73660e63a8e4f9b5"
+      ],
+      [
+        "dc3e34ab165d368a"
+      ],
+      [
+        "0897917f366ec6b0"
+      ],
+      [
+        "053d751488b839b5"
+      ],
+      [
+        "30044284637aaab7"
+      ],
+      [
+        "2b0943ab47ad8ff7"
+      ],
+      [
+        "0e6f9029fd83c5ac"
+      ],
+      [
+        "e298e0630c633450"
+      ]
+    ],
+    "outputLabels": [
+      "",
+      "Radio",
+      "Macros",
+      "Contacts",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "5c3095bc3a4ea9de",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "CLEAR MACRO",
+    "func": "msg.payload;\nglobal.n3fjp.KEYDOWN=\"\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2300,
+    "y": 300,
+    "wires": [
+      [
+        "0820988fa43b8a4b",
+        "050a55975cb170be"
+      ]
+    ]
+  },
+  {
+    "id": "0820988fa43b8a4b",
+    "type": "link out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Radio_N3FJP",
+    "mode": "link",
+    "links": [
+      "6176c210be856fa7"
+    ],
+    "x": 2500,
+    "y": 300,
+    "wires": [],
+    "l": true
+  },
+  {
+    "id": "47245c8acbda8034",
+    "type": "link out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "N3FJP_ Contacts",
+    "mode": "link",
+    "links": [
+      "21fe16ca5cbfc06b"
+    ],
+    "x": 2470,
+    "y": 580,
+    "wires": [],
+    "l": true
+  },
+  {
+    "id": "050a55975cb170be",
+    "type": "debug",
+    "z": "8a7fcbcd28d37f15",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2520,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "171b5f61e95c8f53",
+    "type": "debug",
+    "z": "8a7fcbcd28d37f15",
+    "name": "debug 2",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2080,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "7f2aeaade7ae7f0d",
+    "type": "inject",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "<CMD><SETUPDATESTATE><VALUE>TRUE</VALUE></CMD>",
+    "payloadType": "str",
+    "x": 710,
+    "y": 420,
+    "wires": [
+      [
+        "ce908f1c75618192"
+      ]
+    ]
+  },
+  {
+    "id": "ce908f1c75618192",
+    "type": "tcp out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "host": "10.25.0.30",
+    "port": "1100",
+    "beserver": "client",
+    "base64": false,
+    "end": true,
+    "tls": "",
+    "x": 900,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "85c1dc7164266f2e",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Reformat all to XML",
+    "func": "var backup=msg.payload;\nmsg.payload=msg.payload.replace(\"<CMD>\",\"\");\nvar right_mark=msg.payload.search(\">\");\nmsg.topic=msg.payload.substring(1,msg.payload.search(\">\"));\nmsg.payload=msg.payload.replace(\"CMD\",msg.topic);\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1300,
+    "y": 340,
+    "wires": [
+      [
+        "e4eed7024d3622a5"
+      ]
+    ]
+  },
+  {
+    "id": "30e1a46d12dc5f35",
+    "type": "xml",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 1370,
+    "y": 400,
+    "wires": [
+      [
+        "0db757f6483493e8",
+        "1ebfe3ebc5bf8590"
+      ]
+    ]
+  },
+  {
+    "id": "0897917f366ec6b0",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Store Macro",
+    "func": "global.n3fjp.KEYDOWN=msg.payload.KEYDOWN[0];\nmsg.payload=\"<CMD><READBMF></CMD>\"\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1870,
+    "y": 340,
+    "wires": [
+      [
+        "62eb0aa317a6c1c8"
+      ]
+    ]
+  },
+  {
+    "id": "62eb0aa317a6c1c8",
+    "type": "tcp out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "CALL BMF",
+    "host": "10.25.0.30",
+    "port": "1100",
+    "beserver": "client",
+    "base64": false,
+    "end": false,
+    "tls": "",
+    "x": 2290,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "47c8c03f861b6051",
+    "type": "change",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "N3FJP",
+        "pt": "global",
+        "to": "\"\"",
+        "tot": "json"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1050,
+    "y": 200,
+    "wires": [
+      [
+        "202712a1bbc4f0f5"
+      ]
+    ]
+  },
+  {
+    "id": "dc3e34ab165d368a",
+    "type": "switch",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Operator Call",
+    "property": "GETUSERSETTINGSRESPONSE.OPERATOR",
+    "propertyType": "flow",
+    "rules": [
+      {
+        "t": "empty"
+      },
+      {
+        "t": "nempty"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1870,
+    "y": 300,
+    "wires": [
+      [
+        "d2bce0b816f6dfa9"
+      ],
+      [
+        "b9f582c9e21d35ee"
+      ]
+    ]
+  },
+  {
+    "id": "788e5b117a514c91",
+    "type": "tcp out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Call User Settings",
+    "host": "10.25.0.30",
+    "port": "1100",
+    "beserver": "client",
+    "base64": false,
+    "end": false,
+    "tls": "",
+    "x": 2310,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "d2bce0b816f6dfa9",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "CALL for Operator",
+    "func": "msg.payload=\"<CMD><GETUSERSETTINGS></CMD>\"\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 260,
+    "wires": [
+      [
+        "788e5b117a514c91"
+      ]
+    ]
+  },
+  {
+    "id": "73660e63a8e4f9b5",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Store User Info",
+    "func": "global.n3fjp.GETUSERSETTINGSRESPONSE.json=msg.payload.GETUSERSETTINGSRESPONSE[0];\nmsg.payload=\"<CMD><READBMF></CMD>\"\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1880,
+    "y": 220,
+    "wires": [
+      [
+        "de08a89678f68878"
+      ]
+    ]
+  },
+  {
+    "id": "de08a89678f68878",
+    "type": "tcp out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Call BMF",
+    "host": "10.25.0.30",
+    "port": "1100",
+    "beserver": "client",
+    "base64": false,
+    "end": false,
+    "tls": "",
+    "x": 2280,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "2b0943ab47ad8ff7",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "QSO Count",
+    "func": "global.n3fjp[msg.topic]=msg.payload[msg.topic][0];\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1890,
+    "y": 500,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e298e0630c633450",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Last Contact",
+    "func": "global.n3fjp.LIST=msg.payload.LIST[0];\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1890,
+    "y": 580,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "0e6f9029fd83c5ac",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Call Lookup (TAB)",
+    "func": "global.n3fjp.CALLTABEVENT=msg.payload.CALLTABEVENT[0];\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1910,
+    "y": 540,
+    "wires": [
+      [
+        "328d095147634613"
+      ]
+    ]
+  },
+  {
+    "id": "30044284637aaab7",
+    "type": "function",
+    "z": "8a7fcbcd28d37f15",
+    "name": "QSO Rate/Score",
+    "func": "global.n3fjp[msg.topic]=msg.payload[msg.topic][0];\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1890,
+    "y": 420,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "328d095147634613",
+    "type": "tcp out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Call BMF",
+    "host": "10.25.0.30",
+    "port": "1100",
+    "beserver": "client",
+    "base64": false,
+    "end": false,
+    "tls": "",
+    "x": 2280,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "b9f582c9e21d35ee",
+    "type": "template",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "field": "n3fjp.udp.radio",
+    "fieldType": "global",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RadioInfo>\n    <app>N3FJP</app>\n    <StationName></StationName>\n    <RadioNr></RadioNr>\n    <Freq>{{payload.ENTEREVENT.FREQ}}</Freq>\n    <TXFreq>{{payload.ENTEREVENT.FREQ}}</TXFreq>\n    <Mode>{{payload.ENTEREVENT.MODE}}</Mode>\n    <OpCall>{{payload.GETUSERSETTINGS.OPERATOR}}</OpCall>\n    <IsRunning></IsRunning>\n    <FocusEntry></FocusEntry>\n    <EntryWindowHwnd></EntryWindowHwnd>\n    <Antenna></Antenna>\n    <Rotors></Rotors>\n    <FocusRadioNr></FocusRadioNr>\n    <IsStereo></IsStereo>\n    <IsSplit></IsSplit>\n    <ActiveRadioNr></ActiveRadioNr>\n    <IsTransmitting></IsTransmitting>\n    <FunctionKeyCaption>{{global.n3fjp.KEYDOWN.KEYCODE[0]}}</FunctionKeyCaption>\n    <RadioName></RadioName>\n    <AuxAntSelected>-</AuxAntSelected>\n    <AuxAntSelectedName></AuxAntSelectedName>\n    <IsConnected>TRUE</IsConnected>\n</RadioInfo>",
+    "output": "str",
+    "x": 2060,
+    "y": 300,
+    "wires": [
+      [
+        "5c3095bc3a4ea9de"
+      ]
+    ]
+  },
+  {
+    "id": "f6dcf7276d984efc",
+    "type": "link out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "Score_N3FJP",
+    "mode": "link",
+    "links": [
+      "6176c210be856fa7",
+      "39b7ba7404fb4193"
+    ],
+    "x": 2500,
+    "y": 420,
+    "wires": [],
+    "l": true
+  },
+  {
+    "id": "43d361d9eba3f06e",
+    "type": "tcp out",
+    "z": "8a7fcbcd28d37f15",
+    "name": "",
+    "host": "${Connect_IP}",
+    "port": "12060",
+    "beserver": "client",
+    "base64": false,
+    "end": false,
+    "x": 1030,
+    "y": 500,
+    "wires": []
+  }
+]

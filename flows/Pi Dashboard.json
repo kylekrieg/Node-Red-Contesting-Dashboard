@@ -1,0 +1,985 @@
+[
+  {
+    "id": "db5600520bb7f279",
+    "type": "tab",
+    "label": "Pi Dashboard",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "dffc242.cc36fd8",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "d": true,
+    "command": "vcgencmd measure_temp",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "winHide": false,
+    "name": "RPi Temp.",
+    "x": 490,
+    "y": 320,
+    "wires": [
+      [
+        "b5ed9875.c4a018"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "82af5b64.ec0bb8",
+    "type": "inject",
+    "z": "db5600520bb7f279",
+    "name": "Every 5 secs",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 282.27777099609375,
+    "y": 320.4722194671631,
+    "wires": [
+      [
+        "dffc242.cc36fd8",
+        "9bdcdf74.974df",
+        "4f06a834.7ba218",
+        "cae8b4ca.06b218",
+        "ff3e660.2675e98"
+      ]
+    ]
+  },
+  {
+    "id": "b5ed9875.c4a018",
+    "type": "function",
+    "z": "db5600520bb7f279",
+    "name": "Set temp to String",
+    "func": "str = msg.payload\nmsg.payload = str.substring(5,9);\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 710,
+    "y": 320,
+    "wires": [
+      [
+        "f042fa28.8f2bf8"
+      ]
+    ]
+  },
+  {
+    "id": "5d727c3b.003534",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "command": "sudo reboot",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "name": "Reboot",
+    "x": 479.6667251586914,
+    "y": 603.666708946228,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "a7a4f275.ae976",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "command": "sudo shutdown -h now",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "name": "Shutdown",
+    "x": 488.94446563720703,
+    "y": 660.3611555099487,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "9bdcdf74.974df",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "command": "top -d 0.5 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4}'",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "name": "CPU Load",
+    "x": 490,
+    "y": 400,
+    "wires": [
+      [
+        "68c64778.cfee38"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "4f06a834.7ba218",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "command": "free | grep Mem | awk '{print 4096-($2/1024)}'",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "name": "Memory Used",
+    "x": 500.0000190734863,
+    "y": 464.22223567962646,
+    "wires": [
+      [
+        "9361ceb4.1735b"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "a4592fc6.2862c",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "command": "df -h",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "name": "Disk Usage",
+    "x": 487.66665267944336,
+    "y": 531.8889074325562,
+    "wires": [
+      [
+        "2af889a4.6ca3f6"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "2af889a4.6ca3f6",
+    "type": "function",
+    "z": "db5600520bb7f279",
+    "name": "Do Math",
+    "func": "var re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg.payload = str;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 680,
+    "y": 520,
+    "wires": [
+      [
+        "5f6a15ab.35686c"
+      ]
+    ]
+  },
+  {
+    "id": "54c76243.56c1ac",
+    "type": "inject",
+    "z": "db5600520bb7f279",
+    "name": "Every 1 min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 287.66665267944336,
+    "y": 531.8889074325562,
+    "wires": [
+      [
+        "a4592fc6.2862c"
+      ]
+    ]
+  },
+  {
+    "id": "50446066.86337",
+    "type": "inject",
+    "z": "db5600520bb7f279",
+    "name": "Every 1 min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 283.68601989746094,
+    "y": 719.2337446212769,
+    "wires": [
+      [
+        "b820cdbc.610bc"
+      ]
+    ]
+  },
+  {
+    "id": "b820cdbc.610bc",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "command": "hostname",
+    "addpay": false,
+    "append": "-I",
+    "useSpawn": "",
+    "timer": "",
+    "name": "Get Local IP",
+    "x": 488.24157333374023,
+    "y": 719.7337579727173,
+    "wires": [
+      [
+        "36680891.7950e8"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "9361ceb4.1735b",
+    "type": "smooth",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "property": "payload",
+    "action": "mean",
+    "count": "1",
+    "round": "1",
+    "mult": "single",
+    "reduce": false,
+    "x": 744.7778091430664,
+    "y": 453.66666316986084,
+    "wires": [
+      [
+        "2e791614.455c2a"
+      ]
+    ]
+  },
+  {
+    "id": "cae8b4ca.06b218",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "command": "cat /proc/net/dev | grep eth0 | awk '{print $3}'",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "name": "Received Packets",
+    "x": 514.7778091430664,
+    "y": 253.66666316986084,
+    "wires": [
+      [
+        "9fb38b04.0c5d98"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "ff3e660.2675e98",
+    "type": "exec",
+    "z": "db5600520bb7f279",
+    "command": "cat /proc/net/dev | grep eth0 | awk '{print $11}'",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "name": "Transmitted Packets",
+    "x": 524.7778091430664,
+    "y": 193.66666316986084,
+    "wires": [
+      [
+        "694a5b7b.825854"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "f5b11785.f1ed18",
+    "type": "ui_button",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "group": "dea9d7ac.0cefc8",
+    "order": 6,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "Reboot",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "topicType": "str",
+    "x": 279.4445037841797,
+    "y": 603.6667327880859,
+    "wires": [
+      [
+        "5d727c3b.003534"
+      ]
+    ]
+  },
+  {
+    "id": "c07dded1.bd445",
+    "type": "ui_button",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "group": "dea9d7ac.0cefc8",
+    "order": 7,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "Shutdown",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "red",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "topicType": "str",
+    "x": 269.05558013916016,
+    "y": 660.1389617919922,
+    "wires": [
+      [
+        "a7a4f275.ae976"
+      ]
+    ]
+  },
+  {
+    "id": "36680891.7950e8",
+    "type": "ui_text",
+    "z": "db5600520bb7f279",
+    "group": "dea9d7ac.0cefc8",
+    "order": 8,
+    "width": 6,
+    "height": 1,
+    "name": "",
+    "label": "IP Address",
+    "format": "{{value.substring(0, value.indexOf(\" \"))}}",
+    "layout": "col-center",
+    "x": 826.3334007263184,
+    "y": 704.5555734634399,
+    "wires": []
+  },
+  {
+    "id": "9fb38b04.0c5d98",
+    "type": "ui_text",
+    "z": "db5600520bb7f279",
+    "group": "8ca85278.65932",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "Received Packets",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 834.7778091430664,
+    "y": 253.66666316986084,
+    "wires": []
+  },
+  {
+    "id": "694a5b7b.825854",
+    "type": "ui_text",
+    "z": "db5600520bb7f279",
+    "group": "8ca85278.65932",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "name": "",
+    "label": "Transmitted Bytes",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 814.7778091430664,
+    "y": 193.66666316986084,
+    "wires": []
+  },
+  {
+    "id": "3d67dce5.112054",
+    "type": "ui_gauge",
+    "z": "db5600520bb7f279",
+    "name": "CPU Temp",
+    "group": "dea9d7ac.0cefc8",
+    "order": 1,
+    "width": 3,
+    "height": 3,
+    "gtype": "gage",
+    "title": "CPU Temperature",
+    "label": "F",
+    "format": "{{value}}",
+    "min": 0,
+    "max": "170",
+    "colors": [
+      "#00b500",
+      "#e6e600",
+      "#ca3838"
+    ],
+    "seg1": "125",
+    "seg2": "150",
+    "x": 1094.7778091430664,
+    "y": 173.66666316986084,
+    "wires": []
+  },
+  {
+    "id": "68c64778.cfee38",
+    "type": "ui_gauge",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "group": "dea9d7ac.0cefc8",
+    "order": 2,
+    "width": 3,
+    "height": 3,
+    "gtype": "gage",
+    "title": "CPU",
+    "label": "%",
+    "format": "{{value}}",
+    "min": 0,
+    "max": "100",
+    "colors": [
+      "#00b500",
+      "#e6e600",
+      "#ca3838"
+    ],
+    "seg1": "",
+    "seg2": "",
+    "x": 809.8888931274414,
+    "y": 387.77777767181396,
+    "wires": []
+  },
+  {
+    "id": "2e791614.455c2a",
+    "type": "ui_gauge",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "group": "dea9d7ac.0cefc8",
+    "order": 3,
+    "width": 3,
+    "height": 3,
+    "gtype": "gage",
+    "title": "Memory Used",
+    "label": "Mb",
+    "format": "{{value}}",
+    "min": "0",
+    "max": "4096",
+    "colors": [
+      "#00b500",
+      "#e6e600",
+      "#ca3838"
+    ],
+    "seg1": "3000",
+    "seg2": "3500",
+    "x": 984.7778091430664,
+    "y": 453.66666316986084,
+    "wires": []
+  },
+  {
+    "id": "5f6a15ab.35686c",
+    "type": "ui_gauge",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "group": "dea9d7ac.0cefc8",
+    "order": 4,
+    "width": 3,
+    "height": 3,
+    "gtype": "gage",
+    "title": "Disk Space",
+    "label": "%",
+    "format": "{{value}}",
+    "min": 0,
+    "max": "100",
+    "colors": [
+      "#00b500",
+      "#e6e600",
+      "#ca3838"
+    ],
+    "seg1": "",
+    "seg2": "",
+    "x": 870,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "cd3f0873.755ee8",
+    "type": "ui_chart",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "group": "dea9d7ac.0cefc8",
+    "order": 5,
+    "width": 6,
+    "height": 4,
+    "label": "CPU Temperature",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": "6",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "x": 1114.7778091430664,
+    "y": 233.66666316986084,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f042fa28.8f2bf8",
+    "type": "unit-converter",
+    "z": "db5600520bb7f279",
+    "category": "temperature",
+    "inputUnit": "C",
+    "outputUnit": "F",
+    "inputField": "payload",
+    "outputField": "payload",
+    "inputFieldType": "msg",
+    "outputFieldType": "msg",
+    "roundOutputField": true,
+    "outputFieldDecimals": "1",
+    "name": "",
+    "x": 920,
+    "y": 320,
+    "wires": [
+      [
+        "3d67dce5.112054",
+        "cd3f0873.755ee8"
+      ]
+    ]
+  },
+  {
+    "id": "4427987ff3a86c40",
+    "type": "inject",
+    "z": "db5600520bb7f279",
+    "name": "Tick 1hr",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "3600",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1340,
+    "y": 640,
+    "wires": [
+      [
+        "f5b492524e891569"
+      ]
+    ]
+  },
+  {
+    "id": "f5b492524e891569",
+    "type": "http request",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "http://www.hamqsl.com/solarxml.php",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 1510,
+    "y": 640,
+    "wires": [
+      [
+        "6ffebb50d8d236c3"
+      ]
+    ]
+  },
+  {
+    "id": "390148b044f3e251",
+    "type": "ui_template",
+    "z": "db5600520bb7f279",
+    "group": "4c7c4383a5f4d36f",
+    "name": "Solar Data",
+    "order": 1,
+    "width": 5,
+    "height": 15,
+    "format": "\n<style type='text/css'>\n\t.main\n\t\n\ttable {\n\t  width: 220px;\n\t  background:#000000;\n\t  border: 1px;\n\t  margin-top: 15px;\n\t  margin-bottom: 25px;\n\t}\n\tth {\n\t  font-family: \"Trebuchet MS\", Arial, Verdana;\n\t  font-size: 14px;\n\t  color: #FFFFFF;\n\t  padding: 1px;\n\t}\n\ttd {\n\t  border-bottom: 1px;\n\t  padding: 1px;\n\t  color: #F0EEEE;\n\t  text-align: center;\n\t  white-space:nowrap;\n\t}\n\t\n\ta.one:link {color:#ff0000;text-decoration:none;}\n\ta.one:visited {color:#0000ff;text-decoration:none;}\n\ta.one:hover {text-decoration:underline;}\n\n\t.lFont {font-size: 10px;}\n\t.nFont {font-size: 12px;}\n\t.bFont {font-size: 14px;}\n\t\n\t.green  {color: #14ED0D;}\n\t.yellow {color: #FEFE0B;}\n\t.red    {color: #E94D0A;}\n\t.white  {color: #F0EEEE;}\n\t\n\t/* change color of band conditions */\n\t.Poor {color: #E94D0A;}\n\t.Fair {color: #FEFE0B;}\n\t.Good {color: #14ED0D;}\n\t\n\t/* change color of geomagnetic field */\n\t.ACTIVE     {color: #FEFE0B;}\n\t.INACTIVE   {color: #14ED0D;}\n\t.UNSETTLD   {color: #14ED0D;}\n\t.QUIET      {color: #14ED0D;}\n\t.VRQUIET    {color: #14ED0D;}\n\t\n\t/* change color of sig noise*/\n\t.S0-S1  {color: #14ED0D;}\n\t.S1-S2  {color: #14ED0D;}\n\t.S2-S3  {color: #14ED0D;}\n\t.S3-S4  {color: #FEFE0B;}\n\t\n\t/* VHF band condition colours */\n\t.HighLATAUR {color: #FEFE0B;}\n\t.MIDLATAUR  {color: #14ED0D;}\n\t.BandClosed {color: #E94D0A;}\n\t.at50MHzEs    {color: #14ED0D;}\n\t.at70MHzEs    {color: #14ED0D;}\n\t.at144MHzEs   {color: #14ED0D;}\n\t.HighMUF    {color: #FEFE0B;}\n\t.NotSet     {color: #f003fc;}\n\t\n\t.cellUL {border-bottom: 1px solid #F0EEEE;}\n\n</style>\n\n    <div class=\"main\">\n        <table>\n            <tr>\n                <th colspan=\"4\" class=\"nFont\">Solar-Terrestrial Data provided by N0NBH</th>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.updated[0]}} -->\n                <td colspan=\"4\" class=\"nFont\"><font class=\"yellow\"><strong>{{msg.payload.solardata.updated[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.solarflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SFI:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.sunspots[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SN:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.sunspots[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">A-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aindex[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.kindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">K-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.kindex[0]}}</strong></font></td> \n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.xray[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">X-Ray:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.xray[0]}}</strong></font></td>\n    \t\t</tr>\n            <tr>\n                <!-- {{msg.payload.solardata.heliumline[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">304A:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.heliumline[0]}}</strong></font><span class=\"left\"> @ SEM</span></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.protonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Ptn Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.protonflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.electonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Elc Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.electonflux[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aurora[0]}} / {{msg.payload.solardata.normalization[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Auroa: </td>\n                <td colspan=\"3\" style=\"text-align:left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aurora[0]}}</strong></font>&nbsp;/&nbsp;<font class=\"green\"><strong>n={{msg.payload.solardata.normalization[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.magneticfield[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Bz:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.magneticfield[0]}}</strong></font></td>\n                <!-- {{msg.payload.solardata.solarwind[0]}} -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">SW:</td>\n    \t\t\t<td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarwind[0]}}</strong></font></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">HF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Band</td>\n    \t\t\t<td style=\"text-align: center\" class=\"nFont\">Day</td>\n                <td style=\"text-align: center\" class=\"nFont\">Night</td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">80m-40m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[0]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[0]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[4]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[4]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">30m-20m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[1]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[1]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[5]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[5]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">17m-15m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[2]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[2]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[6]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[6]._}}</strong></font></td>\n                <td></td>\n    \t\t</tr>\n            <tr>    \n                <td style=\"text-align: right\" class=\"nFont\">12m-10m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[3]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[3]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[7]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[7]._}}</strong></font></td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">VHF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<!-- {{msg.payload.solardata.latdegree[0]}} -->\n    \t\t<td style=\"text-align: right\" class=\"nFont\">Aur Lat</td>\n    \t\t<td colspan=\"3\" class=\"nFont\"><font class=\"red\"><strong>{{msg.payload.solardata.latdegree[0]}}&#176;</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[0]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Aurora</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[3]._  -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">6m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[4]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">4m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[1]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[2]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsNA</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">EME Deg</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"https://mmmonvhf.de/eme.php\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/eme/eme.png) 10% 50%; background-repeat: no-repeat; width: 100px; height: 19px;\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\">Solar Flare Prb</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"http://spaceweather.inf.brad.ac.uk/fm/\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(http://spaceweather.inf.brad.ac.uk/ASAP_latest/flaremonitor_24.png) 30% 2%; width: 35px; height: 20px; background-color: #ffffff; background-repeat: no-repeat; filter: brightness(0.6) contrast(3);\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\"><a href=\"https://mmmonvhf.de/es.php\" target=\"_blank\" style=\"color: #ffffff;\">MUF</a> <br/> <a href=\"https://mmmonvhf.de/ms.php\" target=\"_blank\" style=\"color: #ffffff;\">MS</a></td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t    <div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/es/es.png) left top no-repeat, url(https://www.mmmonvhf.de/ms/ms.png) left bottom no-repeat; width:121px; height:12px; padding: 15px;\"></div>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.geomagfield[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Geomag Field</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.geomagfield[0]}}\"><strong>{{msg.payload.solardata.geomagfield[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.signalnoise[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Sig Noise Lvl</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.signalnoise[0]}}\"><strong>{{msg.payload.solardata.signalnoise[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.muf[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">MUF US Boulder</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.muf[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<!-- {{msg.payload.solardata.source[0].$.url}} -->\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\"><a class=\"one\" href=\"{{msg.payload.solardata.source[0].$.url}}\" target=\"_blank\">{{msg.payload.solardata.source[0].$.url}}</a></td>\n            </tr>\n    \t\t<tr>\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\">© Copyright Paul L Herrman</td>\n            </tr>\n        </table>\n    </div>\n\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2150,
+    "y": 640,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6ffebb50d8d236c3",
+    "type": "html",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "property": "payload",
+    "outproperty": "payload",
+    "tag": "solar",
+    "ret": "html",
+    "as": "multi",
+    "x": 1670,
+    "y": 640,
+    "wires": [
+      [
+        "598e32ad1aec7e5c"
+      ]
+    ]
+  },
+  {
+    "id": "598e32ad1aec7e5c",
+    "type": "xml",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 1790,
+    "y": 640,
+    "wires": [
+      [
+        "b374b0c064678ee0"
+      ]
+    ]
+  },
+  {
+    "id": "fe98f6937c6ba1ba",
+    "type": "debug",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2130,
+    "y": 600,
+    "wires": []
+  },
+  {
+    "id": "b374b0c064678ee0",
+    "type": "function",
+    "z": "db5600520bb7f279",
+    "name": "Insert element",
+    "func": "// vhf aurora\n\nvar m_in0 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0]._;\nvar m_out0 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0].$;\n\nif (m_in0 == \"Band Closed\") {\n    m_out0 = m_out0[\"bandcond\"]=\"BandClosed\";\n} else if (m_in0 == \"High LAT AUR\" ) {\n    m_out0 = m_out0[\"bandcond\"]=\"HighLATAUR\";\n} else if (m_in0 == \"MID LAT AUR\" ) {\n    m_out0 = m_out0[\"bandcond\"]=\"MIDLATAUR\";    \n} else {\n    m_out0 = m_out0[\"bandcond\"]=\"NotSet\";\n}\n\n// 2m E-Skip EU\n\nvar m_in1 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1]._;\nvar m_out1 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1].$;\n\nif (m_in1 == \"Band Closed\") {\n    m_out1 = m_out1[\"bandcond\"]=\"BandClosed\";\n} else if (m_in1 == \"High MUF\") {\n    m_out1 = m_out1[\"bandcond\"]=\"HighMUF\";\n} else if (m_in1 == \"144MHz Es\") {\n    m_out1 = m_out1[\"bandcond\"]=\"144MHzEs\";    \n} else {\n    m_out1 = m_out1[\"bandcond\"]=\"NotSet\";\n}\n\n// 2m E-Skip NA\n\nvar m_in2 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2]._;\nvar m_out2 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2].$;\n\nif (m_in2 == \"Band Closed\") {\n    m_out2 = m_out2[\"bandcond\"]=\"BandClosed\";\n} else if (m_in2 == \"High MUF\") {\n    m_out1 = m_out2[\"bandcond\"]=\"HighMUF\";\n} else if (m_in2 == \"144MHz Es\") {\n    m_out1 = m_out2[\"bandcond\"]=\"at144MHzEs\"; \n} else {\n    m_out2 = m_out2[\"bandcond\"]=\"NotSet\";\n}\n\n// 6m band conditions\n\nvar m_in3 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3]._;\nvar m_out3 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3].$;\n\nif (m_in3 == \"Band Closed\") {\n    m_out3 = m_out3[\"bandcond\"]=\"BandClosed\";\n} else if (m_in3 == \"50MHz Es\") {\n    m_out3 = m_out3[\"bandcond\"]=\"at50MHzEs\";\n} else {\n    m_out3 = m_out3[\"bandcond\"]=\"NotSet\";\n}\n\n// 4m band conditions\n\nvar m_in4 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4]._;\nvar m_out4 = msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4].$;\n\nif (m_in4 == \"Band Closed\") {\n    m_out4 = m_out4[\"bandcond\"]=\"BandClosed\";\n} else if (m_in4 == \"70MHz Es\") {\n    m_out3 = m_out4[\"bandcond\"]=\"at70MHzEs\";\n} else {\n    m_out4 = m_out4[\"bandcond\"]=\"NotSet\";\n}\n\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 1940,
+    "y": 640,
+    "wires": [
+      [
+        "fe98f6937c6ba1ba",
+        "390148b044f3e251"
+      ]
+    ]
+  },
+  {
+    "id": "bd2e239ff1d02c56",
+    "type": "comment",
+    "z": "db5600520bb7f279",
+    "name": "Solar Data",
+    "info": "v. 0.1b\nThis reads xml data from N0NBH (and other sources) and formats it for use on the node red ui.\n\n# still to fix colours depending on VHF band conditions\n",
+    "x": 1360,
+    "y": 600,
+    "wires": []
+  },
+  {
+    "id": "c0fdf1e3b8f1fdec",
+    "type": "ui_chart",
+    "z": "db5600520bb7f279",
+    "name": "google.com Chart",
+    "group": "f19108a51ffcbc92",
+    "order": 1,
+    "width": 6,
+    "height": 4,
+    "label": "google.com host pings",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 830,
+    "y": 1080,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8ebb0d8a1be64efd",
+    "type": "ui_gauge",
+    "z": "db5600520bb7f279",
+    "name": "google.com gauge",
+    "group": "f19108a51ffcbc92",
+    "order": 3,
+    "width": 3,
+    "height": 3,
+    "gtype": "gage",
+    "title": "google.com",
+    "label": "ms",
+    "format": "{{msg.payload}}",
+    "min": 0,
+    "max": "150",
+    "colors": [
+      "#36b300",
+      "#e6e600",
+      "#cb3a3a"
+    ],
+    "seg1": "40",
+    "seg2": "75",
+    "className": "",
+    "x": 550,
+    "y": 1140,
+    "wires": []
+  },
+  {
+    "id": "78339185fc12df93",
+    "type": "ping",
+    "z": "db5600520bb7f279",
+    "mode": "timed",
+    "name": "Internet",
+    "host": "1.1.1.1",
+    "timer": "20",
+    "inputs": 0,
+    "x": 230,
+    "y": 1060,
+    "wires": [
+      [
+        "8ebb0d8a1be64efd",
+        "cc3bd762d8c3d90f",
+        "a6c5286f9f4e522d"
+      ]
+    ]
+  },
+  {
+    "id": "cc3bd762d8c3d90f",
+    "type": "smooth",
+    "z": "db5600520bb7f279",
+    "name": "",
+    "property": "payload",
+    "action": "mean",
+    "count": "4",
+    "round": "1",
+    "mult": "single",
+    "reduce": false,
+    "x": 500,
+    "y": 1080,
+    "wires": [
+      [
+        "c0fdf1e3b8f1fdec"
+      ]
+    ]
+  },
+  {
+    "id": "643ff825d341bf96",
+    "type": "ui_led",
+    "z": "db5600520bb7f279",
+    "order": 4,
+    "group": "f19108a51ffcbc92",
+    "width": 3,
+    "height": 1,
+    "label": "Net",
+    "labelPlacement": "left",
+    "labelAlignment": "left",
+    "colorForValue": [
+      {
+        "color": "#ff0000",
+        "value": "false",
+        "valueType": "bool"
+      },
+      {
+        "color": "#008000",
+        "value": "true",
+        "valueType": "bool"
+      }
+    ],
+    "allowColorForValueInMessage": false,
+    "shape": "circle",
+    "showGlow": true,
+    "name": "Internet LED",
+    "x": 930,
+    "y": 1000,
+    "wires": []
+  },
+  {
+    "id": "a6c5286f9f4e522d",
+    "type": "switch",
+    "z": "db5600520bb7f279",
+    "name": "Is Payload False?",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "false"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 470,
+    "y": 1000,
+    "wires": [
+      [
+        "7813be2465d48c71"
+      ],
+      [
+        "ac3e4c548860da96"
+      ]
+    ]
+  },
+  {
+    "id": "ac3e4c548860da96",
+    "type": "change",
+    "z": "db5600520bb7f279",
+    "name": "Set Payload to True",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "true",
+        "tot": "bool"
+      },
+      {
+        "t": "set",
+        "p": "internet",
+        "pt": "global",
+        "to": "true",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 690,
+    "y": 1020,
+    "wires": [
+      [
+        "643ff825d341bf96"
+      ]
+    ]
+  },
+  {
+    "id": "7813be2465d48c71",
+    "type": "change",
+    "z": "db5600520bb7f279",
+    "name": "Set Internet to False",
+    "rules": [
+      {
+        "t": "set",
+        "p": "internet",
+        "pt": "global",
+        "to": "false",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 700,
+    "y": 980,
+    "wires": [
+      [
+        "643ff825d341bf96"
+      ]
+    ]
+  }
+]

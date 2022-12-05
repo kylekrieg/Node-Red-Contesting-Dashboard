@@ -1,0 +1,1882 @@
+[
+  {
+    "id": "9ed270102b553c75",
+    "type": "tab",
+    "label": "Band Stats",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "425f3c637f4bf34a",
+    "type": "sqlite",
+    "z": "9ed270102b553c75",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 740,
+    "y": 840,
+    "wires": [
+      [
+        "3eef6f4fb58523ba",
+        "43bc1a3505c40d5f"
+      ]
+    ]
+  },
+  {
+    "id": "ef5c39d0008ce5d5",
+    "type": "inject",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payloadType": "date",
+    "x": 130,
+    "y": 840,
+    "wires": [
+      [
+        "0245a7587a98c7f0"
+      ]
+    ]
+  },
+  {
+    "id": "0245a7587a98c7f0",
+    "type": "delay",
+    "z": "9ed270102b553c75",
+    "name": "30s Random Delay",
+    "pauseType": "random",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "30",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 330,
+    "y": 840,
+    "wires": [
+      [
+        "91bacd8bcb72b207"
+      ]
+    ]
+  },
+  {
+    "id": "b55326c20125b41b",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b597a92689c997ee",
+    "order": 4,
+    "width": 5,
+    "height": 2,
+    "name": "160M Points",
+    "label": "Points",
+    "format": "{{msg.payload.points}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 1220,
+    "wires": []
+  },
+  {
+    "id": "63abfb398ead707e",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "33f39234d06022c4",
+    "order": 4,
+    "width": 5,
+    "height": 2,
+    "name": "40M Points",
+    "label": "Points",
+    "format": "{{msg.payload.points}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 1300,
+    "wires": []
+  },
+  {
+    "id": "4313293214f26dbf",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "16293e8283ac8032",
+    "order": 4,
+    "width": 5,
+    "height": 2,
+    "name": "20M Points",
+    "label": "Points",
+    "format": "{{msg.payload.points}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 1340,
+    "wires": []
+  },
+  {
+    "id": "4f5a3a427a33cd39",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b058bc1a30b324a8",
+    "order": 4,
+    "width": 5,
+    "height": 2,
+    "name": "15M Points",
+    "label": "Points",
+    "format": "{{msg.payload.points}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 1380,
+    "wires": []
+  },
+  {
+    "id": "28efc1ef3a740f5d",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "7f3af38546f365bf",
+    "order": 4,
+    "width": 5,
+    "height": 2,
+    "name": "10M Points",
+    "label": "Points",
+    "format": "{{msg.payload.points}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 1420,
+    "wires": []
+  },
+  {
+    "id": "6a6dd4cb7a83c669",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "ba5556bd38a9b0dc",
+    "order": 4,
+    "width": 5,
+    "height": 2,
+    "name": "80M Points",
+    "label": "Points",
+    "format": "{{msg.payload.points}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 1260,
+    "wires": []
+  },
+  {
+    "id": "3eef6f4fb58523ba",
+    "type": "split",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 910,
+    "y": 840,
+    "wires": [
+      [
+        "aaafe6ffffa92c6f"
+      ]
+    ]
+  },
+  {
+    "id": "aaafe6ffffa92c6f",
+    "type": "switch",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "property": "payload.band",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "1.8",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "3.5",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "7",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "14",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "21",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "28",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 6,
+    "x": 1070,
+    "y": 840,
+    "wires": [
+      [
+        "b55326c20125b41b",
+        "71266673ab99d216",
+        "cb46a0a044dac301",
+        "7897a6a80bcdb38c",
+        "918e88cbc4882d15"
+      ],
+      [
+        "6a6dd4cb7a83c669",
+        "869db0d6987ea03d",
+        "78274317a63b6352",
+        "8a973bd18783dc29",
+        "cc3361f3b6330437"
+      ],
+      [
+        "63abfb398ead707e",
+        "a41df0ff4269fc30",
+        "b127f6336a037c44",
+        "b63fc232db48fe7d",
+        "58d23e7f82b5c4e3"
+      ],
+      [
+        "4313293214f26dbf",
+        "b5d226d22a29431b",
+        "09ea8d32749d5c88",
+        "8c2e7810d6eb41a6",
+        "2459c52ec0b60c95"
+      ],
+      [
+        "4f5a3a427a33cd39",
+        "2c9ce288264b3c5a",
+        "adf10c73a4709d70",
+        "f2cea60a88271f1b",
+        "9b4cdcd2420f328e"
+      ],
+      [
+        "28efc1ef3a740f5d",
+        "596fbe6bb05a863b",
+        "a571968d5ae12d7c",
+        "cf02763a474fb76b",
+        "ed80acad2866a4c5"
+      ]
+    ]
+  },
+  {
+    "id": "e9a1427278cb27c6",
+    "type": "template",
+    "z": "9ed270102b553c75",
+    "name": "SQL Select Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(band) as total, band as band from qsos where timestamp >= datetime('now','-1 hours') group by band;",
+    "output": "str",
+    "x": 630,
+    "y": 1580,
+    "wires": [
+      [
+        "4a446c6385f1d577"
+      ]
+    ]
+  },
+  {
+    "id": "8c064b88ad1e9b3e",
+    "type": "inject",
+    "z": "9ed270102b553c75",
+    "name": "1 per min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payloadType": "date",
+    "x": 370,
+    "y": 1580,
+    "wires": [
+      [
+        "e9a1427278cb27c6"
+      ]
+    ]
+  },
+  {
+    "id": "4a446c6385f1d577",
+    "type": "sqlite",
+    "z": "9ed270102b553c75",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 860,
+    "y": 1580,
+    "wires": [
+      [
+        "877e7ccf49e12338"
+      ]
+    ]
+  },
+  {
+    "id": "877e7ccf49e12338",
+    "type": "split",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 1030,
+    "y": 1580,
+    "wires": [
+      [
+        "687940fe10bc1d90"
+      ]
+    ]
+  },
+  {
+    "id": "687940fe10bc1d90",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Set Topic & Payload",
+    "func": "let total = msg.payload.total;\nlet band = msg.payload.band;\n\nif (band == '1.8')\n{\n    band = '160M'\n}\nif (band == '3.5')\n{\n    band = '80M'\n}\nif (band == '7')\n{\n    band = '40M'\n}\nif (band == '14')\n{\n    band = '20M'\n}\nif (band == '21')\n{\n    band = '15M'\n}\nif (band == '28')\n{\n    band = '10M'\n}\n\nmsg.topic = band;\nmsg.payload = total;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1280,
+    "y": 1580,
+    "wires": [
+      [
+        "e0540eb13ce52ccc"
+      ]
+    ]
+  },
+  {
+    "id": "e0540eb13ce52ccc",
+    "type": "ui_chart",
+    "z": "9ed270102b553c75",
+    "name": "QSO Rate by Band Chart",
+    "group": "4244ba9d238d6a13",
+    "order": 1,
+    "width": 30,
+    "height": 6,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "",
+    "removeOlder": "12",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1570,
+    "y": 1580,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "917c86c665fa20e2",
+    "type": "link in",
+    "z": "9ed270102b553c75",
+    "name": "Band Stats Clear IN",
+    "links": [
+      "5e1859619292b1b8"
+    ],
+    "x": 375,
+    "y": 1500,
+    "wires": [
+      [
+        "a0302a54a10a9798",
+        "9653f8afb92077a2"
+      ]
+    ]
+  },
+  {
+    "id": "9653f8afb92077a2",
+    "type": "change",
+    "z": "9ed270102b553c75",
+    "name": "Clear Stats",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "[]",
+        "tot": "json"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1230,
+    "y": 1500,
+    "wires": [
+      [
+        "e0540eb13ce52ccc"
+      ]
+    ]
+  },
+  {
+    "id": "43bc1a3505c40d5f",
+    "type": "debug",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 930,
+    "y": 780,
+    "wires": []
+  },
+  {
+    "id": "91bacd8bcb72b207",
+    "type": "template",
+    "z": "9ed270102b553c75",
+    "name": "SQL by Operator",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\nband as band,\n(select count(band)\nfrom qsos \nwhere band=qout.band\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by band \norder by score desc;",
+    "output": "str",
+    "x": 530,
+    "y": 840,
+    "wires": [
+      [
+        "425f3c637f4bf34a"
+      ]
+    ]
+  },
+  {
+    "id": "71266673ab99d216",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b597a92689c997ee",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "160M Multis",
+    "label": "Multi",
+    "format": "{{msg.payload.multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1550,
+    "y": 1100,
+    "wires": []
+  },
+  {
+    "id": "a41df0ff4269fc30",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "33f39234d06022c4",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "40M Multi",
+    "label": "Multi",
+    "format": "{{msg.payload.multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1540,
+    "y": 1180,
+    "wires": []
+  },
+  {
+    "id": "b5d226d22a29431b",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "16293e8283ac8032",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "20M Multis",
+    "label": "Multi",
+    "format": "{{msg.payload.multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1550,
+    "y": 1220,
+    "wires": []
+  },
+  {
+    "id": "2c9ce288264b3c5a",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b058bc1a30b324a8",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "15M Multis",
+    "label": "Multi",
+    "format": "{{msg.payload.multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1550,
+    "y": 1260,
+    "wires": []
+  },
+  {
+    "id": "596fbe6bb05a863b",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "7f3af38546f365bf",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "10M Multis",
+    "label": "Multi",
+    "format": "{{msg.payload.multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1550,
+    "y": 1300,
+    "wires": []
+  },
+  {
+    "id": "869db0d6987ea03d",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "ba5556bd38a9b0dc",
+    "order": 3,
+    "width": 5,
+    "height": 2,
+    "name": "80M Multis",
+    "label": "Multi",
+    "format": "{{msg.payload.multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1550,
+    "y": 1140,
+    "wires": []
+  },
+  {
+    "id": "cb46a0a044dac301",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b597a92689c997ee",
+    "order": 2,
+    "width": 6,
+    "height": 2,
+    "name": "160M Total QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload.totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1570,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "b127f6336a037c44",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "33f39234d06022c4",
+    "order": 2,
+    "width": 6,
+    "height": 2,
+    "name": "40M Total QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload.totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1560,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "09ea8d32749d5c88",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "16293e8283ac8032",
+    "order": 2,
+    "width": 6,
+    "height": 2,
+    "name": "20M Total QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload.totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1560,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "adf10c73a4709d70",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b058bc1a30b324a8",
+    "order": 2,
+    "width": 6,
+    "height": 2,
+    "name": "15M Total QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload.totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1560,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "a571968d5ae12d7c",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "7f3af38546f365bf",
+    "order": 2,
+    "width": 6,
+    "height": 2,
+    "name": "10M Total QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload.totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1560,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "78274317a63b6352",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "ba5556bd38a9b0dc",
+    "order": 2,
+    "width": 6,
+    "height": 2,
+    "name": "80M Total QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload.totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1560,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "7897a6a80bcdb38c",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b597a92689c997ee",
+    "order": 1,
+    "width": 7,
+    "height": 2,
+    "name": "160M Score",
+    "label": "Score",
+    "format": "{{msg.payload.score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1230,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "b63fc232db48fe7d",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "33f39234d06022c4",
+    "order": 1,
+    "width": 7,
+    "height": 2,
+    "name": "40M Score",
+    "label": "Score",
+    "format": "{{msg.payload.score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1230,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "8c2e7810d6eb41a6",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "16293e8283ac8032",
+    "order": 1,
+    "width": 7,
+    "height": 2,
+    "name": "20M Score",
+    "label": "Score",
+    "format": "{{msg.payload.score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1230,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "f2cea60a88271f1b",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b058bc1a30b324a8",
+    "order": 1,
+    "width": 7,
+    "height": 2,
+    "name": "15M Score",
+    "label": "Score",
+    "format": "{{msg.payload.score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1230,
+    "y": 440,
+    "wires": []
+  },
+  {
+    "id": "cf02763a474fb76b",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "7f3af38546f365bf",
+    "order": 1,
+    "width": 7,
+    "height": 2,
+    "name": "10M Score",
+    "label": "Score",
+    "format": "{{msg.payload.score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1230,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "8a973bd18783dc29",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "ba5556bd38a9b0dc",
+    "order": 1,
+    "width": 7,
+    "height": 2,
+    "name": "80M Score",
+    "label": "Score",
+    "format": "{{msg.payload.score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1230,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "f4010db8c771c6ca",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "x": 1840,
+    "y": 640,
+    "wires": [
+      [
+        "d4703b6d99cdbccc"
+      ],
+      [
+        "d4703b6d99cdbccc"
+      ],
+      [
+        "d4703b6d99cdbccc"
+      ]
+    ]
+  },
+  {
+    "id": "ee82bf1abcbd7154",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "x": 1840,
+    "y": 700,
+    "wires": [
+      [
+        "9ee2f2189af44fae"
+      ],
+      [
+        "9ee2f2189af44fae"
+      ],
+      [
+        "9ee2f2189af44fae"
+      ]
+    ]
+  },
+  {
+    "id": "310f79c9d007a699",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "x": 1840,
+    "y": 760,
+    "wires": [
+      [
+        "c1efdb7a76c94b3c"
+      ],
+      [
+        "c1efdb7a76c94b3c"
+      ],
+      [
+        "c1efdb7a76c94b3c"
+      ]
+    ]
+  },
+  {
+    "id": "e056cd58b24b6eed",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "x": 1840,
+    "y": 820,
+    "wires": [
+      [
+        "27d0fa2e0916dab5"
+      ],
+      [
+        "27d0fa2e0916dab5"
+      ],
+      [
+        "27d0fa2e0916dab5"
+      ]
+    ]
+  },
+  {
+    "id": "8f0d5673855b7560",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "x": 1840,
+    "y": 880,
+    "wires": [
+      [
+        "c982b2a1618b9398"
+      ],
+      [
+        "c982b2a1618b9398"
+      ],
+      [
+        "c982b2a1618b9398"
+      ]
+    ]
+  },
+  {
+    "id": "b6a1dbe0f8113b6d",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "x": 1840,
+    "y": 940,
+    "wires": [
+      [
+        "bc28c87ae2f786d0"
+      ],
+      [
+        "bc28c87ae2f786d0"
+      ],
+      [
+        "bc28c87ae2f786d0"
+      ]
+    ]
+  },
+  {
+    "id": "918e88cbc4882d15",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Set msg.rate",
+    "func": "let rate = msg.payload.rate\nmsg.rate = rate;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 640,
+    "wires": [
+      [
+        "f4010db8c771c6ca"
+      ]
+    ]
+  },
+  {
+    "id": "cc3361f3b6330437",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Set msg.rate",
+    "func": "let rate = msg.payload.rate\nmsg.rate = rate;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 700,
+    "wires": [
+      [
+        "ee82bf1abcbd7154"
+      ]
+    ]
+  },
+  {
+    "id": "58d23e7f82b5c4e3",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Set msg.rate",
+    "func": "let rate = msg.payload.rate\nmsg.rate = rate;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 760,
+    "wires": [
+      [
+        "310f79c9d007a699"
+      ]
+    ]
+  },
+  {
+    "id": "2459c52ec0b60c95",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Set msg.rate",
+    "func": "let rate = msg.payload.rate\nmsg.rate = rate;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 820,
+    "wires": [
+      [
+        "e056cd58b24b6eed"
+      ]
+    ]
+  },
+  {
+    "id": "9b4cdcd2420f328e",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Set msg.rate",
+    "func": "let rate = msg.payload.rate\nmsg.rate = rate;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 880,
+    "wires": [
+      [
+        "8f0d5673855b7560"
+      ]
+    ]
+  },
+  {
+    "id": "ed80acad2866a4c5",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Set msg.rate",
+    "func": "let rate = msg.payload.rate\nmsg.rate = rate;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 940,
+    "wires": [
+      [
+        "b6a1dbe0f8113b6d"
+      ]
+    ]
+  },
+  {
+    "id": "d4703b6d99cdbccc",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b597a92689c997ee",
+    "order": 5,
+    "width": 5,
+    "height": 2,
+    "name": "160M 1Hr Rate",
+    "label": "1 Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2060,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "c1efdb7a76c94b3c",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "33f39234d06022c4",
+    "order": 5,
+    "width": 5,
+    "height": 2,
+    "name": "40M 1Hr Rate",
+    "label": "1 Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2060,
+    "y": 760,
+    "wires": []
+  },
+  {
+    "id": "27d0fa2e0916dab5",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "16293e8283ac8032",
+    "order": 5,
+    "width": 5,
+    "height": 2,
+    "name": "20M 1Hr Rate",
+    "label": "1 Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2060,
+    "y": 820,
+    "wires": []
+  },
+  {
+    "id": "c982b2a1618b9398",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "b058bc1a30b324a8",
+    "order": 5,
+    "width": 5,
+    "height": 2,
+    "name": "15M 1Hr Rate",
+    "label": "1 Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2060,
+    "y": 880,
+    "wires": []
+  },
+  {
+    "id": "bc28c87ae2f786d0",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "7f3af38546f365bf",
+    "order": 5,
+    "width": 5,
+    "height": 2,
+    "name": "10M 1Hr Rate",
+    "label": "1 Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2060,
+    "y": 940,
+    "wires": []
+  },
+  {
+    "id": "9ee2f2189af44fae",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "ba5556bd38a9b0dc",
+    "order": 5,
+    "width": 5,
+    "height": 2,
+    "name": "80M 1Hr Rate",
+    "label": "1 Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2060,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "a0302a54a10a9798",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Clear Stats",
+    "func": "\nreturn {\n    \n   \"payload\":[\n      {\n         score:0,\n         totalqsos:0,\n         band:\"1.8\",\n         multiplier:0,\n         points:0,\n          \n      },\n      {\n         score:0,\n         totalqsos:0,\n         band:\"3.5\",\n         multiplier:0,\n         points:0,\n          \n      },\n      {\n         score:0,\n         totalqsos:0,\n         band:\"7\",\n         multiplier:0,\n         points:0,\n          \n      },\n      {\n         score:0,\n         totalqsos:0,\n         band:\"14\",\n         multiplier:0,\n         points:0,\n          \n      },\n      {\n         score:0,\n         totalqsos:0,\n         band:\"21\",\n         multiplier:0,\n         points:0,\n          \n      },\n      {\n         score:0,\n         totalqsos:0,\n         band:\"28\",\n         multiplier:0,\n         points:0,\n          \n      },\n   ]\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 1120,
+    "wires": [
+      [
+        "3eef6f4fb58523ba"
+      ]
+    ]
+  },
+  {
+    "id": "62e83a7590098e1b",
+    "type": "link in",
+    "z": "9ed270102b553c75",
+    "name": "From RBN Spots IN",
+    "links": [
+      "8b67a949f2e70ade"
+    ],
+    "x": 375,
+    "y": 1800,
+    "wires": [
+      [
+        "4fc4bceed411f767"
+      ]
+    ]
+  },
+  {
+    "id": "3ae89c5cc4fe103f",
+    "type": "ui_chart",
+    "z": "9ed270102b553c75",
+    "name": "80M Spots Per Min",
+    "group": "76879f1e69f23640",
+    "order": 1,
+    "width": 8,
+    "height": 4,
+    "label": "80M",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1350,
+    "y": 1800,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6d65f63213b762f7",
+    "type": "ui_chart",
+    "z": "9ed270102b553c75",
+    "name": "40M Spots Per Min",
+    "group": "76879f1e69f23640",
+    "order": 2,
+    "width": 8,
+    "height": 4,
+    "label": "40M",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1350,
+    "y": 1920,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "4ef5080065abf323",
+    "type": "ui_chart",
+    "z": "9ed270102b553c75",
+    "name": "20M Spots Per Min",
+    "group": "76879f1e69f23640",
+    "order": 3,
+    "width": 8,
+    "height": 4,
+    "label": "20M",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1350,
+    "y": 2040,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "98ad9959135590cc",
+    "type": "ui_chart",
+    "z": "9ed270102b553c75",
+    "name": "15M Spots Per Min",
+    "group": "76879f1e69f23640",
+    "order": 4,
+    "width": 8,
+    "height": 4,
+    "label": "15M",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1350,
+    "y": 2160,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c9f3f35ee4a07b4d",
+    "type": "ui_chart",
+    "z": "9ed270102b553c75",
+    "name": "10M Spots Per Min",
+    "group": "76879f1e69f23640",
+    "order": 5,
+    "width": 8,
+    "height": 4,
+    "label": "10M",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1350,
+    "y": 2280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5809e19089ededaa",
+    "type": "ui_chart",
+    "z": "9ed270102b553c75",
+    "name": "160M Spots Per Min",
+    "group": "76879f1e69f23640",
+    "order": 6,
+    "width": 8,
+    "height": 4,
+    "label": "160M",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1360,
+    "y": 1680,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "4fc4bceed411f767",
+    "type": "function",
+    "z": "9ed270102b553c75",
+    "name": "Trim & ParseFloat",
+    "func": "let x = msg.payload.freq;\n\nlet y = x.trim();\nlet spot = parseFloat(x);\n\nmsg.payload = spot;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 550,
+    "y": 1800,
+    "wires": [
+      [
+        "26fbf393d82420b1"
+      ]
+    ]
+  },
+  {
+    "id": "26fbf393d82420b1",
+    "type": "switch",
+    "z": "9ed270102b553c75",
+    "name": "Band Parse",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "btwn",
+        "v": "1800",
+        "vt": "num",
+        "v2": "2000",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "3500",
+        "vt": "num",
+        "v2": "4000",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "7000",
+        "vt": "num",
+        "v2": "7200",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "14000",
+        "vt": "num",
+        "v2": "14350",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "21000",
+        "vt": "num",
+        "v2": "21450",
+        "v2t": "num"
+      },
+      {
+        "t": "btwn",
+        "v": "28000",
+        "vt": "num",
+        "v2": "29700",
+        "v2t": "num"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 6,
+    "x": 770,
+    "y": 1800,
+    "wires": [
+      [
+        "8cb123db9e38f0d9"
+      ],
+      [
+        "e3c03b634ca50647"
+      ],
+      [
+        "b96583d9e042633a"
+      ],
+      [
+        "50ce72254aa55172"
+      ],
+      [
+        "cf70cfd9e2f3f353"
+      ],
+      [
+        "aa763d09c03d0b3d"
+      ]
+    ]
+  },
+  {
+    "id": "8cb123db9e38f0d9",
+    "type": "msg-speed",
+    "z": "9ed270102b553c75",
+    "name": "160M Speed",
+    "frequency": "min",
+    "interval": 1,
+    "estimation": false,
+    "ignore": false,
+    "pauseAtStartup": false,
+    "topicDependent": false,
+    "x": 1110,
+    "y": 1700,
+    "wires": [
+      [
+        "5809e19089ededaa",
+        "506e377454faef12"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "e3c03b634ca50647",
+    "type": "msg-speed",
+    "z": "9ed270102b553c75",
+    "name": "80M Speed",
+    "frequency": "min",
+    "interval": 1,
+    "estimation": false,
+    "ignore": false,
+    "pauseAtStartup": false,
+    "topicDependent": false,
+    "x": 1110,
+    "y": 1820,
+    "wires": [
+      [
+        "3ae89c5cc4fe103f",
+        "e622ffd5cdbaef68"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "b96583d9e042633a",
+    "type": "msg-speed",
+    "z": "9ed270102b553c75",
+    "name": "40M Speed",
+    "frequency": "min",
+    "interval": 1,
+    "estimation": false,
+    "ignore": false,
+    "pauseAtStartup": false,
+    "topicDependent": false,
+    "x": 1110,
+    "y": 1940,
+    "wires": [
+      [
+        "6d65f63213b762f7",
+        "d798a2b1c1c0b17b"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "50ce72254aa55172",
+    "type": "msg-speed",
+    "z": "9ed270102b553c75",
+    "name": "20M Speed",
+    "frequency": "min",
+    "interval": 1,
+    "estimation": false,
+    "ignore": false,
+    "pauseAtStartup": false,
+    "topicDependent": false,
+    "x": 1110,
+    "y": 2060,
+    "wires": [
+      [
+        "4ef5080065abf323",
+        "1f5203b34775bd75"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "cf70cfd9e2f3f353",
+    "type": "msg-speed",
+    "z": "9ed270102b553c75",
+    "name": "15M Speed",
+    "frequency": "min",
+    "interval": 1,
+    "estimation": false,
+    "ignore": false,
+    "pauseAtStartup": false,
+    "topicDependent": false,
+    "x": 1110,
+    "y": 2180,
+    "wires": [
+      [
+        "98ad9959135590cc",
+        "c1122300b4ec1134"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "aa763d09c03d0b3d",
+    "type": "msg-speed",
+    "z": "9ed270102b553c75",
+    "name": "10M Speed",
+    "frequency": "min",
+    "interval": 1,
+    "estimation": false,
+    "ignore": false,
+    "pauseAtStartup": false,
+    "topicDependent": false,
+    "x": 1110,
+    "y": 2320,
+    "wires": [
+      [
+        "c9f3f35ee4a07b4d",
+        "9402f6c4e82b6f9a"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "cfa17dadbe89f655",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "1d924a93b9821236",
+    "order": 4,
+    "width": 4,
+    "height": 1,
+    "name": "160M N1MM Dashboard Spot Rate",
+    "label": "",
+    "format": "<font color={{msg.color}}> 160M - {{msg.payload}}/Min</font>",
+    "layout": "row-left",
+    "className": "",
+    "x": 1620,
+    "y": 1740,
+    "wires": []
+  },
+  {
+    "id": "00c538c65092fee5",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "1d924a93b9821236",
+    "order": 1,
+    "width": 4,
+    "height": 1,
+    "name": "80M N1MM Dashboard Spot Rate",
+    "label": "",
+    "format": "<font color={{msg.color}}> 80M - {{msg.payload}}/Min</font>",
+    "layout": "row-left",
+    "className": "",
+    "x": 1620,
+    "y": 1860,
+    "wires": []
+  },
+  {
+    "id": "4027ad68721e01ae",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "1d924a93b9821236",
+    "order": 2,
+    "width": 4,
+    "height": 1,
+    "name": "40M N1MM Dashboard Spot Rate",
+    "label": "",
+    "format": "<font color={{msg.color}}> 40M - {{msg.payload}}/Min</font>",
+    "layout": "row-center",
+    "className": "<font color={{msg.color}}>{{msg.rate}} Q's/Hr</font>",
+    "x": 1620,
+    "y": 1980,
+    "wires": []
+  },
+  {
+    "id": "3d79af706b0596f0",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "1d924a93b9821236",
+    "order": 3,
+    "width": 4,
+    "height": 1,
+    "name": "20M N1MM Dashboard Spot Rate",
+    "label": "",
+    "format": "<font color={{msg.color}}> 20M - {{msg.payload}}/Min</font>",
+    "layout": "row-left",
+    "className": "",
+    "x": 1620,
+    "y": 2100,
+    "wires": []
+  },
+  {
+    "id": "da9417eff5bc179a",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "1d924a93b9821236",
+    "order": 5,
+    "width": 4,
+    "height": 1,
+    "name": "15M N1MM Dashboard Spot Rate",
+    "label": "",
+    "format": "<font color={{msg.color}}> 15M - {{msg.payload}}/Min</font>",
+    "layout": "row-center",
+    "className": "",
+    "x": 1620,
+    "y": 2220,
+    "wires": []
+  },
+  {
+    "id": "fd35788fe10c1ee7",
+    "type": "ui_text",
+    "z": "9ed270102b553c75",
+    "group": "1d924a93b9821236",
+    "order": 6,
+    "width": 4,
+    "height": 1,
+    "name": "10M N1MM Dashboard Spot Rate",
+    "label": "",
+    "format": "<font color={{msg.color}}> 10M - {{msg.payload}}/Min</font>",
+    "layout": "row-left",
+    "className": "",
+    "x": 1620,
+    "y": 2340,
+    "wires": []
+  },
+  {
+    "id": "d798a2b1c1c0b17b",
+    "type": "subflow:74c92a5f32f17459",
+    "z": "9ed270102b553c75",
+    "x": 1330,
+    "y": 1980,
+    "wires": [
+      [
+        "4027ad68721e01ae"
+      ],
+      [
+        "4027ad68721e01ae"
+      ],
+      [
+        "4027ad68721e01ae"
+      ]
+    ]
+  },
+  {
+    "id": "506e377454faef12",
+    "type": "subflow:74c92a5f32f17459",
+    "z": "9ed270102b553c75",
+    "name": "",
+    "x": 1330,
+    "y": 1740,
+    "wires": [
+      [
+        "cfa17dadbe89f655"
+      ],
+      [
+        "cfa17dadbe89f655"
+      ],
+      [
+        "cfa17dadbe89f655"
+      ]
+    ]
+  },
+  {
+    "id": "e622ffd5cdbaef68",
+    "type": "subflow:74c92a5f32f17459",
+    "z": "9ed270102b553c75",
+    "x": 1330,
+    "y": 1860,
+    "wires": [
+      [
+        "00c538c65092fee5"
+      ],
+      [
+        "00c538c65092fee5"
+      ],
+      [
+        "00c538c65092fee5"
+      ]
+    ]
+  },
+  {
+    "id": "1f5203b34775bd75",
+    "type": "subflow:74c92a5f32f17459",
+    "z": "9ed270102b553c75",
+    "x": 1330,
+    "y": 2100,
+    "wires": [
+      [
+        "3d79af706b0596f0"
+      ],
+      [
+        "3d79af706b0596f0"
+      ],
+      [
+        "3d79af706b0596f0"
+      ]
+    ]
+  },
+  {
+    "id": "c1122300b4ec1134",
+    "type": "subflow:74c92a5f32f17459",
+    "z": "9ed270102b553c75",
+    "x": 1330,
+    "y": 2220,
+    "wires": [
+      [
+        "da9417eff5bc179a"
+      ],
+      [
+        "da9417eff5bc179a"
+      ],
+      [
+        "da9417eff5bc179a"
+      ]
+    ]
+  },
+  {
+    "id": "9402f6c4e82b6f9a",
+    "type": "subflow:74c92a5f32f17459",
+    "z": "9ed270102b553c75",
+    "x": 1330,
+    "y": 2340,
+    "wires": [
+      [
+        "fd35788fe10c1ee7"
+      ],
+      [
+        "fd35788fe10c1ee7"
+      ],
+      [
+        "fd35788fe10c1ee7"
+      ]
+    ]
+  }
+]

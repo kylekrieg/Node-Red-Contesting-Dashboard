@@ -1,0 +1,4328 @@
+[
+  {
+    "id": "c8e1ef6f509cd75a",
+    "type": "tab",
+    "label": "OP Competition",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "8125dc33c592c8ec",
+    "type": "inject",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1 Per Min",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payloadType": "date",
+    "x": 130,
+    "y": 520,
+    "wires": [
+      [
+        "2b2f3e640248b72a"
+      ]
+    ]
+  },
+  {
+    "id": "e5bfbfa56cbfc533",
+    "type": "sqlite",
+    "z": "c8e1ef6f509cd75a",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1280,
+    "y": 520,
+    "wires": [
+      [
+        "03065499f5880f2d",
+        "0abc9757ce66c40d",
+        "0e4729df09d27b3e",
+        "82ec57515e149fba",
+        "3167aedcb8f56641",
+        "89681b3be0afcbba",
+        "a19b646fa2396669",
+        "56cd5215dde42552",
+        "2ca6f5a68f913286",
+        "8ef98b522b186a8d",
+        "e6554b9bbe9cee0e",
+        "9b09738fe2ae4dd7",
+        "c7dc9ca647a536a0",
+        "b72cc44c1d574dce",
+        "b80a474784168d46",
+        "cfd51f2f87f96fa9",
+        "4bcf5aa1cae934bd",
+        "9c2f3625304166d0",
+        "b78c513f0baf3018",
+        "900630ff66352946",
+        "cca1c89c90290ebc",
+        "97a57d2397a978dc",
+        "cc5cb58dad3a8a3b",
+        "3acac32e8604c765",
+        "57b1c5dc031afdfd",
+        "649570d869a2a319",
+        "35470e72a63127bd",
+        "f72d756d8c137aaa",
+        "4bec6621ee7e772f",
+        "9430cb53d80fa6b6",
+        "a6a25d3c59f7b679",
+        "b35683e6760d29f7",
+        "f03a0e31a77f68f2",
+        "84125f6fa5dde217",
+        "71e08397fedf0ff4",
+        "2a30d423bfa0de72",
+        "dab5d935729234b6",
+        "83a4a868bef4d301",
+        "08bb28416a4c857f",
+        "9db860a23cb0de6e",
+        "689a711ac2c1cc37",
+        "a44ee2cc9a9b7398",
+        "76b9e5dff8bd683f",
+        "ef7856ab646dc938",
+        "6dc0b640e1c8407e",
+        "582eb93ec7687986",
+        "f10eaa69c05b8a4c",
+        "d89c6e30ca15bf1e",
+        "46a109ee0a2e75aa",
+        "0d32551591f4febb",
+        "4e25eef7a46062ed",
+        "74823dbc48c66f23",
+        "4e1d05c16ace0917",
+        "34008e11c64ab041",
+        "5c267064e9a5cfe5",
+        "fddd013b3adee514",
+        "568d906183a5bd04",
+        "3dfd2af79efe8194",
+        "e7b5e69e29f5048b",
+        "4469d749f5f64ed9",
+        "2697e5e8c3c7b86f"
+      ]
+    ]
+  },
+  {
+    "id": "f678bf79cef11c12",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 510,
+    "y": 2920,
+    "wires": []
+  },
+  {
+    "id": "03065499f5880f2d",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "1st Place OP",
+    "label": "OP",
+    "format": "{{msg.payload[0].operator}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1150,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "0abc9757ce66c40d",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "3rd Place OP",
+    "label": "OP",
+    "format": "{{msg.payload[2].operator}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1150,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "82ec57515e149fba",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "4th Place OP",
+    "label": "OP",
+    "format": "{{msg.payload[3].operator}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1150,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "3167aedcb8f56641",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "5th Place OP",
+    "label": "OP",
+    "format": "{{msg.payload[4].operator}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1150,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "89681b3be0afcbba",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "6th Place OP",
+    "label": "OP",
+    "format": "{{msg.payload[5].operator}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1150,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "a19b646fa2396669",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "7th Place OP",
+    "label": "OP",
+    "format": "{{msg.payload[6].operator}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1150,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "56cd5215dde42552",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "8th Place OP",
+    "label": "OP",
+    "format": "{{msg.payload[7].operator}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1150,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "0e4729df09d27b3e",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 1,
+    "width": 4,
+    "height": 2,
+    "name": "2nd Place OP",
+    "label": "OP",
+    "format": "{{msg.payload[1].operator}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1160,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "2ca6f5a68f913286",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "1st Place OP QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload[0].totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1510,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "8ef98b522b186a8d",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "2nd Place OP QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload[1].totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "e6554b9bbe9cee0e",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "3rd Place OP QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload[2].totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "9b09738fe2ae4dd7",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "4th Place OP QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload[3].totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "c7dc9ca647a536a0",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "5th Place OP QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload[4].totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "b72cc44c1d574dce",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "6th Place OP QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload[5].totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "b80a474784168d46",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "7th Place OP QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload[6].totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "cfd51f2f87f96fa9",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 3,
+    "width": 4,
+    "height": 2,
+    "name": "8th Place OP QSOs",
+    "label": "QSOs",
+    "format": "{{msg.payload[7].totalqsos}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1520,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "649570d869a2a319",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "1st Place OP Score",
+    "label": "Score",
+    "format": "{{msg.payload[0].score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "35470e72a63127bd",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "2nd Place OP Score",
+    "label": "Score",
+    "format": "{{msg.payload[1].score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1280,
+    "y": 720,
+    "wires": []
+  },
+  {
+    "id": "f72d756d8c137aaa",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "3rd Place OP Score",
+    "label": "Score",
+    "format": "{{msg.payload[2].score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 760,
+    "wires": []
+  },
+  {
+    "id": "4bec6621ee7e772f",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "4th Place OP Score",
+    "label": "Score",
+    "format": "{{msg.payload[3].score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 800,
+    "wires": []
+  },
+  {
+    "id": "9430cb53d80fa6b6",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "5th Place OP Score",
+    "label": "Score",
+    "format": "{{msg.payload[4].score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 840,
+    "wires": []
+  },
+  {
+    "id": "a6a25d3c59f7b679",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "6th Place OP Score",
+    "label": "Score",
+    "format": "{{msg.payload[5].score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 880,
+    "wires": []
+  },
+  {
+    "id": "b35683e6760d29f7",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "7th Place OP Score",
+    "label": "Score",
+    "format": "{{msg.payload[6].score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "f03a0e31a77f68f2",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 2,
+    "width": 4,
+    "height": 2,
+    "name": "8th Place OP Score",
+    "label": "Score",
+    "format": "{{msg.payload[7].score}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1270,
+    "y": 960,
+    "wires": []
+  },
+  {
+    "id": "4bcf5aa1cae934bd",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "1st Place OP Mults",
+    "label": "Mults",
+    "format": "{{msg.payload[0].multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 930,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "9c2f3625304166d0",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "2nd Place OP Mults",
+    "label": "Mults",
+    "format": "{{msg.payload[1].multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 930,
+    "y": 720,
+    "wires": []
+  },
+  {
+    "id": "b78c513f0baf3018",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "3rd Place OP Mults",
+    "label": "Mults",
+    "format": "{{msg.payload[2].multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 930,
+    "y": 760,
+    "wires": []
+  },
+  {
+    "id": "900630ff66352946",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "4th Place OP Mults",
+    "label": "Mults",
+    "format": "{{msg.payload[3].multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 930,
+    "y": 800,
+    "wires": []
+  },
+  {
+    "id": "cca1c89c90290ebc",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "5th Place OP Mults",
+    "label": "Mults",
+    "format": "{{msg.payload[4].multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 930,
+    "y": 840,
+    "wires": []
+  },
+  {
+    "id": "97a57d2397a978dc",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "6th Place OP Mults",
+    "label": "Mults",
+    "format": "{{msg.payload[5].multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 930,
+    "y": 880,
+    "wires": []
+  },
+  {
+    "id": "cc5cb58dad3a8a3b",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "7th Place OP Mults",
+    "label": "Mults",
+    "format": "{{msg.payload[6].multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 930,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "3acac32e8604c765",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 4,
+    "width": 3,
+    "height": 2,
+    "name": "8th Place OP Mults",
+    "label": "Mults",
+    "format": "{{msg.payload[7].multiplier}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 930,
+    "y": 960,
+    "wires": []
+  },
+  {
+    "id": "5792447de0131e73",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL Select Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select count(operator) as rate, \noperator as operator \nfrom qsos \nwhere operator='{{{payload.operator}}}' \nand timestamp >= datetime('now','-3 hours');",
+    "output": "str",
+    "x": 550,
+    "y": 2960,
+    "wires": [
+      [
+        "b109159d6097873c",
+        "e803250cbcc367d9"
+      ]
+    ]
+  },
+  {
+    "id": "b109159d6097873c",
+    "type": "sqlite",
+    "z": "c8e1ef6f509cd75a",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 760,
+    "y": 2960,
+    "wires": [
+      [
+        "9c9f6b5cec40d880",
+        "8c44059f5aac0c6f"
+      ]
+    ]
+  },
+  {
+    "id": "0b5869c1c2800a67",
+    "type": "change",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set Original to Payload",
+    "rules": [
+      {
+        "t": "set",
+        "p": "original",
+        "pt": "msg",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 200,
+    "y": 2960,
+    "wires": [
+      [
+        "8ca3011dd6359462"
+      ]
+    ]
+  },
+  {
+    "id": "85bbbbb955279cce",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 7,
+    "width": 3,
+    "height": 2,
+    "name": "1st Place Current 1Hr Run Rate",
+    "label": "1Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2570,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "a8a629af1c61453f",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 7,
+    "width": 3,
+    "height": 2,
+    "name": "2nd Place Current 1Hr Run Rate",
+    "label": "1Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2570,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "a0468e25398dee83",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 7,
+    "width": 3,
+    "height": 2,
+    "name": "3rd Place Current 1Hr Run Rate",
+    "label": "1Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2570,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "faaa9c2c4f22247a",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 7,
+    "width": 3,
+    "height": 2,
+    "name": "4th Place Current 1Hr Run Rate",
+    "label": "1Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2570,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "8195b25c71b87897",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 7,
+    "width": 3,
+    "height": 2,
+    "name": "5th Place Current 1Hr Run Rate",
+    "label": "1Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2570,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "5c8d08c380f3c83c",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 7,
+    "width": 3,
+    "height": 2,
+    "name": "6th Place Current 1Hr Run Rate",
+    "label": "1Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2570,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "79544073b704db82",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 7,
+    "width": 3,
+    "height": 2,
+    "name": "7th Place Current 1Hr Run Rate",
+    "label": "1Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2570,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "10cdec73865dc8b0",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 7,
+    "width": 3,
+    "height": 2,
+    "name": "8th Place Current 1Hr Run Rate",
+    "label": "1Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2570,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "0dd4886eb5efe40b",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 8,
+    "width": 3,
+    "height": 2,
+    "name": "1st Place Current 2Hr Run Rate",
+    "label": "2Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2090,
+    "y": 1000,
+    "wires": []
+  },
+  {
+    "id": "1d60e2ec9ef777d3",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 8,
+    "width": 3,
+    "height": 2,
+    "name": "2nd Place Current 2Hr Run Rate",
+    "label": "2Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2090,
+    "y": 1060,
+    "wires": []
+  },
+  {
+    "id": "16ed5df7bb6031a9",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 8,
+    "width": 3,
+    "height": 2,
+    "name": "3rd Place Current 2Hr Run Rate",
+    "label": "2Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2090,
+    "y": 1120,
+    "wires": []
+  },
+  {
+    "id": "9b0da2b2603edbdd",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 8,
+    "width": 3,
+    "height": 2,
+    "name": "4th Place Current 2Hr Run Rate",
+    "label": "2Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2090,
+    "y": 1180,
+    "wires": []
+  },
+  {
+    "id": "4a5f395f4ffdd7ed",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 8,
+    "width": 3,
+    "height": 2,
+    "name": "5th Place Current 2Hr Run Rate",
+    "label": "2Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2090,
+    "y": 1240,
+    "wires": []
+  },
+  {
+    "id": "1343d07ab73fd624",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 8,
+    "width": 3,
+    "height": 2,
+    "name": "6th Place Current 2Hr Run Rate",
+    "label": "2Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2090,
+    "y": 1300,
+    "wires": []
+  },
+  {
+    "id": "582de778fcc4c175",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 8,
+    "width": 3,
+    "height": 2,
+    "name": "7th Place Current 2Hr Run Rate",
+    "label": "2Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2090,
+    "y": 1360,
+    "wires": []
+  },
+  {
+    "id": "648aa4a6cc2e22db",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 8,
+    "width": 3,
+    "height": 2,
+    "name": "8th Place Current 2Hr Run Rate",
+    "label": "2Hr Rate",
+    "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+    "layout": "col-center",
+    "className": "",
+    "x": 2090,
+    "y": 1420,
+    "wires": []
+  },
+  {
+    "id": "da67b9b7e9829477",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 9,
+    "width": 3,
+    "height": 2,
+    "name": "1st Place Overall Trending",
+    "label": "Overall",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1960,
+    "y": 1480,
+    "wires": []
+  },
+  {
+    "id": "946213d343357cf2",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Overall Trending Arrow Direction",
+    "func": "let y = flow.get(\"OP0_1HrTrendScore\");\nlet z = flow.get(\"OP0_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP0_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP0_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP0_TrendScore\",totalscore);\n\n\nif (msg.payload[0] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 1480,
+    "wires": [
+      [
+        "da67b9b7e9829477",
+        "7efa1ebb794e5dea"
+      ]
+    ]
+  },
+  {
+    "id": "567e1c90bbb39274",
+    "type": "inject",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 170,
+    "y": 2860,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e803250cbcc367d9",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 730,
+    "y": 2920,
+    "wires": []
+  },
+  {
+    "id": "57b1c5dc031afdfd",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1470,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "9c9f6b5cec40d880",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 910,
+    "y": 2900,
+    "wires": []
+  },
+  {
+    "id": "582eb93ec7687986",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "1st Place Busted Calls",
+    "label": "Busted",
+    "format": "{{msg.payload[0].busted}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 880,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "f10eaa69c05b8a4c",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "2nd Place Busted Calls",
+    "label": "Busted",
+    "format": "{{msg.payload[1].busted}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 890,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "d89c6e30ca15bf1e",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "3rd Place Busted Calls",
+    "label": "Busted",
+    "format": "{{msg.payload[2].busted}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 880,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "46a109ee0a2e75aa",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "4th Place Busted Calls",
+    "label": "Busted",
+    "format": "{{msg.payload[3].busted}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 880,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "0d32551591f4febb",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "5th Place Busted Calls",
+    "label": "Busted",
+    "format": "{{msg.payload[4].busted}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 880,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "4e25eef7a46062ed",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "6th Place Busted Calls",
+    "label": "Busted",
+    "format": "{{msg.payload[5].busted}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 880,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "74823dbc48c66f23",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "7th Place Busted Calls",
+    "label": "Busted",
+    "format": "{{msg.payload[6].busted}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 880,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "4e1d05c16ace0917",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 5,
+    "width": 3,
+    "height": 2,
+    "name": "8th Place Busted Calls",
+    "label": "Busted",
+    "format": "{{msg.payload[7].busted}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 880,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "8ca3011dd6359462",
+    "type": "split",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 370,
+    "y": 2960,
+    "wires": [
+      [
+        "5792447de0131e73",
+        "f678bf79cef11c12"
+      ]
+    ]
+  },
+  {
+    "id": "194d2908ec3d0929",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1110,
+    "y": 2900,
+    "wires": []
+  },
+  {
+    "id": "8c44059f5aac0c6f",
+    "type": "join",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "mode": "auto",
+    "build": "object",
+    "property": "payload",
+    "propertyType": "msg",
+    "key": "topic",
+    "joiner": "\\n",
+    "joinerType": "str",
+    "accumulate": "false",
+    "timeout": "",
+    "count": "",
+    "reduceRight": false,
+    "x": 930,
+    "y": 2960,
+    "wires": [
+      [
+        "194d2908ec3d0929"
+      ]
+    ]
+  },
+  {
+    "id": "3bb04de21f29fc73",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 2330,
+    "y": 220,
+    "wires": [
+      [
+        "85bbbbb955279cce"
+      ],
+      [
+        "85bbbbb955279cce"
+      ],
+      [
+        "85bbbbb955279cce"
+      ]
+    ]
+  },
+  {
+    "id": "4f9539da465cd05a",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 2330,
+    "y": 280,
+    "wires": [
+      [
+        "a8a629af1c61453f"
+      ],
+      [
+        "a8a629af1c61453f"
+      ],
+      [
+        "a8a629af1c61453f"
+      ]
+    ]
+  },
+  {
+    "id": "fd38811164759d48",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 2330,
+    "y": 340,
+    "wires": [
+      [
+        "a0468e25398dee83"
+      ],
+      [
+        "a0468e25398dee83"
+      ],
+      [
+        "a0468e25398dee83"
+      ]
+    ]
+  },
+  {
+    "id": "d929f189b5cdeb97",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 2330,
+    "y": 400,
+    "wires": [
+      [
+        "faaa9c2c4f22247a"
+      ],
+      [
+        "faaa9c2c4f22247a"
+      ],
+      [
+        "faaa9c2c4f22247a"
+      ]
+    ]
+  },
+  {
+    "id": "c0c834cec53f2580",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 2330,
+    "y": 460,
+    "wires": [
+      [
+        "8195b25c71b87897"
+      ],
+      [
+        "8195b25c71b87897"
+      ],
+      [
+        "8195b25c71b87897"
+      ]
+    ]
+  },
+  {
+    "id": "52e553a31c598e10",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 2330,
+    "y": 520,
+    "wires": [
+      [
+        "5c8d08c380f3c83c"
+      ],
+      [
+        "5c8d08c380f3c83c"
+      ],
+      [
+        "5c8d08c380f3c83c"
+      ]
+    ]
+  },
+  {
+    "id": "d6bbb415a21b9265",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 2330,
+    "y": 580,
+    "wires": [
+      [
+        "79544073b704db82"
+      ],
+      [
+        "79544073b704db82"
+      ],
+      [
+        "79544073b704db82"
+      ]
+    ]
+  },
+  {
+    "id": "54a6b73ccb177ca4",
+    "type": "subflow:c967abe5be484ee6",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 2330,
+    "y": 640,
+    "wires": [
+      [
+        "10cdec73865dc8b0"
+      ],
+      [
+        "10cdec73865dc8b0"
+      ],
+      [
+        "10cdec73865dc8b0"
+      ]
+    ]
+  },
+  {
+    "id": "852b78df4e8c39e7",
+    "type": "sqlite",
+    "z": "c8e1ef6f509cd75a",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1040,
+    "y": 1080,
+    "wires": [
+      [
+        "7469b23c7663c08e",
+        "049bcc15ab764004",
+        "05e0cd16574b5651",
+        "c07a9500991a7f78",
+        "f169f8d25b9860cb",
+        "29cc830183af111c",
+        "2315776197970517",
+        "53a7fd969e406817",
+        "a65f77a9cdad872f",
+        "21fc033df0503c30"
+      ]
+    ]
+  },
+  {
+    "id": "1aa5e6353669ca19",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 2Hr Rate",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos,\ntotal(isbusted) as busted,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+    "output": "str",
+    "x": 240,
+    "y": 1240,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "0173339b90c30073",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 9,
+    "width": 3,
+    "height": 2,
+    "name": "2nd Place Overall Trending",
+    "label": "Overall",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1960,
+    "y": 1520,
+    "wires": []
+  },
+  {
+    "id": "8ce83f211846106d",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 9,
+    "width": 3,
+    "height": 2,
+    "name": "3rd Place Overall Trending",
+    "label": "Overall",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1960,
+    "y": 1560,
+    "wires": []
+  },
+  {
+    "id": "a06aef0809e3b058",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 9,
+    "width": 3,
+    "height": 2,
+    "name": "4th Place Overall Trending",
+    "label": "Overall",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1960,
+    "y": 1600,
+    "wires": []
+  },
+  {
+    "id": "fcc708c0b3c585dc",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 9,
+    "width": 3,
+    "height": 2,
+    "name": "5th Place Overall Trending",
+    "label": "Overall",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1960,
+    "y": 1640,
+    "wires": []
+  },
+  {
+    "id": "11aabad73297429a",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 9,
+    "width": 3,
+    "height": 2,
+    "name": "6th Place Overall Trending",
+    "label": "Overall",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1960,
+    "y": 1680,
+    "wires": []
+  },
+  {
+    "id": "048583383c6c2b63",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 9,
+    "width": 3,
+    "height": 2,
+    "name": "7th Place Overall Trending",
+    "label": "Overall",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1960,
+    "y": 1720,
+    "wires": []
+  },
+  {
+    "id": "b92aec5ddc71fafc",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 9,
+    "width": 3,
+    "height": 2,
+    "name": "8th Place Overall Trending",
+    "label": "Overall",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1960,
+    "y": 1760,
+    "wires": []
+  },
+  {
+    "id": "5b5a697a70efb8e5",
+    "type": "ui_chart",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Operator 1Hr Q's/Hr",
+    "group": "2da8694540143f9a",
+    "order": 1,
+    "width": 13,
+    "height": 5,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "",
+    "removeOlder": "12",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 2540,
+    "y": 680,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "4386336ee678eaa6",
+    "type": "ui_chart",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Operators 2Hr Q's/Hr",
+    "group": "ba191f5b911d96f8",
+    "order": 1,
+    "width": 13,
+    "height": 5,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "",
+    "removeOlder": "12",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 2020,
+    "y": 960,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f2a6aaaadecd230e",
+    "type": "ui_chart",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Operators Score Chart",
+    "group": "6c301c05c13a5e40",
+    "order": 1,
+    "width": 13,
+    "height": 5,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "",
+    "removeOlder": "12",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 2540,
+    "y": 720,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5efdb6488628af4b",
+    "type": "ui_chart",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Operators QSOs Chart",
+    "group": "1d57c18be03cdf58",
+    "order": 1,
+    "width": 13,
+    "height": 5,
+    "label": "",
+    "chartType": "line",
+    "legend": "true",
+    "xformat": "HH:mm",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "0",
+    "ymax": "",
+    "removeOlder": "12",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": true,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 2540,
+    "y": 760,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f1d22697c74b510d",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4fe32a048d3e8016",
+    "order": 1,
+    "width": 2,
+    "height": 2,
+    "name": "1st Place 1Hr Rate Trending",
+    "label": "1hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 1840,
+    "wires": []
+  },
+  {
+    "id": "01133d67adbaf806",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "cf0fd8137d27fde9",
+    "order": 1,
+    "width": 2,
+    "height": 2,
+    "name": "2nd Place 1Hr Rate Trending",
+    "label": "1hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 1880,
+    "wires": []
+  },
+  {
+    "id": "8ce512c3b1c7c11a",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "a54565f26ef859a6",
+    "order": 1,
+    "width": 2,
+    "height": 2,
+    "name": "3rd Place 1Hr Rate Trending",
+    "label": "1hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 1920,
+    "wires": []
+  },
+  {
+    "id": "43d8d1e673f4cd7c",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "53db3fa281c44012",
+    "order": 1,
+    "width": 2,
+    "height": 2,
+    "name": "4th Place 1Hr Rate Trending",
+    "label": "1hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 1960,
+    "wires": []
+  },
+  {
+    "id": "cc1e30724335086d",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "5ea99b2ffafa1455",
+    "order": 1,
+    "width": 2,
+    "height": 2,
+    "name": "5th Place 1Hr Rate Trending",
+    "label": "1hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2000,
+    "wires": []
+  },
+  {
+    "id": "08912b465a9ef75e",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "2083f5d4aa25f442",
+    "order": 1,
+    "width": 2,
+    "height": 2,
+    "name": "6th Place 1Hr Rate Trending",
+    "label": "1hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2040,
+    "wires": []
+  },
+  {
+    "id": "804ab4252f9e6b08",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "1f8381235f15779f",
+    "order": 1,
+    "width": 2,
+    "height": 2,
+    "name": "7th Place 1Hr Rate Trending",
+    "label": "1hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2080,
+    "wires": []
+  },
+  {
+    "id": "51f7aec3999c34fe",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "49e8559f5916fe38",
+    "order": 1,
+    "width": 2,
+    "height": 2,
+    "name": "8th Place 1Hr Rate Trending",
+    "label": "1hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2120,
+    "wires": []
+  },
+  {
+    "id": "84125f6fa5dde217",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP0_1HRateCurrent\");\nflow.set([\"OP0_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[0] != null)\n{\n    msg.rate = msg.payload[0].rate\n    let call = msg.payload[0].operator\n    let rate = msg.payload[0].rate\n    flow.set([\"OP0\"],[call])\n    flow.set([\"OP0_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[0] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 220,
+    "wires": [
+      [
+        "3bb04de21f29fc73"
+      ]
+    ]
+  },
+  {
+    "id": "049bcc15ab764004",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP0_2HRateCurrent\");\nflow.set([\"OP0_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[0] != null)\n{\n    msg.rate = msg.payload[0].rate\n    rate = msg.payload[0].rate\n    flow.set([\"OP0_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[0] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 1000,
+    "wires": [
+      [
+        "c73ec9d8818ae376"
+      ]
+    ]
+  },
+  {
+    "id": "05e0cd16574b5651",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP1_2HRateCurrent\");\nflow.set([\"OP1_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[1] != null)\n{\n    msg.rate = msg.payload[1].rate\n    rate = msg.payload[1].rate\n    flow.set([\"OP1_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[1] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 1060,
+    "wires": [
+      [
+        "99d4566b9cf8980e"
+      ]
+    ]
+  },
+  {
+    "id": "c07a9500991a7f78",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP2_2HRateCurrent\");\nflow.set([\"OP2_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[2] != null)\n{\n    msg.rate = msg.payload[2].rate\n    rate = msg.payload[2].rate\n    flow.set([\"OP2_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[2] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 1120,
+    "wires": [
+      [
+        "02876d688b9989e2"
+      ]
+    ]
+  },
+  {
+    "id": "f169f8d25b9860cb",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP3_2HRateCurrent\");\nflow.set([\"OP3_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[3] != null)\n{\n    msg.rate = msg.payload[3].rate\n    rate = msg.payload[3].rate\n    flow.set([\"OP3_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[3] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 1180,
+    "wires": [
+      [
+        "d44619f01e1ce742"
+      ]
+    ]
+  },
+  {
+    "id": "29cc830183af111c",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow rate",
+    "func": "let previousrate = flow.get(\"OP4_2HRateCurrent\");\nflow.set([\"OP4_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[4] != null)\n{\n    msg.rate = msg.payload[4].rate\n    rate = msg.payload[4].rate\n    flow.set([\"OP4_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[4] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 1240,
+    "wires": [
+      [
+        "69315433e45eeb72"
+      ]
+    ]
+  },
+  {
+    "id": "2315776197970517",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow rate",
+    "func": "let previousrate = flow.get(\"OP5_2HRateCurrent\");\nflow.set([\"OP5_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[5] != null)\n{\n    msg.rate = msg.payload[5].rate\n    rate = msg.payload[5].rate\n    flow.set([\"OP5_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[5] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 1300,
+    "wires": [
+      [
+        "f5e8e6ce5aaf36a1"
+      ]
+    ]
+  },
+  {
+    "id": "53a7fd969e406817",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow rate",
+    "func": "let previousrate = flow.get(\"OP6_2HRateCurrent\");\nflow.set([\"OP6_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[6] != null)\n{\n    msg.rate = msg.payload[6].rate\n    rate = msg.payload[6].rate\n    flow.set([\"OP6_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[6] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 1360,
+    "wires": [
+      [
+        "30dba7714a329859"
+      ]
+    ]
+  },
+  {
+    "id": "a65f77a9cdad872f",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow rate",
+    "func": "let previousrate = flow.get(\"OP7_2HRateCurrent\");\nflow.set([\"OP7_2HRatePrevious\"],[previousrate]);\n\nif (msg.payload[7] != null)\n{\n    msg.rate = msg.payload[7].rate\n    rate = msg.payload[7].rate\n    flow.set([\"OP7_2HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[7] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1630,
+    "y": 1420,
+    "wires": [
+      [
+        "1171f1687a20db54"
+      ]
+    ]
+  },
+  {
+    "id": "71e08397fedf0ff4",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP1_1HRateCurrent\");\nflow.set([\"OP1_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[1] != null)\n{\n    msg.rate = msg.payload[1].rate\n    let call = msg.payload[1].operator\n    let rate = msg.payload[1].rate\n    flow.set([\"OP1\"],[call])\n    flow.set([\"OP1_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[1] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 280,
+    "wires": [
+      [
+        "4f9539da465cd05a"
+      ]
+    ]
+  },
+  {
+    "id": "2a30d423bfa0de72",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP3_1HRateCurrent\");\nflow.set([\"OP3_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[3] != null)\n{\n    msg.rate = msg.payload[3].rate\n    let call = msg.payload[3].operator\n    let rate = msg.payload[3].rate\n    flow.set([\"OP3\"],[call])\n    flow.set([\"OP3_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[3] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 400,
+    "wires": [
+      [
+        "d929f189b5cdeb97"
+      ]
+    ]
+  },
+  {
+    "id": "dab5d935729234b6",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP4_1HRateCurrent\");\nflow.set([\"OP4_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[4] != null)\n{\n    msg.rate = msg.payload[4].rate\n    let call = msg.payload[4].operator\n    let rate = msg.payload[4].rate\n    flow.set([\"OP4\"],[call])\n    flow.set([\"OP4_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[4] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 460,
+    "wires": [
+      [
+        "c0c834cec53f2580"
+      ]
+    ]
+  },
+  {
+    "id": "83a4a868bef4d301",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP5_1HRateCurrent\");\nflow.set([\"OP5_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[5] != null)\n{\n    msg.rate = msg.payload[5].rate\n    let call = msg.payload[5].operator\n    let rate = msg.payload[5].rate\n    flow.set([\"OP5\"],[call])\n    flow.set([\"OP5_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[5] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 520,
+    "wires": [
+      [
+        "52e553a31c598e10"
+      ]
+    ]
+  },
+  {
+    "id": "08bb28416a4c857f",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP6_1HRateCurrent\");\nflow.set([\"OP6_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[6] != null)\n{\n    msg.rate = msg.payload[6].rate\n    let call = msg.payload[6].operator\n    let rate = msg.payload[6].rate\n    flow.set([\"OP6\"],[call])\n    flow.set([\"OP6_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[6] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 580,
+    "wires": [
+      [
+        "d6bbb415a21b9265"
+      ]
+    ]
+  },
+  {
+    "id": "9db860a23cb0de6e",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP7_1HRateCurrent\");\nflow.set([\"OP7_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[7] != null)\n{\n    msg.rate = msg.payload[7].rate\n    let call = msg.payload[7].operator\n    let rate = msg.payload[7].rate\n    flow.set([\"OP7\"],[call])\n    flow.set([\"OP7_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[7] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 640,
+    "wires": [
+      [
+        "54a6b73ccb177ca4"
+      ]
+    ]
+  },
+  {
+    "id": "689a711ac2c1cc37",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set msg.rate & flow set",
+    "func": "let previousrate = flow.get(\"OP2_1HRateCurrent\");\nflow.set([\"OP2_1HRatePrevious\"],[previousrate]);\n\nif (msg.payload[2] != null)\n{\n    msg.rate = msg.payload[2].rate\n    let call = msg.payload[2].operator\n    let rate = msg.payload[2].rate\n    flow.set([\"OP2\"],[call])\n    flow.set([\"OP2_1HRateCurrent\"],[rate])\n    return msg;\n}\n\nif (msg.payload[2] == null)\n{\n    msg.rate = 0\n    return msg;\n}\n\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 340,
+    "wires": [
+      [
+        "fd38811164759d48"
+      ]
+    ]
+  },
+  {
+    "id": "f09ca3fb1f789f90",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4fe32a048d3e8016",
+    "order": 2,
+    "width": 2,
+    "height": 2,
+    "name": "1st Place 2Hr Rate Trending",
+    "label": "2hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2200,
+    "wires": []
+  },
+  {
+    "id": "9f49e1b3a8dbcbc9",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "cf0fd8137d27fde9",
+    "order": 2,
+    "width": 2,
+    "height": 2,
+    "name": "2nd Place 2Hr Rate Trending",
+    "label": "2hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2240,
+    "wires": []
+  },
+  {
+    "id": "78a88421b603dfad",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "a54565f26ef859a6",
+    "order": 2,
+    "width": 2,
+    "height": 2,
+    "name": "3rd Place 2Hr Rate Trending",
+    "label": "2hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2280,
+    "wires": []
+  },
+  {
+    "id": "6d0ddc9efba4411e",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "53db3fa281c44012",
+    "order": 2,
+    "width": 2,
+    "height": 2,
+    "name": "4th Place 2Hr Rate Trending",
+    "label": "2hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2320,
+    "wires": []
+  },
+  {
+    "id": "9fdc4f465d7dc9b1",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "5ea99b2ffafa1455",
+    "order": 2,
+    "width": 2,
+    "height": 2,
+    "name": "5th Place 2Hr Rate Trending",
+    "label": "2hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2360,
+    "wires": []
+  },
+  {
+    "id": "23310392a454374a",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "2083f5d4aa25f442",
+    "order": 2,
+    "width": 2,
+    "height": 2,
+    "name": "6th Place 2Hr Rate Trending",
+    "label": "2hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2400,
+    "wires": []
+  },
+  {
+    "id": "9119d9c282c42a34",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "1f8381235f15779f",
+    "order": 2,
+    "width": 2,
+    "height": 2,
+    "name": "7th Place 2Hr Rate Trending",
+    "label": "2hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2440,
+    "wires": []
+  },
+  {
+    "id": "187d324ac6f32059",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "49e8559f5916fe38",
+    "order": 2,
+    "width": 2,
+    "height": 2,
+    "name": "8th Place 2Hr Rate Trending",
+    "label": "2hr Rate",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1980,
+    "y": 2480,
+    "wires": []
+  },
+  {
+    "id": "2dbfd82fa9a1874b",
+    "type": "link in",
+    "z": "c8e1ef6f509cd75a",
+    "name": "OP Competition Stats Clear IN",
+    "links": [
+      "5e1859619292b1b8"
+    ],
+    "x": 1875,
+    "y": 880,
+    "wires": [
+      [
+        "f48d809a801528dc",
+        "ea093b5555301fc3",
+        "48a3eb8596b10e96"
+      ]
+    ]
+  },
+  {
+    "id": "f48d809a801528dc",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Reset Flow Variables",
+    "func": "flow.set('OP0', undefined);\nflow.set('OP0_1HRateCurrent', undefined);\nflow.set('OP0_1HRatePrevious', undefined);\nflow.set('OP0_1HrTrendScore', undefined);\nflow.set('OP0_2HRateCurrent', undefined);\nflow.set('OP0_2HRatePrevious', undefined);\nflow.set('OP0_2HrTrendScore', undefined);\nflow.set('OP0_TrendScore', undefined);\n\nflow.set('OP1', undefined);\nflow.set('OP1_1HRateCurrent', undefined);\nflow.set('OP1_1HRatePrevious', undefined);\nflow.set('OP1_1HrTrendScore', undefined);\nflow.set('OP1_2HRateCurrent', undefined);\nflow.set('OP1_2HRatePrevious', undefined);\nflow.set('OP1_2HrTrendScore', undefined);\nflow.set('OP1_TrendScore', undefined);\n\nflow.set('OP2', undefined);\nflow.set('OP2_1HRateCurrent', undefined);\nflow.set('OP2_1HRatePrevious', undefined);\nflow.set('OP2_1HrTrendScore', undefined);\nflow.set('OP2_2HRateCurrent', undefined);\nflow.set('OP2_2HRatePrevious', undefined);\nflow.set('OP2_2HrTrendScore', undefined);\nflow.set('OP2_TrendScore', undefined);\n\nflow.set('OP3', undefined);\nflow.set('OP3_1HRateCurrent', undefined);\nflow.set('OP3_1HRatePrevious', undefined);\nflow.set('OP3_1HrTrendScore', undefined);\nflow.set('OP3_2HRateCurrent', undefined);\nflow.set('OP3_2HRatePrevious', undefined);\nflow.set('OP3_2HrTrendScore', undefined);\nflow.set('OP3_TrendScore', undefined);\n\nflow.set('OP4', undefined);\nflow.set('OP4_1HRateCurrent', undefined);\nflow.set('OP4_1HRatePrevious', undefined);\nflow.set('OP4_1HrTrendScore', undefined);\nflow.set('OP4_2HRateCurrent', undefined);\nflow.set('OP4_2HRatePrevious', undefined);\nflow.set('OP4_2HrTrendScore', undefined);\nflow.set('OP4_TrendScore', undefined);\n\nflow.set('OP5', undefined);\nflow.set('OP5_1HRateCurrent', undefined);\nflow.set('OP5_1HRatePrevious', undefined);\nflow.set('OP5_1HrTrendScore', undefined);\nflow.set('OP5_2HRateCurrent', undefined);\nflow.set('OP5_2HRatePrevious', undefined);\nflow.set('OP5_2HrTrendScore', undefined);\nflow.set('OP5_TrendScore', undefined);\n\nflow.set('OP6', undefined);\nflow.set('OP6_1HRateCurrent', undefined);\nflow.set('OP6_1HRatePrevious', undefined);\nflow.set('OP6_1HrTrendScore', undefined);\nflow.set('OP6_2HRateCurrent', undefined);\nflow.set('OP6_2HRatePrevious', undefined);\nflow.set('OP6_2HrTrendScore', undefined);\nflow.set('OP6_TrendScore', undefined);\n\nflow.set('OP7', undefined);\nflow.set('OP7_1HRateCurrent', undefined);\nflow.set('OP7_1HRatePrevious', undefined);\nflow.set('OP7_1HrTrendScore', undefined);\nflow.set('OP7_2HRateCurrent', undefined);\nflow.set('OP7_2HRatePrevious', undefined);\nflow.set('OP7_2HrTrendScore', undefined);\nflow.set('OP7_TrendScore', undefined);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2040,
+    "y": 840,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "85b47be5c163b3f0",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRateTrendscore\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 1840,
+    "wires": [
+      [
+        "f1d22697c74b510d",
+        "fb8bc0817c84501c"
+      ]
+    ]
+  },
+  {
+    "id": "5086efc9ddeec8ac",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1Hr Rate Trending Arrow Direction",
+    "func": "let ratecurrent = flow.get(\"OP1_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 1880,
+    "wires": [
+      [
+        "01133d67adbaf806",
+        "4062aca95dfdd1be"
+      ]
+    ]
+  },
+  {
+    "id": "9dfe1a3480d22cf3",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1Hr Rate Trending Arrow Direction",
+    "func": "let ratecurrent = flow.get(\"OP2_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 1920,
+    "wires": [
+      [
+        "8ce512c3b1c7c11a",
+        "84e26f7e2bc1bf34"
+      ]
+    ]
+  },
+  {
+    "id": "92ed056eda686753",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1Hr Rate Trending Arrow Direction",
+    "func": "let ratecurrent = flow.get(\"OP3_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 1960,
+    "wires": [
+      [
+        "43d8d1e673f4cd7c",
+        "e11754ef4c698278"
+      ]
+    ]
+  },
+  {
+    "id": "f5227e733dc9367f",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1Hr Rate Trending Arrow Direction",
+    "func": "let ratecurrent = flow.get(\"OP4_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2000,
+    "wires": [
+      [
+        "cc1e30724335086d",
+        "61d1f848cde15fe2"
+      ]
+    ]
+  },
+  {
+    "id": "5e640a0c686ea653",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1Hr Rate Trending Arrow Direction",
+    "func": "let ratecurrent = flow.get(\"OP5_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2040,
+    "wires": [
+      [
+        "08912b465a9ef75e",
+        "9e5fa2f331f79e43"
+      ]
+    ]
+  },
+  {
+    "id": "95638eb6e9f95f5c",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1Hr Rate Trending Arrow Direction",
+    "func": "let ratecurrent = flow.get(\"OP6_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2080,
+    "wires": [
+      [
+        "804ab4252f9e6b08",
+        "6be503635fa850eb"
+      ]
+    ]
+  },
+  {
+    "id": "262914991187e01b",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "1Hr Rate Trending Arrow Direction",
+    "func": "let ratecurrent = flow.get(\"OP7_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2120,
+    "wires": [
+      [
+        "51f7aec3999c34fe",
+        "4a1a6dfeb336fb4a"
+      ]
+    ]
+  },
+  {
+    "id": "fdcd1a86d1dbece5",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set topic & payload",
+    "func": "let rate = 0\n\nif (msg.payload != null)\n{\n    msg.topic = msg.payload.operator;\n    rate = msg.payload.rate\n    msg.payload = rate;\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2230,
+    "y": 680,
+    "wires": [
+      [
+        "5b5a697a70efb8e5"
+      ]
+    ]
+  },
+  {
+    "id": "a44ee2cc9a9b7398",
+    "type": "split",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 2030,
+    "y": 680,
+    "wires": [
+      [
+        "fdcd1a86d1dbece5"
+      ]
+    ]
+  },
+  {
+    "id": "2b2f3e640248b72a",
+    "type": "delay",
+    "z": "c8e1ef6f509cd75a",
+    "name": "10s Random Delay",
+    "pauseType": "random",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "10",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 310,
+    "y": 520,
+    "wires": [
+      [
+        "7871710524fd6ea8",
+        "a44c95b611befae2"
+      ]
+    ]
+  },
+  {
+    "id": "fd25a617c30bc58c",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set topic & payload",
+    "func": "let rate = 0\n\nif (msg.payload != null)\n{\n    msg.topic = msg.payload.operator;\n    rate = msg.payload.rate\n    msg.payload = rate;\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1730,
+    "y": 960,
+    "wires": [
+      [
+        "4386336ee678eaa6"
+      ]
+    ]
+  },
+  {
+    "id": "7469b23c7663c08e",
+    "type": "split",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 1530,
+    "y": 960,
+    "wires": [
+      [
+        "fd25a617c30bc58c"
+      ]
+    ]
+  },
+  {
+    "id": "e86e6ef9f37c360d",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set topic & payload",
+    "func": "let score = 0\n\nif (msg.payload != null)\n{\n    msg.topic = msg.payload.operator;\n    score = msg.payload.score\n    msg.payload = score;\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2230,
+    "y": 720,
+    "wires": [
+      [
+        "f2a6aaaadecd230e"
+      ]
+    ]
+  },
+  {
+    "id": "76b9e5dff8bd683f",
+    "type": "split",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 2030,
+    "y": 720,
+    "wires": [
+      [
+        "e86e6ef9f37c360d"
+      ]
+    ]
+  },
+  {
+    "id": "ab1fc32faaf1b4e3",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Set topic & payload",
+    "func": "let qsos = 0\n\nif (msg.payload != null)\n{\n    msg.topic = msg.payload.operator;\n    qsos = msg.payload.totalqsos;\n    msg.payload = qsos;\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2230,
+    "y": 760,
+    "wires": [
+      [
+        "5efdb6488628af4b"
+      ]
+    ]
+  },
+  {
+    "id": "ef7856ab646dc938",
+    "type": "split",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 2030,
+    "y": 760,
+    "wires": [
+      [
+        "ab1fc32faaf1b4e3"
+      ]
+    ]
+  },
+  {
+    "id": "ea093b5555301fc3",
+    "type": "change",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Clear Stats",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "[]",
+        "tot": "json"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2350,
+    "y": 880,
+    "wires": [
+      [
+        "5b5a697a70efb8e5",
+        "f2a6aaaadecd230e",
+        "5efdb6488628af4b",
+        "4386336ee678eaa6"
+      ]
+    ]
+  },
+  {
+    "id": "c73ec9d8818ae376",
+    "type": "subflow:7d3bb9d663bb9f7c",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 1840,
+    "y": 1000,
+    "wires": [
+      [
+        "0dd4886eb5efe40b"
+      ],
+      [
+        "0dd4886eb5efe40b"
+      ],
+      [
+        "0dd4886eb5efe40b"
+      ]
+    ]
+  },
+  {
+    "id": "99d4566b9cf8980e",
+    "type": "subflow:7d3bb9d663bb9f7c",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 1840,
+    "y": 1060,
+    "wires": [
+      [
+        "1d60e2ec9ef777d3"
+      ],
+      [
+        "1d60e2ec9ef777d3"
+      ],
+      [
+        "1d60e2ec9ef777d3"
+      ]
+    ]
+  },
+  {
+    "id": "02876d688b9989e2",
+    "type": "subflow:7d3bb9d663bb9f7c",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 1840,
+    "y": 1120,
+    "wires": [
+      [
+        "16ed5df7bb6031a9"
+      ],
+      [
+        "16ed5df7bb6031a9"
+      ],
+      [
+        "16ed5df7bb6031a9"
+      ]
+    ]
+  },
+  {
+    "id": "d44619f01e1ce742",
+    "type": "subflow:7d3bb9d663bb9f7c",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 1840,
+    "y": 1180,
+    "wires": [
+      [
+        "9b0da2b2603edbdd"
+      ],
+      [
+        "9b0da2b2603edbdd"
+      ],
+      [
+        "9b0da2b2603edbdd"
+      ]
+    ]
+  },
+  {
+    "id": "69315433e45eeb72",
+    "type": "subflow:7d3bb9d663bb9f7c",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 1840,
+    "y": 1240,
+    "wires": [
+      [
+        "4a5f395f4ffdd7ed"
+      ],
+      [
+        "4a5f395f4ffdd7ed"
+      ],
+      [
+        "4a5f395f4ffdd7ed"
+      ]
+    ]
+  },
+  {
+    "id": "f5e8e6ce5aaf36a1",
+    "type": "subflow:7d3bb9d663bb9f7c",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 1840,
+    "y": 1300,
+    "wires": [
+      [
+        "1343d07ab73fd624"
+      ],
+      [
+        "1343d07ab73fd624"
+      ],
+      [
+        "1343d07ab73fd624"
+      ]
+    ]
+  },
+  {
+    "id": "30dba7714a329859",
+    "type": "subflow:7d3bb9d663bb9f7c",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 1840,
+    "y": 1360,
+    "wires": [
+      [
+        "582de778fcc4c175"
+      ],
+      [
+        "582de778fcc4c175"
+      ],
+      [
+        "582de778fcc4c175"
+      ]
+    ]
+  },
+  {
+    "id": "1171f1687a20db54",
+    "type": "subflow:7d3bb9d663bb9f7c",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "x": 1840,
+    "y": 1420,
+    "wires": [
+      [
+        "648aa4a6cc2e22db"
+      ],
+      [
+        "648aa4a6cc2e22db"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "6dc0b640e1c8407e",
+    "type": "link out",
+    "z": "c8e1ef6f509cd75a",
+    "name": "OP Competition 1Hr Rate Trending OUT",
+    "mode": "link",
+    "links": [
+      "2c852c39b9025338"
+    ],
+    "x": 1455,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "2c852c39b9025338",
+    "type": "link in",
+    "z": "c8e1ef6f509cd75a",
+    "name": "OP Competition 1Hr Rate Trending IN",
+    "links": [
+      "6dc0b640e1c8407e"
+    ],
+    "x": 95,
+    "y": 2000,
+    "wires": [
+      [
+        "42dd44c1b9117a77",
+        "876a37f507199eeb",
+        "064a889f6409cc77"
+      ]
+    ]
+  },
+  {
+    "id": "42dd44c1b9117a77",
+    "type": "delay",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "4",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 720,
+    "y": 1640,
+    "wires": [
+      [
+        "946213d343357cf2",
+        "c41fe5e78ced3900",
+        "8b7529644a06a10b",
+        "68dc1380a35da70a",
+        "7a218c90f41660bb",
+        "0f2a696a3e1e9795",
+        "6fb6403fef98802f",
+        "ab0335159c22cdf3",
+        "c683557c7a6ec5e5"
+      ]
+    ]
+  },
+  {
+    "id": "7871710524fd6ea8",
+    "type": "delay",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 240,
+    "y": 1080,
+    "wires": [
+      [
+        "ab15bdd28dcafc0f"
+      ]
+    ]
+  },
+  {
+    "id": "7efa1ebb794e5dea",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1480,
+    "wires": []
+  },
+  {
+    "id": "8433fd3cfc7ddddc",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1520,
+    "wires": []
+  },
+  {
+    "id": "05eb80183770322c",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1560,
+    "wires": []
+  },
+  {
+    "id": "25baec64d0da4507",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1600,
+    "wires": []
+  },
+  {
+    "id": "7f7d7ec4af88bb2c",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1640,
+    "wires": []
+  },
+  {
+    "id": "2618bdd7f2dcf19e",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1680,
+    "wires": []
+  },
+  {
+    "id": "7c182c86d2aa1bbb",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1720,
+    "wires": []
+  },
+  {
+    "id": "5b48eca13a7f6b38",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1760,
+    "wires": []
+  },
+  {
+    "id": "29d1e8f7a6175ead",
+    "type": "comment",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Arrow Decision Tree",
+    "info": "Up = 2 pt\nEven = 1 pt\nDown = 0 pt\n\n\n\nOverall         1Hr             2Hr             Score\n--------------------------------------------------\n6               2               2               2\n5               2               1               2\n5               2               2               1\n++++++++\n4               2               1               1\n4               2               2               0\n4               2               0               2\n++++++++\n3               2               1               0\n3               2               0               1\n2               2               0               0\n\n---------------------------------------------------\n4               1               2               2\n4               1               1               2\n4               1               2               1\n++++++++\n3               1               1               1\n3               1               2               0\n3               1               0               2\n2               1               1               0\n2               1               0               1\n++++++++\n1               1               0               0\n\n\n---------------------------------------------------\n4               0               2               2\n++++++++\n3               0               1               2\n3               0               2               1\n3               0               1               2\n2               0               1               1\n2               0               2               0\n2               0               0               2\n++++++++\n1               0               1               0\n1               0               0               1\n0               0               0               0",
+    "x": 390,
+    "y": 1580,
+    "wires": []
+  },
+  {
+    "id": "61d3849fc0346ed6",
+    "type": "sqlite",
+    "z": "c8e1ef6f509cd75a",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1140,
+    "y": 2000,
+    "wires": [
+      [
+        "85b47be5c163b3f0",
+        "5086efc9ddeec8ac",
+        "9dfe1a3480d22cf3",
+        "92ed056eda686753",
+        "f5227e733dc9367f",
+        "5e640a0c686ea653",
+        "95638eb6e9f95f5c",
+        "262914991187e01b"
+      ]
+    ]
+  },
+  {
+    "id": "876a37f507199eeb",
+    "type": "delay",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "2",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 340,
+    "y": 2000,
+    "wires": [
+      [
+        "cae8e34448c7d707"
+      ]
+    ]
+  },
+  {
+    "id": "064a889f6409cc77",
+    "type": "delay",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "3",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 320,
+    "y": 2360,
+    "wires": [
+      [
+        "ba87c2d797a27f49"
+      ]
+    ]
+  },
+  {
+    "id": "ea8fe7c3d099027a",
+    "type": "sqlite",
+    "z": "c8e1ef6f509cd75a",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1120,
+    "y": 2360,
+    "wires": [
+      [
+        "51d5370931f82b77",
+        "0c7100be1b8f1e6e",
+        "574e2b1b185f9621",
+        "973bea3c3c2c49fc",
+        "63b8becc7f3f04d2",
+        "18412a2c6a9c09f9",
+        "572e78028a063520",
+        "52a9a7586d46fa54"
+      ]
+    ]
+  },
+  {
+    "id": "a44c95b611befae2",
+    "type": "switch",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Sort By",
+    "property": "opsorttype",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "mults",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "qsos",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "score",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 540,
+    "y": 520,
+    "wires": [
+      [
+        "71575ce3c0ee86ec"
+      ],
+      [
+        "b75e17f3e122ce80"
+      ],
+      [
+        "a94eae46690b111a"
+      ]
+    ]
+  },
+  {
+    "id": "71575ce3c0ee86ec",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 1Hr Rate Sorty by Mults",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount(case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+    "output": "str",
+    "x": 860,
+    "y": 480,
+    "wires": [
+      [
+        "e5bfbfa56cbfc533"
+      ]
+    ]
+  },
+  {
+    "id": "b75e17f3e122ce80",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 1Hr Rate Sorty by QSOs",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+    "output": "str",
+    "x": 860,
+    "y": 520,
+    "wires": [
+      [
+        "e5bfbfa56cbfc533"
+      ]
+    ]
+  },
+  {
+    "id": "a94eae46690b111a",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 1Hr Rate Sorty by Score",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+    "output": "str",
+    "x": 860,
+    "y": 560,
+    "wires": [
+      [
+        "e5bfbfa56cbfc533"
+      ]
+    ]
+  },
+  {
+    "id": "21fc033df0503c30",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1180,
+    "y": 1280,
+    "wires": []
+  },
+  {
+    "id": "ab15bdd28dcafc0f",
+    "type": "switch",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Sort By",
+    "property": "opsorttype",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "mults",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "qsos",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "score",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 420,
+    "y": 1080,
+    "wires": [
+      [
+        "2a3df4895a5d6780"
+      ],
+      [
+        "a84a90b1ace92c67"
+      ],
+      [
+        "ef5a4a7424394ddf"
+      ]
+    ]
+  },
+  {
+    "id": "2a3df4895a5d6780",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 2Hr Rate Sorty by Mults",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+    "output": "str",
+    "x": 740,
+    "y": 1040,
+    "wires": [
+      [
+        "852b78df4e8c39e7"
+      ]
+    ]
+  },
+  {
+    "id": "a84a90b1ace92c67",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 2Hr Rate Sorty by QSOs",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+    "output": "str",
+    "x": 740,
+    "y": 1080,
+    "wires": [
+      [
+        "852b78df4e8c39e7"
+      ]
+    ]
+  },
+  {
+    "id": "ef5a4a7424394ddf",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 2Hr Rate Sorty by Score",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+    "output": "str",
+    "x": 740,
+    "y": 1120,
+    "wires": [
+      [
+        "852b78df4e8c39e7"
+      ]
+    ]
+  },
+  {
+    "id": "34008e11c64ab041",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "e42cdfb590735e00",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "1st Place Run Qs",
+    "label": "Run Qs",
+    "format": "{{msg.payload[0].totalrun}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 570,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "5c267064e9a5cfe5",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "8bf40d033d555b71",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "2nd Place Run Qs",
+    "label": "Run Qs",
+    "format": "{{msg.payload[1].totalrun}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 570,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "fddd013b3adee514",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "4349237f79c6ee9d",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "3rd Place Run Qs",
+    "label": "Run Qs",
+    "format": "{{msg.payload[2].totalrun}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 570,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "568d906183a5bd04",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "de79e0318aecd9cc",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "4th Place Run Qs",
+    "label": "Run Qs",
+    "format": "{{msg.payload[3].totalrun}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 570,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "3dfd2af79efe8194",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "ec08fadc8d1d73bf",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "5th Place Run Qs",
+    "label": "Run Qs",
+    "format": "{{msg.payload[4].totalrun}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 570,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "e7b5e69e29f5048b",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "3dad506044ed2f24",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "6th Place Run Qs",
+    "label": "Run Qs",
+    "format": "{{msg.payload[5].totalrun}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 570,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "4469d749f5f64ed9",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "fbe68cb50c200a91",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "7th Place Run Qs",
+    "label": "Run Qs",
+    "format": "{{msg.payload[6].totalrun}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 570,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "2697e5e8c3c7b86f",
+    "type": "ui_text",
+    "z": "c8e1ef6f509cd75a",
+    "group": "84c8e4f24085b4d7",
+    "order": 6,
+    "width": 3,
+    "height": 2,
+    "name": "8th Place Run Qs",
+    "label": "Run Qs",
+    "format": "{{msg.payload[7].totalrun}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 570,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "b2ca0d5b02a007c5",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 1Hr Rate Sorty by Mults",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+    "output": "str",
+    "x": 840,
+    "y": 1960,
+    "wires": [
+      [
+        "61d3849fc0346ed6"
+      ]
+    ]
+  },
+  {
+    "id": "0c2d78020fc43d3c",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 1Hr Rate Sorty by QSOs",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+    "output": "str",
+    "x": 840,
+    "y": 2000,
+    "wires": [
+      [
+        "61d3849fc0346ed6"
+      ]
+    ]
+  },
+  {
+    "id": "49d35b7b223d6684",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 1Hr Rate Sorty by Score",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-1 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+    "output": "str",
+    "x": 840,
+    "y": 2040,
+    "wires": [
+      [
+        "61d3849fc0346ed6"
+      ]
+    ]
+  },
+  {
+    "id": "60bf62f0336c1629",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 2Hr Rate Sorty by Mults",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by multiplier desc;",
+    "output": "str",
+    "x": 800,
+    "y": 2320,
+    "wires": [
+      [
+        "ea8fe7c3d099027a"
+      ]
+    ]
+  },
+  {
+    "id": "833228df29bb26b4",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 2Hr Rate Sorty by QSOs",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by totalqsos desc;",
+    "output": "str",
+    "x": 800,
+    "y": 2360,
+    "wires": [
+      [
+        "ea8fe7c3d099027a"
+      ]
+    ]
+  },
+  {
+    "id": "04c095a340a5d105",
+    "type": "template",
+    "z": "c8e1ef6f509cd75a",
+    "name": "SQL by Operator 2Hr Rate Sorty by Score",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos,\ntotal(isbusted) as busted,\ncount(case when IsRunQSO == 1 then 1 end) as totalrun,\ncount (case when IsRunQSO  1 then 1 end) as totalsandp,\nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score,\noperator as operator,\n(select count(operator)\nfrom qsos \nwhere operator=qout.operator\nand timestamp >= datetime('now','-2 hours')) as rate\nfrom qsos qout\ngroup by operator \norder by score desc;",
+    "output": "str",
+    "x": 800,
+    "y": 2400,
+    "wires": [
+      [
+        "ea8fe7c3d099027a"
+      ]
+    ]
+  },
+  {
+    "id": "0c7100be1b8f1e6e",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "2Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP0_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2200,
+    "wires": [
+      [
+        "f09ca3fb1f789f90"
+      ]
+    ]
+  },
+  {
+    "id": "51d5370931f82b77",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "2Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP1_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2240,
+    "wires": [
+      [
+        "9f49e1b3a8dbcbc9"
+      ]
+    ]
+  },
+  {
+    "id": "574e2b1b185f9621",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "2Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP2_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2280,
+    "wires": [
+      [
+        "78a88421b603dfad"
+      ]
+    ]
+  },
+  {
+    "id": "973bea3c3c2c49fc",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "2Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP3_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2320,
+    "wires": [
+      [
+        "6d0ddc9efba4411e"
+      ]
+    ]
+  },
+  {
+    "id": "63b8becc7f3f04d2",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "2Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP4_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2360,
+    "wires": [
+      [
+        "9fdc4f465d7dc9b1"
+      ]
+    ]
+  },
+  {
+    "id": "18412a2c6a9c09f9",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "2Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP5_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2400,
+    "wires": [
+      [
+        "23310392a454374a"
+      ]
+    ]
+  },
+  {
+    "id": "572e78028a063520",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "2Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP6_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2440,
+    "wires": [
+      [
+        "9119d9c282c42a34"
+      ]
+    ]
+  },
+  {
+    "id": "52a9a7586d46fa54",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "2Hr Rate Trending Arrow Direction",
+    "func": "\nlet ratecurrent = flow.get(\"OP7_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1660,
+    "y": 2480,
+    "wires": [
+      [
+        "187d324ac6f32059"
+      ]
+    ]
+  },
+  {
+    "id": "c41fe5e78ced3900",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Overall Trending Arrow Direction",
+    "func": "let y = flow.get(\"OP1_1HrTrendScore\");\nlet z = flow.get(\"OP1_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP1_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP1_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP1_TrendScore\",totalscore);\n\nif (msg.payload[1] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 1520,
+    "wires": [
+      [
+        "0173339b90c30073",
+        "8433fd3cfc7ddddc"
+      ]
+    ]
+  },
+  {
+    "id": "8b7529644a06a10b",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Overall Trending Arrow Direction",
+    "func": "let y = flow.get(\"OP2_1HrTrendScore\");\nlet z = flow.get(\"OP2_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP2_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP2_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP2_TrendScore\",totalscore);\n\nif (msg.payload[2] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 1560,
+    "wires": [
+      [
+        "8ce83f211846106d",
+        "05eb80183770322c"
+      ]
+    ]
+  },
+  {
+    "id": "68dc1380a35da70a",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Overall Trending Arrow Direction",
+    "func": "let y = flow.get(\"OP3_1HrTrendScore\");\nlet z = flow.get(\"OP3_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP3_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP3_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP3_TrendScore\",totalscore);\n\nif (msg.payload[3] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 1600,
+    "wires": [
+      [
+        "a06aef0809e3b058",
+        "25baec64d0da4507"
+      ]
+    ]
+  },
+  {
+    "id": "7a218c90f41660bb",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Overall Trending Arrow Direction",
+    "func": "let y = flow.get(\"OP4_1HrTrendScore\");\nlet z = flow.get(\"OP4_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP4_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP4_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP4_TrendScore\",totalscore);\n\nif (msg.payload[4] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 1640,
+    "wires": [
+      [
+        "fcc708c0b3c585dc",
+        "7f7d7ec4af88bb2c"
+      ]
+    ]
+  },
+  {
+    "id": "0f2a696a3e1e9795",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Overall Trending Arrow Direction",
+    "func": "let y = flow.get(\"OP5_1HrTrendScore\");\nlet z = flow.get(\"OP5_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP5_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP5_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP5_TrendScore\",totalscore);\n\nif (msg.payload[5] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 1680,
+    "wires": [
+      [
+        "11aabad73297429a",
+        "2618bdd7f2dcf19e"
+      ]
+    ]
+  },
+  {
+    "id": "6fb6403fef98802f",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Overall Trending Arrow Direction",
+    "func": "let y = flow.get(\"OP6_1HrTrendScore\");\nlet z = flow.get(\"OP6_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP6_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP6_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP6_TrendScore\",totalscore);\n\nif (msg.payload[6] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 1720,
+    "wires": [
+      [
+        "048583383c6c2b63",
+        "7c182c86d2aa1bbb"
+      ]
+    ]
+  },
+  {
+    "id": "ab0335159c22cdf3",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Overall Trending Arrow Direction",
+    "func": "let y = flow.get(\"OP7_1HrTrendScore\");\nlet z = flow.get(\"OP7_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP7_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP7_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP7_TrendScore\",totalscore);\n\nif (msg.payload[7] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1650,
+    "y": 1760,
+    "wires": [
+      [
+        "b92aec5ddc71fafc",
+        "5b48eca13a7f6b38"
+      ]
+    ]
+  },
+  {
+    "id": "fb8bc0817c84501c",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1840,
+    "wires": []
+  },
+  {
+    "id": "4062aca95dfdd1be",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1880,
+    "wires": []
+  },
+  {
+    "id": "84e26f7e2bc1bf34",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1920,
+    "wires": []
+  },
+  {
+    "id": "e11754ef4c698278",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 1960,
+    "wires": []
+  },
+  {
+    "id": "61d1f848cde15fe2",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 2000,
+    "wires": []
+  },
+  {
+    "id": "9e5fa2f331f79e43",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 2040,
+    "wires": []
+  },
+  {
+    "id": "6be503635fa850eb",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 2080,
+    "wires": []
+  },
+  {
+    "id": "4a1a6dfeb336fb4a",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 2190,
+    "y": 2120,
+    "wires": []
+  },
+  {
+    "id": "cae8e34448c7d707",
+    "type": "switch",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Sort By",
+    "property": "opsorttype",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "mults",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "qsos",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "score",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 500,
+    "y": 2000,
+    "wires": [
+      [
+        "b2ca0d5b02a007c5"
+      ],
+      [
+        "0c2d78020fc43d3c"
+      ],
+      [
+        "49d35b7b223d6684"
+      ]
+    ]
+  },
+  {
+    "id": "ba87c2d797a27f49",
+    "type": "switch",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Sort By",
+    "property": "opsorttype",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "mults",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "qsos",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "score",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 500,
+    "y": 2360,
+    "wires": [
+      [
+        "60bf62f0336c1629"
+      ],
+      [
+        "833228df29bb26b4"
+      ],
+      [
+        "04c095a340a5d105"
+      ]
+    ]
+  },
+  {
+    "id": "48a3eb8596b10e96",
+    "type": "function",
+    "z": "c8e1ef6f509cd75a",
+    "name": "Clear Stats",
+    "func": "let arr = []\nlet obj\nfor(let i=0;i<9;i++){\n    obj = {}\n    obj.points = null\n    obj.multiplier = null\n    obj.totalqsos = null\n    obj.busted = null\n    obj.totalrun = null\n    obj.totalsandp = null\n    obj.score = null\n    obj.operator = null\n    obj.rate = null\n    arr.push(obj)\n}\n//node.warn(arr)\nmsg.payload = arr\nreturn msg;\n\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 190,
+    "y": 240,
+    "wires": [
+      [
+        "34008e11c64ab041",
+        "5c267064e9a5cfe5",
+        "fddd013b3adee514",
+        "568d906183a5bd04",
+        "3dfd2af79efe8194",
+        "e7b5e69e29f5048b",
+        "4469d749f5f64ed9",
+        "2697e5e8c3c7b86f",
+        "582eb93ec7687986",
+        "f10eaa69c05b8a4c",
+        "d89c6e30ca15bf1e",
+        "46a109ee0a2e75aa",
+        "0d32551591f4febb",
+        "4e25eef7a46062ed",
+        "74823dbc48c66f23",
+        "4e1d05c16ace0917",
+        "03065499f5880f2d",
+        "0e4729df09d27b3e",
+        "0abc9757ce66c40d",
+        "82ec57515e149fba",
+        "3167aedcb8f56641",
+        "89681b3be0afcbba",
+        "a19b646fa2396669",
+        "56cd5215dde42552",
+        "2ca6f5a68f913286",
+        "8ef98b522b186a8d",
+        "e6554b9bbe9cee0e",
+        "9b09738fe2ae4dd7",
+        "c7dc9ca647a536a0",
+        "b72cc44c1d574dce",
+        "b80a474784168d46",
+        "cfd51f2f87f96fa9",
+        "4bcf5aa1cae934bd",
+        "9c2f3625304166d0",
+        "b78c513f0baf3018",
+        "900630ff66352946",
+        "cca1c89c90290ebc",
+        "97a57d2397a978dc",
+        "cc5cb58dad3a8a3b",
+        "3acac32e8604c765",
+        "649570d869a2a319",
+        "35470e72a63127bd",
+        "f72d756d8c137aaa",
+        "4bec6621ee7e772f",
+        "9430cb53d80fa6b6",
+        "a6a25d3c59f7b679",
+        "b35683e6760d29f7",
+        "f03a0e31a77f68f2"
+      ]
+    ]
+  },
+  {
+    "id": "c683557c7a6ec5e5",
+    "type": "debug",
+    "z": "c8e1ef6f509cd75a",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1040,
+    "y": 1520,
+    "wires": []
+  }
+]

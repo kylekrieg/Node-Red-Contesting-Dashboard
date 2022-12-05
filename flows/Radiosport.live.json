@@ -1,0 +1,532 @@
+[
+  {
+    "id": "3968f5792af364de",
+    "type": "tab",
+    "label": "Radiosport.live",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "1e2b62f78c981761",
+    "type": "function",
+    "z": "3968f5792af364de",
+    "name": "radiosport.live score data",
+    "func": "\n// This node receives the score packet from N1MM and then pulls out the following items\n// Total # of QSOs\n// Total # of Mults\n// Total # of Points\n// The function then that data plus other data that is calculated in SQL commands and sends that data out in JSON format.\n\n// Total # of QSOs\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos)\n        \n    }\n    \n}\n\n\n//Total # of Mults\nif (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',0)\n}\n\narraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\n\n\n//Total # of Points\nif (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n}\n\narraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        \n    }\n    \n}\n\n\nlet currentQrate = global.get(\"#currentQrate\");\n\n\n\nmsg.payload = {\n    \"type\":\"score\",\n    \"contest\":msg.payload.dynamicresults.contest[0],\n    \"call\":msg.payload.dynamicresults.call[0],\n    \"power\":msg.payload.dynamicresults.class[0].$.power,\n    \"assisted\":msg.payload.dynamicresults.class[0].$.assisted,\n    \"transmitter\":msg.payload.dynamicresults.class[0].$.transmitter,\n    \"ops\":msg.payload.dynamicresults.class[0].$.ops,\n    \"bands\":msg.payload.dynamicresults.class[0].$.bands,\n    \"mode\":msg.payload.dynamicresults.class[0].$.mode,\n    \"totalnoqsos\":totalnoqsos, \n    \"totalmults\":totalmults, \n    \"totalpoints\":totalpoints,\n    \"currentQrate\":currentQrate,\n    \"timestamp\":msg.payload.dynamicresults.timestamp[0]\n};\n\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 470,
+    "y": 180,
+    "wires": [
+      [
+        "0cb5764a0d3bb049",
+        "56bdc7c920799869"
+      ]
+    ]
+  },
+  {
+    "id": "0cb5764a0d3bb049",
+    "type": "json",
+    "z": "3968f5792af364de",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 690,
+    "y": 180,
+    "wires": [
+      [
+        "8fef24f610992b8e"
+      ]
+    ]
+  },
+  {
+    "id": "3b6d91307549713b",
+    "type": "udp out",
+    "z": "3968f5792af364de",
+    "name": "",
+    "addr": "144.202.50.198",
+    "iface": "",
+    "port": "12062",
+    "ipv": "udp4",
+    "outport": "",
+    "base64": false,
+    "multicast": "false",
+    "x": 1020,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "77252a3ad3a5f5aa",
+    "type": "link in",
+    "z": "3968f5792af364de",
+    "name": "Radiosport Score IN",
+    "links": [
+      "aec65d796aed9cee"
+    ],
+    "x": 255,
+    "y": 180,
+    "wires": [
+      [
+        "1e2b62f78c981761",
+        "269d0dd2e42cd701"
+      ]
+    ]
+  },
+  {
+    "id": "56bdc7c920799869",
+    "type": "debug",
+    "z": "3968f5792af364de",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 690,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "269d0dd2e42cd701",
+    "type": "debug",
+    "z": "3968f5792af364de",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 430,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "fd220d20c3727d7e",
+    "type": "link in",
+    "z": "3968f5792af364de",
+    "name": "Radiosport QSO & Home IN",
+    "links": [
+      "4320ff577c7cb858"
+    ],
+    "x": 255,
+    "y": 380,
+    "wires": [
+      [
+        "42d44fa7c3361f83",
+        "e142261fff9cee08",
+        "da61edac06f1db38"
+      ]
+    ]
+  },
+  {
+    "id": "4f2368c8ae71312b",
+    "type": "comment",
+    "z": "3968f5792af364de",
+    "name": "Score Data",
+    "info": "",
+    "x": 250,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "ccf77a386d6afdb1",
+    "type": "debug",
+    "z": "3968f5792af364de",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1030,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "bcb48af62a6314d3",
+    "type": "json",
+    "z": "3968f5792af364de",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 850,
+    "y": 380,
+    "wires": [
+      [
+        "ccf77a386d6afdb1",
+        "7cc70ad33a74db3e"
+      ]
+    ]
+  },
+  {
+    "id": "54931d388d71eb79",
+    "type": "debug",
+    "z": "3968f5792af364de",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 660,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "42d44fa7c3361f83",
+    "type": "function",
+    "z": "3968f5792af364de",
+    "name": "radiosport.live qso data",
+    "func": "\n\n\nmsg.original.type = \"qso\";\nmsg.original.homelat = [global.get(\"homelat\")];\nmsg.original.homelon = [global.get(\"homelon\")];\nmsg.original.qsolat = [msg.payload.lat];\nmsg.original.qsolon = [msg.payload.lon];\nmsg.original.distance_km = [msg.payload.km];\nmsg.original.distance_miles = [msg.payload.distance_miles];\n\nmsg.payload = msg.original;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 470,
+    "y": 380,
+    "wires": [
+      [
+        "54931d388d71eb79",
+        "bcb48af62a6314d3"
+      ]
+    ]
+  },
+  {
+    "id": "508fa6db79205795",
+    "type": "udp out",
+    "z": "3968f5792af364de",
+    "name": "",
+    "addr": "144.202.50.198",
+    "iface": "",
+    "port": "12061",
+    "ipv": "udp4",
+    "outport": "",
+    "base64": false,
+    "multicast": "false",
+    "x": 1240,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "da61edac06f1db38",
+    "type": "function",
+    "z": "3968f5792af364de",
+    "name": "radiosport.live home data",
+    "func": "let homelat = global.get(\"homelat\");\nlet homelon = global.get(\"homelon\");\nlet contestcall = global.get(\"contestcallsign\");\nlet currentQrate = global.get(\"currentQrate\");\nlet radio1rate = global.get(\"#radio1rate\");\nlet radio2rate = global.get(\"#radio2rate\");\n\nmsg.payload = {\n    \"type\":\"home\",\n    \"contestcall\":contestcall,\n    \"currentqrate\":currentQrate,\n    \"op\":msg.payload.op,\n    \"band\":msg.payload.band,\n    \"mode\":msg.payload.band,\n    \"section\":msg.payload.section,\n    \"homelat\":homelat,\n    \"homelon\":homelon,\n    \"radio1rate\":radio1rate,\n    \"radio2rate\":radio2rate\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 470,
+    "y": 420,
+    "wires": [
+      [
+        "b631127b17805704"
+      ]
+    ]
+  },
+  {
+    "id": "e142261fff9cee08",
+    "type": "debug",
+    "z": "3968f5792af364de",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 400,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "b631127b17805704",
+    "type": "delay",
+    "z": "3968f5792af364de",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "2",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 680,
+    "y": 420,
+    "wires": [
+      [
+        "bcb48af62a6314d3",
+        "2f5cf65419073efa"
+      ]
+    ]
+  },
+  {
+    "id": "ec08c4c0b055d4fe",
+    "type": "link in",
+    "z": "3968f5792af364de",
+    "name": "Radiosport Radio IN",
+    "links": [
+      "15fa6dac50ec3359",
+      "3e86130caa4f1f80"
+    ],
+    "x": 255,
+    "y": 600,
+    "wires": [
+      [
+        "d1c86a13d02bc955"
+      ]
+    ]
+  },
+  {
+    "id": "e7d6e6ba63fea092",
+    "type": "debug",
+    "z": "3968f5792af364de",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 690,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "d1c86a13d02bc955",
+    "type": "function",
+    "z": "3968f5792af364de",
+    "name": "radiosport.live radio data",
+    "func": "msg.original = msg.payload;\n\ncontestcallsign = global.get(\"contestcallsign\");\n\nmsg.original.RadioInfo.contestcallsign = [contestcallsign];\nmsg.original.type = \"radio\"\n\nmsg.payload = msg.original;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 430,
+    "y": 600,
+    "wires": [
+      [
+        "207636eeb861d24a",
+        "e7d6e6ba63fea092"
+      ]
+    ]
+  },
+  {
+    "id": "207636eeb861d24a",
+    "type": "delay",
+    "z": "3968f5792af364de",
+    "name": "",
+    "pauseType": "rate",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "5",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 680,
+    "y": 600,
+    "wires": [
+      [
+        "d3ebf7655158fdc9"
+      ]
+    ]
+  },
+  {
+    "id": "46597bbb893f9a11",
+    "type": "debug",
+    "z": "3968f5792af364de",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 990,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "d3ebf7655158fdc9",
+    "type": "json",
+    "z": "3968f5792af364de",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 850,
+    "y": 600,
+    "wires": [
+      [
+        "46597bbb893f9a11",
+        "34159e15a003b83e"
+      ]
+    ]
+  },
+  {
+    "id": "b5e6b3c2f3728989",
+    "type": "udp out",
+    "z": "3968f5792af364de",
+    "name": "",
+    "addr": "144.202.50.198",
+    "iface": "",
+    "port": "12061",
+    "ipv": "udp4",
+    "outport": "",
+    "base64": false,
+    "multicast": "false",
+    "x": 1240,
+    "y": 600,
+    "wires": []
+  },
+  {
+    "id": "2f5cf65419073efa",
+    "type": "debug",
+    "z": "3968f5792af364de",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 850,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "dee918ea1d22ebe9",
+    "type": "comment",
+    "z": "3968f5792af364de",
+    "name": "QSO & Home Data",
+    "info": "",
+    "x": 320,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "c78fefeefe826f96",
+    "type": "comment",
+    "z": "3968f5792af364de",
+    "name": "Radio Data",
+    "info": "",
+    "x": 290,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "232d36733b246d85",
+    "type": "comment",
+    "z": "3968f5792af364de",
+    "name": "Sending to Radiosport.live via UDP",
+    "info": "",
+    "x": 1620,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "8fef24f610992b8e",
+    "type": "gate",
+    "z": "3968f5792af364de",
+    "name": "",
+    "controlTopic": "control",
+    "defaultState": "open",
+    "openCmd": "open",
+    "closeCmd": "close",
+    "toggleCmd": "toggle",
+    "defaultCmd": "default",
+    "statusCmd": "status",
+    "persist": true,
+    "storeName": "memory",
+    "x": 830,
+    "y": 180,
+    "wires": [
+      [
+        "3b6d91307549713b"
+      ]
+    ]
+  },
+  {
+    "id": "7cc70ad33a74db3e",
+    "type": "gate",
+    "z": "3968f5792af364de",
+    "name": "",
+    "controlTopic": "control",
+    "defaultState": "open",
+    "openCmd": "open",
+    "closeCmd": "close",
+    "toggleCmd": "toggle",
+    "defaultCmd": "default",
+    "statusCmd": "status",
+    "persist": true,
+    "storeName": "memory",
+    "x": 1010,
+    "y": 380,
+    "wires": [
+      [
+        "508fa6db79205795"
+      ]
+    ]
+  },
+  {
+    "id": "34159e15a003b83e",
+    "type": "gate",
+    "z": "3968f5792af364de",
+    "name": "",
+    "controlTopic": "control",
+    "defaultState": "open",
+    "openCmd": "open",
+    "closeCmd": "close",
+    "toggleCmd": "toggle",
+    "defaultCmd": "default",
+    "statusCmd": "status",
+    "persist": true,
+    "storeName": "memory",
+    "x": 1010,
+    "y": 600,
+    "wires": [
+      [
+        "b5e6b3c2f3728989"
+      ]
+    ]
+  }
+]

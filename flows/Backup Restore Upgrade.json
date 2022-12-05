@@ -1,0 +1,823 @@
+[
+  {
+    "id": "3e52b5d54104d7f0",
+    "type": "tab",
+    "label": "Backup Restore Upgrade",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "43f75a01.74e884",
+    "type": "inject",
+    "z": "3e52b5d54104d7f0",
+    "name": "Backup",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 220,
+    "wires": [
+      [
+        "d547483e.775438"
+      ]
+    ]
+  },
+  {
+    "id": "d547483e.775438",
+    "type": "function",
+    "z": "3e52b5d54104d7f0",
+    "name": "Prep data",
+    "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category;class;OS_Type;livedata\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 400,
+    "y": 220,
+    "wires": [
+      [
+        "2c2d4269.a876de"
+      ]
+    ]
+  },
+  {
+    "id": "9cec5c0d.e6de",
+    "type": "comment",
+    "z": "3e52b5d54104d7f0",
+    "name": "Save global variables",
+    "info": "",
+    "x": 172,
+    "y": 175,
+    "wires": []
+  },
+  {
+    "id": "666ca426.5be96c",
+    "type": "comment",
+    "z": "3e52b5d54104d7f0",
+    "name": "Restore global variables",
+    "info": "",
+    "x": 400,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "8e7e958d.ce6698",
+    "type": "inject",
+    "z": "3e52b5d54104d7f0",
+    "name": "Startup",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 300,
+    "y": 500,
+    "wires": [
+      [
+        "d8fa7064.9f60a"
+      ]
+    ]
+  },
+  {
+    "id": "4cb14d0.afc25b4",
+    "type": "file",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "filename": "global.json",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "x": 960,
+    "y": 180,
+    "wires": [
+      [
+        "e58232f49764e24f",
+        "80a3a373ae6e2eda",
+        "ff541f0fdc6e0813"
+      ]
+    ]
+  },
+  {
+    "id": "d8fa7064.9f60a",
+    "type": "file in",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "filename": "global.json",
+    "filenameType": "str",
+    "format": "utf8",
+    "allProps": false,
+    "x": 590,
+    "y": 500,
+    "wires": [
+      [
+        "3cdb4133.0d461e"
+      ]
+    ]
+  },
+  {
+    "id": "14b4208c.99aaaf",
+    "type": "function",
+    "z": "3e52b5d54104d7f0",
+    "name": "Restore",
+    "func": "var output = [];\n\nfor (var i=0; i<msg.payload.length; i++) {\n    switch (msg.payload[i].type) {\n        case 'undefined': \n            // the global variable probably had no value, nothing needs to be restored\n            output.push(msg.payload[i].key + \" is undefined.\");\n            break;\n        case 'number':\n            if (msg.payload[i].value===\"NaN\") {\n                // there is no valid value to be restored, skip this variable\n                output.push(msg.payload[i].key + \" is NaN.\");\n            } else {\n                if (msg.payload[i].value.toString().indexOf(\".\")>-1) {\n                    // the value appears to be a float\n                    global.set(msg.payload[i].key,parseFloat(msg.payload[i].value));\n                    output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n                } else {\n                    global.set(msg.payload[i].key,parseInt(msg.payload[i].value));\n                    output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n                }\n            }\n            break;\n        case 'string':\n            global.set(msg.payload[i].key,msg.payload[i].value);\n            output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n            break;\n        case 'boolean':\n            global.set(msg.payload[i].key,msg.payload[i].value===\"true\");\n            output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n            break;\n    }\n}\n\nmsg.payload = output;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1120,
+    "y": 500,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "2c2d4269.a876de",
+    "type": "json",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "x": 550,
+    "y": 220,
+    "wires": [
+      [
+        "e2445f2b80bc515e"
+      ]
+    ]
+  },
+  {
+    "id": "3cdb4133.0d461e",
+    "type": "json",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "x": 790,
+    "y": 500,
+    "wires": [
+      [
+        "14b4208c.99aaaf",
+        "894d6435bdb8fc81"
+      ]
+    ]
+  },
+  {
+    "id": "e58232f49764e24f",
+    "type": "json",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 1450,
+    "y": 180,
+    "wires": [
+      [
+        "7d9aa86aac29d6cd"
+      ]
+    ]
+  },
+  {
+    "id": "3f8e6bba1a03f1cc",
+    "type": "ui_button",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "group": "535f5d4509d91b5e",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "Backup",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 160,
+    "y": 280,
+    "wires": [
+      [
+        "d547483e.775438"
+      ]
+    ]
+  },
+  {
+    "id": "80a3a373ae6e2eda",
+    "type": "change",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Backup File Complete To global.json",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1440,
+    "y": 260,
+    "wires": [
+      [
+        "7d74c21038089afd"
+      ]
+    ]
+  },
+  {
+    "id": "7d74c21038089afd",
+    "type": "ui_toast",
+    "z": "3e52b5d54104d7f0",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "Cancel",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Backup Dialog Box",
+    "x": 1750,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8417c17e9d44c60c",
+    "type": "ui_button",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "group": "535f5d4509d91b5e",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "Restore",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 280,
+    "y": 560,
+    "wires": [
+      [
+        "d8fa7064.9f60a"
+      ]
+    ]
+  },
+  {
+    "id": "894d6435bdb8fc81",
+    "type": "change",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Restore Complete From global.json",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 960,
+    "y": 580,
+    "wires": [
+      [
+        "3fc6b038acd1dd64"
+      ]
+    ]
+  },
+  {
+    "id": "3fc6b038acd1dd64",
+    "type": "ui_toast",
+    "z": "3e52b5d54104d7f0",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "Cancel",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Restore Dialog Box",
+    "x": 1650,
+    "y": 580,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c85e5115fdd0c173",
+    "type": "catch",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "scope": [
+      "4cb14d0.afc25b4"
+    ],
+    "uncaught": false,
+    "x": 1190,
+    "y": 320,
+    "wires": [
+      [
+        "95830ed52e3781db"
+      ]
+    ]
+  },
+  {
+    "id": "95830ed52e3781db",
+    "type": "change",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "error.message",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1380,
+    "y": 320,
+    "wires": [
+      [
+        "7d74c21038089afd"
+      ]
+    ]
+  },
+  {
+    "id": "5ad33a23425e24ef",
+    "type": "catch",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "scope": [
+      "d8fa7064.9f60a"
+    ],
+    "uncaught": false,
+    "x": 950,
+    "y": 620,
+    "wires": [
+      [
+        "5c231f1f0fb2e5ec"
+      ]
+    ]
+  },
+  {
+    "id": "5c231f1f0fb2e5ec",
+    "type": "change",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "error.message",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1140,
+    "y": 620,
+    "wires": [
+      [
+        "3fc6b038acd1dd64"
+      ]
+    ]
+  },
+  {
+    "id": "41b5fcb7d3468568",
+    "type": "ui_button",
+    "z": "3e52b5d54104d7f0",
+    "name": "Upgrade Contest Dashboard Button",
+    "group": "71cb3368617e6c9e",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Upgrade Contest Dashboard",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "This Upgrade Will Reboot Your Pi - Continue?",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 300,
+    "y": 780,
+    "wires": [
+      [
+        "b7489dd59685c7a3"
+      ]
+    ]
+  },
+  {
+    "id": "821bb77829102950",
+    "type": "exec",
+    "z": "3e52b5d54104d7f0",
+    "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull && sudo reboot",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "",
+    "x": 1330,
+    "y": 780,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "b7489dd59685c7a3",
+    "type": "ui_toast",
+    "z": "3e52b5d54104d7f0",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "Cancel",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "",
+    "x": 570,
+    "y": 780,
+    "wires": [
+      [
+        "a5d3c0fbf1549f70"
+      ]
+    ]
+  },
+  {
+    "id": "b3e878177c786d3c",
+    "type": "exec",
+    "z": "3e52b5d54104d7f0",
+    "command": "sudo reboot",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "timer": "",
+    "name": "Reboot",
+    "x": 520,
+    "y": 1000,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "f14da265f561b94b",
+    "type": "ui_button",
+    "z": "3e52b5d54104d7f0",
+    "name": "Manual Reboot Button",
+    "group": "71cb3368617e6c9e",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "Manual Reboot",
+    "tooltip": "",
+    "color": "#FFFFFF",
+    "bgcolor": "#FF0000",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "topicType": "str",
+    "x": 299.7777786254883,
+    "y": 1000.0000238418579,
+    "wires": [
+      [
+        "b3e878177c786d3c"
+      ]
+    ]
+  },
+  {
+    "id": "e5ca3a2218a318ed",
+    "type": "debug",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1030,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "a5d3c0fbf1549f70",
+    "type": "switch",
+    "z": "3e52b5d54104d7f0",
+    "name": "If OK",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "OK",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 800,
+    "y": 780,
+    "wires": [
+      [
+        "e5ca3a2218a318ed",
+        "821bb77829102950"
+      ]
+    ]
+  },
+  {
+    "id": "ac04ed91a725685c",
+    "type": "ui_dropdown",
+    "z": "3e52b5d54104d7f0",
+    "name": "OS Type Dropdown",
+    "label": "OS Type",
+    "tooltip": "",
+    "place": "Select option",
+    "group": "535f5d4509d91b5e",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "Linux",
+        "value": "linux",
+        "type": "str"
+      },
+      {
+        "label": "Windows",
+        "value": "windows",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 610,
+    "y": 100,
+    "wires": [
+      [
+        "4ef75448c0a0727e"
+      ]
+    ]
+  },
+  {
+    "id": "4ef75448c0a0727e",
+    "type": "function",
+    "z": "3e52b5d54104d7f0",
+    "name": "Set OS",
+    "func": "x = msg.payload\nglobal.set('OS_Type',x)\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 780,
+    "y": 100,
+    "wires": [
+      [
+        "b1ecb8f1e850c3aa"
+      ]
+    ]
+  },
+  {
+    "id": "4563a2255fd10963",
+    "type": "inject",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 250,
+    "y": 100,
+    "wires": [
+      [
+        "d92537707e675d78"
+      ]
+    ]
+  },
+  {
+    "id": "4ebc90a89d058982",
+    "type": "comment",
+    "z": "3e52b5d54104d7f0",
+    "name": "OS Type",
+    "info": "",
+    "x": 180,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "d92537707e675d78",
+    "type": "function",
+    "z": "3e52b5d54104d7f0",
+    "name": "Get OS Type",
+    "func": "msg.payload = global.get('OS_Type')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"linux\";\n    return msg;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 410,
+    "y": 100,
+    "wires": [
+      [
+        "ac04ed91a725685c"
+      ]
+    ]
+  },
+  {
+    "id": "b1ecb8f1e850c3aa",
+    "type": "ui_text",
+    "z": "3e52b5d54104d7f0",
+    "group": "535f5d4509d91b5e",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "name": "OS Type",
+    "label": "OS Type",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 920,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "e2445f2b80bc515e",
+    "type": "switch",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "property": "OS_Type",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "linux",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "OSX",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "windows",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 3,
+    "x": 710,
+    "y": 220,
+    "wires": [
+      [
+        "4cb14d0.afc25b4"
+      ],
+      [],
+      [
+        "9d6f6c5738444b27"
+      ]
+    ]
+  },
+  {
+    "id": "9d6f6c5738444b27",
+    "type": "file",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "filename": "%USERPROFILE%\\documents\\global.json",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "x": 1030,
+    "y": 240,
+    "wires": [
+      [
+        "e58232f49764e24f",
+        "80a3a373ae6e2eda"
+      ]
+    ]
+  },
+  {
+    "id": "ff541f0fdc6e0813",
+    "type": "debug",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1280,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "7d9aa86aac29d6cd",
+    "type": "debug",
+    "z": "3e52b5d54104d7f0",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1680,
+    "y": 140,
+    "wires": []
+  }
+]

@@ -1,0 +1,1260 @@
+[
+  {
+    "id": "b8ba38b3.abfb98",
+    "type": "ui_group",
+    "name": "Current QSO's",
+    "tab": "200297fa.9ab198",
+    "order": 2,
+    "disp": true,
+    "width": "26",
+    "collapse": false,
+    "className": "dashboard_current_qsos"
+  },
+  {
+    "id": "ba8d90f0d4d46eb0",
+    "type": "ui_group",
+    "name": "Last QSO's",
+    "tab": "200297fa.9ab198",
+    "order": 1,
+    "disp": true,
+    "width": "5",
+    "collapse": false,
+    "className": "dashboard_last_qsos"
+  },
+  {
+    "id": "54f43a06.56d7b4",
+    "type": "sqlitedb",
+    "db": "qsos",
+    "mode": "RW"
+  },
+  {
+    "id": "aeac5355e22fa2ee",
+    "type": "ui_group",
+    "name": "Contest Stats",
+    "tab": "200297fa.9ab198",
+    "order": 3,
+    "disp": true,
+    "width": "5",
+    "collapse": false,
+    "className": "dashboard_contest_stats"
+  },
+  {
+    "id": "d5edca762660bedf",
+    "type": "ui_group",
+    "name": "Radio 1 Data",
+    "tab": "200297fa.9ab198",
+    "order": 8,
+    "disp": true,
+    "width": "24",
+    "collapse": false,
+    "className": "dashboard_radio_data"
+  },
+  {
+    "id": "1fd9d5a5d988cd1e",
+    "type": "ui_group",
+    "name": "Radio 2 Data",
+    "tab": "200297fa.9ab198",
+    "order": 9,
+    "disp": true,
+    "width": "24",
+    "collapse": false,
+    "className": "dashboard_radio_data"
+  },
+  {
+    "id": "200297fa.9ab198",
+    "type": "ui_tab",
+    "name": "Dashboard",
+    "icon": "dashboard",
+    "order": 1,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "6bee760b7642c108",
+    "type": "ui_base",
+    "theme": {
+      "name": "theme-dark",
+      "lightTheme": {
+        "default": "#0094CE",
+        "baseColor": "#0094CE",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "darkTheme": {
+        "default": "#097479",
+        "baseColor": "#0035d5",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "customTheme": {
+        "name": "Untitled Theme 1",
+        "default": "#4B7930",
+        "baseColor": "#0035d5",
+        "baseFont": "Tahoma,Geneva,sans-serif",
+        "reset": false
+      },
+      "themeState": {
+        "base-color": {
+          "default": "#097479",
+          "value": "#097479",
+          "edited": true
+        },
+        "page-titlebar-backgroundColor": {
+          "value": "#097479",
+          "edited": true
+        },
+        "page-backgroundColor": {
+          "value": "#111111",
+          "edited": true
+        },
+        "page-sidebar-backgroundColor": {
+          "value": "#333333",
+          "edited": false
+        },
+        "group-textColor": {
+          "value": "#0eb8c0",
+          "edited": false
+        },
+        "group-borderColor": {
+          "value": "#555555",
+          "edited": false
+        },
+        "group-backgroundColor": {
+          "value": "#333333",
+          "edited": false
+        },
+        "widget-textColor": {
+          "value": "#eeeeee",
+          "edited": false
+        },
+        "widget-backgroundColor": {
+          "value": "#097479",
+          "edited": false
+        },
+        "widget-borderColor": {
+          "value": "#333333",
+          "edited": false
+        },
+        "base-font": {
+          "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+        }
+      },
+      "angularTheme": {
+        "primary": "indigo",
+        "accents": "blue",
+        "warn": "red",
+        "background": "grey",
+        "palette": "light"
+      }
+    },
+    "site": {
+      "name": "Contest Dashboard",
+      "hideToolbar": "false",
+      "allowSwipe": "false",
+      "lockMenu": "false",
+      "allowTempTheme": "false",
+      "dateFormat": "DD/MM/YYYY",
+      "sizes": {
+        "sx": 33,
+        "sy": 33,
+        "gx": 6,
+        "gy": 6,
+        "cx": 6,
+        "cy": 6,
+        "px": 0,
+        "py": 0
+      }
+    }
+  },
+  {
+    "id": "6c1bd04fb9bfea48",
+    "type": "ui_group",
+    "name": "QSOs by Band",
+    "tab": "200297fa.9ab198",
+    "order": 4,
+    "disp": true,
+    "width": "12",
+    "collapse": false,
+    "className": "dashboard_qsos_by_band"
+  },
+  {
+    "id": "c53924de5e016c59",
+    "type": "ui_group",
+    "name": "Total QSO Rate Chart - 1 Hr",
+    "tab": "200297fa.9ab198",
+    "order": 6,
+    "disp": true,
+    "width": 12,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "698e42d7f0c75db1",
+    "type": "ui_tab",
+    "name": "Radio Info",
+    "icon": "mi-radio",
+    "order": 3,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "7fbb5e1689b11c96",
+    "type": "ui_group",
+    "name": "Radio 1",
+    "tab": "698e42d7f0c75db1",
+    "order": 1,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "radio_info"
+  },
+  {
+    "id": "04f517e9db4307d1",
+    "type": "ui_group",
+    "name": "Radio 2",
+    "tab": "698e42d7f0c75db1",
+    "order": 2,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "radio_info"
+  },
+  {
+    "id": "9851a548b3e9a744",
+    "type": "ui_group",
+    "name": "Radio 3",
+    "tab": "698e42d7f0c75db1",
+    "order": 3,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "radio_info"
+  },
+  {
+    "id": "57f3a809cabd43f5",
+    "type": "ui_group",
+    "name": "Radio 4",
+    "tab": "698e42d7f0c75db1",
+    "order": 4,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "radio_info"
+  },
+  {
+    "id": "e0604be1629095c1",
+    "type": "ui_group",
+    "name": "QSO Rate by Band - 1 Hr",
+    "tab": "698e42d7f0c75db1",
+    "order": 7,
+    "disp": true,
+    "width": "8",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "390d9212c8d39731",
+    "type": "ui_group",
+    "name": "QSO Rate by Band - 1 Hr",
+    "tab": "200297fa.9ab198",
+    "order": 5,
+    "disp": true,
+    "width": 12,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "d36058f98fbac69f",
+    "type": "ui_tab",
+    "name": "OP Competition",
+    "icon": "mi-directions_run",
+    "order": 4,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "e42cdfb590735e00",
+    "type": "ui_group",
+    "name": "1st Place",
+    "tab": "d36058f98fbac69f",
+    "order": 1,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "op_compete"
+  },
+  {
+    "id": "dea9d7ac.0cefc8",
+    "type": "ui_group",
+    "name": "Raspberry Pi Status & Control",
+    "tab": "7f50838.c6d257c",
+    "order": 2,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "8ca85278.65932",
+    "type": "ui_group",
+    "name": "Network Status",
+    "tab": "7f50838.c6d257c",
+    "order": 1,
+    "disp": true,
+    "width": 6,
+    "collapse": false
+  },
+  {
+    "id": "7f50838.c6d257c",
+    "type": "ui_tab",
+    "name": "Pi Status",
+    "icon": "mi-computer",
+    "order": 8,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "089f422fb01043ec",
+    "type": "ui_group",
+    "name": "Cluster without Dupes",
+    "tab": "08eed6c3517c624e",
+    "order": 2,
+    "disp": true,
+    "width": 12,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "8bf40d033d555b71",
+    "type": "ui_group",
+    "name": "2nd Place",
+    "tab": "d36058f98fbac69f",
+    "order": 4,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "op_compete"
+  },
+  {
+    "id": "4349237f79c6ee9d",
+    "type": "ui_group",
+    "name": "3rd Place",
+    "tab": "d36058f98fbac69f",
+    "order": 7,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "op_compete"
+  },
+  {
+    "id": "de79e0318aecd9cc",
+    "type": "ui_group",
+    "name": "4th Place",
+    "tab": "d36058f98fbac69f",
+    "order": 9,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "op_compete"
+  },
+  {
+    "id": "ec08fadc8d1d73bf",
+    "type": "ui_group",
+    "name": "5th Place",
+    "tab": "d36058f98fbac69f",
+    "order": 12,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "op_compete"
+  },
+  {
+    "id": "3dad506044ed2f24",
+    "type": "ui_group",
+    "name": "6th Place",
+    "tab": "d36058f98fbac69f",
+    "order": 14,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "op_compete"
+  },
+  {
+    "id": "fbe68cb50c200a91",
+    "type": "ui_group",
+    "name": "7th Place",
+    "tab": "d36058f98fbac69f",
+    "order": 17,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "op_compete"
+  },
+  {
+    "id": "84c8e4f24085b4d7",
+    "type": "ui_group",
+    "name": "8th Place",
+    "tab": "d36058f98fbac69f",
+    "order": 19,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "op_compete"
+  },
+  {
+    "id": "4fe32a048d3e8016",
+    "type": "ui_group",
+    "name": "1st Place Trending",
+    "tab": "d36058f98fbac69f",
+    "order": 2,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": "op_compete_trending"
+  },
+  {
+    "id": "ecc5f14b5a3d677e",
+    "type": "ui_tab",
+    "name": "Band Stats",
+    "icon": "mi-query_stats",
+    "order": 5,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "b597a92689c997ee",
+    "type": "ui_group",
+    "name": "160M",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 9,
+    "disp": true,
+    "width": "28",
+    "collapse": false,
+    "className": "band_stats"
+  },
+  {
+    "id": "ba5556bd38a9b0dc",
+    "type": "ui_group",
+    "name": "80M",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 2,
+    "disp": true,
+    "width": "28",
+    "collapse": false,
+    "className": "band_stats"
+  },
+  {
+    "id": "33f39234d06022c4",
+    "type": "ui_group",
+    "name": "40M",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 5,
+    "disp": true,
+    "width": "28",
+    "collapse": false,
+    "className": "band_stats"
+  },
+  {
+    "id": "16293e8283ac8032",
+    "type": "ui_group",
+    "name": "20M",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 6,
+    "disp": true,
+    "width": "28",
+    "collapse": false,
+    "className": "band_stats"
+  },
+  {
+    "id": "b058bc1a30b324a8",
+    "type": "ui_group",
+    "name": "15M",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 7,
+    "disp": true,
+    "width": "28",
+    "collapse": false,
+    "className": "band_stats"
+  },
+  {
+    "id": "7f3af38546f365bf",
+    "type": "ui_group",
+    "name": "10M",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 8,
+    "disp": true,
+    "width": "28",
+    "collapse": false,
+    "className": "band_stats"
+  },
+  {
+    "id": "cf0fd8137d27fde9",
+    "type": "ui_group",
+    "name": "2nd Place Trending",
+    "tab": "d36058f98fbac69f",
+    "order": 5,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": "op_compete_trending"
+  },
+  {
+    "id": "a54565f26ef859a6",
+    "type": "ui_group",
+    "name": "3rd Place Trending",
+    "tab": "d36058f98fbac69f",
+    "order": 8,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": "op_compete_trending"
+  },
+  {
+    "id": "53db3fa281c44012",
+    "type": "ui_group",
+    "name": "4th Place Trending",
+    "tab": "d36058f98fbac69f",
+    "order": 10,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": "op_compete_trending"
+  },
+  {
+    "id": "5ea99b2ffafa1455",
+    "type": "ui_group",
+    "name": "5th Place Trending",
+    "tab": "d36058f98fbac69f",
+    "order": 13,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": "op_compete_trending"
+  },
+  {
+    "id": "2083f5d4aa25f442",
+    "type": "ui_group",
+    "name": "6th Place Trending",
+    "tab": "d36058f98fbac69f",
+    "order": 15,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": "op_compete_trending"
+  },
+  {
+    "id": "1f8381235f15779f",
+    "type": "ui_group",
+    "name": "7th Place Trending",
+    "tab": "d36058f98fbac69f",
+    "order": 18,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": "op_compete_trending"
+  },
+  {
+    "id": "49e8559f5916fe38",
+    "type": "ui_group",
+    "name": "8th Place Trending",
+    "tab": "d36058f98fbac69f",
+    "order": 20,
+    "disp": true,
+    "width": "4",
+    "collapse": false,
+    "className": "op_compete_trending"
+  },
+  {
+    "id": "5b0b0f97dd6d2e04",
+    "type": "ui_group",
+    "name": "QSO Rate by Band - 2 Hr",
+    "tab": "698e42d7f0c75db1",
+    "order": 8,
+    "disp": true,
+    "width": 8,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "29db383704af4b09",
+    "type": "ui_group",
+    "name": "OP QSO Rate by Band - 1 Hr",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 3,
+    "disp": true,
+    "width": "8",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "4244ba9d238d6a13",
+    "type": "ui_group",
+    "name": "QSO Rate by Band Chart",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 1,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "4c7c4383a5f4d36f",
+    "type": "ui_group",
+    "name": "Solar Data",
+    "tab": "7f50838.c6d257c",
+    "order": 3,
+    "disp": true,
+    "width": 5,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "2da8694540143f9a",
+    "type": "ui_group",
+    "name": "Operators 1Hr Q's/Hr",
+    "tab": "d36058f98fbac69f",
+    "order": 3,
+    "disp": true,
+    "width": 13,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "ba191f5b911d96f8",
+    "type": "ui_group",
+    "name": "Operators 2Hr Q's/Hr",
+    "tab": "d36058f98fbac69f",
+    "order": 16,
+    "disp": true,
+    "width": 13,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "6c301c05c13a5e40",
+    "type": "ui_group",
+    "name": "Operators Score",
+    "tab": "d36058f98fbac69f",
+    "order": 11,
+    "disp": true,
+    "width": 13,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "1d57c18be03cdf58",
+    "type": "ui_group",
+    "name": "Operators QSOs",
+    "tab": "d36058f98fbac69f",
+    "order": 6,
+    "disp": true,
+    "width": 13,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "08eed6c3517c624e",
+    "type": "ui_tab",
+    "name": "Configuration & Resets",
+    "icon": "mi-storage",
+    "order": 9,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "c6e931ac92d6f697",
+    "type": "ui_group",
+    "name": "Database Reset",
+    "tab": "08eed6c3517c624e",
+    "order": 8,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "887ee2eadc46df9a",
+    "type": "ui_group",
+    "name": "Radio Names",
+    "tab": "08eed6c3517c624e",
+    "order": 3,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "475c1eff5d97ffe5",
+    "type": "ui_group",
+    "name": "Contest Configuration",
+    "tab": "08eed6c3517c624e",
+    "order": 7,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "b5c190b1c6ec4907",
+    "type": "ui_group",
+    "name": "Cluster with Dupes",
+    "tab": "08eed6c3517c624e",
+    "order": 1,
+    "disp": true,
+    "width": 12,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "76879f1e69f23640",
+    "type": "ui_group",
+    "name": "Spot Rate by Band per Min",
+    "tab": "ecc5f14b5a3d677e",
+    "order": 4,
+    "disp": true,
+    "width": "8",
+    "collapse": false,
+    "className": "band_stats_spot_rate"
+  },
+  {
+    "id": "6e223ca6f2986fea",
+    "type": "ui_group",
+    "name": "Cluster Login Callsign",
+    "tab": "08eed6c3517c624e",
+    "order": 6,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "1d924a93b9821236",
+    "type": "ui_group",
+    "name": "Spot Rate",
+    "tab": "200297fa.9ab198",
+    "order": 7,
+    "disp": true,
+    "width": "12",
+    "collapse": false,
+    "className": "dashboard_spot_rate"
+  },
+  {
+    "id": "8a65c232b2637c6a",
+    "type": "ui_group",
+    "name": "Call Lookup Engine & Login ",
+    "tab": "08eed6c3517c624e",
+    "order": 10,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "465f5622aae04ed5",
+    "type": "tls-config",
+    "name": "",
+    "cert": "",
+    "key": "",
+    "ca": "",
+    "certname": "",
+    "keyname": "",
+    "caname": "",
+    "servername": "",
+    "verifyservercert": false,
+    "alpnprotocol": ""
+  },
+  {
+    "id": "f19108a51ffcbc92",
+    "type": "ui_group",
+    "name": "Google",
+    "tab": "7f50838.c6d257c",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "f5dde741553ee9e7",
+    "type": "ui_group",
+    "name": "Radio 5",
+    "tab": "698e42d7f0c75db1",
+    "order": 5,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "radio_info"
+  },
+  {
+    "id": "5ccfd9f2fc20c888",
+    "type": "ui_group",
+    "name": "Radio 6",
+    "tab": "698e42d7f0c75db1",
+    "order": 6,
+    "disp": true,
+    "width": "30",
+    "collapse": false,
+    "className": "radio_info"
+  },
+  {
+    "id": "54b59a095746559b",
+    "type": "ui_group",
+    "name": "Map Configuration",
+    "tab": "08eed6c3517c624e",
+    "order": 9,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "568305b092b67570",
+    "type": "ui_tab",
+    "name": "Streaming Dashboard",
+    "icon": "mi-visibility",
+    "order": 2,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "74f6d374fb94524c",
+    "type": "ui_group",
+    "name": "Worked QSOS",
+    "tab": "568305b092b67570",
+    "order": 4,
+    "disp": true,
+    "width": 16,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "13e71f1ba641b9c9",
+    "type": "ui_group",
+    "name": "QSO Being Worked",
+    "tab": "568305b092b67570",
+    "order": 3,
+    "disp": true,
+    "width": 16,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "aff1f74aeb47511e",
+    "type": "ui_group",
+    "name": "Contest Score",
+    "tab": "568305b092b67570",
+    "order": 2,
+    "disp": true,
+    "width": "5",
+    "collapse": false,
+    "className": "streaming_contest_score"
+  },
+  {
+    "id": "aafad41ae29aabef",
+    "type": "ui_group",
+    "name": "Contest Info",
+    "tab": "568305b092b67570",
+    "order": 1,
+    "disp": true,
+    "width": 34,
+    "collapse": false,
+    "className": "streaming_contest_info"
+  },
+  {
+    "id": "4ef10134c121cf09",
+    "type": "ui_group",
+    "name": "Announcements",
+    "tab": "08eed6c3517c624e",
+    "order": 12,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "52728e3a5743376c",
+    "type": "ui_group",
+    "name": "OP Competition Sort By",
+    "tab": "08eed6c3517c624e",
+    "order": 11,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "7bbebae56744a5d8",
+    "type": "ui_tab",
+    "name": "RBN Spots",
+    "icon": "mi-pin_drop",
+    "order": 7,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "a55f6d343a61c86b",
+    "type": "ui_group",
+    "name": "Contest Call RBN Spots Map",
+    "tab": "7bbebae56744a5d8",
+    "order": 2,
+    "disp": true,
+    "width": 24,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "ebbb538ba5d86639",
+    "type": "ui_group",
+    "name": "All Skimmer Spots with Dups",
+    "tab": "7bbebae56744a5d8",
+    "order": 1,
+    "disp": true,
+    "width": 10,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "4f4191b752633a96",
+    "type": "ui_group",
+    "name": "Skimmer Spots with Contest Call",
+    "tab": "7bbebae56744a5d8",
+    "order": 3,
+    "disp": true,
+    "width": 10,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "c89d2b489a7ea747",
+    "type": "ui_group",
+    "name": "Q's/Hr Rate Color Config",
+    "tab": "08eed6c3517c624e",
+    "order": 4,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "5e3039a0172f86b1",
+    "type": "ui_group",
+    "name": "Online Scoreboard",
+    "tab": "08eed6c3517c624e",
+    "order": 5,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "eb1487788861989b",
+    "type": "ui_tab",
+    "name": "Scoreboard",
+    "icon": "mi-sports_score",
+    "order": 6,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "9a1dd65e19bf97cb",
+    "type": "ui_group",
+    "name": "Contest Call",
+    "tab": "eb1487788861989b",
+    "order": 1,
+    "disp": true,
+    "width": 9,
+    "collapse": false,
+    "className": "scoreboard"
+  },
+  {
+    "id": "02cd9912aaf9c5c2",
+    "type": "ui_group",
+    "name": "Call 1",
+    "tab": "eb1487788861989b",
+    "order": 2,
+    "disp": true,
+    "width": "9",
+    "collapse": false,
+    "className": "scoreboard"
+  },
+  {
+    "id": "cc8d9c65bb6053c8",
+    "type": "ui_group",
+    "name": "Call 2",
+    "tab": "eb1487788861989b",
+    "order": 4,
+    "disp": true,
+    "width": "9",
+    "collapse": false,
+    "className": "scoreboard"
+  },
+  {
+    "id": "eff3603f5f8c17cf",
+    "type": "ui_group",
+    "name": "Call 3",
+    "tab": "eb1487788861989b",
+    "order": 5,
+    "disp": true,
+    "width": "9",
+    "collapse": false,
+    "className": "scoreboard"
+  },
+  {
+    "id": "089bc41bee57baf2",
+    "type": "ui_group",
+    "name": "Call 4",
+    "tab": "eb1487788861989b",
+    "order": 6,
+    "disp": true,
+    "width": "9",
+    "collapse": false,
+    "className": "scoreboard"
+  },
+  {
+    "id": "8fb11826e4a47fc9",
+    "type": "ui_group",
+    "name": "Banner Bar Active Scores Layout",
+    "tab": "72d3257e7da87587",
+    "order": 2,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "00919f6d1599ed5f",
+    "type": "ui_group",
+    "name": "Distance Measurement",
+    "tab": "08eed6c3517c624e",
+    "order": 13,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "535f5d4509d91b5e",
+    "type": "ui_group",
+    "name": "Backup & Restore",
+    "tab": "08eed6c3517c624e",
+    "order": 14,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "ab90bdc2382e7735",
+    "type": "ui_group",
+    "name": "Chat Box",
+    "tab": "568305b092b67570",
+    "order": 5,
+    "disp": true,
+    "width": 7,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "9e3f259da9c7796b",
+    "type": "ui_group",
+    "name": "User Defined Items",
+    "tab": "568305b092b67570",
+    "order": 6,
+    "disp": true,
+    "width": 37,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "61f1faff3469a80a",
+    "type": "ui_group",
+    "name": "Webcam",
+    "tab": "568305b092b67570",
+    "order": 7,
+    "disp": true,
+    "width": 7,
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "72d3257e7da87587",
+    "type": "ui_tab",
+    "name": "Banner Bar Layout",
+    "icon": "dashboard",
+    "order": 11,
+    "disabled": true,
+    "hidden": true
+  },
+  {
+    "id": "bea4993f.85f4d8",
+    "type": "websocket-client",
+    "path": "wss://ws7.blitzortung.org/",
+    "tls": "621bc3fe.d747dc",
+    "wholemsg": "false",
+    "hb": "0"
+  },
+  {
+    "id": "6e89e85d75f82df1",
+    "type": "ui_group",
+    "name": "Blitz Lightning",
+    "tab": "72d3257e7da87587",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "621bc3fe.d747dc",
+    "type": "tls-config",
+    "name": "",
+    "cert": "",
+    "key": "",
+    "ca": "",
+    "certname": "",
+    "keyname": "",
+    "caname": "",
+    "servername": "",
+    "verifyservercert": false
+  },
+  {
+    "id": "e357ef02.ef3cb",
+    "type": "ui_group",
+    "name": "Solar Template",
+    "tab": "72d3257e7da87587",
+    "order": 2,
+    "disp": false,
+    "width": "1",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "71cb3368617e6c9e",
+    "type": "ui_group",
+    "name": "Dashboard Upgrade",
+    "tab": "08eed6c3517c624e",
+    "order": 15,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "1ea34d06.1438c3",
+    "type": "ui_group",
+    "name": "Default",
+    "tab": "5e2e41aa.9826b",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": true,
+    "className": ""
+  },
+  {
+    "id": "5e2e41aa.9826b",
+    "type": "ui_tab",
+    "name": "CSS_Code",
+    "icon": "dashboard",
+    "order": 10,
+    "disabled": false,
+    "hidden": true
+  },
+  {
+    "id": "8e8e61b9e41627e8",
+    "type": "ui_group",
+    "name": "Radiosport.live Data ",
+    "tab": "08eed6c3517c624e",
+    "order": 16,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "6ae284209bc95605",
+    "type": "ui_tab",
+    "name": "WAC Logger",
+    "icon": "dashboard",
+    "order": 11,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "81e8affa751a7503",
+    "type": "ui_group",
+    "name": "Log Window Radio 1",
+    "tab": "6ae284209bc95605",
+    "order": 1,
+    "disp": true,
+    "width": "18",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "ccc9bbbb7e8b28a7",
+    "type": "ui_group",
+    "name": "Radio 1 Map",
+    "tab": "6ae284209bc95605",
+    "order": 5,
+    "disp": true,
+    "width": "18",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "e0bfac7798af6224",
+    "type": "ui_group",
+    "name": "Radio 2 Map",
+    "tab": "6ae284209bc95605",
+    "order": 6,
+    "disp": true,
+    "width": "18",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "9189f146c1798eef",
+    "type": "ui_group",
+    "name": "Radio 1 VFO",
+    "tab": "6ae284209bc95605",
+    "order": 3,
+    "disp": true,
+    "width": "18",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "9acb32ddd0144d0f",
+    "type": "ui_group",
+    "name": "Radio 2 VFO",
+    "tab": "6ae284209bc95605",
+    "order": 4,
+    "disp": true,
+    "width": "18",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "cb8b64280b7ce16e",
+    "type": "ui_group",
+    "name": "Contest Log",
+    "tab": "6ae284209bc95605",
+    "order": 7,
+    "disp": true,
+    "width": "36",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "31fa72ab1ae3828f",
+    "type": "ui_group",
+    "name": "Log Window Radio 2",
+    "tab": "6ae284209bc95605",
+    "order": 2,
+    "disp": true,
+    "width": "18",
+    "collapse": false,
+    "className": ""
+  }
+]

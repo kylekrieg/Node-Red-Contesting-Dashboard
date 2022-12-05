@@ -1,0 +1,3128 @@
+[
+  {
+    "id": "b73cc2bb5f424b69",
+    "type": "tab",
+    "label": "Toolbar",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "02235a52f1d247d6",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Contest Toolbar UI update - Scoreboard",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "bb1d9e5d2bf9fa26",
+      "081d52fa1757bc4b",
+      "b3a0694939efd742",
+      "56319f879fcbb9df",
+      "53a760479d2b2d01",
+      "daf1cf979348d132",
+      "53692007691b251a",
+      "4f76379f46c13673",
+      "dbcb9a738301da97",
+      "ea4b0c4d43bbf2e8",
+      "a8a10cc2.9d0ae"
+    ],
+    "x": 474,
+    "y": 159
+  },
+  {
+    "id": "52886121c9629e0b",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Contest Toolbar UI update - Dashboard",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "f87ba558851c95d3",
+      "9816b47ccbaab892",
+      "777a2ec108512a04",
+      "c3bf6102f3b7edbe",
+      "f0760a3ec8543b8b",
+      "1afc1e4e8a6a39ac",
+      "fb4aa4fd72787370",
+      "d500857eefbcea4a",
+      "a110c5259531418b",
+      "af65ab5234804a9a",
+      "66a43145427ca537"
+    ],
+    "x": 774,
+    "y": 159
+  },
+  {
+    "id": "bebfe5d7e4f0feb0",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Contest Toolbar UI update - Spectator Dashboard",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "5d10e57fd09e8a50",
+      "5a833e6c4b2da14d",
+      "3e456c894fdf82ba",
+      "68b583c8ccfe257a",
+      "a04be73c7b807236",
+      "11a30b25462e5d2f",
+      "431c69a2758e9d6f",
+      "0c5b09ac8217c8e8",
+      "72c0143cb2801842",
+      "34d492ab50541fdc",
+      "de48727be275102f"
+    ],
+    "x": 1034,
+    "y": 159
+  },
+  {
+    "id": "c6e09ffb3c5a1ce6",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Link In (Scoreboard / Config)",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "b96af53874b6fb61",
+      "da1243301037944c",
+      "6f2b2f32fe7c6e4d",
+      "d1d267820faf09ff",
+      "b41ce8230b517cb0",
+      "8d2172a22f29a548",
+      "469d9b45aa858755",
+      "e35b27050e23f4fe",
+      "58b4f87e7d17a9b2",
+      "1c0e963122e30bc8",
+      "cd6e0fce6f62b9c5",
+      "52d0f0a78929438e"
+    ],
+    "x": 214,
+    "y": 159
+  },
+  {
+    "id": "0e3bf66f6ee6d572",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Clear Contest Names",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "48f46d5dd8960e55",
+      "654b552f9e64203e"
+    ],
+    "x": 214,
+    "y": 19
+  },
+  {
+    "id": "b90980234a451f8d",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Update Toolbar on Ui Refresh",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "8b78fc923dbd5012",
+      "3047a9ba16e10212"
+    ],
+    "x": 1194,
+    "y": 39
+  },
+  {
+    "id": "23eb39063da69706",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Contest Toolbar UI update - RBN Spots",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "844d8f7c2441d8b1",
+      "b19b207ee67ddde5",
+      "ef7a738f2ee8d5f4",
+      "4ca5cb31f4b145f8",
+      "5329c1a37c80ba7d",
+      "d792aff5c8b37a15",
+      "36ed085a21d6315d",
+      "95613fb05341082e",
+      "2100cfc9553c38ba",
+      "7036aad4276a8131",
+      "c2d7711a7d230637"
+    ],
+    "x": 1374,
+    "y": 159
+  },
+  {
+    "id": "022672368830e427",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Contest Toolbar UI update - Band Stats",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "7f2303018ff45ad8",
+      "e95c82ba390544e6",
+      "a189d5911e5a6829",
+      "7073cd8d304f642e",
+      "4c7d5d74d7f6d688",
+      "c284f99e2bfdb952",
+      "85db86a67be75656",
+      "66a441672a2af592",
+      "54fd1aa0f1e76bb0",
+      "e6ae4df0ca620d74",
+      "c4561e5c31134c5d"
+    ],
+    "x": 1654,
+    "y": 159
+  },
+  {
+    "id": "7a5512b5a3f6e8ba",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Lightning Blitzotung",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "6c3aabd78a8dbe6b",
+      "2570533c0ddd961a",
+      "e8923d3119f9de10",
+      "bb38d5607155fdac",
+      "d769911bfcaff494",
+      "e733af43f8c28c46",
+      "e0a0fa6ae9f41024",
+      "64ce0bfa9e1942bb",
+      "ee06b24b57cee89b",
+      "1695ae9bcb4fd785",
+      "b5b388156ec5eca9",
+      "d34ab878fcdc07ae",
+      "cb344aa1d31a6502",
+      "c31ad36e83f990dd",
+      "2d5edcaf1c0997bc",
+      "393223b190ba95f3",
+      "35549ac0e22e44ff",
+      "40b13d784b111566",
+      "e6fb0ef92036fc12",
+      "3ba91bda918482b2",
+      "2447aed577add90a",
+      "33b22679735f2e3c",
+      "53becfe3676d44bd",
+      "49c54051341840e3"
+    ],
+    "x": 34,
+    "y": 679
+  },
+  {
+    "id": "28877ac600fea8b9",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Server Side Update",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "a5372819368f5d81",
+      "6d2c61c8eafe791b",
+      "dbc4fa6c4950549c",
+      "0e5c59369f188c2d",
+      "a6bf18e701de8cea",
+      "a31fd08b865e287c",
+      "522c164834b058f6",
+      "94377682fd3db09a",
+      "20a1b3e47e825d5b",
+      "a4442b82396c4ff2",
+      "41b71b195d25cc36",
+      "324101084f63a83e"
+    ],
+    "x": 224,
+    "y": 1019
+  },
+  {
+    "id": "c6a5789101548ba9",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Toolbar",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "664777b6beccd2c1",
+      "4e62658f095c2863"
+    ],
+    "x": 1394,
+    "y": 1099
+  },
+  {
+    "id": "18a3020b4a12ae60",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Contest Toolbar UI update - OP Competition",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "8d8c2c7254287149",
+      "6622e7e7a8741c0e",
+      "3bd9135654310792",
+      "1ef1df6438a74955",
+      "2dafd2c2dab98d98",
+      "d0c78d62f35e3d16",
+      "0b122154cd902313",
+      "beebf164a6058fc0",
+      "05db91002fb4d67a",
+      "23d467e3525ec5a8",
+      "89b2058720d8fb99"
+    ],
+    "x": 1954,
+    "y": 159
+  },
+  {
+    "id": "f830dd821e0240f4",
+    "type": "group",
+    "z": "b73cc2bb5f424b69",
+    "name": "Master CSS - Remove If Do Not Like",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "6e5f192ff0fd2d39",
+      "aa0566f8a8d9dbfd",
+      "925cebb6bacad025"
+    ],
+    "x": 774,
+    "y": 559
+  },
+  {
+    "id": "5fbbdd7ee574998e",
+    "type": "ui_spacer",
+    "z": "b73cc2bb5f424b69",
+    "name": "spacer",
+    "group": "aafad41ae29aabef",
+    "order": 3,
+    "width": 34,
+    "height": 1
+  },
+  {
+    "id": "97ff2fe567e6e56e",
+    "type": "ui_spacer",
+    "z": "b73cc2bb5f424b69",
+    "name": "spacer",
+    "group": "9e3f259da9c7796b",
+    "order": 2,
+    "width": 4,
+    "height": 1
+  },
+  {
+    "id": "dbed62b7e5d06ad5",
+    "type": "ui_spacer",
+    "z": "b73cc2bb5f424b69",
+    "name": "spacer",
+    "group": "9e3f259da9c7796b",
+    "order": 3,
+    "width": 4,
+    "height": 1
+  },
+  {
+    "id": "1e87c6f36a37c6cf",
+    "type": "ui_spacer",
+    "z": "b73cc2bb5f424b69",
+    "name": "spacer",
+    "group": "9e3f259da9c7796b",
+    "order": 4,
+    "width": 4,
+    "height": 1
+  },
+  {
+    "id": "898d37be7ac2375c",
+    "type": "ui_spacer",
+    "z": "b73cc2bb5f424b69",
+    "name": "spacer",
+    "group": "9e3f259da9c7796b",
+    "order": 5,
+    "width": 4,
+    "height": 1
+  },
+  {
+    "id": "dd7c69d49b9c6e3a",
+    "type": "ui_spacer",
+    "z": "b73cc2bb5f424b69",
+    "name": "spacer",
+    "group": "9e3f259da9c7796b",
+    "order": 6,
+    "width": 4,
+    "height": 1
+  },
+  {
+    "id": "f0dec55cafdd0ef9",
+    "type": "ui_spacer",
+    "z": "b73cc2bb5f424b69",
+    "name": "spacer",
+    "group": "9e3f259da9c7796b",
+    "order": 7,
+    "width": 4,
+    "height": 1
+  },
+  {
+    "id": "bb1f3c069392c7e7",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "d": true,
+    "group": "8fb11826e4a47fc9",
+    "name": "Contest Clock Toolbar Header (original)",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "format": "<script id=\"toolbar\" type=\"text/javascript\">\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n        // add contestcall\n        var div1 = $('<div/>');\n        var p1 = $('<p /id=\"header-contestname\">');\n        var p2 = $('<p /id=\"header-contestcall\">');\n        var p3 = $('<p /id=\"header-score_total\">');\n        var p5 = $('<p /id=\"header-chase1_call\">');\n        var p6 = $('<p /id=\"header-chase1_score_total\">');\n        var p8 = $('<p /id=\"header-chase2_call\">');\n        var p9 = $('<p /id=\"header-chase2_score_total\">');\n        var p11 = $('<p /id=\"header-chase3_call\">');\n        var p12 = $('<p /id=\"header-chase3_score_total\">');\n        var p14 = $('<p /id=\"header-chase4_call\">');\n        var p15 = $('<p /id=\"header-chase4_score_total\">');\n      \n        div1.append(p1);\n        div1.append(p2);\n        div1.append(p3);\n        div1.append(p5);\n        div1.append(p6);\n        div1.append(p8);\n        div1.append(p9);\n        div1.append(p11);\n        div1.append(p12);\n        div1.append(p14);\n        div1.append(p15);\n        \n        div1[0].style.width = 'auto';\n        div1[0].style.margin = 'auto';\n        div1[0].style.display = 'flex';\n        div1[0].style.color = '#c4d0ee';\n\t\t\n        p1[0].style.margin = '5px';\n        p1[0].style.width = 'auto';\n        p2[0].style.margin = '5px'; \n        p2[0].style.color = 'white';\n        p3[0].style.margin = '5px';\n        p3[0].style.color = 'white';\n        p5[0].style.margin = '5px';\n        p5[0].style.color = 'white';\n        p6[0].style.margin = 'auto';\n        p6[0].style.color = 'white';\n        p8[0].style.margin = '5px';\n        p8[0].style.color = 'white';\n        p9[0].style.margin = 'auto';\n        p9[0].style.color = 'white';\n        p11[0].style.margin = '5px';\n        p11[0].style.color = 'white';\n        p12[0].style.margin = 'auto';\n        p12[0].style.color = 'white';\n        p14[0].style.margin = '5px';\n        p14[0].style.color = 'white';\n        p15[0].style.margin = 'auto';\n        p15[0].style.color = 'white';\n           \n        // add clock\n        var div3 = $('<div/>');\n        var p = $('<p/>');\n        div3.append(p);\n        div3[0].style.display = 'flex';\n        function displayTime() {\n        var d = Date();\n        var options = { timeZone: 'UTC', timeZoneName: 'short', year: '2-digit', month: 'numeric', day: 'numeric', hourCycle:\n        'h23', hour: `2-digit`, minute: `2-digit`};\n        p.text(new Date().toLocaleString('en-US', options));\n        }\n        \n        clockInterval = setInterval(displayTime, 1000);\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n            toolbar.append(div3);\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 50);\n    });</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "global",
+    "className": "",
+    "x": 980,
+    "y": 40,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "bb1d9e5d2bf9fa26",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "updateContestCall",
+    "order": 16,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-contestcall\").text(msg.payload.contestcall).prop('title','Contest Call');\n              //  $(\"#header-contestcall\").prop('title','Contest Call');\n                $(\"#header-score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Contest Call Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-contestcall\").text(\"\");\n                $(\"#header-score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 590,
+    "y": 240,
+    "wires": [
+      [
+        "f87ba558851c95d3"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "081d52fa1757bc4b",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "UpdateContestName",
+    "order": 15,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"7eceb14e06091850\"]').hide();\n        scope.$watch('msg', function(msg) {\n        if ((msg.payload.contestname) != null){\n            $(\"#header-contestname\").text(msg.payload.contestname);\n             }\n        if ((msg.payload.contestname) == null){\n            $(\"#header-contestname\").text(\"No Active Contest\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 600,
+    "y": 200,
+    "wires": [
+      [
+        "9816b47ccbaab892"
+      ]
+    ]
+  },
+  {
+    "id": "b3a0694939efd742",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "UpdateChaseCall1",
+    "order": 17,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase1_call\").text(msg.payload.contestcall).prop('title','Call 1');\n                $(\"#header-chase1_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 1 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase1_call\").text(\"\");\n                $(\"#header-chase1_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 590,
+    "y": 280,
+    "wires": [
+      [
+        "777a2ec108512a04"
+      ]
+    ]
+  },
+  {
+    "id": "56319f879fcbb9df",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "UpdateChaseCall2",
+    "order": 18,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase2_call\").text(msg.payload.contestcall).prop('title','Call 2');\n                $(\"#header-chase2_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 2 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase2_call\").text(\"\");\n                $(\"#header-chase2_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 590,
+    "y": 320,
+    "wires": [
+      [
+        "c3bf6102f3b7edbe"
+      ]
+    ]
+  },
+  {
+    "id": "53a760479d2b2d01",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "UpdateChaseCall3",
+    "order": 19,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase3_call\").text(msg.payload.contestcall).prop('title','Call 3');\n                $(\"#header-chase3_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 3 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase3_call\").text(\"\");\n                $(\"#header-chase3_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 590,
+    "y": 360,
+    "wires": [
+      [
+        "f0760a3ec8543b8b"
+      ]
+    ]
+  },
+  {
+    "id": "daf1cf979348d132",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "UpdateChaseCall4",
+    "order": 20,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase4_call\").text(msg.payload.contestcall).prop('title','Call 4');\n                $(\"#header-chase4_score_total\").text(msg.payload.score_total).prop('title','Call 4 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase4_call\").text(\"\");\n                $(\"#header-chase4_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 590,
+    "y": 400,
+    "wires": [
+      [
+        "1afc1e4e8a6a39ac"
+      ]
+    ]
+  },
+  {
+    "id": "b96af53874b6fb61",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar Chase Call1 IN",
+    "links": [
+      "8ea1df71d732a139"
+    ],
+    "x": 255,
+    "y": 240,
+    "wires": [
+      [
+        "bb1d9e5d2bf9fa26"
+      ]
+    ]
+  },
+  {
+    "id": "da1243301037944c",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar Chase Call 2 IN",
+    "links": [
+      "6ccb7eca978143c2"
+    ],
+    "x": 255,
+    "y": 280,
+    "wires": [
+      [
+        "b3a0694939efd742"
+      ]
+    ]
+  },
+  {
+    "id": "6f2b2f32fe7c6e4d",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar Chase Call 3 IN",
+    "links": [
+      "12fea413fec156be"
+    ],
+    "x": 255,
+    "y": 320,
+    "wires": [
+      [
+        "56319f879fcbb9df"
+      ]
+    ]
+  },
+  {
+    "id": "d1d267820faf09ff",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar Chase Call 3 IN",
+    "links": [
+      "f36954fb7c5c492d"
+    ],
+    "x": 255,
+    "y": 360,
+    "wires": [
+      [
+        "53a760479d2b2d01"
+      ]
+    ]
+  },
+  {
+    "id": "b41ce8230b517cb0",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar Chase Call 4 IN",
+    "links": [
+      "7b71578337dbbc61"
+    ],
+    "x": 255,
+    "y": 400,
+    "wires": [
+      [
+        "daf1cf979348d132"
+      ]
+    ]
+  },
+  {
+    "id": "8d2172a22f29a548",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "getContest",
+    "func": "let contestname = global.get('contestname');\nmsg.payload = {contestname: contestname};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 360,
+    "y": 200,
+    "wires": [
+      [
+        "081d52fa1757bc4b"
+      ]
+    ]
+  },
+  {
+    "id": "469d9b45aa858755",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar Contest Call IN",
+    "links": [
+      "b1897541b4842264"
+    ],
+    "x": 255,
+    "y": 200,
+    "wires": [
+      [
+        "8d2172a22f29a548"
+      ]
+    ]
+  },
+  {
+    "id": "f87ba558851c95d3",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "updateContestCall",
+    "order": 9,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-contestcall\").text(msg.payload.contestcall).prop('title','Contest Call');\n              //  $(\"#header-contestcall\").prop('title','Contest Call');\n                $(\"#header-score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Contest Call Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-contestcall\").text(\"\");\n                $(\"#header-score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 890,
+    "y": 240,
+    "wires": [
+      [
+        "5d10e57fd09e8a50"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "9816b47ccbaab892",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "UpdateContestName",
+    "order": 8,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"7eceb14e06091850\"]').hide();\n        scope.$watch('msg', function(msg) {\n        if ((msg.payload.contestname) != null){\n            $(\"#header-contestname\").text(msg.payload.contestname);\n             }\n        if ((msg.payload.contestname) == null){\n            $(\"#header-contestname\").text(\"No Active Contest\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 900,
+    "y": 200,
+    "wires": [
+      [
+        "5a833e6c4b2da14d"
+      ]
+    ]
+  },
+  {
+    "id": "777a2ec108512a04",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "UpdateChaseCall1",
+    "order": 12,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase1_call\").text(msg.payload.contestcall).prop('title','Call 1');\n                $(\"#header-chase1_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 1 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase1_call\").text(\"\");\n                $(\"#header-chase1_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 890,
+    "y": 280,
+    "wires": [
+      [
+        "3e456c894fdf82ba"
+      ]
+    ]
+  },
+  {
+    "id": "c3bf6102f3b7edbe",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "UpdateChaseCall2",
+    "order": 13,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase2_call\").text(msg.payload.contestcall).prop('title','Call 2');\n                $(\"#header-chase2_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 2 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase2_call\").text(\"\");\n                $(\"#header-chase2_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 890,
+    "y": 320,
+    "wires": [
+      [
+        "68b583c8ccfe257a"
+      ]
+    ]
+  },
+  {
+    "id": "f0760a3ec8543b8b",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "UpdateChaseCall3",
+    "order": 14,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase3_call\").text(msg.payload.contestcall).prop('title','Call 3');\n                $(\"#header-chase3_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 3 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase3_call\").text(\"\");\n                $(\"#header-chase3_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 890,
+    "y": 360,
+    "wires": [
+      [
+        "a04be73c7b807236"
+      ]
+    ]
+  },
+  {
+    "id": "1afc1e4e8a6a39ac",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "UpdateChaseCall4",
+    "order": 15,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase4_call\").text(msg.payload.contestcall).prop('title','Call 4');\n                $(\"#header-chase4_score_total\").text(msg.payload.score_total).prop('title','Call 4 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase4_call\").text(\"\");\n                $(\"#header-chase4_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 890,
+    "y": 400,
+    "wires": [
+      [
+        "11a30b25462e5d2f"
+      ]
+    ]
+  },
+  {
+    "id": "5d10e57fd09e8a50",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "updateContestCall",
+    "order": 6,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-contestcall\").text(msg.payload.contestcall).prop('title','Contest Call');\n              //  $(\"#header-contestcall\").prop('title','Contest Call');\n                $(\"#header-score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Contest Call Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-contestcall\").text(\"\");\n                $(\"#header-score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1150,
+    "y": 240,
+    "wires": [
+      [
+        "844d8f7c2441d8b1"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "5a833e6c4b2da14d",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "UpdateContestName",
+    "order": 5,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"7eceb14e06091850\"]').hide();\n        scope.$watch('msg', function(msg) {\n        if ((msg.payload.contestname) != null){\n            $(\"#header-contestname\").text(msg.payload.contestname);\n             }\n        if ((msg.payload.contestname) == null){\n            $(\"#header-contestname\").text(\"No Active Contest\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1160,
+    "y": 200,
+    "wires": [
+      [
+        "b19b207ee67ddde5"
+      ]
+    ]
+  },
+  {
+    "id": "3e456c894fdf82ba",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "UpdateChaseCall1",
+    "order": 8,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase1_call\").text(msg.payload.contestcall).prop('title','Call 1');\n                $(\"#header-chase1_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 1 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase1_call\").text(\"\");\n                $(\"#header-chase1_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1150,
+    "y": 280,
+    "wires": [
+      [
+        "ef7a738f2ee8d5f4"
+      ]
+    ]
+  },
+  {
+    "id": "68b583c8ccfe257a",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "UpdateChaseCall2",
+    "order": 9,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase2_call\").text(msg.payload.contestcall).prop('title','Call 2');\n                $(\"#header-chase2_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 2 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase2_call\").text(\"\");\n                $(\"#header-chase2_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1150,
+    "y": 320,
+    "wires": [
+      [
+        "4ca5cb31f4b145f8"
+      ]
+    ]
+  },
+  {
+    "id": "a04be73c7b807236",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "UpdateChaseCall3",
+    "order": 10,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase3_call\").text(msg.payload.contestcall).prop('title','Call 3');\n                $(\"#header-chase3_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 3 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase3_call\").text(\"\");\n                $(\"#header-chase3_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1150,
+    "y": 360,
+    "wires": [
+      [
+        "5329c1a37c80ba7d"
+      ]
+    ]
+  },
+  {
+    "id": "11a30b25462e5d2f",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "UpdateChaseCall4",
+    "order": 11,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase4_call\").text(msg.payload.contestcall).prop('title','Call 4');\n                $(\"#header-chase4_score_total\").text(msg.payload.score_total).prop('title','Call 4 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase4_call\").text(\"\");\n                $(\"#header-chase4_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1150,
+    "y": 400,
+    "wires": [
+      [
+        "d792aff5c8b37a15"
+      ]
+    ]
+  },
+  {
+    "id": "48f46d5dd8960e55",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "0e3bf66f6ee6d572",
+    "name": "ClearContestCalls",
+    "func": "let contestname = global.get('contestname');\nif (contestname == null){\n    msg.payload = {contestname: '', score_total: ''};\n}\n\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 350,
+    "y": 100,
+    "wires": [
+      [
+        "bb1d9e5d2bf9fa26",
+        "b3a0694939efd742",
+        "56319f879fcbb9df",
+        "53a760479d2b2d01",
+        "daf1cf979348d132"
+      ]
+    ]
+  },
+  {
+    "id": "654b552f9e64203e",
+    "type": "inject",
+    "z": "b73cc2bb5f424b69",
+    "g": "0e3bf66f6ee6d572",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 330,
+    "y": 60,
+    "wires": [
+      [
+        "48f46d5dd8960e55"
+      ]
+    ]
+  },
+  {
+    "id": "8b78fc923dbd5012",
+    "type": "ui_ui_control",
+    "z": "b73cc2bb5f424b69",
+    "g": "b90980234a451f8d",
+    "name": "",
+    "events": "all",
+    "x": 1280,
+    "y": 80,
+    "wires": [
+      [
+        "3047a9ba16e10212"
+      ]
+    ]
+  },
+  {
+    "id": "3047a9ba16e10212",
+    "type": "link out",
+    "z": "b73cc2bb5f424b69",
+    "g": "b90980234a451f8d",
+    "name": "Ui Update OUT",
+    "mode": "link",
+    "links": [
+      "4d85eaa61498c5ca"
+    ],
+    "x": 1425,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "844d8f7c2441d8b1",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "updateContestCall",
+    "order": 7,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-contestcall\").text(msg.payload.contestcall).prop('title','Contest Call');\n              //  $(\"#header-contestcall\").prop('title','Contest Call');\n                $(\"#header-score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Contest Call Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-contestcall\").text(\"\");\n                $(\"#header-score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1490,
+    "y": 240,
+    "wires": [
+      [
+        "7f2303018ff45ad8"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "b19b207ee67ddde5",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "UpdateContestName",
+    "order": 6,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"7eceb14e06091850\"]').hide();\n        scope.$watch('msg', function(msg) {\n        if ((msg.payload.contestname) != null){\n            $(\"#header-contestname\").text(msg.payload.contestname);\n             }\n        if ((msg.payload.contestname) == null){\n            $(\"#header-contestname\").text(\"No Active Contest\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1500,
+    "y": 200,
+    "wires": [
+      [
+        "e95c82ba390544e6"
+      ]
+    ]
+  },
+  {
+    "id": "ef7a738f2ee8d5f4",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "UpdateChaseCall1",
+    "order": 9,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase1_call\").text(msg.payload.contestcall).prop('title','Call 1');\n                $(\"#header-chase1_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 1 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase1_call\").text(\"\");\n                $(\"#header-chase1_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1490,
+    "y": 280,
+    "wires": [
+      [
+        "a189d5911e5a6829"
+      ]
+    ]
+  },
+  {
+    "id": "4ca5cb31f4b145f8",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "UpdateChaseCall2",
+    "order": 10,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase2_call\").text(msg.payload.contestcall).prop('title','Call 2');\n                $(\"#header-chase2_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 2 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase2_call\").text(\"\");\n                $(\"#header-chase2_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1490,
+    "y": 320,
+    "wires": [
+      [
+        "7073cd8d304f642e"
+      ]
+    ]
+  },
+  {
+    "id": "5329c1a37c80ba7d",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "UpdateChaseCall3",
+    "order": 11,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase3_call\").text(msg.payload.contestcall).prop('title','Call 3');\n                $(\"#header-chase3_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 3 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase3_call\").text(\"\");\n                $(\"#header-chase3_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1490,
+    "y": 360,
+    "wires": [
+      [
+        "4c7d5d74d7f6d688"
+      ]
+    ]
+  },
+  {
+    "id": "d792aff5c8b37a15",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "UpdateChaseCall4",
+    "order": 12,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase4_call\").text(msg.payload.contestcall).prop('title','Call 4');\n                $(\"#header-chase4_score_total\").text(msg.payload.score_total).prop('title','Call 4 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase4_call\").text(\"\");\n                $(\"#header-chase4_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1490,
+    "y": 400,
+    "wires": [
+      [
+        "c284f99e2bfdb952"
+      ]
+    ]
+  },
+  {
+    "id": "e4ea31cc963ad392",
+    "type": "comment",
+    "z": "b73cc2bb5f424b69",
+    "name": "Contest Toolbar Display",
+    "info": "# Contest Call Toolbar displays \nThe Contest Toolbar update will display the contest name, contest call/score, and chase call/score when an active contest is configured.  If there is no contest the display will show 'No Active Contest'.  During a contest if you mouse over the call or score of any object in the toolbar, a pop up will display the identifier.\n\n## Configuration\nIf you have a toolbar in your flow you must disable it in order for the contest call toolbar to work properly \n\nContest Name is derived from context and will show when the Online Scoreboard Contest Name is set.  The link in node from the Config & Reset Contestname function provides the flow data\n\nContest Call and Chase Call data is derived from link in nodes from the Online Scoreboard flow.   The link is joined to the output of the Breakout Contest score functions\n\n## UI Update on refresh\nThe tool bar is currently configured to update the Dashboard,  Online Scoreboard, Spectator Dashboard,  RBN Spots Dashboard, and Band Stats.   If you want to update aditional pages you will need to copy the Contest Toolbar UI update (anyone), and then wire the output of the RBN Spots to your new UI Update.   You will need to update the group for each of the UI nodes in the group to the dashboard page you want update (i.e = Radio Info > Radio 1).  You only need to add it to one group per dashboard page you want to update on refresh",
+    "x": 600,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "7f2303018ff45ad8",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "updateContestCall",
+    "order": 5,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-contestcall\").text(msg.payload.contestcall).prop('title','Contest Call');\n              //  $(\"#header-contestcall\").prop('title','Contest Call');\n                $(\"#header-score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Contest Call Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-contestcall\").text(\"\");\n                $(\"#header-score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1770,
+    "y": 240,
+    "wires": [
+      [
+        "8d8c2c7254287149"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "e95c82ba390544e6",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "UpdateContestName",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"7eceb14e06091850\"]').hide();\n        scope.$watch('msg', function(msg) {\n        if ((msg.payload.contestname) != null){\n            $(\"#header-contestname\").text(msg.payload.contestname);\n             }\n        if ((msg.payload.contestname) == null){\n            $(\"#header-contestname\").text(\"No Active Contest\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1780,
+    "y": 200,
+    "wires": [
+      [
+        "6622e7e7a8741c0e"
+      ]
+    ]
+  },
+  {
+    "id": "a189d5911e5a6829",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "UpdateChaseCall1",
+    "order": 7,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase1_call\").text(msg.payload.contestcall).prop('title','Call 1');\n                $(\"#header-chase1_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 1 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase1_call\").text(\"\");\n                $(\"#header-chase1_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1770,
+    "y": 280,
+    "wires": [
+      [
+        "3bd9135654310792"
+      ]
+    ]
+  },
+  {
+    "id": "7073cd8d304f642e",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "UpdateChaseCall2",
+    "order": 8,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase2_call\").text(msg.payload.contestcall).prop('title','Call 2');\n                $(\"#header-chase2_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 2 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase2_call\").text(\"\");\n                $(\"#header-chase2_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1770,
+    "y": 320,
+    "wires": [
+      [
+        "1ef1df6438a74955"
+      ]
+    ]
+  },
+  {
+    "id": "4c7d5d74d7f6d688",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "UpdateChaseCall3",
+    "order": 9,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase3_call\").text(msg.payload.contestcall).prop('title','Call 3');\n                $(\"#header-chase3_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 3 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase3_call\").text(\"\");\n                $(\"#header-chase3_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1770,
+    "y": 360,
+    "wires": [
+      [
+        "2dafd2c2dab98d98"
+      ]
+    ]
+  },
+  {
+    "id": "c284f99e2bfdb952",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "UpdateChaseCall4",
+    "order": 10,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase4_call\").text(msg.payload.contestcall).prop('title','Call 4');\n                $(\"#header-chase4_score_total\").text(msg.payload.score_total).prop('title','Call 4 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase4_call\").text(\"\");\n                $(\"#header-chase4_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1770,
+    "y": 400,
+    "wires": [
+      [
+        "d0c78d62f35e3d16"
+      ]
+    ]
+  },
+  {
+    "id": "6c3aabd78a8dbe6b",
+    "type": "inject",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "10",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 880,
+    "wires": [
+      [
+        "393223b190ba95f3"
+      ]
+    ]
+  },
+  {
+    "id": "2570533c0ddd961a",
+    "type": "websocket out",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "server": "",
+    "client": "bea4993f.85f4d8",
+    "x": 830,
+    "y": 880,
+    "wires": []
+  },
+  {
+    "id": "e8923d3119f9de10",
+    "type": "websocket in",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "server": "",
+    "client": "bea4993f.85f4d8",
+    "x": 180,
+    "y": 840,
+    "wires": [
+      [
+        "bb38d5607155fdac"
+      ]
+    ]
+  },
+  {
+    "id": "bb38d5607155fdac",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "Decode Payload",
+    "func": "function decode(b) {\n var a, e = {},\n d = b.split(\"\"),\n c = d[0],\n f = c,\n g = [c],\n h = 256;\n o = h;\n for (b = 1; b < d.length; b++) a = d[b].charCodeAt(0), a = h > a ? d[b] : e[a] ? e[a] : f + c, g.push(a), c = a.charAt(0), e[o] = f + c, o++, f = a;\n return g.join(\"\")\n}\n\nreturn {\n payload: decode(msg.payload)\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 440,
+    "y": 840,
+    "wires": [
+      [
+        "e0a0fa6ae9f41024"
+      ]
+    ]
+  },
+  {
+    "id": "d769911bfcaff494",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "pushAudible",
+    "func": "if ((msg.topic) === 'lightning'){\n   return {payload: 'Warning, Lightning Alert'};\n} else return null;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1610,
+    "y": 720,
+    "wires": [
+      [
+        "b5b388156ec5eca9"
+      ]
+    ]
+  },
+  {
+    "id": "e733af43f8c28c46",
+    "type": "ui_audio",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "group": "6e89e85d75f82df1",
+    "voice": "Microsoft Zira - English (United States)",
+    "always": true,
+    "x": 1980,
+    "y": 720,
+    "wires": []
+  },
+  {
+    "id": "e0a0fa6ae9f41024",
+    "type": "json",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "convert JSON",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 640,
+    "y": 840,
+    "wires": [
+      [
+        "64ce0bfa9e1942bb"
+      ]
+    ]
+  },
+  {
+    "id": "64ce0bfa9e1942bb",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "setDistance",
+    "func": "function arePointsNear(checkPoint, centerPoint) {\n var ky = 40000 / 360;\n var kx = Math.cos(Math.PI * centerPoint.lat / 180.0) * ky;\n var dx = Math.abs(centerPoint.lng - checkPoint.lng) * kx;\n var dy = Math.abs(centerPoint.lat - checkPoint.lat) * ky;\n return Math.sqrt(dx * dx + dy * dy);\n}\n\nvar strike = { lat: msg.payload.lat, lng: msg.payload.lon };\n\nlet hlat = global.get('homelat');\nlet hlng = global.get('homelon');\n\n\n// set latitute + longitude accordingly\nvar home = { lat: hlat, lng: hlng };\n\nvar n = arePointsNear(strike, home);\nn = Math.round(n);\n\nmsg.payload.hlat = hlat;\nmsg.payload.hlon = hlng;\nmsg.payload.strike_lat = strike.lat;\nmsg.payload.strike_lon = strike.lng;\nmsg.payload.strike_distance = n\n\nreturn msg;\n\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 850,
+    "y": 840,
+    "wires": [
+      [
+        "3ba91bda918482b2",
+        "53becfe3676d44bd"
+      ]
+    ]
+  },
+  {
+    "id": "53692007691b251a",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "BlitzunorgUi",
+    "order": 13,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"a86c0f808507a0cc\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg.payload.length !== 0) {\n                $(\"#header-icon\").html(\"<i class='fa fa-bolt fa-2x' aria-hidden='true'></i>\").css(\"color\",(msg.color));\n                $(\"#header-lightning\").text(msg.payload); \n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 570,
+    "y": 440,
+    "wires": [
+      [
+        "fb4aa4fd72787370"
+      ]
+    ]
+  },
+  {
+    "id": "fb4aa4fd72787370",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "BlitzunorgUi",
+    "order": 11,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"a86c0f808507a0cc\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg.payload.length !== 0) {\n                $(\"#header-icon\").html(\"<i class='fa fa-bolt fa-2x' aria-hidden='true'></i>\").css(\"color\",(msg.color));\n                $(\"#header-lightning\").text(msg.payload); \n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 870,
+    "y": 440,
+    "wires": [
+      [
+        "431c69a2758e9d6f"
+      ]
+    ]
+  },
+  {
+    "id": "ee06b24b57cee89b",
+    "type": "inject",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      },
+      {
+        "p": "color",
+        "v": "red",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "lightning",
+    "payload": "< 3 Km",
+    "payloadType": "str",
+    "x": 1400,
+    "y": 720,
+    "wires": [
+      [
+        "d769911bfcaff494",
+        "d34ab878fcdc07ae"
+      ]
+    ]
+  },
+  {
+    "id": "1695ae9bcb4fd785",
+    "type": "comment",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "Readme",
+    "info": "# Blizuntorg Lighting Detector\n\nDisplay lighting strike in Km \nAny strike >= 10 Km will show Green Lighting Arrow\nAny strike < 10 Km will show Red Lightning Arrow\n\n## **setDistance**\nTo change distance modify the setDistance function node.  You will need to change the value of n to whatever distance you want.   Also you will need to change the payload string to match the new distance.  Example below shows the value set to 10 Km \n\n`if(n <= 10) {\n // return distance to strike if strike is in defined radius\n return {payload: '<' + n + ' Km', color: \"#c40606\", topic: 'lightning'};\n} else\n return  {payload: '> 10 Km', color: \"#14f00c\",};`\n \n## **Ui Node**\nThere are 2 Ui Nodes in the template.  If you only have one dashboard page you can delete the one on the right.  If you have more than 2 dashboard pages you will need to copy and add the Ui Nodes and chain the output from the preceding one to the in input of the next Ui node.  \n\nYou will need to set the Ui Node to be in one group per dashboard page in order for those pages to update.   \n\n## **Header Ui**\nThe header Ui has 2 css div elements.  Spacing of the elements is tricky and may need adjusted depending on what else you have on your toolbar.  You can edit the style.paddingLeft or style.margin to adjust.   Make a copy of the Ui incase you need to fall back to the default.  \n\n## **Audible**\nIn order for the audiable to work you will need to click on the web page or you will see an error-not allowed msg on the node in the editor.   Currently the text is set to 'Warning Lighting Alert'  To change edit the pushAudible function",
+    "x": 200,
+    "y": 800,
+    "wires": []
+  },
+  {
+    "id": "330cf8c92afeccbb",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "group": "8fb11826e4a47fc9",
+    "name": "Contest Clock Toolbar Header",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "format": "<script id=\"toolbar\" type=\"text/javascript\">\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n\n        //add lightning\n        var div1 = $('<div/>');\n        let l1 = $('<p/ id=\"header-icon\">');\n        let l2 = $('<p/ id=\"header-lightning\">');\n        \n        div1.append(l1);\n        div1.append(l2);\n        \n        div1[0].style.width = 'auto';\n        div1[0].style.margin = 'auto';\n        div1[0].style.color = 'white';\n        div1[0].style.display = 'flex';\n        \n        l1[0].style.margin = 'auto';\n        l2[0].style.margin = '5px';\n        l2[0].style.color = 'white';\n        \n        // add contestcall\n        var div2 = $('<div/>');\n        var p1 = $('<p /id=\"header-contestname\">');\n        var p2 = $('<p /id=\"header-contestcall\">');\n        var p3 = $('<p /id=\"header-score_total\">');\n        var p5 = $('<p /id=\"header-chase1_call\">');\n        var p6 = $('<p /id=\"header-chase1_score_total\">');\n        var p8 = $('<p /id=\"header-chase2_call\">');\n        var p9 = $('<p /id=\"header-chase2_score_total\">');\n        var p11 = $('<p /id=\"header-chase3_call\">');\n        var p12 = $('<p /id=\"header-chase3_score_total\">');\n        var p14 = $('<p /id=\"header-chase4_call\">');\n        var p15 = $('<p /id=\"header-chase4_score_total\">');\n      \n        div2.append(p1);\n        div2.append(p2);\n        div2.append(p3);\n        div2.append(p5);\n        div2.append(p6);\n        div2.append(p8);\n        div2.append(p9);\n        div2.append(p11);\n        div2.append(p12);\n        div2.append(p14);\n        div2.append(p15);\n        \n        div2[0].style.width = 'auto';\n        div2[0].style.margin = 'auto';\n        div2[0].style.display = 'flex';\n        div2[0].style.color = '#c4d0ee';\n\t\t\n        p1[0].style.margin = '5px';\n        p1[0].style.width = 'auto';\n        p2[0].style.margin = '5px'; \n        p2[0].style.color = 'white';\n        p3[0].style.margin = '5px';\n        p3[0].style.color = 'white';\n        p5[0].style.margin = '5px';\n        p5[0].style.color = 'white';\n        p6[0].style.margin = 'auto';\n        p6[0].style.color = 'white';\n        p8[0].style.margin = '5px';\n        p8[0].style.color = 'white';\n        p9[0].style.margin = 'auto';\n        p9[0].style.color = 'white';\n        p11[0].style.margin = '5px';\n        p11[0].style.color = 'white';\n        p12[0].style.margin = 'auto';\n        p12[0].style.color = 'white';\n        p14[0].style.margin = '5px';\n        p14[0].style.color = 'white';\n        p15[0].style.margin = 'auto';\n        p15[0].style.color = 'white';\n        \n        \n    // add solar\n        var div3 = $('<div/>');\n        var s1 = $('<p>SFi</p>');\n        var s2 = $('<p/ id=\"header-sfi\">');\n        var s3 = $('<p>A</p>');\n        var s4 = $('<p/ id=\"header-Aindex\">');\n        var s5 = $('<p>K</p>');\n        var s6 = $('<p/ id=\"header-kdx\">');\n     \n        div3.append(s1);\n        div3.append(s2);\n        div3.append(s3);\n        div3.append(s4);\n        div3.append(s5);\n        div3.append(s6);\n        \n        div3[0].style.width = 'auto';\n        div3[0].style.margin = 'auto';\n        div3[0].style.display = 'flex';\n        div3[0].style.color = '#c4d0ee';\n\n        s1[0].style.margin = 'auto';\n        s2[0].style.margin = '5px'; \n        s2[0].style.color = 'white';\n        s3[0].style.margin = 'auto';\n        s4[0].style.margin = '5px';\n        s4[0].style.color = 'white';\n        s5[0].style.margin = 'auto';\n        s6[0].style.margin = '5px';\n        s6[0].style.color = 'white';\n        \n        \n        // add clock\n        var div4 = $('<div/>');\n        var p = $('<p/>');\n\n        div4.append(p);\n        div4[0].style.margin = '5px 5px 5px auto';\n        div4[0].style.display = 'flex';\n\n        function displayTime() {\n            var d = Date();\n            var options = { timeZone: 'UTC', timeZoneName: 'short', year: '2-digit', month: 'numeric', day: 'numeric', hourCycle:\n            'h23', hour: `2-digit`, minute: `2-digit`};\n            p.text(new Date().toLocaleString('en-US', options));\n        }\n\n       \n        clockInterval = setInterval(displayTime, 1000);\n\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n            toolbar.append(div2);\n            toolbar.append(div3);\n            toolbar.append(div4);\n\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 50);\n    });\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "global",
+    "className": "",
+    "x": 630,
+    "y": 80,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "431c69a2758e9d6f",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "BlitzunorgUi",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"a86c0f808507a0cc\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg.payload.length !== 0) {\n                $(\"#header-icon\").html(\"<i class='fa fa-bolt fa-2x' aria-hidden='true'></i>\").css(\"color\",(msg.color));\n                $(\"#header-lightning\").text(msg.payload); \n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1130,
+    "y": 440,
+    "wires": [
+      [
+        "36ed085a21d6315d"
+      ]
+    ]
+  },
+  {
+    "id": "36ed085a21d6315d",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "BlitzunorgUi",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"a86c0f808507a0cc\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg.payload.length !== 0) {\n                $(\"#header-icon\").html(\"<i class='fa fa-bolt fa-2x' aria-hidden='true'></i>\").css(\"color\",(msg.color));\n                $(\"#header-lightning\").text(msg.payload); \n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1470,
+    "y": 440,
+    "wires": [
+      [
+        "85db86a67be75656"
+      ]
+    ]
+  },
+  {
+    "id": "85db86a67be75656",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "BlitzunorgUi",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"a86c0f808507a0cc\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg.payload.length !== 0) {\n                $(\"#header-icon\").html(\"<i class='fa fa-bolt fa-2x' aria-hidden='true'></i>\").css(\"color\",(msg.color));\n                $(\"#header-lightning\").text(msg.payload); \n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1750,
+    "y": 440,
+    "wires": [
+      [
+        "0b122154cd902313"
+      ]
+    ]
+  },
+  {
+    "id": "b5b388156ec5eca9",
+    "type": "delay",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "pauseType": "rate",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "2",
+    "rateUnits": "minute",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1800,
+    "y": 720,
+    "wires": [
+      [
+        "e733af43f8c28c46"
+      ]
+    ]
+  },
+  {
+    "id": "d34ab878fcdc07ae",
+    "type": "link out",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "Blitz Ligtning OUT",
+    "mode": "link",
+    "links": [
+      "e35b27050e23f4fe"
+    ],
+    "x": 1775,
+    "y": 840,
+    "wires": []
+  },
+  {
+    "id": "e35b27050e23f4fe",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar Blitz Lightning IN",
+    "links": [
+      "d34ab878fcdc07ae"
+    ],
+    "x": 255,
+    "y": 440,
+    "wires": [
+      [
+        "53692007691b251a"
+      ]
+    ]
+  },
+  {
+    "id": "cb344aa1d31a6502",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "setDistance (orig)",
+    "func": "function arePointsNear(checkPoint, centerPoint) {\n var ky = 40000 / 360;\n var kx = Math.cos(Math.PI * centerPoint.lat / 180.0) * ky;\n var dx = Math.abs(centerPoint.lng - checkPoint.lng) * kx;\n var dy = Math.abs(centerPoint.lat - checkPoint.lat) * ky;\n return Math.sqrt(dx * dx + dy * dy);\n}\n\nvar strike = { lat: msg.payload.lat, lng: msg.payload.lon };\n\n// set latitute + longitude accordingly\nvar home = { lat: 39.280430, lng: -77.886821 };\n\nvar n = arePointsNear(strike, home);\nn = Math.round(n);\n\n// '10' = km radius, replace with whatever km radius you'd like\nif(n <= 10) {\n // return distance to strike if strike is in defined radius\n return {payload: '<' + n + ' Km', color: \"#c40606\", topic: 'lightning'};\n} else\n return  {payload: '> 10 Km', color: \"#14f00c\",};",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1010,
+    "y": 920,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c31ad36e83f990dd",
+    "type": "catch",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "scope": [
+      "2570533c0ddd961a",
+      "e8923d3119f9de10"
+    ],
+    "uncaught": false,
+    "x": 590,
+    "y": 920,
+    "wires": [
+      [
+        "2d5edcaf1c0997bc"
+      ]
+    ]
+  },
+  {
+    "id": "2d5edcaf1c0997bc",
+    "type": "debug",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 750,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "a5372819368f5d81",
+    "type": "inject",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "updateSolar",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "30",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "60",
+    "topic": "",
+    "payloadType": "date",
+    "x": 350,
+    "y": 1120,
+    "wires": [
+      [
+        "6d2c61c8eafe791b"
+      ]
+    ]
+  },
+  {
+    "id": "6d2c61c8eafe791b",
+    "type": "http request",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "getSolar",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://www.hamqsl.com/w8bexml.php",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 340,
+    "y": 1180,
+    "wires": [
+      [
+        "a31fd08b865e287c"
+      ]
+    ],
+    "info": "# getSolar\n\n## HTTP request node to fetch solar indicies data from https://www.hamqsl.com/w8bexml.php\n\nData is returned in xml format\n\nobject\nsolar: object\nsolardata: array[1]\n0: object\nsource: array[1]\nupdated: array[1]\nsolarflux: array[1]\naindex: array[1]\nkindex: array[1]\nkindexnt: array[1]\nxray: array[1]\nsunspots: array[1]\nheliumline: array[1]\nprotonflux: array[1]\nelectonflux: array[1]\naurora: array[1]\nnormalization: array[1]\nlatdegree: array[1]\nsolarwind: array[1]\nmagneticfield: array[1]\ncalculatedconditions: array[1]\ncalculatedvhfconditions: array[1]\ngeomagfield: array[1]\nsignalnoise: array[1]\nfof2: array[1]\nmuffactor: array[1]\nmuf: array[1]\n"
+  },
+  {
+    "id": "dbc4fa6c4950549c",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "getKdx",
+    "func": "var kdx = parseFloat(msg.payload.solar.solardata[0].kindex[0]);\nmsg.topic = \"kdx\";\nmsg.payload = kdx;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 600,
+    "y": 1120,
+    "wires": [
+      [
+        "20a1b3e47e825d5b"
+      ]
+    ],
+    "info": "# getKdx\n\n## Function parses k index data from getSolar and converts to msg to be used in updateServerK template"
+  },
+  {
+    "id": "0e5c59369f188c2d",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "getSFi",
+    "func": "var sfi = parseFloat(msg.payload.solar.solardata[0].solarflux[0]);\nmsg.topic = \"sfi\";\nmsg.payload = sfi;\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 610,
+    "y": 1160,
+    "wires": [
+      [
+        "41b71b195d25cc36"
+      ]
+    ],
+    "info": "# getSFi\n\n## Function parses SFI index data from getSolar and converts to msg to be used in updateServerK template"
+  },
+  {
+    "id": "a6bf18e701de8cea",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "getAindex",
+    "func": "var Aindex = parseFloat(msg.payload.solar.solardata[0].aindex);\nmsg.topic =\"Aindex\";\nmsg.payload = Aindex;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 620,
+    "y": 1200,
+    "wires": [
+      [
+        "324101084f63a83e"
+      ]
+    ],
+    "info": "# getAindex\n\n## Function parses A index data from getSolar and converts to msg to be used in updateServer SFi template"
+  },
+  {
+    "id": "a31fd08b865e287c",
+    "type": "xml",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 470,
+    "y": 1180,
+    "wires": [
+      [
+        "dbc4fa6c4950549c",
+        "0e5c59369f188c2d",
+        "a6bf18e701de8cea"
+      ]
+    ]
+  },
+  {
+    "id": "522c164834b058f6",
+    "type": "ui_ui_control",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "updateOnChange",
+    "events": "all",
+    "x": 350,
+    "y": 1240,
+    "wires": [
+      [
+        "6d2c61c8eafe791b"
+      ]
+    ]
+  },
+  {
+    "id": "94377682fd3db09a",
+    "type": "comment",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "getSolar",
+    "info": "# Server Side Flow to fetch solar data\n# Function gets data from N0NBP\n# Function formats data for solar indicies\n# Template Nodes are server update for variables that toolbar uses\n# Link Out to at least one flow per dashboard tab to allow browser refresh to client to sync",
+    "x": 480,
+    "y": 1080,
+    "wires": []
+  },
+  {
+    "id": "ea4b0c4d43bbf2e8",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "updateServer Aindex",
+    "order": 21,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"28807f2ea8989c55\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"Aindex\") {\n                $(\"#header-Aindex\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 600,
+    "y": 560,
+    "wires": [
+      [
+        "af65ab5234804a9a"
+      ]
+    ],
+    "info": "# Update Server Aindex\n\n# Node links to Solar Flow logic for A index varible #Aindex\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "4f76379f46c13673",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "updateServer K",
+    "order": 8,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"ebbabd8a26718f21\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"kdx\") {\n                $(\"#header-kdx\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 580,
+    "y": 480,
+    "wires": [
+      [
+        "d500857eefbcea4a"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "dbcb9a738301da97",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "9a1dd65e19bf97cb",
+    "name": "updateServer SFi",
+    "order": 14,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"6b98b8d2d329e253\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"sfi\") {\n                $(\"#header-sfi\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 590,
+    "y": 520,
+    "wires": [
+      [
+        "a110c5259531418b"
+      ]
+    ],
+    "info": "# Update Server sfi\n\n# Node links to Solar Flow logic for sfi varible #sfi\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "a4442b82396c4ff2",
+    "type": "comment",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "syncSolar",
+    "info": "# Client Side Flow to parse solar data into variable that tool bar will use\n# This flow should be in at least one Dashboard Group to allow for updates.   Use link out/in nodes to additional dashbaord group flows.  ",
+    "x": 760,
+    "y": 1060,
+    "wires": []
+  },
+  {
+    "id": "664777b6beccd2c1",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "d": true,
+    "g": "c6a5789101548ba9",
+    "group": "e357ef02.ef3cb",
+    "name": "Solar/foF2/Clock (orig)",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "format": "<script id=\"toolbar\" type=\"text/javascript\">\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n\n        // add solar\n        var div1 = $('<div/>');\n        var p1 = $('<p>SFi</p>');\n        var p2 = $('<p/ id=\"header-sfi\">');\n        var p3 = $('<p>A</p>');\n        var p4 = $('<p/ id=\"header-Aindex\">');\n        var p5 = $('<p>K</p>');\n        var p6 = $('<p/ id=\"header-kdx\">');\n     \n        div1.append(p1);\n        div1.append(p2);\n        div1.append(p3);\n        div1.append(p4);\n        div1.append(p5);\n        div1.append(p6);\n        \n        div1[0].style.width = 'auto';\n        div1[0].style.margin = 'auto';\n        div1[0].style.display = 'flex';\n        div1[0].style.color = '#c4d0ee';\n\n        p1[0].style.margin = 'auto';\n        p2[0].style.margin = '5px'; \n        p2[0].style.color = 'white';\n        p3[0].style.margin = 'auto';\n        p4[0].style.margin = '5px';\n        p4[0].style.color = 'white';\n        p5[0].style.margin = 'auto';\n        p6[0].style.margin = '5px';\n        p6[0].style.color = 'white';\n\n        //add fof2\n        var div2 = $('<div/>');\n        var f1 = $('<p>foF2</p>');\n        let f2 = $('<p/ id=\"header-fof2\">');\n        \n        div2.append(f1);\n        div2.append(f2);\n        \n        div2[0].style.width = 'auto';\n        div2[0].style.margin = 'auto';\n        div2[0].style.display = 'flex';\n        div2[0].style.color = '#c4d0ee';\n        \n        f1[0].style.margin = '6px';\n        f2[0].style.margin = 'auto';\n        f2[0].style.color = 'white';\n     \n        // add clock\n        var div3 = $('<div/>');\n        var p = $('<p/>');\n\n        div3.append(p);\n        div3[0].style.margin = '5px 5px 5px auto';\n        div3[0].style.display = 'flex';\n\n\n        function displayTime() {\n            var d = Date();\n            var options = { timeZone: 'UTC', timeZoneName: 'short',  hourCycle: 'h23', hour: `2-digit`, minute: `2-digit`};\n            p.text(new Date().toLocaleString('en-US', options));\n        }\n        \n        clockInterval = setInterval(displayTime, 1000);\n\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n            toolbar.append(div2);\n            toolbar.append(div3);\n\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 50);\n    });",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 1520,
+    "y": 1180,
+    "wires": [
+      []
+    ],
+    "icon": "font-awesome/fa-list-alt",
+    "info": "# Solar / foF2 / Clock\n\n## Client Template Node in header\n\n1. solar data from Solar flow variables:  #kdx, #sfi, #Aindex, and #fof2\n2. Function for UTC clock\n\n"
+  },
+  {
+    "id": "4e62658f095c2863",
+    "type": "comment",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6a5789101548ba9",
+    "name": "updateClientToolbar",
+    "info": "# Tool bar flowo to get solar data, Fof2, and UTC Clock\n",
+    "x": 1510,
+    "y": 1140,
+    "wires": []
+  },
+  {
+    "id": "9ffef6f470bb6f80",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "d": true,
+    "group": "8fb11826e4a47fc9",
+    "name": "Contest Clock Toolbar Header (orig1)",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "format": "<script id=\"toolbar\" type=\"text/javascript\">\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n\n        //add lightning\n        var div1 = $('<div/>');\n        let l1 = $('<p/ id=\"header-icon\">');\n        let l2 = $('<p/ id=\"header-lightning\">');\n        \n        div1.append(l1);\n        div1.append(l2);\n        \n        div1[0].style.width = 'auto';\n        div1[0].style.margin = 'auto';\n        div1[0].style.color = 'white';\n        div1[0].style.display = 'flex';\n        \n        l1[0].style.margin = 'auto';\n        l2[0].style.margin = '5px';\n        l2[0].style.color = 'white';\n        \n        // add contestcall\n        var div2 = $('<div/>');\n        var p1 = $('<p /id=\"header-contestname\">');\n        var p2 = $('<p /id=\"header-contestcall\">');\n        var p3 = $('<p /id=\"header-score_total\">');\n        var p5 = $('<p /id=\"header-chase1_call\">');\n        var p6 = $('<p /id=\"header-chase1_score_total\">');\n        var p8 = $('<p /id=\"header-chase2_call\">');\n        var p9 = $('<p /id=\"header-chase2_score_total\">');\n        var p11 = $('<p /id=\"header-chase3_call\">');\n        var p12 = $('<p /id=\"header-chase3_score_total\">');\n        var p14 = $('<p /id=\"header-chase4_call\">');\n        var p15 = $('<p /id=\"header-chase4_score_total\">');\n      \n        div2.append(p1);\n        div2.append(p2);\n        div2.append(p3);\n        div2.append(p5);\n        div2.append(p6);\n        div2.append(p8);\n        div2.append(p9);\n        div2.append(p11);\n        div2.append(p12);\n        div2.append(p14);\n        div2.append(p15);\n        \n        div2[0].style.width = 'auto';\n        div2[0].style.margin = 'auto';\n        div2[0].style.display = 'flex';\n        div2[0].style.color = '#c4d0ee';\n\t\t\n        p1[0].style.margin = '5px';\n        p1[0].style.width = 'auto';\n        p2[0].style.margin = '5px'; \n        p2[0].style.color = 'white';\n        p3[0].style.margin = '5px';\n        p3[0].style.color = 'white';\n        p5[0].style.margin = '5px';\n        p5[0].style.color = 'white';\n        p6[0].style.margin = 'auto';\n        p6[0].style.color = 'white';\n        p8[0].style.margin = '5px';\n        p8[0].style.color = 'white';\n        p9[0].style.margin = 'auto';\n        p9[0].style.color = 'white';\n        p11[0].style.margin = '5px';\n        p11[0].style.color = 'white';\n        p12[0].style.margin = 'auto';\n        p12[0].style.color = 'white';\n        p14[0].style.margin = '5px';\n        p14[0].style.color = 'white';\n        p15[0].style.margin = 'auto';\n        p15[0].style.color = 'white';\n     \n        // add clock\n        var div3 = $('<div/>');\n        var p = $('<p/>');\n\n        div3.append(p);\n        div3[0].style.margin = '5px 5px 5px auto';\n        div3[0].style.display = 'flex';\n\n        function displayTime() {\n            var d = Date();\n            var options = { timeZone: 'UTC', timeZoneName: 'short', year: '2-digit', month: 'numeric', day: 'numeric', hourCycle:\n            'h23', hour: `2-digit`, minute: `2-digit`};\n            p.text(new Date().toLocaleString('en-US', options));\n        }\n\n       \n        clockInterval = setInterval(displayTime, 1000);\n\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n            toolbar.append(div2);\n            toolbar.append(div3);\n\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 50);\n    });\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "global",
+    "className": "",
+    "x": 970,
+    "y": 80,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d500857eefbcea4a",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "updateServer K",
+    "order": 10,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"ebbabd8a26718f21\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"kdx\") {\n                $(\"#header-kdx\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 880,
+    "y": 480,
+    "wires": [
+      [
+        "0c5b09ac8217c8e8"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "0c5b09ac8217c8e8",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "updateServer K",
+    "order": 7,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"ebbabd8a26718f21\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"kdx\") {\n                $(\"#header-kdx\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1140,
+    "y": 480,
+    "wires": [
+      [
+        "95613fb05341082e"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "95613fb05341082e",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "updateServer K",
+    "order": 8,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"ebbabd8a26718f21\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"kdx\") {\n                $(\"#header-kdx\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1480,
+    "y": 480,
+    "wires": [
+      [
+        "66a441672a2af592"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "66a441672a2af592",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "updateServer K",
+    "order": 6,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"ebbabd8a26718f21\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"kdx\") {\n                $(\"#header-kdx\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1760,
+    "y": 480,
+    "wires": [
+      [
+        "beebf164a6058fc0"
+      ]
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "8d8c2c7254287149",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "updateContestCall",
+    "order": 13,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-contestcall\").text(msg.payload.contestcall).prop('title','Contest Call');\n              //  $(\"#header-contestcall\").prop('title','Contest Call');\n                $(\"#header-score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Contest Call Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-contestcall\").text(\"\");\n                $(\"#header-score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2070,
+    "y": 240,
+    "wires": [
+      []
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "6622e7e7a8741c0e",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "UpdateContestName",
+    "order": 12,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"7eceb14e06091850\"]').hide();\n        scope.$watch('msg', function(msg) {\n        if ((msg.payload.contestname) != null){\n            $(\"#header-contestname\").text(msg.payload.contestname);\n             }\n        if ((msg.payload.contestname) == null){\n            $(\"#header-contestname\").text(\"No Active Contest\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2080,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "3bd9135654310792",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "UpdateChaseCall1",
+    "order": 15,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase1_call\").text(msg.payload.contestcall).prop('title','Call 1');\n                $(\"#header-chase1_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 1 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase1_call\").text(\"\");\n                $(\"#header-chase1_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2070,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "1ef1df6438a74955",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "UpdateChaseCall2",
+    "order": 16,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase2_call\").text(msg.payload.contestcall).prop('title','Call 2');\n                $(\"#header-chase2_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 2 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase2_call\").text(\"\");\n                $(\"#header-chase2_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2070,
+    "y": 320,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "2dafd2c2dab98d98",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "UpdateChaseCall3",
+    "order": 17,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase3_call\").text(msg.payload.contestcall).prop('title','Call 3');\n                $(\"#header-chase3_score_total\").text(msg.payload.score_total.concat(\" \",\"|\")).prop('title','Call 3 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase3_call\").text(\"\");\n                $(\"#header-chase3_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2070,
+    "y": 360,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d0c78d62f35e3d16",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "UpdateChaseCall4",
+    "order": 18,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"9feb96c66858ba60\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if ( msg.payload.contestcall.length >= 2) {\n                $(\"#header-chase4_call\").text(msg.payload.contestcall).prop('title','Call 4');\n                $(\"#header-chase4_score_total\").text(msg.payload.score_total).prop('title','Call 4 Score');\n                \n            }\n            if ( msg.payload.contestcall.length <= 1){\n                $(\"#header-chase4_call\").text(\"\");\n                $(\"#header-chase4_score_total\").text(\"\");\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2070,
+    "y": 400,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "0b122154cd902313",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "BlitzunorgUi",
+    "order": 10,
+    "width": 0,
+    "height": 0,
+    "format": "<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"a86c0f808507a0cc\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg.payload.length !== 0) {\n                $(\"#header-icon\").html(\"<i class='fa fa-bolt fa-2x' aria-hidden='true'></i>\").css(\"color\",(msg.color));\n                $(\"#header-lightning\").text(msg.payload); \n            }\n        });\n    })(scope);\n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2050,
+    "y": 440,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "beebf164a6058fc0",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "updateServer K",
+    "order": 14,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n         $('[node-id=\"ebbabd8a26718f21\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"kdx\") {\n                $(\"#header-kdx\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2060,
+    "y": 480,
+    "wires": [
+      []
+    ],
+    "info": "# Update Server K\n\n# Node links to Solar Flow logic for K index varible #kdx\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update \n\n\n"
+  },
+  {
+    "id": "a110c5259531418b",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "updateServer SFi",
+    "order": 7,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"6b98b8d2d329e253\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"sfi\") {\n                $(\"#header-sfi\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 890,
+    "y": 520,
+    "wires": [
+      [
+        "72c0143cb2801842"
+      ]
+    ],
+    "info": "# Update Server sfi\n\n# Node links to Solar Flow logic for sfi varible #sfi\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "72c0143cb2801842",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "updateServer SFi",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"6b98b8d2d329e253\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"sfi\") {\n                $(\"#header-sfi\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1150,
+    "y": 520,
+    "wires": [
+      [
+        "2100cfc9553c38ba"
+      ]
+    ],
+    "info": "# Update Server sfi\n\n# Node links to Solar Flow logic for sfi varible #sfi\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "2100cfc9553c38ba",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "updateServer SFi",
+    "order": 5,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"6b98b8d2d329e253\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"sfi\") {\n                $(\"#header-sfi\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1490,
+    "y": 520,
+    "wires": [
+      [
+        "54fd1aa0f1e76bb0"
+      ]
+    ],
+    "info": "# Update Server sfi\n\n# Node links to Solar Flow logic for sfi varible #sfi\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "54fd1aa0f1e76bb0",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "updateServer SFi",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"6b98b8d2d329e253\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"sfi\") {\n                $(\"#header-sfi\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1770,
+    "y": 520,
+    "wires": [
+      [
+        "05db91002fb4d67a"
+      ]
+    ],
+    "info": "# Update Server sfi\n\n# Node links to Solar Flow logic for sfi varible #sfi\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "05db91002fb4d67a",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "updateServer SFi",
+    "order": 11,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"6b98b8d2d329e253\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"sfi\") {\n                $(\"#header-sfi\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2070,
+    "y": 520,
+    "wires": [
+      []
+    ],
+    "info": "# Update Server sfi\n\n# Node links to Solar Flow logic for sfi varible #sfi\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "af65ab5234804a9a",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "updateServer Aindex",
+    "order": 16,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"28807f2ea8989c55\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"Aindex\") {\n                $(\"#header-Aindex\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 900,
+    "y": 560,
+    "wires": [
+      [
+        "34d492ab50541fdc"
+      ]
+    ],
+    "info": "# Update Server Aindex\n\n# Node links to Solar Flow logic for A index varible #Aindex\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "34d492ab50541fdc",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "aafad41ae29aabef",
+    "name": "updateServer Aindex",
+    "order": 12,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"28807f2ea8989c55\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"Aindex\") {\n                $(\"#header-Aindex\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1160,
+    "y": 560,
+    "wires": [
+      [
+        "7036aad4276a8131"
+      ]
+    ],
+    "info": "# Update Server Aindex\n\n# Node links to Solar Flow logic for A index varible #Aindex\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "7036aad4276a8131",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "ebbb538ba5d86639",
+    "name": "updateServer Aindex",
+    "order": 13,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"28807f2ea8989c55\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"Aindex\") {\n                $(\"#header-Aindex\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1500,
+    "y": 560,
+    "wires": [
+      [
+        "e6ae4df0ca620d74"
+      ]
+    ],
+    "info": "# Update Server Aindex\n\n# Node links to Solar Flow logic for A index varible #Aindex\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "e6ae4df0ca620d74",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "4244ba9d238d6a13",
+    "name": "updateServer Aindex",
+    "order": 11,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"28807f2ea8989c55\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"Aindex\") {\n                $(\"#header-Aindex\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1780,
+    "y": 560,
+    "wires": [
+      [
+        "23d467e3525ec5a8"
+      ]
+    ],
+    "info": "# Update Server Aindex\n\n# Node links to Solar Flow logic for A index varible #Aindex\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "23d467e3525ec5a8",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "e42cdfb590735e00",
+    "name": "updateServer Aindex",
+    "order": 19,
+    "width": 0,
+    "height": 0,
+    "format": "\n<script>\n    (function(scope) {\n        //hide this card. NOTE: 4b689f7473831a84 is the Node id as \n        //seen in the INFO panel on the sidebar when you select this node\n        $('[node-id=\"28807f2ea8989c55\"]').hide();\n        scope.$watch('msg', function(msg) {\n            if (msg && msg.topic == \"Aindex\") {\n                $(\"#header-Aindex\").text(msg.payload);\n            }\n        });\n    })(scope);\n</script>\n",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 2080,
+    "y": 560,
+    "wires": [
+      []
+    ],
+    "info": "# Update Server Aindex\n\n# Node links to Solar Flow logic for A index varible #Aindex\n\nNode needs to be in one flow for each dashboard tab in order for toolbar to update "
+  },
+  {
+    "id": "20a1b3e47e825d5b",
+    "type": "link out",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "Get K Index OUT",
+    "mode": "link",
+    "links": [
+      "58b4f87e7d17a9b2"
+    ],
+    "x": 815,
+    "y": 1120,
+    "wires": []
+  },
+  {
+    "id": "41b71b195d25cc36",
+    "type": "link out",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "Get SFI Index OUT",
+    "mode": "link",
+    "links": [
+      "1c0e963122e30bc8"
+    ],
+    "x": 815,
+    "y": 1160,
+    "wires": []
+  },
+  {
+    "id": "324101084f63a83e",
+    "type": "link out",
+    "z": "b73cc2bb5f424b69",
+    "g": "28877ac600fea8b9",
+    "name": "Get A Index OUT",
+    "mode": "link",
+    "links": [
+      "cd6e0fce6f62b9c5"
+    ],
+    "x": 815,
+    "y": 1200,
+    "wires": []
+  },
+  {
+    "id": "58b4f87e7d17a9b2",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar K Index IN",
+    "links": [
+      "20a1b3e47e825d5b"
+    ],
+    "x": 255,
+    "y": 480,
+    "wires": [
+      [
+        "4f76379f46c13673"
+      ]
+    ]
+  },
+  {
+    "id": "1c0e963122e30bc8",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar SFi Index IN",
+    "links": [
+      "41b71b195d25cc36"
+    ],
+    "x": 255,
+    "y": 520,
+    "wires": [
+      [
+        "dbcb9a738301da97"
+      ]
+    ]
+  },
+  {
+    "id": "cd6e0fce6f62b9c5",
+    "type": "link in",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "name": "Toolbar A Index IN",
+    "links": [
+      "324101084f63a83e"
+    ],
+    "x": 255,
+    "y": 560,
+    "wires": [
+      [
+        "ea4b0c4d43bbf2e8"
+      ]
+    ]
+  },
+  {
+    "id": "393223b190ba95f3",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "Inject A = 542",
+    "func": "return {payload: '{ \"a\": 542 }'};\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 560,
+    "y": 880,
+    "wires": [
+      [
+        "2570533c0ddd961a"
+      ]
+    ]
+  },
+  {
+    "id": "35549ac0e22e44ff",
+    "type": "ui_ui_control",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "events": "connect",
+    "x": 140,
+    "y": 920,
+    "wires": [
+      [
+        "40b13d784b111566"
+      ]
+    ]
+  },
+  {
+    "id": "40b13d784b111566",
+    "type": "delay",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 360,
+    "y": 920,
+    "wires": [
+      [
+        "393223b190ba95f3"
+      ]
+    ]
+  },
+  {
+    "id": "e6fb0ef92036fc12",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "Set Icon Color Red",
+    "func": "let n = msg.payload.strike_distance\nreturn {payload: '<' + n + ' Km', color: \"#c40606\", topic: 'lightning'};\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1550,
+    "y": 820,
+    "wires": [
+      [
+        "d34ab878fcdc07ae"
+      ]
+    ]
+  },
+  {
+    "id": "3ba91bda918482b2",
+    "type": "switch",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "Lightning < 150 Miles",
+    "property": "payload.strike_distance",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "lt",
+        "v": "150",
+        "vt": "num"
+      },
+      {
+        "t": "gte",
+        "v": "150",
+        "vt": "num"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1060,
+    "y": 840,
+    "wires": [
+      [
+        "e6fb0ef92036fc12",
+        "49c54051341840e3"
+      ],
+      [
+        "2447aed577add90a"
+      ]
+    ]
+  },
+  {
+    "id": "2447aed577add90a",
+    "type": "delay",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "pauseType": "rate",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "20",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": true,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 1320,
+    "y": 860,
+    "wires": [
+      [
+        "33b22679735f2e3c"
+      ]
+    ]
+  },
+  {
+    "id": "33b22679735f2e3c",
+    "type": "function",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "Set Icon Color Green",
+    "func": "let n = msg.payload.strike_distance\nreturn  {payload: '> 10 Km', color: \"#14f00c\",};\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1560,
+    "y": 860,
+    "wires": [
+      [
+        "d34ab878fcdc07ae"
+      ]
+    ]
+  },
+  {
+    "id": "53becfe3676d44bd",
+    "type": "debug",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1040,
+    "y": 780,
+    "wires": []
+  },
+  {
+    "id": "49c54051341840e3",
+    "type": "debug",
+    "z": "b73cc2bb5f424b69",
+    "g": "7a5512b5a3f6e8ba",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1290,
+    "y": 780,
+    "wires": []
+  },
+  {
+    "id": "a8a10cc2.9d0ae",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "02235a52f1d247d6",
+    "group": "1ea34d06.1438c3",
+    "name": "ScoreBoard CSS",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\n\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 590,
+    "y": 600,
+    "wires": [
+      [
+        "66a43145427ca537"
+      ]
+    ]
+  },
+  {
+    "id": "52d0f0a78929438e",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "c6e09ffb3c5a1ce6",
+    "group": "1ea34d06.1438c3",
+    "name": "Default CSS",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_current_qsos{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats{\nfont-size: 22px;\n}\n.dashboard_radio_data{ \nfont-size: 18px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_spot_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n.op_compete_trending{\nfont-size: 14px;\n}\n.op_compete{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 15px;\n}\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 310,
+    "y": 600,
+    "wires": [
+      [
+        "a8a10cc2.9d0ae"
+      ]
+    ]
+  },
+  {
+    "id": "66a43145427ca537",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "52886121c9629e0b",
+    "group": "1ea34d06.1438c3",
+    "name": "Dashboard CSS",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 880,
+    "y": 600,
+    "wires": [
+      [
+        "de48727be275102f"
+      ]
+    ]
+  },
+  {
+    "id": "de48727be275102f",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "bebfe5d7e4f0feb0",
+    "group": "1ea34d06.1438c3",
+    "name": "Spectator Dashboard CSS",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\n\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 1180,
+    "y": 600,
+    "wires": [
+      [
+        "c2d7711a7d230637"
+      ]
+    ]
+  },
+  {
+    "id": "c2d7711a7d230637",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "23eb39063da69706",
+    "group": "1ea34d06.1438c3",
+    "name": "RBN Spots CSS",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 1480,
+    "y": 600,
+    "wires": [
+      [
+        "c4561e5c31134c5d"
+      ]
+    ]
+  },
+  {
+    "id": "c4561e5c31134c5d",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "022672368830e427",
+    "group": "1ea34d06.1438c3",
+    "name": "Band Stats CSS",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\n\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 1760,
+    "y": 600,
+    "wires": [
+      [
+        "89b2058720d8fb99"
+      ]
+    ]
+  },
+  {
+    "id": "89b2058720d8fb99",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "18a3020b4a12ae60",
+    "group": "1ea34d06.1438c3",
+    "name": "Op Competion CSS",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 2070,
+    "y": 600,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6e5f192ff0fd2d39",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "f830dd821e0240f4",
+    "group": "",
+    "name": "css",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\n/* unvisited link */\na:link {\n  color: white;\n    text-decoration: none;\n    vertical-align: bottom;\n}\n\n/* visited link */\na:visited {\n  color: white;\n    text-decoration: none;\n    vertical-align: bottom;    \n}\n\n/* mouse over link */\na:hover {\n  color: white;\n    text-decoration: none;\n        vertical-align: bottom;\n}\n\n/* selected link */\na:active {\n  color: white;\n    text-decoration: none;\n        vertical-align: bottom;\n}\n\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 1490,
+    "y": 1040,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "aa0566f8a8d9dbfd",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "f830dd821e0240f4",
+    "group": "ba8d90f0d4d46eb0",
+    "name": "Master style override",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "format": "<style>\nbody.nr-dashboard-theme {\n background-color: #333333;\n font-family: Calibri;\n}\nbutton { \n  width: 50px; \n  color: #d0d0d0;\n  /*box-shadow: 2px 2px 2px rgba(0,0, 0, 0.4);*/\n  /*border-radius: 1px;*/\n  /*transform: scale(1.0);*/\n  background-color: #707070;\n  background-image: linear-gradient(to bottom right, #8a8a8a6e, #00000070);\n\n}\nbutton, html, input, select, textarea {\n font-family: Calibri;\n}\nbody.nr-dashboard-theme md-content md-card {\n /*background-color: #33333300;*/\n color: #d0d0d0;\n}\n\n/* Set header background style */\nbody.remove.nr-dashboard-theme md-toolbar {\n background-image: linear-gradient(to right,#8a8a8a6e, #00000070);\n box-shadow: 0px 1px 20px #0000008a;\n}\n/* Set groups background style */\n.remove.nr-dashboard-theme ui-card-panel {\n background-image: linear-gradient(to bottom right, #8a8a8a6e, #00000070);\n border: 1px solid #555555;\n box-shadow: 0 0 20px #00000066;\n}\n\n/* Set group titles text */\n.nr-dashboard-theme ui-card-panel p.nr-dashboard-cardtitle {\n color: #2eb82e;\n text-shadow: 0 0 2px black;\n}\n\n.nr-dashboard-theme .nr-dashboard-form-button {\n background-image: linear-gradient(to bottom right,  #8a8a8a6e, #00000070);\n background-color: #00ad03;\n color: #d0d0d0;\n text-shadow: 0 0 2px #525252;\n border-radius:6px;\n}\n\n.nr-dashboard-theme .nr-dashboard-button .md-button {\n background-image: linear-gradient(to bottom right,  #8a8a8a6e, #00000070);\n background-color: #707070;\n color: #d0d0d0;\n text-shadow: 0 0 2px #525252;\n border-radius:6px;\n}\n.nr-dashboard-theme .nr-dashboard-button .md-button:hover {\n background-color: #00de00;\n}\n\n.nr-dashboard-theme .nr-dashboard-switch md-switch .md-thumb {\n background-image: linear-gradient(to bottom right, #8a8a8a6e, #00000070);\n}\n.nr-dashboard-button .md-button {\n box-shadow: 0 1px 3px 0 rgba(0,0,0,.26)!important;\n width: 100%!important;\n height: 100%!important;\n margin: 0!important;\n min-width: 0!important;\n min-height: 0!important;\n}\n.nr-dashboard-theme .nr-dashboard-slider .md-thumb:after {\n background-image: linear-gradient(to bottom right, #8a8a8a6e, #00000070);\n border-style: none;\n}\n.nr-dashboard-theme .nr-dashboard-numeric .value {\n background-color: #33333300;\n color:#d0d0d0;\n}\n\n.nr-dashboard-numeric .value {\n font-weight: 700;\n text-align: center;\n border: 0;\n}\n\n\n.nr-dashboard-form {\n display: inline-block;\n width: 100%;\n overflow-y: visible;\n}\n#SETTINGS_TEATED_cards {\n min-height: 260px;\n}\n\n\n</style>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 1100,
+    "y": 1040,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "925cebb6bacad025",
+    "type": "ui_template",
+    "z": "b73cc2bb5f424b69",
+    "g": "f830dd821e0240f4",
+    "group": "",
+    "name": "button template",
+    "order": 10,
+    "width": 8,
+    "height": 6,
+    "format": "<style>\n  .filled { \n      height: 100% !important;\n\n      padding: 0 !important;\n      margin: 0 !important;\n\n  }\n  .nr-dashboard-template {\n      padding: 0;\n      margin: 0;\n\n  }\n  \n  .rounded {\n  border-radius: 12px 12px 12px 12px;\n\n}\n \n   .bigfont {\n  font-size: 18px;\n  color: white;\n}\n\n   .smallfont {\n  font-size: 12px;\n  color: white;\n}\n  \n</style>\n\n<script>\n$('.vibrate').on('click', function() {\n  navigator.vibrate(100);\n});\n\nfunction restore_bg(x) {\n            $(this).css(\"background-color\", x);\n    };\n\n$('.touched').on('mousedown', function() {\n    \n    var x= $(this).css(\"background-color\");\n    $(this).css(\"background-color\", \"yellow\");\n    \n    setTimeout(restore_bg.bind(this,x),100);\n    navigator.vibrate(80);\n    });\n    \n</script>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 880,
+    "y": 600,
+    "wires": [
+      [
+        "de48727be275102f"
+      ]
+    ]
+  }
+]

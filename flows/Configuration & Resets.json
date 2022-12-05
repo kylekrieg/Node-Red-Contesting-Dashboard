@@ -1,0 +1,5662 @@
+[
+  {
+    "id": "204548a488401a1b",
+    "type": "tab",
+    "label": "Configuration & Resets",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "185defa19c9fea72",
+    "type": "template",
+    "z": "204548a488401a1b",
+    "name": "Delete from qsos",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "delete from qsos;",
+    "output": "str",
+    "x": 1110,
+    "y": 140,
+    "wires": [
+      [
+        "b4520201b51afe74"
+      ]
+    ]
+  },
+  {
+    "id": "b4520201b51afe74",
+    "type": "sqlite",
+    "z": "204548a488401a1b",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 1340,
+    "y": 180,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "fcd262cd360f32ac",
+    "type": "ui_button",
+    "z": "204548a488401a1b",
+    "name": "",
+    "group": "c6e931ac92d6f697",
+    "order": 1,
+    "width": 6,
+    "height": 2,
+    "passthru": false,
+    "label": "Delete All QSOs & Clear Stats?",
+    "tooltip": "",
+    "color": "#FFFFFF",
+    "bgcolor": "#FF0000",
+    "className": "",
+    "icon": "",
+    "payload": "Delete All QSO's From Database & Clear Stats?",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 230,
+    "y": 140,
+    "wires": [
+      [
+        "0f92ae100f900342"
+      ]
+    ]
+  },
+  {
+    "id": "0f92ae100f900342",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "Cancel",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Show Delete All QSOs & Clear Stats",
+    "x": 610,
+    "y": 140,
+    "wires": [
+      [
+        "82dc57f775f51977"
+      ]
+    ]
+  },
+  {
+    "id": "82dc57f775f51977",
+    "type": "switch",
+    "z": "204548a488401a1b",
+    "name": "OK?",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "OK",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 910,
+    "y": 140,
+    "wires": [
+      [
+        "185defa19c9fea72",
+        "be733be1c4eca984",
+        "42dd8e9dba4bcdf2",
+        "45b435ab9c8504ec",
+        "93aec0ede1f81f3a"
+      ]
+    ]
+  },
+  {
+    "id": "9e3ed0af8dd3311e",
+    "type": "template",
+    "z": "204548a488401a1b",
+    "name": "Select contest name",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select distinct(contestname) from qsos;",
+    "output": "str",
+    "x": 460,
+    "y": 300,
+    "wires": [
+      [
+        "087cd1b184d28e41"
+      ]
+    ]
+  },
+  {
+    "id": "087cd1b184d28e41",
+    "type": "sqlite",
+    "z": "204548a488401a1b",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "QSO Database",
+    "x": 660,
+    "y": 300,
+    "wires": [
+      [
+        "5e2dd2ec18c177fc"
+      ]
+    ]
+  },
+  {
+    "id": "b638298b6d42ea25",
+    "type": "ui_button",
+    "z": "204548a488401a1b",
+    "name": "Query All Contests and Radios in DB",
+    "group": "c6e931ac92d6f697",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Query All Contests in DB",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 170,
+    "y": 300,
+    "wires": [
+      [
+        "9e3ed0af8dd3311e",
+        "996242b2a362222b",
+        "926305a899f616de"
+      ]
+    ]
+  },
+  {
+    "id": "b87bee72db7b8e5d",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "prompt",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "Cancel",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Show Query All Contests in DB",
+    "x": 1390,
+    "y": 300,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5e2dd2ec18c177fc",
+    "type": "split",
+    "z": "204548a488401a1b",
+    "name": "",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 830,
+    "y": 300,
+    "wires": [
+      [
+        "282e47e57bd2480e"
+      ]
+    ]
+  },
+  {
+    "id": "282e47e57bd2480e",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "payload.contestname",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "topic",
+        "pt": "msg",
+        "to": "contest",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1000,
+    "y": 300,
+    "wires": [
+      [
+        "4c016a80971b5d70"
+      ]
+    ]
+  },
+  {
+    "id": "4c016a80971b5d70",
+    "type": "join",
+    "z": "204548a488401a1b",
+    "name": "",
+    "mode": "auto",
+    "build": "object",
+    "property": "payload",
+    "propertyType": "msg",
+    "key": "topic",
+    "joiner": "\\n",
+    "joinerType": "str",
+    "accumulate": true,
+    "timeout": "",
+    "count": "",
+    "reduceRight": false,
+    "reduceExp": "",
+    "reduceInit": "",
+    "reduceInitType": "",
+    "reduceFixup": "",
+    "x": 1170,
+    "y": 300,
+    "wires": [
+      [
+        "b87bee72db7b8e5d"
+      ]
+    ]
+  },
+  {
+    "id": "5c4dd14a7c2c8a1e",
+    "type": "ui_ui_control",
+    "z": "204548a488401a1b",
+    "name": "Get IU Control",
+    "events": "all",
+    "x": 880,
+    "y": 1120,
+    "wires": [
+      [
+        "3e32507cf496c14e",
+        "bee1f8812d8d8760",
+        "2743e8dfd93fb7c8"
+      ]
+    ]
+  },
+  {
+    "id": "e21f3e0591833840",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Rotate tabs based on seconds",
+    "func": "let currentTime = new Date();\nlet seconds = currentTime.getSeconds();\nlet socketid = global.get('socketid');\nlet socketip = global.get('socketip');\n\nif (seconds == 20)\n{\n    return {payload:\"change\",\"tab\":1, \"name\":\"Radio Info\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n// return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nif (seconds == 40)\n{\n    return {payload:\"change\", \"tab\":2, \"name\":\"OP Competition\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n// return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nif (seconds == 0)\n{\n    return {payload:\"change\", \"tab\":3, \"name\":\"Band Stats\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n//return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 310,
+    "y": 1220,
+    "wires": [
+      [
+        "57273c6d705dbfce",
+        "aa4d1f3abac4a62f"
+      ]
+    ]
+  },
+  {
+    "id": "5e1859619292b1b8",
+    "type": "link out",
+    "z": "204548a488401a1b",
+    "name": "Clear All Stats OUT",
+    "mode": "link",
+    "links": [
+      "12b4fddb68795a01",
+      "2dbfd82fa9a1874b",
+      "359cdb13c6617344",
+      "3fc8a4c3201d42cc",
+      "917c86c665fa20e2",
+      "98f77ca383c99024"
+    ],
+    "x": 1315,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "be733be1c4eca984",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Set Payload to []",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "[]",
+        "tot": "json"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1180,
+    "y": 80,
+    "wires": [
+      [
+        "5e1859619292b1b8"
+      ]
+    ]
+  },
+  {
+    "id": "a0a4089bc4a50f31",
+    "type": "ui_button",
+    "z": "204548a488401a1b",
+    "name": "",
+    "group": "c6e931ac92d6f697",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear Stats Only?",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "Clear Stats Only?",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 550,
+    "y": 80,
+    "wires": [
+      [
+        "77f7f38954bcf107"
+      ]
+    ]
+  },
+  {
+    "id": "77f7f38954bcf107",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "Cancel",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Show Clear Stats Only",
+    "x": 820,
+    "y": 80,
+    "wires": [
+      [
+        "7702780de2067c53"
+      ]
+    ]
+  },
+  {
+    "id": "7702780de2067c53",
+    "type": "switch",
+    "z": "204548a488401a1b",
+    "name": "OK?",
+    "property": "payload",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "OK",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 990,
+    "y": 80,
+    "wires": [
+      [
+        "be733be1c4eca984",
+        "93aec0ede1f81f3a"
+      ]
+    ]
+  },
+  {
+    "id": "75548936064e3eff",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "2 Comptuer Name Input",
+    "label": "",
+    "group": "887ee2eadc46df9a",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "Radio 1 Computer Name",
+        "value": "PC1",
+        "type": "text",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Radio 2 Computer Name",
+        "value": "PC2",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Radio 3 Computer Name",
+        "value": "PC3",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Radio 4 Computer Name",
+        "value": "PC4",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Radio 5 Computer Name",
+        "value": "PC5",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Radio 6 Computer Name",
+        "value": "PC6",
+        "type": "text",
+        "required": false,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "PC1": "",
+      "PC2": "",
+      "PC3": "",
+      "PC4": "",
+      "PC5": "",
+      "PC6": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 490,
+    "y": 680,
+    "wires": [
+      [
+        "1c46a9079b39b6af",
+        "4813b79f3e903756"
+      ]
+    ]
+  },
+  {
+    "id": "1c46a9079b39b6af",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Global PC Names",
+    "func": "if (msg.payload.PC1 != \"\")\n{\n    let PC1 = msg.payload.PC1\n    global.set(\"PC1\",PC1)\n}\n\nif (msg.payload.PC2 != \"\")\n{\n    let PC2 = msg.payload.PC2\n    global.set(\"PC2\",PC2)\n}\n\nif (msg.payload.PC3 != \"\")\n{\n    let PC3 = msg.payload.PC3\n    global.set(\"PC3\",PC3)\n}\n\nif (msg.payload.PC4 != \"\")\n{\n    let PC4 = msg.payload.PC4\n    global.set(\"PC4\",PC4)\n}\n\nif (msg.payload.PC5 != \"\")\n{\n    let PC5 = msg.payload.PC5\n    global.set(\"PC5\",PC5)\n}\n\nif (msg.payload.PC6 != \"\")\n{\n    let PC6 = msg.payload.PC6\n    global.set(\"PC6\",PC6)\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 780,
+    "y": 640,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "59239e08c7dcd682",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "Cancel",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Show Computer Name Input",
+    "x": 1040,
+    "y": 680,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "4813b79f3e903756",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set payload to printout",
+    "func": "let PC1 = msg.payload.PC1\nlet PC2 = msg.payload.PC2\nlet PC3 = msg.payload.PC3\nlet PC4 = msg.payload.PC4\nlet PC5 = msg.payload.PC5\nlet PC6 = msg.payload.PC6\n\nmsg.payload = \"Entered in \" + PC1 + \"\\r\\n \" + PC2 + \"\\r\\n \" + PC3 + \"\\r\\n \" + PC4 + \"\\r\\n \" + PC5 + \"\\r\\n \" + PC6\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 800,
+    "y": 680,
+    "wires": [
+      [
+        "59239e08c7dcd682"
+      ]
+    ]
+  },
+  {
+    "id": "65d59c3b296ab636",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "887ee2eadc46df9a",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "name": "1 First Two PC Names Will Appear on the N1MM Dashboard With the Map",
+    "label": "The First Two PC Names Will Appear on the N1MM Dashboard With the Map",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 360,
+    "y": 720,
+    "wires": []
+  },
+  {
+    "id": "848cb7d74a2a8ede",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Show Get Radio Computer Names",
+    "x": 780,
+    "y": 760,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "57273c6d705dbfce",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "After Function",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 640,
+    "y": 1180,
+    "wires": []
+  },
+  {
+    "id": "44ad2f416930e4e9",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Global Contest Callsign Used",
+    "func": "let x = msg.payload.contestcallsign\n\nlet callsign = x.toUpperCase(x);\n\nglobal.set(\"contestcallsign\",callsign)\n\nmsg.payload = callsign;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 840,
+    "y": 920,
+    "wires": [
+      [
+        "289eb29cd66ebe0f"
+      ]
+    ]
+  },
+  {
+    "id": "cb4f88b22ac357e7",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "4 Contest Callsign Entry",
+    "label": "",
+    "group": "475c1eff5d97ffe5",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "Contest Callsign",
+        "value": "contestcallsign",
+        "type": "text",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "contestcallsign": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 570,
+    "y": 920,
+    "wires": [
+      [
+        "44ad2f416930e4e9"
+      ]
+    ]
+  },
+  {
+    "id": "0979daa9c078c057",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "d": true,
+    "name": "",
+    "label": "Socket ID & IP",
+    "group": "",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "Socket ID",
+        "value": "socketid",
+        "type": "text",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Machine IP",
+        "value": "socketip",
+        "type": "text",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "socketid": "",
+      "socketip": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 120,
+    "y": 1100,
+    "wires": [
+      [
+        "80b7b6186bcf121d",
+        "e0137d1a709aca80"
+      ]
+    ]
+  },
+  {
+    "id": "80b7b6186bcf121d",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Global Rotating Session ID",
+    "func": "let socketip = msg.payload.socketip\nlet socketid = msg.payload.socketid\nglobal.set(\"socketid\",socketid)\nglobal.set(\"socketip\",socketip)\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 1100,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "87bbe35110f717a1",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "d": true,
+    "position": "dialog",
+    "displayTime": "",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "Cancel",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Show Socket ID",
+    "x": 580,
+    "y": 1140,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e0137d1a709aca80",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set payload to printout",
+    "func": "socketid = msg.payload.socketid\nsocketip = msg.payload.socketip\n\nmsg.payload = \"socketid=\" + socketid + \"  \" + \"IP=\" + socketip;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 360,
+    "y": 1140,
+    "wires": [
+      [
+        "87bbe35110f717a1"
+      ]
+    ]
+  },
+  {
+    "id": "bee1f8812d8d8760",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "d": true,
+    "group": "",
+    "order": 2,
+    "width": 6,
+    "height": 2,
+    "name": "",
+    "label": "This Socket ID: ",
+    "format": "{{msg.socketid}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1100,
+    "y": 1120,
+    "wires": []
+  },
+  {
+    "id": "3e32507cf496c14e",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "Get UI Control",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1100,
+    "y": 1080,
+    "wires": []
+  },
+  {
+    "id": "2743e8dfd93fb7c8",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "d": true,
+    "group": "",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "name": "",
+    "label": "This IP:",
+    "format": "{{msg.socketip}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1080,
+    "y": 1160,
+    "wires": []
+  },
+  {
+    "id": "aa4d1f3abac4a62f",
+    "type": "ui_ui_control",
+    "z": "204548a488401a1b",
+    "name": "Rotate UI Control",
+    "events": "change",
+    "x": 630,
+    "y": 1220,
+    "wires": [
+      [
+        "c473245f3df6387a"
+      ]
+    ]
+  },
+  {
+    "id": "c473245f3df6387a",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "After Rotate UI Control",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 860,
+    "y": 1220,
+    "wires": []
+  },
+  {
+    "id": "dcfce735dacf33ca",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "2 Cluster Login Form",
+    "label": "",
+    "group": "6e223ca6f2986fea",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "Skimmer Callsign",
+        "value": "skimmercall",
+        "type": "text",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "skimmercall": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 1520,
+    "y": 540,
+    "wires": [
+      [
+        "c7d7c4c8556569e3"
+      ]
+    ]
+  },
+  {
+    "id": "c7d7c4c8556569e3",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Skimmer Login",
+    "func": "let skimmercall = msg.payload.skimmercall\nglobal.set(\"skimmercall\",skimmercall);\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1730,
+    "y": 540,
+    "wires": [
+      [
+        "1578c5bef7637e2c"
+      ]
+    ]
+  },
+  {
+    "id": "48aadad3012ae037",
+    "type": "http request",
+    "z": "204548a488401a1b",
+    "name": "Get QRZ XML Key",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://xmldata.qrz.com/xml/current/?username={{payload.qrzusername}};password={{payload.qrzpassword}};agent=q5.0",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 570,
+    "y": 1340,
+    "wires": [
+      [
+        "510b5f81ee688927"
+      ]
+    ]
+  },
+  {
+    "id": "510b5f81ee688927",
+    "type": "xml",
+    "z": "204548a488401a1b",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 730,
+    "y": 1340,
+    "wires": [
+      [
+        "299c138b42867c0f"
+      ]
+    ]
+  },
+  {
+    "id": "299c138b42867c0f",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "qrzkey",
+        "pt": "global",
+        "to": "payload.QRZDatabase.Session[0].Key[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "qrzkeyexpire",
+        "pt": "global",
+        "to": "payload.QRZDatabase.Session[0].SubExp[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 880,
+    "y": 1340,
+    "wires": [
+      [
+        "2474b2eb527716e4"
+      ]
+    ]
+  },
+  {
+    "id": "c3c9d9c537baf50c",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Verify Valid Key Non-Expire",
+    "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1040,
+    "y": 1420,
+    "wires": [
+      [
+        "8b73f980f505c909"
+      ]
+    ]
+  },
+  {
+    "id": "a6a12ef5e9b4d877",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": true,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Expired QRZ XML Key",
+    "x": 1520,
+    "y": 1480,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "55f9cdc81478be4b",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "3 QRZ Database Login Form",
+    "label": "",
+    "group": "8a65c232b2637c6a",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "QRZ Username",
+        "value": "qrzusername",
+        "type": "text",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "QRZ Password",
+        "value": "qrzpassword",
+        "type": "password",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "qrzusername": "",
+      "qrzpassword": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 180,
+    "y": 1340,
+    "wires": [
+      [
+        "6dc67fc045c6beee"
+      ]
+    ]
+  },
+  {
+    "id": "2fdc2f7dd58ef714",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Clear XML Login Data Notification",
+    "x": 720,
+    "y": 1400,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "9ab53ebf4237bbb8",
+    "type": "ui_button",
+    "z": "204548a488401a1b",
+    "name": "4 Clear QRZ XML Login Data",
+    "group": "8a65c232b2637c6a",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear QRZ XML Login Data",
+    "tooltip": "",
+    "color": "#FFFFFF",
+    "bgcolor": "#FF0000",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 200,
+    "y": 1400,
+    "wires": [
+      [
+        "6c9cc5a9f7948aca"
+      ]
+    ]
+  },
+  {
+    "id": "6c9cc5a9f7948aca",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Clear Key & Expire Date",
+    "func": "global.set('qrzkey', undefined);\nglobal.set('qrzkeyexpire', undefined);\nglobal.set('qrzusername', undefined);\nglobal.set('qrzpassword', undefined);\n\nmsg.payload = \"QRZ XML Login & Key Info Cleared\";\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 450,
+    "y": 1400,
+    "wires": [
+      [
+        "2fdc2f7dd58ef714"
+      ]
+    ]
+  },
+  {
+    "id": "2474b2eb527716e4",
+    "type": "switch",
+    "z": "204548a488401a1b",
+    "name": "QRZ Key Null?",
+    "property": "qrzkey",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "null"
+      },
+      {
+        "t": "nnull"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1080,
+    "y": 1340,
+    "wires": [
+      [
+        "5a6fdd06cfcc6c2e"
+      ],
+      [
+        "933d25458044efbd"
+      ]
+    ]
+  },
+  {
+    "id": "5a6fdd06cfcc6c2e",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Password Incorrect",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Please Check Your Username & Password",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1290,
+    "y": 1320,
+    "wires": [
+      [
+        "c435ac428aac9130"
+      ]
+    ]
+  },
+  {
+    "id": "c435ac428aac9130",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Check QRZ Username & Password",
+    "x": 1580,
+    "y": 1320,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "933d25458044efbd",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Password Corrent",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Username & Password Accepted",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1290,
+    "y": 1360,
+    "wires": [
+      [
+        "afe7bcce2a351666"
+      ]
+    ]
+  },
+  {
+    "id": "6dc67fc045c6beee",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Reset Keys",
+    "func": "global.set('qrzkey', undefined);\nglobal.set('qrzpassword', undefined)\nglobal.set('qrzkeyexpire', undefined);\nglobal.set('qrzusername', undefined);\n\nglobal.set('qrzusername', msg.payload.qrzusername)\nglobal.set('qrzpassword', msg.payload.qrzpassword)\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 1340,
+    "wires": [
+      [
+        "48aadad3012ae037"
+      ]
+    ]
+  },
+  {
+    "id": "afe7bcce2a351666",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Correct QRZ Username & Password",
+    "x": 1590,
+    "y": 1360,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "55b4fc3fa0c1f6b2",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Database Clear & Status Flows",
+    "info": "Clear Stats Only Flow - This flow clears all the line graphs, bar graphs, etc on all the dashboard pages.\n\nDelete All QSOs and Clear Stats Flow - This flow clears all the QSO's in the database and clears all the line graphs, bar graphs, etc on all the dashboard pages.  This action is preformed right before the start of the contest.\n\nQuery All Contests in DB - This flow will show you the N1MM short name for all the contests contained in the database.  The database should only contain 1 contest, the current contest.  If a database clear is not performed before the start of a contest, the stats will be calculated for all QSOs in the database.",
+    "x": 270,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "af6732836eb6f6cc",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Computer Name Input",
+    "info": "Computer Name Input - These are the computer names running N1MM for each radio.  Input the computer names EXACTLY how they defined on the computer name.  Be aware of upper and lower case names.  You can find the computer name by typing 'computername' in the search bar beside the start menu.  \n\nGet Radio Computer Names - This will dispaly the computer names in the database.  \n\nNote : the first two computer names entered into the input fields will be displayed on the N1MM Dashboard main screen (contest overview & map).\n\n",
+    "x": 440,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "caf32fb5589a2400",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Contest Call Sign",
+    "info": "Contest Call Sign - This input will be used to show Reverse Beacon Spots (RBN) on the map on where that call sign is being spotted FROM.  Callsign can be entered in lower or upper case.  \n\nAs spots come in from the spotting network, it searches for the contesting callsign being used.  If it matches, it takes the DE callsign, looks that call up in a database of known RBN callsigns or looked up the DE callsign via QRZ or Hamdb.org based on your preference in which lookup database to use.",
+    "x": 240,
+    "y": 860,
+    "wires": []
+  },
+  {
+    "id": "e35dbee7a81b43bc",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "2 Database Engine Dropdown",
+    "label": "Callsign Lookup Engine",
+    "tooltip": "",
+    "place": "Choose Selection",
+    "group": "8a65c232b2637c6a",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "Hamdb.org (free)",
+        "value": "hamdb",
+        "type": "str"
+      },
+      {
+        "label": "QRZ.com",
+        "value": "qrz",
+        "type": "str"
+      },
+      {
+        "label": "HamQTH",
+        "value": "hamqth",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 2000,
+    "y": 1020,
+    "wires": [
+      [
+        "086b1f9232b45a14"
+      ]
+    ]
+  },
+  {
+    "id": "086b1f9232b45a14",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Set DB",
+    "rules": [
+      {
+        "t": "set",
+        "p": "dblookup",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2220,
+    "y": 1020,
+    "wires": [
+      [
+        "b666af7686048a30"
+      ]
+    ]
+  },
+  {
+    "id": "5ae4eb94028eb60d",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Rotate 2nd Tab/Window - NOT IN USE",
+    "info": "",
+    "x": 230,
+    "y": 1020,
+    "wires": []
+  },
+  {
+    "id": "d946e6a1fdbf2dfd",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Cluster Login",
+    "info": "",
+    "x": 1360,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "9c4b2d89f062bd60",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "QRZ Database Lookup Credentials",
+    "info": "",
+    "x": 220,
+    "y": 1260,
+    "wires": []
+  },
+  {
+    "id": "10116a9c3bb286c8",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Database Lookup Engine Select",
+    "info": "",
+    "x": 1530,
+    "y": 960,
+    "wires": []
+  },
+  {
+    "id": "b666af7686048a30",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "8a65c232b2637c6a",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "name": "1 Database Lookup Text",
+    "label": "Current Database",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2440,
+    "y": 1020,
+    "wires": []
+  },
+  {
+    "id": "1578c5bef7637e2c",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "6e223ca6f2986fea",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "name": "1 Current Skimmer Login Text",
+    "label": "Current Login",
+    "format": "{{msg.payload.skimmercall}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2030,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "289eb29cd66ebe0f",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "475c1eff5d97ffe5",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "name": "3 Current Contest Callsign Text",
+    "label": "Current Contest Callsign",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1120,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "59afcb532e72d16e",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "ttl",
+        "pt": "global",
+        "to": "payload.ttl",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "ttl",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 440,
+    "y": 2100,
+    "wires": [
+      [
+        "b64befbfca8cd376"
+      ]
+    ]
+  },
+  {
+    "id": "34a7871439e7394e",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get TTL",
+    "func": "ttl = global.get('ttl')\n\nif (ttl == null)\n{\n    global.set('ttl',1200)\n    msg.payload = 1200\n}\n\nmsg.payload = ttl;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 400,
+    "y": 2160,
+    "wires": [
+      [
+        "b64befbfca8cd376"
+      ]
+    ]
+  },
+  {
+    "id": "553eaeb2e0afed49",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "2",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 230,
+    "y": 2160,
+    "wires": [
+      [
+        "34a7871439e7394e"
+      ]
+    ]
+  },
+  {
+    "id": "b64befbfca8cd376",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "54b59a095746559b",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "name": "3 Current TTL Icon Value",
+    "label": "Current Value",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 770,
+    "y": 2120,
+    "wires": []
+  },
+  {
+    "id": "d571e2d301ab771a",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "4 QSO Map Icon TTL Form",
+    "label": "",
+    "group": "54b59a095746559b",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "Map Icon Time To Live (sec)",
+        "value": "ttl",
+        "type": "number",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "ttl": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 150,
+    "y": 2100,
+    "wires": [
+      [
+        "59afcb532e72d16e",
+        "4a1defbaca14c045"
+      ]
+    ]
+  },
+  {
+    "id": "4a1defbaca14c045",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 430,
+    "y": 2060,
+    "wires": []
+  },
+  {
+    "id": "7a4b515df88258ed",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "2 Lat & Lon Input",
+    "label": "",
+    "group": "54b59a095746559b",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "Home Latitude",
+        "value": "lat",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Home Longitude",
+        "value": "lon",
+        "type": "number",
+        "required": false,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "lat": "",
+      "lon": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 1100,
+    "y": 2120,
+    "wires": [
+      [
+        "f9dceb53cc0b5821",
+        "dc6bf02cba92c9fc"
+      ]
+    ]
+  },
+  {
+    "id": "f9dceb53cc0b5821",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1350,
+    "y": 2160,
+    "wires": []
+  },
+  {
+    "id": "dc6bf02cba92c9fc",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "homelat",
+        "pt": "global",
+        "to": "payload.lat",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "homelon",
+        "pt": "global",
+        "to": "payload.lon",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1320,
+    "y": 2120,
+    "wires": [
+      [
+        "c77ffb1f28a8bc8e"
+      ]
+    ]
+  },
+  {
+    "id": "fb6c340e0efe1add",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "",
+    "x": 1810,
+    "y": 2120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c77ffb1f28a8bc8e",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set payload to printout",
+    "func": "\nmsg.payload = \"Entered;   lat:   \" + msg.payload.lat + \"   lon:   \" + msg.payload.lon;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1560,
+    "y": 2120,
+    "wires": [
+      [
+        "fb6c340e0efe1add"
+      ]
+    ]
+  },
+  {
+    "id": "3ae850cc68585fca",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "54b59a095746559b",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "name": "1 Current Lat & Lon",
+    "label": "Current Home Lat & Lon",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 1770,
+    "y": 2080,
+    "wires": []
+  },
+  {
+    "id": "6e48cbe3f5469ec6",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Lat & Lon",
+    "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1570,
+    "y": 2080,
+    "wires": [
+      [
+        "3ae850cc68585fca"
+      ]
+    ]
+  },
+  {
+    "id": "3e99a62a3c74b32c",
+    "type": "http request",
+    "z": "204548a488401a1b",
+    "name": "Get QRZ XML Key",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://xmldata.qrz.com/xml/current/?username={{payload.qrzusername}};password={{payload.qrzpassword}};agent=q5.0",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 1490,
+    "y": 1420,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8b73f980f505c909",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.qrzusername",
+        "pt": "msg",
+        "to": "qrzusername",
+        "tot": "global"
+      },
+      {
+        "t": "set",
+        "p": "payload.qrzpassword",
+        "pt": "msg",
+        "to": "qrzpassword",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1280,
+    "y": 1420,
+    "wires": [
+      [
+        "3e99a62a3c74b32c"
+      ]
+    ]
+  },
+  {
+    "id": "9d67b8af1ecfca92",
+    "type": "ui_switch",
+    "z": "204548a488401a1b",
+    "name": "5 Map Labels On/Off",
+    "label": "Map Labels On/Off",
+    "tooltip": "",
+    "group": "54b59a095746559b",
+    "order": 5,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "decouple": "false",
+    "topic": "topic",
+    "topicType": "msg",
+    "style": "",
+    "onvalue": "true",
+    "onvalueType": "bool",
+    "onicon": "",
+    "oncolor": "",
+    "offvalue": "false",
+    "offvalueType": "bool",
+    "officon": "",
+    "offcolor": "",
+    "animate": false,
+    "className": "",
+    "x": 1950,
+    "y": 700,
+    "wires": [
+      [
+        "841135cf0ddd6d1c"
+      ]
+    ]
+  },
+  {
+    "id": "841135cf0ddd6d1c",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Map Labels",
+    "func": "x = msg.payload\nglobal.set('maplabels',x)\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2180,
+    "y": 700,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "60570ca612603af9",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1350,
+    "y": 700,
+    "wires": [
+      [
+        "543c8ffcfaaf7701"
+      ]
+    ]
+  },
+  {
+    "id": "ea75d34b9868a160",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Map Labels On/Off",
+    "info": "This switch turns labels on or off on the main logged QSO map.\n\nAs QSO's are mapped, sometimes during heavy rates, the map can get cluttered with pins and the label (band and mode) takes up space.\n\nIn contests that only one mode is allowed, you might want to turn this off.\n\nThe legend will show the color of each band for the marked pins.",
+    "x": 1370,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "0e4e1f6d0b6f1a82",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Set TTL for Map Markers",
+    "info": "This flow sets the ttl (time to live) for map icons to live on the map.  \n\n",
+    "x": 170,
+    "y": 2040,
+    "wires": []
+  },
+  {
+    "id": "a41b305808137c29",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "2",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1370,
+    "y": 2080,
+    "wires": [
+      [
+        "6e48cbe3f5469ec6"
+      ]
+    ]
+  },
+  {
+    "id": "3b83c4e82671e53a",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Lat & Lon Input",
+    "info": "This flow gets the lat and lon input and allows great circle lines to be drawn from the QTH to each pin in the map.\n\nIf no lat and lon are input, the greatcircle lines are not drawn.",
+    "x": 1160,
+    "y": 2040,
+    "wires": []
+  },
+  {
+    "id": "93edb440e7f6c467",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "qrzkey",
+        "pt": "global",
+        "to": "payload.QRZDatabase.Session[0].Key[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "qrzkeyexpire",
+        "pt": "global",
+        "to": "payload.QRZDatabase.Session[0].SubExp[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1000,
+    "y": 1480,
+    "wires": [
+      [
+        "9a414e8fd552ee88"
+      ]
+    ]
+  },
+  {
+    "id": "9a414e8fd552ee88",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Verify Valid Key Non-Expire",
+    "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1240,
+    "y": 1480,
+    "wires": [
+      [
+        "a6a12ef5e9b4d877"
+      ]
+    ]
+  },
+  {
+    "id": "d99f186baf3ac355",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "7 Map Label Type Dropdown",
+    "label": "",
+    "tooltip": "",
+    "place": "Select option",
+    "group": "54b59a095746559b",
+    "order": 7,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "Band Only",
+        "value": "bandonly",
+        "type": "str"
+      },
+      {
+        "label": "Band + Mode",
+        "value": "bandmode",
+        "type": "str"
+      },
+      {
+        "label": "Mode Only",
+        "value": "modeonly",
+        "type": "str"
+      },
+      {
+        "label": "Call Only",
+        "value": "callonly",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 1880,
+    "y": 760,
+    "wires": [
+      [
+        "2dde15a004f80010"
+      ]
+    ]
+  },
+  {
+    "id": "2dde15a004f80010",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Map Label Type",
+    "func": "x = msg.payload\nglobal.set('maplabeltype',x)\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2140,
+    "y": 760,
+    "wires": [
+      [
+        "b931a7b4465d0df8"
+      ]
+    ]
+  },
+  {
+    "id": "4a7ab19bd2fdaf09",
+    "type": "ui_switch",
+    "z": "204548a488401a1b",
+    "name": "",
+    "label": "Say Multi On/Off",
+    "tooltip": "",
+    "group": "4ef10134c121cf09",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "decouple": "false",
+    "topic": "topic",
+    "topicType": "msg",
+    "style": "",
+    "onvalue": "true",
+    "onvalueType": "bool",
+    "onicon": "",
+    "oncolor": "",
+    "offvalue": "false",
+    "offvalueType": "bool",
+    "officon": "",
+    "offcolor": "",
+    "animate": false,
+    "className": "",
+    "x": 2540,
+    "y": 1380,
+    "wires": [
+      [
+        "851fa5920b751886"
+      ]
+    ]
+  },
+  {
+    "id": "851fa5920b751886",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Say Multi",
+    "func": "x = msg.payload\nglobal.set('saymulti',x)\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2730,
+    "y": 1380,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5584fe10df006594",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 2090,
+    "y": 1380,
+    "wires": [
+      [
+        "289a920a73d6b6e2"
+      ]
+    ]
+  },
+  {
+    "id": "0623273bd2a73945",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "2 Contest Type Dropdown",
+    "label": "",
+    "tooltip": "",
+    "place": "Select Exchange Received",
+    "group": "475c1eff5d97ffe5",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "multiple": false,
+    "options": [
+      {
+        "label": "US State",
+        "value": "stateonly",
+        "type": "str"
+      },
+      {
+        "label": "County + State",
+        "value": "countystate",
+        "type": "str"
+      },
+      {
+        "label": "Name + State",
+        "value": "namestate",
+        "type": "str"
+      },
+      {
+        "label": "ARRL/RAC Sections",
+        "value": "sections",
+        "type": "str"
+      },
+      {
+        "label": "Class + Section",
+        "value": "classsection",
+        "type": "str"
+      },
+      {
+        "label": "Grid",
+        "value": "grids",
+        "type": "str"
+      },
+      {
+        "label": "Zone",
+        "value": "zones",
+        "type": "str"
+      },
+      {
+        "label": "Serial",
+        "value": "serial",
+        "type": "str"
+      },
+      {
+        "label": "Power",
+        "value": "power",
+        "type": "str"
+      },
+      {
+        "label": "Do Not Show Exchange",
+        "value": "blank",
+        "type": "str"
+      },
+      {
+        "label": "Full Exchange",
+        "value": "all",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 350,
+    "y": 2340,
+    "wires": [
+      [
+        "c55a8f8a7bb2ce67"
+      ]
+    ]
+  },
+  {
+    "id": "0e6e723e86267438",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Contest Type",
+    "info": "",
+    "x": 310,
+    "y": 2280,
+    "wires": []
+  },
+  {
+    "id": "c55a8f8a7bb2ce67",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Contest Type",
+    "func": "let x = msg.payload\nglobal.set('contesttype',x)\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 630,
+    "y": 2340,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "4bd54f4532cfb4e4",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "887ee2eadc46df9a",
+    "order": 3,
+    "width": 6,
+    "height": 2,
+    "name": "3 Current Radio Names Text Box",
+    "label": "",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "className": "",
+    "x": 740,
+    "y": 800,
+    "wires": []
+  },
+  {
+    "id": "f9aa65c20f157f8e",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set payload to printout",
+    "func": "let P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null)\n{\n    P1 = \"\"\n}\nif (P2 == null)\n{\n    P2 = \"\"\n}\nif (P3 == null)\n{\n    P3 = \"\"\n}\nif (P4 == null)\n{\n    P4 = \"\"\n}\nif (P5 == null)\n{\n    P5 = \"\"\n}\nif (P6 == null)\n{\n    P6 = \"\"\n}\n\nmsg.payload = \"Current PCs : \" + P1 + \"\\r\\n \" + P2 + \"\\r\\n \" + P3 + \"\\r\\n \" + P4 + \"\\r\\n \" + P5 + \"\\r\\n \" + P6\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 460,
+    "y": 800,
+    "wires": [
+      [
+        "4bd54f4532cfb4e4"
+      ]
+    ]
+  },
+  {
+    "id": "b8502660ecb5eb37",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 190,
+    "y": 800,
+    "wires": [
+      [
+        "f9aa65c20f157f8e"
+      ]
+    ]
+  },
+  {
+    "id": "57e3618bf14fa9ab",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Erase Current PC Names",
+    "func": "global.set(\"PC1\",null);\nglobal.set(\"PC2\",null);\nglobal.set(\"PC3\",null);\nglobal.set(\"PC4\",null);\nglobal.set(\"PC5\",null);\nglobal.set(\"PC6\",null);\n\n\n\nmsg.payload = \"PC Names Have Been Reset\"\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 490,
+    "y": 760,
+    "wires": [
+      [
+        "848cb7d74a2a8ede"
+      ]
+    ]
+  },
+  {
+    "id": "eeb023c41384541c",
+    "type": "ui_button",
+    "z": "204548a488401a1b",
+    "name": "4 Clear All Computer Names",
+    "group": "887ee2eadc46df9a",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear All Computer Names",
+    "tooltip": "",
+    "color": "#FFFFFF",
+    "bgcolor": "#FF0000",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 220,
+    "y": 760,
+    "wires": [
+      [
+        "57e3618bf14fa9ab"
+      ]
+    ]
+  },
+  {
+    "id": "52e8cb69fe249ce2",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "Contest Type Dropdown",
+    "label": "",
+    "tooltip": "",
+    "place": "Select OP Sort Type",
+    "group": "52728e3a5743376c",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "multiple": false,
+    "options": [
+      {
+        "label": "By Mults",
+        "value": "mults",
+        "type": "str"
+      },
+      {
+        "label": "By QSOs",
+        "value": "qsos",
+        "type": "str"
+      },
+      {
+        "label": "By Score",
+        "value": "score",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 1210,
+    "y": 2340,
+    "wires": [
+      [
+        "5540ea5a6de97dc7"
+      ]
+    ]
+  },
+  {
+    "id": "6bc62a899e0c2a87",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "OP Competition Sort Type",
+    "info": "",
+    "x": 1210,
+    "y": 2280,
+    "wires": []
+  },
+  {
+    "id": "5540ea5a6de97dc7",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Contest Type",
+    "func": "x = msg.payload\nglobal.set('opsorttype',x)\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1490,
+    "y": 2340,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d04c84d753d7918e",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "2",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 310,
+    "y": 2380,
+    "wires": [
+      [
+        "678916562d7de9f5"
+      ]
+    ]
+  },
+  {
+    "id": "678916562d7de9f5",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Contest Type",
+    "func": "let contesttype = global.get('contesttype')\n\nif (contesttype == null)\n{\n    global.set('contesttype','stateonly')\n    msg.payload = \"statesonly\"\n}\n\nmsg.payload = contesttype;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 510,
+    "y": 2380,
+    "wires": [
+      [
+        "ccc80b81dfc99354"
+      ]
+    ]
+  },
+  {
+    "id": "ccc80b81dfc99354",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "475c1eff5d97ffe5",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "name": "1 Contest Type Textbox",
+    "label": "Contest Type",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 760,
+    "y": 2380,
+    "wires": []
+  },
+  {
+    "id": "0960a2775584fa85",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "2",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1190,
+    "y": 2380,
+    "wires": [
+      [
+        "55b371fcdda16d59"
+      ]
+    ]
+  },
+  {
+    "id": "55b371fcdda16d59",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get OP Comp Sort Type",
+    "func": "opsorttype = global.get('opsorttype')\n\nif (opsorttype == null)\n{\n    global.set('opsorttype','qsos')\n    msg.payload = \"qsos\"\n}\n\nmsg.payload = opsorttype;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1410,
+    "y": 2380,
+    "wires": [
+      [
+        "2607254e9c8640f7"
+      ]
+    ]
+  },
+  {
+    "id": "2607254e9c8640f7",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "52728e3a5743376c",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "name": "OP Comp Sort Type Textbox",
+    "label": "OP Comp Sort Type",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1680,
+    "y": 2380,
+    "wires": []
+  },
+  {
+    "id": "37883f2151c6aeb8",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1310,
+    "y": 760,
+    "wires": [
+      [
+        "1dfb81dda6b742b3"
+      ]
+    ]
+  },
+  {
+    "id": "9677ae9555f53b24",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "3 1Q Per Hour Color Form",
+    "label": "Q's Per 1 Hour Rates",
+    "group": "c89d2b489a7ea747",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "Low Rate (Red)",
+        "value": "Q1hrlow",
+        "type": "number",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "High Rate (Green)",
+        "value": "Q1hrhigh",
+        "type": "number",
+        "required": false,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "Q1hrlow": "",
+      "Q1hrhigh": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 1880,
+    "y": 140,
+    "wires": [
+      [
+        "b0d26d23f65e2f84"
+      ]
+    ]
+  },
+  {
+    "id": "073dbb68c96aeacf",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "6 2Q Per Hour Color Form",
+    "label": "Q's Per 2 Hour Rates",
+    "group": "c89d2b489a7ea747",
+    "order": 6,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "Low Rate (Red)",
+        "value": "Q2hrlow",
+        "type": "number",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "High Rate (Green)",
+        "value": "Q2hrhigh",
+        "type": "number",
+        "required": false,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "Q2hrlow": "",
+      "Q2hrhigh": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 1880,
+    "y": 340,
+    "wires": [
+      [
+        "f2bbdfe4d64051e4"
+      ]
+    ]
+  },
+  {
+    "id": "b0d26d23f65e2f84",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Global Q's Per Hour",
+    "func": "let Q1hrlow = msg.payload.Q1hrlow;\nlet Q1hrhigh = msg.payload.Q1hrhigh;\n\nlet Q1hrmedlow = Q1hrlow + 1;\nlet Q1hrmedhigh = Q1hrhigh - 1;\n\nglobal.set('Q1hrlow',Q1hrlow);\nglobal.set('Q1hrmedlow',Q1hrmedlow);\nglobal.set('Q1hrmedhigh',Q1hrmedhigh);\nglobal.set('Q1hrhigh',Q1hrhigh);\n\nreturn msg;\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2190,
+    "y": 140,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "aa49a893ac564a62",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Default Q's Per Hour If Not Set",
+    "func": "let Q1hrlow = global.get('Q1hrlow');\nlet Q1hrmedlow = global.get('Q1hrmedlow');\nlet Q1hrmedhigh = global.get('Q1hrmedhigh');\nlet Q1hrhigh = global.get('Q1hrhigh');\nlet Q2hrlow = global.get('Q2hrlow');\nlet Q2hrmedlow = global.get('Q2hrmedlow');\nlet Q2hrmedhigh = global.get('Q2hrmedhigh');\nlet Q2hrhigh = global.get('Q2hrhigh');\n\nif (Q1hrlow == null || undefined || Q1hrhigh == null || undefined)\n{\n    Q1hrlow = 30;\n    Q1hrmedlow = 31;\n    Q1hrmedhigh = 119;\n    Q1hrhigh = 120;\n}\n\nif (Q2hrlow == null || undefined || Q2hrhigh == null || undefined)\n{\n    Q2hrlow = 60;\n    Q2hrmedlow = 61;\n    Q2hrmedhigh = 239;\n    Q2hrhigh = 240;\n}\n\n\n\nglobal.set('Q1hrlow',Q1hrlow);\nglobal.set('Q1hrmedlow',Q1hrmedlow);\nglobal.set('Q1hrmedhigh',Q1hrmedhigh);\nglobal.set('Q1hrhigh',Q1hrhigh);\n\nglobal.set('Q2hrlow',Q2hrlow);\nglobal.set('Q2hrmedlow',Q2hrmedlow);\nglobal.set('Q2hrmedhigh',Q2hrmedhigh);\nglobal.set('Q2hrhigh',Q2hrhigh);\n\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2120,
+    "y": 420,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "1958e488cd45fa7f",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "2",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1850,
+    "y": 420,
+    "wires": [
+      [
+        "aa49a893ac564a62"
+      ]
+    ]
+  },
+  {
+    "id": "382b413af7329de3",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Set Q Hourly Rate for Green/Yellow/Red Stat Color",
+    "info": "",
+    "x": 1970,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "f2bbdfe4d64051e4",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Global Q's Per Hour",
+    "func": "let Q2hrlow = msg.payload.Q2hrlow;\nlet Q2hrhigh = msg.payload.Q2hrhigh;\n\nlet Q2hrmedlow = Q2hrlow + 1;\nlet Q2hrmedhigh = Q2hrhigh - 1;\n\nglobal.set('Q2hrlow',Q2hrlow);\nglobal.set('Q2hrmedlow',Q2hrmedlow);\nglobal.set('Q2hrmedhigh',Q2hrmedhigh);\nglobal.set('Q2hrhigh',Q2hrhigh);\n\nreturn msg;\n\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2190,
+    "y": 340,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "a44147bde4d3c26b",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "c89d2b489a7ea747",
+    "order": 1,
+    "width": 3,
+    "height": 1,
+    "name": "1 Q Low 1 Hour Text",
+    "label": "1Hr Low Rate",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2320,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "234f58c7059453d9",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "3",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1850,
+    "y": 240,
+    "wires": [
+      [
+        "5b28c89ebe3d5de5",
+        "dc3f4a8f18178bfd",
+        "a9728ea9c9567093",
+        "43fc4c68ef5bf07a"
+      ]
+    ]
+  },
+  {
+    "id": "6ebe16a171254a3b",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "c89d2b489a7ea747",
+    "order": 2,
+    "width": 3,
+    "height": 1,
+    "name": "2 Q High 1 Hour Text",
+    "label": "1Hr High Rate",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2320,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "5b28c89ebe3d5de5",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get 1Hr Low Rate",
+    "func": "msg.payload = global.get('Q1hrlow')\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 180,
+    "wires": [
+      [
+        "a44147bde4d3c26b"
+      ]
+    ]
+  },
+  {
+    "id": "dc3f4a8f18178bfd",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get 1Hr High Rate",
+    "func": "msg.payload = global.get('Q1hrhigh')\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 220,
+    "wires": [
+      [
+        "6ebe16a171254a3b"
+      ]
+    ]
+  },
+  {
+    "id": "a9728ea9c9567093",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get 2Hr Low Rate",
+    "func": "msg.payload = global.get('Q2hrlow')\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 260,
+    "wires": [
+      [
+        "0c490a55cd9feb52"
+      ]
+    ]
+  },
+  {
+    "id": "43fc4c68ef5bf07a",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get 2Hr High Rate",
+    "func": "msg.payload = global.get('Q2hrhigh')\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2090,
+    "y": 300,
+    "wires": [
+      [
+        "0a9cfccc31ee7434"
+      ]
+    ]
+  },
+  {
+    "id": "0c490a55cd9feb52",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "c89d2b489a7ea747",
+    "order": 4,
+    "width": 3,
+    "height": 1,
+    "name": "4 Q Low 2 Hour Text",
+    "label": "2Hr Low Rate",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2320,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "0a9cfccc31ee7434",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "c89d2b489a7ea747",
+    "order": 5,
+    "width": 3,
+    "height": 1,
+    "name": "5 Q High 2 Hour Text",
+    "label": "2Hr High Rate",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2320,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "09b7c5267865b449",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Speak Multiplier On/Off",
+    "info": "",
+    "x": 2240,
+    "y": 1320,
+    "wires": []
+  },
+  {
+    "id": "6a1c6be873105349",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "1 Online Scoreboard Form Input",
+    "label": "",
+    "group": "5e3039a0172f86b1",
+    "order": 1,
+    "width": 4,
+    "height": 1,
+    "options": [
+      {
+        "label": "Contest Name",
+        "value": "contestname",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Chase Call 1",
+        "value": "chasecall1",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Chase Call 2",
+        "value": "chasecall2",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Chase Call 3",
+        "value": "chasecall3",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Chase Call 4",
+        "value": "chasecall4",
+        "type": "text",
+        "required": false,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "contestname": "",
+      "chasecall1": "",
+      "chasecall2": "",
+      "chasecall3": "",
+      "chasecall4": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 2230,
+    "y": 1660,
+    "wires": [
+      [
+        "6c25416ba946de30"
+      ]
+    ]
+  },
+  {
+    "id": "53b8d128ed86c659",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "contestname",
+        "pt": "global",
+        "to": "payload.contestname",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "chasecall1",
+        "pt": "global",
+        "to": "payload.chasecall1",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "chasecall2",
+        "pt": "global",
+        "to": "payload.chasecall2",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "chasecall3",
+        "pt": "global",
+        "to": "payload.chasecall3",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "chasecall4",
+        "pt": "global",
+        "to": "payload.chasecall4",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "chasecall5",
+        "pt": "global",
+        "to": "payload.chasecall5",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2960,
+    "y": 1660,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f35662f39444454c",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Online Scoreboard Call Entry",
+    "info": "",
+    "x": 2220,
+    "y": 1560,
+    "wires": []
+  },
+  {
+    "id": "42dd8e9dba4bcdf2",
+    "type": "template",
+    "z": "204548a488401a1b",
+    "name": "Delete from radio",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "delete from radio;",
+    "output": "str",
+    "x": 1110,
+    "y": 180,
+    "wires": [
+      [
+        "b4520201b51afe74"
+      ]
+    ]
+  },
+  {
+    "id": "45b435ab9c8504ec",
+    "type": "template",
+    "z": "204548a488401a1b",
+    "name": "Delete from spots",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "delete from spots;",
+    "output": "str",
+    "x": 1110,
+    "y": 220,
+    "wires": [
+      [
+        "b4520201b51afe74"
+      ]
+    ]
+  },
+  {
+    "id": "d73ffa2e2c4de937",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "d": true,
+    "name": "Every 15 Sec",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "15",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 260,
+    "y": 2680,
+    "wires": [
+      [
+        "43cafa96373f7a37"
+      ]
+    ]
+  },
+  {
+    "id": "43cafa96373f7a37",
+    "type": "template",
+    "z": "204548a488401a1b",
+    "name": "SQL select points, multis & score",
+    "field": "topic",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos;",
+    "output": "str",
+    "x": 540,
+    "y": 2680,
+    "wires": [
+      [
+        "78dee2cf25373ea4"
+      ]
+    ]
+  },
+  {
+    "id": "78dee2cf25373ea4",
+    "type": "sqlite",
+    "z": "204548a488401a1b",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "N1MM QSOs",
+    "x": 790,
+    "y": 2680,
+    "wires": [
+      [
+        "19d2bb692b64b3b8"
+      ]
+    ]
+  },
+  {
+    "id": "2eb45f3457d57e54",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1290,
+    "y": 2640,
+    "wires": []
+  },
+  {
+    "id": "19d2bb692b64b3b8",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "",
+    "func": "let p = msg.payload[0].points\nlet m = msg.payload[0].multiplier;\nlet t = msg.payload[0].totalqsos;\nlet s = msg.payload[0].score;\n\nlet totalqsos = t.toString();\nlet multiplier = m.toString();\nlet points = p.toString();\nlet score = s.toString();\n\n\nmsg.payload = {\n    \"dynamicresults\":\n    {\n        \"contest\":\"QSOPARTY\",\n        \n        \"breakdown\":\n        [{\n             \"qso\":\n             [{\n                 \"_\":totalqsos,\n                 \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }],\n             \"mult\":\n             [{\n                \"_\":multiplier,\n                \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }],\n             \"point\":\n             [{\n                \"_\":points,\n                \"$\":\n                    {\n                        \"band\":\"total\",\n                        \"mode\":\"ALL\"\n                    }\n             }]\n        }],\n        \"score\":[score],\n    }\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 960,
+    "y": 2680,
+    "wires": [
+      [
+        "013e96aa75609da7",
+        "65952b3351e52bca"
+      ]
+    ]
+  },
+  {
+    "id": "013e96aa75609da7",
+    "type": "xml",
+    "z": "204548a488401a1b",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 1110,
+    "y": 2680,
+    "wires": [
+      [
+        "2eb45f3457d57e54",
+        "a31113a42bcb3b22"
+      ]
+    ]
+  },
+  {
+    "id": "a31113a42bcb3b22",
+    "type": "udp out",
+    "z": "204548a488401a1b",
+    "name": "Score XML Port 12062",
+    "addr": "192.168.1.30",
+    "iface": "",
+    "port": "12062",
+    "ipv": "udp4",
+    "outport": "",
+    "base64": false,
+    "multicast": "false",
+    "x": 1320,
+    "y": 2680,
+    "wires": []
+  },
+  {
+    "id": "18a1cdf97768c72a",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "QSO Entry Test Data Format",
+    "info": "\n<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<note>\n\t<to>Nick</to>\n\t<from>Dave</from>\n\t<heading>Reminder</heading>\n\t<body>Update the website</body>\n</note>\n\n{\"note\":{\"$\":{},\"to\":[\"Nick\"],\"from\":[\"Dave\"],\"heading\":[\"Reminder\"],\"body\":[\"Update the website\"]}}\n\n\n{\"contactinfo\":{\"$\":{},\"app\":[app],\"contestname\":[contestname],\"heading\":[\"Reminder\"],\"body\":[\"Update the website\"]}}\n\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<contactinfo>\n    <app>N1MM</app>\n    <contestname>CWOPS</contestname>\n    <contestnr>73</contestnr>\n    <timestamp>2020-01-17 16 :43:38</timestamp>\n    <mycall>W2XYZ</mycall>\n    <band>3.5</band>\n    <rxfreq>352519</rxfreq>\n    <txfreq>352519</txfreq>\n    <operator></operator>\n    <mode>CW</mode>\n    <call>WlAW</call>\n    <countryprefix>K</countryprefix>\n    <wpxprefix>Wl</wpxprefix>\n    <stationprefix>W2XYZ</stationprefix>\n    <continent>NA</continent>\n    <snt>599</snt>\n    <sntnr>5</sntnr>\n    <rcv>599</rcv>\n    <rcvnr>0</rcvnr>\n    <gridsquare></gridsquare>\n    <exchangel></exchangel>\n    <section></section>\n    <comment></comment>\n    <qth></qth>\n    <name></name>\n    <power></power>\n    <misctext></misctext>\n    <zone>0</zone>\n    <prec></prec>\n    <ck>0</ck>\n    <ismultiplierl>l</ismultiplierl>\n    <ismultiplier2>0</ismultiplier2>\n    <ismultiplier3>0</ismultiplier3>\n    <points>l</points>\n    <radionr>l</radionr>\n    <run1run2>1<run1run2>\n    <RoverLocation></RoverLocation>\n    <RadioInterfaced>l</RadioInterfaced>\n    <NetworkedCompNr>0</NetworkedCompNr>\n    <IsOriginal>False</IsOriginal>\n    <NetBiosName></NetBiosName>\n    <IsRunQSO>0</IsRunQSO>\n    <StationName>CONTEST-PC</StationName>\n    <ID>a1b2c3d4e5f6g7h</ID>\n    <IsClaimedQso>True</IsClaimedQso>\n</contactinfo>",
+    "x": 260,
+    "y": 2640,
+    "wires": []
+  },
+  {
+    "id": "65952b3351e52bca",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1140,
+    "y": 2600,
+    "wires": []
+  },
+  {
+    "id": "6c25416ba946de30",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Assign Global Vars",
+    "func": "if (msg.payload.contestname == \"\")\n{\n    msg.payload.contestname = null\n}\nif (msg.payload.chasecall1 == \"\")\n{\n    msg.payload.chasecall1 = null\n}\nif (msg.payload.chasecall2 == \"\")\n{\n    msg.payload.chasecall2 = null\n}\nif (msg.payload.chasecall3 == \"\")\n{\n    msg.payload.chasecall3 = null\n}\nif (msg.payload.chasecall4 == \"\")\n{\n    msg.payload.chasecall4 = null\n}\nif (msg.payload.chasecall5 == \"\")\n{\n    msg.payload.chasecall5 = null\n}\n\nlet existingcontestname = global.get('contestname')\nlet existingchasecall1 = global.get('chasecall1')\nlet existingchasecall2 = global.get('chasecall2')\nlet existingchasecall3 = global.get('chasecall3')\nlet existingchasecall4 = global.get('chasecall4')\nlet existingchasecall5 = global.get('chasecall5')\n\n//nothing is entered but if existing is undefined result == null\nif (msg.payload.contestname == null && existingcontestname == undefined)\n{\n    msg.payload.contestname = null\n}\n//nothing is entered but if callsign exists then result = the existing callsign \nif (msg.payload.contestname == null && (existingcontestname != null || existingcontestname == null))\n{\n    msg.payload.contestname = existingcontestname\n}\n\n//nothing is entered but if existing is undefined result == null\nif (msg.payload.chasecall1 == null && existingchasecall1 == undefined)\n{\n    msg.payload.chasecall1 = null\n}\n//nothing is entered but if callsign exists then result = the existing callsign \nif (msg.payload.chasecall1 == null && (existingchasecall1 != null || existingchasecall1 == null))\n{\n    msg.payload.chasecall1 = existingchasecall1\n}\n\n//nothing is entered but if existing is undefined result == null\nif (msg.payload.chasecall2 == null && existingchasecall2 == undefined)\n{\n    msg.payload.chasecall2 = null\n}\n//nothing is entered but if callsign exists then result = the existing callsign \nif (msg.payload.chasecall2 == null && (existingchasecall2 != null || existingchasecall2 == null))\n{\n    msg.payload.chasecall2 = existingchasecall2\n}\n\n//nothing is entered but if existing is undefined result == null\nif (msg.payload.chasecall3 == null && existingchasecall3 == undefined)\n{\n    msg.payload.chasecall3 = null\n}\n//nothing is entered but if callsign exists then result = the existing callsign \nif (msg.payload.chasecall3 == null && (existingchasecall3 != null || existingchasecall3 == null))\n{\n    msg.payload.chasecall3 = existingchasecall3\n}\n\n//nothing is entered but if existing is undefined result == null\nif (msg.payload.chasecall4 == null && existingchasecall4 == undefined)\n{\n    msg.payload.chasecall4 = null\n}\n//nothing is entered but if callsign exists then result = the existing callsign \nif (msg.payload.chasecall4 == null && (existingchasecall4 != null || existingchasecall4 == null))\n{\n    msg.payload.chasecall4 = existingchasecall4\n}\n\n//nothing is entered but if existing is undefined result == null\nif (msg.payload.chasecall5 == null && existingchasecall5 == undefined)\n{\n    msg.payload.chasecall5 = null\n}\n//nothing is entered but if callsign exists then result = the existing callsign \nif (msg.payload.chasecall5 == null && (existingchasecall5 != null || existingchasecall5 == null))\n{\n    msg.payload.chasecall5 = existingchasecall5\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2510,
+    "y": 1660,
+    "wires": [
+      [
+        "0d5f928a68a24cca"
+      ]
+    ]
+  },
+  {
+    "id": "959eb4e87a809c8d",
+    "type": "ui_button",
+    "z": "204548a488401a1b",
+    "name": "7 Online Scoreboard Reset",
+    "group": "5e3039a0172f86b1",
+    "order": 7,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Reset All Fields",
+    "tooltip": "",
+    "color": "#FFFFFF",
+    "bgcolor": "#FF0000",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 2280,
+    "y": 1620,
+    "wires": [
+      [
+        "f77b512adee68822"
+      ]
+    ]
+  },
+  {
+    "id": "f77b512adee68822",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Reset to Undefined",
+    "func": "global.set('contestname',null);\nglobal.set('chasecall1',null);\nglobal.set('chasecall2',null);\nglobal.set('chasecall3',null);\nglobal.set('chasecall4',null);\nglobal.set('chasecall5',null);\n\nmsg.payload.contestcall = \"\";\nmsg.payload.score_total = \"\";\nmsg.payload.qso_total = \"\";\nmsg.payload.mult_total = \"\";\nmsg.payload.qso_160 = \"\";\nmsg.payload.mult_160 = \"\";\nmsg.payload.qso_80 = \"\";\nmsg.payload.mult_80 = \"\";\nmsg.payload.qso_40 = \"\";\nmsg.payload.mult_40 = \"\";\nmsg.payload.qso_20 = \"\";\nmsg.payload.mult_20 = \"\";\nmsg.payload.qso_15 = \"\";\nmsg.payload.mult_15 = \"\";\nmsg.payload.qso_10 = \"\";\nmsg.payload.mult_10 = \"\";\nmsg.payload.last = \"\";\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2510,
+    "y": 1620,
+    "wires": [
+      [
+        "2af9add8843cb280"
+      ]
+    ]
+  },
+  {
+    "id": "f9e7825f50baf241",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "contestname",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2220,
+    "y": 1800,
+    "wires": [
+      [
+        "ed725a6ab2d77106",
+        "b1897541b4842264"
+      ]
+    ]
+  },
+  {
+    "id": "9cbd4e1f6df0b530",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "chasecall1",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2220,
+    "y": 1840,
+    "wires": [
+      [
+        "01abe21d44dec1e8"
+      ]
+    ]
+  },
+  {
+    "id": "b952ed436e7ed3e1",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "chasecall2",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2220,
+    "y": 1880,
+    "wires": [
+      [
+        "04a1723a5fc42cca"
+      ]
+    ]
+  },
+  {
+    "id": "ae17a37fe30e49e6",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "chasecall3",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2220,
+    "y": 1920,
+    "wires": [
+      [
+        "05353219a2a8076e"
+      ]
+    ]
+  },
+  {
+    "id": "887559e33323fe73",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "chasecall4",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2220,
+    "y": 1960,
+    "wires": [
+      [
+        "f738a03c7e4b7641"
+      ]
+    ]
+  },
+  {
+    "id": "f11dd8d593ab536f",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "chasecall5",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2220,
+    "y": 2000,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e5841728e52de8cd",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "2",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1990,
+    "y": 1900,
+    "wires": [
+      [
+        "f9e7825f50baf241",
+        "9cbd4e1f6df0b530",
+        "b952ed436e7ed3e1",
+        "ae17a37fe30e49e6",
+        "887559e33323fe73",
+        "f11dd8d593ab536f"
+      ]
+    ]
+  },
+  {
+    "id": "ed725a6ab2d77106",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "5e3039a0172f86b1",
+    "order": 2,
+    "width": 2,
+    "height": 1,
+    "name": "2 Contestname Text",
+    "label": "",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2470,
+    "y": 1800,
+    "wires": []
+  },
+  {
+    "id": "01abe21d44dec1e8",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "5e3039a0172f86b1",
+    "order": 3,
+    "width": 2,
+    "height": 1,
+    "name": "3 Chase Call1 Text",
+    "label": "",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2470,
+    "y": 1840,
+    "wires": []
+  },
+  {
+    "id": "04a1723a5fc42cca",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "5e3039a0172f86b1",
+    "order": 4,
+    "width": 2,
+    "height": 1,
+    "name": "4 Chase Call2 Text",
+    "label": "",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2470,
+    "y": 1880,
+    "wires": []
+  },
+  {
+    "id": "05353219a2a8076e",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "5e3039a0172f86b1",
+    "order": 5,
+    "width": 2,
+    "height": 1,
+    "name": "5 Chase Call3 Text",
+    "label": "",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2470,
+    "y": 1920,
+    "wires": []
+  },
+  {
+    "id": "f738a03c7e4b7641",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "5e3039a0172f86b1",
+    "order": 6,
+    "width": 2,
+    "height": 1,
+    "name": "6 Chase Call4 Text",
+    "label": "",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2470,
+    "y": 1960,
+    "wires": []
+  },
+  {
+    "id": "0d5f928a68a24cca",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "To Upper Case",
+    "func": "if (msg.payload.contestname != null)\n{\n    msg.payload.contestname = msg.payload.contestname.toUpperCase();\n}\n\nif (msg.payload.chasecall1 != null)\n{\n    msg.payload.chasecall1 = msg.payload.chasecall1.toUpperCase();\n}\n\nif (msg.payload.chasecall2 != null)\n{\n    msg.payload.chasecall2 = msg.payload.chasecall2.toUpperCase();\n}\n\nif (msg.payload.chasecall3 != null)\n{\n    msg.payload.chasecall3 = msg.payload.chasecall3.toUpperCase();\n}\n\nif (msg.payload.chasecall4 != null)\n{\n    msg.payload.chasecall4 = msg.payload.chasecall4.toUpperCase();\n}\n\nif (msg.payload.chasecall5 != null)\n{\n    msg.payload.chasecall5 = msg.payload.chasecall5.toUpperCase();\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2740,
+    "y": 1660,
+    "wires": [
+      [
+        "53b8d128ed86c659"
+      ]
+    ]
+  },
+  {
+    "id": "2af9add8843cb280",
+    "type": "link out",
+    "z": "204548a488401a1b",
+    "name": "Clear Online Scoreboard OUT",
+    "mode": "link",
+    "links": [
+      "113bf358539c5697"
+    ],
+    "x": 2715,
+    "y": 1620,
+    "wires": []
+  },
+  {
+    "id": "34d0d7fb15af09f5",
+    "type": "ui_template",
+    "z": "204548a488401a1b",
+    "d": true,
+    "group": "8fb11826e4a47fc9",
+    "name": "Clock Toolbar",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "format": "<script id=\"titleScript\" type=\"text/javascript\">\n\n$(function() {\n    if($('.md-toolbar-tools').length != 0){\n        loadClock();\n    }else setTimeout(loadClock, 500)\n});\n\nfunction loadClock(){\n    $('#clock').remove();\n    var toolbar = $('.md-toolbar-tools');\n    \n    var div = $('<div/>');\n    var p = $('<p/ id=\"clock\">');\n    \n    div.append(p);\n    div[0].style.margin = '5px 5px 5px auto';\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n    \n    function upTime() {\n        var d = new Date();\n        p.text(d.toUTCString());\n    }\n\n    if(document.clockInterval){ \n            clearInterval(document.clockInterval);\n            document.clockInterval = null;\n    }\n        \n    document.clockInterval = setInterval(upTime,1000);\n}\n\n</script>",
+    "storeOutMessages": false,
+    "fwdInMessages": false,
+    "resendOnRefresh": false,
+    "templateScope": "global",
+    "className": "",
+    "x": 1280,
+    "y": 400,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "607a4a01765dac2a",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Clock Toolbar",
+    "info": "",
+    "x": 1270,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "6b75028c49d07165",
+    "type": "http request",
+    "z": "204548a488401a1b",
+    "name": "Get HamQTH XML Key",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://www.hamqth.com/xml.php?u={{payload.hamqthusername}}&p={{payload.hamqthpassword}}",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 610,
+    "y": 1660,
+    "wires": [
+      [
+        "7c6f7da8b7d97b61",
+        "3f45a7c6ec16a996"
+      ]
+    ]
+  },
+  {
+    "id": "7c6f7da8b7d97b61",
+    "type": "xml",
+    "z": "204548a488401a1b",
+    "name": "",
+    "property": "payload",
+    "attr": "",
+    "chr": "",
+    "x": 810,
+    "y": 1660,
+    "wires": [
+      [
+        "3823be0dbdf63121"
+      ]
+    ]
+  },
+  {
+    "id": "3823be0dbdf63121",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Set Key",
+    "rules": [
+      {
+        "t": "set",
+        "p": "hamqthkey",
+        "pt": "global",
+        "to": "payload.HamQTH.session[0].session_id[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 960,
+    "y": 1660,
+    "wires": [
+      [
+        "0d40c71ac4ff5366",
+        "555c125f3b6c175a"
+      ]
+    ]
+  },
+  {
+    "id": "0dd24c827d1b816a",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Verify Valid Key Non-Expire",
+    "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1040,
+    "y": 1740,
+    "wires": [
+      [
+        "b06a6e5ae771029b"
+      ]
+    ]
+  },
+  {
+    "id": "58b7ad2c2227c8da",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": true,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Expired QRZ XML Key",
+    "x": 1520,
+    "y": 1800,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "7aebf3871853a00b",
+    "type": "ui_form",
+    "z": "204548a488401a1b",
+    "name": "5 HamQTH Database Login Form",
+    "label": "",
+    "group": "8a65c232b2637c6a",
+    "order": 5,
+    "width": 6,
+    "height": 1,
+    "options": [
+      {
+        "label": "HamQTH Username",
+        "value": "hamqthusername",
+        "type": "text",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "HamQTH Password",
+        "value": "hamqthpassword",
+        "type": "password",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "hamqthusername": "",
+      "hamqthpassword": ""
+    },
+    "payload": "",
+    "submit": "submit",
+    "cancel": "cancel",
+    "topic": "topic",
+    "topicType": "msg",
+    "splitLayout": "",
+    "className": "",
+    "x": 150,
+    "y": 1660,
+    "wires": [
+      [
+        "7733a785981cccaf"
+      ]
+    ]
+  },
+  {
+    "id": "28dc4ff641f22765",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Clear XML Login Data Notification",
+    "x": 720,
+    "y": 1720,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "0938506f45932c09",
+    "type": "ui_button",
+    "z": "204548a488401a1b",
+    "name": "6 Clear HamQTH XML Login Data",
+    "group": "8a65c232b2637c6a",
+    "order": 6,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "Clear HamQTH XML Login Data",
+    "tooltip": "",
+    "color": "#FFFFFF",
+    "bgcolor": "#FF0000",
+    "className": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "date",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 150,
+    "y": 1720,
+    "wires": [
+      [
+        "25a37e83faf39a30"
+      ]
+    ]
+  },
+  {
+    "id": "25a37e83faf39a30",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Clear Key & Expire Date",
+    "func": "global.set('hamqthkey', undefined);\nglobal.set('hamqthkeyexpire', undefined);\nglobal.set('hamqthusername', undefined);\nglobal.set('hamqthpassword', undefined);\n\nmsg.payload = \"HamQTH XML Login & Key Info Cleared\";\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 450,
+    "y": 1720,
+    "wires": [
+      [
+        "28dc4ff641f22765"
+      ]
+    ]
+  },
+  {
+    "id": "0d40c71ac4ff5366",
+    "type": "switch",
+    "z": "204548a488401a1b",
+    "name": "HamQTH Key Null?",
+    "property": "hamqthkey",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "null"
+      },
+      {
+        "t": "nnull"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1150,
+    "y": 1660,
+    "wires": [
+      [
+        "d6231223f2764362",
+        "d4646ba2ec152a07"
+      ],
+      [
+        "915e670e9b5acb07",
+        "d4646ba2ec152a07"
+      ]
+    ]
+  },
+  {
+    "id": "d6231223f2764362",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Password Incorrect",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Please Check Your Username & Password",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1370,
+    "y": 1640,
+    "wires": [
+      [
+        "f1129769746f1646"
+      ]
+    ]
+  },
+  {
+    "id": "f1129769746f1646",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Check HamQTH Username & Password",
+    "x": 1660,
+    "y": 1640,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "915e670e9b5acb07",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Password Corrent",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Username & Password Accepted",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1370,
+    "y": 1680,
+    "wires": [
+      [
+        "39a307557da7d899"
+      ]
+    ]
+  },
+  {
+    "id": "7733a785981cccaf",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Reset Keys",
+    "func": "global.set('hamqthkey', undefined);\nglobal.set('hamqthword', undefined)\nglobal.set('hamqthkeyexpire', undefined);\nglobal.set('hamqthusername', undefined);\n\nglobal.set('hamqthusername', msg.payload.hamqthusername)\nglobal.set('hamqthpassword', msg.payload.hamqthpassword)\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 1660,
+    "wires": [
+      [
+        "6b75028c49d07165",
+        "e9e09dae49d0a60b"
+      ]
+    ]
+  },
+  {
+    "id": "39a307557da7d899",
+    "type": "ui_toast",
+    "z": "204548a488401a1b",
+    "position": "dialog",
+    "displayTime": "3",
+    "highlight": "",
+    "sendall": false,
+    "outputs": 1,
+    "ok": "OK",
+    "cancel": "",
+    "raw": false,
+    "className": "",
+    "topic": "",
+    "name": "Correct HamQTH Username & Password",
+    "x": 1640,
+    "y": 1680,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "9544490fd792f414",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "HamQTH Database Lookup Credentials",
+    "info": "",
+    "x": 230,
+    "y": 1580,
+    "wires": []
+  },
+  {
+    "id": "a2f3c88b6c8b39cf",
+    "type": "http request",
+    "z": "204548a488401a1b",
+    "name": "Get QRZ XML Key",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://xmldata.qrz.com/xml/current/?username={{payload.qrzusername}};password={{payload.qrzpassword}};agent=q5.0",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "senderr": false,
+    "x": 1490,
+    "y": 1740,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "b06a6e5ae771029b",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload.qrzusername",
+        "pt": "msg",
+        "to": "qrzusername",
+        "tot": "global"
+      },
+      {
+        "t": "set",
+        "p": "payload.qrzpassword",
+        "pt": "msg",
+        "to": "qrzpassword",
+        "tot": "global"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1280,
+    "y": 1740,
+    "wires": [
+      [
+        "a2f3c88b6c8b39cf"
+      ]
+    ]
+  },
+  {
+    "id": "a4d61c62f3d6aba4",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "qrzkey",
+        "pt": "global",
+        "to": "payload.QRZDatabase.Session[0].Key[0]",
+        "tot": "msg"
+      },
+      {
+        "t": "set",
+        "p": "qrzkeyexpire",
+        "pt": "global",
+        "to": "payload.QRZDatabase.Session[0].SubExp[0]",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 1000,
+    "y": 1800,
+    "wires": [
+      [
+        "aa278c160ce1ee9c"
+      ]
+    ]
+  },
+  {
+    "id": "aa278c160ce1ee9c",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Verify Valid Key Non-Expire",
+    "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1240,
+    "y": 1800,
+    "wires": [
+      [
+        "58b7ad2c2227c8da"
+      ]
+    ]
+  },
+  {
+    "id": "e9e09dae49d0a60b",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 550,
+    "y": 1580,
+    "wires": []
+  },
+  {
+    "id": "3f45a7c6ec16a996",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 830,
+    "y": 1580,
+    "wires": []
+  },
+  {
+    "id": "555c125f3b6c175a",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1070,
+    "y": 1580,
+    "wires": []
+  },
+  {
+    "id": "d4646ba2ec152a07",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1360,
+    "y": 1560,
+    "wires": []
+  },
+  {
+    "id": "48f5678a75ee7dd8",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "Distance Measurement",
+    "label": "Distance Measurement",
+    "tooltip": "",
+    "place": "Select option",
+    "group": "00919f6d1599ed5f",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "Miles",
+        "value": "miles",
+        "type": "str"
+      },
+      {
+        "label": "Kilometers",
+        "value": "km",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 1850,
+    "y": 860,
+    "wires": [
+      [
+        "3db58167aa103bc3"
+      ]
+    ]
+  },
+  {
+    "id": "3db58167aa103bc3",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Distance Measurement",
+    "func": "x = msg.payload\nglobal.set('distance_measurement',x)\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2120,
+    "y": 860,
+    "wires": [
+      [
+        "70f9e6be765b3c55"
+      ]
+    ]
+  },
+  {
+    "id": "1e90fa2382c0983d",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1370,
+    "y": 860,
+    "wires": [
+      [
+        "5eb3915f925752d7"
+      ]
+    ]
+  },
+  {
+    "id": "8c3b78c9df29aa78",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Distance Measurement",
+    "info": "",
+    "x": 1340,
+    "y": 820,
+    "wires": []
+  },
+  {
+    "id": "5eb3915f925752d7",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Distance Measurement",
+    "func": "msg.payload = global.get('distance_measurement')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"miles\";\n    return msg;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1580,
+    "y": 860,
+    "wires": [
+      [
+        "48f5678a75ee7dd8"
+      ]
+    ]
+  },
+  {
+    "id": "1dfb81dda6b742b3",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Map Label Type",
+    "func": "msg.payload = global.get('maplabeltype')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"bandonly\";\n    return msg;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1540,
+    "y": 760,
+    "wires": [
+      [
+        "d99f186baf3ac355"
+      ]
+    ]
+  },
+  {
+    "id": "b931a7b4465d0df8",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "54b59a095746559b",
+    "order": 6,
+    "width": 6,
+    "height": 1,
+    "name": "6 Map Label Type Text",
+    "label": "Map Label Type",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2420,
+    "y": 760,
+    "wires": []
+  },
+  {
+    "id": "ad4c547076b09ade",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Skimmer Call",
+    "func": "msg.payload = global.get('skimmercall')\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1290,
+    "y": 540,
+    "wires": [
+      [
+        "dcfce735dacf33ca"
+      ]
+    ]
+  },
+  {
+    "id": "2d7108e39910ef83",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1090,
+    "y": 540,
+    "wires": [
+      [
+        "ad4c547076b09ade"
+      ]
+    ]
+  },
+  {
+    "id": "5bf605cc1f16fc83",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 130,
+    "y": 920,
+    "wires": [
+      [
+        "a54ca6e34027cc56"
+      ]
+    ]
+  },
+  {
+    "id": "a54ca6e34027cc56",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Contest Callsign",
+    "func": "msg.payload = global.get('contestcallsign')\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 340,
+    "y": 920,
+    "wires": [
+      [
+        "cb4f88b22ac357e7"
+      ]
+    ]
+  },
+  {
+    "id": "b6c621827fb49298",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Lookup Service",
+    "func": "msg.payload = global.get('dblookup')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"hamdb\";\n    return msg;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1670,
+    "y": 1020,
+    "wires": [
+      [
+        "e35dbee7a81b43bc"
+      ]
+    ]
+  },
+  {
+    "id": "91517249510af11d",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1450,
+    "y": 1020,
+    "wires": [
+      [
+        "b6c621827fb49298"
+      ]
+    ]
+  },
+  {
+    "id": "70f9e6be765b3c55",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "00919f6d1599ed5f",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "name": "Distance Measurement Type",
+    "label": "Measurement",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2440,
+    "y": 860,
+    "wires": []
+  },
+  {
+    "id": "276ebc80307eb098",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "Multi OP or S02R Operation",
+    "info": "",
+    "x": 1460,
+    "y": 1120,
+    "wires": []
+  },
+  {
+    "id": "cefa3aeae0e6035c",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 1430,
+    "y": 1180,
+    "wires": [
+      [
+        "e0849adea5ad6c37"
+      ]
+    ]
+  },
+  {
+    "id": "e0849adea5ad6c37",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Mult-OP or SO2R",
+    "func": "msg.payload = global.get('category')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"multiop\";\n    return msg;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1640,
+    "y": 1180,
+    "wires": [
+      [
+        "63f29cb1261063bf"
+      ]
+    ]
+  },
+  {
+    "id": "63f29cb1261063bf",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "6 Contest Category Dropdown",
+    "label": "Contest Category",
+    "tooltip": "",
+    "place": "Choose Selection",
+    "group": "475c1eff5d97ffe5",
+    "order": 6,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "Multi-OP",
+        "value": "multiop",
+        "type": "str"
+      },
+      {
+        "label": "SO2R",
+        "value": "so2r",
+        "type": "str"
+      },
+      {
+        "label": "SO1V",
+        "value": "so1v",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 1920,
+    "y": 1180,
+    "wires": [
+      [
+        "7d0c7ffca7a6660e"
+      ]
+    ]
+  },
+  {
+    "id": "7d0c7ffca7a6660e",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Set Category",
+    "rules": [
+      {
+        "t": "set",
+        "p": "category",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 2170,
+    "y": 1180,
+    "wires": [
+      [
+        "69ad2b88f2e9296e"
+      ]
+    ]
+  },
+  {
+    "id": "69ad2b88f2e9296e",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "475c1eff5d97ffe5",
+    "order": 5,
+    "width": 6,
+    "height": 1,
+    "name": "5 Contest Category Lookup Text",
+    "label": "Contest Category",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 2410,
+    "y": 1180,
+    "wires": []
+  },
+  {
+    "id": "b1897541b4842264",
+    "type": "link out",
+    "z": "204548a488401a1b",
+    "name": "Contest Name OUT",
+    "mode": "link",
+    "links": [
+      "469d9b45aa858755"
+    ],
+    "x": 2385,
+    "y": 1720,
+    "wires": []
+  },
+  {
+    "id": "543c8ffcfaaf7701",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Map Label Status",
+    "func": "msg.payload = global.get('maplabels')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"true\";\n    return msg;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1620,
+    "y": 700,
+    "wires": [
+      [
+        "9d67b8af1ecfca92"
+      ]
+    ]
+  },
+  {
+    "id": "289a920a73d6b6e2",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Say Multi",
+    "func": "msg.payload = global.get('saymulti')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"true\";\n    return msg;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 2260,
+    "y": 1380,
+    "wires": [
+      [
+        "4a7ab19bd2fdaf09"
+      ]
+    ]
+  },
+  {
+    "id": "8f4d88abb858be08",
+    "type": "link out",
+    "z": "204548a488401a1b",
+    "name": "Clear Map OUT",
+    "mode": "link",
+    "links": [
+      "f2b91a5dc28385a9"
+    ],
+    "x": 1635,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "93aec0ede1f81f3a",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Clear Map",
+    "func": "msg1 = {\"command\":{\"clear\":\"160M\"}};\nmsg2 = {\"command\":{\"clear\":\"80M\"}};\nmsg3 = {\"command\":{\"clear\":\"40M\"}};\nmsg4 = {\"command\":{\"clear\":\"20M\"}};\nmsg5 = {\"command\":{\"clear\":\"15M\"}};\nmsg6 = {\"command\":{\"clear\":\"10M\"}};\nmsg7 = {\"command\":{\"clear\":\"6M\"}};\nmsg8 = {\"command\":{\"clear\":\"2M\"}};\nmsg9 = {\"command\":{\"clear\":\"Other\"}}\n\nreturn msg1, msg2, msg3, msg4, msg5, msg6, msg7, msg8, msg9;\n\n",
+    "outputs": 9,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1490,
+    "y": 80,
+    "wires": [
+      [
+        "8f4d88abb858be08"
+      ],
+      [
+        "8f4d88abb858be08"
+      ],
+      [
+        "8f4d88abb858be08"
+      ],
+      [
+        "8f4d88abb858be08"
+      ],
+      [
+        "8f4d88abb858be08"
+      ],
+      [
+        "8f4d88abb858be08"
+      ],
+      [
+        "8f4d88abb858be08"
+      ],
+      [
+        "8f4d88abb858be08"
+      ],
+      [
+        "8f4d88abb858be08"
+      ]
+    ]
+  },
+  {
+    "id": "3347013ea6fb5df5",
+    "type": "comment",
+    "z": "204548a488401a1b",
+    "name": "radiosport.live flow",
+    "info": "",
+    "x": 370,
+    "y": 2820,
+    "wires": []
+  },
+  {
+    "id": "1d2e0efe1531b4eb",
+    "type": "ui_switch",
+    "z": "204548a488401a1b",
+    "name": "1 Send Data",
+    "label": "Send Data ",
+    "tooltip": "",
+    "group": "8e8e61b9e41627e8",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "decouple": "false",
+    "topic": "topic",
+    "topicType": "msg",
+    "style": "",
+    "onvalue": "true",
+    "onvalueType": "bool",
+    "onicon": "",
+    "oncolor": "",
+    "offvalue": "false",
+    "offvalueType": "bool",
+    "officon": "",
+    "offcolor": "",
+    "animate": false,
+    "className": "",
+    "x": 490,
+    "y": 2880,
+    "wires": [
+      [
+        "ddaf9e252db55cd5",
+        "9704203146ffc3de"
+      ]
+    ]
+  },
+  {
+    "id": "9704203146ffc3de",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Store Live Data",
+    "func": "livedata = msg.payload;\n\nglobal.set('livedata',livedata);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 680,
+    "y": 2880,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ddaf9e252db55cd5",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 670,
+    "y": 2840,
+    "wires": []
+  },
+  {
+    "id": "fcf9a277e446974e",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "3 Power Drop Down",
+    "label": "Power",
+    "tooltip": "Select Your Power",
+    "place": "Select Power",
+    "group": "8e8e61b9e41627e8",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "QRP",
+        "value": "qrp",
+        "type": "str"
+      },
+      {
+        "label": "LP",
+        "value": "lp",
+        "type": "str"
+      },
+      {
+        "label": "HP",
+        "value": "hp",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 540,
+    "y": 2940,
+    "wires": [
+      [
+        "f8a20f731520adc2"
+      ]
+    ]
+  },
+  {
+    "id": "fde6b716b846a1b9",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "5 Class Drop Down",
+    "label": "Class",
+    "tooltip": "",
+    "place": "Select Class",
+    "group": "8e8e61b9e41627e8",
+    "order": 5,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "SOSB",
+        "value": "sosb",
+        "type": "str"
+      },
+      {
+        "label": "SOAB",
+        "value": "soab",
+        "type": "str"
+      },
+      {
+        "label": "SOUAB",
+        "value": "souab",
+        "type": "str"
+      },
+      {
+        "label": "M/S",
+        "value": "ms",
+        "type": "str"
+      },
+      {
+        "label": "M/2",
+        "value": "m2",
+        "type": "str"
+      },
+      {
+        "label": "M/M",
+        "value": "mm",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 470,
+    "y": 2980,
+    "wires": [
+      [
+        "a73ec5e28a6628d4"
+      ]
+    ]
+  },
+  {
+    "id": "f8a20f731520adc2",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Store Power",
+    "func": "power = msg.payload;\n\nglobal.set('power',power);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 750,
+    "y": 2940,
+    "wires": [
+      [
+        "4f77896f8379011c"
+      ]
+    ]
+  },
+  {
+    "id": "a73ec5e28a6628d4",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Store Class",
+    "func": "opclass = msg.payload;\n\nglobal.set('class',opclass);\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 670,
+    "y": 2980,
+    "wires": [
+      [
+        "6d31d7c582997a74"
+      ]
+    ]
+  },
+  {
+    "id": "a72c526751b53a5f",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Power",
+    "func": "msg.payload = global.get('power');\n\nif (msg.payload == undefined);\n{\n    msg.payload = undefined\n    return msg;\n}\n\n\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 310,
+    "y": 2940,
+    "wires": [
+      [
+        "fcf9a277e446974e"
+      ]
+    ]
+  },
+  {
+    "id": "4f77896f8379011c",
+    "type": "change",
+    "z": "204548a488401a1b",
+    "name": "Set Power",
+    "rules": [
+      {
+        "t": "set",
+        "p": "power",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 930,
+    "y": 2940,
+    "wires": [
+      [
+        "41a9dc57deb3d22d"
+      ]
+    ]
+  },
+  {
+    "id": "41a9dc57deb3d22d",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "8e8e61b9e41627e8",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "name": "2 Power Lookup Text",
+    "label": "Power",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1160,
+    "y": 2940,
+    "wires": []
+  },
+  {
+    "id": "6d31d7c582997a74",
+    "type": "ui_text",
+    "z": "204548a488401a1b",
+    "group": "8e8e61b9e41627e8",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "name": "4 Class Lookup Text",
+    "label": "Class",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 920,
+    "y": 2980,
+    "wires": []
+  },
+  {
+    "id": "536753de214930c5",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Class",
+    "func": "msg.payload = global.get('class');\n\nif (msg.payload == undefined);\n{\n    msg.payload = undefined\n    return msg;\n}\n\n\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 280,
+    "y": 2980,
+    "wires": [
+      [
+        "fde6b716b846a1b9"
+      ]
+    ]
+  },
+  {
+    "id": "301aa47149e30630",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 130,
+    "y": 2940,
+    "wires": [
+      [
+        "a72c526751b53a5f"
+      ]
+    ]
+  },
+  {
+    "id": "1809c2b3d5f2e56c",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 110,
+    "y": 2980,
+    "wires": [
+      [
+        "536753de214930c5"
+      ]
+    ]
+  },
+  {
+    "id": "ae73011dbaa0f1ee",
+    "type": "inject",
+    "z": "204548a488401a1b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 2880,
+    "wires": [
+      [
+        "dc4625ed1bfbf5df"
+      ]
+    ]
+  },
+  {
+    "id": "dc4625ed1bfbf5df",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Get Status",
+    "func": "msg.payload = global.get('livedata')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"true\";\n    return msg;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 330,
+    "y": 2880,
+    "wires": [
+      [
+        "1d2e0efe1531b4eb"
+      ]
+    ]
+  },
+  {
+    "id": "926305a899f616de",
+    "type": "sqlite",
+    "z": "204548a488401a1b",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "fixed",
+    "sql": "SELECT DISTINCT mycall from qsos ORDER BY `timestamp`;",
+    "name": "Choose latest Contest Callsign from DB",
+    "x": 280,
+    "y": 980,
+    "wires": [
+      [
+        "88aac0d0567f84d0"
+      ]
+    ]
+  },
+  {
+    "id": "4f3549d3d03b998b",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "",
+    "label": "Contest Callsign",
+    "tooltip": "",
+    "place": "Select option",
+    "group": "475c1eff5d97ffe5",
+    "order": 6,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "",
+        "value": "",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "topic",
+    "topicType": "msg",
+    "className": "",
+    "x": 740,
+    "y": 980,
+    "wires": [
+      [
+        "44ad2f416930e4e9"
+      ]
+    ]
+  },
+  {
+    "id": "996242b2a362222b",
+    "type": "sqlite",
+    "z": "204548a488401a1b",
+    "mydb": "54f43a06.56d7b4",
+    "sqlquery": "fixed",
+    "sql": "SELECT DISTINCT StationName from radio ORDER BY `timestamp`;",
+    "name": "Choose PCs from DB",
+    "x": 160,
+    "y": 360,
+    "wires": [
+      [
+        "8f87ecfb66cec63d",
+        "a7bc1748fc23defa"
+      ]
+    ]
+  },
+  {
+    "id": "3160a3cf965792b6",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "Radio3",
+    "label": "Radio3",
+    "tooltip": "",
+    "place": "",
+    "group": "887ee2eadc46df9a",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "",
+        "value": "",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "radio3",
+    "topicType": "str",
+    "className": "",
+    "x": 660,
+    "y": 440,
+    "wires": [
+      [
+        "92906228f23e7753"
+      ]
+    ]
+  },
+  {
+    "id": "88aac0d0567f84d0",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "change to options",
+    "func": "msg.options=\"\";\nmsg.options = msg.payload[0][\"mycall\"];\nmsg.payload={};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 550,
+    "y": 980,
+    "wires": [
+      [
+        "4f3549d3d03b998b"
+      ]
+    ]
+  },
+  {
+    "id": "52b9731345e98156",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "Radio2",
+    "label": "Radio2",
+    "tooltip": "",
+    "place": "",
+    "group": "887ee2eadc46df9a",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "",
+        "value": "",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "radio2",
+    "topicType": "str",
+    "className": "",
+    "x": 660,
+    "y": 400,
+    "wires": [
+      [
+        "92906228f23e7753"
+      ]
+    ]
+  },
+  {
+    "id": "45487adfd2506609",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "Radio1",
+    "label": "Radio1",
+    "tooltip": "",
+    "place": "",
+    "group": "887ee2eadc46df9a",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "",
+        "value": "",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "radio1",
+    "topicType": "str",
+    "className": "",
+    "x": 660,
+    "y": 360,
+    "wires": [
+      [
+        "92906228f23e7753"
+      ]
+    ]
+  },
+  {
+    "id": "0310b67c0342c959",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "Radio4",
+    "label": "Radio4",
+    "tooltip": "",
+    "place": "",
+    "group": "887ee2eadc46df9a",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "",
+        "value": "",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "radio4",
+    "topicType": "str",
+    "className": "",
+    "x": 660,
+    "y": 480,
+    "wires": [
+      [
+        "92906228f23e7753"
+      ]
+    ]
+  },
+  {
+    "id": "131a5c94a9d2d0e6",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "Radio5",
+    "label": "Radio5",
+    "tooltip": "",
+    "place": "",
+    "group": "887ee2eadc46df9a",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "",
+        "value": "",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "radio5",
+    "topicType": "str",
+    "className": "",
+    "x": 660,
+    "y": 520,
+    "wires": [
+      [
+        "92906228f23e7753"
+      ]
+    ]
+  },
+  {
+    "id": "8f87ecfb66cec63d",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "change to options",
+    "func": "let length=msg.payload.length;\nmsg.options =[];\nfor (let i=0;i=length-1;i++){\n    msg.options.push(msg.payload[i].StationName)\n}\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null) {\n    P1 = \"\"\n}\nif (P2 == null) {\n    P2 = \"\"\n}\nif (P3 == null) {\n    P3 = \"\"\n}\nif (P4 == null) {\n    P4 = \"\"\n}\nif (P5 == null) {\n    P5 = \"\"\n}\nif (P6 == null) {\n    P6 = \"\"\n}\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6)\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 430,
+    "y": 360,
+    "wires": [
+      [
+        "45487adfd2506609",
+        "52b9731345e98156",
+        "3160a3cf965792b6",
+        "0310b67c0342c959",
+        "131a5c94a9d2d0e6",
+        "e16bc4a1666da6df",
+        "a7bc1748fc23defa"
+      ]
+    ]
+  },
+  {
+    "id": "e16bc4a1666da6df",
+    "type": "ui_dropdown",
+    "z": "204548a488401a1b",
+    "name": "Radio6",
+    "label": "Radio6",
+    "tooltip": "",
+    "place": "",
+    "group": "887ee2eadc46df9a",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "",
+        "value": "",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "radio6",
+    "topicType": "str",
+    "className": "",
+    "x": 660,
+    "y": 560,
+    "wires": [
+      [
+        "92906228f23e7753"
+      ]
+    ]
+  },
+  {
+    "id": "92906228f23e7753",
+    "type": "function",
+    "z": "204548a488401a1b",
+    "name": "Set Global PC Names",
+    "func": "\nif (msg.payload != \"\"){\n    if (msg.topic==\"radio1\"){\n        let PC1 = msg.payload\n        global.set(\"PC1\",PC1)\n    }\n    if (msg.topic == \"radio2\")\n    {\n        let PC2 = msg.payload\n        global.set(\"PC2\",PC2)\n    }\n\n    if (msg.topic != \"radio3\")\n    {\n        let PC3 = msg.payload\n        global.set(\"PC3\",PC3)\n    }\n\n    if (msg.topic == \"radio4\")\n    {\n        let PC4 = msg.payload\n        global.set(\"PC4\",PC4)\n    }\n\n    if (msg.topic == \"radio5\")\n    {\n        let PC5 = msg.payload\n        global.set(\"PC5\",PC5)\n    }\n\n    if (msg.topic== \"radio6\")\n    {\n        let PC6 = msg.payload\n        global.set(\"PC6\",PC6)\n    }\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 900,
+    "y": 360,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "a7bc1748fc23defa",
+    "type": "debug",
+    "z": "204548a488401a1b",
+    "name": "debug 3",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 420,
+    "y": 540,
+    "wires": []
+  }
+]
