@@ -387,7 +387,9 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 255,
+        "h": 482
     },
     {
         "id": "52886121c9629e0b",
@@ -411,7 +413,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -435,7 +439,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -460,7 +466,9 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 482
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -475,7 +483,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -490,7 +500,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -514,7 +526,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -538,7 +552,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -575,7 +591,9 @@
             "49c54051341840e3"
         ],
         "x": 34,
-        "y": 679
+        "y": 679,
+        "w": 2032,
+        "h": 282
     },
     {
         "id": "28877ac600fea8b9",
@@ -599,8 +617,10 @@
             "41b71b195d25cc36",
             "324101084f63a83e"
         ],
-        "x": 234,
-        "y": 1019
+        "x": 224,
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -615,7 +635,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -639,7 +661,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -864,7 +888,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -7583,7 +7609,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Label +  Add Multis + Exchange",
-        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\nlet greatcircle = global.get('greatcirclelines')\n\ndelete msg.payload.ID\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\" || contesttype == \"all\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nif (greatcirclelines == true)\n{\n    msg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\n    if (msg.payload.greatcircle[0][0] == undefined)\n    {\n        delete msg.payload.greatcircle;\n        msg.payload.distance_km = 0;\n        msg.payload.distance_miles = 0;\n    }\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
+        "func": "// Determine what type of map label to display beside the map pin\n\nlet maplabels = global.get('maplabels')\nlet maplabeltype = global.get('maplabeltype')\nlet contesttype = global.get('contesttype')\nlet greatcircle = global.get('greatcirclelines')\n\ndelete msg.payload.ID\n\nif (maplabels == true)\n{\n    if (maplabeltype == \"bandmode\" || maplabeltype == null)\n    {\n        msg.payload.label = msg.payload.band + ' ' + msg.payload.mode;\n    }\n    if (maplabeltype == \"bandonly\")\n    {\n        msg.payload.label = msg.payload.band;\n    }\n    if (maplabeltype == \"modeonly\")\n    {\n        msg.payload.label = msg.payload.mode;\n    }\n    if (maplabeltype == \"callonly\")\n    {\n        msg.payload.label = msg.payload.name\n    }\n        \n}\n\n// Add mults together.  Later in the flow if ismultiplier >= 1 then the contact is a mult.\n\nlet multi1 = msg.original.ismultiplier1[0];\nlet multi2 = msg.original.ismultiplier2[0];\nlet multi3 = msg.original.ismultiplier3[0];\nmsg.payload.ttl = msg.payload.ttl.toString();\n\nvar m1 = parseFloat(multi1);\nvar m2 = parseFloat(multi2);\nvar m3 = parseFloat(multi3);\n\nmsg.payload.ismultiplier = m1 + m2 + m3;\n\n// Determine what type of Exchange to dispaly\n// stateonly, countystate, namestate, sections, grids, zones, power, other or null\n\n\nif (contesttype == \"stateonly\" || contesttype == \"\" || contesttype == \"other\")\n{\n    if (msg.payload.exchange == \"\")\n    {\n        msg.payload.exchange = msg.original.section[0];\n    }\n}\nif (contesttype == \"countystate\")\n{\n    msg.payload.exchange = msg.original.exchange1[0];\n}\nif (contesttype == \"namestate\")\n{\n    msg.payload.exchange = msg.original.name[0] + \" \" + msg.original.section[0];\n}\nif (contesttype == \"sections\")\n{\n    msg.payload.exchange = msg.original.section[0];\n}\nif (contesttype == \"classsection\" || contesttype == \"all\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0]\n}\nif (contesttype == \"grids\")\n{\n    msg.payload.exchange = msg.original.gridsquare[0];\n}\nif (contesttype == \"zones\")\n{\n    msg.payload.exchange = msg.original.zone[0];\n}\nif (contesttype == \"serial\")\n{\n    msg.payload.exchange = msg.original.rcvnr[0];\n}\nif (contesttype == \"power\")\n{\n    msg.payload.exchange = msg.original.power[0];\n}\nif (contesttype == \"blank\")\n{\n    msg.payload.exchange = \"----\";\n}\n\nif (msg.payload.exchange == \"\")\n{\n    msg.payload.exchange = msg.original.exchange1[0] + \" \" + msg.original.section[0];\n}\n\n\n// Derminte the location of the great circle lines\n\nlet lat1 = msg.payload.lat\nlet lon1 = msg.payload.lon\nlet lat = parseFloat(lat1);\nlet lon = parseFloat(lon1);\nlet homelat = global.get('homelat');\nlet homelon = global.get('homelon');\n\nif (greatcircle == true)\n{\n    msg.payload.greatcircle = [[homelat,homelon], [lat,lon]]\n\n    if (msg.payload.greatcircle[0][0] == undefined)\n    {\n        delete msg.payload.greatcircle;\n        msg.payload.distance_km = 0;\n        msg.payload.distance_miles = 0;\n    }\n}\n\n// Limit lat and lon to 4 numbers after decimal \n\nmsg.payload.lat = lat.toFixed(5);\nmsg.payload.lon = lon.toFixed(5);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8182,7 +8208,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8676,8 +8702,8 @@
         "width": 5,
         "height": 3,
         "name": "Current Total QSO Rate",
-        "label": "<center>Current Total QSO Rate",
-        "format": "<font color={{msg.color}}>{{msg.rate}}</font><font color={{msg.color}}> Q's/Hr</font>",
+        "label": "<center>Current Hr/Q Rate",
+        "format": "<font color={{msg.color}}>{{msg.rate}}</font><font color={{msg.color}}></font>",
         "layout": "col-center",
         "className": "dashboard_large_value",
         "x": 3670,
@@ -24174,7 +24200,7 @@
         "z": "1c66bd27e16a3fec",
         "g": "f01baabf4527b6e5",
         "name": "QSO Data Raw",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -37831,7 +37857,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_spot_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n.op_compete_trending{\nfont-size: 14px;\n}\n.op_compete{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n</style>",
+        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_spot_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n.op_compete_trending{\nfont-size: 14px;\n}\n.op_compete{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
