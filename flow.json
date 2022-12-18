@@ -686,9 +686,7 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879,
-        "w": 1852,
-        "h": 462
+        "y": 879
     },
     {
         "id": "81692a3cb68d6cde",
@@ -720,9 +718,7 @@
             "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1485.5,
-        "w": 2458,
-        "h": 969
+        "y": 1485.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -782,9 +778,7 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": 19
     },
     {
         "id": "f830dd821e0240f4",
@@ -947,9 +941,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 839,
-        "w": 1912,
-        "h": 602
+        "y": 839
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -976,9 +968,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79,
-        "w": 1032,
-        "h": 162
+        "y": 79
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1015,9 +1005,7 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979,
-        "w": 1272,
-        "h": 449.5
+        "y": 1979
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1056,9 +1044,7 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5,
-        "w": 1432,
-        "h": 449.5
+        "y": 1511.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -2427,6 +2413,16 @@
         "width": "18",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "ccdd35e8bb4ac10f",
+        "type": "ui_spacer",
+        "z": "407d2b774fe67647",
+        "name": "spacer",
+        "group": "5e3039a0172f86b1",
+        "order": 2,
+        "width": 2,
+        "height": 1
     },
     {
         "id": "db6c3ead34896ed7",
@@ -25750,55 +25746,15 @@
         "height": 1,
         "options": [
             {
-                "label": "Radio 1 Computer Name",
-                "value": "PC1",
+                "label": "Other Radio Computer Name",
+                "value": "PC_name",
                 "type": "text",
                 "required": true,
-                "rows": null
-            },
-            {
-                "label": "Radio 2 Computer Name",
-                "value": "PC2",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Radio 3 Computer Name",
-                "value": "PC3",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Radio 4 Computer Name",
-                "value": "PC4",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Radio 5 Computer Name",
-                "value": "PC5",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Radio 6 Computer Name",
-                "value": "PC6",
-                "type": "text",
-                "required": false,
                 "rows": null
             }
         ],
         "formValue": {
-            "PC1": "",
-            "PC2": "",
-            "PC3": "",
-            "PC4": "",
-            "PC5": "",
-            "PC6": ""
+            "PC_name": ""
         },
         "payload": "",
         "submit": "submit",
@@ -25811,8 +25767,7 @@
         "y": 680,
         "wires": [
             [
-                "1c46a9079b39b6af",
-                "4813b79f3e903756"
+                "1c46a9079b39b6af"
             ]
         ]
     },
@@ -25821,56 +25776,16 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Set Global PC Names",
-        "func": "if (msg.payload.PC1 != \"\")\n{\n    let PC1 = msg.payload.PC1\n    global.set(\"PC1\",PC1)\n}\n\nif (msg.payload.PC2 != \"\")\n{\n    let PC2 = msg.payload.PC2\n    global.set(\"PC2\",PC2)\n}\n\nif (msg.payload.PC3 != \"\")\n{\n    let PC3 = msg.payload.PC3\n    global.set(\"PC3\",PC3)\n}\n\nif (msg.payload.PC4 != \"\")\n{\n    let PC4 = msg.payload.PC4\n    global.set(\"PC4\",PC4)\n}\n\nif (msg.payload.PC5 != \"\")\n{\n    let PC5 = msg.payload.PC5\n    global.set(\"PC5\",PC5)\n}\n\nif (msg.payload.PC6 != \"\")\n{\n    let PC6 = msg.payload.PC6\n    global.set(\"PC6\",PC6)\n}\n\nreturn msg;",
+        "func": "if (msg.payload.PC_name != \"\")\n{\n    var PCs = global.get(\"PCs\");\n    if(PCs){\n        global.set(\"PCs\", PCs.push(msg.payload.PC_name));\n    }\n    else{\n        var PCsa=[msg.payload.PC_name];\n        global.set(\"PCs\",PCsa)\n\n    }\n}\n\nif (msg.payload.PC2 != \"\")\n{\n    let PC2 = msg.payload.PC2\n    global.set(\"PC2\",PC2)\n}\n\nif (msg.payload.PC3 != \"\")\n{\n    let PC3 = msg.payload.PC3\n    global.set(\"PC3\",PC3)\n}\n\nif (msg.payload.PC4 != \"\")\n{\n    let PC4 = msg.payload.PC4\n    global.set(\"PC4\",PC4)\n}\n\nif (msg.payload.PC5 != \"\")\n{\n    let PC5 = msg.payload.PC5\n    global.set(\"PC5\",PC5)\n}\n\nif (msg.payload.PC6 != \"\")\n{\n    let PC6 = msg.payload.PC6\n    global.set(\"PC6\",PC6)\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 780,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "59239e08c7dcd682",
-        "type": "ui_toast",
-        "z": "204548a488401a1b",
-        "position": "dialog",
-        "displayTime": "",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "Cancel",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Show Computer Name Input",
-        "x": 1040,
         "y": 680,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "4813b79f3e903756",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Set payload to printout",
-        "func": "let PC1 = msg.payload.PC1\nlet PC2 = msg.payload.PC2\nlet PC3 = msg.payload.PC3\nlet PC4 = msg.payload.PC4\nlet PC5 = msg.payload.PC5\nlet PC6 = msg.payload.PC6\n\nmsg.payload = \"Entered in \" + PC1 + \"\\r\\n \" + PC2 + \"\\r\\n \" + PC3 + \"\\r\\n \" + PC4 + \"\\r\\n \" + PC5 + \"\\r\\n \" + PC6\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 800,
-        "y": 680,
-        "wires": [
-            [
-                "59239e08c7dcd682"
-            ]
         ]
     },
     {
@@ -25880,7 +25795,7 @@
         "group": "887ee2eadc46df9a",
         "order": 1,
         "width": 6,
-        "height": 1,
+        "height": 2,
         "name": "1 First Two PC Names Will Appear on the N1MM Dashboard With the Map",
         "label": "The First Two PC Names Will Appear on the N1MM Dashboard With the Map",
         "format": "{{msg.payload}}",
@@ -25954,7 +25869,7 @@
         "name": "4 Contest Callsign Entry",
         "label": "",
         "group": "475c1eff5d97ffe5",
-        "order": 4,
+        "order": 5,
         "width": 6,
         "height": 1,
         "options": [
@@ -27707,7 +27622,7 @@
         "z": "204548a488401a1b",
         "name": "4 Clear All Computer Names",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 10,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27965,7 +27880,7 @@
         "name": "3 1Q Per Hour Color Form",
         "label": "Q's Per 1 Hour Rates",
         "group": "c89d2b489a7ea747",
-        "order": 3,
+        "order": 6,
         "width": 6,
         "height": 1,
         "options": [
@@ -28010,7 +27925,7 @@
         "name": "6 2Q Per Hour Color Form",
         "label": "Q's Per 2 Hour Rates",
         "group": "c89d2b489a7ea747",
-        "order": 6,
+        "order": 5,
         "width": 6,
         "height": 1,
         "options": [
@@ -28285,7 +28200,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "c89d2b489a7ea747",
-        "order": 4,
+        "order": 3,
         "width": 3,
         "height": 1,
         "name": "4 Q Low 2 Hour Text",
@@ -28302,7 +28217,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "c89d2b489a7ea747",
-        "order": 5,
+        "order": 4,
         "width": 3,
         "height": 1,
         "name": "5 Q High 2 Hour Text",
@@ -28331,8 +28246,8 @@
         "name": "1 Online Scoreboard Form Input",
         "label": "",
         "group": "5e3039a0172f86b1",
-        "order": 1,
-        "width": 4,
+        "order": 8,
+        "width": 6,
         "height": 1,
         "options": [
             {
@@ -28927,7 +28842,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "5e3039a0172f86b1",
-        "order": 2,
+        "order": 1,
         "width": 2,
         "height": 1,
         "name": "2 Contestname Text",
@@ -28944,7 +28859,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "5e3039a0172f86b1",
-        "order": 3,
+        "order": 4,
         "width": 2,
         "height": 1,
         "name": "3 Chase Call1 Text",
@@ -28961,7 +28876,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "5e3039a0172f86b1",
-        "order": 4,
+        "order": 5,
         "width": 2,
         "height": 1,
         "name": "4 Chase Call2 Text",
@@ -28978,7 +28893,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "5e3039a0172f86b1",
-        "order": 5,
+        "order": 6,
         "width": 2,
         "height": 1,
         "name": "5 Chase Call3 Text",
@@ -28995,7 +28910,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "5e3039a0172f86b1",
-        "order": 6,
+        "order": 3,
         "width": 2,
         "height": 1,
         "name": "6 Chase Call4 Text",
@@ -30002,7 +29917,7 @@
         "tooltip": "",
         "place": "Choose Selection",
         "group": "475c1eff5d97ffe5",
-        "order": 6,
+        "order": 7,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -30068,7 +29983,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "475c1eff5d97ffe5",
-        "order": 5,
+        "order": 6,
         "width": 6,
         "height": 1,
         "name": "5 Contest Category Lookup Text",
@@ -30630,12 +30545,12 @@
         "id": "4f3549d3d03b998b",
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
-        "name": "",
+        "name": "Contest Callsign Dropdown",
         "label": "Contest Callsign",
         "tooltip": "",
         "place": "Select option",
         "group": "475c1eff5d97ffe5",
-        "order": 6,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -30651,7 +30566,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 740,
+        "x": 780,
         "y": 980,
         "wires": [
             [
@@ -30671,8 +30586,7 @@
         "y": 360,
         "wires": [
             [
-                "8f87ecfb66cec63d",
-                "a7bc1748fc23defa"
+                "8f87ecfb66cec63d"
             ]
         ]
     },
@@ -30685,7 +30599,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -30737,7 +30651,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -30803,7 +30717,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -30836,7 +30750,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -30865,7 +30779,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "change to options",
-        "func": "let length=msg.payload.length;\nmsg.options =[];\nfor (let i=0;i=length-1;i++){\n    msg.options.push(msg.payload[i].StationName)\n}\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null) {\n    P1 = \"\"\n}\nif (P2 == null) {\n    P2 = \"\"\n}\nif (P3 == null) {\n    P3 = \"\"\n}\nif (P4 == null) {\n    P4 = \"\"\n}\nif (P5 == null) {\n    P5 = \"\"\n}\nif (P6 == null) {\n    P6 = \"\"\n}\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6)\nreturn msg;",
+        "func": "let length=msg.payload.length;\nmsg.options =[];\nfor (let i=0;i=length-1;i++){\n    msg.options.push(msg.payload[i].StationName)\n}\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\nlet PCs = global.get(\"PCs\");\nif (P1 == null) {\n    P1 = \"\"\n}\nif (P2 == null) {\n    P2 = \"\"\n}\nif (P3 == null) {\n    P3 = \"\"\n}\nif (P4 == null) {\n    P4 = \"\"\n}\nif (P5 == null) {\n    P5 = \"\"\n}\nif (P6 == null) {\n    P6 = \"\"\n}\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6,PCs)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -30880,8 +30794,7 @@
                 "3160a3cf965792b6",
                 "0310b67c0342c959",
                 "131a5c94a9d2d0e6",
-                "e16bc4a1666da6df",
-                "a7bc1748fc23defa"
+                "e16bc4a1666da6df"
             ]
         ]
     },
@@ -30894,7 +30807,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -30936,23 +30849,6 @@
         ]
     },
     {
-        "id": "a7bc1748fc23defa",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "6e559dd79c64492f",
         "type": "ui_switch",
         "z": "204548a488401a1b",
@@ -30960,7 +30856,7 @@
         "label": "Great Circle Lines On/Off",
         "tooltip": "",
         "group": "4ef10134c121cf09",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -31167,7 +31063,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "71cb3368617e6c9e",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -31184,10 +31080,10 @@
         "type": "ui_switch",
         "z": "204548a488401a1b",
         "name": "Rolling Release",
-        "label": "Beta Switch,",
-        "tooltip": "If this is on, you will receive updates on a rolling release schedule",
+        "label": "Rolling Release,",
+        "tooltip": "If this is on, you will receive updates on a rolling release schedule. Note if you would like stability, plesae do not turn this on.",
         "group": "71cb3368617e6c9e",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -31245,7 +31141,7 @@
         "sendall": true,
         "outputs": 1,
         "ok": "OK",
-        "cancel": "",
+        "cancel": "Cancel",
         "raw": false,
         "className": "",
         "topic": "Please confirm that you would like to change versions of the node-red dashboard. Note this will restart node-red.",
@@ -35336,7 +35232,7 @@
         "z": "3e52b5d54104d7f0",
         "name": "Manual Reboot Button",
         "group": "71cb3368617e6c9e",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
