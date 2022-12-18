@@ -30990,36 +30990,6 @@
         ]
     },
     {
-        "id": "581259d065fdf33d",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "43200",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "3",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 3140,
-        "wires": [
-            [
-                "53cb4e25bcce6124",
-                "5f7e1de47f37afaf"
-            ]
-        ]
-    },
-    {
         "id": "57be1bc1ba6c2bd1",
         "type": "ui_text",
         "z": "204548a488401a1b",
@@ -31300,6 +31270,23 @@
         "wires": [
             [
                 "26b11bc96d8e246d"
+            ]
+        ]
+    },
+    {
+        "id": "a6c13f77b15cc2d8",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI_Refresh",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 115,
+        "y": 3140,
+        "wires": [
+            [
+                "53cb4e25bcce6124",
+                "5f7e1de47f37afaf"
             ]
         ]
     },
@@ -36173,7 +36160,8 @@
         "name": "Ui Update OUT",
         "mode": "link",
         "links": [
-            "4d85eaa61498c5ca"
+            "4d85eaa61498c5ca",
+            "a6c13f77b15cc2d8"
         ],
         "x": 1425,
         "y": 80,
