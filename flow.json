@@ -31062,6 +31062,352 @@
         ]
     },
     {
+        "id": "959afb92ae4627a2",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Display Version",
+        "info": "",
+        "x": 240,
+        "y": 3060,
+        "wires": []
+    },
+    {
+        "id": "53cb4e25bcce6124",
+        "type": "exec",
+        "z": "204548a488401a1b",
+        "command": "grep -oP 'version\\\"\\: \\K.*' .node-red/projects/Node-Red-Contesting-Dashboard/package.json ",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Local Verison",
+        "x": 300,
+        "y": 3140,
+        "wires": [
+            [
+                "57be1bc1ba6c2bd1"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "581259d065fdf33d",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "43200",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 3140,
+        "wires": [
+            [
+                "53cb4e25bcce6124",
+                "5f7e1de47f37afaf"
+            ]
+        ]
+    },
+    {
+        "id": "57be1bc1ba6c2bd1",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "71cb3368617e6c9e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Version",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1000,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "579f0e6d14d806e4",
+        "type": "exec",
+        "z": "204548a488401a1b",
+        "command": "",
+        "addpay": "command",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Mater Version",
+        "x": 1020,
+        "y": 3180,
+        "wires": [
+            [
+                "e4ae56a0458ac958"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e4ae56a0458ac958",
+        "type": "ui_text",
+        "z": "204548a488401a1b",
+        "group": "71cb3368617e6c9e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Latest Version",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1200,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "7d59e4c6ce32fae2",
+        "type": "ui_switch",
+        "z": "204548a488401a1b",
+        "name": "Rolling Release",
+        "label": "Beta Switch,",
+        "tooltip": "If this is on, you will receive updates on a rolling release schedule",
+        "group": "71cb3368617e6c9e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "dev",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "master",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 260,
+        "y": 3280,
+        "wires": [
+            [
+                "24d322e1499e8cc4"
+            ]
+        ]
+    },
+    {
+        "id": "3fa13575026e339c",
+        "type": "exec",
+        "z": "204548a488401a1b",
+        "command": "",
+        "addpay": "command",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Switch to Rolling Release",
+        "x": 550,
+        "y": 3340,
+        "wires": [
+            [],
+            [
+                "5ad7d8c2de3f86c7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "26b11bc96d8e246d",
+        "type": "ui_toast",
+        "z": "204548a488401a1b",
+        "position": "dialog",
+        "displayTime": "15",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Please confirm that you would like to change versions of the node-red dashboard. Note this will restart node-red.",
+        "name": "",
+        "x": 610,
+        "y": 3280,
+        "wires": [
+            [
+                "857ecd69d5b73204"
+            ]
+        ]
+    },
+    {
+        "id": "1ac8dad20963d18a",
+        "type": "template",
+        "z": "204548a488401a1b",
+        "name": "Checkout Command",
+        "field": "command",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "cd .node-red/projects/Node-Red-Contesting-Dashboard && git checkout {{{global.branch}}}",
+        "output": "str",
+        "x": 320,
+        "y": 3340,
+        "wires": [
+            [
+                "3fa13575026e339c"
+            ]
+        ]
+    },
+    {
+        "id": "2df2850aa9ef955a",
+        "type": "template",
+        "z": "204548a488401a1b",
+        "name": "Find Version Command",
+        "field": "command",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "curl -sL https://raw.githubusercontent.com/kylekrieg/Node-Red-Contesting-Dashboard/{{{payload}}}/package.json | grep -oP \"\\\"version\\\"\\: \\K.*\"",
+        "output": "str",
+        "x": 810,
+        "y": 3180,
+        "wires": [
+            [
+                "579f0e6d14d806e4"
+            ]
+        ]
+    },
+    {
+        "id": "857ecd69d5b73204",
+        "type": "switch",
+        "z": "204548a488401a1b",
+        "name": "OK?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 750,
+        "y": 3280,
+        "wires": [
+            [
+                "1ac8dad20963d18a"
+            ],
+            [
+                "5f7e1de47f37afaf"
+            ]
+        ]
+    },
+    {
+        "id": "5ad7d8c2de3f86c7",
+        "type": "ui_toast",
+        "z": "204548a488401a1b",
+        "position": "bottom right",
+        "displayTime": "15",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error with Switch Please restart node-red manually",
+        "name": "",
+        "x": 780,
+        "y": 3340,
+        "wires": []
+    },
+    {
+        "id": "484e6b528545ba05",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "string formatting",
+        "func": "msg.payload=msg.payload.trim();\nmsg.break=\"Break\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 3200,
+        "wires": [
+            [
+                "2df2850aa9ef955a",
+                "7d59e4c6ce32fae2"
+            ]
+        ]
+    },
+    {
+        "id": "5f7e1de47f37afaf",
+        "type": "exec",
+        "z": "204548a488401a1b",
+        "command": "cd $HOME/.node-red/projects/Node-Red-Contesting-Dashboard && git branch --show-current || awk $1",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Find Current Branch Name",
+        "x": 340,
+        "y": 3200,
+        "wires": [
+            [
+                "484e6b528545ba05"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "24d322e1499e8cc4",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "brnach choice",
+        "func": "\nglobal.set(\"branch\", msg.payload);\nif (msg.break==\"Break\"){\n    return;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 3280,
+        "wires": [
+            [
+                "26b11bc96d8e246d"
+            ]
+        ]
+    },
+    {
         "id": "1f45eb9a.6f2614",
         "type": "tcp request",
         "z": "bd8a446b999750f9",
