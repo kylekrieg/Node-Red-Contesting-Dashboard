@@ -31031,8 +31031,8 @@
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "Mater Version",
-        "x": 1020,
+        "name": "Remote Version",
+        "x": 1140,
         "y": 3180,
         "wires": [
             [
@@ -31055,8 +31055,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1200,
-        "y": 3160,
+        "x": 1120,
+        "y": 3240,
         "wires": []
     },
     {
@@ -31147,7 +31147,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "cd .node-red/projects/Node-Red-Contesting-Dashboard && git checkout {{{global.branch}}}",
+        "template": "cd {{{projectdir}}} && git checkout {{{global.branch}}}",
         "output": "str",
         "x": 360,
         "y": 3360,
@@ -31168,7 +31168,7 @@
         "syntax": "mustache",
         "template": "curl -sL https://raw.githubusercontent.com/kylekrieg/Node-Red-Contesting-Dashboard/{{payload}}/package.json | grep -oP \"\\\"version\\\"\\: \\K.*\"",
         "output": "str",
-        "x": 810,
+        "x": 930,
         "y": 3180,
         "wires": [
             [
@@ -31237,8 +31237,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 3220,
+        "x": 680,
+        "y": 3180,
         "wires": [
             [
                 "2df2850aa9ef955a",
@@ -31258,8 +31258,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Find Current Branch Name",
-        "x": 400,
-        "y": 3220,
+        "x": 440,
+        "y": 3180,
         "wires": [
             [
                 "484e6b528545ba05"
@@ -31366,7 +31366,7 @@
         "template": "cd {{{projectdir}}}/ && git branch --show-current || awk $1",
         "output": "str",
         "x": 160,
-        "y": 3200,
+        "y": 3180,
         "wires": [
             [
                 "5f7e1de47f37afaf"
