@@ -686,7 +686,9 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879
+        "y": 879,
+        "w": 1852,
+        "h": 462
     },
     {
         "id": "81692a3cb68d6cde",
@@ -718,7 +720,9 @@
             "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1485.5
+        "y": 1485.5,
+        "w": 2458,
+        "h": 969
     },
     {
         "id": "d48758cdf0c8991d",
@@ -778,7 +782,9 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 2232,
+        "h": 802
     },
     {
         "id": "f830dd821e0240f4",
@@ -941,7 +947,9 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 839
+        "y": 839,
+        "w": 1912,
+        "h": 602
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -968,7 +976,9 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79
+        "y": 79,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1005,7 +1015,9 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979
+        "y": 1979,
+        "w": 1272,
+        "h": 449.5
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1044,7 +1056,9 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5
+        "y": 1511.5,
+        "w": 1432,
+        "h": 449.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -30971,16 +30985,16 @@
         "id": "53cb4e25bcce6124",
         "type": "exec",
         "z": "204548a488401a1b",
-        "command": "grep -oP 'version\\\"\\: \\K.*' .node-red/projects/Node-Red-Contesting-Dashboard/package.json ",
-        "addpay": "",
+        "command": "",
+        "addpay": "command",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
         "name": "Local Verison",
-        "x": 300,
-        "y": 3140,
+        "x": 640,
+        "y": 3120,
         "wires": [
             [
                 "57be1bc1ba6c2bd1"
@@ -31071,8 +31085,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 260,
-        "y": 3280,
+        "x": 300,
+        "y": 3300,
         "wires": [
             [
                 "24d322e1499e8cc4"
@@ -31091,8 +31105,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Switch to Rolling Release",
-        "x": 550,
-        "y": 3340,
+        "x": 590,
+        "y": 3360,
         "wires": [
             [],
             [
@@ -31116,8 +31130,8 @@
         "className": "",
         "topic": "Please confirm that you would like to change versions of the node-red dashboard. Note this will restart node-red.",
         "name": "",
-        "x": 610,
-        "y": 3280,
+        "x": 650,
+        "y": 3300,
         "wires": [
             [
                 "857ecd69d5b73204"
@@ -31135,8 +31149,8 @@
         "syntax": "mustache",
         "template": "cd .node-red/projects/Node-Red-Contesting-Dashboard && git checkout {{{global.branch}}}",
         "output": "str",
-        "x": 320,
-        "y": 3340,
+        "x": 360,
+        "y": 3360,
         "wires": [
             [
                 "3fa13575026e339c"
@@ -31152,7 +31166,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "curl -sL https://raw.githubusercontent.com/kylekrieg/Node-Red-Contesting-Dashboard/{{{payload}}}/package.json | grep -oP \"\\\"version\\\"\\: \\K.*\"",
+        "template": "curl -sL https://raw.githubusercontent.com/kylekrieg/Node-Red-Contesting-Dashboard/{{payload}}/package.json | grep -oP \"\\\"version\\\"\\: \\K.*\"",
         "output": "str",
         "x": 810,
         "y": 3180,
@@ -31182,8 +31196,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 750,
-        "y": 3280,
+        "x": 790,
+        "y": 3300,
         "wires": [
             [
                 "1ac8dad20963d18a"
@@ -31208,8 +31222,8 @@
         "className": "",
         "topic": "Error with Switch Please restart node-red manually",
         "name": "",
-        "x": 780,
-        "y": 3340,
+        "x": 820,
+        "y": 3360,
         "wires": []
     },
     {
@@ -31223,8 +31237,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 3200,
+        "x": 620,
+        "y": 3220,
         "wires": [
             [
                 "2df2850aa9ef955a",
@@ -31236,16 +31250,16 @@
         "id": "5f7e1de47f37afaf",
         "type": "exec",
         "z": "204548a488401a1b",
-        "command": "cd $HOME/.node-red/projects/Node-Red-Contesting-Dashboard && git branch --show-current || awk $1",
-        "addpay": "",
+        "command": "",
+        "addpay": "command",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
         "name": "Find Current Branch Name",
-        "x": 340,
-        "y": 3200,
+        "x": 400,
+        "y": 3220,
         "wires": [
             [
                 "484e6b528545ba05"
@@ -31258,15 +31272,15 @@
         "id": "24d322e1499e8cc4",
         "type": "function",
         "z": "204548a488401a1b",
-        "name": "brnach choice",
+        "name": "branch choice",
         "func": "\nglobal.set(\"branch\", msg.payload);\nif (msg.break==\"Break\"){\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 3280,
+        "x": 480,
+        "y": 3300,
         "wires": [
             [
                 "26b11bc96d8e246d"
@@ -31281,11 +31295,80 @@
         "links": [
             "3047a9ba16e10212"
         ],
-        "x": 115,
-        "y": 3140,
+        "x": 45,
+        "y": 3120,
+        "wires": [
+            [
+                "50a236881d5b5f33"
+            ]
+        ]
+    },
+    {
+        "id": "50a236881d5b5f33",
+        "type": "projectdir",
+        "z": "204548a488401a1b",
+        "name": "",
+        "x": 160,
+        "y": 3120,
+        "wires": [
+            [
+                "e2797892d97ce966",
+                "579e1ff6cb798356"
+            ]
+        ]
+    },
+    {
+        "id": "1e4a9d93b353f6a5",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 3060,
+        "wires": []
+    },
+    {
+        "id": "e2797892d97ce966",
+        "type": "template",
+        "z": "204548a488401a1b",
+        "name": "Find Branch",
+        "field": "command",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "grep -oP 'version\\\"\\: \\K.*' {{{projectdir}}}/package.json",
+        "output": "str",
+        "x": 410,
+        "y": 3120,
         "wires": [
             [
                 "53cb4e25bcce6124",
+                "1e4a9d93b353f6a5"
+            ]
+        ]
+    },
+    {
+        "id": "579e1ff6cb798356",
+        "type": "template",
+        "z": "204548a488401a1b",
+        "name": "Find Current Branch",
+        "field": "command",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "cd {{{projectdir}}}/ && git branch --show-current || awk $1",
+        "output": "str",
+        "x": 160,
+        "y": 3200,
+        "wires": [
+            [
                 "5f7e1de47f37afaf"
             ]
         ]
