@@ -387,9 +387,7 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159,
-        "w": 255,
-        "h": 482
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -413,9 +411,7 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -439,9 +435,7 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 482
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -466,9 +460,7 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 482
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -483,9 +475,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -500,9 +490,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -526,9 +514,7 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -552,9 +538,7 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -588,12 +572,11 @@
             "49c54051341840e3",
             "6ff8ddd581cb52e0",
             "978ad9a523f122ea",
-            "4b7abadd74993948"
+            "4b7abadd74993948",
+            "f436485ef593c7b6"
         ],
         "x": -6,
-        "y": 679,
-        "w": 2072,
-        "h": 302
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -618,9 +601,7 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019,
-        "w": 632,
-        "h": 262
+        "y": 1019
     },
     {
         "id": "c6a5789101548ba9",
@@ -635,9 +616,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -661,9 +640,7 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 281,
-        "h": 482
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -710,7 +687,9 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879
+        "y": 879,
+        "w": 1852,
+        "h": 462
     },
     {
         "id": "81692a3cb68d6cde",
@@ -742,7 +721,9 @@
             "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1485.5
+        "y": 1485.5,
+        "w": 2458,
+        "h": 969
     },
     {
         "id": "d48758cdf0c8991d",
@@ -802,7 +783,9 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 2232,
+        "h": 802
     },
     {
         "id": "f830dd821e0240f4",
@@ -818,9 +801,7 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "f01baabf4527b6e5",
@@ -967,7 +948,9 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 839
+        "y": 819,
+        "w": 1912,
+        "h": 622
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -994,7 +977,9 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79
+        "y": 79,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1031,7 +1016,9 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979
+        "y": 1979,
+        "w": 1272,
+        "h": 449.5
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1070,7 +1057,9 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5
+        "y": 1511.5,
+        "w": 1432,
+        "h": 449.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -6194,7 +6183,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total QSO Array Parse",
-        "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos)\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
+        "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\nlet totalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos);\n        node.status({fill: \"grey\",shape: \"dot\", text:totalnoqsos.toString()});\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6232,7 +6221,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total Points Array Parse",
-        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
+        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        node.status({ fill: \"grey\", shape: \"dot\", text: totalpoints.toString() });\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6355,7 +6344,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total Multi Array Parse",
-        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
+        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nnode.status({ fill: \"grey\", shape: \"dot\", text: totalmults.toString() });\n\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6920,7 +6909,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Get Spot Freq",
-        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\nnode.status({ text: x.toString() });\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6994,7 +6983,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Get Status",
-        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\nnode.status({text:x.toString()});\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7430,7 +7419,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Color Change",
-        "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
+        "func": "let color='grey';\nif (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    color='blue';\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    color= 'red';\n    msg.color = \"#FF0000\"\n}\nnode.status({ fill: color, shape: \"dot\" });\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7503,7 +7492,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Is TX?",
-        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\") {\n    msg.payload = \"True\";\n    node.status({ fill: \"green\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\nif (isTX == \"False\") {\n    msg.payload = \"False\";\n    node.status({ fill: \"red\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7523,7 +7512,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Is Focus?",
-        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\n",
+        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\") {\n    msg.payload = \"True\";\n    node.status({ fill: \"green\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\nif (isfocus == \"2\") {\n    msg.payload = \"False\";\n    node.status({ fill: \"red\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7755,7 +7744,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Add 0 to Countdown",
-        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\nnode.status({ fill: \"grey\", shape: \"dot\", text: msg.payload.toString() });\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7841,7 +7830,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Add 0 to Countdown",
-        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\nnode.status({fill:\"grey\",shape:\"dot\",text:msg.payload.toString()});\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7969,7 +7958,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Add 0 to Countdown",
-        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\nnode.status({ fill: \"grey\", shape: \"dot\", text: msg.payload.toString() });\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8603,7 +8592,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Set Exchange Color",
-        "func": "if (msg.payload.ismultiplier >= 1)\n{\n    msg.color = '#FF0000'\n}\nelse\n{\n    msg.color = '#FFFFFF'\n}\nreturn msg;\n\n",
+        "func": "let color='grey';\nif (msg.payload.ismultiplier >= 1)\n{\n    msg.color = '#FF0000';\n    color= 'red';\n}\nelse\n{\n    color= 'grey';\n    msg.color = '#FFFFFF'\n}\nnode.status({fill: color,shape: \"dot\"})\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8646,7 +8635,7 @@
         "z": "407d2b774fe67647",
         "g": "b5a72874a2f95ce4",
         "name": "Center Map to Lat/Lon",
-        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nif (msg.payload.name == \"Center Map\")\n{\n\nreturn {payload : {\"command\":{\"lat\":lat, \"lon\":lon, \"zoom\":4}}}\n}\n\n\n\n",
+        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nif (msg.payload.name == \"Center Map\")\n{\nreturn {payload : {\"command\":{\"lat\":lat, \"lon\":lon, \"zoom\":4}}}\n}\n\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8831,7 +8820,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Is Focus?",
-        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"True\";\n    node.status({ fill: \"green\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"False\";\n    node.status({ fill: \"red\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8851,7 +8840,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Is TX?",
-        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    node.status({fill:\"green\",shape:\"dot\",text:msg.payload});\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    node.status({fill:\"red\",shape:\"dot\",text:msg.payload});\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8943,7 +8932,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Color Change",
-        "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
+        "func": "let color=\"grey\";\nif (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    color = \"blue\";\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{  \n    color=\"red\";\n    msg.color = \"#FF0000\"\n}\nnode.status({fill:color,shape:\"dot\"});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9029,7 +9018,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Get Spot Freq",
-        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\nnode.status({text:x.toString()});\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9103,7 +9092,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Get Status",
-        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\nnode.status({text: x.toStriong()})\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10189,7 +10178,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif(msg.payload == undefined)\n{\n    msg.payload = 'n/a'\n    return msg;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"M/Hr | 1 Mult = \";\n    return msg;\n}",
+        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null;\nlet rate = null;\nmsg.label = null;\nlet length = null;\n\nif(msg.payload == undefined)\n{\n    msg.payload = 'n/a';\n    return msg;\n}\n\nif (category == \"multiop\")\n{\n    node.status({text: msg.payload[0].operator});\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" || category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = parseInt(rateperQ.toFixed(1));\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate;\n    \n    length = rate.toString().length + rateperQ.toString().length + 8;\n\n    msg.totallength = length;\n    node.status({ text: [rate,\" Q/HR\"].join(\"\") });\n    if (length <= 10)\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\";\n    }\n    else\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\";\n    }\n\n    msg.label = \"M/Hr | 1 Mult = \";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10247,7 +10236,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"Furthest QSO\";\n    return msg;\n}\n\n\n",
+        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    node.status({ fill: \"grey\", shape: \"dot\", text: [\"Mults:\", msg.payload[0].operator].join(\"\") });\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" || category == \"so1v\")\n{\n    node.status({fill:\"grey\",shape:\"ring\",text:[msg.payload[0].max_distance,distance.substring(0,1)].join(\"\")});\n    if (distance == \"miles\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"Furthest QSO\";\n    return msg;\n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10304,14 +10293,14 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Rate to Payload",
-        "func": "msg.payload = msg.rate\n\n//radiosport.live data\nglobal.set('#currentQrate',msg.payload)\n\nreturn msg;",
+        "func": "msg.payload = msg.rate\n\n//radiosport.live data\nglobal.set('#currentQrate',msg.payload)\nnode.status({fill:\"grey\",shape:\"dot\",text:msg.payload.toString()});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 3680,
-        "y": 880,
+        "y": 860,
         "wires": [
             [
                 "816d3f7e84dd1bf0"
@@ -26248,7 +26237,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Verify Valid Key Non-Expire",
-        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    node.status({fill:\"red\",shape:\"dot\",text:\"Expired\"});\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Active\"});\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -26770,7 +26759,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get TTL",
-        "func": "ttl = global.get('ttl')\n\nif (ttl == null)\n{\n    global.set('ttl',1200)\n    msg.payload = 1200\n}\n\nmsg.payload = ttl;\n\nreturn msg;",
+        "func": "let ttl = global.get('ttl')\n\nif (ttl == null)\n{\n    global.set('ttl',1200)\n    msg.payload = 1200\n}\n\nmsg.payload = ttl;\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -27288,7 +27277,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Verify Valid Key Non-Expire",
-        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    node.status({fill:\"red\",shape:\"dot\",text:\"Exipred\"});\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\nnode.status({fill:\"green\",shape:\"ring\",text:\"Active\"});\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29085,7 +29074,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Verify Valid Key Non-Expire",
-        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    node.status({fill:\"red\",shape:\"ring\",text:\"Expired\"});\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\nnode.status({fill:\"green\",shape:\"ring\",text:\"Active\"});\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29483,7 +29472,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Verify Valid Key Non-Expire",
-        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    node.status({fill:\"red\",shape:\"ring\",text:\"Expired\"});\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\nnode.status({fill:\"green\",shape:\"ring\",text:\"Active\"});\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29798,7 +29787,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Contest Callsign",
-        "func": "msg.payload = global.get('contestcallsign')\n\nreturn msg;",
+        "func": "msg.payload = global.get('contestcallsign')\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29817,7 +29806,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lookup Service",
-        "func": "msg.payload = global.get('dblookup')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"hamdb\";\n    return msg;\n}\n\nreturn msg;",
+        "func": "msg.payload = global.get('dblookup')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"hamdb\";\n}\n\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29921,7 +29910,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Mult-OP or SO2R",
-        "func": "msg.payload = global.get('category')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"multiop\";\n    return msg;\n}\n\nreturn msg;",
+        "func": "msg.payload = global.get('category')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"multiop\";\n}\nnode.status({text:msg.payload});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31425,7 +31414,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Store Lightning_Enable & Prepare Restart",
-        "func": "var lightningenable=msg.payload;\nglobal.set('lightningenable',lightningenable);\nif (lightningenable == true){\n    return null;\n}\nif (lightningenable == false){\n    return msg;\n}\n\n",
+        "func": "var lightningenable=msg.payload;\nglobal.set('lightningenable',lightningenable);\nif (lightningenable == true){\n    node.status({fill:\"green\",shape:\"dot\",text:\"Active\"});\n    return null;\n}\nif (lightningenable == false){\n    node.status({fill:\"red\",shape:\"dot\",text:\"Stopped\"});\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31473,7 +31462,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Status",
-        "func": "msg.payload = global.get('lightningenable')\n\nmsg.break = \"Break\";\nif (msg.payload == undefined)\n{\n    msg.payload = \"false\";\n    return msg;\n}\n\nreturn msg;",
+        "func": "msg.payload = global.get('lightningenable')\n\nmsg.break = \"Break\";\nif (msg.payload == undefined)\n{\n    msg.payload = false;\n    return msg;\n}\nnode.status({text: msg.payload.toString()});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31520,7 +31509,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "OK",
+                "v": "Yes",
                 "vt": "str"
             },
             {
@@ -31619,7 +31608,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Status",
-        "func": "msg.payload = global.get('lightningdistance')\n\nif (msg.payload == undefined)\n{\n    msg.payload=150;\n}\n\nreturn msg;",
+        "func": "msg.payload = global.get('lightningdistance')\n\nif (msg.payload == undefined)\n{\n    msg.payload=150;\n}\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31681,6 +31670,23 @@
             [],
             []
         ]
+    },
+    {
+        "id": "291dd36cf00544cb",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 1840,
+        "wires": []
     },
     {
         "id": "1f45eb9a.6f2614",
@@ -36194,7 +36200,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "c6e09ffb3c5a1ce6",
         "name": "getContest",
-        "func": "let contestname = global.get('contestname');\nmsg.payload = {contestname: contestname};\nreturn msg;",
+        "func": "let contestname = global.get('contestname');\nmsg.payload = {contestname: contestname};\nnode.status({fill:\"grey\",shape:\"dot\",text: msg.payload.contestname.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -37304,7 +37310,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -37371,14 +37377,14 @@
         "z": "b73cc2bb5f424b69",
         "g": "28877ac600fea8b9",
         "name": "getKdx",
-        "func": "var kdx = parseFloat(msg.payload.solar.solardata[0].kindex[0]);\nmsg.topic = \"kdx\";\nmsg.payload = kdx;\nreturn msg;",
+        "func": "var kdx = parseFloat(msg.payload.solar.solardata[0].kindex[0]);\nmsg.topic = \"kdx\";\nmsg.payload = kdx;\nnode.status({fill:\"grey\",shape:\"dot\",text:kdx.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 1120,
+        "x": 620,
+        "y": 1100,
         "wires": [
             [
                 "20a1b3e47e825d5b"
@@ -37392,7 +37398,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "28877ac600fea8b9",
         "name": "getSFi",
-        "func": "var sfi = parseFloat(msg.payload.solar.solardata[0].solarflux[0]);\nmsg.topic = \"sfi\";\nmsg.payload = sfi;\nreturn msg;\n",
+        "func": "var sfi = parseFloat(msg.payload.solar.solardata[0].solarflux[0]);\nmsg.topic = \"sfi\";\nmsg.payload = sfi;\nnode.status({fill:\"grey\",shape:\"dot\",text:sfi.toString()});\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -37413,14 +37419,14 @@
         "z": "b73cc2bb5f424b69",
         "g": "28877ac600fea8b9",
         "name": "getAindex",
-        "func": "var Aindex = parseFloat(msg.payload.solar.solardata[0].aindex);\nmsg.topic =\"Aindex\";\nmsg.payload = Aindex;\nreturn msg;",
+        "func": "var Aindex = parseFloat(msg.payload.solar.solardata[0].aindex);\nmsg.topic =\"Aindex\";\nmsg.payload = Aindex;\nnode.status({fill:\"grey\",shape:\"dot\",text:Aindex.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 620,
-        "y": 1200,
+        "y": 1220,
         "wires": [
             [
                 "324101084f63a83e"
@@ -38650,7 +38656,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "Get Lighting Enable ",
-        "func": "var lightning_enable = global.get(\"lightningenable\");\nif (lightning_enable == true){\n  msg.payload = '{\"a\":767}';\n  msg.enabled = true;\n  node.status({ fill: \"green\", shape: \"dot\", text: \"On\" });}\nif (lightning_enable == false) {\n  node.status({ fill: \"red\", shape: \"dot\", text: \"Off\" });\n  msg.enabled = false;\n  msg.payload = '{\"send\":false}';\n}\nreturn msg;",
+        "func": "var lightning_enable = global.get(\"lightningenable\");\nif (lightning_enable == true){\n  msg.payload = '{\"a\":767}';\n  msg.enabled = true;\n  node.status({ fill: \"green\", shape: \"dot\", text: \"On\" });}\nif (lightning_enable == false || lightning_enable == undefined) {\n  node.status({ fill: \"red\", shape: \"dot\", text: \"Off\" });\n  msg.enabled = false;\n  msg.payload = '{\"send\":false}';\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -38665,7 +38671,8 @@
         "y": 840,
         "wires": [
             [
-                "4b7abadd74993948"
+                "4b7abadd74993948",
+                "2d5edcaf1c0997bc"
             ]
         ]
     },
@@ -38768,6 +38775,34 @@
         "x": 1630,
         "y": 920,
         "wires": []
+    },
+    {
+        "id": "f436485ef593c7b6",
+        "type": "inject",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 840,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "1e2b62f78c981761",
