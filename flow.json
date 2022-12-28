@@ -387,7 +387,9 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 255,
+        "h": 482
     },
     {
         "id": "52886121c9629e0b",
@@ -411,7 +413,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -435,7 +439,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -460,7 +466,9 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 482
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -475,7 +483,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -490,7 +500,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -514,7 +526,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -538,7 +552,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -550,8 +566,6 @@
         },
         "nodes": [
             "6c3aabd78a8dbe6b",
-            "2570533c0ddd961a",
-            "e8923d3119f9de10",
             "bb38d5607155fdac",
             "d769911bfcaff494",
             "e733af43f8c28c46",
@@ -564,7 +578,6 @@
             "cb344aa1d31a6502",
             "c31ad36e83f990dd",
             "2d5edcaf1c0997bc",
-            "393223b190ba95f3",
             "35549ac0e22e44ff",
             "40b13d784b111566",
             "e6fb0ef92036fc12",
@@ -572,10 +585,15 @@
             "2447aed577add90a",
             "33b22679735f2e3c",
             "53becfe3676d44bd",
-            "49c54051341840e3"
+            "49c54051341840e3",
+            "6ff8ddd581cb52e0",
+            "978ad9a523f122ea",
+            "4b7abadd74993948"
         ],
-        "x": 34,
-        "y": 679
+        "x": -6,
+        "y": 679,
+        "w": 2072,
+        "h": 302
     },
     {
         "id": "28877ac600fea8b9",
@@ -600,7 +618,9 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -615,7 +635,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -639,7 +661,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -686,9 +710,7 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879,
-        "w": 1852,
-        "h": 462
+        "y": 879
     },
     {
         "id": "81692a3cb68d6cde",
@@ -720,9 +742,7 @@
             "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1485.5,
-        "w": 2458,
-        "h": 969
+        "y": 1485.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -782,9 +802,7 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": 19
     },
     {
         "id": "f830dd821e0240f4",
@@ -800,7 +818,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -947,9 +967,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 839,
-        "w": 1912,
-        "h": 602
+        "y": 839
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -976,9 +994,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79,
-        "w": 1032,
-        "h": 162
+        "y": 79
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1015,9 +1031,7 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979,
-        "w": 1272,
-        "h": 449.5
+        "y": 1979
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1056,9 +1070,7 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5,
-        "w": 1432,
-        "h": 449.5
+        "y": 1511.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -2153,7 +2165,8 @@
         "path": "wss://ws7.blitzortung.org/",
         "tls": "621bc3fe.d747dc",
         "wholemsg": "false",
-        "hb": "0"
+        "hb": "0",
+        "subprotocol": ""
     },
     {
         "id": "6e89e85d75f82df1",
@@ -26805,7 +26818,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 3,
+        "order": 4,
         "width": 6,
         "height": 1,
         "name": "3 Current TTL Icon Value",
@@ -26824,7 +26837,7 @@
         "name": "4 QSO Map Icon TTL Form",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 4,
+        "order": 5,
         "width": 6,
         "height": 1,
         "options": [
@@ -26878,7 +26891,7 @@
         "name": "2 Lat & Lon Input",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "options": [
@@ -27012,7 +27025,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "name": "1 Current Lat & Lon",
@@ -27105,7 +27118,7 @@
         "label": "Map Labels On/Off",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 5,
+        "order": 6,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -27298,7 +27311,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "54b59a095746559b",
-        "order": 7,
+        "order": 8,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -29691,7 +29704,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 6,
+        "order": 7,
         "width": 6,
         "height": 1,
         "name": "6 Map Label Type Text",
@@ -31322,7 +31335,7 @@
         "type": "debug",
         "z": "204548a488401a1b",
         "name": "debug 3",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31371,6 +31384,302 @@
             [
                 "5f7e1de47f37afaf"
             ]
+        ]
+    },
+    {
+        "id": "b8b2a1e40a949acb",
+        "type": "ui_switch",
+        "z": "204548a488401a1b",
+        "name": "Lightning Enable",
+        "label": "Lightning Info Enable",
+        "tooltip": "",
+        "group": "4ef10134c121cf09",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 490,
+        "y": 1900,
+        "wires": [
+            [
+                "252f221551638f5f"
+            ]
+        ]
+    },
+    {
+        "id": "1a031e0756e0c94e",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store Lightning_Enable & Prepare Restart",
+        "func": "var lightningenable=msg.payload;\nglobal.set('lightningenable',lightningenable);\nif (lightningenable == true){\n    return null;\n}\nif (lightningenable == false){\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 1900,
+        "wires": [
+            [
+                "303543e9b873784a"
+            ]
+        ]
+    },
+    {
+        "id": "f6aa9aeccf8d6b42",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1900,
+        "wires": [
+            [
+                "7daab0fca820c2f7"
+            ]
+        ]
+    },
+    {
+        "id": "7daab0fca820c2f7",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Status",
+        "func": "msg.payload = global.get('lightningenable')\n\nmsg.break = \"Break\";\nif (msg.payload == undefined)\n{\n    msg.payload = \"false\";\n    return msg;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1900,
+        "wires": [
+            [
+                "b8b2a1e40a949acb"
+            ]
+        ]
+    },
+    {
+        "id": "8dd9a40b981882b4",
+        "type": "ui_toast",
+        "z": "204548a488401a1b",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Yes",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "Your are wanting to change lightning detection?  This will cause to restart node-red.",
+        "name": "Confirm before Reload",
+        "x": 920,
+        "y": 1900,
+        "wires": [
+            [
+                "000554e8d9a4cf45"
+            ]
+        ]
+    },
+    {
+        "id": "000554e8d9a4cf45",
+        "type": "switch",
+        "z": "204548a488401a1b",
+        "name": "OK?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1090,
+        "y": 1900,
+        "wires": [
+            [
+                "1a031e0756e0c94e"
+            ],
+            [
+                "7daab0fca820c2f7"
+            ]
+        ]
+    },
+    {
+        "id": "027e54421645204a",
+        "type": "ui_slider",
+        "z": "204548a488401a1b",
+        "name": "",
+        "label": "Lightning Circle",
+        "tooltip": "distance from center location(mi)",
+        "group": "4ef10134c121cf09",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "250",
+        "step": "2",
+        "className": "",
+        "x": 480,
+        "y": 1960,
+        "wires": [
+            [
+                "7c0fbc70f3e7550f"
+            ]
+        ]
+    },
+    {
+        "id": "78ead752e6645308",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1960,
+        "wires": [
+            [
+                "cbdf930baf83fbda"
+            ]
+        ]
+    },
+    {
+        "id": "7c0fbc70f3e7550f",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store Lightning_Distance",
+        "func": "var lightningdistance=msg.payload;\nglobal.set('lightningdistance',lightningdistance);\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cbdf930baf83fbda",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Status",
+        "func": "msg.payload = global.get('lightningdistance')\n\nif (msg.payload == undefined)\n{\n    msg.payload=150;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1960,
+        "wires": [
+            [
+                "027e54421645204a"
+            ]
+        ]
+    },
+    {
+        "id": "3f640262b2e246b8",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Lightning Config",
+        "info": "",
+        "x": 180,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "252f221551638f5f",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Inital Prompt Stop",
+        "func": "if(msg.break == \"Break\"){\n    return null;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1900,
+        "wires": [
+            [
+                "8dd9a40b981882b4"
+            ]
+        ]
+    },
+    {
+        "id": "303543e9b873784a",
+        "type": "exec",
+        "z": "204548a488401a1b",
+        "command": "node-red-stop && node-red-start",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Restart Node Red",
+        "x": 1610,
+        "y": 1900,
+        "wires": [
+            [],
+            [],
+            []
         ]
     },
     {
@@ -34855,6 +35164,11 @@
             {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "break",
+                "v": "Break",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -35094,7 +35408,7 @@
         "y": 580,
         "wires": [
             [
-                "3fc6b038acd1dd64"
+                "d8f0267e2836c239"
             ]
         ]
     },
@@ -35586,6 +35900,41 @@
         "x": 1680,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "94c74a1f43913a90",
+        "type": "link in",
+        "z": "3e52b5d54104d7f0",
+        "name": "Reboot",
+        "links": [
+            "a799711552a6b607"
+        ],
+        "x": 415,
+        "y": 940,
+        "wires": [
+            [
+                "b3e878177c786d3c"
+            ]
+        ]
+    },
+    {
+        "id": "d8f0267e2836c239",
+        "type": "function",
+        "z": "3e52b5d54104d7f0",
+        "name": "If Startup Ignore",
+        "func": "if (msg.break == \"Break\"){\n    return null;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 580,
+        "wires": [
+            [
+                "3fc6b038acd1dd64"
+            ]
+        ]
     },
     {
         "id": "bb1f3c069392c7e7",
@@ -36569,38 +36918,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 880,
-        "wires": [
-            [
-                "393223b190ba95f3"
-            ]
-        ]
-    },
-    {
-        "id": "2570533c0ddd961a",
-        "type": "websocket out",
-        "z": "b73cc2bb5f424b69",
-        "g": "7a5512b5a3f6e8ba",
-        "name": "",
-        "server": "",
-        "client": "bea4993f.85f4d8",
-        "x": 830,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "e8923d3119f9de10",
-        "type": "websocket in",
-        "z": "b73cc2bb5f424b69",
-        "g": "7a5512b5a3f6e8ba",
-        "name": "",
-        "server": "",
-        "client": "bea4993f.85f4d8",
-        "x": 180,
         "y": 840,
         "wires": [
             [
-                "bb38d5607155fdac"
+                "6ff8ddd581cb52e0"
             ]
         ]
     },
@@ -36616,8 +36937,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 840,
+        "x": 420,
+        "y": 780,
         "wires": [
             [
                 "e0a0fa6ae9f41024"
@@ -36637,7 +36958,7 @@
         "finalize": "",
         "libs": [],
         "x": 1610,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "b5b388156ec5eca9"
@@ -36654,7 +36975,7 @@
         "voice": "Microsoft Zira - English (United States)",
         "always": true,
         "x": 1980,
-        "y": 720,
+        "y": 740,
         "wires": []
     },
     {
@@ -36666,8 +36987,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 640,
-        "y": 840,
+        "x": 660,
+        "y": 780,
         "wires": [
             [
                 "64ce0bfa9e1942bb"
@@ -36687,7 +37008,7 @@
         "finalize": "",
         "libs": [],
         "x": 850,
-        "y": 840,
+        "y": 780,
         "wires": [
             [
                 "3ba91bda918482b2",
@@ -36771,7 +37092,7 @@
         "payload": "< 3 Km",
         "payloadType": "str",
         "x": 1400,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "d769911bfcaff494",
@@ -36787,7 +37108,7 @@
         "name": "Readme",
         "info": "# Blizuntorg Lighting Detector\n\nDisplay lighting strike in Km \nAny strike >= 10 Km will show Green Lighting Arrow\nAny strike < 10 Km will show Red Lightning Arrow\n\n## **setDistance**\nTo change distance modify the setDistance function node.  You will need to change the value of n to whatever distance you want.   Also you will need to change the payload string to match the new distance.  Example below shows the value set to 10 Km \n\n`if(n <= 10) {\n // return distance to strike if strike is in defined radius\n return {payload: '<' + n + ' Km', color: \"#c40606\", topic: 'lightning'};\n} else\n return  {payload: '> 10 Km', color: \"#14f00c\",};`\n \n## **Ui Node**\nThere are 2 Ui Nodes in the template.  If you only have one dashboard page you can delete the one on the right.  If you have more than 2 dashboard pages you will need to copy and add the Ui Nodes and chain the output from the preceding one to the in input of the next Ui node.  \n\nYou will need to set the Ui Node to be in one group per dashboard page in order for those pages to update.   \n\n## **Header Ui**\nThe header Ui has 2 css div elements.  Spacing of the elements is tricky and may need adjusted depending on what else you have on your toolbar.  You can edit the style.paddingLeft or style.margin to adjust.   Make a copy of the Ui incase you need to fall back to the default.  \n\n## **Audible**\nIn order for the audiable to work you will need to click on the web page or you will see an error-not allowed msg on the node in the editor.   Currently the text is set to 'Warning Lighting Alert'  To change edit the pushAudible function",
         "x": 200,
-        "y": 800,
+        "y": 720,
         "wires": []
     },
     {
@@ -36902,7 +37223,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1800,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "e733af43f8c28c46"
@@ -36920,7 +37241,7 @@
             "e35b27050e23f4fe"
         ],
         "x": 1775,
-        "y": 840,
+        "y": 860,
         "wires": []
     },
     {
@@ -36953,7 +37274,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 920,
+        "y": 940,
         "wires": [
             []
         ]
@@ -36970,7 +37291,7 @@
         ],
         "uncaught": false,
         "x": 590,
-        "y": 920,
+        "y": 940,
         "wires": [
             [
                 "2d5edcaf1c0997bc"
@@ -36983,15 +37304,16 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 750,
-        "y": 920,
+        "x": 730,
+        "y": 940,
         "wires": []
     },
     {
@@ -37913,34 +38235,14 @@
         ]
     },
     {
-        "id": "393223b190ba95f3",
-        "type": "function",
-        "z": "b73cc2bb5f424b69",
-        "g": "7a5512b5a3f6e8ba",
-        "name": "Inject A = 542",
-        "func": "return {payload: '{ \"a\": 542 }'};\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 560,
-        "y": 880,
-        "wires": [
-            [
-                "2570533c0ddd961a"
-            ]
-        ]
-    },
-    {
         "id": "35549ac0e22e44ff",
         "type": "ui_ui_control",
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "",
         "events": "connect",
-        "x": 140,
-        "y": 920,
+        "x": 100,
+        "y": 880,
         "wires": [
             [
                 "40b13d784b111566"
@@ -37965,11 +38267,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 360,
-        "y": 920,
+        "x": 240,
+        "y": 880,
         "wires": [
             [
-                "393223b190ba95f3"
+                "6ff8ddd581cb52e0"
             ]
         ]
     },
@@ -37985,8 +38287,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1550,
-        "y": 820,
+        "x": 1530,
+        "y": 800,
         "wires": [
             [
                 "d34ab878fcdc07ae"
@@ -37998,26 +38300,26 @@
         "type": "switch",
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
-        "name": "Lightning < 150 Miles",
+        "name": "Lightning based on options",
         "property": "payload.strike_distance",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "lt",
-                "v": "150",
-                "vt": "num"
+                "v": "lightningdistance",
+                "vt": "global"
             },
             {
                 "t": "gte",
-                "v": "150",
-                "vt": "num"
+                "v": "lightningdistance",
+                "vt": "global"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1060,
-        "y": 840,
+        "x": 1080,
+        "y": 780,
         "wires": [
             [
                 "e6fb0ef92036fc12",
@@ -38047,7 +38349,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1320,
-        "y": 860,
+        "y": 840,
         "wires": [
             [
                 "33b22679735f2e3c"
@@ -38066,8 +38368,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1560,
-        "y": 860,
+        "x": 1540,
+        "y": 840,
         "wires": [
             [
                 "d34ab878fcdc07ae"
@@ -38083,13 +38385,13 @@
         "active": false,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
+        "tostatus": true,
         "complete": "true",
         "targetType": "full",
         "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 780,
+        "statusType": "counter",
+        "x": 990,
+        "y": 720,
         "wires": []
     },
     {
@@ -38106,8 +38408,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1290,
-        "y": 780,
+        "x": 1210,
+        "y": 720,
         "wires": []
     },
     {
@@ -38341,6 +38643,131 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6ff8ddd581cb52e0",
+        "type": "function",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "Get Lighting Enable ",
+        "func": "var lightning_enable = global.get(\"lightningenable\");\nif (lightning_enable == true){\n  msg.payload = '{\"a\":767}';\n  msg.enabled = true;\n  node.status({ fill: \"green\", shape: \"dot\", text: \"On\" });}\nif (lightning_enable == false) {\n  node.status({ fill: \"red\", shape: \"dot\", text: \"Off\" });\n  msg.enabled = false;\n  msg.payload = '{\"send\":false}';\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "WebSocket",
+                "module": "ws"
+            }
+        ],
+        "x": 430,
+        "y": 840,
+        "wires": [
+            [
+                "4b7abadd74993948"
+            ]
+        ]
+    },
+    {
+        "id": "978ad9a523f122ea",
+        "type": "websocket in",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "",
+        "server": "",
+        "client": "bea4993f.85f4d8",
+        "x": 140,
+        "y": 780,
+        "wires": [
+            [
+                "bb38d5607155fdac"
+            ]
+        ]
+    },
+    {
+        "id": "4b7abadd74993948",
+        "type": "websocket out",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "",
+        "server": "",
+        "client": "bea4993f.85f4d8",
+        "x": 710,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "fbf6075bde5a0fcb",
+        "type": "inject",
+        "z": "b73cc2bb5f424b69",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1280,
+        "y": 920,
+        "wires": [
+            [
+                "dce7239f4f1620ec"
+            ]
+        ]
+    },
+    {
+        "id": "dce7239f4f1620ec",
+        "type": "function",
+        "z": "b73cc2bb5f424b69",
+        "d": true,
+        "name": "",
+        "func": "const ws = new WebSocket('wss://demo.piesocket.com/v3/channel_1?api_key=oCdCMcMPQpbvNjUIzqtvF1d2X2okWpDQj4AwARJuAgtjhzKxVEjQU6IdCjwm&notify_self');\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Connected\" });\n// ws.onopen = function () {\n//     console.log('WebSocket Client Connected');\n//     ws.send('Hi this is web client.');\n// };\nws.onmessage = function (e) {\n  node.warn({ payload: e.data });\n\n  if (e.data.startsWith(\"cpu\")) {\n    node.warn(\"Msg received. Closing Websocket\");\n    node.status({ fill: \"red\", shape: \"dot\", text: \"Disconnected\" });\n    ws.close();\n  }\n\n};\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "WebSocket",
+                "module": "ws"
+            }
+        ],
+        "x": 1450,
+        "y": 920,
+        "wires": [
+            [
+                "1f58cc838ce64580"
+            ]
+        ]
+    },
+    {
+        "id": "1f58cc838ce64580",
+        "type": "debug",
+        "z": "b73cc2bb5f424b69",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 920,
+        "wires": []
     },
     {
         "id": "1e2b62f78c981761",
