@@ -710,7 +710,9 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879
+        "y": 879,
+        "w": 1852,
+        "h": 462
     },
     {
         "id": "81692a3cb68d6cde",
@@ -742,7 +744,9 @@
             "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1485.5
+        "y": 1485.5,
+        "w": 2458,
+        "h": 969
     },
     {
         "id": "d48758cdf0c8991d",
@@ -802,7 +806,9 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 2232,
+        "h": 802
     },
     {
         "id": "f830dd821e0240f4",
@@ -967,7 +973,9 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 622
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -994,7 +1002,9 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79
+        "y": 79,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1031,7 +1041,9 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979
+        "y": 1979,
+        "w": 1272,
+        "h": 449.5
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1070,7 +1082,9 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5
+        "y": 1511.5,
+        "w": 1432,
+        "h": 449.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -31548,7 +31562,7 @@
         "z": "204548a488401a1b",
         "name": "",
         "label": "Lightning Circle",
-        "tooltip": "distance from center location(mi)",
+        "tooltip": "distance from center location(km)",
         "group": "4ef10134c121cf09",
         "order": 17,
         "width": 0,
@@ -31558,8 +31572,8 @@
         "topic": "topic",
         "topicType": "msg",
         "min": 0,
-        "max": "250",
-        "step": "2",
+        "max": "300",
+        "step": "5",
         "className": "",
         "x": 480,
         "y": 1960,
@@ -37078,7 +37092,8 @@
         "y": 440,
         "wires": [
             [
-                "431c69a2758e9d6f"
+                "431c69a2758e9d6f",
+                "4c9b1fed3cc98c83"
             ]
         ]
     },
@@ -38380,7 +38395,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "Set Icon Color Green",
-        "func": "let n = msg.payload.strike_distance\nreturn  {payload: '> 10 Km', color: \"#14f00c\",};\n",
+        "func": "let n = global.get(\"lightningdistance\");\nreturn  {payload: '>'+ n + 'KM', color: \"#14f00c\",};\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -38418,14 +38433,14 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
+        "tostatus": true,
         "complete": "true",
         "targetType": "full",
         "statusVal": "",
-        "statusType": "auto",
+        "statusType": "counter",
         "x": 1210,
         "y": 720,
         "wires": []
@@ -38781,6 +38796,23 @@
         "statusType": "auto",
         "x": 1630,
         "y": 920,
+        "wires": []
+    },
+    {
+        "id": "4c9b1fed3cc98c83",
+        "type": "debug",
+        "z": "b73cc2bb5f424b69",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 120,
         "wires": []
     },
     {
