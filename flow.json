@@ -710,9 +710,7 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879,
-        "w": 1852,
-        "h": 462
+        "y": 879
     },
     {
         "id": "81692a3cb68d6cde",
@@ -744,9 +742,7 @@
             "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1485.5,
-        "w": 2458,
-        "h": 969
+        "y": 1485.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -806,9 +802,7 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": 19
     },
     {
         "id": "f830dd821e0240f4",
@@ -872,9 +866,7 @@
             "21fe16ca5cbfc06b"
         ],
         "x": 134,
-        "y": 39,
-        "w": 1822,
-        "h": 442
+        "y": 39
     },
     {
         "id": "6c1673638929b26d",
@@ -913,9 +905,7 @@
             "5c60f3c47791458b"
         ],
         "x": 94,
-        "y": 659,
-        "w": 1792,
-        "h": 322
+        "y": 659
     },
     {
         "id": "26cf0678322d1bb6",
@@ -977,9 +967,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819,
-        "w": 1912,
-        "h": 622
+        "y": 819
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -1006,9 +994,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79,
-        "w": 1032,
-        "h": 162
+        "y": 79
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1045,9 +1031,7 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979,
-        "w": 1272,
-        "h": 449.5
+        "y": 1979
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1086,9 +1070,7 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5,
-        "w": 1432,
-        "h": 449.5
+        "y": 1511.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -31443,7 +31425,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Store Lightning_Enable & Prepare Restart",
-        "func": "var lightningenable;\nglobal.get('lightningenable',lightningenable);\nif (lightningenable == true){\n    global.set('lightningenable',false);\n    node.status({fill:\"red\",shape:\"dot\",text:\"Stopped\"});\n    return msg;\n}\nif (lightningenable == false || lightningenable == undefined){\n    global.set('lightningenable',true)\n    node.status({fill:\"green\",shape:\"dot\",text:\"Active\"});\n    return null;\n}\n\n",
+        "func": "var lightningenable;\nlightningenable = global.get('lightningenable');\nif (lightningenable == true){\n    global.set('lightningenable',false);\n    node.status({fill:\"red\",shape:\"dot\",text:\"Stopped\"});\n    return msg;\n}\nif (lightningenable == false || lightningenable == undefined){\n    global.set('lightningenable',true)\n    node.status({fill:\"green\",shape:\"dot\",text:\"Active\"});\n    return null;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31685,7 +31667,7 @@
         "id": "303543e9b873784a",
         "type": "exec",
         "z": "204548a488401a1b",
-        "command": "node-red-stop && node-red-start",
+        "command": "node-red-restart",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
