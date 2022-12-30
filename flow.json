@@ -387,7 +387,9 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 255,
+        "h": 482
     },
     {
         "id": "52886121c9629e0b",
@@ -411,7 +413,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -435,7 +439,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -460,7 +466,9 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 482
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -475,7 +483,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -490,7 +500,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -514,7 +526,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -538,7 +552,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -550,8 +566,6 @@
         },
         "nodes": [
             "6c3aabd78a8dbe6b",
-            "2570533c0ddd961a",
-            "e8923d3119f9de10",
             "bb38d5607155fdac",
             "d769911bfcaff494",
             "e733af43f8c28c46",
@@ -564,7 +578,6 @@
             "cb344aa1d31a6502",
             "c31ad36e83f990dd",
             "2d5edcaf1c0997bc",
-            "393223b190ba95f3",
             "35549ac0e22e44ff",
             "40b13d784b111566",
             "e6fb0ef92036fc12",
@@ -572,10 +585,15 @@
             "2447aed577add90a",
             "33b22679735f2e3c",
             "53becfe3676d44bd",
-            "49c54051341840e3"
+            "49c54051341840e3",
+            "6ff8ddd581cb52e0",
+            "978ad9a523f122ea",
+            "4b7abadd74993948"
         ],
-        "x": 34,
-        "y": 679
+        "x": -6,
+        "y": 679,
+        "w": 2072,
+        "h": 302
     },
     {
         "id": "28877ac600fea8b9",
@@ -599,8 +617,10 @@
             "41b71b195d25cc36",
             "324101084f63a83e"
         ],
-        "x": 224,
-        "y": 1019
+        "x": 234,
+        "y": 1019,
+        "w": 622,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -615,7 +635,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -639,7 +661,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -686,9 +710,7 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879,
-        "w": 1852,
-        "h": 462
+        "y": 879
     },
     {
         "id": "81692a3cb68d6cde",
@@ -720,9 +742,7 @@
             "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1485.5,
-        "w": 2458,
-        "h": 969
+        "y": 1485.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -782,9 +802,7 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": 19
     },
     {
         "id": "f830dd821e0240f4",
@@ -800,7 +818,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -846,7 +866,9 @@
             "21fe16ca5cbfc06b"
         ],
         "x": 134,
-        "y": 39
+        "y": 39,
+        "w": 1822,
+        "h": 442
     },
     {
         "id": "6c1673638929b26d",
@@ -885,7 +907,9 @@
             "5c60f3c47791458b"
         ],
         "x": 94,
-        "y": 659
+        "y": 659,
+        "w": 1792,
+        "h": 322
     },
     {
         "id": "26cf0678322d1bb6",
@@ -947,9 +971,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 839,
-        "w": 1912,
-        "h": 602
+        "y": 819
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -976,9 +998,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79,
-        "w": 1032,
-        "h": 162
+        "y": 79
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1015,9 +1035,7 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979,
-        "w": 1272,
-        "h": 449.5
+        "y": 1979
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1056,9 +1074,7 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5,
-        "w": 1432,
-        "h": 449.5
+        "y": 1511.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -2153,7 +2169,8 @@
         "path": "wss://ws7.blitzortung.org/",
         "tls": "621bc3fe.d747dc",
         "wholemsg": "false",
-        "hb": "0"
+        "hb": "0",
+        "subprotocol": ""
     },
     {
         "id": "6e89e85d75f82df1",
@@ -6181,7 +6198,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total QSO Array Parse",
-        "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\ntotalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos)\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
+        "func": "//if (msg.payload.dynamicresults.score == \"0\")\n//{\n//    return {\"payload\":{totalnoqsos:0}};\n//}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].qso.length\nlet totalnoqsos = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].qso.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].qso[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].qso[i].$.mode == \"ALL\")\n    {\n        totalnoqsos = parseInt(msg.payload.dynamicresults.breakdown[0].qso[i]._);\n        flow.set('totalnoqsos',totalnoqsos);\n        node.status({fill: \"grey\",shape: \"dot\", text:totalnoqsos.toString()});\n        return {\"payload\":{totalnoqsos:totalnoqsos}};\n        \n    }\n    \n}\n\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6219,7 +6236,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total Points Array Parse",
-        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
+        "func": "if (msg.payload.dynamicresults.score == \"0\")\n{\n    flow.set('totalpoints',0)\n    return {\"payload\":{totalpoints:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].point.length\nlet totalpoints = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].point.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].point[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].point[i].$.mode == \"ALL\")\n    {\n        totalpoints = parseInt(msg.payload.dynamicresults.breakdown[0].point[i]._);\n        flow.set('totalpoints',totalpoints);\n        node.status({ fill: \"grey\", shape: \"dot\", text: totalpoints.toString() });\n        return {\"payload\":{totalpoints:totalpoints}};\n        \n    }\n    \n}\n\n\nreturn;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6342,7 +6359,7 @@
         "z": "407d2b774fe67647",
         "g": "4f4b9f0c82968b60",
         "name": "Total Multi Array Parse",
-        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
+        "func": "if (msg.payload.dynamicresults.breakdown[0].mult == undefined)\n{\n    flow.set('totalmults',null)\n    return {\"payload\":{totalmults:0}};\n}\n\nlet arraylength = msg.payload.dynamicresults.breakdown[0].mult.length\nlet totalmults = 0;\n\nfor (let i=0; i < msg.payload.dynamicresults.breakdown[0].mult.length; i++)\n{\n    \n    if (msg.payload.dynamicresults.breakdown[0].mult[i].$.band == \"total\" && msg.payload.dynamicresults.breakdown[0].mult[i].$.mode == \"ALL\")\n    {\n        totalmults = parseInt(msg.payload.dynamicresults.breakdown[0].mult[i]._)\n//        totalmults = totalmults + total;\n        break;\n    }\n    \n}\nflow.set('totalmults',totalmults);\nnode.status({ fill: \"grey\", shape: \"dot\", text: totalmults.toString() });\n\nreturn {\"payload\":{totalmults:totalmults}};\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6907,7 +6924,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Get Spot Freq",
-        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\nnode.status({ text: x.toString() });\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6981,7 +6998,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Get Status",
-        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\nnode.status({text:x.toString()});\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7417,7 +7434,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Color Change",
-        "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
+        "func": "let color='grey';\nif (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    color='blue';\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    color= 'red';\n    msg.color = \"#FF0000\"\n}\nnode.status({ fill: color, shape: \"dot\" });\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7490,7 +7507,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Is TX?",
-        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\") {\n    msg.payload = \"True\";\n    node.status({ fill: \"green\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\nif (isTX == \"False\") {\n    msg.payload = \"False\";\n    node.status({ fill: \"red\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7510,7 +7527,7 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "Is Focus?",
-        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\n",
+        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\") {\n    msg.payload = \"True\";\n    node.status({ fill: \"green\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\nif (isfocus == \"2\") {\n    msg.payload = \"False\";\n    node.status({ fill: \"red\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7742,7 +7759,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Add 0 to Countdown",
-        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\nnode.status({ fill: \"grey\", shape: \"dot\", text: msg.payload.toString() });\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7828,7 +7845,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Add 0 to Countdown",
-        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\nnode.status({fill:\"grey\",shape:\"dot\",text:msg.payload.toString()});\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7956,7 +7973,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Add 0 to Countdown",
-        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\n\nreturn msg;\n",
+        "func": "//msg.payload = spot.hours + ':' + spot.minutes + ':' + spot.seconds;\nvar min = 0;\nvar sec = 0;\n\nif (msg.elapsed.time.minutes <= 9)\n{\n    min = '0'+ msg.elapsed.time.minutes;\n}\nelse\n{\n    min = msg.elapsed.time.minutes;\n}\n\nif (msg.elapsed.time.seconds <= 9)\n{\n    sec = '0'+ msg.elapsed.time.seconds;\n}\nelse\n{\n    sec = msg.elapsed.time.seconds;\n}\n\n\nmsg.payload = msg.elapsed.time.hours + ':' + min + ':'+ sec\nnode.status({ fill: \"grey\", shape: \"dot\", text: msg.payload.toString() });\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8590,7 +8607,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "Set Exchange Color",
-        "func": "if (msg.payload.ismultiplier >= 1)\n{\n    msg.color = '#FF0000'\n}\nelse\n{\n    msg.color = '#FFFFFF'\n}\nreturn msg;\n\n",
+        "func": "let color='grey';\nif (msg.payload.ismultiplier >= 1)\n{\n    msg.color = '#FF0000';\n    color= 'red';\n}\nelse\n{\n    color= 'grey';\n    msg.color = '#FFFFFF'\n}\nnode.status({fill: color,shape: \"dot\"})\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8633,7 +8650,7 @@
         "z": "407d2b774fe67647",
         "g": "b5a72874a2f95ce4",
         "name": "Center Map to Lat/Lon",
-        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nif (msg.payload.name == \"Center Map\")\n{\n\nreturn {payload : {\"command\":{\"lat\":lat, \"lon\":lon, \"zoom\":4}}}\n}\n\n\n\n",
+        "func": "let lat = global.get('homelat');\nlet lon = global.get('homelon');\n\nif (msg.payload.name == \"Center Map\")\n{\nreturn {payload : {\"command\":{\"lat\":lat, \"lon\":lon, \"zoom\":4}}}\n}\n\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8818,7 +8835,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Is Focus?",
-        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+        "func": "let isfocus = msg.payload.RadioInfo.FocusRadioNr[0]\n\nif (isfocus == \"1\")\n{\n    msg.payload = \"True\";\n    node.status({ fill: \"green\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\nif (isfocus == \"2\")\n{\n    msg.payload = \"False\";\n    node.status({ fill: \"red\", shape: \"dot\", text: msg.payload });\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8838,7 +8855,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Is TX?",
-        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    return msg;\n}\n\n",
+        "func": "let isTX = msg.payload.RadioInfo.IsTransmitting[0]\n\nif (isTX == \"True\")\n{\n    msg.payload = \"True\";\n    node.status({fill:\"green\",shape:\"dot\",text:msg.payload});\n    return msg;\n}\n\nif (isTX == \"False\")\n{\n    msg.payload = \"False\";\n    node.status({fill:\"red\",shape:\"dot\",text:msg.payload});\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8930,7 +8947,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Color Change",
-        "func": "if (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{\n    msg.color = \"#FF0000\"\n}\n\nreturn msg;",
+        "func": "let color=\"grey\";\nif (msg.payload.RadioInfo.IsRunning[0] == \"True\")\n{\n    color = \"blue\";\n    msg.color = \"#008000\"\n}\n\nif (msg.payload.RadioInfo.IsRunning[0] == \"False\")\n{  \n    color=\"red\";\n    msg.color = \"#FF0000\"\n}\nnode.status({fill:color,shape:\"dot\"});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9016,7 +9033,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Get Spot Freq",
-        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\n\n\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
+        "func": "let x = msg.payload.RadioInfo.TXFreq[0];\nlet len = x.length;\nnode.status({text:x.toString()});\nif (len == 7)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,5);\n    let last = runfreq.substr(5,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n\n}\nif (len == 6)\n{\n    let runfreq = msg.payload.RadioInfo.TXFreq[0];\n\n    let first = runfreq.substr(0,4);\n    let last = runfreq.substr(4,1);\n    let freq = first+'.'+last;\n\nlet spot = {payload: freq};\nreturn spot; \n   \n}\nelse\n{\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9090,7 +9107,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "Get Status",
-        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\n\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
+        "func": "let x = msg.payload.RadioInfo.IsRunning[0];\nnode.status({text: x.toStriong()})\nif (x == \"True\")\n{\n    let status = \"Run\";\n\nlet msg = {payload: status};\nreturn msg; \n\n}\nif (x == \"False\")\n{\n    let status = \"S&P\";\n\nlet msg = {payload: status};\nreturn msg; \n   \n}\nelse\n{\n    let status = \"Unknown\";\n    \nlet msg = {payload: status};\nreturn msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10176,7 +10193,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null\nlet rate = null\nmsg.label = null\nlet length = null\n\nif(msg.payload == undefined)\n{\n    msg.payload = 'n/a'\n    return msg;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = rateperQ.toFixed(1);\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate\n    \n    length = rate.toString().length + rateperQ.toString().length + 8\n\n    msg.totallength = length;\n    \n    if (length <= 10)\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n    else\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\"\n    }\n\n    msg.label = \"M/Hr | 1 Mult = \";\n    return msg;\n}",
+        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null;\nlet rate = null;\nmsg.label = null;\nlet length = null;\n\nif(msg.payload == undefined)\n{\n    msg.payload = 'n/a';\n    return msg;\n}\n\nif (category == \"multiop\")\n{\n    node.status({text: msg.payload[0].operator});\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" || category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = parseInt(rateperQ.toFixed(1));\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate;\n    \n    length = rate.toString().length + rateperQ.toString().length + 8;\n\n    msg.totallength = length;\n    node.status({ text: [rate,\" Q/HR\"].join(\"\") });\n    if (length <= 10)\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\";\n    }\n    else\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\";\n    }\n\n    msg.label = \"M/Hr | 1 Mult = \";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10234,7 +10251,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" | category == \"so1v\")\n{\n    if (distance == \"miles\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"Furthest QSO\";\n    return msg;\n}\n\n\n",
+        "func": "let category = global.get('category')\nlet distance = global.get('distance_measurement')\n\nif (msg.payload[0].max_distance == null)\n{\n    msg.payload[0].max_distance = 0;\n}\n\nif (category == \"multiop\")\n{\n    node.status({ fill: \"grey\", shape: \"dot\", text: [\"Mults:\", msg.payload[0].operator].join(\"\") });\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Mults\";\n    return msg;\n}\n\nif (category == \"so2r\" || category == \"so1v\")\n{\n    node.status({fill:\"grey\",shape:\"ring\",text:[msg.payload[0].max_distance,distance.substring(0,1)].join(\"\")});\n    if (distance == \"miles\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"M\"\n    }\n    if (distance == \"km\")\n    {\n        msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].max_distance + \" \" + \"Km\"\n    }\n    msg.label = \"Furthest QSO\";\n    return msg;\n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10291,14 +10308,14 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Rate to Payload",
-        "func": "msg.payload = msg.rate\n\n//radiosport.live data\nglobal.set('#currentQrate',msg.payload)\n\nreturn msg;",
+        "func": "msg.payload = msg.rate\n\n//radiosport.live data\nglobal.set('#currentQrate',msg.payload)\nnode.status({fill:\"grey\",shape:\"dot\",text:msg.payload.toString()});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 3680,
-        "y": 880,
+        "y": 860,
         "wires": [
             [
                 "816d3f7e84dd1bf0"
@@ -26235,7 +26252,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Verify Valid Key Non-Expire",
-        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    node.status({fill:\"red\",shape:\"dot\",text:\"Expired\"});\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Active\"});\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -26757,7 +26774,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get TTL",
-        "func": "ttl = global.get('ttl')\n\nif (ttl == null)\n{\n    global.set('ttl',1200)\n    msg.payload = 1200\n}\n\nmsg.payload = ttl;\n\nreturn msg;",
+        "func": "let ttl = global.get('ttl')\n\nif (ttl == null)\n{\n    global.set('ttl',1200)\n    msg.payload = 1200\n}\n\nmsg.payload = ttl;\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -26805,7 +26822,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 3,
+        "order": 4,
         "width": 6,
         "height": 1,
         "name": "3 Current TTL Icon Value",
@@ -26824,7 +26841,7 @@
         "name": "4 QSO Map Icon TTL Form",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 4,
+        "order": 5,
         "width": 6,
         "height": 1,
         "options": [
@@ -26878,7 +26895,7 @@
         "name": "2 Lat & Lon Input",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "options": [
@@ -27012,7 +27029,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "name": "1 Current Lat & Lon",
@@ -27105,7 +27122,7 @@
         "label": "Map Labels On/Off",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 5,
+        "order": 6,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -27275,7 +27292,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Verify Valid Key Non-Expire",
-        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    node.status({fill:\"red\",shape:\"dot\",text:\"Exipred\"});\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\nnode.status({fill:\"green\",shape:\"ring\",text:\"Active\"});\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -27298,7 +27315,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "54b59a095746559b",
-        "order": 7,
+        "order": 8,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -29072,7 +29089,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Verify Valid Key Non-Expire",
-        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    node.status({fill:\"red\",shape:\"ring\",text:\"Expired\"});\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\nnode.status({fill:\"green\",shape:\"ring\",text:\"Active\"});\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29470,7 +29487,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Verify Valid Key Non-Expire",
-        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\n\nreturn;",
+        "func": "let currentdate = msg.payload;\n\nlet qrzdate = global.get('qrzkeyexpire');\n\nlet expiredate = Date.parse(qrzdate);\n\nif (currentdate > expiredate )\n{\n    node.status({fill:\"red\",shape:\"ring\",text:\"Expired\"});\n    msg.payload = \"QRZ XML Key Has Expired - Enter In Your QRZ Username & Password Again\"\n    return msg;\n}\nnode.status({fill:\"green\",shape:\"ring\",text:\"Active\"});\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29691,7 +29708,7 @@
         "type": "ui_text",
         "z": "204548a488401a1b",
         "group": "54b59a095746559b",
-        "order": 6,
+        "order": 7,
         "width": 6,
         "height": 1,
         "name": "6 Map Label Type Text",
@@ -29708,7 +29725,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Skimmer Call",
-        "func": "msg.payload = global.get('skimmercall')\n\nreturn msg;",
+        "func": "msg.payload = global.get('skimmercall')\nnode.status({text:msg.payload});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29785,7 +29802,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Contest Callsign",
-        "func": "msg.payload = global.get('contestcallsign')\n\nreturn msg;",
+        "func": "msg.payload = global.get('contestcallsign')\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29804,7 +29821,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lookup Service",
-        "func": "msg.payload = global.get('dblookup')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"hamdb\";\n    return msg;\n}\n\nreturn msg;",
+        "func": "msg.payload = global.get('dblookup')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"hamdb\";\n}\n\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29908,7 +29925,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Mult-OP or SO2R",
-        "func": "msg.payload = global.get('category')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"multiop\";\n    return msg;\n}\n\nreturn msg;",
+        "func": "msg.payload = global.get('category')\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"multiop\";\n}\nnode.status({text:msg.payload});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31375,10 +31392,287 @@
         ]
     },
     {
-        "id": "fe325866509dd201",
+        "id": "b8b2a1e40a949acb",
+        "type": "ui_switch",
+        "z": "204548a488401a1b",
+        "name": "Lightning Enable",
+        "label": "Lightning Info Enable",
+        "tooltip": "",
+        "group": "4ef10134c121cf09",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 490,
+        "y": 1900,
+        "wires": [
+            [
+                "252f221551638f5f"
+            ]
+        ]
+    },
+    {
+        "id": "1a031e0756e0c94e",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store Lightning_Enable & Prepare Restart",
+        "func": "var lightningenable;\nlightningenable = global.get('lightningenable');\nif (lightningenable == true){\n    global.set('lightningenable',false);\n    node.status({fill:\"red\",shape:\"dot\",text:\"Stopped\"});\n    return msg;\n}\nif (lightningenable == false || lightningenable == undefined){\n    global.set('lightningenable',true)\n    node.status({fill:\"green\",shape:\"dot\",text:\"Active\"});\n    return null;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 1900,
+        "wires": [
+            [
+                "35db8dcf682bbab1"
+            ]
+        ]
+    },
+    {
+        "id": "f6aa9aeccf8d6b42",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1900,
+        "wires": [
+            [
+                "7daab0fca820c2f7"
+            ]
+        ]
+    },
+    {
+        "id": "7daab0fca820c2f7",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Status",
+        "func": "msg.payload = global.get('lightningenable')\n\nmsg.break = \"Break\";\nif (msg.payload != true)\n{\n    msg.payload = false;\n}\nnode.status({text: msg.payload.toString()});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1900,
+        "wires": [
+            [
+                "b8b2a1e40a949acb",
+                "291dd36cf00544cb"
+            ]
+        ]
+    },
+    {
+        "id": "8dd9a40b981882b4",
+        "type": "ui_toast",
+        "z": "204548a488401a1b",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Ok",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Confirm before Reload",
+        "x": 920,
+        "y": 1900,
+        "wires": [
+            [
+                "000554e8d9a4cf45"
+            ]
+        ]
+    },
+    {
+        "id": "000554e8d9a4cf45",
+        "type": "switch",
+        "z": "204548a488401a1b",
+        "name": "OK?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Ok",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1090,
+        "y": 1900,
+        "wires": [
+            [
+                "1a031e0756e0c94e"
+            ],
+            [
+                "7daab0fca820c2f7"
+            ]
+        ]
+    },
+    {
+        "id": "027e54421645204a",
+        "type": "ui_slider",
+        "z": "204548a488401a1b",
+        "name": "",
+        "label": "Lightning Circle",
+        "tooltip": "distance from center location(km)",
+        "group": "4ef10134c121cf09",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "300",
+        "step": "5",
+        "className": "",
+        "x": 480,
+        "y": 1960,
+        "wires": [
+            [
+                "7c0fbc70f3e7550f"
+            ]
+        ]
+    },
+    {
+        "id": "78ead752e6645308",
+        "type": "inject",
+        "z": "204548a488401a1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1960,
+        "wires": [
+            [
+                "cbdf930baf83fbda"
+            ]
+        ]
+    },
+    {
+        "id": "7c0fbc70f3e7550f",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store Lightning_Distance",
+        "func": "var lightningdistance=msg.payload;\nglobal.set('lightningdistance',lightningdistance);\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cbdf930baf83fbda",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Status",
+        "func": "msg.payload = global.get('lightningdistance')\n\nif (msg.payload == undefined)\n{\n    msg.payload=150;\n}\nnode.status({text:msg.payload.toString()});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1960,
+        "wires": [
+            [
+                "027e54421645204a"
+            ]
+        ]
+    },
+    {
+        "id": "3f640262b2e246b8",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Lightning Config",
+        "info": "",
+        "x": 180,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "252f221551638f5f",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Inital Prompt Stop",
+        "func": "if(msg.break == \"Break\"){\n    return null;\n}\nmsg.payload=\" \";\nlet current_lighting= global.get('lightningenable');\nif (current_lighting== true){\nmsg.topic=\"Turning Lighting Detection Off will cause Node-Red to Restart.\";\n}\nelse {\n    msg.topic = \"Turning Lighting Detection On will increase Node-Red Internet Utilization.\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1900,
+        "wires": [
+            [
+                "8dd9a40b981882b4"
+            ]
+        ]
+    },
+    {
+        "id": "291dd36cf00544cb",
         "type": "debug",
         "z": "204548a488401a1b",
-        "name": "debug 4",
+        "name": "msg",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -31387,9 +31681,23 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1080,
-        "y": 3360,
+        "x": 490,
+        "y": 1840,
         "wires": []
+    },
+    {
+        "id": "35db8dcf682bbab1",
+        "type": "link out",
+        "z": "204548a488401a1b",
+        "name": "Restart Node-Red Out",
+        "mode": "link",
+        "links": [
+            "25d3766924264ec5"
+        ],
+        "x": 1620,
+        "y": 1900,
+        "wires": [],
+        "l": true
     },
     {
         "id": "1f45eb9a.6f2614",
@@ -34797,6 +35105,7 @@
         "id": "43f75a01.74e884",
         "type": "inject",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Backup",
         "props": [
             {
@@ -34826,8 +35135,9 @@
         "id": "d547483e.775438",
         "type": "function",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Prep data",
-        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category;class;OS_Type;livedata\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
+        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category;class;OS_Type;livedata\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (let i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -34845,6 +35155,7 @@
         "id": "9cec5c0d.e6de",
         "type": "comment",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Save global variables",
         "info": "",
         "x": 172,
@@ -34855,6 +35166,7 @@
         "id": "666ca426.5be96c",
         "type": "comment",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Restore global variables",
         "info": "",
         "x": 400,
@@ -34865,6 +35177,7 @@
         "id": "8e7e958d.ce6698",
         "type": "inject",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Startup",
         "props": [
             {
@@ -34872,6 +35185,11 @@
             },
             {
                 "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "break",
+                "v": "Break",
                 "vt": "str"
             }
         ],
@@ -34894,6 +35212,7 @@
         "id": "4cb14d0.afc25b4",
         "type": "file",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "filename": "global.json",
         "appendNewline": true,
@@ -34913,6 +35232,7 @@
         "id": "d8fa7064.9f60a",
         "type": "file in",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "filename": "global.json",
         "format": "utf8",
@@ -34929,6 +35249,7 @@
         "id": "14b4208c.99aaaf",
         "type": "function",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Restore",
         "func": "var output = [];\n\nfor (var i=0; i<msg.payload.length; i++) {\n    switch (msg.payload[i].type) {\n        case 'undefined': \n            // the global variable probably had no value, nothing needs to be restored\n            output.push(msg.payload[i].key + \" is undefined.\");\n            break;\n        case 'number':\n            if (msg.payload[i].value===\"NaN\") {\n                // there is no valid value to be restored, skip this variable\n                output.push(msg.payload[i].key + \" is NaN.\");\n            } else {\n                if (msg.payload[i].value.toString().indexOf(\".\")>-1) {\n                    // the value appears to be a float\n                    global.set(msg.payload[i].key,parseFloat(msg.payload[i].value));\n                    output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n                } else {\n                    global.set(msg.payload[i].key,parseInt(msg.payload[i].value));\n                    output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n                }\n            }\n            break;\n        case 'string':\n            global.set(msg.payload[i].key,msg.payload[i].value);\n            output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n            break;\n        case 'boolean':\n            global.set(msg.payload[i].key,msg.payload[i].value===\"true\");\n            output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n            break;\n    }\n}\n\nmsg.payload = output;\nreturn msg;",
         "outputs": 1,
@@ -34946,6 +35267,7 @@
         "id": "2c2d4269.a876de",
         "type": "json",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "x": 550,
         "y": 220,
@@ -34959,6 +35281,7 @@
         "id": "3cdb4133.0d461e",
         "type": "json",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "x": 790,
         "y": 500,
@@ -34973,6 +35296,7 @@
         "id": "e58232f49764e24f",
         "type": "json",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "property": "payload",
         "action": "",
@@ -34989,6 +35313,7 @@
         "id": "3f8e6bba1a03f1cc",
         "type": "ui_button",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "group": "535f5d4509d91b5e",
         "order": 3,
@@ -35017,11 +35342,12 @@
         "id": "80a3a373ae6e2eda",
         "type": "change",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "topic",
                 "pt": "msg",
                 "to": "Backup File Complete To global.json",
                 "tot": "str"
@@ -35032,11 +35358,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1440,
+        "x": 1430,
         "y": 260,
         "wires": [
             [
-                "7d74c21038089afd"
+                "7d74c21038089afd",
+                "6a1105146b6714bc"
             ]
         ]
     },
@@ -35044,6 +35371,7 @@
         "id": "7d74c21038089afd",
         "type": "ui_toast",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -35065,6 +35393,7 @@
         "id": "8417c17e9d44c60c",
         "type": "ui_button",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "group": "535f5d4509d91b5e",
         "order": 4,
@@ -35093,6 +35422,7 @@
         "id": "894d6435bdb8fc81",
         "type": "change",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -35112,7 +35442,7 @@
         "y": 580,
         "wires": [
             [
-                "3fc6b038acd1dd64"
+                "d8f0267e2836c239"
             ]
         ]
     },
@@ -35120,6 +35450,7 @@
         "id": "3fc6b038acd1dd64",
         "type": "ui_toast",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -35141,6 +35472,7 @@
         "id": "c85e5115fdd0c173",
         "type": "catch",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "scope": [
             "4cb14d0.afc25b4"
@@ -35158,6 +35490,7 @@
         "id": "95830ed52e3781db",
         "type": "change",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -35185,6 +35518,7 @@
         "id": "5ad33a23425e24ef",
         "type": "catch",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "scope": [
             "d8fa7064.9f60a"
@@ -35202,6 +35536,7 @@
         "id": "5c231f1f0fb2e5ec",
         "type": "change",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -35257,7 +35592,7 @@
         "id": "821bb77829102950",
         "type": "exec",
         "z": "3e52b5d54104d7f0",
-        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull && sudo reboot",
+        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -35265,12 +35600,14 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1330,
+        "x": 1280,
         "y": 780,
         "wires": [
             [],
             [],
-            []
+            [
+                "fc518098dbdbbfed"
+            ]
         ]
     },
     {
@@ -35306,7 +35643,7 @@
         "useSpawn": "",
         "timer": "",
         "name": "Reboot",
-        "x": 520,
+        "x": 660,
         "y": 1000,
         "wires": [
             [],
@@ -35337,26 +35674,8 @@
         "x": 299.7777786254883,
         "y": 1000.0000238418579,
         "wires": [
-            [
-                "b3e878177c786d3c"
-            ]
+            []
         ]
-    },
-    {
-        "id": "e5ca3a2218a318ed",
-        "type": "debug",
-        "z": "3e52b5d54104d7f0",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 680,
-        "wires": []
     },
     {
         "id": "a5d3c0fbf1549f70",
@@ -35375,12 +35694,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 800,
+        "x": 730,
         "y": 780,
         "wires": [
             [
-                "e5ca3a2218a318ed",
-                "821bb77829102950"
+                "ac33dac40f1893ef"
             ]
         ]
     },
@@ -35520,6 +35838,7 @@
         "id": "e2445f2b80bc515e",
         "type": "switch",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "property": "OS_Type",
         "propertyType": "global",
@@ -35559,12 +35878,14 @@
         "id": "9d6f6c5738444b27",
         "type": "file",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "filename": "%USERPROFILE%\\documents\\global.json",
+        "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
-        "x": 1030,
+        "x": 1140,
         "y": 240,
         "wires": [
             [
@@ -35577,6 +35898,7 @@
         "id": "ff541f0fdc6e0813",
         "type": "debug",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -35593,6 +35915,7 @@
         "id": "7d9aa86aac29d6cd",
         "type": "debug",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -35604,6 +35927,196 @@
         "x": 1680,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "94c74a1f43913a90",
+        "type": "link in",
+        "z": "3e52b5d54104d7f0",
+        "name": "Reboot",
+        "links": [
+            "bb45101d24175f1c"
+        ],
+        "x": 390,
+        "y": 940,
+        "wires": [
+            []
+        ],
+        "l": true
+    },
+    {
+        "id": "d8f0267e2836c239",
+        "type": "function",
+        "z": "3e52b5d54104d7f0",
+        "d": true,
+        "name": "If Startup Ignore",
+        "func": "if (msg.break == \"Break\"){\n    return null;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 580,
+        "wires": [
+            [
+                "3fc6b038acd1dd64"
+            ]
+        ]
+    },
+    {
+        "id": "dad3e9990f88cc1d",
+        "type": "link in",
+        "z": "3e52b5d54104d7f0",
+        "name": "Backup In",
+        "links": [],
+        "x": 155,
+        "y": 340,
+        "wires": [
+            [
+                "d547483e.775438",
+                "6a1105146b6714bc"
+            ]
+        ]
+    },
+    {
+        "id": "bb45101d24175f1c",
+        "type": "link out",
+        "z": "3e52b5d54104d7f0",
+        "name": "Reboot Upgrade Out",
+        "mode": "link",
+        "links": [
+            "94c74a1f43913a90"
+        ],
+        "x": 1795,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "fc518098dbdbbfed",
+        "type": "switch",
+        "z": "3e52b5d54104d7f0",
+        "name": "If OK",
+        "property": "payload.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1670,
+        "y": 780,
+        "wires": [
+            [
+                "bb45101d24175f1c"
+            ]
+        ]
+    },
+    {
+        "id": "6a1105146b6714bc",
+        "type": "link out",
+        "z": "3e52b5d54104d7f0",
+        "name": "link out 2",
+        "mode": "return",
+        "links": [],
+        "x": 1635,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "303543e9b873784a",
+        "type": "exec",
+        "z": "3e52b5d54104d7f0",
+        "command": "node-red-restart",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Restart Node Red",
+        "x": 710,
+        "y": 1100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "25d3766924264ec5",
+        "type": "link in",
+        "z": "3e52b5d54104d7f0",
+        "name": "Restart",
+        "links": [
+            "35db8dcf682bbab1"
+        ],
+        "x": 370,
+        "y": 1100,
+        "wires": [
+            [
+                "59d66938117656db"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "b9e91c38ade92a75",
+        "type": "debug",
+        "z": "3e52b5d54104d7f0",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "ac33dac40f1893ef",
+        "type": "link call",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "links": [
+            "dad3e9990f88cc1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 880,
+        "y": 780,
+        "wires": [
+            [
+                "821bb77829102950"
+            ]
+        ]
+    },
+    {
+        "id": "59d66938117656db",
+        "type": "link call",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "links": [
+            "dad3e9990f88cc1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 520,
+        "y": 1100,
+        "wires": [
+            [
+                "303543e9b873784a",
+                "b9e91c38ade92a75"
+            ]
+        ]
     },
     {
         "id": "bb1f3c069392c7e7",
@@ -35863,7 +36376,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "c6e09ffb3c5a1ce6",
         "name": "getContest",
-        "func": "let contestname = global.get('contestname');\nmsg.payload = {contestname: contestname};\nreturn msg;",
+        "func": "let contestname = global.get('contestname');\nmsg.payload = {contestname: contestname};\nnode.status({fill:\"grey\",shape:\"dot\",text: msg.payload.contestname});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -36586,39 +37099,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 880,
-        "wires": [
-            [
-                "393223b190ba95f3"
-            ]
-        ]
-    },
-    {
-        "id": "2570533c0ddd961a",
-        "type": "websocket out",
-        "z": "b73cc2bb5f424b69",
-        "g": "7a5512b5a3f6e8ba",
-        "name": "",
-        "server": "",
-        "client": "bea4993f.85f4d8",
-        "x": 830,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "e8923d3119f9de10",
-        "type": "websocket in",
-        "z": "b73cc2bb5f424b69",
-        "g": "7a5512b5a3f6e8ba",
-        "name": "",
-        "server": "",
-        "client": "bea4993f.85f4d8",
-        "x": 180,
+        "x": 170,
         "y": 840,
         "wires": [
             [
-                "bb38d5607155fdac"
+                "6ff8ddd581cb52e0"
             ]
         ]
     },
@@ -36634,8 +37119,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 840,
+        "x": 420,
+        "y": 780,
         "wires": [
             [
                 "e0a0fa6ae9f41024"
@@ -36655,7 +37140,7 @@
         "finalize": "",
         "libs": [],
         "x": 1610,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "b5b388156ec5eca9"
@@ -36672,7 +37157,7 @@
         "voice": "Microsoft Zira - English (United States)",
         "always": true,
         "x": 1980,
-        "y": 720,
+        "y": 740,
         "wires": []
     },
     {
@@ -36684,8 +37169,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 640,
-        "y": 840,
+        "x": 660,
+        "y": 780,
         "wires": [
             [
                 "64ce0bfa9e1942bb"
@@ -36705,7 +37190,7 @@
         "finalize": "",
         "libs": [],
         "x": 850,
-        "y": 840,
+        "y": 780,
         "wires": [
             [
                 "3ba91bda918482b2",
@@ -36757,7 +37242,8 @@
         "y": 440,
         "wires": [
             [
-                "431c69a2758e9d6f"
+                "431c69a2758e9d6f",
+                "4c9b1fed3cc98c83"
             ]
         ]
     },
@@ -36789,7 +37275,7 @@
         "payload": "< 3 Km",
         "payloadType": "str",
         "x": 1400,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "d769911bfcaff494",
@@ -36805,7 +37291,7 @@
         "name": "Readme",
         "info": "# Blizuntorg Lighting Detector\n\nDisplay lighting strike in Km \nAny strike >= 10 Km will show Green Lighting Arrow\nAny strike < 10 Km will show Red Lightning Arrow\n\n## **setDistance**\nTo change distance modify the setDistance function node.  You will need to change the value of n to whatever distance you want.   Also you will need to change the payload string to match the new distance.  Example below shows the value set to 10 Km \n\n`if(n <= 10) {\n // return distance to strike if strike is in defined radius\n return {payload: '<' + n + ' Km', color: \"#c40606\", topic: 'lightning'};\n} else\n return  {payload: '> 10 Km', color: \"#14f00c\",};`\n \n## **Ui Node**\nThere are 2 Ui Nodes in the template.  If you only have one dashboard page you can delete the one on the right.  If you have more than 2 dashboard pages you will need to copy and add the Ui Nodes and chain the output from the preceding one to the in input of the next Ui node.  \n\nYou will need to set the Ui Node to be in one group per dashboard page in order for those pages to update.   \n\n## **Header Ui**\nThe header Ui has 2 css div elements.  Spacing of the elements is tricky and may need adjusted depending on what else you have on your toolbar.  You can edit the style.paddingLeft or style.margin to adjust.   Make a copy of the Ui incase you need to fall back to the default.  \n\n## **Audible**\nIn order for the audiable to work you will need to click on the web page or you will see an error-not allowed msg on the node in the editor.   Currently the text is set to 'Warning Lighting Alert'  To change edit the pushAudible function",
         "x": 200,
-        "y": 800,
+        "y": 720,
         "wires": []
     },
     {
@@ -36920,7 +37406,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1800,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "e733af43f8c28c46"
@@ -36938,7 +37424,7 @@
             "e35b27050e23f4fe"
         ],
         "x": 1775,
-        "y": 840,
+        "y": 860,
         "wires": []
     },
     {
@@ -36971,7 +37457,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 920,
+        "y": 940,
         "wires": [
             []
         ]
@@ -36988,7 +37474,7 @@
         ],
         "uncaught": false,
         "x": 590,
-        "y": 920,
+        "y": 940,
         "wires": [
             [
                 "2d5edcaf1c0997bc"
@@ -37005,11 +37491,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 750,
-        "y": 920,
+        "x": 730,
+        "y": 940,
         "wires": []
     },
     {
@@ -37067,14 +37554,14 @@
         "z": "b73cc2bb5f424b69",
         "g": "28877ac600fea8b9",
         "name": "getKdx",
-        "func": "var kdx = parseFloat(msg.payload.solar.solardata[0].kindex[0]);\nmsg.topic = \"kdx\";\nmsg.payload = kdx;\nreturn msg;",
+        "func": "var kdx = parseFloat(msg.payload.solar.solardata[0].kindex[0]);\nmsg.topic = \"kdx\";\nmsg.payload = kdx;\nnode.status({fill:\"grey\",shape:\"dot\",text:kdx.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 1120,
+        "x": 620,
+        "y": 1100,
         "wires": [
             [
                 "20a1b3e47e825d5b"
@@ -37088,7 +37575,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "28877ac600fea8b9",
         "name": "getSFi",
-        "func": "var sfi = parseFloat(msg.payload.solar.solardata[0].solarflux[0]);\nmsg.topic = \"sfi\";\nmsg.payload = sfi;\nreturn msg;\n",
+        "func": "var sfi = parseFloat(msg.payload.solar.solardata[0].solarflux[0]);\nmsg.topic = \"sfi\";\nmsg.payload = sfi;\nnode.status({fill:\"grey\",shape:\"dot\",text:sfi.toString()});\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -37109,14 +37596,14 @@
         "z": "b73cc2bb5f424b69",
         "g": "28877ac600fea8b9",
         "name": "getAindex",
-        "func": "var Aindex = parseFloat(msg.payload.solar.solardata[0].aindex);\nmsg.topic =\"Aindex\";\nmsg.payload = Aindex;\nreturn msg;",
+        "func": "var Aindex = parseFloat(msg.payload.solar.solardata[0].aindex);\nmsg.topic =\"Aindex\";\nmsg.payload = Aindex;\nnode.status({fill:\"grey\",shape:\"dot\",text:Aindex.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 620,
-        "y": 1200,
+        "y": 1220,
         "wires": [
             [
                 "324101084f63a83e"
@@ -37931,34 +38418,14 @@
         ]
     },
     {
-        "id": "393223b190ba95f3",
-        "type": "function",
-        "z": "b73cc2bb5f424b69",
-        "g": "7a5512b5a3f6e8ba",
-        "name": "Inject A = 542",
-        "func": "return {payload: '{ \"a\": 542 }'};\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 560,
-        "y": 880,
-        "wires": [
-            [
-                "2570533c0ddd961a"
-            ]
-        ]
-    },
-    {
         "id": "35549ac0e22e44ff",
         "type": "ui_ui_control",
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "",
-        "events": "connect",
-        "x": 140,
-        "y": 920,
+        "events": "all",
+        "x": 100,
+        "y": 880,
         "wires": [
             [
                 "40b13d784b111566"
@@ -37983,11 +38450,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 360,
-        "y": 920,
+        "x": 240,
+        "y": 880,
         "wires": [
             [
-                "393223b190ba95f3"
+                "6ff8ddd581cb52e0"
             ]
         ]
     },
@@ -38003,8 +38470,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1550,
-        "y": 820,
+        "x": 1530,
+        "y": 800,
         "wires": [
             [
                 "d34ab878fcdc07ae"
@@ -38016,26 +38483,26 @@
         "type": "switch",
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
-        "name": "Lightning < 150 Miles",
+        "name": "Lightning based on options",
         "property": "payload.strike_distance",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "lt",
-                "v": "150",
-                "vt": "num"
+                "v": "lightningdistance",
+                "vt": "global"
             },
             {
                 "t": "gte",
-                "v": "150",
-                "vt": "num"
+                "v": "lightningdistance",
+                "vt": "global"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1060,
-        "y": 840,
+        "x": 1080,
+        "y": 780,
         "wires": [
             [
                 "e6fb0ef92036fc12",
@@ -38065,7 +38532,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1320,
-        "y": 860,
+        "y": 840,
         "wires": [
             [
                 "33b22679735f2e3c"
@@ -38078,14 +38545,14 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "Set Icon Color Green",
-        "func": "let n = msg.payload.strike_distance\nreturn  {payload: '> 10 Km', color: \"#14f00c\",};\n",
+        "func": "let n = global.get(\"lightningdistance\");\nreturn  {payload: '>'+ n + 'KM', color: \"#14f00c\",};\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1560,
-        "y": 860,
+        "x": 1540,
+        "y": 840,
         "wires": [
             [
                 "d34ab878fcdc07ae"
@@ -38101,13 +38568,13 @@
         "active": false,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
+        "tostatus": true,
         "complete": "true",
         "targetType": "full",
         "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 780,
+        "statusType": "counter",
+        "x": 990,
+        "y": 720,
         "wires": []
     },
     {
@@ -38116,16 +38583,16 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
+        "tostatus": true,
         "complete": "true",
         "targetType": "full",
         "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 780,
+        "statusType": "counter",
+        "x": 1210,
+        "y": 720,
         "wires": []
     },
     {
@@ -38359,6 +38826,144 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6ff8ddd581cb52e0",
+        "type": "function",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "Get Lighting Enable ",
+        "func": "var lightning_enable;\n\nlightning_enable = global.get(\"lightningenable\");\nif (lightning_enable == true){\n  msg.payload = '{\"a\":767}';\n  msg.enabled = true;\n  node.status({ fill: \"green\", shape: \"dot\", text: \"On\" });}\nelse{\n  node.status({ fill: \"red\", shape: \"dot\", text: \"Off\" });\n  msg.enabled = false;\n  msg.payload = '{\"send\":false}';\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 840,
+        "wires": [
+            [
+                "4b7abadd74993948",
+                "2d5edcaf1c0997bc"
+            ]
+        ]
+    },
+    {
+        "id": "978ad9a523f122ea",
+        "type": "websocket in",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "",
+        "server": "",
+        "client": "bea4993f.85f4d8",
+        "x": 140,
+        "y": 780,
+        "wires": [
+            [
+                "bb38d5607155fdac"
+            ]
+        ]
+    },
+    {
+        "id": "4b7abadd74993948",
+        "type": "websocket out",
+        "z": "b73cc2bb5f424b69",
+        "g": "7a5512b5a3f6e8ba",
+        "name": "",
+        "server": "",
+        "client": "bea4993f.85f4d8",
+        "x": 710,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "fbf6075bde5a0fcb",
+        "type": "inject",
+        "z": "b73cc2bb5f424b69",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1280,
+        "y": 920,
+        "wires": [
+            [
+                "dce7239f4f1620ec"
+            ]
+        ]
+    },
+    {
+        "id": "dce7239f4f1620ec",
+        "type": "function",
+        "z": "b73cc2bb5f424b69",
+        "d": true,
+        "name": "",
+        "func": "const ws = new WebSocket('wss://demo.piesocket.com/v3/channel_1?api_key=oCdCMcMPQpbvNjUIzqtvF1d2X2okWpDQj4AwARJuAgtjhzKxVEjQU6IdCjwm&notify_self');\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Connected\" });\n// ws.onopen = function () {\n//     console.log('WebSocket Client Connected');\n//     ws.send('Hi this is web client.');\n// };\nws.onmessage = function (e) {\n  node.warn({ payload: e.data });\n\n  if (e.data.startsWith(\"cpu\")) {\n    node.warn(\"Msg received. Closing Websocket\");\n    node.status({ fill: \"red\", shape: \"dot\", text: \"Disconnected\" });\n    ws.close();\n  }\n\n};\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "WebSocket",
+                "module": "ws"
+            }
+        ],
+        "x": 1450,
+        "y": 920,
+        "wires": [
+            [
+                "1f58cc838ce64580"
+            ]
+        ]
+    },
+    {
+        "id": "1f58cc838ce64580",
+        "type": "debug",
+        "z": "b73cc2bb5f424b69",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "4c9b1fed3cc98c83",
+        "type": "debug",
+        "z": "b73cc2bb5f424b69",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 120,
+        "wires": []
     },
     {
         "id": "1e2b62f78c981761",
@@ -40288,6 +40893,23 @@
         "end": false,
         "x": 1030,
         "y": 500,
+        "wires": []
+    },
+    {
+        "id": "fe325866509dd201",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 3360,
         "wires": []
     }
 ]
