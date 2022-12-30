@@ -710,9 +710,7 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879,
-        "w": 1852,
-        "h": 462
+        "y": 879
     },
     {
         "id": "81692a3cb68d6cde",
@@ -744,9 +742,7 @@
             "a9afc3cb2db49407"
         ],
         "x": 14,
-        "y": 1485.5,
-        "w": 2458,
-        "h": 969
+        "y": 1485.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -806,9 +802,7 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": 19
     },
     {
         "id": "f830dd821e0240f4",
@@ -872,7 +866,9 @@
             "21fe16ca5cbfc06b"
         ],
         "x": 134,
-        "y": 39
+        "y": 39,
+        "w": 1822,
+        "h": 442
     },
     {
         "id": "6c1673638929b26d",
@@ -911,7 +907,9 @@
             "5c60f3c47791458b"
         ],
         "x": 94,
-        "y": 659
+        "y": 659,
+        "w": 1792,
+        "h": 322
     },
     {
         "id": "26cf0678322d1bb6",
@@ -973,9 +971,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819,
-        "w": 1912,
-        "h": 622
+        "y": 819
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -1002,9 +998,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79,
-        "w": 1032,
-        "h": 162
+        "y": 79
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1041,9 +1035,7 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979,
-        "w": 1272,
-        "h": 449.5
+        "y": 1979
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1082,9 +1074,7 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5,
-        "w": 1432,
-        "h": 449.5
+        "y": 1511.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -29735,7 +29725,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Skimmer Call",
-        "func": "msg.payload = global.get('skimmercall')\n\nreturn msg;",
+        "func": "msg.payload = global.get('skimmercall')\nnode.status({text:msg.payload});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31449,7 +31439,7 @@
         "y": 1900,
         "wires": [
             [
-                "303543e9b873784a"
+                "35db8dcf682bbab1"
             ]
         ]
     },
@@ -31511,11 +31501,11 @@
         "highlight": "",
         "sendall": true,
         "outputs": 1,
-        "ok": "Yes",
+        "ok": "Ok",
         "cancel": "Cancel",
         "raw": false,
         "className": "",
-        "topic": "Your are wanting to change lightning detection?  This will cause to restart node-red.",
+        "topic": "",
         "name": "Confirm before Reload",
         "x": 920,
         "y": 1900,
@@ -31535,7 +31525,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "Yes",
+                "v": "Ok",
                 "vt": "str"
             },
             {
@@ -31663,7 +31653,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Inital Prompt Stop",
-        "func": "if(msg.break == \"Break\"){\n    return null;\n}\nreturn msg;",
+        "func": "if(msg.break == \"Break\"){\n    return null;\n}\nmsg.payload=\" \";\nlet current_lighting= global.get('lightningenable');\nif (current_lighting== true){\nmsg.topic=\"Turning Lighting Detection Off will cause Node-Red to Restart.\";\n}\nelse {\n    msg.topic = \"Turning Lighting Detection On will increase Node-Red Internet Utilization.\";\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -31675,26 +31665,6 @@
             [
                 "8dd9a40b981882b4"
             ]
-        ]
-    },
-    {
-        "id": "303543e9b873784a",
-        "type": "exec",
-        "z": "204548a488401a1b",
-        "command": "node-red-restart",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Restart Node Red",
-        "x": 1610,
-        "y": 1900,
-        "wires": [
-            [],
-            [],
-            []
         ]
     },
     {
@@ -31713,6 +31683,20 @@
         "x": 490,
         "y": 1840,
         "wires": []
+    },
+    {
+        "id": "35db8dcf682bbab1",
+        "type": "link out",
+        "z": "204548a488401a1b",
+        "name": "Restart Node-Red Out",
+        "mode": "link",
+        "links": [
+            "25d3766924264ec5"
+        ],
+        "x": 1620,
+        "y": 1900,
+        "wires": [],
+        "l": true
     },
     {
         "id": "1f45eb9a.6f2614",
@@ -35120,6 +35104,7 @@
         "id": "43f75a01.74e884",
         "type": "inject",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Backup",
         "props": [
             {
@@ -35149,8 +35134,9 @@
         "id": "d547483e.775438",
         "type": "function",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Prep data",
-        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category;class;OS_Type;livedata\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
+        "func": "// global variables separated by semicolon to be saved\nvar globallist = \"PC1;PC2;PC3;PC4;PC5;PC6;Q1hrhigh;Q1hrlow;Q2hrhigh;Q2hrlow;contestcallsign;contesttype;dblookup;hamqthusername;hamqthpassword;qrzusername;qrzpassword;homelat;homelon;maplabels;maplabeltype;opsorttype;saymulti;skimmercall;ttl;distance_measurement;category;class;OS_Type;livedata\";\nvar mylist = globallist.split(\";\");\n\nvar outputs = [];\n\nfor (let i=0; i<mylist.length; i++) {\n    outputs.push({ key : mylist[i], type: typeof global.get(mylist[i]), value: global.get(mylist[i])});\n}\n      \n      \nmsg.payload = outputs;\nreturn msg;\n\n//msg.payload=typeof global.get(\"torrent_keywords\");\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -35168,6 +35154,7 @@
         "id": "9cec5c0d.e6de",
         "type": "comment",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Save global variables",
         "info": "",
         "x": 172,
@@ -35178,6 +35165,7 @@
         "id": "666ca426.5be96c",
         "type": "comment",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Restore global variables",
         "info": "",
         "x": 400,
@@ -35188,6 +35176,7 @@
         "id": "8e7e958d.ce6698",
         "type": "inject",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Startup",
         "props": [
             {
@@ -35222,6 +35211,7 @@
         "id": "4cb14d0.afc25b4",
         "type": "file",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "filename": "global.json",
         "appendNewline": true,
@@ -35241,6 +35231,7 @@
         "id": "d8fa7064.9f60a",
         "type": "file in",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "filename": "global.json",
         "format": "utf8",
@@ -35257,6 +35248,7 @@
         "id": "14b4208c.99aaaf",
         "type": "function",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "Restore",
         "func": "var output = [];\n\nfor (var i=0; i<msg.payload.length; i++) {\n    switch (msg.payload[i].type) {\n        case 'undefined': \n            // the global variable probably had no value, nothing needs to be restored\n            output.push(msg.payload[i].key + \" is undefined.\");\n            break;\n        case 'number':\n            if (msg.payload[i].value===\"NaN\") {\n                // there is no valid value to be restored, skip this variable\n                output.push(msg.payload[i].key + \" is NaN.\");\n            } else {\n                if (msg.payload[i].value.toString().indexOf(\".\")>-1) {\n                    // the value appears to be a float\n                    global.set(msg.payload[i].key,parseFloat(msg.payload[i].value));\n                    output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n                } else {\n                    global.set(msg.payload[i].key,parseInt(msg.payload[i].value));\n                    output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n                }\n            }\n            break;\n        case 'string':\n            global.set(msg.payload[i].key,msg.payload[i].value);\n            output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n            break;\n        case 'boolean':\n            global.set(msg.payload[i].key,msg.payload[i].value===\"true\");\n            output.push(msg.payload[i].key + \" is restored to \" + msg.payload[i].value);\n            break;\n    }\n}\n\nmsg.payload = output;\nreturn msg;",
         "outputs": 1,
@@ -35274,6 +35266,7 @@
         "id": "2c2d4269.a876de",
         "type": "json",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "x": 550,
         "y": 220,
@@ -35287,6 +35280,7 @@
         "id": "3cdb4133.0d461e",
         "type": "json",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "x": 790,
         "y": 500,
@@ -35301,6 +35295,7 @@
         "id": "e58232f49764e24f",
         "type": "json",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "property": "payload",
         "action": "",
@@ -35317,6 +35312,7 @@
         "id": "3f8e6bba1a03f1cc",
         "type": "ui_button",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "group": "535f5d4509d91b5e",
         "order": 3,
@@ -35345,11 +35341,12 @@
         "id": "80a3a373ae6e2eda",
         "type": "change",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "topic",
                 "pt": "msg",
                 "to": "Backup File Complete To global.json",
                 "tot": "str"
@@ -35360,11 +35357,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1440,
+        "x": 1430,
         "y": 260,
         "wires": [
             [
-                "7d74c21038089afd"
+                "7d74c21038089afd",
+                "6a1105146b6714bc"
             ]
         ]
     },
@@ -35372,6 +35370,7 @@
         "id": "7d74c21038089afd",
         "type": "ui_toast",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -35393,6 +35392,7 @@
         "id": "8417c17e9d44c60c",
         "type": "ui_button",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "group": "535f5d4509d91b5e",
         "order": 4,
@@ -35421,6 +35421,7 @@
         "id": "894d6435bdb8fc81",
         "type": "change",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -35448,6 +35449,7 @@
         "id": "3fc6b038acd1dd64",
         "type": "ui_toast",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -35469,6 +35471,7 @@
         "id": "c85e5115fdd0c173",
         "type": "catch",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "scope": [
             "4cb14d0.afc25b4"
@@ -35486,6 +35489,7 @@
         "id": "95830ed52e3781db",
         "type": "change",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -35513,6 +35517,7 @@
         "id": "5ad33a23425e24ef",
         "type": "catch",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "scope": [
             "d8fa7064.9f60a"
@@ -35530,6 +35535,7 @@
         "id": "5c231f1f0fb2e5ec",
         "type": "change",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -35585,7 +35591,7 @@
         "id": "821bb77829102950",
         "type": "exec",
         "z": "3e52b5d54104d7f0",
-        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull && sudo reboot",
+        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -35593,12 +35599,14 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1330,
+        "x": 1280,
         "y": 780,
         "wires": [
             [],
             [],
-            []
+            [
+                "fc518098dbdbbfed"
+            ]
         ]
     },
     {
@@ -35634,7 +35642,7 @@
         "useSpawn": "",
         "timer": "",
         "name": "Reboot",
-        "x": 520,
+        "x": 660,
         "y": 1000,
         "wires": [
             [],
@@ -35665,26 +35673,8 @@
         "x": 299.7777786254883,
         "y": 1000.0000238418579,
         "wires": [
-            [
-                "b3e878177c786d3c"
-            ]
+            []
         ]
-    },
-    {
-        "id": "e5ca3a2218a318ed",
-        "type": "debug",
-        "z": "3e52b5d54104d7f0",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 680,
-        "wires": []
     },
     {
         "id": "a5d3c0fbf1549f70",
@@ -35703,12 +35693,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 800,
+        "x": 730,
         "y": 780,
         "wires": [
             [
-                "e5ca3a2218a318ed",
-                "821bb77829102950"
+                "ac33dac40f1893ef"
             ]
         ]
     },
@@ -35848,6 +35837,7 @@
         "id": "e2445f2b80bc515e",
         "type": "switch",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "property": "OS_Type",
         "propertyType": "global",
@@ -35887,12 +35877,14 @@
         "id": "9d6f6c5738444b27",
         "type": "file",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "filename": "%USERPROFILE%\\documents\\global.json",
+        "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
-        "x": 1030,
+        "x": 1140,
         "y": 240,
         "wires": [
             [
@@ -35905,6 +35897,7 @@
         "id": "ff541f0fdc6e0813",
         "type": "debug",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -35921,6 +35914,7 @@
         "id": "7d9aa86aac29d6cd",
         "type": "debug",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -35939,20 +35933,20 @@
         "z": "3e52b5d54104d7f0",
         "name": "Reboot",
         "links": [
-            "a799711552a6b607"
+            "bb45101d24175f1c"
         ],
-        "x": 415,
+        "x": 390,
         "y": 940,
         "wires": [
-            [
-                "b3e878177c786d3c"
-            ]
-        ]
+            []
+        ],
+        "l": true
     },
     {
         "id": "d8f0267e2836c239",
         "type": "function",
         "z": "3e52b5d54104d7f0",
+        "d": true,
         "name": "If Startup Ignore",
         "func": "if (msg.break == \"Break\"){\n    return null;\n}\nreturn msg;",
         "outputs": 1,
@@ -35965,6 +35959,161 @@
         "wires": [
             [
                 "3fc6b038acd1dd64"
+            ]
+        ]
+    },
+    {
+        "id": "dad3e9990f88cc1d",
+        "type": "link in",
+        "z": "3e52b5d54104d7f0",
+        "name": "Backup In",
+        "links": [],
+        "x": 155,
+        "y": 340,
+        "wires": [
+            [
+                "d547483e.775438",
+                "6a1105146b6714bc"
+            ]
+        ]
+    },
+    {
+        "id": "bb45101d24175f1c",
+        "type": "link out",
+        "z": "3e52b5d54104d7f0",
+        "name": "Reboot Upgrade Out",
+        "mode": "link",
+        "links": [
+            "94c74a1f43913a90"
+        ],
+        "x": 1795,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "fc518098dbdbbfed",
+        "type": "switch",
+        "z": "3e52b5d54104d7f0",
+        "name": "If OK",
+        "property": "payload.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1670,
+        "y": 780,
+        "wires": [
+            [
+                "bb45101d24175f1c"
+            ]
+        ]
+    },
+    {
+        "id": "6a1105146b6714bc",
+        "type": "link out",
+        "z": "3e52b5d54104d7f0",
+        "name": "link out 2",
+        "mode": "return",
+        "links": [],
+        "x": 1635,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "303543e9b873784a",
+        "type": "exec",
+        "z": "3e52b5d54104d7f0",
+        "command": "node-red-restart",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Restart Node Red",
+        "x": 710,
+        "y": 1100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "25d3766924264ec5",
+        "type": "link in",
+        "z": "3e52b5d54104d7f0",
+        "name": "Restart",
+        "links": [
+            "35db8dcf682bbab1"
+        ],
+        "x": 370,
+        "y": 1100,
+        "wires": [
+            [
+                "59d66938117656db"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "b9e91c38ade92a75",
+        "type": "debug",
+        "z": "3e52b5d54104d7f0",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "ac33dac40f1893ef",
+        "type": "link call",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "links": [
+            "dad3e9990f88cc1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 880,
+        "y": 780,
+        "wires": [
+            [
+                "821bb77829102950"
+            ]
+        ]
+    },
+    {
+        "id": "59d66938117656db",
+        "type": "link call",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "links": [
+            "dad3e9990f88cc1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 520,
+        "y": 1100,
+        "wires": [
+            [
+                "303543e9b873784a",
+                "b9e91c38ade92a75"
             ]
         ]
     },
@@ -38273,7 +38422,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "",
-        "events": "connect",
+        "events": "all",
         "x": 100,
         "y": 880,
         "wires": [
