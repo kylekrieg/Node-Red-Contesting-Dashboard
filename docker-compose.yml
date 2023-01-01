@@ -1,0 +1,21 @@
+version: "3.2"
+
+services:
+  node-red:
+    image: ghcr.io/kd9lsv/node-red-contesting-dashboard:latest
+    ports:
+      - "1880:1880"
+      - "12060:12060/udp"
+      - "12061:12061/udp"
+      - "12062:12062/udp"
+      - "7300:7300"
+    networks:
+      - node-red-net
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - NR_DATA:/data:ro
+networks:
+  node-red-net:
+volumes:
+  NR_DATA:
+    
