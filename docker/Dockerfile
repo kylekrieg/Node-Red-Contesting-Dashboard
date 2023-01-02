@@ -3,30 +3,28 @@ ARG QEMU_ARCH
 USER root
 RUN apk add sqlite grep
 USER node-red
-RUN curl -sL -o /data/settings.js https://raw.githubusercontent.com/radiosport-live/Node-Red-AutoScripts/master/settings.js 
 
-RUN mkdir -p /data/projects/
+COPY docker/settings.js /data/settings.js
+COPY docker/.config.projects.json /data
+COPY docker/.config.users.json /data
+COPY schema.db /data
 
-RUN git clone https://github.com/kylekrieg/Node-Red-Contesting-Dashboard.git --quiet /data/projects/Node-Red-Contesting-Dashboard
+RUN mkdir -p /data/projects && mkdir -p /data/node_modules/
 
 COPY package.json .
+COPY . /data/projects/Node-Red-Contesting-Dashboard/
+
 RUN npm install --unsafe-perm --no-update-notifier --no-fund --omit=dev
 # Copy package.json to the WORKDIR so npm builds all
 # of your added nodes modules for Node-RED
-COPY schema.db /data
+
 
 # Copy _your_ Node-RED project files into place
 # NOTE: This will only work if you DO NOT later mount /data as an external volume.
 #       If you need to use an external volume for persistence then
 #       copy your settings and flows files to that volume instead.
-
-RUN cd /data/projects/Node-Red-Contesting-Dashboard && for branch in `git branch -a | grep remotes | grep -v HEAD | grep -v master `; do \
-   git branch --track ${branch#remotes/origin/} $branch ; \
-done
-
 RUN sqlite3 /usr/src/node-red/qsos < /data/schema.db
-COPY docker/.config.projects.json /data
-COPY docker/.config.users.json /data
+
 ENV NODE_RED_ENABLE_PROJECTS=true
 HEALTHCHECK CMD curl http://localhost:1880/ || exit 1
 
