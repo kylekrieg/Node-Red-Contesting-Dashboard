@@ -188,8 +188,8 @@ EOL
     fi
 
 else
-    cd $NR_Path
-    curl -L -o ./docker-compose.yml https://github.com/radiosport-live/Node-Red-AutoScripts/docker/docker-compose.yml
+    cd NR_Path
+    curl -L -o ./docker-compose.yml https://raw.githubusercontent.com/kylekrieg/Node-Red-Contesting-Dashboard/docker/docker/docker-compose.yml
     read -p "Are you wanting to config the docker container ? (y/N) " docker_config
     if [[ $docker_config == 'Y' || $docker_config == 'y' ]] ; then
         echo "$(pwd)"
