@@ -387,7 +387,9 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 255,
+        "h": 482
     },
     {
         "id": "52886121c9629e0b",
@@ -411,7 +413,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -435,7 +439,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -460,7 +466,9 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 482
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -475,7 +483,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -490,7 +500,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -514,7 +526,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -538,7 +552,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -575,7 +591,9 @@
             "4b7abadd74993948"
         ],
         "x": -6,
-        "y": 679
+        "y": 679,
+        "w": 2072,
+        "h": 302
     },
     {
         "id": "28877ac600fea8b9",
@@ -599,8 +617,10 @@
             "41b71b195d25cc36",
             "324101084f63a83e"
         ],
-        "x": 234,
-        "y": 1019
+        "x": 224,
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -615,7 +635,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -639,7 +661,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -801,7 +825,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -847,7 +873,9 @@
             "21fe16ca5cbfc06b"
         ],
         "x": 134,
-        "y": 39
+        "y": 39,
+        "w": 1822,
+        "h": 442
     },
     {
         "id": "6c1673638929b26d",
@@ -886,7 +914,9 @@
             "5c60f3c47791458b"
         ],
         "x": 94,
-        "y": 659
+        "y": 659,
+        "w": 1792,
+        "h": 322
     },
     {
         "id": "26cf0678322d1bb6",
@@ -1471,7 +1501,7 @@
         "tab": "d36058f98fbac69f",
         "order": 2,
         "disp": true,
-        "width": "4",
+        "width": "6",
         "collapse": false,
         "className": "op_compete_trending"
     },
@@ -1557,7 +1587,7 @@
         "tab": "d36058f98fbac69f",
         "order": 5,
         "disp": true,
-        "width": "4",
+        "width": 6,
         "collapse": false,
         "className": "op_compete_trending"
     },
@@ -1568,7 +1598,7 @@
         "tab": "d36058f98fbac69f",
         "order": 8,
         "disp": true,
-        "width": "4",
+        "width": 6,
         "collapse": false,
         "className": "op_compete_trending"
     },
@@ -1579,7 +1609,7 @@
         "tab": "d36058f98fbac69f",
         "order": 10,
         "disp": true,
-        "width": "4",
+        "width": 6,
         "collapse": false,
         "className": "op_compete_trending"
     },
@@ -1590,7 +1620,7 @@
         "tab": "d36058f98fbac69f",
         "order": 13,
         "disp": true,
-        "width": "4",
+        "width": 6,
         "collapse": false,
         "className": "op_compete_trending"
     },
@@ -1601,7 +1631,7 @@
         "tab": "d36058f98fbac69f",
         "order": 15,
         "disp": true,
-        "width": "4",
+        "width": 6,
         "collapse": false,
         "className": "op_compete_trending"
     },
@@ -1612,7 +1642,7 @@
         "tab": "d36058f98fbac69f",
         "order": 18,
         "disp": true,
-        "width": "4",
+        "width": 6,
         "collapse": false,
         "className": "op_compete_trending"
     },
@@ -1623,7 +1653,7 @@
         "tab": "d36058f98fbac69f",
         "order": 20,
         "disp": true,
-        "width": "4",
+        "width": 6,
         "collapse": false,
         "className": "op_compete_trending"
     },
@@ -1678,7 +1708,7 @@
         "tab": "d36058f98fbac69f",
         "order": 3,
         "disp": true,
-        "width": 13,
+        "width": "11",
         "collapse": false,
         "className": ""
     },
@@ -1689,7 +1719,7 @@
         "tab": "d36058f98fbac69f",
         "order": 16,
         "disp": true,
-        "width": 13,
+        "width": "11",
         "collapse": false,
         "className": ""
     },
@@ -1700,7 +1730,7 @@
         "tab": "d36058f98fbac69f",
         "order": 11,
         "disp": true,
-        "width": 13,
+        "width": "11",
         "collapse": false,
         "className": ""
     },
@@ -1711,7 +1741,7 @@
         "tab": "d36058f98fbac69f",
         "order": 6,
         "disp": true,
-        "width": 13,
+        "width": "11",
         "collapse": false,
         "className": ""
     },
@@ -9330,8 +9360,8 @@
         "width": 5,
         "height": 3,
         "name": "Current Total QSO Rate",
-        "label": "<center>Current Hr/Q Rate",
-        "format": "<font color={{msg.color}}>{{msg.rate}}</font><font color={{msg.color}}></font>",
+        "label": "<center>Current Q/Hr Rate",
+        "format": "<font color={{msg.color}}>{{msg.rate}}</font><font size=4 color={{msg.color}}>Qs/HR</font>",
         "layout": "col-center",
         "className": "dashboard_large_value",
         "x": 3670,
@@ -10179,7 +10209,7 @@
         "z": "407d2b774fe67647",
         "g": "26cf0678322d1bb6",
         "name": "Set Label & Payload",
-        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null;\nlet rate = null;\nmsg.label = null;\nlet length = null;\n\nif(msg.payload == undefined)\n{\n    msg.payload = 'n/a';\n    return msg;\n}\n\nif (category == \"multiop\")\n{\n    node.status({text: msg.payload[0].operator});\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" || category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = parseInt(rateperQ.toFixed(1));\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate;\n    \n    length = rate.toString().length + rateperQ.toString().length + 8;\n\n    msg.totallength = length;\n    node.status({ text: [rate,\" Q/HR\"].join(\"\") });\n    if (length <= 10)\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\";\n    }\n    else\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"/Hr | \" + rateperQ + \"Qs\";\n    }\n\n    msg.label = \"M/Hr | 1 Mult = \";\n    return msg;\n}",
+        "func": "let category = global.get('category')\nlet totalnoqsos = flow.get('totalnoqsos');\nlet totalmults = flow.get('totalmults');\nlet totalpoints = flow.get('totalpoints');\nlet rateperQ = null;\nlet rate = null;\nmsg.label = null;\nlet length = null;\n\nif(msg.payload == undefined)\n{\n    msg.payload = 'n/a';\n    return msg;\n}\n\nif (category == \"multiop\")\n{\n    node.status({text: msg.payload[0].operator});\n    msg.payload = \"<font color=#FFFF00>\" + msg.payload[0].operator;\n    msg.label = \"Top OP Score\";\n    return msg;\n}\n\nif (category == \"so2r\" || category == \"so1v\")\n{\n    if (totalmults == 0 || totalmults == undefined || totalnoqsos == 0 || totalnoqsos == undefined )\n    {\n        rateperQ = 0;\n    }\n    else\n    {\n        rateperQ = totalnoqsos / totalmults;\n        rateperQ = parseInt(rateperQ.toFixed(1));\n        \n        if (rateperQ < 1)\n        {\n            rateperQ = 0\n        }\n\n    }\n    \n    rate = msg.payload[0].rate;\n    \n    length = rate.toString().length + rateperQ.toString().length + 8;\n\n    msg.totallength = length;\n    node.status({ text: [rate,\" Q/HR\"].join(\"\") });\n    if (length <= 10)\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"</font><font color='#FFFF00' size=4>/Hr | </font><font color ='#ffff00'>\" + rateperQ + \"</font><font color='#FFFF00' size=4>/Qs</font>\";\n    }\n    else\n    {\n        msg.payload = \"<font color=#FFFF00>\" + rate + \"</font><font color='#FFFF00' size=4>/Hr | </font><font color ='#ffff00'>\" + rateperQ + \"</font><font color='#FFFF00' size=4>/Qs</font>\";\n    }\n\n    msg.label = \"M/Hr | 1 Mult = \";\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16724,7 +16754,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP0_1HrTrendScore\");\nlet z = flow.get(\"OP0_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP0_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP0_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP0_TrendScore\",totalscore);\n\n\nif (msg.payload[0] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP0_1HrTrendScore\");\nlet z = flow.get(\"OP0_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP0_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP0_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP0_TrendScore\",totalscore);\n\n\nif (msg.payload[0] == null)\n{\n    msg = { payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = { payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = { payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = { payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17334,7 +17364,7 @@
         "name": "Operator 1Hr Q's/Hr",
         "group": "2da8694540143f9a",
         "order": 1,
-        "width": 13,
+        "width": "11",
         "height": 5,
         "label": "",
         "chartType": "line",
@@ -17364,7 +17394,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "className": "",
+        "className": "chart_title",
         "x": 2540,
         "y": 680,
         "wires": [
@@ -17378,8 +17408,8 @@
         "name": "Operators 2Hr Q's/Hr",
         "group": "ba191f5b911d96f8",
         "order": 1,
-        "width": 13,
-        "height": 5,
+        "width": "11",
+        "height": 7,
         "label": "",
         "chartType": "line",
         "legend": "true",
@@ -17408,7 +17438,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "className": "",
+        "className": "chart_title",
         "x": 2020,
         "y": 960,
         "wires": [
@@ -17422,7 +17452,7 @@
         "name": "Operators Score Chart",
         "group": "6c301c05c13a5e40",
         "order": 1,
-        "width": 13,
+        "width": "11",
         "height": 5,
         "label": "",
         "chartType": "line",
@@ -17452,7 +17482,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "className": "",
+        "className": "chart_title",
         "x": 2540,
         "y": 720,
         "wires": [
@@ -17466,8 +17496,8 @@
         "name": "Operators QSOs Chart",
         "group": "1d57c18be03cdf58",
         "order": 1,
-        "width": 13,
-        "height": 5,
+        "width": "11",
+        "height": "5",
         "label": "",
         "chartType": "line",
         "legend": "true",
@@ -17496,7 +17526,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "className": "",
+        "className": "chart_title",
         "x": 2540,
         "y": 760,
         "wires": [
@@ -17509,7 +17539,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "4fe32a048d3e8016",
         "order": 1,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "1st Place 1Hr Rate Trending",
         "label": "1hr Rate",
@@ -17526,7 +17556,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "cf0fd8137d27fde9",
         "order": 1,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "2nd Place 1Hr Rate Trending",
         "label": "1hr Rate",
@@ -17543,7 +17573,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "a54565f26ef859a6",
         "order": 1,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "3rd Place 1Hr Rate Trending",
         "label": "1hr Rate",
@@ -17560,7 +17590,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "53db3fa281c44012",
         "order": 1,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "4th Place 1Hr Rate Trending",
         "label": "1hr Rate",
@@ -17577,7 +17607,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "5ea99b2ffafa1455",
         "order": 1,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "5th Place 1Hr Rate Trending",
         "label": "1hr Rate",
@@ -17594,7 +17624,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "2083f5d4aa25f442",
         "order": 1,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "6th Place 1Hr Rate Trending",
         "label": "1hr Rate",
@@ -17611,7 +17641,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "1f8381235f15779f",
         "order": 1,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "7th Place 1Hr Rate Trending",
         "label": "1hr Rate",
@@ -17628,7 +17658,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "49e8559f5916fe38",
         "order": 1,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "8th Place 1Hr Rate Trending",
         "label": "1hr Rate",
@@ -17949,7 +17979,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "4fe32a048d3e8016",
         "order": 2,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "1st Place 2Hr Rate Trending",
         "label": "2hr Rate",
@@ -17966,7 +17996,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "cf0fd8137d27fde9",
         "order": 2,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "2nd Place 2Hr Rate Trending",
         "label": "2hr Rate",
@@ -17983,7 +18013,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "a54565f26ef859a6",
         "order": 2,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "3rd Place 2Hr Rate Trending",
         "label": "2hr Rate",
@@ -18000,7 +18030,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "53db3fa281c44012",
         "order": 2,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "4th Place 2Hr Rate Trending",
         "label": "2hr Rate",
@@ -18017,7 +18047,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "5ea99b2ffafa1455",
         "order": 2,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "5th Place 2Hr Rate Trending",
         "label": "2hr Rate",
@@ -18034,7 +18064,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "2083f5d4aa25f442",
         "order": 2,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "6th Place 2Hr Rate Trending",
         "label": "2hr Rate",
@@ -18051,7 +18081,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "1f8381235f15779f",
         "order": 2,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "7th Place 2Hr Rate Trending",
         "label": "2hr Rate",
@@ -18068,7 +18098,7 @@
         "z": "c8e1ef6f509cd75a",
         "group": "49e8559f5916fe38",
         "order": 2,
-        "width": 2,
+        "width": "3",
         "height": 2,
         "name": "8th Place 2Hr Rate Trending",
         "label": "2hr Rate",
@@ -18119,7 +18149,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRateTrendscore\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP0_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP0_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRateTrendscore\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -18139,7 +18169,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP1_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP1_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP1_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -18159,7 +18189,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP2_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP2_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP2_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -18179,7 +18209,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP3_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP3_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP3_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -18199,7 +18229,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP4_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP4_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP4_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -18219,7 +18249,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP5_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP5_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP5_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -18239,7 +18269,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP6_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP6_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP6_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -18259,7 +18289,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "1Hr Rate Trending Arrow Direction",
-        "func": "let ratecurrent = flow.get(\"OP7_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let ratecurrent = flow.get(\"OP7_1HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_1HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP7_1HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19431,7 +19461,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "2Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP0_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP0_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP0_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP0_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19450,7 +19480,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "2Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP1_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP1_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP1_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP1_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19469,7 +19499,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "2Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP2_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP2_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP2_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP2_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19488,7 +19518,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "2Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP3_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP3_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP3_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP3_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19507,7 +19537,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "2Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP4_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP4_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP4_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP4_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19526,7 +19556,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "2Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP5_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP5_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP5_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP5_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19545,7 +19575,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "2Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP6_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP6_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP6_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP6_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19564,7 +19594,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "2Hr Rate Trending Arrow Direction",
-        "func": "\nlet ratecurrent = flow.get(\"OP7_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
+        "func": "\nlet ratecurrent = flow.get(\"OP7_2HRateCurrent\")\nlet rateprevious = flow.get(\"OP7_2HRatePrevious\")\n\nif (ratecurrent == null || ratecurrent == 0)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (ratecurrent == rateprevious)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[1]);\n    return msg;\n}\n\nif (ratecurrent > rateprevious)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[2]);\n    return msg;\n}\n\nif (ratecurrent < rateprevious)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>'};\n    flow.set([\"OP7_2HrTrendScore\"],[0]);\n    return msg;\n    \n}\n\n//flow.set([\"OP0_1HRatePrevious\"],[ratecurrent]);\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19583,7 +19613,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP1_1HrTrendScore\");\nlet z = flow.get(\"OP1_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP1_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP1_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP1_TrendScore\",totalscore);\n\nif (msg.payload[1] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP1_1HrTrendScore\");\nlet z = flow.get(\"OP1_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP1_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP1_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP1_TrendScore\",totalscore);\n\nif (msg.payload[1] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19603,7 +19633,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP2_1HrTrendScore\");\nlet z = flow.get(\"OP2_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP2_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP2_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP2_TrendScore\",totalscore);\n\nif (msg.payload[2] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP2_1HrTrendScore\");\nlet z = flow.get(\"OP2_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP2_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP2_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP2_TrendScore\",totalscore);\n\nif (msg.payload[2] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19623,7 +19653,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP3_1HrTrendScore\");\nlet z = flow.get(\"OP3_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP3_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP3_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP3_TrendScore\",totalscore);\n\nif (msg.payload[3] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP3_1HrTrendScore\");\nlet z = flow.get(\"OP3_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP3_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP3_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP3_TrendScore\",totalscore);\n\nif (msg.payload[3] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19643,7 +19673,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP4_1HrTrendScore\");\nlet z = flow.get(\"OP4_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP4_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP4_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP4_TrendScore\",totalscore);\n\nif (msg.payload[4] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP4_1HrTrendScore\");\nlet z = flow.get(\"OP4_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP4_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP4_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP4_TrendScore\",totalscore);\n\nif (msg.payload[4] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19663,7 +19693,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP5_1HrTrendScore\");\nlet z = flow.get(\"OP5_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP5_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP5_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP5_TrendScore\",totalscore);\n\nif (msg.payload[5] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP5_1HrTrendScore\");\nlet z = flow.get(\"OP5_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP5_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP5_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP5_TrendScore\",totalscore);\n\nif (msg.payload[5] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19683,7 +19713,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP6_1HrTrendScore\");\nlet z = flow.get(\"OP6_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP6_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP6_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP6_TrendScore\",totalscore);\n\nif (msg.payload[6] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP6_1HrTrendScore\");\nlet z = flow.get(\"OP6_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP6_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP6_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP6_TrendScore\",totalscore);\n\nif (msg.payload[6] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19703,7 +19733,7 @@
         "type": "function",
         "z": "c8e1ef6f509cd75a",
         "name": "Overall Trending Arrow Direction",
-        "func": "let y = flow.get(\"OP7_1HrTrendScore\");\nlet z = flow.get(\"OP7_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP7_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP7_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP7_TrendScore\",totalscore);\n\nif (msg.payload[7] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-4x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-4x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
+        "func": "let y = flow.get(\"OP7_1HrTrendScore\");\nlet z = flow.get(\"OP7_2HrTrendScore\");\nlet rate1hr = flow.get(\"OP7_1HRateCurrent\");\nlet rate2hr = flow.get(\"OP7_2HRateCurrent\");\n\nlet totalscore = y + z;\n\nflow.set(\"OP7_TrendScore\",totalscore);\n\nif (msg.payload[7] == null)\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore == null || (rate1hr == 0 && rate2hr == 0))\n{\n    msg = {payload:'<font color=\"gray\"><i class=\"fa fa-minus fa-2x\"></i></font>'};\n    return msg;\n}\n\nif (totalscore >= 3)\n{\n    msg = {payload:'<font color=\"green\"><i class=\"fa fa-arrow-up fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore == 2)\n{\n    msg = {payload:'<font color=\"yellow\"><i class=\"fa fa-arrow-right fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n}\n\nif (totalscore <= 1)\n{\n    msg = {payload:'<font color=\"red\"><i class=\"fa fa-arrow-down fa-2x\"></i></font>', totalscore:totalscore};\n    return msg;\n    \n}\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -38649,7 +38679,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_spot_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n.op_compete_trending{\nfont-size: 14px;\n}\n.op_compete{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
+        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 10px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_spot_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
