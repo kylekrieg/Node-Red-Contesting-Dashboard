@@ -387,7 +387,9 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 255,
+        "h": 482
     },
     {
         "id": "52886121c9629e0b",
@@ -411,7 +413,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -435,7 +439,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -460,7 +466,9 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 482
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -475,7 +483,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -490,7 +500,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -514,7 +526,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -538,7 +552,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -575,7 +591,9 @@
             "4b7abadd74993948"
         ],
         "x": -6,
-        "y": 679
+        "y": 679,
+        "w": 2072,
+        "h": 302
     },
     {
         "id": "28877ac600fea8b9",
@@ -600,7 +618,9 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -615,7 +635,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -639,7 +661,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -686,7 +710,9 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879
+        "y": 879,
+        "w": 1852,
+        "h": 462
     },
     {
         "id": "81692a3cb68d6cde",
@@ -719,7 +745,9 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1485.5
+        "y": 1485.5,
+        "w": 2458,
+        "h": 969
     },
     {
         "id": "d48758cdf0c8991d",
@@ -779,7 +807,9 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 2232,
+        "h": 802
     },
     {
         "id": "f830dd821e0240f4",
@@ -795,7 +825,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -942,7 +974,9 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 622
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -969,7 +1003,9 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79
+        "y": 79,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1006,7 +1042,9 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979
+        "y": 1979,
+        "w": 1272,
+        "h": 449.5
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1045,7 +1083,9 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5
+        "y": 1511.5,
+        "w": 1432,
+        "h": 449.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -1779,13 +1819,13 @@
     {
         "id": "1d924a93b9821236",
         "type": "ui_group",
-        "name": "Spot Rate",
+        "name": "Activity Rate",
         "tab": "200297fa.9ab198",
         "order": 7,
         "disp": true,
         "width": "12",
         "collapse": false,
-        "className": "dashboard_spot_rate"
+        "className": "dashboard_activity_rate"
     },
     {
         "id": "8a65c232b2637c6a",
@@ -6868,24 +6908,24 @@
         "wires": [
             [
                 "f6305d04b2aeb44c",
-                "06389f3eea5c1260",
-                "e60f3cadbc4e78ff",
-                "d0b1af6883fc61b1",
-                "cab897702f8a6f57",
-                "1497c72e88a8f6b1",
-                "b946bc8caa8d1dfa",
                 "b9e129bdae4de517",
-                "5bbc72a4e604df32"
+                "5bbc72a4e604df32",
+                "e60f3cadbc4e78ff",
+                "06389f3eea5c1260",
+                "b946bc8caa8d1dfa",
+                "1497c72e88a8f6b1",
+                "cab897702f8a6f57",
+                "d0b1af6883fc61b1"
             ],
             [
-                "a74a987615dd4bb9",
-                "fb911af0905d8f5d",
-                "ccb12f5a5e87937a",
                 "27f4e52f97117294",
                 "d9503f18f29524db",
                 "214b730a1dfad6cb",
-                "68eee47c38859dda",
-                "90474210b68e90b0"
+                "fb911af0905d8f5d",
+                "ccb12f5a5e87937a",
+                "a74a987615dd4bb9",
+                "90474210b68e90b0",
+                "68eee47c38859dda"
             ]
         ]
     },
@@ -7235,7 +7275,9 @@
         "wires": [
             [
                 "d67c999eabb4aba0",
-                "334aadb089f6f0c0"
+                "334aadb089f6f0c0",
+                "62221c4d6357e087",
+                "8e0bf07bbde7b816"
             ]
         ]
     },
@@ -7329,26 +7371,26 @@
         "y": 1860,
         "wires": [
             [
-                "06389f3eea5c1260",
-                "e60f3cadbc4e78ff",
-                "d0b1af6883fc61b1",
-                "cab897702f8a6f57",
-                "1497c72e88a8f6b1",
-                "b946bc8caa8d1dfa",
                 "b9e129bdae4de517",
-                "e4e19daf40493fb9",
-                "5bbc72a4e604df32"
+                "5bbc72a4e604df32",
+                "e60f3cadbc4e78ff",
+                "06389f3eea5c1260",
+                "b946bc8caa8d1dfa",
+                "1497c72e88a8f6b1",
+                "cab897702f8a6f57",
+                "d0b1af6883fc61b1",
+                "e4e19daf40493fb9"
             ],
             [
+                "27f4e52f97117294",
+                "d9503f18f29524db",
+                "df61b921bf703bd8",
+                "ccb12f5a5e87937a",
                 "a74a987615dd4bb9",
                 "fb911af0905d8f5d",
-                "ccb12f5a5e87937a",
-                "27f4e52f97117294",
                 "214b730a1dfad6cb",
-                "68eee47c38859dda",
                 "90474210b68e90b0",
-                "d9503f18f29524db",
-                "df61b921bf703bd8"
+                "68eee47c38859dda"
             ]
         ]
     },
@@ -10310,6 +10352,252 @@
         "x": 900,
         "y": 1960,
         "wires": []
+    },
+    {
+        "id": "22ce212957008805",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "group": "1d924a93b9821236",
+        "order": 6,
+        "width": "4",
+        "height": 2,
+        "name": "10 Minute Rate",
+        "label": "10 Minute Rate",
+        "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 2000,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "62221c4d6357e087",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "name": "10s Drop Limit",
+        "pauseType": "rate",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 960,
+        "y": 2580,
+        "wires": [
+            [
+                "723a47e287e37dc6"
+            ]
+        ]
+    },
+    {
+        "id": "723a47e287e37dc6",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "name": "SQL Select Rate",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-10 minutes');",
+        "output": "str",
+        "x": 1190,
+        "y": 2580,
+        "wires": [
+            [
+                "bb1c636833e868f0"
+            ]
+        ]
+    },
+    {
+        "id": "bb1c636833e868f0",
+        "type": "sqlite",
+        "z": "407d2b774fe67647",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "QSO Database",
+        "x": 1400,
+        "y": 2580,
+        "wires": [
+            [
+                "8319a564ccf90499"
+            ]
+        ]
+    },
+    {
+        "id": "8319a564ccf90499",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rate",
+                "pt": "msg",
+                "to": "payload[0].rate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 2580,
+        "wires": [
+            [
+                "c49fcce1f26e9347"
+            ]
+        ]
+    },
+    {
+        "id": "c49fcce1f26e9347",
+        "type": "subflow:c967abe5be484ee6",
+        "z": "407d2b774fe67647",
+        "name": "10 Minutes color",
+        "x": 1760,
+        "y": 2580,
+        "wires": [
+            [
+                "22ce212957008805"
+            ],
+            [
+                "22ce212957008805"
+            ],
+            [
+                "22ce212957008805"
+            ]
+        ]
+    },
+    {
+        "id": "d42c9a9932b07f03",
+        "type": "ui_text",
+        "z": "407d2b774fe67647",
+        "group": "1d924a93b9821236",
+        "order": 6,
+        "width": "4",
+        "height": 2,
+        "name": "30 Minute Rate",
+        "label": "30 Minute Rate",
+        "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 2000,
+        "y": 2640,
+        "wires": []
+    },
+    {
+        "id": "4f9fb9b8a6830954",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "name": "SQL Select Rate",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-30 minutes');",
+        "output": "str",
+        "x": 1190,
+        "y": 2640,
+        "wires": [
+            [
+                "85e77f2dbbbe95ec"
+            ]
+        ]
+    },
+    {
+        "id": "85e77f2dbbbe95ec",
+        "type": "sqlite",
+        "z": "407d2b774fe67647",
+        "mydb": "54f43a06.56d7b4",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "QSO Database",
+        "x": 1400,
+        "y": 2640,
+        "wires": [
+            [
+                "02207f8163f29d33"
+            ]
+        ]
+    },
+    {
+        "id": "02207f8163f29d33",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rate",
+                "pt": "msg",
+                "to": "payload[0].rate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 2640,
+        "wires": [
+            [
+                "b2fb0d06a18430c8"
+            ]
+        ]
+    },
+    {
+        "id": "b2fb0d06a18430c8",
+        "type": "subflow:c967abe5be484ee6",
+        "z": "407d2b774fe67647",
+        "name": "30 Minutes color",
+        "x": 1760,
+        "y": 2640,
+        "wires": [
+            [
+                "d42c9a9932b07f03"
+            ],
+            [
+                "d42c9a9932b07f03"
+            ],
+            [
+                "d42c9a9932b07f03"
+            ]
+        ]
+    },
+    {
+        "id": "8e0bf07bbde7b816",
+        "type": "delay",
+        "z": "407d2b774fe67647",
+        "name": "10S Drop Limit",
+        "pauseType": "rate",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 960,
+        "y": 2640,
+        "wires": [
+            [
+                "4f9fb9b8a6830954"
+            ]
+        ]
     },
     {
         "id": "4079239a4fd5c11c",
@@ -38312,7 +38600,7 @@
         "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
-        "nbRateUnits": "20",
+        "nbRateUnits": "60",
         "rateUnits": "second",
         "randomFirst": "1",
         "randomLast": "5",
@@ -38418,7 +38706,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_spot_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
+        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_activity_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
