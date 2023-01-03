@@ -25854,8 +25854,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 490,
-        "y": 680,
+        "x": 150,
+        "y": 420,
         "wires": [
             [
                 "1c46a9079b39b6af"
@@ -25867,16 +25867,19 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Set Global PC Names",
-        "func": "if (msg.payload.PC_name != \"\")\n{\n    var PCs = global.get(\"PCs\");\n    if(PCs){\n        global.set(\"PCs\", PCs.push(msg.payload.PC_name));\n    }\n    else{\n        var PCsa=[msg.payload.PC_name];\n        global.set(\"PCs\",PCsa)\n\n    }\n}\n\nif (msg.payload.PC2 != \"\")\n{\n    let PC2 = msg.payload.PC2\n    global.set(\"PC2\",PC2)\n}\n\nif (msg.payload.PC3 != \"\")\n{\n    let PC3 = msg.payload.PC3\n    global.set(\"PC3\",PC3)\n}\n\nif (msg.payload.PC4 != \"\")\n{\n    let PC4 = msg.payload.PC4\n    global.set(\"PC4\",PC4)\n}\n\nif (msg.payload.PC5 != \"\")\n{\n    let PC5 = msg.payload.PC5\n    global.set(\"PC5\",PC5)\n}\n\nif (msg.payload.PC6 != \"\")\n{\n    let PC6 = msg.payload.PC6\n    global.set(\"PC6\",PC6)\n}\n\nreturn msg;",
+        "func": "if (msg.payload.PC_name != \"\")\n{\n    var PCs = global.get(\"PCs\");\n    if(PCs != undefined){\n        let new_PCs = PCs.push(msg.payload.PC_name);\n        global.set(\"PCs\", new_PCs);\n    }\n    else{\n        var PCsa=[msg.payload.PC_name];\n        global.set(\"PCs\",PCsa)\n\n    }\n}\n\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 680,
+        "x": 380,
+        "y": 360,
         "wires": [
-            []
+            [
+                "8f87ecfb66cec63d",
+                "ea8b0991dd47e386"
+            ]
         ]
     },
     {
@@ -30673,11 +30676,11 @@
         "sqlquery": "fixed",
         "sql": "SELECT DISTINCT StationName from radio ORDER BY `timestamp`;",
         "name": "Choose PCs from DB",
-        "x": 160,
+        "x": 140,
         "y": 360,
         "wires": [
             [
-                "8f87ecfb66cec63d"
+                "1c46a9079b39b6af"
             ]
         ]
     },
@@ -30693,7 +30696,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -30706,7 +30709,7 @@
         "topic": "radio3",
         "topicType": "str",
         "className": "",
-        "x": 660,
+        "x": 800,
         "y": 440,
         "wires": [
             [
@@ -30740,12 +30743,12 @@
         "name": "Radio2",
         "label": "Radio2",
         "tooltip": "",
-        "place": "",
+        "place": "{{msg.radios.radio2}}",
         "group": "887ee2eadc46df9a",
         "order": 5,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -30758,7 +30761,7 @@
         "topic": "radio2",
         "topicType": "str",
         "className": "",
-        "x": 660,
+        "x": 800,
         "y": 400,
         "wires": [
             [
@@ -30773,12 +30776,12 @@
         "name": "Radio1",
         "label": "Radio1",
         "tooltip": "",
-        "place": "",
+        "place": "{{msg.radios.radio1}}",
         "group": "887ee2eadc46df9a",
         "order": 4,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -30791,7 +30794,7 @@
         "topic": "radio1",
         "topicType": "str",
         "className": "",
-        "x": 660,
+        "x": 800,
         "y": 360,
         "wires": [
             [
@@ -30811,7 +30814,7 @@
         "order": 7,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -30824,7 +30827,7 @@
         "topic": "radio4",
         "topicType": "str",
         "className": "",
-        "x": 660,
+        "x": 800,
         "y": 480,
         "wires": [
             [
@@ -30844,7 +30847,7 @@
         "order": 8,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -30857,7 +30860,7 @@
         "topic": "radio5",
         "topicType": "str",
         "className": "",
-        "x": 660,
+        "x": 800,
         "y": 520,
         "wires": [
             [
@@ -30870,13 +30873,13 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "change to options",
-        "func": "let length=msg.payload.length;\nmsg.options =[];\nfor (let i=0;i=length-1;i++){\n    msg.options.push(msg.payload[i].StationName)\n}\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\nlet PCs = global.get(\"PCs\");\nif (P1 == null) {\n    P1 = \"\"\n}\nif (P2 == null) {\n    P2 = \"\"\n}\nif (P3 == null) {\n    P3 = \"\"\n}\nif (P4 == null) {\n    P4 = \"\"\n}\nif (P5 == null) {\n    P5 = \"\"\n}\nif (P6 == null) {\n    P6 = \"\"\n}\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6,PCs)\nreturn msg;",
+        "func": "let length=msg.payload.length;\nmsg.options =[];\nfor (let i=0;i=length-1;i++){\n    msg.options.push(msg.payload[i].StationName)\n}\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\nlet PCs = global.get(\"PCs\");\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6,PCs)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 590,
         "y": 360,
         "wires": [
             [
@@ -30885,7 +30888,8 @@
                 "3160a3cf965792b6",
                 "0310b67c0342c959",
                 "131a5c94a9d2d0e6",
-                "e16bc4a1666da6df"
+                "e16bc4a1666da6df",
+                "12d6d5e2f061e623"
             ]
         ]
     },
@@ -30901,7 +30905,7 @@
         "order": 9,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -30914,7 +30918,7 @@
         "topic": "radio6",
         "topicType": "str",
         "className": "",
-        "x": 660,
+        "x": 800,
         "y": 560,
         "wires": [
             [
@@ -30933,7 +30937,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
+        "x": 1040,
         "y": 360,
         "wires": [
             []
@@ -31733,7 +31737,7 @@
         "type": "debug",
         "z": "204548a488401a1b",
         "name": "msg",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31764,7 +31768,7 @@
         "type": "debug",
         "z": "204548a488401a1b",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31774,6 +31778,40 @@
         "statusType": "auto",
         "x": 1080,
         "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "12d6d5e2f061e623",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ea8b0991dd47e386",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 400,
         "wires": []
     },
     {
