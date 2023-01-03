@@ -710,9 +710,7 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879,
-        "w": 1852,
-        "h": 462
+        "y": 879
     },
     {
         "id": "81692a3cb68d6cde",
@@ -745,9 +743,7 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1485.5,
-        "w": 2458,
-        "h": 969
+        "y": 1485.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -807,9 +803,7 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": 19
     },
     {
         "id": "f830dd821e0240f4",
@@ -974,9 +968,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819,
-        "w": 1912,
-        "h": 622
+        "y": 819
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -1003,9 +995,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79,
-        "w": 1032,
-        "h": 162
+        "y": 79
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1042,9 +1032,7 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979,
-        "w": 1272,
-        "h": 449.5
+        "y": 1979
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1083,9 +1071,7 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5,
-        "w": 1432,
-        "h": 449.5
+        "y": 1511.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -38706,7 +38692,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_activity_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
+        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.band_stats{\nfont-size: 26px;\n}\n.band_stats .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.dashboard_activity_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
