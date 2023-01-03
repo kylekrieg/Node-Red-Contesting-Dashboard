@@ -617,9 +617,9 @@
             "41b71b195d25cc36",
             "324101084f63a83e"
         ],
-        "x": 224,
+        "x": 234,
         "y": 1019,
-        "w": 632,
+        "w": 622,
         "h": 262
     },
     {
@@ -710,7 +710,9 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879
+        "y": 879,
+        "w": 1852,
+        "h": 462
     },
     {
         "id": "81692a3cb68d6cde",
@@ -743,7 +745,9 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1485.5
+        "y": 1485.5,
+        "w": 2458,
+        "h": 969
     },
     {
         "id": "d48758cdf0c8991d",
@@ -803,7 +807,9 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 2232,
+        "h": 802
     },
     {
         "id": "f830dd821e0240f4",
@@ -968,7 +974,9 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 622
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -995,7 +1003,9 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79
+        "y": 79,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1032,7 +1042,9 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979
+        "y": 1979,
+        "w": 1272,
+        "h": 449.5
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1071,7 +1083,9 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5
+        "y": 1511.5,
+        "w": 1432,
+        "h": 449.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -1269,7 +1283,7 @@
         "type": "ui_tab",
         "name": "Radio Info",
         "icon": "mi-radio",
-        "order": 3,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -1344,7 +1358,7 @@
         "type": "ui_tab",
         "name": "OP Competition",
         "icon": "mi-directions_run",
-        "order": 4,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -1384,7 +1398,7 @@
         "type": "ui_tab",
         "name": "Pi Status",
         "icon": "mi-computer",
-        "order": 8,
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
@@ -1492,7 +1506,7 @@
         "type": "ui_tab",
         "name": "Band Stats",
         "icon": "mi-query_stats",
-        "order": 5,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -1659,7 +1673,7 @@
         "disp": true,
         "width": "8",
         "collapse": false,
-        "className": ""
+        "className": "band_spots_op"
     },
     {
         "id": "4244ba9d238d6a13",
@@ -1668,7 +1682,7 @@
         "tab": "ecc5f14b5a3d677e",
         "order": 1,
         "disp": true,
-        "width": "30",
+        "width": "28",
         "collapse": false,
         "className": ""
     },
@@ -1887,7 +1901,7 @@
         "type": "ui_tab",
         "name": "Streaming Dashboard",
         "icon": "mi-visibility",
-        "order": 2,
+        "order": 8,
         "disabled": false,
         "hidden": false
     },
@@ -1962,7 +1976,7 @@
         "type": "ui_tab",
         "name": "RBN Spots",
         "icon": "mi-pin_drop",
-        "order": 7,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -2026,7 +2040,7 @@
         "type": "ui_tab",
         "name": "Scoreboard",
         "icon": "mi-sports_score",
-        "order": 6,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -2321,7 +2335,7 @@
         "type": "ui_tab",
         "name": "WAC Logger",
         "icon": "dashboard",
-        "order": 11,
+        "order": 12,
         "disabled": false,
         "hidden": false
     },
@@ -20667,8 +20681,8 @@
         "name": "QSO Rate by Band Chart",
         "group": "4244ba9d238d6a13",
         "order": 1,
-        "width": 30,
-        "height": 6,
+        "width": "28",
+        "height": "5",
         "label": "",
         "chartType": "line",
         "legend": "true",
@@ -20697,7 +20711,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "className": "",
+        "className": "chart_title",
         "x": 1570,
         "y": 1580,
         "wires": [
@@ -38692,7 +38706,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n\n\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.radio_info .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats{\nfont-size: 20px;\n}\n.band_stats .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.band_stats_spot_rate{\nfont-size: 30px;\n}\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.dashboard_activity_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
+        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.radio_info .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats{\nfont-size: 20px;\n}\n.band_stats .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.band_stats_spot_rate{\nfont-size: 19px;\n}\n.band_stats_op {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n.band_stats_op .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n\n\n.dashboard_activity_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -39016,7 +39030,7 @@
         "type": "debug",
         "z": "b73cc2bb5f424b69",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
