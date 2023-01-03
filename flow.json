@@ -21218,8 +21218,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1350,
-        "y": 1800,
+        "x": 1310,
+        "y": 1740,
         "wires": [
             []
         ]
@@ -21262,8 +21262,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1350,
-        "y": 1920,
+        "x": 1310,
+        "y": 1780,
         "wires": [
             []
         ]
@@ -21306,8 +21306,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1350,
-        "y": 2040,
+        "x": 1310,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -21350,8 +21350,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1350,
-        "y": 2160,
+        "x": 1310,
+        "y": 1860,
         "wires": [
             []
         ]
@@ -21394,8 +21394,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1350,
-        "y": 2280,
+        "x": 1310,
+        "y": 1900,
         "wires": [
             []
         ]
@@ -21438,8 +21438,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1360,
-        "y": 1680,
+        "x": 1320,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -21552,11 +21552,10 @@
         "pauseAtStartup": false,
         "topicDependent": false,
         "x": 1110,
-        "y": 1700,
+        "y": 1720,
         "wires": [
             [
-                "5809e19089ededaa",
-                "506e377454faef12"
+                "5809e19089ededaa"
             ],
             []
         ]
@@ -21573,11 +21572,10 @@
         "pauseAtStartup": false,
         "topicDependent": false,
         "x": 1110,
-        "y": 1820,
+        "y": 1760,
         "wires": [
             [
-                "3ae89c5cc4fe103f",
-                "e622ffd5cdbaef68"
+                "3ae89c5cc4fe103f"
             ],
             []
         ]
@@ -21594,11 +21592,10 @@
         "pauseAtStartup": false,
         "topicDependent": false,
         "x": 1110,
-        "y": 1940,
+        "y": 1800,
         "wires": [
             [
-                "6d65f63213b762f7",
-                "d798a2b1c1c0b17b"
+                "6d65f63213b762f7"
             ],
             []
         ]
@@ -21615,11 +21612,10 @@
         "pauseAtStartup": false,
         "topicDependent": false,
         "x": 1110,
-        "y": 2060,
+        "y": 1840,
         "wires": [
             [
-                "4ef5080065abf323",
-                "1f5203b34775bd75"
+                "4ef5080065abf323"
             ],
             []
         ]
@@ -21636,11 +21632,10 @@
         "pauseAtStartup": false,
         "topicDependent": false,
         "x": 1110,
-        "y": 2180,
+        "y": 1880,
         "wires": [
             [
-                "98ad9959135590cc",
-                "c1122300b4ec1134"
+                "98ad9959135590cc"
             ],
             []
         ]
@@ -21657,224 +21652,12 @@
         "pauseAtStartup": false,
         "topicDependent": false,
         "x": 1110,
-        "y": 2320,
+        "y": 1920,
         "wires": [
             [
-                "c9f3f35ee4a07b4d",
-                "9402f6c4e82b6f9a"
+                "c9f3f35ee4a07b4d"
             ],
             []
-        ]
-    },
-    {
-        "id": "cfa17dadbe89f655",
-        "type": "ui_text",
-        "z": "9ed270102b553c75",
-        "group": "1d924a93b9821236",
-        "order": 4,
-        "width": 4,
-        "height": 1,
-        "name": "160M N1MM Dashboard Spot Rate",
-        "label": "",
-        "format": "<font color={{msg.color}}> 160M - {{msg.payload}}/Min</font>",
-        "layout": "row-left",
-        "className": "",
-        "x": 1620,
-        "y": 1740,
-        "wires": []
-    },
-    {
-        "id": "00c538c65092fee5",
-        "type": "ui_text",
-        "z": "9ed270102b553c75",
-        "group": "1d924a93b9821236",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "name": "80M N1MM Dashboard Spot Rate",
-        "label": "",
-        "format": "<font color={{msg.color}}> 80M - {{msg.payload}}/Min</font>",
-        "layout": "row-left",
-        "className": "",
-        "x": 1620,
-        "y": 1860,
-        "wires": []
-    },
-    {
-        "id": "4027ad68721e01ae",
-        "type": "ui_text",
-        "z": "9ed270102b553c75",
-        "group": "1d924a93b9821236",
-        "order": 2,
-        "width": 4,
-        "height": 1,
-        "name": "40M N1MM Dashboard Spot Rate",
-        "label": "",
-        "format": "<font color={{msg.color}}> 40M - {{msg.payload}}/Min</font>",
-        "layout": "row-center",
-        "className": "<font color={{msg.color}}>{{msg.rate}} Q's/Hr</font>",
-        "x": 1620,
-        "y": 1980,
-        "wires": []
-    },
-    {
-        "id": "3d79af706b0596f0",
-        "type": "ui_text",
-        "z": "9ed270102b553c75",
-        "group": "1d924a93b9821236",
-        "order": 3,
-        "width": 4,
-        "height": 1,
-        "name": "20M N1MM Dashboard Spot Rate",
-        "label": "",
-        "format": "<font color={{msg.color}}> 20M - {{msg.payload}}/Min</font>",
-        "layout": "row-left",
-        "className": "",
-        "x": 1620,
-        "y": 2100,
-        "wires": []
-    },
-    {
-        "id": "da9417eff5bc179a",
-        "type": "ui_text",
-        "z": "9ed270102b553c75",
-        "group": "1d924a93b9821236",
-        "order": 5,
-        "width": 4,
-        "height": 1,
-        "name": "15M N1MM Dashboard Spot Rate",
-        "label": "",
-        "format": "<font color={{msg.color}}> 15M - {{msg.payload}}/Min</font>",
-        "layout": "row-center",
-        "className": "",
-        "x": 1620,
-        "y": 2220,
-        "wires": []
-    },
-    {
-        "id": "fd35788fe10c1ee7",
-        "type": "ui_text",
-        "z": "9ed270102b553c75",
-        "group": "1d924a93b9821236",
-        "order": 6,
-        "width": 4,
-        "height": 1,
-        "name": "10M N1MM Dashboard Spot Rate",
-        "label": "",
-        "format": "<font color={{msg.color}}> 10M - {{msg.payload}}/Min</font>",
-        "layout": "row-left",
-        "className": "",
-        "x": 1620,
-        "y": 2340,
-        "wires": []
-    },
-    {
-        "id": "d798a2b1c1c0b17b",
-        "type": "subflow:74c92a5f32f17459",
-        "z": "9ed270102b553c75",
-        "x": 1330,
-        "y": 1980,
-        "wires": [
-            [
-                "4027ad68721e01ae"
-            ],
-            [
-                "4027ad68721e01ae"
-            ],
-            [
-                "4027ad68721e01ae"
-            ]
-        ]
-    },
-    {
-        "id": "506e377454faef12",
-        "type": "subflow:74c92a5f32f17459",
-        "z": "9ed270102b553c75",
-        "name": "",
-        "x": 1330,
-        "y": 1740,
-        "wires": [
-            [
-                "cfa17dadbe89f655"
-            ],
-            [
-                "cfa17dadbe89f655"
-            ],
-            [
-                "cfa17dadbe89f655"
-            ]
-        ]
-    },
-    {
-        "id": "e622ffd5cdbaef68",
-        "type": "subflow:74c92a5f32f17459",
-        "z": "9ed270102b553c75",
-        "x": 1330,
-        "y": 1860,
-        "wires": [
-            [
-                "00c538c65092fee5"
-            ],
-            [
-                "00c538c65092fee5"
-            ],
-            [
-                "00c538c65092fee5"
-            ]
-        ]
-    },
-    {
-        "id": "1f5203b34775bd75",
-        "type": "subflow:74c92a5f32f17459",
-        "z": "9ed270102b553c75",
-        "x": 1330,
-        "y": 2100,
-        "wires": [
-            [
-                "3d79af706b0596f0"
-            ],
-            [
-                "3d79af706b0596f0"
-            ],
-            [
-                "3d79af706b0596f0"
-            ]
-        ]
-    },
-    {
-        "id": "c1122300b4ec1134",
-        "type": "subflow:74c92a5f32f17459",
-        "z": "9ed270102b553c75",
-        "x": 1330,
-        "y": 2220,
-        "wires": [
-            [
-                "da9417eff5bc179a"
-            ],
-            [
-                "da9417eff5bc179a"
-            ],
-            [
-                "da9417eff5bc179a"
-            ]
-        ]
-    },
-    {
-        "id": "9402f6c4e82b6f9a",
-        "type": "subflow:74c92a5f32f17459",
-        "z": "9ed270102b553c75",
-        "x": 1330,
-        "y": 2340,
-        "wires": [
-            [
-                "fd35788fe10c1ee7"
-            ],
-            [
-                "fd35788fe10c1ee7"
-            ],
-            [
-                "fd35788fe10c1ee7"
-            ]
         ]
     },
     {
