@@ -387,9 +387,7 @@
             "a8a10cc2.9d0ae"
         ],
         "x": 474,
-        "y": 159,
-        "w": 255,
-        "h": 482
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -413,9 +411,7 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -439,9 +435,7 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 482
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -466,9 +460,7 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 482
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -483,9 +475,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -500,9 +490,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -526,9 +514,7 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -552,9 +538,7 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -591,9 +575,7 @@
             "4b7abadd74993948"
         ],
         "x": -6,
-        "y": 679,
-        "w": 2072,
-        "h": 302
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -617,10 +599,8 @@
             "41b71b195d25cc36",
             "324101084f63a83e"
         ],
-        "x": 234,
-        "y": 1019,
-        "w": 622,
-        "h": 262
+        "x": 224,
+        "y": 1019
     },
     {
         "id": "c6a5789101548ba9",
@@ -635,9 +615,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -661,9 +639,7 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 281,
-        "h": 482
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -710,9 +686,7 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879,
-        "w": 1852,
-        "h": 462
+        "y": 879
     },
     {
         "id": "81692a3cb68d6cde",
@@ -745,9 +719,7 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1485.5,
-        "w": 2458,
-        "h": 969
+        "y": 1485.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -807,9 +779,7 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": 19
     },
     {
         "id": "f830dd821e0240f4",
@@ -825,9 +795,7 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "f01baabf4527b6e5",
@@ -974,9 +942,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819,
-        "w": 1912,
-        "h": 622
+        "y": 819
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -1003,9 +969,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79,
-        "w": 1032,
-        "h": 162
+        "y": 79
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1042,9 +1006,7 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979,
-        "w": 1272,
-        "h": 449.5
+        "y": 1979
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1083,9 +1045,7 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5,
-        "w": 1432,
-        "h": 449.5
+        "y": 1511.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -25838,14 +25798,14 @@
         "options": [
             {
                 "label": "Other Radio Computer Name",
-                "value": "PC_name",
+                "value": "StationName",
                 "type": "text",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "PC_name": ""
+            "StationName": ""
         },
         "payload": "",
         "submit": "submit",
@@ -25866,20 +25826,42 @@
         "id": "1c46a9079b39b6af",
         "type": "function",
         "z": "204548a488401a1b",
-        "name": "Set Global PC Names",
-        "func": "if (msg.payload.PC_name != \"\")\n{\n    var PCs = global.get(\"PCs\");\n    if(PCs != undefined){\n        let new_PCs = PCs.push(msg.payload.PC_name);\n        global.set(\"PCs\", new_PCs);\n    }\n    else{\n        var PCsa=[msg.payload.PC_name];\n        global.set(\"PCs\",PCsa)\n\n    }\n}\n\n\n\nreturn msg;",
-        "outputs": 1,
+        "name": "Add Placeholders and Options ",
+        "func": "function onlyUnique(value, index, self) {\n    return self.indexOf(value) === index;\n}\nfunction JSONCopy(source) {\n    return JSON.parse(JSON.stringify(source));\n}\nfunction addPlaceholder(msg, placeholder){\n    var msga=JSONCopy(msg);\n    msga.payload = placeholder;\n    return msga;\n}\nvar p1 = global.get(\"PC1\");\nvar p2 = global.get(\"PC2\");\nvar p3 = global.get(\"PC3\");\nvar p4 = global.get(\"PC4\");\nvar p5 = global.get(\"PC5\");\nvar p6 = global.get(\"PC6\");\nvar PCs_list = global.get(\"PCs\");\nvar store={};\nif (msg.payload.StationName != \"\")\n{\n    if(PCs_list == null){\n        store.PCs_Output = [msg.payload.StationName];\n        global.set(\"PCs\", store.PCs_Output)\n    }\n    else{\n        var tmp_array=PCs_list;\n        let length=msg.payload.length;\n        for (let i = 0; i = length - 1; i++) {\n            tmp_array=tmp_array.push(msg.payload[i].StationName);\n        }\n        var raw_pcs = tmp_array;\n        store.PCs_Output = raw_pcs.filter(onlyUnique);\n        global.set(\"PCs\", store.PCs_Output);\n\n    }\n}\n\nvar msg_master={};\nmsg_master.options=store.PCs_Output;\nvar payload1= addPlaceholder(msg_master,p1);\nvar payload2 = addPlaceholder(msg_master, p2);\nvar payload3 = addPlaceholder(msg_master, p3);\nvar payload4 = addPlaceholder(msg_master, p4);\nvar payload5 = addPlaceholder(msg_master, p5);\nvar payload6 = addPlaceholder(msg_master, p6);\nreturn [payload1,payload2,payload3,payload4,payload5,payload6];",
+        "outputs": 6,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 360,
+        "x": 530,
+        "y": 460,
         "wires": [
             [
-                "8f87ecfb66cec63d",
-                "ea8b0991dd47e386"
+                "45487adfd2506609"
+            ],
+            [
+                "52b9731345e98156"
+            ],
+            [
+                "3160a3cf965792b6"
+            ],
+            [
+                "0310b67c0342c959"
+            ],
+            [
+                "131a5c94a9d2d0e6"
+            ],
+            [
+                "e16bc4a1666da6df"
             ]
+        ],
+        "outputLabels": [
+            "payload1",
+            "payload2",
+            "payload3",
+            "payload4",
+            "payload5",
+            "payload6"
         ]
     },
     {
@@ -26623,7 +26605,7 @@
         "z": "204548a488401a1b",
         "name": "Computer Name Input",
         "info": "Computer Name Input - These are the computer names running N1MM for each radio.  Input the computer names EXACTLY how they defined on the computer name.  Be aware of upper and lower case names.  You can find the computer name by typing 'computername' in the search bar beside the start menu.  \n\nGet Radio Computer Names - This will dispaly the computer names in the database.  \n\nNote : the first two computer names entered into the input fields will be displayed on the N1MM Dashboard main screen (contest overview & map).\n\n",
-        "x": 440,
+        "x": 160,
         "y": 460,
         "wires": []
     },
@@ -27696,7 +27678,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Erase Current PC Names",
-        "func": "global.set(\"PC1\",null);\nglobal.set(\"PC2\",null);\nglobal.set(\"PC3\",null);\nglobal.set(\"PC4\",null);\nglobal.set(\"PC5\",null);\nglobal.set(\"PC6\",null);\n\n\n\nmsg.payload = \"PC Names Have Been Reset\"\n\nreturn msg;",
+        "func": "global.set(\"PC1\",null);\nglobal.set(\"PC2\",null);\nglobal.set(\"PC3\",null);\nglobal.set(\"PC4\",null);\nglobal.set(\"PC5\",null);\nglobal.set(\"PC6\",null);\nglobal.set(\"PCs\",null)\n\n\nmsg.payload = \"PC Names Have Been Reset\"\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -30676,8 +30658,8 @@
         "sqlquery": "fixed",
         "sql": "SELECT DISTINCT StationName from radio ORDER BY `timestamp`;",
         "name": "Choose PCs from DB",
-        "x": 140,
-        "y": 360,
+        "x": 160,
+        "y": 380,
         "wires": [
             [
                 "1c46a9079b39b6af"
@@ -30709,7 +30691,7 @@
         "topic": "radio3",
         "topicType": "str",
         "className": "",
-        "x": 800,
+        "x": 860,
         "y": 440,
         "wires": [
             [
@@ -30743,7 +30725,7 @@
         "name": "Radio2",
         "label": "Radio2",
         "tooltip": "",
-        "place": "{{msg.radios.radio2}}",
+        "place": "",
         "group": "887ee2eadc46df9a",
         "order": 5,
         "width": 0,
@@ -30761,7 +30743,7 @@
         "topic": "radio2",
         "topicType": "str",
         "className": "",
-        "x": 800,
+        "x": 860,
         "y": 400,
         "wires": [
             [
@@ -30776,7 +30758,7 @@
         "name": "Radio1",
         "label": "Radio1",
         "tooltip": "",
-        "place": "{{msg.radios.radio1}}",
+        "place": "",
         "group": "887ee2eadc46df9a",
         "order": 4,
         "width": 0,
@@ -30794,7 +30776,7 @@
         "topic": "radio1",
         "topicType": "str",
         "className": "",
-        "x": 800,
+        "x": 860,
         "y": 360,
         "wires": [
             [
@@ -30827,7 +30809,7 @@
         "topic": "radio4",
         "topicType": "str",
         "className": "",
-        "x": 800,
+        "x": 860,
         "y": 480,
         "wires": [
             [
@@ -30860,36 +30842,11 @@
         "topic": "radio5",
         "topicType": "str",
         "className": "",
-        "x": 800,
+        "x": 860,
         "y": 520,
         "wires": [
             [
                 "92906228f23e7753"
-            ]
-        ]
-    },
-    {
-        "id": "8f87ecfb66cec63d",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "change to options",
-        "func": "let length=msg.payload.length;\nmsg.options =[];\nfor (let i=0;i=length-1;i++){\n    msg.options.push(msg.payload[i].StationName)\n}\nmsg.payload={};\nlet P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\nlet PCs = global.get(\"PCs\");\n\nmsg.radios = {\"radio1\":P1,\"radio2\":P2,\"radio3\":P3,\"radio4\":P4,\"radio5\":P5,\"radio6\":P6};\nmsg.options.push(P1,P2,P3,P4,P5,P6,PCs)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 590,
-        "y": 360,
-        "wires": [
-            [
-                "45487adfd2506609",
-                "52b9731345e98156",
-                "3160a3cf965792b6",
-                "0310b67c0342c959",
-                "131a5c94a9d2d0e6",
-                "e16bc4a1666da6df",
-                "12d6d5e2f061e623"
             ]
         ]
     },
@@ -30918,7 +30875,7 @@
         "topic": "radio6",
         "topicType": "str",
         "className": "",
-        "x": 800,
+        "x": 860,
         "y": 560,
         "wires": [
             [
@@ -30931,13 +30888,13 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Set Global PC Names",
-        "func": "\nif (msg.payload != \"\"){\n    if (msg.topic==\"radio1\"){\n        let PC1 = msg.payload\n        global.set(\"PC1\",PC1)\n    }\n    if (msg.topic == \"radio2\")\n    {\n        let PC2 = msg.payload\n        global.set(\"PC2\",PC2)\n    }\n\n    if (msg.topic != \"radio3\")\n    {\n        let PC3 = msg.payload\n        global.set(\"PC3\",PC3)\n    }\n\n    if (msg.topic == \"radio4\")\n    {\n        let PC4 = msg.payload\n        global.set(\"PC4\",PC4)\n    }\n\n    if (msg.topic == \"radio5\")\n    {\n        let PC5 = msg.payload\n        global.set(\"PC5\",PC5)\n    }\n\n    if (msg.topic== \"radio6\")\n    {\n        let PC6 = msg.payload\n        global.set(\"PC6\",PC6)\n    }\n}\nreturn msg;",
+        "func": "\nif (msg.payload != \"\"){\n    if (msg.topic == \"radio1\"){\n        let PC1 = msg.payload\n        global.set(\"PC1\",PC1)\n    }\n    if (msg.topic == \"radio2\")\n    {\n        let PC2 = msg.payload\n        global.set(\"PC2\",PC2)\n    }\n\n    if (msg.topic == \"radio3\")\n    {\n        let PC3 = msg.payload\n        global.set(\"PC3\",PC3)\n    }\n\n    if (msg.topic == \"radio4\")\n    {\n        let PC4 = msg.payload\n        global.set(\"PC4\",PC4)\n    }\n\n    if (msg.topic == \"radio5\")\n    {\n        let PC5 = msg.payload\n        global.set(\"PC5\",PC5)\n    }\n\n    if (msg.topic== \"radio6\")\n    {\n        let PC6 = msg.payload\n        global.set(\"PC6\",PC6)\n    }\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
+        "x": 1140,
         "y": 360,
         "wires": [
             []
@@ -31781,38 +31738,33 @@
         "wires": []
     },
     {
-        "id": "12d6d5e2f061e623",
-        "type": "debug",
+        "id": "e95f5912995d0bc9",
+        "type": "inject",
         "z": "204548a488401a1b",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "ea8b0991dd47e386",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 400,
-        "wires": []
+        "name": "Init Options",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 500,
+        "wires": [
+            [
+                "1c46a9079b39b6af"
+            ]
+        ]
     },
     {
         "id": "1f45eb9a.6f2614",
@@ -37601,8 +37553,8 @@
         "type": "debug",
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
-        "name": "",
-        "active": true,
+        "name": "Init Lightning Command",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -37610,7 +37562,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 730,
+        "x": 790,
         "y": 940,
         "wires": []
     },
@@ -38679,7 +38631,7 @@
         "type": "debug",
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
-        "name": "",
+        "name": "All Strikes",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -38688,7 +38640,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "counter",
-        "x": 990,
+        "x": 1000,
         "y": 720,
         "wires": []
     },
@@ -38697,8 +38649,8 @@
         "type": "debug",
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
-        "name": "",
-        "active": true,
+        "name": "Lightning Close",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -38706,7 +38658,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "counter",
-        "x": 1210,
+        "x": 1200,
         "y": 720,
         "wires": []
     },
