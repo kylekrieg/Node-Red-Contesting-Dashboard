@@ -64,6 +64,14 @@
         "env": []
     },
     {
+        "id": "09eb64b651f58dce",
+        "type": "tab",
+        "label": "All flows for Contest Not needed",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "bd8a446b999750f9",
         "type": "tab",
         "label": "RBN Mapping",
@@ -384,10 +392,13 @@
             "4f76379f46c13673",
             "dbcb9a738301da97",
             "ea4b0c4d43bbf2e8",
-            "a8a10cc2.9d0ae"
+            "a8a10cc2.9d0ae",
+            "ab98427.85cd3c"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 272,
+        "h": 522
     },
     {
         "id": "52886121c9629e0b",
@@ -411,7 +422,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -435,7 +448,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -460,7 +475,9 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 482
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -475,7 +492,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -490,7 +509,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -514,7 +535,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -538,7 +561,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -575,7 +600,9 @@
             "4b7abadd74993948"
         ],
         "x": -6,
-        "y": 679
+        "y": 679,
+        "w": 2072,
+        "h": 302
     },
     {
         "id": "28877ac600fea8b9",
@@ -600,7 +627,9 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -615,7 +644,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -639,7 +670,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -795,7 +828,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -1369,9 +1404,9 @@
         "tab": "08eed6c3517c624e",
         "order": 2,
         "disp": true,
-        "width": 12,
+        "width": "12",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "8bf40d033d555b71",
@@ -1719,7 +1754,7 @@
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "887ee2eadc46df9a",
@@ -1730,18 +1765,18 @@
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "475c1eff5d97ffe5",
         "type": "ui_group",
         "name": "Contest Configuration",
         "tab": "08eed6c3517c624e",
-        "order": 7,
+        "order": 4,
         "disp": true,
-        "width": "6",
+        "width": 6,
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "b5c190b1c6ec4907",
@@ -1750,9 +1785,9 @@
         "tab": "08eed6c3517c624e",
         "order": 1,
         "disp": true,
-        "width": 12,
+        "width": "12",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "76879f1e69f23640",
@@ -1770,11 +1805,11 @@
         "type": "ui_group",
         "name": "Cluster Login Callsign",
         "tab": "08eed6c3517c624e",
-        "order": 6,
+        "order": 7,
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "1d924a93b9821236",
@@ -1792,11 +1827,11 @@
         "type": "ui_group",
         "name": "Call Lookup Engine & Login ",
         "tab": "08eed6c3517c624e",
-        "order": 10,
+        "order": 13,
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "465f5622aae04ed5",
@@ -1854,7 +1889,7 @@
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "568305b092b67570",
@@ -1914,22 +1949,22 @@
         "type": "ui_group",
         "name": "Announcements",
         "tab": "08eed6c3517c624e",
-        "order": 12,
+        "order": 11,
         "disp": true,
-        "width": "6",
+        "width": "8",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "52728e3a5743376c",
         "type": "ui_group",
         "name": "OP Competition Sort By",
         "tab": "08eed6c3517c624e",
-        "order": 11,
+        "order": 16,
         "disp": true,
-        "width": "6",
+        "width": 5,
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "7bbebae56744a5d8",
@@ -1978,11 +2013,11 @@
         "type": "ui_group",
         "name": "Q's/Hr Rate Color Config",
         "tab": "08eed6c3517c624e",
-        "order": 4,
+        "order": 6,
         "disp": true,
-        "width": "6",
+        "width": 6,
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "5e3039a0172f86b1",
@@ -1993,7 +2028,7 @@
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "eb1487788861989b",
@@ -2075,22 +2110,22 @@
         "type": "ui_group",
         "name": "Distance Measurement",
         "tab": "08eed6c3517c624e",
-        "order": 13,
+        "order": 14,
         "disp": true,
-        "width": "6",
+        "width": 6,
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "535f5d4509d91b5e",
         "type": "ui_group",
         "name": "Backup & Restore",
         "tab": "08eed6c3517c624e",
-        "order": 14,
+        "order": 15,
         "disp": true,
-        "width": "6",
+        "width": 4,
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "ab90bdc2382e7735",
@@ -2183,11 +2218,11 @@
         "type": "ui_group",
         "name": "Dashboard Upgrade",
         "tab": "08eed6c3517c624e",
-        "order": 15,
+        "order": 12,
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "1ea34d06.1438c3",
@@ -2284,11 +2319,11 @@
         "type": "ui_group",
         "name": "Radiosport.live Data ",
         "tab": "08eed6c3517c624e",
-        "order": 16,
+        "order": 10,
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "config"
     },
     {
         "id": "6ae284209bc95605",
@@ -2417,14 +2452,52 @@
         "className": ""
     },
     {
-        "id": "ccdd35e8bb4ac10f",
-        "type": "ui_spacer",
-        "z": "407d2b774fe67647",
-        "name": "spacer",
-        "group": "5e3039a0172f86b1",
-        "order": 2,
-        "width": 2,
-        "height": 1
+        "id": "f7fc598d8d40c287",
+        "type": "ui_group",
+        "d": true,
+        "name": "Backup",
+        "tab": "08eed6c3517c624e",
+        "order": 17,
+        "disp": false,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a605595c.ac6378",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "78387f0f.22098",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false
+    },
+    {
+        "id": "110f893b.a0f1d7",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "726cbb20.1af4f4",
+        "order": 13,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "78387f0f.22098",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "726cbb20.1af4f4",
+        "type": "ui_tab",
+        "name": "SEC",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "db6c3ead34896ed7",
@@ -25628,42 +25701,6 @@
         ]
     },
     {
-        "id": "5c4dd14a7c2c8a1e",
-        "type": "ui_ui_control",
-        "z": "204548a488401a1b",
-        "name": "Get IU Control",
-        "events": "all",
-        "x": 880,
-        "y": 1120,
-        "wires": [
-            [
-                "3e32507cf496c14e",
-                "bee1f8812d8d8760",
-                "2743e8dfd93fb7c8"
-            ]
-        ]
-    },
-    {
-        "id": "e21f3e0591833840",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Rotate tabs based on seconds",
-        "func": "let currentTime = new Date();\nlet seconds = currentTime.getSeconds();\nlet socketid = global.get('socketid');\nlet socketip = global.get('socketip');\n\nif (seconds == 20)\n{\n    return {payload:\"change\",\"tab\":1, \"name\":\"Radio Info\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n// return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nif (seconds == 40)\n{\n    return {payload:\"change\", \"tab\":2, \"name\":\"OP Competition\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n// return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nif (seconds == 0)\n{\n    return {payload:\"change\", \"tab\":3, \"name\":\"Band Stats\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n//return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nreturn;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 1220,
-        "wires": [
-            [
-                "57273c6d705dbfce",
-                "aa4d1f3abac4a62f"
-            ]
-        ]
-    },
-    {
         "id": "5e1859619292b1b8",
         "type": "link out",
         "z": "204548a488401a1b",
@@ -25793,8 +25830,8 @@
         "label": "",
         "group": "887ee2eadc46df9a",
         "order": 2,
-        "width": 6,
-        "height": 1,
+        "width": 0,
+        "height": 0,
         "options": [
             {
                 "label": "Other Radio Computer Name",
@@ -25814,8 +25851,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 150,
-        "y": 420,
+        "x": 450,
+        "y": 380,
         "wires": [
             [
                 "1c46a9079b39b6af"
@@ -25833,8 +25870,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 460,
+        "x": 830,
+        "y": 400,
         "wires": [
             [
                 "45487adfd2506609"
@@ -25876,9 +25913,9 @@
         "label": "The First Two PC Names Will Appear on the N1MM Dashboard With the Map",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "className": "",
-        "x": 360,
-        "y": 720,
+        "className": "n1mm",
+        "x": 720,
+        "y": 500,
         "wires": []
     },
     {
@@ -25896,28 +25933,11 @@
         "className": "",
         "topic": "",
         "name": "Show Get Radio Computer Names",
-        "x": 780,
-        "y": 760,
+        "x": 1000,
+        "y": 560,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "57273c6d705dbfce",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "After Function",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 1180,
-        "wires": []
     },
     {
         "id": "44ad2f416930e4e9",
@@ -25930,12 +25950,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
+        "x": 1140,
         "y": 920,
         "wires": [
-            [
-                "289eb29cd66ebe0f"
-            ]
+            []
         ]
     },
     {
@@ -25945,9 +25963,9 @@
         "name": "4 Contest Callsign Entry",
         "label": "",
         "group": "475c1eff5d97ffe5",
-        "order": 5,
-        "width": 6,
-        "height": 1,
+        "order": 4,
+        "width": 0,
+        "height": 0,
         "options": [
             {
                 "label": "Contest Callsign",
@@ -25967,7 +25985,7 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 570,
+        "x": 830,
         "y": 920,
         "wires": [
             [
@@ -25976,202 +25994,13 @@
         ]
     },
     {
-        "id": "0979daa9c078c057",
-        "type": "ui_form",
-        "z": "204548a488401a1b",
-        "d": true,
-        "name": "",
-        "label": "Socket ID & IP",
-        "group": "",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "options": [
-            {
-                "label": "Socket ID",
-                "value": "socketid",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Machine IP",
-                "value": "socketip",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "socketid": "",
-            "socketip": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 120,
-        "y": 1100,
-        "wires": [
-            [
-                "80b7b6186bcf121d",
-                "e0137d1a709aca80"
-            ]
-        ]
-    },
-    {
-        "id": "80b7b6186bcf121d",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Set Global Rotating Session ID",
-        "func": "let socketip = msg.payload.socketip\nlet socketid = msg.payload.socketid\nglobal.set(\"socketid\",socketid)\nglobal.set(\"socketip\",socketip)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 390,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "87bbe35110f717a1",
-        "type": "ui_toast",
-        "z": "204548a488401a1b",
-        "d": true,
-        "position": "dialog",
-        "displayTime": "",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "Cancel",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Show Socket ID",
-        "x": 580,
-        "y": 1140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e0137d1a709aca80",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Set payload to printout",
-        "func": "socketid = msg.payload.socketid\nsocketip = msg.payload.socketip\n\nmsg.payload = \"socketid=\" + socketid + \"  \" + \"IP=\" + socketip;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 1140,
-        "wires": [
-            [
-                "87bbe35110f717a1"
-            ]
-        ]
-    },
-    {
-        "id": "bee1f8812d8d8760",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "d": true,
-        "group": "",
-        "order": 2,
-        "width": 6,
-        "height": 2,
-        "name": "",
-        "label": "This Socket ID: ",
-        "format": "{{msg.socketid}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1100,
-        "y": 1120,
-        "wires": []
-    },
-    {
-        "id": "3e32507cf496c14e",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "Get UI Control",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "2743e8dfd93fb7c8",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "d": true,
-        "group": "",
-        "order": 3,
-        "width": 6,
-        "height": 1,
-        "name": "",
-        "label": "This IP:",
-        "format": "{{msg.socketip}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1080,
-        "y": 1160,
-        "wires": []
-    },
-    {
-        "id": "aa4d1f3abac4a62f",
-        "type": "ui_ui_control",
-        "z": "204548a488401a1b",
-        "name": "Rotate UI Control",
-        "events": "change",
-        "x": 630,
-        "y": 1220,
-        "wires": [
-            [
-                "c473245f3df6387a"
-            ]
-        ]
-    },
-    {
-        "id": "c473245f3df6387a",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "After Rotate UI Control",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 1220,
-        "wires": []
-    },
-    {
         "id": "dcfce735dacf33ca",
         "type": "ui_form",
         "z": "204548a488401a1b",
         "name": "2 Cluster Login Form",
         "label": "",
         "group": "6e223ca6f2986fea",
-        "order": 2,
+        "order": 1,
         "width": 6,
         "height": 1,
         "options": [
@@ -26193,8 +26022,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 1520,
-        "y": 540,
+        "x": 1760,
+        "y": 660,
         "wires": [
             [
                 "c7d7c4c8556569e3"
@@ -26212,11 +26041,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1730,
-        "y": 540,
+        "x": 1970,
+        "y": 660,
         "wires": [
             [
-                "1578c5bef7637e2c"
+                "ad4c547076b09ade"
             ]
         ]
     },
@@ -26234,8 +26063,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 570,
-        "y": 1340,
+        "x": 930,
+        "y": 1380,
         "wires": [
             [
                 "510b5f81ee688927"
@@ -26250,8 +26079,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 730,
-        "y": 1340,
+        "x": 1090,
+        "y": 1380,
         "wires": [
             [
                 "299c138b42867c0f"
@@ -26284,8 +26113,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 1340,
+        "x": 1240,
+        "y": 1380,
         "wires": [
             [
                 "2474b2eb527716e4"
@@ -26303,7 +26132,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
+        "x": 1060,
         "y": 1420,
         "wires": [
             [
@@ -26333,51 +26162,6 @@
         ]
     },
     {
-        "id": "55f9cdc81478be4b",
-        "type": "ui_form",
-        "z": "204548a488401a1b",
-        "name": "3 QRZ Database Login Form",
-        "label": "",
-        "group": "8a65c232b2637c6a",
-        "order": 3,
-        "width": 6,
-        "height": 1,
-        "options": [
-            {
-                "label": "QRZ Username",
-                "value": "qrzusername",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "QRZ Password",
-                "value": "qrzpassword",
-                "type": "password",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "qrzusername": "",
-            "qrzpassword": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 180,
-        "y": 1340,
-        "wires": [
-            [
-                "6dc67fc045c6beee"
-            ]
-        ]
-    },
-    {
         "id": "2fdc2f7dd58ef714",
         "type": "ui_toast",
         "z": "204548a488401a1b",
@@ -26392,8 +26176,8 @@
         "className": "",
         "topic": "",
         "name": "Clear XML Login Data Notification",
-        "x": 720,
-        "y": 1400,
+        "x": 1000,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -26402,13 +26186,13 @@
         "id": "9ab53ebf4237bbb8",
         "type": "ui_button",
         "z": "204548a488401a1b",
-        "name": "4 Clear QRZ XML Login Data",
+        "name": "4 Clear  XML Login Data",
         "group": "8a65c232b2637c6a",
-        "order": 4,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
-        "label": "Clear QRZ XML Login Data",
+        "label": "Clear Login Data",
         "tooltip": "",
         "color": "#FFFFFF",
         "bgcolor": "#FF0000",
@@ -26416,13 +26200,13 @@
         "icon": "",
         "payload": "",
         "payloadType": "date",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 200,
-        "y": 1400,
+        "topic": "cleardata",
+        "topicType": "str",
+        "x": 170,
+        "y": 1480,
         "wires": [
             [
-                "6c9cc5a9f7948aca"
+                "0ea8780ba18e7782"
             ]
         ]
     },
@@ -26437,8 +26221,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 1400,
+        "x": 710,
+        "y": 1320,
         "wires": [
             [
                 "2fdc2f7dd58ef714"
@@ -26463,8 +26247,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1080,
-        "y": 1340,
+        "x": 1460,
+        "y": 1360,
         "wires": [
             [
                 "5a6fdd06cfcc6c2e"
@@ -26493,8 +26277,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1290,
-        "y": 1320,
+        "x": 1670,
+        "y": 1340,
         "wires": [
             [
                 "c435ac428aac9130"
@@ -26516,8 +26300,8 @@
         "className": "",
         "topic": "",
         "name": "Check QRZ Username & Password",
-        "x": 1580,
-        "y": 1320,
+        "x": 1960,
+        "y": 1340,
         "wires": [
             []
         ]
@@ -26541,8 +26325,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1290,
-        "y": 1360,
+        "x": 1670,
+        "y": 1380,
         "wires": [
             [
                 "afe7bcce2a351666"
@@ -26560,8 +26344,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
-        "y": 1340,
+        "x": 750,
+        "y": 1380,
         "wires": [
             [
                 "48aadad3012ae037"
@@ -26583,8 +26367,8 @@
         "className": "",
         "topic": "",
         "name": "Correct QRZ Username & Password",
-        "x": 1590,
-        "y": 1360,
+        "x": 1970,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -26605,8 +26389,8 @@
         "z": "204548a488401a1b",
         "name": "Computer Name Input",
         "info": "Computer Name Input - These are the computer names running N1MM for each radio.  Input the computer names EXACTLY how they defined on the computer name.  Be aware of upper and lower case names.  You can find the computer name by typing 'computername' in the search bar beside the start menu.  \n\nGet Radio Computer Names - This will dispaly the computer names in the database.  \n\nNote : the first two computer names entered into the input fields will be displayed on the N1MM Dashboard main screen (contest overview & map).\n\n",
-        "x": 160,
-        "y": 460,
+        "x": 100,
+        "y": 480,
         "wires": []
     },
     {
@@ -26624,11 +26408,11 @@
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
         "name": "2 Database Engine Dropdown",
-        "label": "Callsign Lookup Engine",
+        "label": "DB Engine",
         "tooltip": "",
         "place": "Choose Selection",
         "group": "8a65c232b2637c6a",
-        "order": 2,
+        "order": 4,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -26654,7 +26438,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2000,
+        "x": 1930,
         "y": 1020,
         "wires": [
             [
@@ -26681,23 +26465,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2220,
+        "x": 2180,
         "y": 1020,
         "wires": [
-            [
-                "b666af7686048a30"
-            ]
+            []
         ]
-    },
-    {
-        "id": "5ae4eb94028eb60d",
-        "type": "comment",
-        "z": "204548a488401a1b",
-        "name": "Rotate 2nd Tab/Window - NOT IN USE",
-        "info": "",
-        "x": 230,
-        "y": 1020,
-        "wires": []
     },
     {
         "id": "d946e6a1fdbf2dfd",
@@ -26705,8 +26477,8 @@
         "z": "204548a488401a1b",
         "name": "Cluster Login",
         "info": "",
-        "x": 1360,
-        "y": 480,
+        "x": 1600,
+        "y": 600,
         "wires": []
     },
     {
@@ -26730,57 +26502,6 @@
         "wires": []
     },
     {
-        "id": "b666af7686048a30",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "8a65c232b2637c6a",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "name": "1 Database Lookup Text",
-        "label": "Current Database",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2440,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "1578c5bef7637e2c",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "6e223ca6f2986fea",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "name": "1 Current Skimmer Login Text",
-        "label": "Current Login",
-        "format": "{{msg.payload.skimmercall}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2030,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "289eb29cd66ebe0f",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "475c1eff5d97ffe5",
-        "order": 3,
-        "width": 6,
-        "height": 1,
-        "name": "3 Current Contest Callsign Text",
-        "label": "Current Contest Callsign",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1120,
-        "y": 920,
-        "wires": []
-    },
-    {
         "id": "59afcb532e72d16e",
         "type": "change",
         "z": "204548a488401a1b",
@@ -26790,14 +26511,7 @@
                 "t": "set",
                 "p": "ttl",
                 "pt": "global",
-                "to": "payload.ttl",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "ttl",
+                "to": "msg.payload",
                 "tot": "global"
             }
         ],
@@ -26806,12 +26520,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 2100,
+        "x": 930,
+        "y": 2460,
         "wires": [
-            [
-                "b64befbfca8cd376"
-            ]
+            []
         ]
     },
     {
@@ -26825,113 +26537,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 2160,
+        "x": 500,
+        "y": 2460,
         "wires": [
             [
-                "b64befbfca8cd376"
+                "73c95c45093b17ae"
             ]
         ]
-    },
-    {
-        "id": "553eaeb2e0afed49",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 2160,
-        "wires": [
-            [
-                "34a7871439e7394e"
-            ]
-        ]
-    },
-    {
-        "id": "b64befbfca8cd376",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "54b59a095746559b",
-        "order": 4,
-        "width": 6,
-        "height": 1,
-        "name": "3 Current TTL Icon Value",
-        "label": "Current Value",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 770,
-        "y": 2120,
-        "wires": []
-    },
-    {
-        "id": "d571e2d301ab771a",
-        "type": "ui_form",
-        "z": "204548a488401a1b",
-        "name": "4 QSO Map Icon TTL Form",
-        "label": "",
-        "group": "54b59a095746559b",
-        "order": 5,
-        "width": 6,
-        "height": 1,
-        "options": [
-            {
-                "label": "Map Icon Time To Live (sec)",
-                "value": "ttl",
-                "type": "number",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "ttl": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 150,
-        "y": 2100,
-        "wires": [
-            [
-                "59afcb532e72d16e",
-                "4a1defbaca14c045"
-            ]
-        ]
-    },
-    {
-        "id": "4a1defbaca14c045",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 430,
-        "y": 2060,
-        "wires": []
     },
     {
         "id": "7a4b515df88258ed",
@@ -26940,7 +26552,7 @@
         "name": "2 Lat & Lon Input",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 3,
+        "order": 5,
         "width": 6,
         "height": 1,
         "options": [
@@ -26970,8 +26582,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 1100,
-        "y": 2120,
+        "x": 710,
+        "y": 2260,
         "wires": [
             [
                 "f9dceb53cc0b5821",
@@ -26991,8 +26603,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1350,
-        "y": 2160,
+        "x": 790,
+        "y": 2340,
         "wires": []
     },
     {
@@ -27021,8 +26633,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1320,
-        "y": 2120,
+        "x": 920,
+        "y": 2260,
         "wires": [
             [
                 "c77ffb1f28a8bc8e"
@@ -27044,8 +26656,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1810,
-        "y": 2120,
+        "x": 1310,
+        "y": 2260,
         "wires": [
             []
         ]
@@ -27061,8 +26673,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1560,
-        "y": 2120,
+        "x": 1120,
+        "y": 2260,
         "wires": [
             [
                 "fb6c340e0efe1add"
@@ -27070,38 +26682,21 @@
         ]
     },
     {
-        "id": "3ae850cc68585fca",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "54b59a095746559b",
-        "order": 2,
-        "width": 6,
-        "height": 1,
-        "name": "1 Current Lat & Lon",
-        "label": "Current Home Lat & Lon",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 1770,
-        "y": 2080,
-        "wires": []
-    },
-    {
         "id": "6e48cbe3f5469ec6",
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lat & Lon",
-        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload = homelat + ',' + homelon\n}\n\nreturn msg;",
+        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload={};\n    msg.payload.homelat = homelat;\n    msg.payload.homelon = homelon;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1570,
-        "y": 2080,
+        "x": 520,
+        "y": 2260,
         "wires": [
             [
-                "3ae850cc68585fca"
+                "7a4b515df88258ed"
             ]
         ]
     },
@@ -27167,7 +26762,7 @@
         "label": "Map Labels On/Off",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 6,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -27185,7 +26780,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1950,
+        "x": 1760,
         "y": 700,
         "wires": [
             [
@@ -27204,34 +26799,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2180,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "60570ca612603af9",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1350,
+        "x": 1960,
         "y": 700,
         "wires": [
             [
@@ -27245,8 +26813,8 @@
         "z": "204548a488401a1b",
         "name": "Map Labels On/Off",
         "info": "This switch turns labels on or off on the main logged QSO map.\n\nAs QSO's are mapped, sometimes during heavy rates, the map can get cluttered with pins and the label (band and mode) takes up space.\n\nIn contests that only one mode is allowed, you might want to turn this off.\n\nThe legend will show the color of each band for the marked pins.",
-        "x": 1370,
-        "y": 640,
+        "x": 1350,
+        "y": 600,
         "wires": []
     },
     {
@@ -27255,47 +26823,8 @@
         "z": "204548a488401a1b",
         "name": "Set TTL for Map Markers",
         "info": "This flow sets the ttl (time to live) for map icons to live on the map.  \n\n",
-        "x": 170,
-        "y": 2040,
-        "wires": []
-    },
-    {
-        "id": "a41b305808137c29",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1370,
-        "y": 2080,
-        "wires": [
-            [
-                "6e48cbe3f5469ec6"
-            ]
-        ]
-    },
-    {
-        "id": "3b83c4e82671e53a",
-        "type": "comment",
-        "z": "204548a488401a1b",
-        "name": "Lat & Lon Input",
-        "info": "This flow gets the lat and lon input and allows great circle lines to be drawn from the QTH to each pin in the map.\n\nIf no lat and lon are input, the greatcircle lines are not drawn.",
-        "x": 1160,
-        "y": 2040,
+        "x": 530,
+        "y": 2420,
         "wires": []
     },
     {
@@ -27356,11 +26885,11 @@
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
         "name": "7 Map Label Type Dropdown",
-        "label": "",
+        "label": "Label",
         "tooltip": "",
         "place": "Select option",
         "group": "54b59a095746559b",
-        "order": 8,
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -27391,7 +26920,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1880,
+        "x": 1780,
         "y": 760,
         "wires": [
             [
@@ -27410,11 +26939,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2140,
+        "x": 2020,
         "y": 760,
         "wires": [
             [
-                "b931a7b4465d0df8"
+                "1dfb81dda6b742b3"
             ]
         ]
     },
@@ -27427,8 +26956,8 @@
         "tooltip": "",
         "group": "4ef10134c121cf09",
         "order": 1,
-        "width": 6,
-        "height": 1,
+        "width": 0,
+        "height": 0,
         "passthru": true,
         "decouple": "false",
         "topic": "topic",
@@ -27445,7 +26974,7 @@
         "animate": false,
         "className": "",
         "x": 2540,
-        "y": 1380,
+        "y": 1400,
         "wires": [
             [
                 "851fa5920b751886"
@@ -27464,7 +26993,7 @@
         "finalize": "",
         "libs": [],
         "x": 2730,
-        "y": 1380,
+        "y": 1400,
         "wires": [
             []
         ]
@@ -27483,7 +27012,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -27491,7 +27020,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 2090,
-        "y": 1380,
+        "y": 1400,
         "wires": [
             [
                 "289a920a73d6b6e2"
@@ -27507,9 +27036,9 @@
         "tooltip": "",
         "place": "Select Exchange Received",
         "group": "475c1eff5d97ffe5",
-        "order": 2,
-        "width": 6,
-        "height": 1,
+        "order": 3,
+        "width": 0,
+        "height": 0,
         "passthru": false,
         "multiple": false,
         "options": [
@@ -27573,8 +27102,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 350,
-        "y": 2340,
+        "x": 730,
+        "y": 2500,
         "wires": [
             [
                 "c55a8f8a7bb2ce67"
@@ -27587,8 +27116,8 @@
         "z": "204548a488401a1b",
         "name": "Contest Type",
         "info": "",
-        "x": 310,
-        "y": 2280,
+        "x": 470,
+        "y": 2540,
         "wires": []
     },
     {
@@ -27602,75 +27131,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 2340,
+        "x": 950,
+        "y": 2500,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "4bd54f4532cfb4e4",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "887ee2eadc46df9a",
-        "order": 3,
-        "width": 6,
-        "height": 2,
-        "name": "3 Current Radio Names Text Box",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "x": 740,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "f9aa65c20f157f8e",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Set payload to printout",
-        "func": "let P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null)\n{\n    P1 = \"\"\n}\nif (P2 == null)\n{\n    P2 = \"\"\n}\nif (P3 == null)\n{\n    P3 = \"\"\n}\nif (P4 == null)\n{\n    P4 = \"\"\n}\nif (P5 == null)\n{\n    P5 = \"\"\n}\nif (P6 == null)\n{\n    P6 = \"\"\n}\n\nmsg.payload = \"Current PCs : \" + P1 + \"\\r\\n \" + P2 + \"\\r\\n \" + P3 + \"\\r\\n \" + P4 + \"\\r\\n \" + P5 + \"\\r\\n \" + P6\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 800,
-        "wires": [
-            [
-                "4bd54f4532cfb4e4"
-            ]
-        ]
-    },
-    {
-        "id": "b8502660ecb5eb37",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 190,
-        "y": 800,
-        "wires": [
-            [
-                "f9aa65c20f157f8e"
-            ]
         ]
     },
     {
@@ -27684,8 +27148,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 760,
+        "x": 710,
+        "y": 560,
         "wires": [
             [
                 "848cb7d74a2a8ede"
@@ -27698,9 +27162,9 @@
         "z": "204548a488401a1b",
         "name": "4 Clear All Computer Names",
         "group": "887ee2eadc46df9a",
-        "order": 10,
-        "width": 6,
-        "height": 1,
+        "order": 9,
+        "width": 0,
+        "height": 0,
         "passthru": false,
         "label": "Clear All Computer Names",
         "tooltip": "",
@@ -27712,8 +27176,8 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 220,
-        "y": 760,
+        "x": 440,
+        "y": 560,
         "wires": [
             [
                 "57e3618bf14fa9ab"
@@ -27729,9 +27193,9 @@
         "tooltip": "",
         "place": "Select OP Sort Type",
         "group": "52728e3a5743376c",
-        "order": 2,
-        "width": 6,
-        "height": 1,
+        "order": 1,
+        "width": 0,
+        "height": 0,
         "passthru": false,
         "multiple": false,
         "options": [
@@ -27755,8 +27219,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1210,
-        "y": 2340,
+        "x": 1810,
+        "y": 2500,
         "wires": [
             [
                 "5540ea5a6de97dc7"
@@ -27769,8 +27233,8 @@
         "z": "204548a488401a1b",
         "name": "OP Competition Sort Type",
         "info": "",
-        "x": 1210,
-        "y": 2280,
+        "x": 1390,
+        "y": 2460,
         "wires": []
     },
     {
@@ -27784,38 +27248,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
-        "y": 2340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d04c84d753d7918e",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 310,
-        "y": 2380,
+        "x": 2030,
+        "y": 2500,
         "wires": [
             [
-                "678916562d7de9f5"
+                "55b371fcdda16d59"
             ]
         ]
     },
@@ -27831,56 +27268,10 @@
         "finalize": "",
         "libs": [],
         "x": 510,
-        "y": 2380,
+        "y": 2500,
         "wires": [
             [
-                "ccc80b81dfc99354"
-            ]
-        ]
-    },
-    {
-        "id": "ccc80b81dfc99354",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "475c1eff5d97ffe5",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "name": "1 Contest Type Textbox",
-        "label": "Contest Type",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 760,
-        "y": 2380,
-        "wires": []
-    },
-    {
-        "id": "0960a2775584fa85",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1190,
-        "y": 2380,
-        "wires": [
-            [
-                "55b371fcdda16d59"
+                "0623273bd2a73945"
             ]
         ]
     },
@@ -27895,147 +27286,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 2380,
+        "x": 1570,
+        "y": 2500,
         "wires": [
             [
-                "2607254e9c8640f7"
-            ]
-        ]
-    },
-    {
-        "id": "2607254e9c8640f7",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "52728e3a5743376c",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "name": "OP Comp Sort Type Textbox",
-        "label": "OP Comp Sort Type",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1680,
-        "y": 2380,
-        "wires": []
-    },
-    {
-        "id": "37883f2151c6aeb8",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1310,
-        "y": 760,
-        "wires": [
-            [
-                "1dfb81dda6b742b3"
-            ]
-        ]
-    },
-    {
-        "id": "9677ae9555f53b24",
-        "type": "ui_form",
-        "z": "204548a488401a1b",
-        "name": "3 1Q Per Hour Color Form",
-        "label": "Q's Per 1 Hour Rates",
-        "group": "c89d2b489a7ea747",
-        "order": 6,
-        "width": 6,
-        "height": 1,
-        "options": [
-            {
-                "label": "Low Rate (Red)",
-                "value": "Q1hrlow",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "High Rate (Green)",
-                "value": "Q1hrhigh",
-                "type": "number",
-                "required": false,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "Q1hrlow": "",
-            "Q1hrhigh": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 1880,
-        "y": 140,
-        "wires": [
-            [
-                "b0d26d23f65e2f84"
-            ]
-        ]
-    },
-    {
-        "id": "073dbb68c96aeacf",
-        "type": "ui_form",
-        "z": "204548a488401a1b",
-        "name": "6 2Q Per Hour Color Form",
-        "label": "Q's Per 2 Hour Rates",
-        "group": "c89d2b489a7ea747",
-        "order": 5,
-        "width": 6,
-        "height": 1,
-        "options": [
-            {
-                "label": "Low Rate (Red)",
-                "value": "Q2hrlow",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "High Rate (Green)",
-                "value": "Q2hrhigh",
-                "type": "number",
-                "required": false,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "Q2hrlow": "",
-            "Q2hrhigh": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 1880,
-        "y": 340,
-        "wires": [
-            [
-                "f2bbdfe4d64051e4"
+                "52e8cb69fe249ce2"
             ]
         ]
     },
@@ -28044,16 +27299,21 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Set Global Q's Per Hour",
-        "func": "let Q1hrlow = msg.payload.Q1hrlow;\nlet Q1hrhigh = msg.payload.Q1hrhigh;\n\nlet Q1hrmedlow = Q1hrlow + 1;\nlet Q1hrmedhigh = Q1hrhigh - 1;\n\nglobal.set('Q1hrlow',Q1hrlow);\nglobal.set('Q1hrmedlow',Q1hrmedlow);\nglobal.set('Q1hrmedhigh',Q1hrmedhigh);\nglobal.set('Q1hrhigh',Q1hrhigh);\n\nreturn msg;\n\n",
+        "func": "if (msg.topic== \"Q1Low\"){\n    let Q1hrlow = msg.payload.Q1hrlow;\n    let Q1hrmedlow = Q1hrlow + 1; \n    global.set('Q1hrlow', Q1hrlow);\n    global.set('Q1hrmedlow', Q1hrmedlow);\n}\nelse if (msg.topic== \"Q1High\"){\n    let Q1hrhigh = msg.payload.Q1hrhigh; \n    let Q1hrmedhigh = Q1hrhigh - 1;\n    global.set('Q1hrmedhigh', Q1hrmedhigh);\n    global.set('Q1hrhigh', Q1hrhigh);\n}\nelse if (msg.topic== \"Q2High\"){\n    let Q2hrlow = msg.payload.Q2hrlow;\n    let Q2hrmedlow = Q2hrlow + 1;\n    global.set('Q2hrlow', Q2hrlow);\n    global.set('Q2hrmedlow', Q2hrmedlow);\n}\nelse if (msg.topic == \"Q2Low\"){\n    let Q2hrhigh = msg.payload.Q2hrhigh;\n    let Q2hrmedhigh = Q2hrhigh - 1;\n    global.set('Q2hrmedhigh', Q2hrmedhigh);\n    global.set('Q2hrhigh', Q2hrhigh);\n\n}\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2190,
-        "y": 140,
+        "x": 2510,
+        "y": 240,
         "wires": [
-            []
+            [
+                "5b28c89ebe3d5de5",
+                "dc3f4a8f18178bfd",
+                "a9728ea9c9567093",
+                "43fc4c68ef5bf07a"
+            ]
         ]
     },
     {
@@ -28113,89 +27373,6 @@
         "wires": []
     },
     {
-        "id": "f2bbdfe4d64051e4",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Set Global Q's Per Hour",
-        "func": "let Q2hrlow = msg.payload.Q2hrlow;\nlet Q2hrhigh = msg.payload.Q2hrhigh;\n\nlet Q2hrmedlow = Q2hrlow + 1;\nlet Q2hrmedhigh = Q2hrhigh - 1;\n\nglobal.set('Q2hrlow',Q2hrlow);\nglobal.set('Q2hrmedlow',Q2hrmedlow);\nglobal.set('Q2hrmedhigh',Q2hrmedhigh);\nglobal.set('Q2hrhigh',Q2hrhigh);\n\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2190,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a44147bde4d3c26b",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "c89d2b489a7ea747",
-        "order": 1,
-        "width": 3,
-        "height": 1,
-        "name": "1 Q Low 1 Hour Text",
-        "label": "1Hr Low Rate",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2320,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "234f58c7059453d9",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "3",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1850,
-        "y": 240,
-        "wires": [
-            [
-                "5b28c89ebe3d5de5",
-                "dc3f4a8f18178bfd",
-                "a9728ea9c9567093",
-                "43fc4c68ef5bf07a"
-            ]
-        ]
-    },
-    {
-        "id": "6ebe16a171254a3b",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "c89d2b489a7ea747",
-        "order": 2,
-        "width": 3,
-        "height": 1,
-        "name": "2 Q High 1 Hour Text",
-        "label": "1Hr High Rate",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2320,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "5b28c89ebe3d5de5",
         "type": "function",
         "z": "204548a488401a1b",
@@ -28210,7 +27387,7 @@
         "y": 180,
         "wires": [
             [
-                "a44147bde4d3c26b"
+                "ee222804bd1283e5"
             ]
         ]
     },
@@ -28229,7 +27406,7 @@
         "y": 220,
         "wires": [
             [
-                "6ebe16a171254a3b"
+                "b3d5ac9b704511c3"
             ]
         ]
     },
@@ -28248,7 +27425,7 @@
         "y": 260,
         "wires": [
             [
-                "0c490a55cd9feb52"
+                "2543fd84e9c916d5"
             ]
         ]
     },
@@ -28267,43 +27444,9 @@
         "y": 300,
         "wires": [
             [
-                "0a9cfccc31ee7434"
+                "5c42c504a028ad7a"
             ]
         ]
-    },
-    {
-        "id": "0c490a55cd9feb52",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "c89d2b489a7ea747",
-        "order": 3,
-        "width": 3,
-        "height": 1,
-        "name": "4 Q Low 2 Hour Text",
-        "label": "2Hr Low Rate",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2320,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "0a9cfccc31ee7434",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "c89d2b489a7ea747",
-        "order": 4,
-        "width": 3,
-        "height": 1,
-        "name": "5 Q High 2 Hour Text",
-        "label": "2Hr High Rate",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2320,
-        "y": 300,
-        "wires": []
     },
     {
         "id": "09b7c5267865b449",
@@ -28322,7 +27465,7 @@
         "name": "1 Online Scoreboard Form Input",
         "label": "",
         "group": "5e3039a0172f86b1",
-        "order": 8,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -28376,8 +27519,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 2230,
-        "y": 1660,
+        "x": 2530,
+        "y": 1500,
         "wires": [
             [
                 "6c25416ba946de30"
@@ -28438,10 +27581,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2960,
-        "y": 1660,
+        "x": 3260,
+        "y": 1500,
         "wires": [
-            []
+            [
+                "396035747dfda329"
+            ]
         ]
     },
     {
@@ -28451,7 +27596,7 @@
         "name": "Online Scoreboard Call Entry",
         "info": "",
         "x": 2220,
-        "y": 1560,
+        "y": 1800,
         "wires": []
     },
     {
@@ -28663,8 +27808,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2510,
-        "y": 1660,
+        "x": 2810,
+        "y": 1500,
         "wires": [
             [
                 "0d5f928a68a24cca"
@@ -28677,7 +27822,7 @@
         "z": "204548a488401a1b",
         "name": "7 Online Scoreboard Reset",
         "group": "5e3039a0172f86b1",
-        "order": 7,
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -28691,8 +27836,8 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2280,
-        "y": 1620,
+        "x": 2080,
+        "y": 1740,
         "wires": [
             [
                 "f77b512adee68822"
@@ -28710,293 +27855,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2510,
-        "y": 1620,
+        "x": 2310,
+        "y": 1740,
         "wires": [
             [
                 "2af9add8843cb280"
             ]
         ]
-    },
-    {
-        "id": "f9e7825f50baf241",
-        "type": "change",
-        "z": "204548a488401a1b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "contestname",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2220,
-        "y": 1800,
-        "wires": [
-            [
-                "ed725a6ab2d77106",
-                "b1897541b4842264"
-            ]
-        ]
-    },
-    {
-        "id": "9cbd4e1f6df0b530",
-        "type": "change",
-        "z": "204548a488401a1b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "chasecall1",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2220,
-        "y": 1840,
-        "wires": [
-            [
-                "01abe21d44dec1e8"
-            ]
-        ]
-    },
-    {
-        "id": "b952ed436e7ed3e1",
-        "type": "change",
-        "z": "204548a488401a1b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "chasecall2",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2220,
-        "y": 1880,
-        "wires": [
-            [
-                "04a1723a5fc42cca"
-            ]
-        ]
-    },
-    {
-        "id": "ae17a37fe30e49e6",
-        "type": "change",
-        "z": "204548a488401a1b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "chasecall3",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2220,
-        "y": 1920,
-        "wires": [
-            [
-                "05353219a2a8076e"
-            ]
-        ]
-    },
-    {
-        "id": "887559e33323fe73",
-        "type": "change",
-        "z": "204548a488401a1b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "chasecall4",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2220,
-        "y": 1960,
-        "wires": [
-            [
-                "f738a03c7e4b7641"
-            ]
-        ]
-    },
-    {
-        "id": "f11dd8d593ab536f",
-        "type": "change",
-        "z": "204548a488401a1b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "chasecall5",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2220,
-        "y": 2000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e5841728e52de8cd",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1990,
-        "y": 1900,
-        "wires": [
-            [
-                "f9e7825f50baf241",
-                "9cbd4e1f6df0b530",
-                "b952ed436e7ed3e1",
-                "ae17a37fe30e49e6",
-                "887559e33323fe73",
-                "f11dd8d593ab536f"
-            ]
-        ]
-    },
-    {
-        "id": "ed725a6ab2d77106",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "5e3039a0172f86b1",
-        "order": 1,
-        "width": 2,
-        "height": 1,
-        "name": "2 Contestname Text",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2470,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "01abe21d44dec1e8",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "5e3039a0172f86b1",
-        "order": 4,
-        "width": 2,
-        "height": 1,
-        "name": "3 Chase Call1 Text",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2470,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "04a1723a5fc42cca",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "5e3039a0172f86b1",
-        "order": 5,
-        "width": 2,
-        "height": 1,
-        "name": "4 Chase Call2 Text",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2470,
-        "y": 1880,
-        "wires": []
-    },
-    {
-        "id": "05353219a2a8076e",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "5e3039a0172f86b1",
-        "order": 6,
-        "width": 2,
-        "height": 1,
-        "name": "5 Chase Call3 Text",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2470,
-        "y": 1920,
-        "wires": []
-    },
-    {
-        "id": "f738a03c7e4b7641",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "5e3039a0172f86b1",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "name": "6 Chase Call4 Text",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2470,
-        "y": 1960,
-        "wires": []
     },
     {
         "id": "0d5f928a68a24cca",
@@ -29009,8 +27874,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2740,
-        "y": 1660,
+        "x": 3040,
+        "y": 1500,
         "wires": [
             [
                 "53b8d128ed86c659"
@@ -29026,40 +27891,8 @@
         "links": [
             "113bf358539c5697"
         ],
-        "x": 2715,
-        "y": 1620,
-        "wires": []
-    },
-    {
-        "id": "34d0d7fb15af09f5",
-        "type": "ui_template",
-        "z": "204548a488401a1b",
-        "d": true,
-        "group": "8fb11826e4a47fc9",
-        "name": "Clock Toolbar",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "<script id=\"titleScript\" type=\"text/javascript\">\n\n$(function() {\n    if($('.md-toolbar-tools').length != 0){\n        loadClock();\n    }else setTimeout(loadClock, 500)\n});\n\nfunction loadClock(){\n    $('#clock').remove();\n    var toolbar = $('.md-toolbar-tools');\n    \n    var div = $('<div/>');\n    var p = $('<p/ id=\"clock\">');\n    \n    div.append(p);\n    div[0].style.margin = '5px 5px 5px auto';\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n    \n    function upTime() {\n        var d = new Date();\n        p.text(d.toUTCString());\n    }\n\n    if(document.clockInterval){ \n            clearInterval(document.clockInterval);\n            document.clockInterval = null;\n    }\n        \n    document.clockInterval = setInterval(upTime,1000);\n}\n\n</script>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "global",
-        "className": "",
-        "x": 1280,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "607a4a01765dac2a",
-        "type": "comment",
-        "z": "204548a488401a1b",
-        "name": "Clock Toolbar",
-        "info": "",
-        "x": 1270,
-        "y": 360,
+        "x": 2515,
+        "y": 1740,
         "wires": []
     },
     {
@@ -29076,8 +27909,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 610,
-        "y": 1660,
+        "x": 850,
+        "y": 1620,
         "wires": [
             [
                 "7c6f7da8b7d97b61",
@@ -29093,8 +27926,8 @@
         "property": "payload",
         "attr": "",
         "chr": "",
-        "x": 810,
-        "y": 1660,
+        "x": 1050,
+        "y": 1620,
         "wires": [
             [
                 "3823be0dbdf63121"
@@ -29120,8 +27953,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 1660,
+        "x": 1200,
+        "y": 1620,
         "wires": [
             [
                 "0d40c71ac4ff5366",
@@ -29173,7 +28006,7 @@
         "id": "7aebf3871853a00b",
         "type": "ui_form",
         "z": "204548a488401a1b",
-        "name": "5 HamQTH Database Login Form",
+        "name": "5 Database Login Form",
         "label": "",
         "group": "8a65c232b2637c6a",
         "order": 5,
@@ -29181,23 +28014,23 @@
         "height": 1,
         "options": [
             {
-                "label": "HamQTH Username",
-                "value": "hamqthusername",
+                "label": "Username",
+                "value": "username",
                 "type": "text",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "HamQTH Password",
-                "value": "hamqthpassword",
+                "label": "Password",
+                "value": "password",
                 "type": "password",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "hamqthusername": "",
-            "hamqthpassword": ""
+            "username": "",
+            "password": ""
         },
         "payload": "",
         "submit": "submit",
@@ -29206,11 +28039,11 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 150,
-        "y": 1660,
+        "x": 170,
+        "y": 1520,
         "wires": [
             [
-                "7733a785981cccaf"
+                "0ea8780ba18e7782"
             ]
         ]
     },
@@ -29233,34 +28066,6 @@
         "y": 1720,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "0938506f45932c09",
-        "type": "ui_button",
-        "z": "204548a488401a1b",
-        "name": "6 Clear HamQTH XML Login Data",
-        "group": "8a65c232b2637c6a",
-        "order": 6,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "label": "Clear HamQTH XML Login Data",
-        "tooltip": "",
-        "color": "#FFFFFF",
-        "bgcolor": "#FF0000",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "date",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 150,
-        "y": 1720,
-        "wires": [
-            [
-                "25a37e83faf39a30"
-            ]
         ]
     },
     {
@@ -29300,8 +28105,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1150,
-        "y": 1660,
+        "x": 1390,
+        "y": 1620,
         "wires": [
             [
                 "d6231223f2764362",
@@ -29332,8 +28137,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1370,
-        "y": 1640,
+        "x": 1610,
+        "y": 1600,
         "wires": [
             [
                 "f1129769746f1646"
@@ -29355,8 +28160,8 @@
         "className": "",
         "topic": "",
         "name": "Check HamQTH Username & Password",
-        "x": 1660,
-        "y": 1640,
+        "x": 1900,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -29380,8 +28185,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1370,
-        "y": 1680,
+        "x": 1610,
+        "y": 1640,
         "wires": [
             [
                 "39a307557da7d899"
@@ -29399,8 +28204,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
-        "y": 1660,
+        "x": 630,
+        "y": 1620,
         "wires": [
             [
                 "6b75028c49d07165",
@@ -29423,8 +28228,8 @@
         "className": "",
         "topic": "",
         "name": "Correct HamQTH Username & Password",
-        "x": 1640,
-        "y": 1680,
+        "x": 1880,
+        "y": 1640,
         "wires": [
             []
         ]
@@ -29559,7 +28364,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
+        "x": 810,
         "y": 1580,
         "wires": []
     },
@@ -29576,7 +28381,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 830,
+        "x": 1030,
         "y": 1580,
         "wires": []
     },
@@ -29593,7 +28398,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
+        "x": 1330,
         "y": 1580,
         "wires": []
     },
@@ -29610,7 +28415,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1360,
+        "x": 1590,
         "y": 1560,
         "wires": []
     },
@@ -29623,9 +28428,9 @@
         "tooltip": "",
         "place": "Select option",
         "group": "00919f6d1599ed5f",
-        "order": 2,
-        "width": 6,
-        "height": 1,
+        "order": 1,
+        "width": 0,
+        "height": 0,
         "passthru": true,
         "multiple": false,
         "options": [
@@ -29666,38 +28471,7 @@
         "x": 2120,
         "y": 860,
         "wires": [
-            [
-                "70f9e6be765b3c55"
-            ]
-        ]
-    },
-    {
-        "id": "1e90fa2382c0983d",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1370,
-        "y": 860,
-        "wires": [
-            [
-                "5eb3915f925752d7"
-            ]
+            []
         ]
     },
     {
@@ -29706,7 +28480,7 @@
         "z": "204548a488401a1b",
         "name": "Distance Measurement",
         "info": "",
-        "x": 1340,
+        "x": 1540,
         "y": 820,
         "wires": []
     },
@@ -29749,23 +28523,6 @@
         ]
     },
     {
-        "id": "b931a7b4465d0df8",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "54b59a095746559b",
-        "order": 7,
-        "width": 6,
-        "height": 1,
-        "name": "6 Map Label Type Text",
-        "label": "Map Label Type",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2420,
-        "y": 760,
-        "wires": []
-    },
-    {
         "id": "ad4c547076b09ade",
         "type": "function",
         "z": "204548a488401a1b",
@@ -29776,40 +28533,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
-        "y": 540,
+        "x": 1530,
+        "y": 660,
         "wires": [
             [
                 "dcfce735dacf33ca"
-            ]
-        ]
-    },
-    {
-        "id": "2d7108e39910ef83",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1090,
-        "y": 540,
-        "wires": [
-            [
-                "ad4c547076b09ade"
             ]
         ]
     },
@@ -29838,7 +28566,8 @@
         "y": 920,
         "wires": [
             [
-                "a54ca6e34027cc56"
+                "a54ca6e34027cc56",
+                "88aac0d0567f84d0"
             ]
         ]
     },
@@ -29853,7 +28582,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
+        "x": 560,
         "y": 920,
         "wires": [
             [
@@ -29881,89 +28610,14 @@
         ]
     },
     {
-        "id": "91517249510af11d",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1450,
-        "y": 1020,
-        "wires": [
-            [
-                "b6c621827fb49298"
-            ]
-        ]
-    },
-    {
-        "id": "70f9e6be765b3c55",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "00919f6d1599ed5f",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Distance Measurement Type",
-        "label": "Measurement",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2440,
-        "y": 860,
-        "wires": []
-    },
-    {
         "id": "276ebc80307eb098",
         "type": "comment",
         "z": "204548a488401a1b",
         "name": "Multi OP or S02R Operation",
         "info": "",
-        "x": 1460,
-        "y": 1120,
+        "x": 1500,
+        "y": 1140,
         "wires": []
-    },
-    {
-        "id": "cefa3aeae0e6035c",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1430,
-        "y": 1180,
-        "wires": [
-            [
-                "e0849adea5ad6c37"
-            ]
-        ]
     },
     {
         "id": "e0849adea5ad6c37",
@@ -29977,7 +28631,7 @@
         "finalize": "",
         "libs": [],
         "x": 1640,
-        "y": 1180,
+        "y": 1080,
         "wires": [
             [
                 "63f29cb1261063bf"
@@ -29989,13 +28643,13 @@
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
         "name": "6 Contest Category Dropdown",
-        "label": "Contest Category",
+        "label": "Category",
         "tooltip": "",
         "place": "Choose Selection",
         "group": "475c1eff5d97ffe5",
-        "order": 7,
-        "width": 6,
-        "height": 1,
+        "order": 1,
+        "width": 0,
+        "height": 0,
         "passthru": true,
         "multiple": false,
         "options": [
@@ -30020,7 +28674,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1920,
-        "y": 1180,
+        "y": 1080,
         "wires": [
             [
                 "7d0c7ffca7a6660e"
@@ -30047,42 +28701,10 @@
         "to": "",
         "reg": false,
         "x": 2170,
-        "y": 1180,
+        "y": 1080,
         "wires": [
-            [
-                "69ad2b88f2e9296e"
-            ]
+            []
         ]
-    },
-    {
-        "id": "69ad2b88f2e9296e",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "475c1eff5d97ffe5",
-        "order": 6,
-        "width": 6,
-        "height": 1,
-        "name": "5 Contest Category Lookup Text",
-        "label": "Contest Category",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 2410,
-        "y": 1180,
-        "wires": []
-    },
-    {
-        "id": "b1897541b4842264",
-        "type": "link out",
-        "z": "204548a488401a1b",
-        "name": "Contest Name OUT",
-        "mode": "link",
-        "links": [
-            "469d9b45aa858755"
-        ],
-        "x": 2385,
-        "y": 1720,
-        "wires": []
     },
     {
         "id": "543c8ffcfaaf7701",
@@ -30095,7 +28717,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1620,
+        "x": 1540,
         "y": 700,
         "wires": [
             [
@@ -30115,7 +28737,7 @@
         "finalize": "",
         "libs": [],
         "x": 2260,
-        "y": 1380,
+        "y": 1400,
         "wires": [
             [
                 "4a7ab19bd2fdaf09"
@@ -30372,9 +28994,7 @@
         "x": 750,
         "y": 2940,
         "wires": [
-            [
-                "4f77896f8379011c"
-            ]
+            []
         ]
     },
     {
@@ -30391,9 +29011,7 @@
         "x": 670,
         "y": 2980,
         "wires": [
-            [
-                "6d31d7c582997a74"
-            ]
+            []
         ]
     },
     {
@@ -30416,67 +29034,6 @@
         ]
     },
     {
-        "id": "4f77896f8379011c",
-        "type": "change",
-        "z": "204548a488401a1b",
-        "name": "Set Power",
-        "rules": [
-            {
-                "t": "set",
-                "p": "power",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 930,
-        "y": 2940,
-        "wires": [
-            [
-                "41a9dc57deb3d22d"
-            ]
-        ]
-    },
-    {
-        "id": "41a9dc57deb3d22d",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "8e8e61b9e41627e8",
-        "order": 2,
-        "width": 6,
-        "height": 1,
-        "name": "2 Power Lookup Text",
-        "label": "Power",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1160,
-        "y": 2940,
-        "wires": []
-    },
-    {
-        "id": "6d31d7c582997a74",
-        "type": "ui_text",
-        "z": "204548a488401a1b",
-        "group": "8e8e61b9e41627e8",
-        "order": 4,
-        "width": 6,
-        "height": 1,
-        "name": "4 Class Lookup Text",
-        "label": "Class",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 920,
-        "y": 2980,
-        "wires": []
-    },
-    {
         "id": "536753de214930c5",
         "type": "function",
         "z": "204548a488401a1b",
@@ -30492,93 +29049,6 @@
         "wires": [
             [
                 "fde6b716b846a1b9"
-            ]
-        ]
-    },
-    {
-        "id": "301aa47149e30630",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 2940,
-        "wires": [
-            [
-                "a72c526751b53a5f"
-            ]
-        ]
-    },
-    {
-        "id": "1809c2b3d5f2e56c",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 2980,
-        "wires": [
-            [
-                "536753de214930c5"
-            ]
-        ]
-    },
-    {
-        "id": "ae73011dbaa0f1ee",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 2880,
-        "wires": [
-            [
-                "dc4625ed1bfbf5df"
             ]
         ]
     },
@@ -30609,8 +29079,8 @@
         "sqlquery": "fixed",
         "sql": "SELECT DISTINCT mycall from qsos ORDER BY `timestamp`;",
         "name": "Choose latest Contest Callsign from DB",
-        "x": 280,
-        "y": 980,
+        "x": 300,
+        "y": 800,
         "wires": [
             [
                 "88aac0d0567f84d0"
@@ -30622,14 +29092,14 @@
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
         "name": "Contest Callsign Dropdown",
-        "label": "Contest Callsign",
+        "label": "Callsign",
         "tooltip": "",
         "place": "Select option",
         "group": "475c1eff5d97ffe5",
-        "order": 4,
+        "order": 2,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -30658,8 +29128,8 @@
         "sqlquery": "fixed",
         "sql": "SELECT DISTINCT StationName from radio ORDER BY `timestamp`;",
         "name": "Choose PCs from DB",
-        "x": 160,
-        "y": 380,
+        "x": 460,
+        "y": 340,
         "wires": [
             [
                 "1c46a9079b39b6af"
@@ -30675,7 +29145,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 6,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -30691,7 +29161,7 @@
         "topic": "radio3",
         "topicType": "str",
         "className": "",
-        "x": 860,
+        "x": 1320,
         "y": 440,
         "wires": [
             [
@@ -30704,7 +29174,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "change to options",
-        "func": "msg.options=\"\";\nmsg.options = msg.payload[0][\"mycall\"];\nmsg.payload={};\nreturn msg;",
+        "func": "msg.options=[];\ntry {msg.options = msg.payload[0][\"mycall\"];}\ncatch{};\nmsg.payload = global.get(\"contestcallsign\");\nmsg.options.push(msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -30727,7 +29197,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 5,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -30743,7 +29213,7 @@
         "topic": "radio2",
         "topicType": "str",
         "className": "",
-        "x": 860,
+        "x": 1320,
         "y": 400,
         "wires": [
             [
@@ -30760,7 +29230,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -30776,7 +29246,7 @@
         "topic": "radio1",
         "topicType": "str",
         "className": "",
-        "x": 860,
+        "x": 1320,
         "y": 360,
         "wires": [
             [
@@ -30793,7 +29263,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 7,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -30809,7 +29279,7 @@
         "topic": "radio4",
         "topicType": "str",
         "className": "",
-        "x": 860,
+        "x": 1320,
         "y": 480,
         "wires": [
             [
@@ -30826,7 +29296,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 8,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -30842,7 +29312,7 @@
         "topic": "radio5",
         "topicType": "str",
         "className": "",
-        "x": 860,
+        "x": 1320,
         "y": 520,
         "wires": [
             [
@@ -30859,7 +29329,7 @@
         "tooltip": "",
         "place": "",
         "group": "887ee2eadc46df9a",
-        "order": 9,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -30875,7 +29345,7 @@
         "topic": "radio6",
         "topicType": "str",
         "className": "",
-        "x": 860,
+        "x": 1320,
         "y": 560,
         "wires": [
             [
@@ -30894,7 +29364,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
+        "x": 1620,
         "y": 360,
         "wires": [
             []
@@ -30909,7 +29379,7 @@
         "tooltip": "",
         "group": "4ef10134c121cf09",
         "order": 2,
-        "width": 6,
+        "width": 8,
         "height": 1,
         "passthru": true,
         "decouple": "false",
@@ -30926,8 +29396,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 2310,
-        "y": 1500,
+        "x": 2550,
+        "y": 1440,
         "wires": [
             [
                 "ace109ff1f054325"
@@ -30945,8 +29415,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2590,
-        "y": 1500,
+        "x": 2830,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -30965,18 +29435,19 @@
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1810,
-        "y": 1500,
+        "x": 2050,
+        "y": 1440,
         "wires": [
             [
-                "d424d57bdf57571e"
+                "d424d57bdf57571e",
+                "396035747dfda329"
             ]
         ]
     },
@@ -30986,8 +29457,8 @@
         "z": "204548a488401a1b",
         "name": "Turn Great Circle Lines On/Off",
         "info": "",
-        "x": 1980,
-        "y": 1440,
+        "x": 2180,
+        "y": 1580,
         "wires": []
     },
     {
@@ -31001,8 +29472,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2040,
-        "y": 1500,
+        "x": 2280,
+        "y": 1440,
         "wires": [
             [
                 "6e559dd79c64492f"
@@ -31050,11 +29521,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Current Version",
+        "label": "Current",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1000,
+        "x": 980,
         "y": 3120,
         "wires": []
     },
@@ -31089,11 +29560,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Latest Version",
+        "label": "Latest",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1120,
+        "x": 1090,
         "y": 3240,
         "wires": []
     },
@@ -31420,7 +29891,7 @@
         "label": "Lightning Info Enable",
         "tooltip": "",
         "group": "4ef10134c121cf09",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -31438,8 +29909,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 490,
-        "y": 1900,
+        "x": 670,
+        "y": 2080,
         "wires": [
             [
                 "252f221551638f5f"
@@ -31457,40 +29928,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
-        "y": 1900,
+        "x": 1520,
+        "y": 2080,
         "wires": [
             [
                 "35db8dcf682bbab1"
-            ]
-        ]
-    },
-    {
-        "id": "f6aa9aeccf8d6b42",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 1900,
-        "wires": [
-            [
-                "7daab0fca820c2f7"
             ]
         ]
     },
@@ -31505,8 +29947,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 1900,
+        "x": 490,
+        "y": 2080,
         "wires": [
             [
                 "b8b2a1e40a949acb",
@@ -31529,8 +29971,8 @@
         "className": "",
         "topic": "",
         "name": "Confirm before Reload",
-        "x": 920,
-        "y": 1900,
+        "x": 1100,
+        "y": 2080,
         "wires": [
             [
                 "000554e8d9a4cf45"
@@ -31557,8 +29999,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1090,
-        "y": 1900,
+        "x": 1270,
+        "y": 2080,
         "wires": [
             [
                 "1a031e0756e0c94e"
@@ -31576,9 +30018,9 @@
         "label": "Lightning Circle",
         "tooltip": "distance from center location(km)",
         "group": "4ef10134c121cf09",
-        "order": 17,
-        "width": 0,
-        "height": 0,
+        "order": 4,
+        "width": 8,
+        "height": 2,
         "passthru": true,
         "outs": "end",
         "topic": "topic",
@@ -31587,40 +30029,11 @@
         "max": "300",
         "step": "5",
         "className": "",
-        "x": 480,
-        "y": 1960,
+        "x": 660,
+        "y": 2140,
         "wires": [
             [
                 "7c0fbc70f3e7550f"
-            ]
-        ]
-    },
-    {
-        "id": "78ead752e6645308",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 1960,
-        "wires": [
-            [
-                "cbdf930baf83fbda"
             ]
         ]
     },
@@ -31635,8 +30048,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 1960,
+        "x": 870,
+        "y": 2140,
         "wires": [
             []
         ]
@@ -31652,8 +30065,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 1960,
+        "x": 490,
+        "y": 2140,
         "wires": [
             [
                 "027e54421645204a"
@@ -31666,8 +30079,8 @@
         "z": "204548a488401a1b",
         "name": "Lightning Config",
         "info": "",
-        "x": 180,
-        "y": 1840,
+        "x": 360,
+        "y": 2020,
         "wires": []
     },
     {
@@ -31681,8 +30094,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 1900,
+        "x": 870,
+        "y": 2080,
         "wires": [
             [
                 "8dd9a40b981882b4"
@@ -31702,8 +30115,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 1840,
+        "x": 670,
+        "y": 2020,
         "wires": []
     },
     {
@@ -31715,8 +30128,8 @@
         "links": [
             "25d3766924264ec5"
         ],
-        "x": 1620,
-        "y": 1900,
+        "x": 1800,
+        "y": 2080,
         "wires": [],
         "l": true
     },
@@ -31758,13 +30171,1438 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
-        "y": 500,
+        "x": 490,
+        "y": 420,
         "wires": [
             [
                 "1c46a9079b39b6af"
             ]
         ]
+    },
+    {
+        "id": "ee222804bd1283e5",
+        "type": "ui_slider",
+        "z": "204548a488401a1b",
+        "name": "1HR Low",
+        "label": "1HR Low",
+        "tooltip": "",
+        "group": "c89d2b489a7ea747",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "2",
+        "className": "",
+        "x": 2280,
+        "y": 180,
+        "wires": [
+            [
+                "b0d26d23f65e2f84"
+            ]
+        ]
+    },
+    {
+        "id": "b3d5ac9b704511c3",
+        "type": "ui_slider",
+        "z": "204548a488401a1b",
+        "name": "1HR High",
+        "label": "1HR High",
+        "tooltip": "",
+        "group": "c89d2b489a7ea747",
+        "order": 2,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "2",
+        "className": "",
+        "x": 2280,
+        "y": 220,
+        "wires": [
+            [
+                "b0d26d23f65e2f84"
+            ]
+        ]
+    },
+    {
+        "id": "2543fd84e9c916d5",
+        "type": "ui_slider",
+        "z": "204548a488401a1b",
+        "name": "2HR Low",
+        "label": "2HR Low",
+        "tooltip": "",
+        "group": "c89d2b489a7ea747",
+        "order": 3,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "2",
+        "className": "",
+        "x": 2280,
+        "y": 260,
+        "wires": [
+            [
+                "b0d26d23f65e2f84"
+            ]
+        ]
+    },
+    {
+        "id": "5c42c504a028ad7a",
+        "type": "ui_slider",
+        "z": "204548a488401a1b",
+        "name": "2HR High",
+        "label": "2HR High",
+        "tooltip": "",
+        "group": "c89d2b489a7ea747",
+        "order": 4,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "2",
+        "className": "",
+        "x": 2280,
+        "y": 300,
+        "wires": [
+            [
+                "b0d26d23f65e2f84"
+            ]
+        ]
+    },
+    {
+        "id": "0ea8780ba18e7782",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "switch to one login form",
+        "func": "var dbconfig= global.get(\"dblookup\");\nvar hamqth={};\nvar hamqth_clear={};\nvar qrz={};\nvar qrz_clear={};\nif (dbconfig== \"hamqth\"){\n    if (msg.topic == \"cleardata\"){\n        hamqth.payload=1;\n        return[null,null,null,hamqth_clear];\n    }\n    else{\n        let hamqthusername=msg.payload.username;\n        let hamqthpassword=msg.payload.password;\n        hamqth_clear.payload = { \"hamqthusername\": hamqthusername, \"hamqthpassword\": hamqthpassword };\n    }\n} \nif (dbconfig == \"qrz\") {\n    if (msg.topic == \"cleardata\"){\n        qrz_clear.payload = 1;\n        return[qrz_clear,null,null,null];\n    }else{\n        let qrzusername = msg.payload.username;\n        let qrzpassword = msg.payload.password;\n        qrz.payload = { \"qrzusername\": qrzusername, \"qrzpassword\": qrzpassword };\n\n    }\n} \n\nreturn [null,qrz,hamqth, null];",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1500,
+        "wires": [
+            [
+                "6c9cc5a9f7948aca"
+            ],
+            [
+                "6dc67fc045c6beee"
+            ],
+            [
+                "7733a785981cccaf"
+            ],
+            [
+                "25a37e83faf39a30"
+            ]
+        ],
+        "outputLabels": [
+            "qrz_clear",
+            "qrz",
+            "hamqth",
+            "hamqth_clear"
+        ]
+    },
+    {
+        "id": "73c95c45093b17ae",
+        "type": "ui_text_input",
+        "z": "204548a488401a1b",
+        "name": "TTL Value",
+        "label": "TTL Value",
+        "tooltip": "",
+        "group": "54b59a095746559b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": "1000",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 760,
+        "y": 2460,
+        "wires": [
+            [
+                "59afcb532e72d16e"
+            ]
+        ]
+    },
+    {
+        "id": "396035747dfda329",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Chasecall Values",
+        "func": "var contestname=global.get(\"contestname\");\nvar chasecall1=global.get(\"chasecall1\");\nvar chasecall2=global.get(\"chasecall2\");\nvar chasecall3=global.get(\"chasecall3\");\nvar chasecall4=global.get(\"chasecall4\");\nmsg.payload={};\nmsg.payload.contestname= contestname;\nmsg.payload.chasecall1= chasecall1;\nmsg.payload.chasecall2 = chasecall2;\nmsg.payload.chasecall3 = chasecall3;\nmsg.payload.chasecall4 = chasecall4;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2280,
+        "y": 1500,
+        "wires": [
+            [
+                "6a1c6be873105349"
+            ]
+        ]
+    },
+    {
+        "id": "4ad03c62ccde0c82",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "Ui Update",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 120,
+        "y": 2920,
+        "wires": [
+            [
+                "dc4625ed1bfbf5df",
+                "a72c526751b53a5f",
+                "536753de214930c5"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d14ce69bdaea5808",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI Update",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 305,
+        "y": 2460,
+        "wires": [
+            [
+                "678916562d7de9f5",
+                "34a7871439e7394e"
+            ]
+        ]
+    },
+    {
+        "id": "5bad7e0351736b1d",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI Update",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 305,
+        "y": 2120,
+        "wires": [
+            [
+                "7daab0fca820c2f7",
+                "cbdf930baf83fbda"
+            ]
+        ]
+    },
+    {
+        "id": "6f53b6e6ad9dfeeb",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI Refresh",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 340,
+        "y": 2260,
+        "wires": [
+            [
+                "6e48cbe3f5469ec6"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "fb70727ee3ef2696",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI Update",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 1295,
+        "y": 700,
+        "wires": [
+            [
+                "ad4c547076b09ade",
+                "543c8ffcfaaf7701",
+                "1dfb81dda6b742b3"
+            ]
+        ]
+    },
+    {
+        "id": "c6b44ddc72a5c674",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 1850,
+        "y": 240,
+        "wires": [
+            [
+                "5b28c89ebe3d5de5",
+                "dc3f4a8f18178bfd",
+                "a9728ea9c9567093",
+                "43fc4c68ef5bf07a"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "e99bcd4b871d0a33",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI Refresh",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 1375,
+        "y": 2500,
+        "wires": [
+            [
+                "55b371fcdda16d59"
+            ]
+        ]
+    },
+    {
+        "id": "b9359e88f599c705",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI Update",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 1445,
+        "y": 1060,
+        "wires": [
+            [
+                "b6c621827fb49298",
+                "e0849adea5ad6c37"
+            ]
+        ]
+    },
+    {
+        "id": "b8502660ecb5eb37",
+        "type": "inject",
+        "z": "09eb64b651f58dce",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "f9aa65c20f157f8e"
+            ]
+        ]
+    },
+    {
+        "id": "f9aa65c20f157f8e",
+        "type": "function",
+        "z": "09eb64b651f58dce",
+        "name": "Set payload to printout",
+        "func": "let P1 = global.get(\"PC1\");\nlet P2 = global.get(\"PC2\");\nlet P3 = global.get(\"PC3\");\nlet P4 = global.get(\"PC4\");\nlet P5 = global.get(\"PC5\");\nlet P6 = global.get(\"PC6\");\n\nif (P1 == null)\n{\n    P1 = \"\"\n}\nif (P2 == null)\n{\n    P2 = \"\"\n}\nif (P3 == null)\n{\n    P3 = \"\"\n}\nif (P4 == null)\n{\n    P4 = \"\"\n}\nif (P5 == null)\n{\n    P5 = \"\"\n}\nif (P6 == null)\n{\n    P6 = \"\"\n}\n\nmsg.payload = \"Current PCs : \" + P1 + \"\\r\\n \" + P2 + \"\\r\\n \" + P3 + \"\\r\\n \" + P4 + \"\\r\\n \" + P5 + \"\\r\\n \" + P6\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 120,
+        "wires": [
+            [
+                "4bd54f4532cfb4e4"
+            ]
+        ]
+    },
+    {
+        "id": "4bd54f4532cfb4e4",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 20,
+        "width": 0,
+        "height": 0,
+        "name": "3 Current Radio Names Text Box",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 840,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "0979daa9c078c057",
+        "type": "ui_form",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "name": "",
+        "label": "Socket ID & IP",
+        "group": "",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "options": [
+            {
+                "label": "Socket ID",
+                "value": "socketid",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Machine IP",
+                "value": "socketip",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "socketid": "",
+            "socketip": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "80b7b6186bcf121d",
+                "e0137d1a709aca80"
+            ]
+        ]
+    },
+    {
+        "id": "80b7b6186bcf121d",
+        "type": "function",
+        "z": "09eb64b651f58dce",
+        "name": "Set Global Rotating Session ID",
+        "func": "let socketip = msg.payload.socketip\nlet socketid = msg.payload.socketid\nglobal.set(\"socketid\",socketid)\nglobal.set(\"socketip\",socketip)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0137d1a709aca80",
+        "type": "function",
+        "z": "09eb64b651f58dce",
+        "name": "Set payload to printout",
+        "func": "socketid = msg.payload.socketid\nsocketip = msg.payload.socketip\n\nmsg.payload = \"socketid=\" + socketid + \"  \" + \"IP=\" + socketip;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "87bbe35110f717a1"
+            ]
+        ]
+    },
+    {
+        "id": "87bbe35110f717a1",
+        "type": "ui_toast",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "position": "dialog",
+        "displayTime": "",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Show Socket ID",
+        "x": 680,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e21f3e0591833840",
+        "type": "function",
+        "z": "09eb64b651f58dce",
+        "name": "Rotate tabs based on seconds",
+        "func": "let currentTime = new Date();\nlet seconds = currentTime.getSeconds();\nlet socketid = global.get('socketid');\nlet socketip = global.get('socketip');\n\nif (seconds == 20)\n{\n    return {payload:\"change\",\"tab\":1, \"name\":\"Radio Info\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n// return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nif (seconds == 40)\n{\n    return {payload:\"change\", \"tab\":2, \"name\":\"OP Competition\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n// return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nif (seconds == 0)\n{\n    return {payload:\"change\", \"tab\":3, \"name\":\"Band Stats\", \"socketid\":socketid, \"socketip\":socketip, \"seconds\":seconds, \"params\":undefined};\n//return {payload: 'change', tab:1, socketid:socketid}\n    \n}\n\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 540,
+        "wires": [
+            [
+                "57273c6d705dbfce",
+                "aa4d1f3abac4a62f"
+            ]
+        ]
+    },
+    {
+        "id": "57273c6d705dbfce",
+        "type": "debug",
+        "z": "09eb64b651f58dce",
+        "name": "After Function",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "aa4d1f3abac4a62f",
+        "type": "ui_ui_control",
+        "z": "09eb64b651f58dce",
+        "name": "Rotate UI Control",
+        "events": "change",
+        "x": 730,
+        "y": 540,
+        "wires": [
+            [
+                "c473245f3df6387a"
+            ]
+        ]
+    },
+    {
+        "id": "c473245f3df6387a",
+        "type": "debug",
+        "z": "09eb64b651f58dce",
+        "name": "After Rotate UI Control",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5c4dd14a7c2c8a1e",
+        "type": "ui_ui_control",
+        "z": "09eb64b651f58dce",
+        "name": "Get IU Control",
+        "events": "all",
+        "x": 980,
+        "y": 440,
+        "wires": [
+            [
+                "3e32507cf496c14e",
+                "bee1f8812d8d8760",
+                "2743e8dfd93fb7c8"
+            ]
+        ]
+    },
+    {
+        "id": "3e32507cf496c14e",
+        "type": "debug",
+        "z": "09eb64b651f58dce",
+        "name": "Get UI Control",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "bee1f8812d8d8760",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "",
+        "order": 2,
+        "width": 6,
+        "height": 2,
+        "name": "",
+        "label": "This Socket ID: ",
+        "format": "{{msg.socketid}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1200,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2743e8dfd93fb7c8",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "This IP:",
+        "format": "{{msg.socketip}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1180,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d571e2d301ab771a",
+        "type": "ui_form",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "name": "4 QSO Map Icon TTL Form",
+        "label": "",
+        "group": "f7fc598d8d40c287",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Map Icon Time To Live (sec)",
+                "value": "ttl",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ttl": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 520,
+        "y": 1480,
+        "wires": [
+            [
+                "4a1defbaca14c045"
+            ]
+        ]
+    },
+    {
+        "id": "4a1defbaca14c045",
+        "type": "debug",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "b64befbfca8cd376",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "3 Current TTL Icon Value",
+        "label": "Current Value",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 690,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "bf9fa15d721862a8",
+        "type": "change",
+        "z": "09eb64b651f58dce",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "contestname",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 940,
+        "wires": [
+            [
+                "349ca89a2996bf8a",
+                "d5c7e216370dc964"
+            ]
+        ]
+    },
+    {
+        "id": "7beb74d57ec50338",
+        "type": "change",
+        "z": "09eb64b651f58dce",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "chasecall1",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 980,
+        "wires": [
+            [
+                "a63165d4965f4f2e"
+            ]
+        ]
+    },
+    {
+        "id": "715a6411580c653e",
+        "type": "change",
+        "z": "09eb64b651f58dce",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "chasecall2",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1020,
+        "wires": [
+            [
+                "9b15f6fe56d3578c"
+            ]
+        ]
+    },
+    {
+        "id": "8db01a299bcb0ff1",
+        "type": "change",
+        "z": "09eb64b651f58dce",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "chasecall3",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1060,
+        "wires": [
+            [
+                "1ad7bf85a5a00d20"
+            ]
+        ]
+    },
+    {
+        "id": "1114a63329e89d8b",
+        "type": "change",
+        "z": "09eb64b651f58dce",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "chasecall4",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1100,
+        "wires": [
+            [
+                "d516e1b7aa6f1445"
+            ]
+        ]
+    },
+    {
+        "id": "8e14c14531664ed0",
+        "type": "change",
+        "z": "09eb64b651f58dce",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "chasecall5",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1e2a95cba0740b4",
+        "type": "inject",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 1040,
+        "wires": [
+            [
+                "bf9fa15d721862a8",
+                "7beb74d57ec50338",
+                "715a6411580c653e",
+                "8db01a299bcb0ff1",
+                "1114a63329e89d8b",
+                "8e14c14531664ed0"
+            ]
+        ]
+    },
+    {
+        "id": "349ca89a2996bf8a",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "group": "f7fc598d8d40c287",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "2 Contestname Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "a63165d4965f4f2e",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "group": "f7fc598d8d40c287",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "3 Chase Call1 Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "9b15f6fe56d3578c",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "group": "f7fc598d8d40c287",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "4 Chase Call2 Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "1ad7bf85a5a00d20",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "group": "f7fc598d8d40c287",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "5 Chase Call3 Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "d516e1b7aa6f1445",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "group": "f7fc598d8d40c287",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "6 Chase Call4 Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "d5c7e216370dc964",
+        "type": "link out",
+        "z": "09eb64b651f58dce",
+        "name": "Contest Name OUT",
+        "mode": "link",
+        "links": [
+            "469d9b45aa858755"
+        ],
+        "x": 765,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "0964590c5d740adc",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "name": "OP Comp Sort Type Textbox",
+        "label": "OP Comp Sort Type",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 120,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "a3db86bd15aa66f0",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "54b59a095746559b",
+        "order": 3,
+        "width": 6,
+        "height": 2,
+        "name": "1 Current Lat & Lon",
+        "label": "Current Home Lat & Lon",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 150,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "3b83c4e82671e53a",
+        "type": "comment",
+        "z": "09eb64b651f58dce",
+        "name": "Lat & Lon Input",
+        "info": "This flow gets the lat and lon input and allows great circle lines to be drawn from the QTH to each pin in the map.\n\nIf no lat and lon are input, the greatcircle lines are not drawn.",
+        "x": 300,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "0938506f45932c09",
+        "type": "ui_button",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "name": "6 Clear HamQTH XML Login Data",
+        "group": "8a65c232b2637c6a",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear HamQTH XML Login Data",
+        "tooltip": "",
+        "color": "#FFFFFF",
+        "bgcolor": "#FF0000",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70f9e6be765b3c55",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Distance Measurement Type",
+        "label": "Measurement",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1200,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "b931a7b4465d0df8",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "6 Map Label Type Text",
+        "label": "Map Label Type",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1180,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "0a9cfccc31ee7434",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "5 Q High 2 Hour Text",
+        "label": "2Hr High Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1220,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "0c490a55cd9feb52",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "4 Q Low 2 Hour Text",
+        "label": "2Hr Low Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1200,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6ebe16a171254a3b",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "name": "2 Q High 1 Hour Text",
+        "label": "1Hr High Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1200,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "a44147bde4d3c26b",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 21,
+        "width": 0,
+        "height": 0,
+        "name": "1 Q Low 1 Hour Text",
+        "label": "1Hr Low Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1200,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9677ae9555f53b24",
+        "type": "ui_form",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "name": "3 1Q Per Hour Color Form",
+        "label": "Q's Per 1 Hour Rates",
+        "group": "f7fc598d8d40c287",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Low Rate (Red)",
+                "value": "Q1hrlow",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "High Rate (Green)",
+                "value": "Q1hrhigh",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Q1hrlow": "",
+            "Q1hrhigh": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 640,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "073dbb68c96aeacf",
+        "type": "ui_form",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "name": "6 2Q Per Hour Color Form",
+        "label": "Q's Per 2 Hour Rates",
+        "group": "f7fc598d8d40c287",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Low Rate (Red)",
+                "value": "Q2hrlow",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "High Rate (Green)",
+                "value": "Q2hrhigh",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Q2hrlow": "",
+            "Q2hrhigh": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 640,
+        "y": 800,
+        "wires": [
+            [
+                "f2bbdfe4d64051e4"
+            ]
+        ]
+    },
+    {
+        "id": "f2bbdfe4d64051e4",
+        "type": "function",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "name": "Set Global Q's Per Hour",
+        "func": "\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d31d7c582997a74",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "8e8e61b9e41627e8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "4 Class Lookup Text",
+        "label": "Class",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1060,
+        "y": 2640,
+        "wires": []
+    },
+    {
+        "id": "41a9dc57deb3d22d",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "8e8e61b9e41627e8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "2 Power Lookup Text",
+        "label": "Power",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1300,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "b666af7686048a30",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "8a65c232b2637c6a",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "1 Database Lookup Text",
+        "label": "Current Database",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2580,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "69ad2b88f2e9296e",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "name": "5 Contest Category Lookup Text",
+        "label": "Contest Category",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2550,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "289eb29cd66ebe0f",
+        "type": "ui_text",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "name": "3 Current Contest Callsign Text",
+        "label": "Current Contest Callsign",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1260,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "34d0d7fb15af09f5",
+        "type": "ui_template",
+        "z": "09eb64b651f58dce",
+        "d": true,
+        "group": "8fb11826e4a47fc9",
+        "name": "Clock Toolbar",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<script id=\"titleScript\" type=\"text/javascript\">\n\n$(function() {\n    if($('.md-toolbar-tools').length != 0){\n        loadClock();\n    }else setTimeout(loadClock, 500)\n});\n\nfunction loadClock(){\n    $('#clock').remove();\n    var toolbar = $('.md-toolbar-tools');\n    \n    var div = $('<div/>');\n    var p = $('<p/ id=\"clock\">');\n    \n    div.append(p);\n    div[0].style.margin = '5px 5px 5px auto';\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n    \n    function upTime() {\n        var d = new Date();\n        p.text(d.toUTCString());\n    }\n\n    if(document.clockInterval){ \n            clearInterval(document.clockInterval);\n            document.clockInterval = null;\n    }\n        \n    document.clockInterval = setInterval(upTime,1000);\n}\n\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 1620,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "607a4a01765dac2a",
+        "type": "comment",
+        "z": "09eb64b651f58dce",
+        "name": "Clock Toolbar",
+        "info": "",
+        "x": 1610,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "5ae4eb94028eb60d",
+        "type": "comment",
+        "z": "09eb64b651f58dce",
+        "name": "Rotate 2nd Tab/Window - NOT IN USE",
+        "info": "",
+        "x": 490,
+        "y": 360,
+        "wires": []
     },
     {
         "id": "1f45eb9a.6f2614",
@@ -32072,7 +31910,7 @@
         "name": "CW Skimmer Spots with No Dupes",
         "order": 1,
         "width": 12,
-        "height": 6,
+        "height": 7,
         "columns": [
             {
                 "field": "freq",
@@ -32546,7 +32384,7 @@
         "name": "CW Skimmer Spots with Dupes",
         "order": 1,
         "width": 12,
-        "height": 6,
+        "height": 7,
         "columns": [
             {
                 "field": "freq",
@@ -35383,9 +35221,9 @@
         "d": true,
         "name": "",
         "group": "535f5d4509d91b5e",
-        "order": 3,
-        "width": 0,
-        "height": 0,
+        "order": 2,
+        "width": 4,
+        "height": 1,
         "passthru": false,
         "label": "Backup",
         "tooltip": "",
@@ -35463,9 +35301,9 @@
         "d": true,
         "name": "",
         "group": "535f5d4509d91b5e",
-        "order": 4,
-        "width": 0,
-        "height": 0,
+        "order": 3,
+        "width": 4,
+        "height": 1,
         "passthru": false,
         "label": "Restore",
         "tooltip": "",
@@ -35634,8 +35472,8 @@
         "name": "Upgrade Contest Dashboard Button",
         "group": "71cb3368617e6c9e",
         "order": 1,
-        "width": 6,
-        "height": 1,
+        "width": 0,
+        "height": 0,
         "passthru": false,
         "label": "Upgrade Contest Dashboard",
         "tooltip": "",
@@ -35778,8 +35616,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "535f5d4509d91b5e",
-        "order": 2,
-        "width": 6,
+        "order": 1,
+        "width": 4,
         "height": 1,
         "passthru": true,
         "multiple": false,
@@ -35888,8 +35726,9 @@
         "id": "b1ecb8f1e850c3aa",
         "type": "ui_text",
         "z": "3e52b5d54104d7f0",
-        "group": "535f5d4509d91b5e",
-        "order": 1,
+        "d": true,
+        "group": "f7fc598d8d40c287",
+        "order": 15,
         "width": 0,
         "height": 0,
         "name": "OS Type",
@@ -36464,7 +36303,8 @@
         "g": "c6e09ffb3c5a1ce6",
         "name": "Toolbar Contest Call IN",
         "links": [
-            "b1897541b4842264"
+            "b1897541b4842264",
+            "d5c7e216370dc964"
         ],
         "x": 255,
         "y": 200,
@@ -36842,7 +36682,15 @@
         "mode": "link",
         "links": [
             "4d85eaa61498c5ca",
-            "a6c13f77b15cc2d8"
+            "a6c13f77b15cc2d8",
+            "4ad03c62ccde0c82",
+            "d14ce69bdaea5808",
+            "5bad7e0351736b1d",
+            "6f53b6e6ad9dfeeb",
+            "c6b44ddc72a5c674",
+            "e99bcd4b871d0a33",
+            "fb70727ee3ef2696",
+            "b9359e88f599c705"
         ],
         "x": 1425,
         "y": 80,
@@ -38668,17 +38516,17 @@
         "z": "b73cc2bb5f424b69",
         "g": "02235a52f1d247d6",
         "group": "1ea34d06.1438c3",
-        "name": "ScoreBoard CSS",
+        "name": "Config CSS",
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n\n</style>",
+        "format": "<style>\n.config .nr-dashboard-cardtitle{\nfont-size: 15px;\nmin-height: 15px;\n}\n.config .layout-row {\nfont-size: 18px;}\n.config .n1mm .label {\nfont-size: 14px;}\n.config .label {\nfont-size: 18px;}\n.config .value {\nfont-size: 20px;}\n/*.config .nr-dashboard-dropdown md-input-container>md-select{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown p.label{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown div.md-text{\nmargin-top: 0px;\n}*/\n.config md-input-container {\nmargin-top:3px;\npadding: 0px;\nmargin-left: 7px;\n}\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "global",
         "className": "",
-        "x": 590,
+        "x": 570,
         "y": 600,
         "wires": [
             [
@@ -38696,7 +38544,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.radio_info .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats{\nfont-size: 20px;\n}\n.band_stats .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.band_stats_spot_rate{\nfont-size: 19px;\n}\n.band_stats_op {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n.band_stats_op .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n\n\n.dashboard_activity_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n    }\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
+        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.radio_info .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats{\nfont-size: 20px;\n}\n.band_stats .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.band_stats_spot_rate{\nfont-size: 19px;\n}\n.band_stats_op {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n.band_stats_op .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.dashboard_activity_rate{\nfont-size: 15px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.nr-dashboard-cardtitle{\nmargin-top: 8px;\nmargin-bottom: 2px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n}\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -39031,6 +38879,28 @@
         "x": 1100,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "ab98427.85cd3c",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "02235a52f1d247d6",
+        "group": "110f893b.a0f1d7",
+        "name": "dashboard styles override",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style id=\"dashboard-styles-override\">\n    .nr-dashboard-theme md-select-menu md-option {\n        height: 29px;\n        /* border-radius: 14px;*/\n        margin-left: 10px;\n        margin-right: 10px;\n        margin-top: 2px;\n        box-shadow: 0 0 6px 6px #24202133;\n        transition: 0.3s;\n    }\n\n    .nr-dashboard-theme md-select-menu md-option:nth-child(even) {\n        opacity: 0.8;\n    }\n\n    .nr-dashboard-theme md-select-menu md-option:last-child {\n        margin-bottom: 8px;\n    }\n\n    .nr-dashboard-theme md-select-menu md-option:hover {\n        padding-left: 24px;\n    }\n\n    .nr-dashboard-theme md-select-menu md-option>.md-ripple-container {\n        /* border-radius: 14px;*/\n    }\n\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 610,
+        "y": 640,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "1e2b62f78c981761",
