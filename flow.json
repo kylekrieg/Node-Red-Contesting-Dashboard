@@ -847,10 +847,13 @@
             "aa50254808a938c8",
             "1edd5af6eed6044f",
             "0cadcaf22f887a0e",
-            "21fe16ca5cbfc06b"
+            "21fe16ca5cbfc06b",
+            "4ba15e040d99ef6b"
         ],
         "x": 134,
-        "y": 39
+        "y": 39,
+        "w": 1832,
+        "h": 442
     },
     {
         "id": "6c1673638929b26d",
@@ -889,7 +892,9 @@
             "5c60f3c47791458b"
         ],
         "x": 94,
-        "y": 659
+        "y": 659,
+        "w": 1792,
+        "h": 322
     },
     {
         "id": "26cf0678322d1bb6",
@@ -24285,9 +24290,9 @@
         "type": "comment",
         "z": "1c66bd27e16a3fec",
         "g": "f01baabf4527b6e5",
-        "name": "UDP XML Score Data",
+        "name": "UDP XML QSO Data",
         "info": "",
-        "x": 280,
+        "x": 270,
         "y": 320,
         "wires": []
     },
@@ -24325,7 +24330,8 @@
         "y": 400,
         "wires": [
             [
-                "0cadcaf22f887a0e"
+                "0cadcaf22f887a0e",
+                "4ba15e040d99ef6b"
             ]
         ]
     },
@@ -25395,6 +25401,21 @@
         ]
     },
     {
+        "id": "4ba15e040d99ef6b",
+        "type": "link out",
+        "z": "1c66bd27e16a3fec",
+        "g": "f01baabf4527b6e5",
+        "name": "QSO Completed Out",
+        "mode": "link",
+        "links": [
+            "aa7dbdfd69afdeea"
+        ],
+        "x": 1840,
+        "y": 320,
+        "wires": [],
+        "l": true
+    },
+    {
         "id": "185defa19c9fea72",
         "type": "template",
         "z": "204548a488401a1b",
@@ -26442,7 +26463,9 @@
         "x": 2180,
         "y": 1020,
         "wires": [
-            []
+            [
+                "b6c621827fb49298"
+            ]
         ]
     },
     {
@@ -27734,7 +27757,7 @@
         "type": "udp out",
         "z": "204548a488401a1b",
         "name": "Score XML Port 12062",
-        "addr": "192.168.1.30",
+        "addr": "127.0.0.1",
         "iface": "",
         "port": "12062",
         "ipv": "udp4",
@@ -28445,7 +28468,9 @@
         "x": 2120,
         "y": 860,
         "wires": [
-            []
+            [
+                "5eb3915f925752d7"
+            ]
         ]
     },
     {
@@ -28512,36 +28537,6 @@
         "wires": [
             [
                 "dcfce735dacf33ca"
-            ]
-        ]
-    },
-    {
-        "id": "5bf605cc1f16fc83",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 920,
-        "wires": [
-            [
-                "a54ca6e34027cc56",
-                "88aac0d0567f84d0"
             ]
         ]
     },
@@ -28677,7 +28672,9 @@
         "x": 2170,
         "y": 1080,
         "wires": [
-            []
+            [
+                "e0849adea5ad6c37"
+            ]
         ]
     },
     {
@@ -30424,7 +30421,8 @@
             [
                 "ad4c547076b09ade",
                 "543c8ffcfaaf7701",
-                "1dfb81dda6b742b3"
+                "1dfb81dda6b742b3",
+                "5eb3915f925752d7"
             ]
         ]
     },
@@ -30480,6 +30478,42 @@
                 "e0849adea5ad6c37"
             ]
         ]
+    },
+    {
+        "id": "aa7dbdfd69afdeea",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "d": true,
+        "name": "QSO Completion In",
+        "links": [
+            "4ba15e040d99ef6b"
+        ],
+        "x": 250,
+        "y": 2720,
+        "wires": [
+            [
+                "43cafa96373f7a37"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "86117516f9c50845",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI Update",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 250,
+        "y": 940,
+        "wires": [
+            [
+                "a54ca6e34027cc56",
+                "88aac0d0567f84d0"
+            ]
+        ],
+        "l": true
     },
     {
         "id": "b8502660ecb5eb37",
@@ -36664,7 +36698,8 @@
             "c6b44ddc72a5c674",
             "e99bcd4b871d0a33",
             "fb70727ee3ef2696",
-            "b9359e88f599c705"
+            "b9359e88f599c705",
+            "86117516f9c50845"
         ],
         "x": 1425,
         "y": 80,
