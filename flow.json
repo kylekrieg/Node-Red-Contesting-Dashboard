@@ -851,9 +851,7 @@
             "4ba15e040d99ef6b"
         ],
         "x": 134,
-        "y": 39,
-        "w": 1832,
-        "h": 442
+        "y": 39
     },
     {
         "id": "6c1673638929b26d",
@@ -892,9 +890,7 @@
             "5c60f3c47791458b"
         ],
         "x": 94,
-        "y": 659,
-        "w": 1792,
-        "h": 322
+        "y": 659
     },
     {
         "id": "26cf0678322d1bb6",
@@ -25588,8 +25584,7 @@
         "wires": [
             [
                 "9e3ed0af8dd3311e",
-                "996242b2a362222b",
-                "926305a899f616de"
+                "996242b2a362222b"
             ]
         ]
     },
@@ -25948,7 +25943,9 @@
         "x": 1140,
         "y": 920,
         "wires": [
-            []
+            [
+                "a54ca6e34027cc56"
+            ]
         ]
     },
     {
@@ -26520,7 +26517,9 @@
         "x": 930,
         "y": 2460,
         "wires": [
-            []
+            [
+                "34a7871439e7394e"
+            ]
         ]
     },
     {
@@ -26634,7 +26633,8 @@
         "y": 2260,
         "wires": [
             [
-                "c77ffb1f28a8bc8e"
+                "c77ffb1f28a8bc8e",
+                "6e48cbe3f5469ec6"
             ]
         ]
     },
@@ -27131,7 +27131,9 @@
         "x": 950,
         "y": 2500,
         "wires": [
-            []
+            [
+                "678916562d7de9f5"
+            ]
         ]
     },
     {
@@ -28526,7 +28528,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Skimmer Call",
-        "func": "msg.payload = global.get('skimmercall')\nnode.status({text:msg.payload});\nreturn msg;",
+        "func": "msg.payload.skimmercall = global.get('skimmercall')\nnode.status({text:msg.payload});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -28545,7 +28547,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Contest Callsign",
-        "func": "msg.payload = global.get('contestcallsign')\nnode.status({text:msg.payload.toString()});\nreturn msg;",
+        "func": "msg.payload.contestcall = global.get('contestcallsign')\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -28965,7 +28967,9 @@
         "x": 750,
         "y": 2940,
         "wires": [
-            []
+            [
+                "a72c526751b53a5f"
+            ]
         ]
     },
     {
@@ -28982,7 +28986,9 @@
         "x": 670,
         "y": 2980,
         "wires": [
-            []
+            [
+                "536753de214930c5"
+            ]
         ]
     },
     {
@@ -29009,7 +29015,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Class",
-        "func": "msg.payload = global.get('class');\n\nif (msg.payload == undefined);\n{\n    msg.payload = undefined\n    return msg;\n}\n\n\nreturn msg;\n",
+        "func": "msg.payload = global.get('class');\n\nif (msg.payload == undefined)\n{\n    msg.payload = undefined\n    return msg;\n}\n\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29039,55 +29045,6 @@
         "wires": [
             [
                 "1d2e0efe1531b4eb"
-            ]
-        ]
-    },
-    {
-        "id": "926305a899f616de",
-        "type": "sqlite",
-        "z": "204548a488401a1b",
-        "mydb": "54f43a06.56d7b4",
-        "sqlquery": "fixed",
-        "sql": "SELECT DISTINCT mycall from qsos ORDER BY `timestamp`;",
-        "name": "Choose latest Contest Callsign from DB",
-        "x": 300,
-        "y": 800,
-        "wires": [
-            [
-                "88aac0d0567f84d0"
-            ]
-        ]
-    },
-    {
-        "id": "4f3549d3d03b998b",
-        "type": "ui_dropdown",
-        "z": "204548a488401a1b",
-        "name": "Contest Callsign Dropdown",
-        "label": "Callsign",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "475c1eff5d97ffe5",
-        "order": 2,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 780,
-        "y": 980,
-        "wires": [
-            [
-                "44ad2f416930e4e9"
             ]
         ]
     },
@@ -29137,25 +29094,6 @@
         "wires": [
             [
                 "92906228f23e7753"
-            ]
-        ]
-    },
-    {
-        "id": "88aac0d0567f84d0",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "change to options",
-        "func": "msg.options=[];\ntry {msg.options = msg.payload[0][\"mycall\"];}\ncatch{};\nmsg.payload = global.get(\"contestcallsign\");\nmsg.options.push(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 980,
-        "wires": [
-            [
-                "4f3549d3d03b998b"
             ]
         ]
     },
@@ -30022,7 +29960,9 @@
         "x": 870,
         "y": 2140,
         "wires": [
-            []
+            [
+                "cbdf930baf83fbda"
+            ]
         ]
     },
     {
@@ -30509,8 +30449,7 @@
         "y": 940,
         "wires": [
             [
-                "a54ca6e34027cc56",
-                "88aac0d0567f84d0"
+                "a54ca6e34027cc56"
             ]
         ],
         "l": true
