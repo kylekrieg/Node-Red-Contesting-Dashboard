@@ -27650,7 +27650,8 @@
         "id": "d73ffa2e2c4de937",
         "type": "inject",
         "z": "204548a488401a1b",
-        "name": "Manual Override",
+        "d": true,
+        "name": "Every 15 Sec",
         "props": [
             {
                 "p": "payload"
@@ -27660,7 +27661,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "15",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -27684,7 +27685,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(call) as totalqsos, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos;",
+        "template": "select total(points) as points, \ntotal(ismultiplier1+ismultiplier2+ismultiplier3) as multiplier, \ncount(distinct call) as totalqsos, \nCASE WHEN total(ismultiplier1+ismultiplier2+ismultiplier3) == 0\nTHEN total(points) \nELSE total(ismultiplier1+ismultiplier2+ismultiplier3) * total(points)\nEND as score\nfrom qsos;",
         "output": "str",
         "x": 540,
         "y": 2680,
@@ -30432,6 +30433,7 @@
         "id": "aa7dbdfd69afdeea",
         "type": "link in",
         "z": "204548a488401a1b",
+        "d": true,
         "name": "QSO Completion In",
         "links": [
             "4ba15e040d99ef6b"
@@ -35534,12 +35536,10 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 340,
-        "y": 1000,
+        "x": 299.7777786254883,
+        "y": 1000.0000238418579,
         "wires": [
-            [
-                "b3e878177c786d3c"
-            ]
+            []
         ]
     },
     {
@@ -35805,9 +35805,7 @@
         "x": 390,
         "y": 940,
         "wires": [
-            [
-                "b3e878177c786d3c"
-            ]
+            []
         ],
         "l": true
     },
