@@ -695,7 +695,9 @@
             "3c4c7e4533b41d22"
         ],
         "x": 414,
-        "y": 879
+        "y": 879,
+        "w": 1852,
+        "h": 462
     },
     {
         "id": "81692a3cb68d6cde",
@@ -728,7 +730,9 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1485.5
+        "y": 1485.5,
+        "w": 2458,
+        "h": 969
     },
     {
         "id": "d48758cdf0c8991d",
@@ -788,7 +792,9 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 2232,
+        "h": 802
     },
     {
         "id": "f830dd821e0240f4",
@@ -952,7 +958,9 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 622
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -979,7 +987,9 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79
+        "y": 79,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1016,7 +1026,9 @@
             "27f4e52f97117294"
         ],
         "x": 1074,
-        "y": 1979
+        "y": 1979,
+        "w": 1272,
+        "h": 449.5
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1055,7 +1067,9 @@
             "0baeb2e7ae556661"
         ],
         "x": 1014,
-        "y": 1511.5
+        "y": 1511.5,
+        "w": 1432,
+        "h": 449.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -19018,7 +19032,7 @@
         "type": "debug",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -19358,7 +19372,7 @@
         "type": "debug",
         "z": "c8e1ef6f509cd75a",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -25860,48 +25874,6 @@
         ]
     },
     {
-        "id": "1c46a9079b39b6af",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Add Placeholders and Options ",
-        "func": "function onlyUnique(value, index, self) {\n    return self.indexOf(value) === index;\n}\nfunction JSONCopy(source) {\n    return JSON.parse(JSON.stringify(source));\n}\nfunction addPlaceholder(msg, placeholder){\n    var msga=JSONCopy(msg);\n    msga.payload = placeholder;\n    return msga;\n}\nvar p1 = global.get(\"PC1\");\nvar p2 = global.get(\"PC2\");\nvar p3 = global.get(\"PC3\");\nvar p4 = global.get(\"PC4\");\nvar p5 = global.get(\"PC5\");\nvar p6 = global.get(\"PC6\");\nvar PCs_list = global.get(\"PCs\");\nvar store={};\nif (msg.payload.StationName != \"\")\n{\n    if(PCs_list == null){\n        store.PCs_Output = [msg.payload.StationName];\n        global.set(\"PCs\", store.PCs_Output)\n    }\n    else{\n        var tmp_array=PCs_list;\n        let length=msg.payload.length;\n        for (let i = 0; i = length - 1; i++) {\n            tmp_array=tmp_array.push(msg.payload[i].StationName);\n        }\n        var raw_pcs = tmp_array;\n        store.PCs_Output = raw_pcs.filter(onlyUnique);\n        global.set(\"PCs\", store.PCs_Output);\n\n    }\n}\n\nvar msg_master={};\nmsg_master.options=store.PCs_Output;\nvar payload1= addPlaceholder(msg_master,p1);\nvar payload2 = addPlaceholder(msg_master, p2);\nvar payload3 = addPlaceholder(msg_master, p3);\nvar payload4 = addPlaceholder(msg_master, p4);\nvar payload5 = addPlaceholder(msg_master, p5);\nvar payload6 = addPlaceholder(msg_master, p6);\nreturn [payload1,payload2,payload3,payload4,payload5,payload6];",
-        "outputs": 6,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 830,
-        "y": 400,
-        "wires": [
-            [
-                "45487adfd2506609"
-            ],
-            [
-                "52b9731345e98156"
-            ],
-            [
-                "3160a3cf965792b6"
-            ],
-            [
-                "0310b67c0342c959"
-            ],
-            [
-                "131a5c94a9d2d0e6"
-            ],
-            [
-                "e16bc4a1666da6df"
-            ]
-        ],
-        "outputLabels": [
-            "payload1",
-            "payload2",
-            "payload3",
-            "payload4",
-            "payload5",
-            "payload6"
-        ]
-    },
-    {
         "id": "65d59c3b296ab636",
         "type": "ui_text",
         "z": "204548a488401a1b",
@@ -25914,7 +25886,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "n1mm",
-        "x": 720,
+        "x": 500,
         "y": 500,
         "wires": []
     },
@@ -26417,7 +26389,7 @@
         "order": 3,
         "width": 6,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -26899,7 +26871,7 @@
         "order": 4,
         "width": 6,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -26965,7 +26937,7 @@
         "order": 1,
         "width": 8,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "topic",
         "topicType": "msg",
@@ -27000,33 +26972,6 @@
         "finalize": "",
         "libs": [],
         "x": 2730,
-        "y": 1400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5584fe10df006594",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2090,
         "y": 1400,
         "wires": [
             [
@@ -27289,7 +27234,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get OP Comp Sort Type",
-        "func": "opsorttype = global.get('opsorttype')\n\nif (opsorttype == null)\n{\n    global.set('opsorttype','qsos')\n    msg.payload = \"qsos\"\n}\n\nmsg.payload = opsorttype;\n\nreturn msg;",
+        "func": "let opsorttype = global.get('opsorttype')\n\nif (opsorttype == null)\n{\n    global.set('opsorttype','qsos')\n    msg.payload = \"qsos\"\n}\n\nmsg.payload = opsorttype;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -28439,7 +28384,7 @@
         "order": 1,
         "width": 6,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -28537,7 +28482,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Skimmer Call",
-        "func": "msg.payload.skimmercall = global.get('skimmercall')\nnode.status({text:msg.payload});\nreturn msg;",
+        "func": "msg.payload = {} ;\nmsg.payload.skimmercall = global.get('skimmercall');\nnode.status({text:msg.payload});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -28556,7 +28501,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Contest Callsign",
-        "func": "msg.payload.contestcall = global.get('contestcallsign')\nnode.status({text:msg.payload.toString()});\nreturn msg;",
+        "func": "msg.payload={};\nmsg.payload.contestcallsign = global.get('contestcallsign');\nnode.status({text:msg.payload.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -28630,7 +28575,7 @@
         "order": 2,
         "width": 6,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -28803,7 +28748,7 @@
         "order": 1,
         "width": 6,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "topic",
         "topicType": "msg",
@@ -28841,7 +28786,9 @@
         "x": 680,
         "y": 2880,
         "wires": [
-            []
+            [
+                "dc4625ed1bfbf5df"
+            ]
         ]
     },
     {
@@ -28873,7 +28820,7 @@
         "order": 3,
         "width": 6,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -28916,7 +28863,7 @@
         "order": 5,
         "width": 6,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -29276,7 +29223,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Set Global PC Names",
-        "func": "\nif (msg.payload != \"\"){\n    if (msg.topic == \"radio1\"){\n        let PC1 = msg.payload\n        global.set(\"PC1\",PC1)\n    }\n    if (msg.topic == \"radio2\")\n    {\n        let PC2 = msg.payload\n        global.set(\"PC2\",PC2)\n    }\n\n    if (msg.topic == \"radio3\")\n    {\n        let PC3 = msg.payload\n        global.set(\"PC3\",PC3)\n    }\n\n    if (msg.topic == \"radio4\")\n    {\n        let PC4 = msg.payload\n        global.set(\"PC4\",PC4)\n    }\n\n    if (msg.topic == \"radio5\")\n    {\n        let PC5 = msg.payload\n        global.set(\"PC5\",PC5)\n    }\n\n    if (msg.topic== \"radio6\")\n    {\n        let PC6 = msg.payload\n        global.set(\"PC6\",PC6)\n    }\n}\nreturn msg;",
+        "func": "\nif (msg.payload != \"\"){\n    if (msg.topic == \"radio1\"){\n        let PC1 = msg.payload\n        global.set(\"PC1\",PC1)\n    }\n    if (msg.topic == \"radio2\")\n    {\n        let PC2 = msg.payload\n        global.set(\"PC2\",PC2)\n    }\n\n    if (msg.topic == \"radio3\")\n    {\n        let PC3 = msg.payload\n        global.set(\"PC3\",PC3)\n    }\n\n    if (msg.topic == \"radio4\")\n    {\n        let PC4 = msg.payload\n        global.set(\"PC4\",PC4)\n    }\n\n    if (msg.topic == \"radio5\")\n    {\n        let PC5 = msg.payload\n        global.set(\"PC5\",PC5)\n    }\n\n    if (msg.topic== \"radio6\")\n    {\n        let PC6 = msg.payload\n        global.set(\"PC6\",PC6)\n    }\nmsg.payload = {};\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -29285,7 +29232,9 @@
         "x": 1620,
         "y": 360,
         "wires": [
-            []
+            [
+                "6392f2abe9574a02"
+            ]
         ]
     },
     {
@@ -29299,7 +29248,7 @@
         "order": 2,
         "width": 8,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "topic",
         "topicType": "msg",
@@ -29336,36 +29285,8 @@
         "x": 2830,
         "y": 1440,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "63171c22105ccdfd",
-        "type": "inject",
-        "z": "204548a488401a1b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2050,
-        "y": 1440,
-        "wires": [
             [
-                "d424d57bdf57571e",
-                "396035747dfda329"
+                "d424d57bdf57571e"
             ]
         ]
     },
@@ -29939,7 +29860,7 @@
         "order": 4,
         "width": 8,
         "height": 2,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "topic",
         "topicType": "msg",
@@ -30088,13 +30009,14 @@
         "crontab": "",
         "once": true,
         "onceDelay": "4",
-        "topic": "",
+        "topic": "Init",
         "payload": "",
         "payloadType": "date",
-        "x": 490,
+        "x": 370,
         "y": 420,
         "wires": [
             [
+                "300e8b1d4996601e",
                 "1c46a9079b39b6af"
             ]
         ]
@@ -30461,6 +30383,133 @@
             ]
         ],
         "l": true
+    },
+    {
+        "id": "1c46a9079b39b6af",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Add Placeholders and Options ",
+        "func": "function onlyUnique(value, index, self) {\n    return self.indexOf(value) === index;\n}\nfunction JSONCopy(source) {\n    return JSON.parse(JSON.stringify(source));\n}\nfunction addPlaceholder(msg, placeholder){\n    var msga=JSONCopy(msg);\n    msga.payload = placeholder;\n    return msga;\n}\nvar load = msg;\nvar p1 = global.get(\"PC1\");\nvar p2 = global.get(\"PC2\");\nvar p3 = global.get(\"PC3\");\nvar p4 = global.get(\"PC4\");\nvar p5 = global.get(\"PC5\");\nvar p6 = global.get(\"PC6\");\nvar PCs_list = global.get(\"PCs\");\nvar store={};\nstore.PCs_Output=[];\n\nif ( PCs_list != null &&  msg.topic==\"Init\"){\n    store.PCs_Output= PCs_list;\n}\nif (msg.payload.StationName != \"\" && msg.payload.StationName != undefined)\n{   \n    node.warn(JSON.stringify(msg.payload));\n    let tmp_array=PCs_list;\n    if (load.payload.length == undefined|| load.payload.length == 0){\n        if (PCs_list == null) {\n            node.warn(load.payload.StationName);\n            tmp_array = [load.payload.StationName];\n        } \n        else {\n            tmp_array.push(msg.payload.StationName);\n        }\n    }\n    else{\n    for (let i = 0; i = load.payload.length - 1; i++) {\n        if (PCs_list[0] == null || PCs_list == null){\n            node.warn(load.payload.StationName);\n            tmp_array=[load.payload[i].StationName];\n        }else {\n            tmp_array.push(msg.payload[i].StationName);\n        }\n       \n    }\n    }\n    store.PCs_Output = tmp_array.filter(onlyUnique);\n    node.warn(store.PCs_Output)\n    global.set(\"PCs\", store.PCs_Output);\n\n}\n\nvar msg_master={};\nmsg_master.options=store.PCs_Output;\nvar payload1= addPlaceholder(msg_master,p1);\nvar payload2 = addPlaceholder(msg_master, p2);\nvar payload3 = addPlaceholder(msg_master, p3);\nvar payload4 = addPlaceholder(msg_master, p4);\nvar payload5 = addPlaceholder(msg_master, p5);\nvar payload6 = addPlaceholder(msg_master, p6);\nlet msg_dump = { \"payload1\": payload1,\"payload2\": payload2, \"payload3\": payload3, \"payload4\" : payload4 , \"payload5\":payload5, \"payload6\":payload6}\nreturn [payload1,payload2,payload3,payload4,payload5,payload6,msg_dump];",
+        "outputs": 7,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 400,
+        "wires": [
+            [
+                "45487adfd2506609"
+            ],
+            [
+                "52b9731345e98156"
+            ],
+            [
+                "3160a3cf965792b6"
+            ],
+            [
+                "0310b67c0342c959"
+            ],
+            [
+                "131a5c94a9d2d0e6"
+            ],
+            [
+                "e16bc4a1666da6df"
+            ],
+            [
+                "1e47336f74fdbd4f"
+            ]
+        ],
+        "outputLabels": [
+            "payload1",
+            "payload2",
+            "payload3",
+            "payload4",
+            "payload5",
+            "payload6",
+            ""
+        ]
+    },
+    {
+        "id": "1e47336f74fdbd4f",
+        "type": "debug",
+        "z": "204548a488401a1b",
+        "name": "Radio Output All",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "300e8b1d4996601e",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "GET PCs",
+        "func": "var p1 = global.get(\"PC1\");\nvar p2 = global.get(\"PC2\");\nvar p3 = global.get(\"PC3\");\nvar p4 = global.get(\"PC4\");\nvar p5 = global.get(\"PC5\");\nvar p6 = global.get(\"PC6\");\nvar PCs_list = global.get(\"PCs\");\n\nif (p1==undefined){\n    global.set(\"PC1\", null);\n}\nif (p2 == undefined) {\n    global.set(\"PC2\", null);\n}\nif (p3 == undefined) {\n    global.set(\"PC3\", null);\n}\nif (p4 == undefined) {\n    global.set(\"PC4\", null);\n}\nif (p5 == undefined) {\n    global.set(\"PC5\", null);\n}\nif (p6 == undefined) {\n    global.set(\"PC6\", null);\n}\nif (PCs_list == undefined){\n    global.set(\"PCs\", null);\n}\n\n\n\n\n\n\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d84431b1769ad0b7",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "UI Update",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 2105,
+        "y": 1460,
+        "wires": [
+            [
+                "289a920a73d6b6e2",
+                "d424d57bdf57571e",
+                "396035747dfda329"
+            ]
+        ]
+    },
+    {
+        "id": "6392f2abe9574a02",
+        "type": "link out",
+        "z": "204548a488401a1b",
+        "name": "PC Out",
+        "mode": "link",
+        "links": [
+            "1abba9a1115bd2c7"
+        ],
+        "x": 1765,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1abba9a1115bd2c7",
+        "type": "link in",
+        "z": "204548a488401a1b",
+        "name": "PCs In",
+        "links": [
+            "6392f2abe9574a02"
+        ],
+        "x": 665,
+        "y": 440,
+        "wires": [
+            [
+                "1c46a9079b39b6af"
+            ]
+        ]
     },
     {
         "id": "b8502660ecb5eb37",
@@ -36653,7 +36702,8 @@
             "e99bcd4b871d0a33",
             "fb70727ee3ef2696",
             "b9359e88f599c705",
-            "86117516f9c50845"
+            "86117516f9c50845",
+            "d84431b1769ad0b7"
         ],
         "x": 1425,
         "y": 80,
