@@ -396,9 +396,7 @@
             "ab98427.85cd3c"
         ],
         "x": 474,
-        "y": 159,
-        "w": 272,
-        "h": 522
+        "y": 159
     },
     {
         "id": "52886121c9629e0b",
@@ -422,9 +420,7 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -448,9 +444,7 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159,
-        "w": 315,
-        "h": 482
+        "y": 159
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -475,9 +469,7 @@
             "52d0f0a78929438e"
         ],
         "x": 214,
-        "y": 159,
-        "w": 242,
-        "h": 482
+        "y": 159
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -492,9 +484,7 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19,
-        "w": 252,
-        "h": 122
+        "y": 19
     },
     {
         "id": "b90980234a451f8d",
@@ -509,9 +499,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39,
-        "w": 272,
-        "h": 82
+        "y": 39
     },
     {
         "id": "23eb39063da69706",
@@ -535,9 +523,7 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "022672368830e427",
@@ -561,9 +547,7 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159,
-        "w": 252,
-        "h": 482
+        "y": 159
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -600,9 +584,7 @@
             "4b7abadd74993948"
         ],
         "x": -6,
-        "y": 679,
-        "w": 2072,
-        "h": 302
+        "y": 679
     },
     {
         "id": "28877ac600fea8b9",
@@ -627,9 +609,7 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019,
-        "w": 632,
-        "h": 262
+        "y": 1019
     },
     {
         "id": "c6a5789101548ba9",
@@ -644,9 +624,7 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099,
-        "w": 252,
-        "h": 122
+        "y": 1099
     },
     {
         "id": "18a3020b4a12ae60",
@@ -670,9 +648,7 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159,
-        "w": 281,
-        "h": 482
+        "y": 159
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -834,9 +810,7 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "f01baabf4527b6e5",
@@ -2470,11 +2444,11 @@
         "id": "f7fc598d8d40c287",
         "type": "ui_group",
         "d": true,
-        "name": "Backup",
+        "name": "Not Used!!",
         "tab": "08eed6c3517c624e",
         "order": 17,
         "disp": false,
-        "width": 8,
+        "width": "8",
         "collapse": false,
         "className": ""
     },
@@ -25866,7 +25840,7 @@
         "id": "75548936064e3eff",
         "type": "ui_form",
         "z": "204548a488401a1b",
-        "name": "2 Comptuer Name Input",
+        "name": "1 Comptuer Name Input",
         "label": "",
         "group": "887ee2eadc46df9a",
         "order": 1,
@@ -25907,7 +25881,7 @@
         "order": 2,
         "width": 6,
         "height": 2,
-        "name": "1 First Two PC Names Will Appear on the N1MM Dashboard With the Map",
+        "name": "2 First Two PC Names Will Appear on the N1MM Dashboard With the Map",
         "label": "The First Two PC Names Will Appear on the N1MM Dashboard With the Map",
         "format": "{{msg.payload}}",
         "layout": "col-center",
@@ -26188,7 +26162,7 @@
         "z": "204548a488401a1b",
         "name": "4 Clear  XML Login Data",
         "group": "8a65c232b2637c6a",
-        "order": 1,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -26412,7 +26386,7 @@
         "tooltip": "",
         "place": "Choose Selection",
         "group": "8a65c232b2637c6a",
-        "order": 2,
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -26556,7 +26530,7 @@
         "name": "2 Lat & Lon Input",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 4,
+        "order": 3,
         "width": 6,
         "height": 1,
         "options": [
@@ -26767,7 +26741,7 @@
         "label": "Map Labels On/Off",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27988,7 +27962,7 @@
         "name": "5 Database Login Form",
         "label": "",
         "group": "8a65c232b2637c6a",
-        "order": 5,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -28843,7 +28817,7 @@
         "tooltip": "Select Your Power",
         "place": "Select Power",
         "group": "8e8e61b9e41627e8",
-        "order": 3,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -28886,7 +28860,7 @@
         "tooltip": "",
         "place": "Select Class",
         "group": "8e8e61b9e41627e8",
-        "order": 5,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -30197,7 +30171,7 @@
         "label": "TTL Value",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 5,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -30591,7 +30565,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 13,
+        "order": 18,
         "width": 8,
         "height": 1,
         "name": "3 Current Radio Names Text Box",
@@ -30853,7 +30827,7 @@
         "name": "4 QSO Map Icon TTL Form",
         "label": "",
         "group": "f7fc598d8d40c287",
-        "order": 18,
+        "order": 23,
         "width": 8,
         "height": 1,
         "options": [
@@ -30907,7 +30881,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 3,
+        "order": 8,
         "width": 8,
         "height": 1,
         "name": "3 Current TTL Icon Value",
@@ -31120,7 +31094,7 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "group": "f7fc598d8d40c287",
-        "order": 15,
+        "order": 20,
         "width": 8,
         "height": 1,
         "name": "2 Contestname Text",
@@ -31137,7 +31111,7 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "group": "f7fc598d8d40c287",
-        "order": 6,
+        "order": 11,
         "width": 8,
         "height": 1,
         "name": "3 Chase Call1 Text",
@@ -31154,7 +31128,7 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "group": "f7fc598d8d40c287",
-        "order": 17,
+        "order": 22,
         "width": 8,
         "height": 1,
         "name": "4 Chase Call2 Text",
@@ -31171,7 +31145,7 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "group": "f7fc598d8d40c287",
-        "order": 16,
+        "order": 21,
         "width": 8,
         "height": 1,
         "name": "5 Chase Call3 Text",
@@ -31188,7 +31162,7 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "group": "f7fc598d8d40c287",
-        "order": 19,
+        "order": 24,
         "width": 8,
         "height": 1,
         "name": "6 Chase Call4 Text",
@@ -31219,7 +31193,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 10,
+        "order": 15,
         "width": 8,
         "height": 1,
         "name": "OP Comp Sort Type Textbox",
@@ -31236,8 +31210,8 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "d": true,
-        "group": "54b59a095746559b",
-        "order": 1,
+        "group": "f7fc598d8d40c287",
+        "order": 2,
         "width": 6,
         "height": 2,
         "name": "1 Current Lat & Lon",
@@ -31265,8 +31239,8 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "name": "6 Clear HamQTH XML Login Data",
-        "group": "8a65c232b2637c6a",
-        "order": 3,
+        "group": "f7fc598d8d40c287",
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -31292,7 +31266,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 2,
+        "order": 7,
         "width": 8,
         "height": 1,
         "name": "Distance Measurement Type",
@@ -31310,7 +31284,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 4,
+        "order": 9,
         "width": 8,
         "height": 1,
         "name": "6 Map Label Type Text",
@@ -31328,7 +31302,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 5,
+        "order": 10,
         "width": 8,
         "height": 1,
         "name": "5 Q High 2 Hour Text",
@@ -31346,7 +31320,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 7,
+        "order": 12,
         "width": 8,
         "height": 1,
         "name": "4 Q Low 2 Hour Text",
@@ -31364,7 +31338,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 8,
+        "order": 13,
         "width": 8,
         "height": 1,
         "name": "2 Q High 1 Hour Text",
@@ -31382,7 +31356,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 14,
+        "order": 19,
         "width": 8,
         "height": 1,
         "name": "1 Q Low 1 Hour Text",
@@ -31402,7 +31376,7 @@
         "name": "3 1Q Per Hour Color Form",
         "label": "Q's Per 1 Hour Rates",
         "group": "f7fc598d8d40c287",
-        "order": 20,
+        "order": 25,
         "width": 8,
         "height": 1,
         "options": [
@@ -31446,7 +31420,7 @@
         "name": "6 2Q Per Hour Color Form",
         "label": "Q's Per 2 Hour Rates",
         "group": "f7fc598d8d40c287",
-        "order": 1,
+        "order": 6,
         "width": 8,
         "height": 1,
         "options": [
@@ -31507,8 +31481,8 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "d": true,
-        "group": "8e8e61b9e41627e8",
-        "order": 4,
+        "group": "f7fc598d8d40c287",
+        "order": 3,
         "width": 6,
         "height": 1,
         "name": "4 Class Lookup Text",
@@ -31525,8 +31499,8 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "d": true,
-        "group": "8e8e61b9e41627e8",
-        "order": 2,
+        "group": "f7fc598d8d40c287",
+        "order": 4,
         "width": 6,
         "height": 1,
         "name": "2 Power Lookup Text",
@@ -31543,8 +31517,8 @@
         "type": "ui_text",
         "z": "09eb64b651f58dce",
         "d": true,
-        "group": "8a65c232b2637c6a",
-        "order": 4,
+        "group": "f7fc598d8d40c287",
+        "order": 5,
         "width": 6,
         "height": 1,
         "name": "1 Database Lookup Text",
@@ -31562,7 +31536,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 12,
+        "order": 17,
         "width": 8,
         "height": 1,
         "name": "5 Contest Category Lookup Text",
@@ -31580,7 +31554,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 11,
+        "order": 16,
         "width": 8,
         "height": 1,
         "name": "3 Current Contest Callsign Text",
@@ -35763,7 +35737,7 @@
         "z": "3e52b5d54104d7f0",
         "d": true,
         "group": "f7fc598d8d40c287",
-        "order": 9,
+        "order": 14,
         "width": 8,
         "height": 1,
         "name": "OS Type",
