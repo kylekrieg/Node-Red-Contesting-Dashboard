@@ -52,4 +52,4 @@ body:
       description: By submitting this issue, you agree to that this is the first time of this feature being requested. If not sure please check the [Issues Page](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/issues?q=label%3Afeature-request). If already there, please drive discussion to the existing issue.
       options:
         - label: I agree this is the first post associated with this feature.
-          required: true.
+          required: true
