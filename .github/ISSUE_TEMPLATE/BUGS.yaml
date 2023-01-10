@@ -43,7 +43,7 @@ body:
           - **OS** : PI-OS Bullseye
           - **Node.js** : 16
           - **Docker** : N/A Currently potentially in the future.
-      values: |
+      value: |
           - **OS** : 
           - **Node.js** :
       render: markdown
