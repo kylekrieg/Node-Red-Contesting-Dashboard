@@ -10518,7 +10518,7 @@
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2000,
+        "x": 2100,
         "y": 2580,
         "wires": []
     },
@@ -10556,7 +10556,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select count(call) as rate from qsos where timestamp >= datetime('now','-10 minutes');",
+        "template": "select count(call)*6 as rate from qsos where timestamp >= datetime('now','-10 minutes');",
         "output": "str",
         "x": 1190,
         "y": 2580,
@@ -10618,13 +10618,13 @@
         "y": 2580,
         "wires": [
             [
-                "22ce212957008805"
+                "423be83329a89d15"
             ],
             [
-                "22ce212957008805"
+                "423be83329a89d15"
             ],
             [
-                "22ce212957008805"
+                "423be83329a89d15"
             ]
         ]
     },
@@ -10641,7 +10641,7 @@
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2000,
+        "x": 2100,
         "y": 2640,
         "wires": []
     },
@@ -10654,7 +10654,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select count(call) as rate from qsos where timestamp >= datetime('now','-30 minutes');",
+        "template": "select count(call)*2 as rate from qsos where timestamp >= datetime('now','-30 minutes');",
         "output": "str",
         "x": 1190,
         "y": 2640,
@@ -10716,13 +10716,13 @@
         "y": 2640,
         "wires": [
             [
-                "d42c9a9932b07f03"
+                "9ed34fa738efe823"
             ],
             [
-                "d42c9a9932b07f03"
+                "9ed34fa738efe823"
             ],
             [
-                "d42c9a9932b07f03"
+                "9ed34fa738efe823"
             ]
         ]
     },
@@ -10765,6 +10765,60 @@
             [
                 "62221c4d6357e087",
                 "8e0bf07bbde7b816"
+            ]
+        ]
+    },
+    {
+        "id": "423be83329a89d15",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "name": "Divide",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rate",
+                "pt": "msg",
+                "to": "msg.rate/6",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1950,
+        "y": 2580,
+        "wires": [
+            [
+                "22ce212957008805"
+            ]
+        ]
+    },
+    {
+        "id": "9ed34fa738efe823",
+        "type": "change",
+        "z": "407d2b774fe67647",
+        "name": "Divide",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rate",
+                "pt": "msg",
+                "to": "msg.rate/2",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1950,
+        "y": 2640,
+        "wires": [
+            [
+                "d42c9a9932b07f03"
             ]
         ]
     },
@@ -27391,7 +27445,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Set Global Q's Per Hour",
-        "func": "if (msg.topic== \"Q1Low\"){\n    let Q1hrlow = msg.payload.Q1hrlow;\n    let Q1hrmedlow = Q1hrlow + 1; \n    global.set('Q1hrlow', Q1hrlow);\n    global.set('Q1hrmedlow', Q1hrmedlow);\n}\nelse if (msg.topic== \"Q1High\"){\n    let Q1hrhigh = msg.payload.Q1hrhigh; \n    let Q1hrmedhigh = Q1hrhigh - 1;\n    global.set('Q1hrmedhigh', Q1hrmedhigh);\n    global.set('Q1hrhigh', Q1hrhigh);\n}\nelse if (msg.topic== \"Q2High\"){\n    let Q2hrlow = msg.payload.Q2hrlow;\n    let Q2hrmedlow = Q2hrlow + 1;\n    global.set('Q2hrlow', Q2hrlow);\n    global.set('Q2hrmedlow', Q2hrmedlow);\n}\nelse if (msg.topic == \"Q2Low\"){\n    let Q2hrhigh = msg.payload.Q2hrhigh;\n    let Q2hrmedhigh = Q2hrhigh - 1;\n    global.set('Q2hrmedhigh', Q2hrmedhigh);\n    global.set('Q2hrhigh', Q2hrhigh);\n\n}\nreturn msg;\n\n",
+        "func": "if (msg.topic== \"Q1Low\"){\n    var Q1hrlow = msg.payload;\n    let Q1hrmedlow = Q1hrlow + 1; \n    global.set('Q1hrlow', Q1hrlow);\n    global.set('Q1hrmedlow', Q1hrmedlow);\n}\nelse if (msg.topic== \"Q1High\"){\n    var Q1hrhigh = msg.payload; \n    let Q1hrmedhigh = Q1hrhigh - 1;\n    global.set('Q1hrmedhigh', Q1hrmedhigh);\n    global.set('Q1hrhigh', Q1hrhigh);\n}\nelse if (msg.topic== \"Q2Low\"){\n    var Q2hrlow = msg.payload;\n    let Q2hrmedlow = Q2hrlow + 1;\n    global.set('Q2hrlow', Q2hrlow);\n    global.set('Q2hrmedlow', Q2hrmedlow);\n}\nelse if (msg.topic == \"Q2High\"){\n    var Q2hrhigh = msg.payload;\n    let Q2hrmedhigh = Q2hrhigh - 1;\n    global.set('Q2hrmedhigh', Q2hrmedhigh);\n    global.set('Q2hrhigh', Q2hrhigh);\n}\nlet status_value= [Q1hrlow,Q1hrhigh,Q2hrlow,Q2hrhigh].toString();\nnode.status({text: status_value});\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
