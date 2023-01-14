@@ -8375,7 +8375,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8393,7 +8393,7 @@
         "z": "407d2b774fe67647",
         "g": "d48758cdf0c8991d",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -10556,7 +10556,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-10 minutes');",
+        "template": "select count(call) as rate from qsos where timestamp >= datetime('now','-10 minutes');",
         "output": "str",
         "x": 1190,
         "y": 2580,
@@ -10605,7 +10605,8 @@
         "y": 2580,
         "wires": [
             [
-                "c49fcce1f26e9347"
+                "c49fcce1f26e9347",
+                "fc5f5888da529561"
             ]
         ]
     },
@@ -10654,7 +10655,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-30 minutes');",
+        "template": "select count(call) as rate from qsos where timestamp >= datetime('now','-30 minutes');",
         "output": "str",
         "x": 1190,
         "y": 2640,
@@ -10703,7 +10704,8 @@
         "y": 2640,
         "wires": [
             [
-                "b2fb0d06a18430c8"
+                "b2fb0d06a18430c8",
+                "fc5f5888da529561"
             ]
         ]
     },
@@ -10750,6 +10752,22 @@
                 "4f9fb9b8a6830954"
             ]
         ]
+    },
+    {
+        "id": "fc5f5888da529561",
+        "type": "debug",
+        "z": "407d2b774fe67647",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 2500,
+        "wires": []
     },
     {
         "id": "4079239a4fd5c11c",
@@ -24413,7 +24431,7 @@
         "z": "1c66bd27e16a3fec",
         "g": "f01baabf4527b6e5",
         "name": "QSO Data Raw",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -28622,7 +28640,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Contest Callsign",
-        "func": "msg.payload={};\nmsg.payload.contestcallsign = global.get('contestcallsign');\nnode.status({text:msg.payload.toString()});\nreturn msg;",
+        "func": "msg.payload={};\nmsg.payload.contestcallsign = global.get('contestcallsign');\nnode.status({text:msg.payload.contestcallsign.toString()});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -30255,7 +30273,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "switch to one login form",
-        "func": "var dbconfig= global.get(\"dblookup\");\nvar hamqth={};\nvar hamqth_clear={};\nvar qrz={};\nvar qrz_clear={};\nif (dbconfig== \"hamqth\"){\n    if (msg.topic == \"cleardata\"){\n        hamqth.payload=1;\n        return[null,null,null,hamqth_clear];\n    }\n    else{\n        let hamqthusername=msg.payload.username;\n        let hamqthpassword=msg.payload.password;\n        hamqth_clear.payload = { \"hamqthusername\": hamqthusername, \"hamqthpassword\": hamqthpassword };\n    }\n} \nif (dbconfig == \"qrz\") {\n    if (msg.topic == \"cleardata\"){\n        qrz_clear.payload = 1;\n        return[qrz_clear,null,null,null];\n    }else{\n        let qrzusername = msg.payload.username;\n        let qrzpassword = msg.payload.password;\n        qrz.payload = { \"qrzusername\": qrzusername, \"qrzpassword\": qrzpassword };\n\n    }\n} \n\nreturn [null,qrz,hamqth, null];",
+        "func": "var dbconfig= global.get(\"dblookup\");\nvar hamqth={};\nvar hamqth_clear={};\nvar qrz={};\nvar qrz_clear={};\nnode.status({text:dbconfig});\nif (dbconfig== \"hamqth\"){\n    if (msg.topic == \"cleardata\"){\n        hamqth.payload=1;\n        return[null,null,null,hamqth_clear];\n    }\n    else{\n        let hamqthusername=msg.payload.username;\n        let hamqthpassword=msg.payload.password;\n        hamqth_clear.payload = { \"hamqthusername\": hamqthusername, \"hamqthpassword\": hamqthpassword };\n    }\n} \nif (dbconfig == \"qrz\") {\n    if (msg.topic == \"cleardata\"){\n        qrz_clear.payload = 1;\n        return[qrz_clear,null,null,null];\n    }else{\n        let qrzusername = msg.payload.username;\n        let qrzpassword = msg.payload.password;\n        qrz.payload = { \"qrzusername\": qrzusername, \"qrzpassword\": qrzpassword };\n\n    }\n} \n\nreturn [null,qrz,hamqth, null];",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -30475,6 +30493,7 @@
         "id": "aa7dbdfd69afdeea",
         "type": "link in",
         "z": "204548a488401a1b",
+        "d": true,
         "name": "QSO Completion In",
         "links": [
             "4ba15e040d99ef6b"
