@@ -7428,9 +7428,7 @@
         "wires": [
             [
                 "d67c999eabb4aba0",
-                "334aadb089f6f0c0",
-                "62221c4d6357e087",
-                "8e0bf07bbde7b816"
+                "334aadb089f6f0c0"
             ]
         ]
     },
@@ -8694,7 +8692,8 @@
         "links": [
             "247347fc62633734",
             "f3117ed04c2dd2ff",
-            "fd220d20c3727d7e"
+            "fd220d20c3727d7e",
+            "8da88eb5e82e503d"
         ],
         "x": 1185,
         "y": 400,
@@ -10515,7 +10514,7 @@
         "width": 6,
         "height": 2,
         "name": "10 Minute Rate",
-        "label": "10 Minute Rate",
+        "label": "10 Minute",
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
@@ -10606,8 +10605,7 @@
         "y": 2580,
         "wires": [
             [
-                "c49fcce1f26e9347",
-                "fc5f5888da529561"
+                "c49fcce1f26e9347"
             ]
         ]
     },
@@ -10639,7 +10637,7 @@
         "width": 6,
         "height": 2,
         "name": "30 Minute Rate",
-        "label": "30 Minute Rate",
+        "label": "30 Minute",
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
@@ -10705,8 +10703,7 @@
         "y": 2640,
         "wires": [
             [
-                "b2fb0d06a18430c8",
-                "fc5f5888da529561"
+                "b2fb0d06a18430c8"
             ]
         ]
     },
@@ -10755,20 +10752,21 @@
         ]
     },
     {
-        "id": "fc5f5888da529561",
-        "type": "debug",
+        "id": "8da88eb5e82e503d",
+        "type": "link in",
         "z": "407d2b774fe67647",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1780,
-        "y": 2500,
-        "wires": []
+        "name": "link in 2",
+        "links": [
+            "4320ff577c7cb858"
+        ],
+        "x": 785,
+        "y": 2600,
+        "wires": [
+            [
+                "62221c4d6357e087",
+                "8e0bf07bbde7b816"
+            ]
+        ]
     },
     {
         "id": "4079239a4fd5c11c",
@@ -30174,8 +30172,8 @@
         "height": 2,
         "passthru": false,
         "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
+        "topic": "Q1Low",
+        "topicType": "str",
         "min": 0,
         "max": "500",
         "step": "2",
@@ -30201,8 +30199,8 @@
         "height": 2,
         "passthru": false,
         "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
+        "topic": "Q1High",
+        "topicType": "str",
         "min": 0,
         "max": "500",
         "step": "2",
@@ -30228,8 +30226,8 @@
         "height": 2,
         "passthru": false,
         "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
+        "topic": "Q2Low",
+        "topicType": "str",
         "min": 0,
         "max": "500",
         "step": "2",
@@ -30255,8 +30253,8 @@
         "height": 2,
         "passthru": false,
         "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
+        "topic": "Q2High",
+        "topicType": "str",
         "min": 0,
         "max": "500",
         "step": "2",
@@ -38719,7 +38717,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.radio_info .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats{\nfont-size: 20px;\n}\n.band_stats .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.band_stats_spot_rate{\nfont-size: 19px;\n}\n.band_stats_op {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n.band_stats_op .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.dashboard_activity_rate{\nfont-size: 22px;\n}\n.dashboard_activity_rate .value{\nfont-size : 38px;}\n.scoreboard{\nfont-size: 25px;\n}\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.nr-dashboard-cardtitle{\nmargin-top: 8px;\nmargin-bottom: 2px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n}\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
+        "format": "<style>\n.dashboard_last_qsos{\nfont-size: 24px;\n}\n.dashboard_last_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos{\nfont-size: 35px;\n}\n.dashboard_current_qsos .nr-dashboard-cardtitle{\nfont-size: 20px;\n}\n.dashboard_current_qsos .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .nr-dashboard-cardtitle{\nfont-size : 20px;\n}\n.dashboard_contest_stats .label{\nfont-size: 22px;\n}\n.dashboard_contest_stats .value {\nfont-size: 40px;\n}\n.dashboard_contest_stats .nr {\n    font-size: 22px;\n}\n.dashboard_radio_data .nr-dashboard-cardtitle{ \nfont-size: 20px;\n}\n.dashboard_radio_data .label{ \nfont-size: 22px;\n}\n.dashboard_radio_data .value{ \nfont-size: 38px;\n}\n.radio_info{\nfont-size: 20px;\n}\n.radio_info .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats{\nfont-size: 20px;\n}\n.band_stats .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.band_stats .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.band_stats_spot_rate{\nfont-size: 19px;\n}\n.band_stats_op {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n.band_stats_op .nr-dashboard-chart-titlel {\nfont-size: 19px;\n}\n\n.band_stats_spot_rate .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.dashboard_activity_rate{\nfont-size: 22px;\n}\n.dashboard_activity_rate .value{\nfont-size : 38px;\n}\n.dashboard_activity_rate .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.scoreboard{\nfont-size: 25px;\n}\n.op_compete{\nfont-size: 30px;\n}\n.op_compete .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.op_compete .value{\nfont-size: 40px;\nfont-weight: bolder;\n}\n.op_compete .label{\nfont-size: 20px;\n}\n.op_compete .fa {\nfont-size: 48px;\n}\n.op_compete_trending .nr-dashboard-cardtitle{\nfont-size: 19px;\n}\n.nr-dashboard-cardtitle{\nmargin-top: 8px;\nmargin-bottom: 2px;\n}\n.op_compete_trending .fa {\nfont-size: 48px;\n}\n.op_compete_trending .label{\nfont-size: 20px;\n}\n.dashboard_last_qsos .value {\nfont-size: 40px;\n}\n.dashboard_last_qsos .label {\nfont-size: 22px;\n}\n.np.nr-dashboard-chart-title {\n        padding: unset;\n}\n.chart_title .nr-dashboard-chart-titlel {\n    display: none;\n}\n.chart_title .nr-dashboard-chart-nolabel {\n    height: 100%;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
