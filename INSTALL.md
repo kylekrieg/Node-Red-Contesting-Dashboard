@@ -74,23 +74,22 @@ All of the sections should line up nicely and look uniform on a 1920x1080p scree
 
 For more information about the current issues please head to our [Issues on Github](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/issues)
 
-1) The Spectator Dashboard is still a work in progress.  The vision of this screen is for an operator to be able to use this dashboard to stream to YouTube or Twitch without violating any contest rules.  This dashboard will not give your frequency or band information away but allows the viewer to interact and learn more about contesting and ham radio.
-2) On the graphical line charts, the most recent data point time is typically in local time with the rest of the data points in UTC.  This is a known bug in the graphing dashboard node.
-3) The great circle lines in the Worldmap node currently have an issue with the international date line.  The developers are working on this bug.
-
 ## Upgrading
 
 See the section above named *Upgrading after 20220319* to create a new *qsos* database.  After the new database is created, you can download the newest version of this project by completing the *Download the N1MM Dashboard JSON From GitHub* above section again and name the new project with a new date.  Follow the steps again from that point on to verify all the configurations are correct.
 
+If upgrading to v1.0.0 or later, please make sure to modifiy the settings.js file to uncomment the contextStorage value.
+
+```json
+   contextStorage: {
+        default: {
+            module:"localfilesystem"
+        },
+    },
+```
+
 ## To Do
 
 For more information about the current roadmap please head to our [Timeline on Github](https://github.com/users/kylekrieg/projects/1) to see when features may be added.
-
-The laundry list is huge.  These are just a few.
-
-1) Setup the dashboard for Field Day and Winter Field Day.
-2) Be able to highlight and fill a choropleth map based on Qs worked in each section/zone/state/DXCC.
-3) Writelog and N3FJP integration.
-4) WAC (Work All Contests) entry window.  This would be a basic entry window to allow an operator to work all the contests happening during the operating time no matter of the exchange and be able to create a Cabrillo file for each contest.
 
 This program is released as-is.  Modify this program as you see fit.
