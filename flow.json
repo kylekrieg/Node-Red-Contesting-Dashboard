@@ -466,7 +466,8 @@
             "58b4f87e7d17a9b2",
             "1c0e963122e30bc8",
             "cd6e0fce6f62b9c5",
-            "52d0f0a78929438e"
+            "52d0f0a78929438e",
+            "e1278f8b2f6fee61"
         ],
         "x": 214,
         "y": 159
@@ -2161,7 +2162,7 @@
     {
         "id": "bea4993f.85f4d8",
         "type": "websocket-client",
-        "path": "wss://ws7.blitzortung.org/",
+        "path": "wss://ws1.blitzortung.org/",
         "tls": "621bc3fe.d747dc",
         "wholemsg": "false",
         "hb": "0",
@@ -3285,15 +3286,15 @@
             ],
             [
                 "48307e071458f6a1",
-                "1cbf491f09f5b57e"
+                "8f672d8991e11f43"
             ],
             [
                 "48307e071458f6a1",
-                "1cbf491f09f5b57e"
+                "8f672d8991e11f43"
             ],
             [
                 "020edd3ba15d0ea4",
-                "1cbf491f09f5b57e"
+                "8f672d8991e11f43"
             ]
         ]
     },
@@ -4393,15 +4394,15 @@
             ],
             [
                 "a1369cd58e8ea395",
-                "7f886053cdd16a70"
+                "d0b5a44f80f909f9"
             ],
             [
                 "a1369cd58e8ea395",
-                "7f886053cdd16a70"
+                "d0b5a44f80f909f9"
             ],
             [
                 "6153738ced412e5b",
-                "7f886053cdd16a70"
+                "d0b5a44f80f909f9"
             ]
         ]
     },
@@ -5347,9 +5348,9 @@
         "y": 400,
         "wires": [
             [
-                "3762f0280985ea10",
                 "1e5bda5f5c322537",
-                "c0c81bc9589bbb2e"
+                "c0c81bc9589bbb2e",
+                "1cbf491f09f5b57e"
             ]
         ]
     },
@@ -5454,8 +5455,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
-        "y": 880,
+        "x": 1880,
+        "y": 860,
         "wires": [
             [
                 "3762f0280985ea10",
@@ -6219,8 +6220,8 @@
         "links": [
             "2f0871ab61146734"
         ],
-        "x": 1735,
-        "y": 440,
+        "x": 2005,
+        "y": 420,
         "wires": []
     },
     {
@@ -6249,9 +6250,203 @@
         "links": [
             "2f0871ab61146734"
         ],
-        "x": 1785,
-        "y": 960,
+        "x": 2025,
+        "y": 920,
         "wires": []
+    },
+    {
+        "id": "d0b5a44f80f909f9",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.name",
+                "pt": "msg",
+                "to": "original.call[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ttl",
+                "pt": "msg",
+                "to": "ttl",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload.op",
+                "pt": "msg",
+                "to": "original.operator[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "original.band[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.mode",
+                "pt": "msg",
+                "to": "original.mode[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.isrunqso",
+                "pt": "msg",
+                "to": "original.IsRunQSO[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.exchange",
+                "pt": "msg",
+                "to": "original.exchange1[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.section",
+                "pt": "msg",
+                "to": "original.section[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ID",
+                "pt": "msg",
+                "to": "original.ID[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.distance_miles",
+                "pt": "msg",
+                "to": "#N/A",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.distance_km",
+                "pt": "msg",
+                "to": "#N/A",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1880,
+        "y": 920,
+        "wires": [
+            [
+                "7f886053cdd16a70"
+            ]
+        ]
+    },
+    {
+        "id": "8f672d8991e11f43",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.name",
+                "pt": "msg",
+                "to": "original.call[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ttl",
+                "pt": "msg",
+                "to": "ttl",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload.op",
+                "pt": "msg",
+                "to": "original.operator[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.band",
+                "pt": "msg",
+                "to": "original.band[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.mode",
+                "pt": "msg",
+                "to": "original.mode[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.isrunqso",
+                "pt": "msg",
+                "to": "original.IsRunQSO[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.exchange",
+                "pt": "msg",
+                "to": "original.exchange1[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.section",
+                "pt": "msg",
+                "to": "original.section[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ID",
+                "pt": "msg",
+                "to": "original.ID[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.distance_miles",
+                "pt": "msg",
+                "to": "#N/A",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.distance_km",
+                "pt": "msg",
+                "to": "#N/A",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1780,
+        "y": 440,
+        "wires": [
+            [
+                "1cbf491f09f5b57e"
+            ]
+        ]
     },
     {
         "id": "0178697fb442d801",
@@ -37234,7 +37429,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "60",
+        "repeat": "",
         "crontab": "",
         "once": true,
         "onceDelay": "10",
@@ -38975,7 +39170,7 @@
         "z": "b73cc2bb5f424b69",
         "g": "7a5512b5a3f6e8ba",
         "name": "Get Lighting Enable ",
-        "func": "var lightning_enable;\n\nlightning_enable = global.get(\"lightningenable\");\nif (lightning_enable == true){\n  msg.payload = '{\"a\":767}';\n  msg.enabled = true;\n  node.status({ fill: \"green\", shape: \"dot\", text: \"On\" });}\nelse{\n  node.status({ fill: \"red\", shape: \"dot\", text: \"Off\" });\n  msg.enabled = false;\n  msg.payload = '{\"send\":false}';\n}\nreturn msg;",
+        "func": "var lightning_enable;\n\nlightning_enable = global.get(\"lightningenable\");\nif (lightning_enable == true){\n  msg.payload = '{\"a\":418}';\n  msg.enabled = true;\n  node.status({ fill: \"green\", shape: \"dot\", text: \"On\" });}\nelse{\n  node.status({ fill: \"red\", shape: \"dot\", text: \"Off\" });\n  msg.enabled = false;\n  msg.payload = '{\"send\":false}';\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -39124,6 +39319,28 @@
         "templateScope": "global",
         "className": "",
         "x": 610,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1278f8b2f6fee61",
+        "type": "ui_template",
+        "z": "b73cc2bb5f424b69",
+        "g": "c6e09ffb3c5a1ce6",
+        "group": "ba8d90f0d4d46eb0",
+        "name": "Footer",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .footer {\n        position: fixed;\n        left: 0;\n        bottom: 0;\n        width: 100%;\n        color: white;\n        text-align: center;\n        background-color: #097479;    }\n    .marquee {\n        height: 50px;\n        overflow: hidden;\n        position: relative;\n        }\n\n    .marquee p {\n        position: absolute;\n        width: 100%;\n        height: 100%;\n        margin: 0;\n        line-height: 50px;\n        text-align: center;\n        transform: translateX(100%);\n        animation: scroll-left 45s linear infinite;\n    }\n\n    @-moz-keyframes scroll-left {\n        0% {\n            -moz-transform: translateX(100%);\n        }\n\n        100% {\n            -moz-transform: translateX(-100%);\n        }\n    }\n\n    @-webkit-keyframes scroll-left {\n        0% {\n            -webkit-transform: translateX(100%);\n        }\n\n        100% {\n            -webkit-transform: translateX(-100%);\n        }\n    }\n\n    @keyframes scroll-left {\n        0% {\n            -moz-transform: translateX(100%);\n            -webkit-transform: translateX(100%);\n            transform: translateX(100%);\n        }\n\n        100% {\n            -moz-transform: translateX(-100%);\n            -webkit-transform: translateX(-100%);\n            transform: translateX(-100%);\n        }\n    }\n</style>\n\n<script>\n    //append a custom footer into #nr-dashboard-footer\n    $(\"#nr-dashboard-footer\").remove();\n    $(\"#nr-dashboard-footer\").append('<div class=\"footer marquee\"><p> Developed by AA0Z & KD9LSV;    Node-Red-Contesting-Dashboard For more info please head to <a href=\"https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/issues\"><b>our Github</b></a></p>');\n    //hide this card. NOTE: a960b1e5.8aec is the Node id as seen in the INFO panel on the sidebar\n    $('[node-id=\"e1278f8b2f6fee61\"]').hide(); \n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 290,
         "y": 640,
         "wires": [
             []
