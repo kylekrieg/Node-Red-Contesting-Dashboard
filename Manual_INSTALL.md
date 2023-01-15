@@ -49,7 +49,7 @@ In the editorTheme section, enable projects (set to true). It's probably current
 
 The editor will ask you if you want to save the file.  Type ***Y*** for yes to save the file.  Write the file to settings.js.
 
-```json
+```shell
 editorTheme: {
        projects: {
            // To enable the Projects feature, set this value to true
@@ -58,7 +58,7 @@ editorTheme: {
 
 **Note this needs to be updated if you are not using v1.0.0 or later.**
 
-```json
+```shell
    contextStorage: {
         default: {
             module:"localfilesystem"
