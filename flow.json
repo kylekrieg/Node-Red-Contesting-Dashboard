@@ -396,7 +396,9 @@
             "ab98427.85cd3c"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 272,
+        "h": 522
     },
     {
         "id": "52886121c9629e0b",
@@ -420,7 +422,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -444,7 +448,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -470,7 +476,9 @@
             "e1278f8b2f6fee61"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 522
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -485,7 +493,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -500,7 +510,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -524,7 +536,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -548,7 +562,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -585,7 +601,9 @@
             "4b7abadd74993948"
         ],
         "x": -6,
-        "y": 679
+        "y": 679,
+        "w": 2072,
+        "h": 302
     },
     {
         "id": "28877ac600fea8b9",
@@ -610,7 +628,9 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -625,7 +645,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -649,7 +671,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 282,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -811,7 +835,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -30521,7 +30547,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "switch to one login form",
-        "func": "var dbconfig= global.get(\"dblookup\");\nvar hamqth={};\nvar hamqth_clear={};\nvar qrz={};\nvar qrz_clear={};\nnode.status({text:dbconfig});\nif (dbconfig== \"hamqth\"){\n    if (msg.topic == \"cleardata\"){\n        hamqth.payload=1;\n        return[null,null,null,hamqth_clear];\n    }\n    else{\n        let hamqthusername=msg.payload.username;\n        let hamqthpassword=msg.payload.password;\n        hamqth_clear.payload = { \"hamqthusername\": hamqthusername, \"hamqthpassword\": hamqthpassword };\n    }\n} \nif (dbconfig == \"qrz\") {\n    if (msg.topic == \"cleardata\"){\n        qrz_clear.payload = 1;\n        return[qrz_clear,null,null,null];\n    }else{\n        let qrzusername = msg.payload.username;\n        let qrzpassword = msg.payload.password;\n        qrz.payload = { \"qrzusername\": qrzusername, \"qrzpassword\": qrzpassword };\n\n    }\n} \n\nreturn [null,qrz,hamqth, null];",
+        "func": "var dbconfig= global.get(\"dblookup\");\nvar hamqth={};\nvar hamqth_clear={};\nvar qrz={};\nvar qrz_clear={};\nnode.status({text:dbconfig});\nif (dbconfig== \"hamqth\"){\n    if (msg.topic == \"cleardata\"){\n        hamqth.payload=1;\n        return[null,null,null,hamqth_clear];\n    }\n    else{\n        let hamqthusername=msg.payload.username;\n        let hamqthpassword=msg.payload.password;\n        hamqth.payload = { \"hamqthusername\": hamqthusername, \"hamqthpassword\": hamqthpassword };\n    }\n} \nif (dbconfig == \"qrz\") {\n    if (msg.topic == \"cleardata\"){\n        qrz_clear.payload = 1;\n        return[qrz_clear,null,null,null];\n    }else{\n        let qrzusername = msg.payload.username;\n        let qrzpassword = msg.payload.password;\n        qrz.payload = { \"qrzusername\": qrzusername, \"qrzpassword\": qrzpassword };\n\n    }\n} \n\nreturn [null,qrz,hamqth, null];",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
