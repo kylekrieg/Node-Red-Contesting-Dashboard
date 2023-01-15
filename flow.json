@@ -717,7 +717,8 @@
             "03b3b4cadbdf9e34",
             "a7dc412af8237000",
             "8d406adaa39170fb",
-            "3c4c7e4533b41d22"
+            "3c4c7e4533b41d22",
+            "fa0188b199a945d9"
         ],
         "x": 414,
         "y": 879,
@@ -11040,6 +11041,26 @@
         "wires": [
             [
                 "d42c9a9932b07f03"
+            ]
+        ]
+    },
+    {
+        "id": "fa0188b199a945d9",
+        "type": "link in",
+        "z": "407d2b774fe67647",
+        "g": "4f4b9f0c82968b60",
+        "name": "Score Calculation In",
+        "links": [
+            "135549f560738315"
+        ],
+        "x": 1275,
+        "y": 1140,
+        "wires": [
+            [
+                "31d7202b2b50131d",
+                "aad501d4eeed3f6c",
+                "06ef39d063a5a0f6",
+                "77a4afb43fb7bdbd"
             ]
         ]
     },
@@ -28069,22 +28090,6 @@
         ]
     },
     {
-        "id": "2eb45f3457d57e54",
-        "type": "debug",
-        "z": "204548a488401a1b",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 2640,
-        "wires": []
-    },
-    {
         "id": "19d2bb692b64b3b8",
         "type": "function",
         "z": "204548a488401a1b",
@@ -28099,43 +28104,10 @@
         "y": 2680,
         "wires": [
             [
-                "013e96aa75609da7",
-                "65952b3351e52bca"
+                "65952b3351e52bca",
+                "135549f560738315"
             ]
         ]
-    },
-    {
-        "id": "013e96aa75609da7",
-        "type": "xml",
-        "z": "204548a488401a1b",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 1110,
-        "y": 2680,
-        "wires": [
-            [
-                "2eb45f3457d57e54",
-                "a31113a42bcb3b22"
-            ]
-        ]
-    },
-    {
-        "id": "a31113a42bcb3b22",
-        "type": "udp out",
-        "z": "204548a488401a1b",
-        "name": "Score XML Port 12062",
-        "addr": "127.0.0.1",
-        "iface": "",
-        "port": "12062",
-        "ipv": "udp4",
-        "outport": "",
-        "base64": false,
-        "multicast": "false",
-        "x": 1320,
-        "y": 2680,
-        "wires": []
     },
     {
         "id": "18a1cdf97768c72a",
@@ -30281,7 +30253,7 @@
         "max": "300",
         "step": "5",
         "className": "",
-        "x": 660,
+        "x": 680,
         "y": 2140,
         "wires": [
             [
@@ -30300,7 +30272,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
+        "x": 930,
         "y": 2140,
         "wires": [
             [
@@ -30547,7 +30519,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "switch to one login form",
-        "func": "var dbconfig= global.get(\"dblookup\");\nvar hamqth={};\nvar hamqth_clear={};\nvar qrz={};\nvar qrz_clear={};\nnode.status({text:dbconfig});\nif (dbconfig== \"hamqth\"){\n    if (msg.topic == \"cleardata\"){\n        hamqth.payload=1;\n        return[null,null,null,hamqth_clear];\n    }\n    else{\n        let hamqthusername=msg.payload.username;\n        let hamqthpassword=msg.payload.password;\n        hamqth.payload = { \"hamqthusername\": hamqthusername, \"hamqthpassword\": hamqthpassword };\n    }\n} \nif (dbconfig == \"qrz\") {\n    if (msg.topic == \"cleardata\"){\n        qrz_clear.payload = 1;\n        return[qrz_clear,null,null,null];\n    }else{\n        let qrzusername = msg.payload.username;\n        let qrzpassword = msg.payload.password;\n        qrz.payload = { \"qrzusername\": qrzusername, \"qrzpassword\": qrzpassword };\n\n    }\n} \n\nreturn [null,qrz,hamqth, null];",
+        "func": "var dbconfig= global.get(\"dblookup\");\nvar hamqth={};\nvar hamqth_clear={};\nvar qrz={};\nvar qrz_clear={};\nnode.status({text:dbconfig});\nif (dbconfig== \"hamqth\"){\n    if (msg.topic == \"cleardata\"){\n        hamqth.payload=1;\n        return[null,null,null,hamqth_clear];\n    }\n    else{\n        let hamqthusername=msg.payload.username;\n        let hamqthpassword=msg.payload.password;\n        hamqth.payload = { \"hamqthusername\": hamqthusername, \"hamqthpassword\": hamqthpassword };\n        return [null, null, hamqth, null];\n    }\n} \nif (dbconfig == \"qrz\") {\n    if (msg.topic == \"cleardata\"){\n        qrz_clear.payload = 1;\n        return[qrz_clear,null,null,null];\n    }else{\n        let qrzusername = msg.payload.username;\n        let qrzpassword = msg.payload.password;\n        qrz.payload = { \"qrzusername\": qrzusername, \"qrzpassword\": qrzpassword };\n        return [null, qrz, null, null];\n    }\n} \n\n",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -30767,7 +30739,6 @@
         "id": "aa7dbdfd69afdeea",
         "type": "link in",
         "z": "204548a488401a1b",
-        "d": true,
         "name": "QSO Completion In",
         "links": [
             "4ba15e040d99ef6b"
@@ -30944,6 +30915,20 @@
                 "1c46a9079b39b6af"
             ]
         ]
+    },
+    {
+        "id": "135549f560738315",
+        "type": "link out",
+        "z": "204548a488401a1b",
+        "name": "Score Calculation Out",
+        "mode": "link",
+        "links": [
+            "fa0188b199a945d9"
+        ],
+        "x": 1320,
+        "y": 2680,
+        "wires": [],
+        "l": true
     },
     {
         "id": "b8502660ecb5eb37",
