@@ -1,7 +1,6 @@
-Node Red Contesting Dashboard
-==============
+# Node Red Contesting Dashboard
 
-A basic multi screen contesting dasbhoard written in Node Red.  Currently it can display stats and contest related info from N1MM and TR4W contesting software.  DXLog integration is spotty with more testing needed.  There are reports that RumLogNG also works with the dashboard. 
+A basic multi screen contesting dasbhoard written in Node Red.  Currently it can display stats and contest related info from N1MM and TR4W contesting software.  DXLog integration is spotty with more testing needed.  There are reports that RumLogNG also works with the dashboard.
 
 ## About
 
@@ -15,9 +14,8 @@ Here are some basic screenshots of the different tabs within the dashboard taken
 
 ## Install
 
-Follow the [INSTALL.md](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/blob/master/INSTALL.md) located in the files section of this project.
+Follow the [INSTALL.md](/INSTALL.md) located in the files section of this project.
 
 ## Questions
 
 Please join the [Node Red for Ham Radio Groups IO discussion](https://groups.io/g/nodered-hamradio) and ask a support question there.
-
