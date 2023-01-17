@@ -885,7 +885,9 @@
             "4ba15e040d99ef6b"
         ],
         "x": 134,
-        "y": 39
+        "y": 39,
+        "w": 1832,
+        "h": 442
     },
     {
         "id": "6c1673638929b26d",
@@ -924,7 +926,9 @@
             "5c60f3c47791458b"
         ],
         "x": 94,
-        "y": 659
+        "y": 659,
+        "w": 1792,
+        "h": 322
     },
     {
         "id": "26cf0678322d1bb6",
@@ -35923,15 +35927,15 @@
         "id": "821bb77829102950",
         "type": "exec",
         "z": "3e52b5d54104d7f0",
-        "command": "cd ~/.node-red/projects/Node-Red-Contesting-Dashboard && git restore flow.json && git pull",
-        "addpay": "",
+        "command": "",
+        "addpay": "command",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1280,
+        "x": 1190,
         "y": 780,
         "wires": [
             [],
@@ -36031,7 +36035,7 @@
         "y": 780,
         "wires": [
             [
-                "ac33dac40f1893ef"
+                "287f1480c9819199"
             ]
         ]
     },
@@ -36323,7 +36327,7 @@
         "links": [
             "94c74a1f43913a90"
         ],
-        "x": 1795,
+        "x": 1445,
         "y": 780,
         "wires": []
     },
@@ -36344,7 +36348,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1670,
+        "x": 1350,
         "y": 780,
         "wires": [
             [
@@ -36418,24 +36422,6 @@
         "wires": []
     },
     {
-        "id": "ac33dac40f1893ef",
-        "type": "link call",
-        "z": "3e52b5d54104d7f0",
-        "name": "",
-        "links": [
-            "dad3e9990f88cc1d"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 880,
-        "y": 780,
-        "wires": [
-            [
-                "821bb77829102950"
-            ]
-        ]
-    },
-    {
         "id": "59d66938117656db",
         "type": "link call",
         "z": "3e52b5d54104d7f0",
@@ -36451,6 +36437,38 @@
             [
                 "303543e9b873784a",
                 "b9e91c38ade92a75"
+            ]
+        ]
+    },
+    {
+        "id": "287f1480c9819199",
+        "type": "projectdir",
+        "z": "3e52b5d54104d7f0",
+        "name": "",
+        "x": 860,
+        "y": 780,
+        "wires": [
+            [
+                "3390cd8e079e2fad"
+            ]
+        ]
+    },
+    {
+        "id": "3390cd8e079e2fad",
+        "type": "template",
+        "z": "3e52b5d54104d7f0",
+        "name": "Upgrade Command ",
+        "field": "command",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "cd {{projectdir}} && git restore flow.json && git pull origin {{global.branch}} ",
+        "output": "str",
+        "x": 1030,
+        "y": 780,
+        "wires": [
+            [
+                "821bb77829102950"
             ]
         ]
     },
