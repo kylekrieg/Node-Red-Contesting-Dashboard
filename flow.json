@@ -23703,7 +23703,6 @@
         "id": "dffc242.cc36fd8",
         "type": "exec",
         "z": "db5600520bb7f279",
-        "d": true,
         "command": "vcgencmd measure_temp",
         "addpay": false,
         "append": "",
@@ -23711,7 +23710,7 @@
         "timer": "",
         "winHide": false,
         "name": "RPi Temp.",
-        "x": 490,
+        "x": 510,
         "y": 320,
         "wires": [
             [
@@ -23746,11 +23745,11 @@
         "y": 320.4722194671631,
         "wires": [
             [
-                "dffc242.cc36fd8",
                 "9bdcdf74.974df",
                 "4f06a834.7ba218",
                 "cae8b4ca.06b218",
-                "ff3e660.2675e98"
+                "ff3e660.2675e98",
+                "dffc242.cc36fd8"
             ]
         ]
     },
@@ -23759,7 +23758,7 @@
         "type": "function",
         "z": "db5600520bb7f279",
         "name": "Set temp to String",
-        "func": "str = msg.payload\nmsg.payload = str.substring(5,9);\nreturn msg;",
+        "func": "let str = msg.payload\nmsg.payload = str.substring(5,9);\nif (msg.payload!=\"\"){\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -24149,8 +24148,8 @@
         ],
         "seg1": "125",
         "seg2": "150",
-        "x": 1094.7778091430664,
-        "y": 173.66666316986084,
+        "x": 1170,
+        "y": 280,
         "wires": []
     },
     {
@@ -24268,8 +24267,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1114.7778091430664,
-        "y": 233.66666316986084,
+        "x": 1190,
+        "y": 320,
         "wires": [
             []
         ]
