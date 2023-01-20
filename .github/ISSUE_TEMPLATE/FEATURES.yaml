@@ -1,0 +1,55 @@
+name: ⭐ Feature Request
+description: Submit a feature request
+title: "[Feature]: "
+labels: ["feature-request"]
+assignees:
+  - kd9lsv
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a feature request! This issue tracker is for [Node-Red-Contesting-Dashboard](https://github.com/kylekrieg/Node-Red-Contesing-Dashboard). Please search the issue tracker to see if there is an existing issue for the feature you are requesting
+  - type: textarea
+    id: the-feature-request
+    attributes:
+      label: The feature request
+      description: Write a clear and concise description of what the feature or problem is.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed solution
+      description: Share how this will benefit the project  and its users.
+    validations:
+      required: true
+  - type: dropdown
+    id: sections
+    attributes:
+      label: Pages Impacted
+      description: What pages are impacted by this feature request? Select All that apply
+      multiple: true
+      options:
+        - Dashboard
+        - Radio Info
+        - OP Competition
+        - Band Stats
+        - Scoreboard
+        - RBN Spots
+        - Pi Status
+        - Streaming Dashboard
+        - Configuration & Resets
+        - New Page (Type Info in additional context)
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Please include any other context, like screenshots or mockups, if applicable
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission
+      description: By submitting this issue, you agree to that this is the first time of this feature being requested. If not sure please check the [Issues Page](https://github.com/kylekrieg/Node-Red-Contesting-Dashboard/issues?q=label%3Afeature-request). If already there, please drive discussion to the existing issue.
+      options:
+        - label: I agree this is the first post associated with this feature.
+          required: true
