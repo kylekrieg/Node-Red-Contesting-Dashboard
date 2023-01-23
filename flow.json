@@ -1362,12 +1362,13 @@
     {
         "id": "dea9d7ac.0cefc8",
         "type": "ui_group",
-        "name": "Raspberry Pi Status & Control",
+        "name": "Pi Server Status & Control",
         "tab": "7f50838.c6d257c",
         "order": 2,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "8ca85278.65932",
@@ -1679,7 +1680,7 @@
         "tab": "7f50838.c6d257c",
         "order": 3,
         "disp": true,
-        "width": 5,
+        "width": "8",
         "collapse": false,
         "className": ""
     },
@@ -2099,11 +2100,11 @@
     {
         "id": "00919f6d1599ed5f",
         "type": "ui_group",
-        "name": "Distance Measurement",
+        "name": "Measurement Units",
         "tab": "08eed6c3517c624e",
         "order": 14,
         "disp": true,
-        "width": 6,
+        "width": "6",
         "collapse": false,
         "className": "config"
     },
@@ -23768,7 +23769,9 @@
         "y": 320,
         "wires": [
             [
-                "f042fa28.8f2bf8"
+                "f042fa28.8f2bf8",
+                "eb799ba44460adec",
+                "c0218de0f81a3892"
             ]
         ]
     },
@@ -24136,8 +24139,8 @@
         "width": 3,
         "height": 3,
         "gtype": "gage",
-        "title": "CPU Temperature",
-        "label": "F",
+        "title": "CPU Temp",
+        "label": "{{msg.label}}",
         "format": "{{value}}",
         "min": 0,
         "max": "170",
@@ -24146,10 +24149,11 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "125",
-        "seg2": "150",
-        "x": 1170,
-        "y": 280,
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1510,
+        "y": 320,
         "wires": []
     },
     {
@@ -24162,7 +24166,7 @@
         "width": 3,
         "height": 3,
         "gtype": "gage",
-        "title": "CPU",
+        "title": "CPU Load",
         "label": "%",
         "format": "{{value}}",
         "min": 0,
@@ -24174,8 +24178,9 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 809.8888931274414,
-        "y": 387.77777767181396,
+        "className": "",
+        "x": 710,
+        "y": 400,
         "wires": []
     },
     {
@@ -24267,8 +24272,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1190,
-        "y": 320,
+        "x": 1530,
+        "y": 360,
         "wires": [
             []
         ]
@@ -24286,13 +24291,13 @@
         "outputFieldType": "msg",
         "roundOutputField": true,
         "outputFieldDecimals": "1",
-        "name": "",
-        "x": 920,
-        "y": 320,
+        "statusType": "none",
+        "name": "C to F",
+        "x": 1150,
+        "y": 280,
         "wires": [
             [
-                "3d67dce5.112054",
-                "cd3f0873.755ee8"
+                "c57859fc4cb050a7"
             ]
         ]
     },
@@ -24670,6 +24675,179 @@
         "wires": [
             [
                 "643ff825d341bf96"
+            ]
+        ]
+    },
+    {
+        "id": "c57859fc4cb050a7",
+        "type": "switch",
+        "z": "db5600520bb7f279",
+        "name": "If Farenheit",
+        "property": "temperature_unit",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "F",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1290,
+        "y": 280,
+        "wires": [
+            [
+                "3d67dce5.112054",
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "eb799ba44460adec",
+        "type": "switch",
+        "z": "db5600520bb7f279",
+        "name": "If Celsius",
+        "property": "temperature_unit",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "C",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1300,
+        "y": 320,
+        "wires": [
+            [
+                "3d67dce5.112054",
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "b89a084234eca9ef",
+        "type": "inject",
+        "z": "db5600520bb7f279",
+        "name": "Every 5 secs",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "temperature_unit",
+        "payloadType": "global",
+        "x": 860,
+        "y": 360,
+        "wires": [
+            [
+                "cd4b0989a632cb00"
+            ]
+        ]
+    },
+    {
+        "id": "cd4b0989a632cb00",
+        "type": "rbe",
+        "z": "db5600520bb7f279",
+        "name": "if temperature_unit change",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1080,
+        "y": 360,
+        "wires": [
+            [
+                "7427d9d83b6e6357"
+            ]
+        ]
+    },
+    {
+        "id": "7427d9d83b6e6357",
+        "type": "change",
+        "z": "db5600520bb7f279",
+        "name": "Clear Chart",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 360,
+        "wires": [
+            [
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "c0218de0f81a3892",
+        "type": "change",
+        "z": "db5600520bb7f279",
+        "name": "Set Gauge Display Values",
+        "rules": [
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "temperature_unit",
+                "tot": "global",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "ui_control.seg1",
+                "pt": "msg",
+                "to": "temperature_yellow",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_control.seg2",
+                "pt": "msg",
+                "to": "temperature_red",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_control.max",
+                "pt": "msg",
+                "to": "temperature_max",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 240,
+        "wires": [
+            [
+                "3d67dce5.112054"
             ]
         ]
     },
@@ -26819,7 +26997,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1930,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "086b1f9232b45a14"
@@ -26846,7 +27024,7 @@
         "to": "",
         "reg": false,
         "x": 2180,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "b6c621827fb49298"
@@ -26880,7 +27058,7 @@
         "name": "Database Lookup Engine Select",
         "info": "",
         "x": 1530,
-        "y": 960,
+        "y": 1060,
         "wires": []
     },
     {
@@ -28734,10 +28912,10 @@
         "id": "48f5678a75ee7dd8",
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
-        "name": "Distance Measurement",
-        "label": "Units",
+        "name": "Disrtance Unit",
+        "label": "Distance",
         "tooltip": "",
-        "place": "Select option",
+        "place": "Select distance unit",
         "group": "00919f6d1599ed5f",
         "order": 1,
         "width": 6,
@@ -28760,7 +28938,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1850,
+        "x": 1820,
         "y": 860,
         "wires": [
             [
@@ -28779,7 +28957,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
+        "x": 2060,
         "y": 860,
         "wires": [
             [
@@ -28885,7 +29063,7 @@
         "finalize": "",
         "libs": [],
         "x": 1670,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "e35dbee7a81b43bc"
@@ -28899,7 +29077,7 @@
         "name": "Multi OP or S02R Operation",
         "info": "",
         "x": 1500,
-        "y": 1140,
+        "y": 1240,
         "wires": []
     },
     {
@@ -28914,7 +29092,7 @@
         "finalize": "",
         "libs": [],
         "x": 1640,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "63f29cb1261063bf"
@@ -28957,7 +29135,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1920,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "7d0c7ffca7a6660e"
@@ -28984,7 +29162,7 @@
         "to": "",
         "reg": false,
         "x": 2170,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "e0849adea5ad6c37"
@@ -30652,7 +30830,8 @@
                 "ad4c547076b09ade",
                 "543c8ffcfaaf7701",
                 "1dfb81dda6b742b3",
-                "5eb3915f925752d7"
+                "5eb3915f925752d7",
+                "4cc7aa20c7555c0d"
             ]
         ]
     },
@@ -30701,7 +30880,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1445,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "b6c621827fb49298",
@@ -30916,6 +31095,92 @@
         "x": 815,
         "y": 2860,
         "wires": []
+    },
+    {
+        "id": "da26fb516364abdb",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Temperature Unit",
+        "label": "Temperature Unit",
+        "tooltip": "",
+        "place": "Select temperature unit",
+        "group": "00919f6d1599ed5f",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Farenheit",
+                "value": "F",
+                "type": "str"
+            },
+            {
+                "label": "Celsius",
+                "value": "C",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1790,
+        "y": 960,
+        "wires": [
+            [
+                "cd712885f68288ef"
+            ]
+        ]
+    },
+    {
+        "id": "cd712885f68288ef",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Temperature Unit",
+        "func": "let x = msg.payload\nglobal.set('temperature_unit', x)\nif (x == 'F') {\n    global.set('temperature_yellow', 105)\n    global.set('temperature_red', 140)\n    global.set('temperature_max', 195)\n}\nelse {\n    global.set('temperature_yellow', 40)\n    global.set('temperature_red', 60)\n    global.set('temperature_max', 90)\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2020,
+        "y": 960,
+        "wires": [
+            [
+                "4cc7aa20c7555c0d"
+            ]
+        ]
+    },
+    {
+        "id": "1f7dccce6055a5b2",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Temperature Unit",
+        "info": "",
+        "x": 1520,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "4cc7aa20c7555c0d",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Temperature Unit",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet x = global.get('temperature_unit')\nif (x == 'F') \n{\n    msg.payload = 'F';\n}\nelse \n{\n    msg.payload = 'C'\n}\nreturn msg;",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 960,
+        "wires": [
+            [
+                "da26fb516364abdb"
+            ]
+        ]
     },
     {
         "id": "b8502660ecb5eb37",
