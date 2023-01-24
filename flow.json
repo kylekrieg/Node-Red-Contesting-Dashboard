@@ -396,7 +396,9 @@
             "ab98427.85cd3c"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 272,
+        "h": 522
     },
     {
         "id": "52886121c9629e0b",
@@ -420,7 +422,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -444,7 +448,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -470,7 +476,9 @@
             "e1278f8b2f6fee61"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 522
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -485,7 +493,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -500,7 +510,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -524,7 +536,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -548,7 +562,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -585,7 +601,9 @@
             "4b7abadd74993948"
         ],
         "x": -6,
-        "y": 679
+        "y": 679,
+        "w": 2072,
+        "h": 302
     },
     {
         "id": "28877ac600fea8b9",
@@ -610,7 +628,9 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -625,7 +645,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -649,7 +671,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 282,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -812,7 +836,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -1366,12 +1392,13 @@
     {
         "id": "dea9d7ac.0cefc8",
         "type": "ui_group",
-        "name": "Raspberry Pi Status & Control",
+        "name": "Pi Server Status & Control",
         "tab": "7f50838.c6d257c",
         "order": 2,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "8ca85278.65932",
@@ -1683,7 +1710,7 @@
         "tab": "7f50838.c6d257c",
         "order": 3,
         "disp": true,
-        "width": 5,
+        "width": "8",
         "collapse": false,
         "className": ""
     },
@@ -2103,11 +2130,11 @@
     {
         "id": "00919f6d1599ed5f",
         "type": "ui_group",
-        "name": "Distance Measurement",
+        "name": "Measurement Units",
         "tab": "08eed6c3517c624e",
         "order": 14,
         "disp": true,
-        "width": 6,
+        "width": "6",
         "collapse": false,
         "className": "config"
     },
@@ -23864,7 +23891,9 @@
         "y": 320,
         "wires": [
             [
-                "f042fa28.8f2bf8"
+                "f042fa28.8f2bf8",
+                "eb799ba44460adec",
+                "c0218de0f81a3892"
             ]
         ]
     },
@@ -24232,8 +24261,8 @@
         "width": 3,
         "height": 3,
         "gtype": "gage",
-        "title": "CPU Temperature",
-        "label": "F",
+        "title": "CPU Temp",
+        "label": "{{msg.label}}",
         "format": "{{value}}",
         "min": 0,
         "max": "170",
@@ -24242,10 +24271,11 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "125",
-        "seg2": "150",
-        "x": 1170,
-        "y": 280,
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1510,
+        "y": 320,
         "wires": []
     },
     {
@@ -24258,7 +24288,7 @@
         "width": 3,
         "height": 3,
         "gtype": "gage",
-        "title": "CPU",
+        "title": "CPU Load",
         "label": "%",
         "format": "{{value}}",
         "min": 0,
@@ -24270,8 +24300,9 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 809.8888931274414,
-        "y": 387.77777767181396,
+        "className": "",
+        "x": 710,
+        "y": 400,
         "wires": []
     },
     {
@@ -24363,8 +24394,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1190,
-        "y": 320,
+        "x": 1530,
+        "y": 360,
         "wires": [
             []
         ]
@@ -24382,13 +24413,13 @@
         "outputFieldType": "msg",
         "roundOutputField": true,
         "outputFieldDecimals": "1",
-        "name": "",
-        "x": 920,
-        "y": 320,
+        "statusType": "none",
+        "name": "C to F",
+        "x": 1150,
+        "y": 280,
         "wires": [
             [
-                "3d67dce5.112054",
-                "cd3f0873.755ee8"
+                "c57859fc4cb050a7"
             ]
         ]
     },
@@ -24445,9 +24476,9 @@
         "group": "4c7c4383a5f4d36f",
         "name": "Solar Data",
         "order": 1,
-        "width": 5,
-        "height": 15,
-        "format": "\n<style type='text/css'>\n\t.main\n\t\n\ttable {\n\t  width: 220px;\n\t  background:#000000;\n\t  border: 1px;\n\t  margin-top: 15px;\n\t  margin-bottom: 25px;\n\t}\n\tth {\n\t  font-family: \"Trebuchet MS\", Arial, Verdana;\n\t  font-size: 14px;\n\t  color: #FFFFFF;\n\t  padding: 1px;\n\t}\n\ttd {\n\t  border-bottom: 1px;\n\t  padding: 1px;\n\t  color: #F0EEEE;\n\t  text-align: center;\n\t  white-space:nowrap;\n\t}\n\t\n\ta.one:link {color:#ff0000;text-decoration:none;}\n\ta.one:visited {color:#0000ff;text-decoration:none;}\n\ta.one:hover {text-decoration:underline;}\n\n\t.lFont {font-size: 10px;}\n\t.nFont {font-size: 12px;}\n\t.bFont {font-size: 14px;}\n\t\n\t.green  {color: #14ED0D;}\n\t.yellow {color: #FEFE0B;}\n\t.red    {color: #E94D0A;}\n\t.white  {color: #F0EEEE;}\n\t\n\t/* change color of band conditions */\n\t.Poor {color: #E94D0A;}\n\t.Fair {color: #FEFE0B;}\n\t.Good {color: #14ED0D;}\n\t\n\t/* change color of geomagnetic field */\n\t.ACTIVE     {color: #FEFE0B;}\n\t.INACTIVE   {color: #14ED0D;}\n\t.UNSETTLD   {color: #14ED0D;}\n\t.QUIET      {color: #14ED0D;}\n\t.VRQUIET    {color: #14ED0D;}\n\t\n\t/* change color of sig noise*/\n\t.S0-S1  {color: #14ED0D;}\n\t.S1-S2  {color: #14ED0D;}\n\t.S2-S3  {color: #14ED0D;}\n\t.S3-S4  {color: #FEFE0B;}\n\t\n\t/* VHF band condition colours */\n\t.HighLATAUR {color: #FEFE0B;}\n\t.MIDLATAUR  {color: #14ED0D;}\n\t.BandClosed {color: #E94D0A;}\n\t.at50MHzEs    {color: #14ED0D;}\n\t.at70MHzEs    {color: #14ED0D;}\n\t.at144MHzEs   {color: #14ED0D;}\n\t.HighMUF    {color: #FEFE0B;}\n\t.NotSet     {color: #f003fc;}\n\t\n\t.cellUL {border-bottom: 1px solid #F0EEEE;}\n\n</style>\n\n    <div class=\"main\">\n        <table>\n            <tr>\n                <th colspan=\"4\" class=\"nFont\">Solar-Terrestrial Data provided by N0NBH</th>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.updated[0]}} -->\n                <td colspan=\"4\" class=\"nFont\"><font class=\"yellow\"><strong>{{msg.payload.solardata.updated[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.solarflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SFI:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.sunspots[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SN:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.sunspots[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">A-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aindex[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.kindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">K-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.kindex[0]}}</strong></font></td> \n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.xray[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">X-Ray:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.xray[0]}}</strong></font></td>\n    \t\t</tr>\n            <tr>\n                <!-- {{msg.payload.solardata.heliumline[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">304A:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.heliumline[0]}}</strong></font><span class=\"left\"> @ SEM</span></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.protonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Ptn Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.protonflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.electonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Elc Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.electonflux[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aurora[0]}} / {{msg.payload.solardata.normalization[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Auroa: </td>\n                <td colspan=\"3\" style=\"text-align:left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aurora[0]}}</strong></font>&nbsp;/&nbsp;<font class=\"green\"><strong>n={{msg.payload.solardata.normalization[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.magneticfield[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Bz:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.magneticfield[0]}}</strong></font></td>\n                <!-- {{msg.payload.solardata.solarwind[0]}} -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">SW:</td>\n    \t\t\t<td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarwind[0]}}</strong></font></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">HF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Band</td>\n    \t\t\t<td style=\"text-align: center\" class=\"nFont\">Day</td>\n                <td style=\"text-align: center\" class=\"nFont\">Night</td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">80m-40m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[0]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[0]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[4]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[4]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">30m-20m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[1]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[1]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[5]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[5]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">17m-15m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[2]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[2]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[6]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[6]._}}</strong></font></td>\n                <td></td>\n    \t\t</tr>\n            <tr>    \n                <td style=\"text-align: right\" class=\"nFont\">12m-10m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[3]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[3]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[7]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[7]._}}</strong></font></td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">VHF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<!-- {{msg.payload.solardata.latdegree[0]}} -->\n    \t\t<td style=\"text-align: right\" class=\"nFont\">Aur Lat</td>\n    \t\t<td colspan=\"3\" class=\"nFont\"><font class=\"red\"><strong>{{msg.payload.solardata.latdegree[0]}}&#176;</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[0]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Aurora</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[3]._  -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">6m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[4]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">4m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[1]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[2]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsNA</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">EME Deg</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"https://mmmonvhf.de/eme.php\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/eme/eme.png) 10% 50%; background-repeat: no-repeat; width: 100px; height: 19px;\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\">Solar Flare Prb</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"http://spaceweather.inf.brad.ac.uk/fm/\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(http://spaceweather.inf.brad.ac.uk/ASAP_latest/flaremonitor_24.png) 30% 2%; width: 35px; height: 20px; background-color: #ffffff; background-repeat: no-repeat; filter: brightness(0.6) contrast(3);\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\"><a href=\"https://mmmonvhf.de/es.php\" target=\"_blank\" style=\"color: #ffffff;\">MUF</a> <br/> <a href=\"https://mmmonvhf.de/ms.php\" target=\"_blank\" style=\"color: #ffffff;\">MS</a></td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t    <div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/es/es.png) left top no-repeat, url(https://www.mmmonvhf.de/ms/ms.png) left bottom no-repeat; width:121px; height:12px; padding: 15px;\"></div>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.geomagfield[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Geomag Field</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.geomagfield[0]}}\"><strong>{{msg.payload.solardata.geomagfield[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.signalnoise[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Sig Noise Lvl</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.signalnoise[0]}}\"><strong>{{msg.payload.solardata.signalnoise[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.muf[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">MUF US Boulder</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.muf[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<!-- {{msg.payload.solardata.source[0].$.url}} -->\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\"><a class=\"one\" href=\"{{msg.payload.solardata.source[0].$.url}}\" target=\"_blank\">{{msg.payload.solardata.source[0].$.url}}</a></td>\n            </tr>\n    \t\t<tr>\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\">© Copyright Paul L Herrman</td>\n            </tr>\n        </table>\n    </div>\n\n",
+        "width": 0,
+        "height": 0,
+        "format": "\n<style type='text/css'>\n\t.main\n\t\n\ttable.center {\n\t  background:#000000;\n\t  border: 1px;\n\t  margin-top: auto;\n\t  margin-bottom: auto;\n\t  margin-left: auto;\n\t  margin-right: auto;\n\t  body {text-align:center}\n\t}\n\tth {\n\t  font-family: \"Trebuchet MS\", Arial, Verdana;\n\t  font-size: 14px;\n\t  color: #FFFFFF;\n\t  padding: 1px;\n\t}\n\ttd {\n\t  border-bottom: 1px;\n\t  padding: 1px;\n\t  color: #F0EEEE;\n\t  text-align: center;\n\t  white-space:nowrap;\n\t}\n\t\n\ta.one:link {color:#ff0000;text-decoration:none;}\n\ta.one:visited {color:#0000ff;text-decoration:none;}\n\ta.one:hover {text-decoration:underline;}\n\n\t.lFont {font-size: 12px;}\n\t.nFont {font-size: 14px;}\n\t.bFont {font-size: 16px;}\n\t\n\t.green  {color: #14ED0D;}\n\t.yellow {color: #FEFE0B;}\n\t.red    {color: #E94D0A;}\n\t.white  {color: #F0EEEE;}\n\t\n\t/* change color of band conditions */\n\t.Poor {color: #E94D0A;}\n\t.Fair {color: #FEFE0B;}\n\t.Good {color: #14ED0D;}\n\t\n\t/* change color of geomagnetic field */\n\t.ACTIVE     {color: #FEFE0B;}\n\t.INACTIVE   {color: #14ED0D;}\n\t.UNSETTLD   {color: #14ED0D;}\n\t.QUIET      {color: #14ED0D;}\n\t.VRQUIET    {color: #14ED0D;}\n\t\n\t/* change color of sig noise*/\n\t.S0-S1  {color: #14ED0D;}\n\t.S1-S2  {color: #14ED0D;}\n\t.S2-S3  {color: #14ED0D;}\n\t.S3-S4  {color: #FEFE0B;}\n\t\n\t/* VHF band condition colours */\n\t.HighLATAUR {color: #FEFE0B;}\n\t.MIDLATAUR  {color: #14ED0D;}\n\t.BandClosed {color: #E94D0A;}\n\t.at50MHzEs    {color: #14ED0D;}\n\t.at70MHzEs    {color: #14ED0D;}\n\t.at144MHzEs   {color: #14ED0D;}\n\t.HighMUF    {color: #FEFE0B;}\n\t.NotSet     {color: #f003fc;}\n\t\n\t.cellUL {border-bottom: 1px solid #F0EEEE;}\n\n</style>\n\n    <div>\n        <table>\n            <tr>\n                <th colspan=\"4\" class=\"nFont\">Solar-Terrestrial Data provided by N0NBH</th>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.updated[0]}} -->\n                <td colspan=\"4\" class=\"nFont\"><font class=\"yellow\"><strong>{{msg.payload.solardata.updated[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.solarflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SFI:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.sunspots[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SN:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.sunspots[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">A-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aindex[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.kindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">K-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.kindex[0]}}</strong></font></td> \n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.xray[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">X-Ray:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.xray[0]}}</strong></font></td>\n    \t\t</tr>\n            <tr>\n                <!-- {{msg.payload.solardata.heliumline[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">304A:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.heliumline[0]}}</strong></font><span class=\"left\"> @ SEM</span></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.protonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Ptn Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.protonflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.electonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Elc Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.electonflux[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aurora[0]}} / {{msg.payload.solardata.normalization[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Auroa: </td>\n                <td colspan=\"3\" style=\"text-align:left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aurora[0]}}</strong></font>&nbsp;/&nbsp;<font class=\"green\"><strong>n={{msg.payload.solardata.normalization[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.magneticfield[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Bz:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.magneticfield[0]}}</strong></font></td>\n                <!-- {{msg.payload.solardata.solarwind[0]}} -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">SW:</td>\n    \t\t\t<td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarwind[0]}}</strong></font></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">HF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Band</td>\n    \t\t\t<td style=\"text-align: center\" class=\"nFont\">Day</td>\n                <td style=\"text-align: center\" class=\"nFont\">Night</td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">80m-40m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[0]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[0]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[4]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[4]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">30m-20m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[1]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[1]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[5]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[5]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">17m-15m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[2]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[2]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[6]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[6]._}}</strong></font></td>\n                <td></td>\n    \t\t</tr>\n            <tr>    \n                <td style=\"text-align: right\" class=\"nFont\">12m-10m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[3]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[3]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[7]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[7]._}}</strong></font></td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">VHF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<!-- {{msg.payload.solardata.latdegree[0]}} -->\n    \t\t<td style=\"text-align: right\" class=\"nFont\">Aur Lat</td>\n    \t\t<td colspan=\"3\" class=\"nFont\"><font class=\"red\"><strong>{{msg.payload.solardata.latdegree[0]}}&#176;</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[0]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Aurora</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[3]._  -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">6m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[4]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">4m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[1]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[2]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsNA</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">EME Deg</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"https://mmmonvhf.de/eme.php\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/eme/eme.png) 10% 50%; background-repeat: no-repeat; width: 100px; height: 19px;\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\">Solar Flare Prb</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"http://spaceweather.inf.brad.ac.uk/fm/\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(http://spaceweather.inf.brad.ac.uk/ASAP_latest/flaremonitor_24.png) 30% 2%; width: 35px; height: 20px; background-color: #ffffff; background-repeat: no-repeat; filter: brightness(0.6) contrast(3);\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\"><a href=\"https://mmmonvhf.de/es.php\" target=\"_blank\" style=\"color: #ffffff;\">MUF</a> <br/> <a href=\"https://mmmonvhf.de/ms.php\" target=\"_blank\" style=\"color: #ffffff;\">MS</a></td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t    <div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/es/es.png) left top no-repeat, url(https://www.mmmonvhf.de/ms/ms.png) left bottom no-repeat; width:121px; height:12px; padding: 15px;\"></div>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.geomagfield[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Geomag Field</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.geomagfield[0]}}\"><strong>{{msg.payload.solardata.geomagfield[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.signalnoise[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Sig Noise Lvl</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.signalnoise[0]}}\"><strong>{{msg.payload.solardata.signalnoise[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.muf[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">MUF US Boulder</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.muf[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<!-- {{msg.payload.solardata.source[0].$.url}} -->\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\"><a class=\"one\" href=\"{{msg.payload.solardata.source[0].$.url}}\" target=\"_blank\">{{msg.payload.solardata.source[0].$.url}}</a></td>\n            </tr>\n    \t\t<tr>\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\">© Copyright Paul L Herrman</td>\n            </tr>\n        </table>\n    </div>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -24766,6 +24797,179 @@
         "wires": [
             [
                 "643ff825d341bf96"
+            ]
+        ]
+    },
+    {
+        "id": "c57859fc4cb050a7",
+        "type": "switch",
+        "z": "db5600520bb7f279",
+        "name": "If Fahrenheit",
+        "property": "temperature_unit",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "F",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1290,
+        "y": 280,
+        "wires": [
+            [
+                "3d67dce5.112054",
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "eb799ba44460adec",
+        "type": "switch",
+        "z": "db5600520bb7f279",
+        "name": "If Celsius",
+        "property": "temperature_unit",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "C",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1300,
+        "y": 320,
+        "wires": [
+            [
+                "3d67dce5.112054",
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "b89a084234eca9ef",
+        "type": "inject",
+        "z": "db5600520bb7f279",
+        "name": "Every 5 secs",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "temperature_unit",
+        "payloadType": "global",
+        "x": 860,
+        "y": 360,
+        "wires": [
+            [
+                "cd4b0989a632cb00"
+            ]
+        ]
+    },
+    {
+        "id": "cd4b0989a632cb00",
+        "type": "rbe",
+        "z": "db5600520bb7f279",
+        "name": "if temperature_unit change",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1080,
+        "y": 360,
+        "wires": [
+            [
+                "7427d9d83b6e6357"
+            ]
+        ]
+    },
+    {
+        "id": "7427d9d83b6e6357",
+        "type": "change",
+        "z": "db5600520bb7f279",
+        "name": "Clear Chart",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 360,
+        "wires": [
+            [
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "c0218de0f81a3892",
+        "type": "change",
+        "z": "db5600520bb7f279",
+        "name": "Set Gauge Display Values",
+        "rules": [
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "temperature_unit",
+                "tot": "global",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "ui_control.seg1",
+                "pt": "msg",
+                "to": "temperature_yellow",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_control.seg2",
+                "pt": "msg",
+                "to": "temperature_red",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_control.max",
+                "pt": "msg",
+                "to": "temperature_max",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 240,
+        "wires": [
+            [
+                "3d67dce5.112054"
             ]
         ]
     },
@@ -26915,7 +27119,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1930,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "086b1f9232b45a14"
@@ -26942,7 +27146,7 @@
         "to": "",
         "reg": false,
         "x": 2180,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "b6c621827fb49298"
@@ -26976,7 +27180,7 @@
         "name": "Database Lookup Engine Select",
         "info": "",
         "x": 1530,
-        "y": 960,
+        "y": 1060,
         "wires": []
     },
     {
@@ -28830,10 +29034,10 @@
         "id": "48f5678a75ee7dd8",
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
-        "name": "Distance Measurement",
-        "label": "Units",
+        "name": "Disrtance Unit",
+        "label": "Distance",
         "tooltip": "",
-        "place": "Select option",
+        "place": "Select distance unit",
         "group": "00919f6d1599ed5f",
         "order": 1,
         "width": 6,
@@ -28856,7 +29060,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1850,
+        "x": 1820,
         "y": 860,
         "wires": [
             [
@@ -28875,7 +29079,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
+        "x": 2060,
         "y": 860,
         "wires": [
             [
@@ -28981,7 +29185,7 @@
         "finalize": "",
         "libs": [],
         "x": 1670,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "e35dbee7a81b43bc"
@@ -28995,7 +29199,7 @@
         "name": "Multi OP or S02R Operation",
         "info": "",
         "x": 1500,
-        "y": 1140,
+        "y": 1240,
         "wires": []
     },
     {
@@ -29010,7 +29214,7 @@
         "finalize": "",
         "libs": [],
         "x": 1640,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "63f29cb1261063bf"
@@ -29053,7 +29257,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1920,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "7d0c7ffca7a6660e"
@@ -29080,7 +29284,7 @@
         "to": "",
         "reg": false,
         "x": 2170,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "e0849adea5ad6c37"
@@ -30748,7 +30952,8 @@
                 "ad4c547076b09ade",
                 "543c8ffcfaaf7701",
                 "1dfb81dda6b742b3",
-                "5eb3915f925752d7"
+                "5eb3915f925752d7",
+                "4cc7aa20c7555c0d"
             ]
         ]
     },
@@ -30798,7 +31003,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1445,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "b6c621827fb49298",
@@ -31089,6 +31294,92 @@
         "x": 815,
         "y": 2860,
         "wires": []
+    },
+    {
+        "id": "da26fb516364abdb",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Temperature Unit",
+        "label": "Temperature",
+        "tooltip": "",
+        "place": "",
+        "group": "00919f6d1599ed5f",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Fahrenheit",
+                "value": "F",
+                "type": "str"
+            },
+            {
+                "label": "Celsius",
+                "value": "C",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1790,
+        "y": 960,
+        "wires": [
+            [
+                "cd712885f68288ef"
+            ]
+        ]
+    },
+    {
+        "id": "cd712885f68288ef",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Temperature Unit",
+        "func": "let x = msg.payload\nglobal.set('temperature_unit', x)\nif (x == 'F') {\n    global.set('temperature_yellow', 105)\n    global.set('temperature_red', 140)\n    global.set('temperature_max', 195)\n}\nelse {\n    global.set('temperature_yellow', 40)\n    global.set('temperature_red', 60)\n    global.set('temperature_max', 90)\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2020,
+        "y": 960,
+        "wires": [
+            [
+                "4cc7aa20c7555c0d"
+            ]
+        ]
+    },
+    {
+        "id": "1f7dccce6055a5b2",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Temperature Unit",
+        "info": "",
+        "x": 1520,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "4cc7aa20c7555c0d",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Temperature Unit",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet x = global.get('temperature_unit')\nif (x == 'F') \n{\n    msg.payload = 'F';\n}\nelse \n{\n    msg.payload = 'C'\n}\nreturn msg;",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 960,
+        "wires": [
+            [
+                "da26fb516364abdb"
+            ]
+        ]
     },
     {
         "id": "b8502660ecb5eb37",
