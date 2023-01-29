@@ -7255,7 +7255,7 @@
         "width": 4,
         "height": 2,
         "name": "Radio 2 Operator Dashboard",
-        "label": "<font color=#008000>{{msg.RadioNames[1]}}</font>",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.RadioNames[1]}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -7269,7 +7269,7 @@
         "z": "407d2b774fe67647",
         "g": "81692a3cb68d6cde",
         "name": "Station Name",
-        "property": "payload.RadioInfo.StationName[0]",
+        "property": "payload.StationName[0]",
         "propertyType": "msg",
         "rules": [
             {
@@ -9454,7 +9454,7 @@
         "width": 4,
         "height": 2,
         "name": "Radio 1 Operator Dashboard",
-        "label": "<font color=#008000>{{msg.RadioNames[0]}}</font>",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.RadioNames[0]}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
