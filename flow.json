@@ -7249,7 +7249,7 @@
             },
             {
                 "t": "eq",
-                "v": "1",
+                "v": "2",
                 "vt": "global"
             }
         ],
@@ -11133,6 +11133,120 @@
                 "aad501d4eeed3f6c",
                 "06ef39d063a5a0f6",
                 "77a4afb43fb7bdbd"
+            ]
+        ]
+    },
+    {
+        "id": "b660ee693411d757",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "94f44b7ea0e29d1d",
+        "name": "SQL Select Rate OP",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 1500,
+        "y": 2400,
+        "wires": [
+            [
+                "97aba946591c7289"
+            ]
+        ]
+    },
+    {
+        "id": "0ca8c50b9058010c",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "94f44b7ea0e29d1d",
+        "name": "Dashboard Rate Choice",
+        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 2380,
+        "wires": [
+            [
+                "89588cb6bf69a8d0"
+            ],
+            [
+                "b660ee693411d757"
+            ]
+        ],
+        "outputLabels": [
+            "Radio",
+            "Operator"
+        ]
+    },
+    {
+        "id": "cfe25ee37e99db50",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Dashboard Rate Choice",
+        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 1560,
+        "wires": [
+            [
+                "ab3f6963df6eaf43"
+            ],
+            [
+                "bcc4223e74a54492"
+            ]
+        ],
+        "outputLabels": [
+            "Radio",
+            "Operator"
+        ]
+    },
+    {
+        "id": "ab3f6963df6eaf43",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "SQL Select Rate Radio",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 1570,
+        "y": 1540,
+        "wires": [
+            [
+                "3d1ebae60e058858"
+            ]
+        ]
+    },
+    {
+        "id": "bcc4223e74a54492",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "SQL Select Rate OP",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 1560,
+        "y": 1580,
+        "wires": [
+            [
+                "3d1ebae60e058858"
             ]
         ]
     },
@@ -31354,6 +31468,82 @@
         "wires": [
             [
                 "da26fb516364abdb"
+            ]
+        ]
+    },
+    {
+        "id": "4b6949f18173593d",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store DashboardQRate",
+        "func": "let dashboardqrate = msg.payload;\n\nglobal.set('dashboardqrate',dashboardqrate);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 2600,
+        "wires": [
+            [
+                "b75f7c1d9016de43"
+            ]
+        ]
+    },
+    {
+        "id": "0837ad45ed24fb8c",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Dashboard Hourly QSO Rate",
+        "label": "Dashboard Rate Option",
+        "tooltip": "Choose which value that you would like to choose for the Radio Values on the dashboard.",
+        "place": "Select Rate",
+        "group": "475c1eff5d97ffe5",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Radio",
+                "value": "radio",
+                "type": "str"
+            },
+            {
+                "label": "Operator",
+                "value": "op",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "Hourly QSO Rate",
+        "topicType": "str",
+        "className": "",
+        "x": 1880,
+        "y": 2600,
+        "wires": [
+            [
+                "4b6949f18173593d"
+            ]
+        ]
+    },
+    {
+        "id": "b75f7c1d9016de43",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get DashboardQRate",
+        "func": "msg.payload = global.get('dashboardqrate');\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"radio\";\n    return msg;\n}\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 2600,
+        "wires": [
+            [
+                "0837ad45ed24fb8c"
             ]
         ]
     },
