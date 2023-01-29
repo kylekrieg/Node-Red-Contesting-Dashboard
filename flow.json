@@ -7268,25 +7268,25 @@
         "type": "switch",
         "z": "407d2b774fe67647",
         "g": "81692a3cb68d6cde",
-        "name": "Station Name",
-        "property": "payload.StationName[0]",
+        "name": "Radio 1 or 2 (was Station Name)",
+        "property": "payload.RadioInfo.RadioNr[0]",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "PC1",
+                "v": "1",
                 "vt": "global"
             },
             {
                 "t": "eq",
-                "v": "PC2",
+                "v": "1",
                 "vt": "global"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
+        "x": 970,
         "y": 1740,
         "wires": [
             [
