@@ -7469,7 +7469,7 @@
         "z": "407d2b774fe67647",
         "g": "81692a3cb68d6cde",
         "name": "UTF8",
-        "func": "msg.payload=msg.payload.toString('UTF8');\nmsg.Radio1Name=global.get('PC1');\nmsg.Radio2Name = global.get('PC2');\nreturn msg;",
+        "func": "msg.payload=msg.payload.toString('UTF8');\nmsg.Radio1Name = global.get('PC1');\nmsg.Radio2Name = global.get('PC2');\nmsg.Radio3Name = global.get('PC3');\nmsg.Radio4Name = global.get('PC4');\nmsg.Radio5Name = global.get('PC5');\nmsg.Radio6Name = global.get('PC6');\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -11137,120 +11137,6 @@
         ]
     },
     {
-        "id": "b660ee693411d757",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "94f44b7ea0e29d1d",
-        "name": "SQL Select Rate OP",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1500,
-        "y": 2400,
-        "wires": [
-            [
-                "97aba946591c7289"
-            ]
-        ]
-    },
-    {
-        "id": "0ca8c50b9058010c",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "94f44b7ea0e29d1d",
-        "name": "Dashboard Rate Choice",
-        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 2380,
-        "wires": [
-            [
-                "89588cb6bf69a8d0"
-            ],
-            [
-                "b660ee693411d757"
-            ]
-        ],
-        "outputLabels": [
-            "Radio",
-            "Operator"
-        ]
-    },
-    {
-        "id": "cfe25ee37e99db50",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Dashboard Rate Choice",
-        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1330,
-        "y": 1560,
-        "wires": [
-            [
-                "ab3f6963df6eaf43"
-            ],
-            [
-                "bcc4223e74a54492"
-            ]
-        ],
-        "outputLabels": [
-            "Radio",
-            "Operator"
-        ]
-    },
-    {
-        "id": "ab3f6963df6eaf43",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "SQL Select Rate Radio",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1570,
-        "y": 1540,
-        "wires": [
-            [
-                "3d1ebae60e058858"
-            ]
-        ]
-    },
-    {
-        "id": "bcc4223e74a54492",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "SQL Select Rate OP",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1560,
-        "y": 1580,
-        "wires": [
-            [
-                "3d1ebae60e058858"
-            ]
-        ]
-    },
-    {
         "id": "4079239a4fd5c11c",
         "type": "ui_text",
         "z": "63d876401a56f871",
@@ -11259,7 +11145,7 @@
         "width": 5,
         "height": 2,
         "name": "RI-Radio 1 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio1Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -11276,7 +11162,7 @@
         "width": 5,
         "height": 2,
         "name": "RI-Radio 2 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio2Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -11734,7 +11620,7 @@
         "width": 5,
         "height": 2,
         "name": "FI-Radio 3 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio3Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -11909,7 +11795,7 @@
         "width": 5,
         "height": 2,
         "name": "FI-Radio 4 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio4Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -15245,7 +15131,7 @@
         "width": 5,
         "height": 2,
         "name": "FI-Radio 5 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio5Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -15633,7 +15519,7 @@
         "width": 5,
         "height": 2,
         "name": "FI-Radio 6 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio6Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -31457,10 +31343,10 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Temperature Unit",
-        "func": "",
+        "func": "msg.payload=global.get('temperature_unit')\nlet x = global.get('temperature_unit')\nif (x == 'F') {\n    msg.payload = 'F';\n}\nelse {\n    msg.payload = 'C'\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet x = global.get('temperature_unit')\nif (x == 'F') \n{\n    msg.payload = 'F';\n}\nelse \n{\n    msg.payload = 'C'\n}\nreturn msg;",
+        "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1560,
@@ -31468,82 +31354,6 @@
         "wires": [
             [
                 "da26fb516364abdb"
-            ]
-        ]
-    },
-    {
-        "id": "4b6949f18173593d",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Store DashboardQRate",
-        "func": "let dashboardqrate = msg.payload;\n\nglobal.set('dashboardqrate',dashboardqrate);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2130,
-        "y": 2600,
-        "wires": [
-            [
-                "b75f7c1d9016de43"
-            ]
-        ]
-    },
-    {
-        "id": "0837ad45ed24fb8c",
-        "type": "ui_dropdown",
-        "z": "204548a488401a1b",
-        "name": "Dashboard Hourly QSO Rate",
-        "label": "Dashboard Rate Option",
-        "tooltip": "Choose which value that you would like to choose for the Radio Values on the dashboard.",
-        "place": "Select Rate",
-        "group": "475c1eff5d97ffe5",
-        "order": 4,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Radio",
-                "value": "radio",
-                "type": "str"
-            },
-            {
-                "label": "Operator",
-                "value": "op",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "Hourly QSO Rate",
-        "topicType": "str",
-        "className": "",
-        "x": 1880,
-        "y": 2600,
-        "wires": [
-            [
-                "4b6949f18173593d"
-            ]
-        ]
-    },
-    {
-        "id": "b75f7c1d9016de43",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Get DashboardQRate",
-        "func": "msg.payload = global.get('dashboardqrate');\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"radio\";\n    return msg;\n}\n\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1640,
-        "y": 2600,
-        "wires": [
-            [
-                "0837ad45ed24fb8c"
             ]
         ]
     },
