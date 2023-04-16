@@ -396,7 +396,9 @@
             "ab98427.85cd3c"
         ],
         "x": 474,
-        "y": 159
+        "y": 159,
+        "w": 272,
+        "h": 522
     },
     {
         "id": "52886121c9629e0b",
@@ -420,7 +422,9 @@
             "66a43145427ca537"
         ],
         "x": 774,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "bebfe5d7e4f0feb0",
@@ -444,7 +448,9 @@
             "de48727be275102f"
         ],
         "x": 1034,
-        "y": 159
+        "y": 159,
+        "w": 315,
+        "h": 482
     },
     {
         "id": "c6e09ffb3c5a1ce6",
@@ -470,7 +476,9 @@
             "e1278f8b2f6fee61"
         ],
         "x": 214,
-        "y": 159
+        "y": 159,
+        "w": 242,
+        "h": 522
     },
     {
         "id": "0e3bf66f6ee6d572",
@@ -485,7 +493,9 @@
             "654b552f9e64203e"
         ],
         "x": 214,
-        "y": 19
+        "y": 19,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "b90980234a451f8d",
@@ -500,7 +510,9 @@
             "3047a9ba16e10212"
         ],
         "x": 1194,
-        "y": 39
+        "y": 39,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "23eb39063da69706",
@@ -524,7 +536,9 @@
             "c2d7711a7d230637"
         ],
         "x": 1374,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "022672368830e427",
@@ -548,7 +562,9 @@
             "c4561e5c31134c5d"
         ],
         "x": 1654,
-        "y": 159
+        "y": 159,
+        "w": 252,
+        "h": 482
     },
     {
         "id": "7a5512b5a3f6e8ba",
@@ -585,7 +601,9 @@
             "4b7abadd74993948"
         ],
         "x": -6,
-        "y": 679
+        "y": 679,
+        "w": 2072,
+        "h": 302
     },
     {
         "id": "28877ac600fea8b9",
@@ -610,7 +628,9 @@
             "324101084f63a83e"
         ],
         "x": 224,
-        "y": 1019
+        "y": 1019,
+        "w": 632,
+        "h": 262
     },
     {
         "id": "c6a5789101548ba9",
@@ -625,7 +645,9 @@
             "4e62658f095c2863"
         ],
         "x": 1394,
-        "y": 1099
+        "y": 1099,
+        "w": 252,
+        "h": 122
     },
     {
         "id": "18a3020b4a12ae60",
@@ -649,7 +671,9 @@
             "89b2058720d8fb99"
         ],
         "x": 1954,
-        "y": 159
+        "y": 159,
+        "w": 281,
+        "h": 482
     },
     {
         "id": "4f4b9f0c82968b60",
@@ -697,9 +721,7 @@
             "fa0188b199a945d9"
         ],
         "x": 414,
-        "y": 879,
-        "w": 1852,
-        "h": 462
+        "y": 879
     },
     {
         "id": "81692a3cb68d6cde",
@@ -732,9 +754,7 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1473,
-        "w": 2618,
-        "h": 994
+        "y": 1473
     },
     {
         "id": "d48758cdf0c8991d",
@@ -794,9 +814,7 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19,
-        "w": 2232,
-        "h": 802
+        "y": 19
     },
     {
         "id": "f830dd821e0240f4",
@@ -812,7 +830,9 @@
             "925cebb6bacad025"
         ],
         "x": 914,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "f01baabf4527b6e5",
@@ -960,9 +980,7 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819,
-        "w": 1912,
-        "h": 622
+        "y": 819
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -989,9 +1007,7 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79,
-        "w": 1032,
-        "h": 162
+        "y": 79
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1030,9 +1046,7 @@
             "0ca8c50b9058010c"
         ],
         "x": 934,
-        "y": 1979,
-        "w": 1532,
-        "h": 462
+        "y": 1979
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1073,9 +1087,7 @@
             "bcc4223e74a54492"
         ],
         "x": 1014,
-        "y": 1499,
-        "w": 1592,
-        "h": 462
+        "y": 1499
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -1958,7 +1970,7 @@
         "tab": "08eed6c3517c624e",
         "order": 16,
         "disp": true,
-        "width": "6",
+        "width": "4",
         "collapse": false,
         "className": "config"
     },
@@ -2502,16 +2514,6 @@
         "name": "spacer",
         "group": "5e3039a0172f86b1",
         "order": 2,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "da372438e15564f5",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "54b59a095746559b",
-        "order": 4,
         "width": 6,
         "height": 1
     },
@@ -27210,9 +27212,9 @@
         "name": "2 Lat & Lon Input",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 3,
-        "width": 6,
-        "height": 1,
+        "order": 1,
+        "width": "0",
+        "height": "0",
         "options": [
             {
                 "label": "Home Latitude",
@@ -27345,7 +27347,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lat & Lon",
-        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload={};\n    msg.payload.lat = homelat;\n    msg.payload.lon = homelon;\n}\nnode.status({text:\"LAT:\"+homelat+\" LON:\"+homelon});\nreturn msg;",
+        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '' || homelat== undefined)\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload={};\n    msg.payload.lat = homelat;\n    msg.payload.lon = homelon;\n}\nnode.status({text:\"LAT:\"+homelat+\" LON:\"+homelon});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -27421,7 +27423,7 @@
         "label": "Map Labels",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27548,7 +27550,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "54b59a095746559b",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27829,7 +27831,7 @@
         "place": "Select OP Sort Type",
         "group": "52728e3a5743376c",
         "order": 1,
-        "width": 6,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -30804,7 +30806,7 @@
         "label": "TTL Value",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 5,
+        "order": 4,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -39409,7 +39411,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.config .nr-dashboard-cardtitle{\nfont-size: 18px;\nmin-height: 15px;\n}\n.config .layout-row {\nfont-size: 18px;}\n.config .n1mm .label {\nfont-size: 14px;}\n.config .label {\nfont-size: 18px;}\n.config .value {\nfont-size: 20px;}\n/*.config .nr-dashboard-dropdown md-input-container>md-select{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown p.label{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown div.md-text{\nmargin-top: 0px;\n}*/\n.config md-input-container {\nmargin-top:3px;\npadding: 0px;\nmargin-left: 7px;\n}\n.form_adj .formElement {\n        height: 46px;\n    }\n</style>",
+        "format": "<style>\n.config .nr-dashboard-cardtitle{\nfont-size: 18px;\nmin-height: 15px;\n}\n.config .layout-row {\nfont-size: 18px;}\n.config .n1mm .label {\nfont-size: 14px;}\n.config .label {\nfont-size: 18px;}\n.config .value {\nfont-size: 20px;}\n/*.config .nr-dashboard-dropdown md-input-container>md-select{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown p.label{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown div.md-text{\nmargin-top: 0px;\n}*/\n.config md-input-container {\nmargin-top:3px;\npadding: 0px;\nmargin-left: 7px;\n}\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
