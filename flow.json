@@ -1173,9 +1173,9 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#0035d5",
+                "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
+                "edited": false,
                 "reset": false
             },
             "customTheme": {
@@ -1204,7 +1204,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#2259ff",
+                    "value": "#0eb8c0",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1220,7 +1220,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0035d5",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
