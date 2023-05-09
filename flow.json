@@ -128,6 +128,14 @@
         "env": []
     },
     {
+        "id": "ee0edc8a2d33034b",
+        "type": "tab",
+        "label": "Score Table",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c967abe5be484ee6",
         "type": "subflow",
         "name": "1Hr Rate Color",
@@ -732,9 +740,9 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1473,
+        "y": 1545.5,
         "w": 2618,
-        "h": 994
+        "h": 1021.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -1029,10 +1037,10 @@
             "b660ee693411d757",
             "0ca8c50b9058010c"
         ],
-        "x": 934,
-        "y": 1979,
-        "w": 1532,
-        "h": 462
+        "x": 854,
+        "y": 2019,
+        "w": 1612,
+        "h": 522
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1068,14 +1076,13 @@
             "572d2215a6ea16bb",
             "5a5a85080d107e92",
             "0baeb2e7ae556661",
-            "ab3f6963df6eaf43",
             "cfe25ee37e99db50",
             "bcc4223e74a54492"
         ],
         "x": 1014,
-        "y": 1499,
+        "y": 1571.5,
         "w": 1592,
-        "h": 462
+        "h": 449.5
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -2615,6 +2622,34 @@
         "order": 27,
         "width": 2,
         "height": 1
+    },
+    {
+        "id": "237da972.5d69a6",
+        "type": "ui_group",
+        "name": "ui-table with commands",
+        "tab": "379a501f.53b59",
+        "order": 1,
+        "disp": true,
+        "width": "17",
+        "collapse": false
+    },
+    {
+        "id": "c91332c0.50c11",
+        "type": "ui_group",
+        "name": "commands",
+        "tab": "379a501f.53b59",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "379a501f.53b59",
+        "type": "ui_tab",
+        "name": "ui-table command",
+        "icon": "fa-table",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "db6c3ead34896ed7",
@@ -7221,7 +7256,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1540,
-        "y": 2240,
+        "y": 2280,
         "wires": []
     },
     {
@@ -7287,7 +7322,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 2200,
+        "y": 2240,
         "wires": [
             [
                 "f9c9ed275443b030"
@@ -7309,7 +7344,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1750,
-        "y": 2200,
+        "y": 2240,
         "wires": []
     },
     {
@@ -7327,7 +7362,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1540,
-        "y": 2320,
+        "y": 2360,
         "wires": []
     },
     {
@@ -7345,7 +7380,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1530,
-        "y": 2280,
+        "y": 2320,
         "wires": []
     },
     {
@@ -7361,7 +7396,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 2320,
+        "y": 2360,
         "wires": [
             [
                 "5c688773c88f9f41"
@@ -7392,7 +7427,7 @@
         "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 1410,
-        "y": 2380,
+        "y": 2460,
         "wires": [
             [
                 "97aba946591c7289"
@@ -7408,8 +7443,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 1620,
-        "y": 2380,
+        "x": 1640,
+        "y": 2460,
         "wires": [
             [
                 "7aa65e21deb3bbf5"
@@ -7431,7 +7466,7 @@
         "layout": "col-center",
         "className": "",
         "x": 2350,
-        "y": 2380,
+        "y": 2420,
         "wires": []
     },
     {
@@ -7544,8 +7579,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 1040,
-        "y": 2380,
+        "x": 960,
+        "y": 2480,
         "wires": [
             [
                 "0ca8c50b9058010c"
@@ -7558,8 +7593,8 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "",
-        "x": 2100,
-        "y": 2380,
+        "x": 2020,
+        "y": 2460,
         "wires": [
             [
                 "d37ea6046424b974"
@@ -7592,8 +7627,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1910,
-        "y": 2380,
+        "x": 1830,
+        "y": 2460,
         "wires": [
             [
                 "8a9601bf0a7a7faa"
@@ -7757,7 +7792,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1510,
-        "y": 2120,
+        "y": 2160,
         "wires": [
             [
                 "379a02b32eb2de49"
@@ -7782,7 +7817,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1990,
-        "y": 2120,
+        "y": 2160,
         "wires": []
     },
     {
@@ -7798,7 +7833,7 @@
         "finalize": "",
         "libs": [],
         "x": 1740,
-        "y": 2120,
+        "y": 2160,
         "wires": [
             [
                 "d6a02ccab960310f"
@@ -7824,7 +7859,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1740,
-        "y": 2160,
+        "y": 2200,
         "wires": [
             [
                 "d6a02ccab960310f"
@@ -7855,7 +7890,7 @@
         "showGlow": true,
         "name": "Radio 2 TX Transmit LED",
         "x": 1770,
-        "y": 2020,
+        "y": 2060,
         "wires": []
     },
     {
@@ -7871,7 +7906,7 @@
         "finalize": "",
         "libs": [],
         "x": 1490,
-        "y": 2020,
+        "y": 2060,
         "wires": [
             [
                 "d87f990426df6b87"
@@ -7891,7 +7926,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 2060,
+        "y": 2100,
         "wires": [
             [
                 "c28f1c9baeeba95d"
@@ -7922,7 +7957,7 @@
         "showGlow": true,
         "name": "Radio 2 Focus LED",
         "x": 1750,
-        "y": 2060,
+        "y": 2100,
         "wires": []
     },
     {
@@ -9184,7 +9219,7 @@
         "showGlow": true,
         "name": "Radio 1 Focus LED",
         "x": 1750,
-        "y": 1920,
+        "y": 1980,
         "wires": []
     },
     {
@@ -9200,7 +9235,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1920,
+        "y": 1980,
         "wires": [
             [
                 "8de09b93172d4977"
@@ -9220,7 +9255,7 @@
         "finalize": "",
         "libs": [],
         "x": 1490,
-        "y": 1880,
+        "y": 1940,
         "wires": [
             [
                 "72403bb4391a1d55",
@@ -9252,7 +9287,7 @@
         "showGlow": true,
         "name": "Radio 1 TX Transmit LED",
         "x": 1770,
-        "y": 1880,
+        "y": 1940,
         "wires": []
     },
     {
@@ -9270,7 +9305,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1990,
-        "y": 1840,
+        "y": 1900,
         "wires": []
     },
     {
@@ -9292,7 +9327,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1740,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "644bc9391ec895bf"
@@ -9312,7 +9347,7 @@
         "finalize": "",
         "libs": [],
         "x": 1740,
-        "y": 1780,
+        "y": 1840,
         "wires": [
             [
                 "644bc9391ec895bf"
@@ -9334,7 +9369,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1990,
-        "y": 1780,
+        "y": 1840,
         "wires": []
     },
     {
@@ -9352,7 +9387,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1770,
-        "y": 1740,
+        "y": 1800,
         "wires": []
     },
     {
@@ -9375,7 +9410,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1510,
-        "y": 1780,
+        "y": 1840,
         "wires": [
             [
                 "9ac7455179b0e1d0"
@@ -9398,7 +9433,7 @@
         "finalize": "",
         "libs": [],
         "x": 1480,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             [
                 "144f676e5802f76c"
@@ -9420,7 +9455,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1520,
-        "y": 1700,
+        "y": 1760,
         "wires": []
     },
     {
@@ -9438,7 +9473,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1510,
-        "y": 1660,
+        "y": 1720,
         "wires": []
     },
     {
@@ -9456,7 +9491,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1520,
-        "y": 1620,
+        "y": 1680,
         "wires": []
     },
     {
@@ -9472,7 +9507,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 1620,
+        "y": 1680,
         "wires": [
             [
                 "323b33d53e2baade"
@@ -9491,8 +9526,8 @@
         "syntax": "mustache",
         "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
-        "x": 1370,
-        "y": 1560,
+        "x": 1590,
+        "y": 1600,
         "wires": [
             [
                 "3d1ebae60e058858"
@@ -9518,10 +9553,10 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1120,
-        "y": 1560,
+        "y": 1620,
         "wires": [
             [
-                "b1abd7f75fd32f6f"
+                "cfe25ee37e99db50"
             ]
         ]
     },
@@ -9531,7 +9566,7 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -9540,7 +9575,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1420,
-        "y": 1820,
+        "y": 1880,
         "wires": []
     },
     {
@@ -9552,8 +9587,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 1600,
-        "y": 1560,
+        "x": 1800,
+        "y": 1620,
         "wires": [
             [
                 "572d2215a6ea16bb"
@@ -9580,8 +9615,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2010,
-        "y": 1560,
+        "x": 1990,
+        "y": 1620,
         "wires": [
             [
                 "5a5a85080d107e92"
@@ -9594,8 +9629,8 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "",
-        "x": 1980,
-        "y": 1560,
+        "x": 2160,
+        "y": 1620,
         "wires": [
             [
                 "0baeb2e7ae556661"
@@ -9623,7 +9658,7 @@
         "layout": "col-center",
         "className": "",
         "x": 2450,
-        "y": 1560,
+        "y": 1620,
         "wires": []
     },
     {
@@ -11032,6 +11067,100 @@
                 "aad501d4eeed3f6c",
                 "06ef39d063a5a0f6",
                 "77a4afb43fb7bdbd"
+            ]
+        ]
+    },
+    {
+        "id": "b660ee693411d757",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "94f44b7ea0e29d1d",
+        "name": "SQL Select Rate OP",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 1420,
+        "y": 2500,
+        "wires": [
+            [
+                "97aba946591c7289"
+            ]
+        ]
+    },
+    {
+        "id": "0ca8c50b9058010c",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "94f44b7ea0e29d1d",
+        "name": "Dashboard Rate Choice",
+        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 2480,
+        "wires": [
+            [
+                "89588cb6bf69a8d0"
+            ],
+            [
+                "b660ee693411d757"
+            ]
+        ],
+        "outputLabels": [
+            "Radio",
+            "Operator"
+        ]
+    },
+    {
+        "id": "cfe25ee37e99db50",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Dashboard Rate Choice",
+        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 1620,
+        "wires": [
+            [
+                "b1abd7f75fd32f6f"
+            ],
+            [
+                "bcc4223e74a54492"
+            ]
+        ],
+        "outputLabels": [
+            "Radio",
+            "Operator"
+        ]
+    },
+    {
+        "id": "bcc4223e74a54492",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "SQL Select Rate OP",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 1580,
+        "y": 1640,
+        "wires": [
+            [
+                "3d1ebae60e058858"
             ]
         ]
     },
@@ -24675,6 +24804,179 @@
         ]
     },
     {
+        "id": "c57859fc4cb050a7",
+        "type": "switch",
+        "z": "db5600520bb7f279",
+        "name": "If Fahrenheit",
+        "property": "temperature_unit",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "F",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1290,
+        "y": 280,
+        "wires": [
+            [
+                "3d67dce5.112054",
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "eb799ba44460adec",
+        "type": "switch",
+        "z": "db5600520bb7f279",
+        "name": "If Celsius",
+        "property": "temperature_unit",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "C",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1300,
+        "y": 320,
+        "wires": [
+            [
+                "3d67dce5.112054",
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "b89a084234eca9ef",
+        "type": "inject",
+        "z": "db5600520bb7f279",
+        "name": "Every 5 secs",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "temperature_unit",
+        "payloadType": "global",
+        "x": 860,
+        "y": 360,
+        "wires": [
+            [
+                "cd4b0989a632cb00"
+            ]
+        ]
+    },
+    {
+        "id": "cd4b0989a632cb00",
+        "type": "rbe",
+        "z": "db5600520bb7f279",
+        "name": "if temperature_unit change",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1080,
+        "y": 360,
+        "wires": [
+            [
+                "7427d9d83b6e6357"
+            ]
+        ]
+    },
+    {
+        "id": "7427d9d83b6e6357",
+        "type": "change",
+        "z": "db5600520bb7f279",
+        "name": "Clear Chart",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 360,
+        "wires": [
+            [
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "c0218de0f81a3892",
+        "type": "change",
+        "z": "db5600520bb7f279",
+        "name": "Set Gauge Display Values",
+        "rules": [
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "temperature_unit",
+                "tot": "global",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "ui_control.seg1",
+                "pt": "msg",
+                "to": "temperature_yellow",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_control.seg2",
+                "pt": "msg",
+                "to": "temperature_red",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_control.max",
+                "pt": "msg",
+                "to": "temperature_max",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 240,
+        "wires": [
+            [
+                "3d67dce5.112054"
+            ]
+        ]
+    },
+    {
         "id": "1e5d975d4f33a469",
         "type": "udp in",
         "z": "1c66bd27e16a3fec",
@@ -30920,6 +31222,168 @@
         "x": 815,
         "y": 2860,
         "wires": []
+    },
+    {
+        "id": "4b6949f18173593d",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store DashboardQRate",
+        "func": "let dashboardqrate = msg.payload;\n\nglobal.set('dashboardqrate',dashboardqrate);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 2600,
+        "wires": [
+            [
+                "b75f7c1d9016de43"
+            ]
+        ]
+    },
+    {
+        "id": "0837ad45ed24fb8c",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Dashboard Hourly QSO Rate",
+        "label": "Dashboard Rate Option",
+        "tooltip": "Choose which value that you would like to choose for the Radio Values on the dashboard.",
+        "place": "Select Rate",
+        "group": "475c1eff5d97ffe5",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Radio",
+                "value": "radio",
+                "type": "str"
+            },
+            {
+                "label": "Operator",
+                "value": "op",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "Hourly QSO Rate",
+        "topicType": "str",
+        "className": "",
+        "x": 1880,
+        "y": 2600,
+        "wires": [
+            [
+                "4b6949f18173593d"
+            ]
+        ]
+    },
+    {
+        "id": "b75f7c1d9016de43",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get DashboardQRate",
+        "func": "msg.payload = global.get('dashboardqrate');\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"radio\";\n    return msg;\n}\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 2600,
+        "wires": [
+            [
+                "0837ad45ed24fb8c"
+            ]
+        ]
+    },
+    {
+        "id": "da26fb516364abdb",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Temperature Unit",
+        "label": "Temperature",
+        "tooltip": "",
+        "place": "",
+        "group": "00919f6d1599ed5f",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Fahrenheit",
+                "value": "F",
+                "type": "str"
+            },
+            {
+                "label": "Celsius",
+                "value": "C",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1790,
+        "y": 960,
+        "wires": [
+            [
+                "cd712885f68288ef"
+            ]
+        ]
+    },
+    {
+        "id": "cd712885f68288ef",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Temperature Unit",
+        "func": "let x = msg.payload\nglobal.set('temperature_unit', x)\nif (x == 'F') {\n    global.set('temperature_yellow', 105)\n    global.set('temperature_red', 140)\n    global.set('temperature_max', 195)\n}\nelse {\n    global.set('temperature_yellow', 40)\n    global.set('temperature_red', 60)\n    global.set('temperature_max', 90)\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2020,
+        "y": 960,
+        "wires": [
+            [
+                "4cc7aa20c7555c0d"
+            ]
+        ]
+    },
+    {
+        "id": "1f7dccce6055a5b2",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Temperature Unit",
+        "info": "",
+        "x": 1520,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "4cc7aa20c7555c0d",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Temperature Unit",
+        "func": "msg.payload=global.get('temperature_unit')\nlet x = global.get('temperature_unit')\nif (x == 'F') {\n    msg.payload = 'F';\n}\nelse {\n    msg.payload = 'C'\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 960,
+        "wires": [
+            [
+                "da26fb516364abdb"
+            ]
+        ]
     },
     {
         "id": "b8502660ecb5eb37",
@@ -41309,491 +41773,6 @@
         "x": 1030,
         "y": 500,
         "wires": []
-    },
-    {
-        "id": "b660ee693411d757",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "94f44b7ea0e29d1d",
-        "name": "SQL Select Rate OP",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1500,
-        "y": 2400,
-        "wires": [
-            [
-                "97aba946591c7289"
-            ]
-        ]
-    },
-    {
-        "id": "0ca8c50b9058010c",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "94f44b7ea0e29d1d",
-        "name": "Dashboard Rate Choice",
-        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 2380,
-        "wires": [
-            [
-                "89588cb6bf69a8d0"
-            ],
-            [
-                "b660ee693411d757"
-            ]
-        ],
-        "outputLabels": [
-            "Radio",
-            "Operator"
-        ]
-    },
-    {
-        "id": "cfe25ee37e99db50",
-        "type": "function",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "Dashboard Rate Choice",
-        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1330,
-        "y": 1560,
-        "wires": [
-            [
-                "ab3f6963df6eaf43"
-            ],
-            [
-                "bcc4223e74a54492"
-            ]
-        ],
-        "outputLabels": [
-            "Radio",
-            "Operator"
-        ]
-    },
-    {
-        "id": "ab3f6963df6eaf43",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "SQL Select Rate Radio",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1570,
-        "y": 1540,
-        "wires": [
-            [
-                "3d1ebae60e058858"
-            ]
-        ]
-    },
-    {
-        "id": "bcc4223e74a54492",
-        "type": "template",
-        "z": "407d2b774fe67647",
-        "g": "a9afc3cb2db49407",
-        "name": "SQL Select Rate OP",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
-        "output": "str",
-        "x": 1560,
-        "y": 1580,
-        "wires": [
-            [
-                "3d1ebae60e058858"
-            ]
-        ]
-    },
-    {
-        "id": "c57859fc4cb050a7",
-        "type": "switch",
-        "z": "db5600520bb7f279",
-        "name": "If Fahrenheit",
-        "property": "temperature_unit",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "F",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1290,
-        "y": 280,
-        "wires": [
-            [
-                "3d67dce5.112054",
-                "cd3f0873.755ee8"
-            ]
-        ]
-    },
-    {
-        "id": "eb799ba44460adec",
-        "type": "switch",
-        "z": "db5600520bb7f279",
-        "name": "If Celsius",
-        "property": "temperature_unit",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "C",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1300,
-        "y": 320,
-        "wires": [
-            [
-                "3d67dce5.112054",
-                "cd3f0873.755ee8"
-            ]
-        ]
-    },
-    {
-        "id": "b89a084234eca9ef",
-        "type": "inject",
-        "z": "db5600520bb7f279",
-        "name": "Every 5 secs",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "temperature_unit",
-        "payloadType": "global",
-        "x": 860,
-        "y": 360,
-        "wires": [
-            [
-                "cd4b0989a632cb00"
-            ]
-        ]
-    },
-    {
-        "id": "cd4b0989a632cb00",
-        "type": "rbe",
-        "z": "db5600520bb7f279",
-        "name": "if temperature_unit change",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1080,
-        "y": 360,
-        "wires": [
-            [
-                "7427d9d83b6e6357"
-            ]
-        ]
-    },
-    {
-        "id": "7427d9d83b6e6357",
-        "type": "change",
-        "z": "db5600520bb7f279",
-        "name": "Clear Chart",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "[]",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1290,
-        "y": 360,
-        "wires": [
-            [
-                "cd3f0873.755ee8"
-            ]
-        ]
-    },
-    {
-        "id": "c0218de0f81a3892",
-        "type": "change",
-        "z": "db5600520bb7f279",
-        "name": "Set Gauge Display Values",
-        "rules": [
-            {
-                "t": "set",
-                "p": "label",
-                "pt": "msg",
-                "to": "temperature_unit",
-                "tot": "global",
-                "dc": true
-            },
-            {
-                "t": "set",
-                "p": "ui_control.seg1",
-                "pt": "msg",
-                "to": "temperature_yellow",
-                "tot": "global"
-            },
-            {
-                "t": "set",
-                "p": "ui_control.seg2",
-                "pt": "msg",
-                "to": "temperature_red",
-                "tot": "global"
-            },
-            {
-                "t": "set",
-                "p": "ui_control.max",
-                "pt": "msg",
-                "to": "temperature_max",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1250,
-        "y": 240,
-        "wires": [
-            [
-                "3d67dce5.112054"
-            ]
-        ]
-    },
-    {
-        "id": "4b6949f18173593d",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Store DashboardQRate",
-        "func": "let dashboardqrate = msg.payload;\n\nglobal.set('dashboardqrate',dashboardqrate);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2130,
-        "y": 2600,
-        "wires": [
-            [
-                "b75f7c1d9016de43"
-            ]
-        ]
-    },
-    {
-        "id": "0837ad45ed24fb8c",
-        "type": "ui_dropdown",
-        "z": "204548a488401a1b",
-        "name": "Dashboard Hourly QSO Rate",
-        "label": "Dashboard Rate Option",
-        "tooltip": "Choose which value that you would like to choose for the Radio Values on the dashboard.",
-        "place": "Select Rate",
-        "group": "475c1eff5d97ffe5",
-        "order": 4,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Radio",
-                "value": "radio",
-                "type": "str"
-            },
-            {
-                "label": "Operator",
-                "value": "op",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "Hourly QSO Rate",
-        "topicType": "str",
-        "className": "",
-        "x": 1880,
-        "y": 2600,
-        "wires": [
-            [
-                "4b6949f18173593d"
-            ]
-        ]
-    },
-    {
-        "id": "b75f7c1d9016de43",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Get DashboardQRate",
-        "func": "msg.payload = global.get('dashboardqrate');\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"radio\";\n    return msg;\n}\n\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1640,
-        "y": 2600,
-        "wires": [
-            [
-                "0837ad45ed24fb8c"
-            ]
-        ]
-    },
-    {
-        "id": "da26fb516364abdb",
-        "type": "ui_dropdown",
-        "z": "204548a488401a1b",
-        "name": "Temperature Unit",
-        "label": "Temperature",
-        "tooltip": "",
-        "place": "",
-        "group": "00919f6d1599ed5f",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Fahrenheit",
-                "value": "F",
-                "type": "str"
-            },
-            {
-                "label": "Celsius",
-                "value": "C",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 1790,
-        "y": 960,
-        "wires": [
-            [
-                "cd712885f68288ef"
-            ]
-        ]
-    },
-    {
-        "id": "cd712885f68288ef",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Set Temperature Unit",
-        "func": "let x = msg.payload\nglobal.set('temperature_unit', x)\nif (x == 'F') {\n    global.set('temperature_yellow', 105)\n    global.set('temperature_red', 140)\n    global.set('temperature_max', 195)\n}\nelse {\n    global.set('temperature_yellow', 40)\n    global.set('temperature_red', 60)\n    global.set('temperature_max', 90)\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2020,
-        "y": 960,
-        "wires": [
-            [
-                "4cc7aa20c7555c0d"
-            ]
-        ]
-    },
-    {
-        "id": "1f7dccce6055a5b2",
-        "type": "comment",
-        "z": "204548a488401a1b",
-        "name": "Temperature Unit",
-        "info": "",
-        "x": 1520,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "4cc7aa20c7555c0d",
-        "type": "function",
-        "z": "204548a488401a1b",
-        "name": "Get Temperature Unit",
-        "func": "msg.payload=global.get('temperature_unit')\nlet x = global.get('temperature_unit')\nif (x == 'F') {\n    msg.payload = 'F';\n}\nelse {\n    msg.payload = 'C'\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1560,
-        "y": 960,
-        "wires": [
-            [
-                "da26fb516364abdb"
-            ]
-        ]
-    },
-    {
-        "id": "ee0edc8a2d33034b",
-        "type": "tab",
-        "label": "Score Table",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "237da972.5d69a6",
-        "type": "ui_group",
-        "name": "ui-table with commands",
-        "tab": "379a501f.53b59",
-        "order": 1,
-        "disp": true,
-        "width": "17",
-        "collapse": false
-    },
-    {
-        "id": "c91332c0.50c11",
-        "type": "ui_group",
-        "name": "commands",
-        "tab": "379a501f.53b59",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "379a501f.53b59",
-        "type": "ui_tab",
-        "name": "ui-table command",
-        "icon": "fa-table",
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "15672483a10a62b2",
