@@ -1161,7 +1161,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#0035d5",
+                "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -1192,7 +1192,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#2259ff",
+                    "value": "#0eb8c0",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1208,7 +1208,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0035d5",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -1958,7 +1958,7 @@
         "tab": "08eed6c3517c624e",
         "order": 16,
         "disp": true,
-        "width": "6",
+        "width": "4",
         "collapse": false,
         "className": "config"
     },
@@ -2476,8 +2476,9 @@
         "tab": "726cbb20.1af4f4",
         "order": 13,
         "disp": true,
-        "width": "6",
-        "collapse": false
+        "width": "44",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "78387f0f.22098",
@@ -2502,16 +2503,6 @@
         "name": "spacer",
         "group": "5e3039a0172f86b1",
         "order": 2,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "da372438e15564f5",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "54b59a095746559b",
-        "order": 4,
         "width": 6,
         "height": 1
     },
@@ -26946,9 +26937,9 @@
         "name": "2 Lat & Lon Input",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 3,
-        "width": 6,
-        "height": 1,
+        "order": 1,
+        "width": "0",
+        "height": "0",
         "options": [
             {
                 "label": "Home Latitude",
@@ -27081,7 +27072,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lat & Lon",
-        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload={};\n    msg.payload.lat = homelat;\n    msg.payload.lon = homelon;\n}\nnode.status({text:\"LAT:\"+homelat+\" LON:\"+homelon});\nreturn msg;",
+        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '' || homelat== undefined)\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload={};\n    msg.payload.lat = homelat;\n    msg.payload.lon = homelon;\n}\nnode.status({text:\"LAT:\"+homelat+\" LON:\"+homelon});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -27157,7 +27148,7 @@
         "label": "Map Labels",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27284,7 +27275,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "54b59a095746559b",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27565,7 +27556,7 @@
         "place": "Select OP Sort Type",
         "group": "52728e3a5743376c",
         "order": 1,
-        "width": 6,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -30540,7 +30531,7 @@
         "label": "TTL Value",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 5,
+        "order": 4,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -33817,7 +33808,6 @@
         "id": "24a259a2ccec0aa3",
         "type": "http request",
         "z": "2eedd966294071cc",
-        "d": true,
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -37155,7 +37145,8 @@
             "b9359e88f599c705",
             "86117516f9c50845",
             "d84431b1769ad0b7",
-            "ca794ca15d01319a"
+            "ca794ca15d01319a",
+            "09a80363b32c10dd"
         ],
         "x": 1425,
         "y": 80,
@@ -38985,7 +38976,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.config .nr-dashboard-cardtitle{\nfont-size: 18px;\nmin-height: 15px;\n}\n.config .layout-row {\nfont-size: 18px;}\n.config .n1mm .label {\nfont-size: 14px;}\n.config .label {\nfont-size: 18px;}\n.config .value {\nfont-size: 20px;}\n/*.config .nr-dashboard-dropdown md-input-container>md-select{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown p.label{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown div.md-text{\nmargin-top: 0px;\n}*/\n.config md-input-container {\nmargin-top:3px;\npadding: 0px;\nmargin-left: 7px;\n}\n.form_adj .formElement {\n        height: 46px;\n    }\n</style>",
+        "format": "<style>\n.config .nr-dashboard-cardtitle{\nfont-size: 18px;\nmin-height: 15px;\n}\n.config .layout-row {\nfont-size: 18px;}\n.config .n1mm .label {\nfont-size: 14px;}\n.config .label {\nfont-size: 18px;}\n.config .value {\nfont-size: 20px;}\n/*.config .nr-dashboard-dropdown md-input-container>md-select{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown p.label{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown div.md-text{\nmargin-top: 0px;\n}*/\n.config md-input-container {\nmargin-top:3px;\npadding: 0px;\nmargin-left: 7px;\n}\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -41767,5 +41758,508 @@
                 "da26fb516364abdb"
             ]
         ]
+    },
+    {
+        "id": "ee0edc8a2d33034b",
+        "type": "tab",
+        "label": "Score Table",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "237da972.5d69a6",
+        "type": "ui_group",
+        "name": "ui-table with commands",
+        "tab": "379a501f.53b59",
+        "order": 1,
+        "disp": true,
+        "width": "17",
+        "collapse": false
+    },
+    {
+        "id": "c91332c0.50c11",
+        "type": "ui_group",
+        "name": "commands",
+        "tab": "379a501f.53b59",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "379a501f.53b59",
+        "type": "ui_tab",
+        "name": "ui-table command",
+        "icon": "fa-table",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "15672483a10a62b2",
+        "type": "ui_toast",
+        "z": "ee0edc8a2d33034b",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Online Scoreboard Error",
+        "x": 1410,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80b1d74686de4a72",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6313d253a0c71c71",
+        "type": "rbe",
+        "z": "ee0edc8a2d33034b",
+        "name": "RBE",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1210,
+        "y": 140,
+        "wires": [
+            [
+                "15672483a10a62b2"
+            ]
+        ]
+    },
+    {
+        "id": "957c28ebf33a4784",
+        "type": "switch",
+        "z": "ee0edc8a2d33034b",
+        "name": "Error?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "Contest not supported",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Contest not supported",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "is not active",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1030,
+        "y": 140,
+        "wires": [
+            [
+                "82ba94e6dd3c3fd8"
+            ],
+            [
+                "6313d253a0c71c71",
+                "80b1d74686de4a72"
+            ],
+            [
+                "6313d253a0c71c71"
+            ]
+        ]
+    },
+    {
+        "id": "a7dc0c3abe431255",
+        "type": "function",
+        "z": "ee0edc8a2d33034b",
+        "name": "Is Error?",
+        "func": "if (msg.payload.error == undefined)\n{\n    return msg\n}\nif (msg.payload.error != undefined)\n{\n    msg.payload = \"Contest not supported\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 120,
+        "wires": [
+            [
+                "11f2a38999137dfc",
+                "957c28ebf33a4784"
+            ]
+        ]
+    },
+    {
+        "id": "53255eb5cfb7c2b6",
+        "type": "http request",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "https://contestonlinescore.com/tools/api/?key=3450792384502938475&contest={{topic}}",
+        "tls": "465f5622aae04ed5",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 690,
+        "y": 120,
+        "wires": [
+            [
+                "2c5c6722784705e5",
+                "a7dc0c3abe431255"
+            ]
+        ]
+    },
+    {
+        "id": "2c5c6722784705e5",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "11f2a38999137dfc",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "cf32d7cb8b44189c",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "903deb0cf5b2c114",
+        "type": "switch",
+        "z": "ee0edc8a2d33034b",
+        "name": "Contest Defined?",
+        "property": "contestname",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "53255eb5cfb7c2b6",
+                "cf32d7cb8b44189c"
+            ]
+        ]
+    },
+    {
+        "id": "c8bf7dd9b8eda210",
+        "type": "function",
+        "z": "ee0edc8a2d33034b",
+        "name": "Prep HTTP GET",
+        "func": "let contestname = global.get('contestname');\nlet contestcall = global.get('contestcallsign');\nlet chasecall1 = global.get('chasecall1');\nlet chasecall2 = global.get('chasecall2');\nlet chasecall3 = global.get('chasecall3');\nlet chasecall4 = global.get('chasecall4');\nlet chasecall5 = global.get('chasecall5');\n\nif (contestname == null)\n{\n    return;\n}\n\nif (contestcall == null)\n{\n    return;\n}\n\nif (chasecall1 == null)\n{\n    msg.payload = contestcall\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall2 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall3 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall4 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall5 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4\n    msg.topic = contestname;\n    return msg;\n}\nelse {\n    \n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4+\",\"+chasecall5\n    msg.topic = contestname;\n    return msg;\n}\n\n//msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4+\",\"+chasecall5\n\n//let dummyString=\"890909.00\"\n//msg.payload = msg.payload.replace(/(,+$)/, '')\n//console.log(dummyString)\n\n//msg.topic = contestname;\n\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 120,
+        "wires": [
+            [
+                "903deb0cf5b2c114"
+            ]
+        ]
+    },
+    {
+        "id": "d2a747b5049be4e6",
+        "type": "inject",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "c8bf7dd9b8eda210"
+            ]
+        ]
+    },
+    {
+        "id": "09a80363b32c10dd",
+        "type": "link in",
+        "z": "ee0edc8a2d33034b",
+        "name": "Scoreboard HTTP Get IN",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 155,
+        "y": 60,
+        "wires": [
+            [
+                "c8bf7dd9b8eda210"
+            ]
+        ]
+    },
+    {
+        "id": "d805877e215b63df",
+        "type": "ui_table",
+        "z": "ee0edc8a2d33034b",
+        "group": "110f893b.a0f1d7",
+        "name": "Scores",
+        "order": 2,
+        "width": "44",
+        "height": "27",
+        "columns": [
+            {
+                "field": "contestcall",
+                "title": "Callsign",
+                "width": "8%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "category",
+                "title": "Category",
+                "width": "7%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "power",
+                "title": "Power",
+                "width": "6%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "qso_total",
+                "title": "QSOs",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "mult_total",
+                "title": "Mults",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "score_total",
+                "title": "Score",
+                "width": "10%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_160",
+                "title": "160",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_80",
+                "title": "80",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_40",
+                "title": "40",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_20",
+                "title": "20",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_15",
+                "title": "15",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_10",
+                "title": "10",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "last",
+                "title": "Latest Update",
+                "width": "9%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1360,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "82ba94e6dd3c3fd8",
+        "type": "function",
+        "z": "ee0edc8a2d33034b",
+        "name": "function 1",
+        "func": "node.send([]);\nlet msg_old= msg.payload \nlet output=[];\nlet power_list = [,'QRP','Low','High'];\nlet category_list=['SO','M/1','M/2','M/M'];\nlet assisted_list=['Non-Assisted','Assisted'];\nlet mode_list=['Mixed','CW','SSB','RTTY','PSK','FT8','FT4','DIGI'];\nlet overlay=['','TB-Wires','Rookie','Classic','Wire-Only'];\nlet band_list=['ALL', '160M', '80M', '40M', '20M', '15M', '10M', '6M', '2M', '1.25M', '0.70M', '0.33M', '0.23M', '0.13M', '0.09M', '0.05M', '0.03M']\n\nvar iterate=0;\nvar contest_list= Object.keys(msg_old);\nfor (let contestcall in contest_list){\n    let call_data = msg.payload[contest_list[contestcall]];\n    let score_total = call_data.data.score_total;\n    let qso_total = call_data.data.qso_total || \"\";\n    let mult_total = call_data.data.mult_total || \"\";\n    let qso_160 = call_data.data.qso_160 || \"\" ;\n    let mult_160 = call_data.data.mult_160 || \"\" ;\n    let qso_80 = call_data.data.qso_80 || \"\";\n    let mult_80 = call_data.data.mult_80 || \"\";\n    let qso_40 = call_data.data.qso_40 || \"\";\n    let mult_40 = call_data.data.mult_40 || \"\";\n    let qso_20 = call_data.data.qso_20 || \"\";\n    let mult_20 = call_data.data.mult_20 || \"\";\n    let qso_15 = call_data.data.qso_15 || \"\";\n    let mult_15 = call_data.data.mult_15 || \"\";\n    let qso_10 = call_data.data.qso_10 || \"\";\n    let mult_10 = call_data.data.mult_10 || \"\";\n    let qso_6 = call_data.data.qso_6 || \"\";\n    let mult_6 = call_data.data.mult_6 || \"\";\n    let last = call_data.data.last;\n    \n    if (call_data.data.category =='0'){\n        if (call_data.data.band=='0'){\n            var band=\"AB\";\n        }else{\n            band = 'SB '+call_data.data.band;\n        }\n        if (call_data.data.assisted =='1'){\n            var assisted=\"A\";\n        }\n        else{\n            assisted=\"\";\n        }\n    }else{\n        band=\"\";\n        assisted=\"\";\n    }\n    score_total = Number(score_total).toLocaleString('US');\n    qso_total = Number(qso_total).toLocaleString('US');\n    mult_total = Number(mult_total).toLocaleString('US');\n    output[iterate] = {\n        contestcall: contest_list[contestcall],\n        category: category_list[call_data.data.category]+assisted+band,\n        power: power_list[call_data.data.power],\n        score_total: score_total,\n        qso_total: qso_total,\n        mult_total: mult_total,\n        band_10: String(qso_10+\"/\"+mult_10),\n        band_160: String(qso_160 + \"/\" + mult_160),\n        band_80: String(qso_80 + \"/\" + mult_80),\n        band_40: String(qso_40 + \"/\" + mult_40),\n        band_20: String(qso_20 + \"/\" + mult_20),\n        band_15: String(qso_15 + \"/\" + mult_15),\n        band_6: String(qso_6 + \"/\" +mult_6),\n        last: last\n    };\n    iterate=iterate+1;\n}\n\n\noutput.sort(function (a, b) {\n    return a.category.localeCompare(b.category) || Number(b.score_total) - Number(a.score_total);\n});\n\nmsg.payload=output;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 100,
+        "wires": [
+            [
+                "d805877e215b63df",
+                "dd7d6b64a786a7d3"
+            ]
+        ]
+    },
+    {
+        "id": "dd7d6b64a786a7d3",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 60,
+        "wires": []
     }
 ]
