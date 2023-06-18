@@ -128,6 +128,14 @@
         "env": []
     },
     {
+        "id": "ee0edc8a2d33034b",
+        "type": "tab",
+        "label": "Score Table",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c967abe5be484ee6",
         "type": "subflow",
         "name": "1Hr Rate Color",
@@ -322,6 +330,10 @@
                     },
                     {
                         "id": "f5f512454cd1849d",
+                        "port": 0
+                    },
+                    {
+                        "id": "918f8c8af855b5ce",
                         "port": 0
                     }
                 ]
@@ -732,9 +744,9 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1485.5,
-        "w": 2458,
-        "h": 969
+        "y": 1545.5,
+        "w": 2618,
+        "h": 1021.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -1025,12 +1037,14 @@
             "d37ea6046424b974",
             "89588cb6bf69a8d0",
             "d9503f18f29524db",
-            "27f4e52f97117294"
+            "27f4e52f97117294",
+            "b660ee693411d757",
+            "0ca8c50b9058010c"
         ],
-        "x": 1074,
-        "y": 1979,
-        "w": 1272,
-        "h": 449.5
+        "x": 854,
+        "y": 2019,
+        "w": 1612,
+        "h": 522
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1060,18 +1074,31 @@
             "b946bc8caa8d1dfa",
             "323b33d53e2baade",
             "b9e129bdae4de517",
-            "b1abd7f75fd32f6f",
             "5bbc72a4e604df32",
             "e4e19daf40493fb9",
             "3d1ebae60e058858",
             "572d2215a6ea16bb",
             "5a5a85080d107e92",
-            "0baeb2e7ae556661"
+            "0baeb2e7ae556661",
+            "cfe25ee37e99db50",
+            "bcc4223e74a54492"
         ],
         "x": 1014,
-        "y": 1511.5,
-        "w": 1432,
+        "y": 1571.5,
+        "w": 1592,
         "h": 449.5
+    },
+    {
+        "id": "70fdf3d0be199470",
+        "type": "junction",
+        "z": "bedd4acdc0e27dab",
+        "x": 4440,
+        "y": 440,
+        "wires": [
+            [
+                "918f8c8af855b5ce"
+            ]
+        ]
     },
     {
         "id": "b8ba38b3.abfb98",
@@ -1079,7 +1106,7 @@
         "name": "Current QSO's",
         "tab": "200297fa.9ab198",
         "order": 2,
-        "disp": true,
+        "disp": false,
         "width": "26",
         "collapse": false,
         "className": "dashboard_current_qsos"
@@ -1090,7 +1117,7 @@
         "name": "Last QSO's",
         "tab": "200297fa.9ab198",
         "order": 1,
-        "disp": true,
+        "disp": false,
         "width": "5",
         "collapse": false,
         "className": "dashboard_last_qsos"
@@ -1107,7 +1134,7 @@
         "name": "Contest Stats",
         "tab": "200297fa.9ab198",
         "order": 3,
-        "disp": true,
+        "disp": false,
         "width": "5",
         "collapse": false,
         "className": "dashboard_contest_stats"
@@ -1118,7 +1145,7 @@
         "name": "Radio 1 Data",
         "tab": "200297fa.9ab198",
         "order": 8,
-        "disp": true,
+        "disp": false,
         "width": "24",
         "collapse": false,
         "className": "dashboard_radio_data"
@@ -1129,7 +1156,7 @@
         "name": "Radio 2 Data",
         "tab": "200297fa.9ab198",
         "order": 9,
-        "disp": true,
+        "disp": false,
         "width": "24",
         "collapse": false,
         "className": "dashboard_radio_data"
@@ -1157,7 +1184,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#0035d5",
+                "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -1188,7 +1215,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#2259ff",
+                    "value": "#0eb8c0",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1204,7 +1231,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0035d5",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -1362,12 +1389,13 @@
     {
         "id": "dea9d7ac.0cefc8",
         "type": "ui_group",
-        "name": "Raspberry Pi Status & Control",
+        "name": "Pi Server Status & Control",
         "tab": "7f50838.c6d257c",
         "order": 2,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "8ca85278.65932",
@@ -1679,7 +1707,7 @@
         "tab": "7f50838.c6d257c",
         "order": 3,
         "disp": true,
-        "width": 5,
+        "width": "8",
         "collapse": false,
         "className": ""
     },
@@ -1808,7 +1836,7 @@
         "name": "Activity Rate",
         "tab": "200297fa.9ab198",
         "order": 7,
-        "disp": true,
+        "disp": false,
         "width": "12",
         "collapse": false,
         "className": "dashboard_activity_rate"
@@ -1953,7 +1981,7 @@
         "tab": "08eed6c3517c624e",
         "order": 16,
         "disp": true,
-        "width": "6",
+        "width": "4",
         "collapse": false,
         "className": "config"
     },
@@ -2099,11 +2127,11 @@
     {
         "id": "00919f6d1599ed5f",
         "type": "ui_group",
-        "name": "Distance Measurement",
+        "name": "Measurement Units",
         "tab": "08eed6c3517c624e",
         "order": 14,
         "disp": true,
-        "width": 6,
+        "width": "6",
         "collapse": false,
         "className": "config"
     },
@@ -2471,8 +2499,9 @@
         "tab": "726cbb20.1af4f4",
         "order": 13,
         "disp": true,
-        "width": "6",
-        "collapse": false
+        "width": "44",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "78387f0f.22098",
@@ -2497,16 +2526,6 @@
         "name": "spacer",
         "group": "5e3039a0172f86b1",
         "order": 2,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "da372438e15564f5",
-        "type": "ui_spacer",
-        "z": "b73cc2bb5f424b69",
-        "name": "spacer",
-        "group": "54b59a095746559b",
-        "order": 4,
         "width": 6,
         "height": 1
     },
@@ -2619,6 +2638,34 @@
         "order": 27,
         "width": 2,
         "height": 1
+    },
+    {
+        "id": "237da972.5d69a6",
+        "type": "ui_group",
+        "name": "ui-table with commands",
+        "tab": "379a501f.53b59",
+        "order": 1,
+        "disp": true,
+        "width": "17",
+        "collapse": false
+    },
+    {
+        "id": "c91332c0.50c11",
+        "type": "ui_group",
+        "name": "commands",
+        "tab": "379a501f.53b59",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "379a501f.53b59",
+        "type": "ui_tab",
+        "name": "ui-table command",
+        "icon": "fa-table",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "db6c3ead34896ed7",
@@ -5590,11 +5637,41 @@
                 "t": "eq",
                 "v": "FM",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "FT8",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "FT4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "JT65",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "WSPR",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OLIVIA",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PSK31",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 6,
+        "outputs": 12,
         "x": 4320,
         "y": 320,
         "wires": [
@@ -5615,6 +5692,24 @@
             ],
             [
                 "f5f512454cd1849d"
+            ],
+            [
+                "70fdf3d0be199470"
+            ],
+            [
+                "70fdf3d0be199470"
+            ],
+            [
+                "70fdf3d0be199470"
+            ],
+            [
+                "70fdf3d0be199470"
+            ],
+            [
+                "70fdf3d0be199470"
+            ],
+            [
+                "70fdf3d0be199470"
             ]
         ]
     },
@@ -6450,6 +6545,31 @@
         ]
     },
     {
+        "id": "918f8c8af855b5ce",
+        "type": "change",
+        "z": "bedd4acdc0e27dab",
+        "name": "Label Digital",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.mode",
+                "pt": "msg",
+                "to": "Digitial",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4530,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "0178697fb442d801",
         "type": "udp in",
         "z": "407d2b774fe67647",
@@ -7220,12 +7340,12 @@
         "width": 4,
         "height": 2,
         "name": "Radio 2 Operator Dashboard",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio2Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 1540,
-        "y": 2240,
+        "y": 2280,
         "wires": []
     },
     {
@@ -7233,25 +7353,25 @@
         "type": "switch",
         "z": "407d2b774fe67647",
         "g": "81692a3cb68d6cde",
-        "name": "Station Name",
-        "property": "payload.RadioInfo.StationName[0]",
+        "name": "Radio 1 or 2 (was Station Name)",
+        "property": "payload.RadioInfo.RadioNr[0]",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "PC1",
+                "v": "1",
                 "vt": "global"
             },
             {
                 "t": "eq",
-                "v": "PC2",
+                "v": "2",
                 "vt": "global"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
+        "x": 970,
         "y": 1740,
         "wires": [
             [
@@ -7263,7 +7383,8 @@
                 "b946bc8caa8d1dfa",
                 "1497c72e88a8f6b1",
                 "cab897702f8a6f57",
-                "d0b1af6883fc61b1"
+                "d0b1af6883fc61b1",
+                "df61b921bf703bd8"
             ],
             [
                 "27f4e52f97117294",
@@ -7290,7 +7411,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 2200,
+        "y": 2240,
         "wires": [
             [
                 "f9c9ed275443b030"
@@ -7312,7 +7433,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1750,
-        "y": 2200,
+        "y": 2240,
         "wires": []
     },
     {
@@ -7330,7 +7451,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1540,
-        "y": 2320,
+        "y": 2360,
         "wires": []
     },
     {
@@ -7348,7 +7469,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1530,
-        "y": 2280,
+        "y": 2320,
         "wires": []
     },
     {
@@ -7364,7 +7485,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 2320,
+        "y": 2360,
         "wires": [
             [
                 "5c688773c88f9f41"
@@ -7395,7 +7516,7 @@
         "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
         "x": 1410,
-        "y": 2380,
+        "y": 2460,
         "wires": [
             [
                 "97aba946591c7289"
@@ -7411,8 +7532,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 1620,
-        "y": 2380,
+        "x": 1640,
+        "y": 2460,
         "wires": [
             [
                 "7aa65e21deb3bbf5"
@@ -7429,12 +7550,12 @@
         "width": 3,
         "height": 2,
         "name": "Radio 2 QSO Rate",
-        "label": "Q's/Hr",
+        "label": "{{msg.choice}} Q's/Hr",
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2230,
-        "y": 2380,
+        "x": 2350,
+        "y": 2420,
         "wires": []
     },
     {
@@ -7463,7 +7584,7 @@
         "z": "407d2b774fe67647",
         "g": "81692a3cb68d6cde",
         "name": "UTF8",
-        "func": "msg.payload=msg.payload.toString('UTF8');\nreturn msg;",
+        "func": "msg.payload=msg.payload.toString('UTF8');\nmsg.Radio1Name = global.get('PC1');\nmsg.Radio2Name = global.get('PC2');\nmsg.Radio3Name = global.get('PC3');\nmsg.Radio4Name = global.get('PC4');\nmsg.Radio5Name = global.get('PC5');\nmsg.Radio6Name = global.get('PC6');\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7547,11 +7668,11 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 1180,
-        "y": 2380,
+        "x": 960,
+        "y": 2480,
         "wires": [
             [
-                "89588cb6bf69a8d0"
+                "0ca8c50b9058010c"
             ]
         ]
     },
@@ -7561,8 +7682,8 @@
         "z": "407d2b774fe67647",
         "g": "94f44b7ea0e29d1d",
         "name": "",
-        "x": 1980,
-        "y": 2380,
+        "x": 2020,
+        "y": 2460,
         "wires": [
             [
                 "d37ea6046424b974"
@@ -7595,8 +7716,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1790,
-        "y": 2380,
+        "x": 1830,
+        "y": 2460,
         "wires": [
             [
                 "8a9601bf0a7a7faa"
@@ -7731,7 +7852,6 @@
             [
                 "27f4e52f97117294",
                 "d9503f18f29524db",
-                "df61b921bf703bd8",
                 "ccb12f5a5e87937a",
                 "a74a987615dd4bb9",
                 "fb911af0905d8f5d",
@@ -7761,7 +7881,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1510,
-        "y": 2120,
+        "y": 2160,
         "wires": [
             [
                 "379a02b32eb2de49"
@@ -7786,7 +7906,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1990,
-        "y": 2120,
+        "y": 2160,
         "wires": []
     },
     {
@@ -7802,7 +7922,7 @@
         "finalize": "",
         "libs": [],
         "x": 1740,
-        "y": 2120,
+        "y": 2160,
         "wires": [
             [
                 "d6a02ccab960310f"
@@ -7828,7 +7948,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1740,
-        "y": 2160,
+        "y": 2200,
         "wires": [
             [
                 "d6a02ccab960310f"
@@ -7859,7 +7979,7 @@
         "showGlow": true,
         "name": "Radio 2 TX Transmit LED",
         "x": 1770,
-        "y": 2020,
+        "y": 2060,
         "wires": []
     },
     {
@@ -7875,7 +7995,7 @@
         "finalize": "",
         "libs": [],
         "x": 1490,
-        "y": 2020,
+        "y": 2060,
         "wires": [
             [
                 "d87f990426df6b87"
@@ -7895,7 +8015,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 2060,
+        "y": 2100,
         "wires": [
             [
                 "c28f1c9baeeba95d"
@@ -7926,7 +8046,7 @@
         "showGlow": true,
         "name": "Radio 2 Focus LED",
         "x": 1750,
-        "y": 2060,
+        "y": 2100,
         "wires": []
     },
     {
@@ -8000,7 +8120,7 @@
         "width": 5,
         "height": 2,
         "name": "Last QSO Call Display",
-        "label": "Last QSO",
+        "label": "Latest QSO",
         "format": "<font color={{msg.color}}>{{msg.payload.name}}</font>",
         "layout": "col-center",
         "className": "",
@@ -9188,7 +9308,7 @@
         "showGlow": true,
         "name": "Radio 1 Focus LED",
         "x": 1750,
-        "y": 1920,
+        "y": 1980,
         "wires": []
     },
     {
@@ -9204,7 +9324,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1920,
+        "y": 1980,
         "wires": [
             [
                 "8de09b93172d4977"
@@ -9224,7 +9344,7 @@
         "finalize": "",
         "libs": [],
         "x": 1490,
-        "y": 1880,
+        "y": 1940,
         "wires": [
             [
                 "72403bb4391a1d55",
@@ -9256,7 +9376,7 @@
         "showGlow": true,
         "name": "Radio 1 TX Transmit LED",
         "x": 1770,
-        "y": 1880,
+        "y": 1940,
         "wires": []
     },
     {
@@ -9274,7 +9394,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1990,
-        "y": 1840,
+        "y": 1900,
         "wires": []
     },
     {
@@ -9296,7 +9416,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1740,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "644bc9391ec895bf"
@@ -9316,7 +9436,7 @@
         "finalize": "",
         "libs": [],
         "x": 1740,
-        "y": 1780,
+        "y": 1840,
         "wires": [
             [
                 "644bc9391ec895bf"
@@ -9338,7 +9458,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1990,
-        "y": 1780,
+        "y": 1840,
         "wires": []
     },
     {
@@ -9356,7 +9476,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1770,
-        "y": 1740,
+        "y": 1800,
         "wires": []
     },
     {
@@ -9379,7 +9499,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1510,
-        "y": 1780,
+        "y": 1840,
         "wires": [
             [
                 "9ac7455179b0e1d0"
@@ -9402,7 +9522,7 @@
         "finalize": "",
         "libs": [],
         "x": 1480,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             [
                 "144f676e5802f76c"
@@ -9419,12 +9539,12 @@
         "width": 4,
         "height": 2,
         "name": "Radio 1 Operator Dashboard",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio1Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
         "x": 1520,
-        "y": 1700,
+        "y": 1760,
         "wires": []
     },
     {
@@ -9442,7 +9562,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1510,
-        "y": 1660,
+        "y": 1720,
         "wires": []
     },
     {
@@ -9460,7 +9580,7 @@
         "layout": "col-center",
         "className": "",
         "x": 1520,
-        "y": 1620,
+        "y": 1680,
         "wires": []
     },
     {
@@ -9476,7 +9596,7 @@
         "finalize": "",
         "libs": [],
         "x": 1270,
-        "y": 1620,
+        "y": 1680,
         "wires": [
             [
                 "323b33d53e2baade"
@@ -9495,8 +9615,8 @@
         "syntax": "mustache",
         "template": "select count(call) as rate from qsos where StationName='{{{payload.RadioInfo.StationName}}}' and timestamp >= datetime('now','-1 hours');",
         "output": "str",
-        "x": 1370,
-        "y": 1560,
+        "x": 1590,
+        "y": 1600,
         "wires": [
             [
                 "3d1ebae60e058858"
@@ -9522,10 +9642,10 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1120,
-        "y": 1560,
+        "y": 1620,
         "wires": [
             [
-                "b1abd7f75fd32f6f"
+                "cfe25ee37e99db50"
             ]
         ]
     },
@@ -9535,16 +9655,16 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1400,
-        "y": 1820,
+        "x": 1420,
+        "y": 1880,
         "wires": []
     },
     {
@@ -9556,8 +9676,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "QSO Database",
-        "x": 1600,
-        "y": 1560,
+        "x": 1800,
+        "y": 1620,
         "wires": [
             [
                 "572d2215a6ea16bb"
@@ -9584,8 +9704,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1810,
-        "y": 1560,
+        "x": 1990,
+        "y": 1620,
         "wires": [
             [
                 "5a5a85080d107e92"
@@ -9598,8 +9718,8 @@
         "z": "407d2b774fe67647",
         "g": "a9afc3cb2db49407",
         "name": "",
-        "x": 1980,
-        "y": 1560,
+        "x": 2160,
+        "y": 1620,
         "wires": [
             [
                 "0baeb2e7ae556661"
@@ -9626,8 +9746,8 @@
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
-        "x": 2290,
-        "y": 1560,
+        "x": 2450,
+        "y": 1620,
         "wires": []
     },
     {
@@ -10043,7 +10163,7 @@
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
-        "useUTC": false,
+        "useUTC": true,
         "colors": [
             "#1f77b4",
             "#aec7e8",
@@ -10694,7 +10814,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 900,
@@ -10710,7 +10831,7 @@
         "width": 6,
         "height": 2,
         "name": "10 Minute Rate",
-        "label": "10 Minute",
+        "label": "<font color=#008000>10 Minute Rate</font>",
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
@@ -10833,7 +10954,7 @@
         "width": 6,
         "height": 2,
         "name": "30 Minute Rate",
-        "label": "30 Minute",
+        "label": "<font color=#008000>30 Minute Rate</font>",
         "format": "<font color={{msg.color}}>{{msg.rate}}</font>",
         "layout": "col-center",
         "className": "",
@@ -11039,6 +11160,100 @@
         ]
     },
     {
+        "id": "b660ee693411d757",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "94f44b7ea0e29d1d",
+        "name": "SQL Select Rate OP",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 1420,
+        "y": 2500,
+        "wires": [
+            [
+                "97aba946591c7289"
+            ]
+        ]
+    },
+    {
+        "id": "0ca8c50b9058010c",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "94f44b7ea0e29d1d",
+        "name": "Dashboard Rate Choice",
+        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 2480,
+        "wires": [
+            [
+                "89588cb6bf69a8d0"
+            ],
+            [
+                "b660ee693411d757"
+            ]
+        ],
+        "outputLabels": [
+            "Radio",
+            "Operator"
+        ]
+    },
+    {
+        "id": "cfe25ee37e99db50",
+        "type": "function",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "Dashboard Rate Choice",
+        "func": "let dashboardqrate=global.get(\"dashboardqrate\");\n\nif (dashboardqrate == \"radio\"){\nmsg.choice=\"Radio\";\nreturn [msg,null]\n}\nelse if (dashboardqrate == \"op\"){\nmsg.choice=\"Operator\";\nreturn [null,msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 1620,
+        "wires": [
+            [
+                "b1abd7f75fd32f6f"
+            ],
+            [
+                "bcc4223e74a54492"
+            ]
+        ],
+        "outputLabels": [
+            "Radio",
+            "Operator"
+        ]
+    },
+    {
+        "id": "bcc4223e74a54492",
+        "type": "template",
+        "z": "407d2b774fe67647",
+        "g": "a9afc3cb2db49407",
+        "name": "SQL Select Rate OP",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "select count(operator) as rate from qsos where operator='{{payload.RadioInfo.OpCall}}' and timestamp >= datetime('now','-1 hours');",
+        "output": "str",
+        "x": 1580,
+        "y": 1640,
+        "wires": [
+            [
+                "3d1ebae60e058858"
+            ]
+        ]
+    },
+    {
         "id": "4079239a4fd5c11c",
         "type": "ui_text",
         "z": "63d876401a56f871",
@@ -11047,7 +11262,7 @@
         "width": 5,
         "height": 2,
         "name": "RI-Radio 1 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio1Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -11064,7 +11279,7 @@
         "width": 5,
         "height": 2,
         "name": "RI-Radio 2 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio2Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -11522,7 +11737,7 @@
         "width": 5,
         "height": 2,
         "name": "FI-Radio 3 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio3Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -11697,7 +11912,7 @@
         "width": 5,
         "height": 2,
         "name": "FI-Radio 4 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio4Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -15033,7 +15248,7 @@
         "width": 5,
         "height": 2,
         "name": "FI-Radio 5 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio5Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -15421,7 +15636,7 @@
         "width": 5,
         "height": 2,
         "name": "FI-Radio 6 Operator",
-        "label": "Operator",
+        "label": "<font size=\"+2\" color=#008000><b>{{msg.Radio6Name}}</b></font>",
         "format": "<font color={{msg.color}}>{{msg.payload.RadioInfo.OpCall[0]}}</font>",
         "layout": "col-center",
         "className": "",
@@ -23605,7 +23820,7 @@
         "type": "debug",
         "z": "b59d8b7ca43e59ce",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -23768,7 +23983,9 @@
         "y": 320,
         "wires": [
             [
-                "f042fa28.8f2bf8"
+                "f042fa28.8f2bf8",
+                "eb799ba44460adec",
+                "c0218de0f81a3892"
             ]
         ]
     },
@@ -24136,8 +24353,8 @@
         "width": 3,
         "height": 3,
         "gtype": "gage",
-        "title": "CPU Temperature",
-        "label": "F",
+        "title": "CPU Temp",
+        "label": "{{msg.label}}",
         "format": "{{value}}",
         "min": 0,
         "max": "170",
@@ -24146,10 +24363,11 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "125",
-        "seg2": "150",
-        "x": 1170,
-        "y": 280,
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1510,
+        "y": 320,
         "wires": []
     },
     {
@@ -24162,7 +24380,7 @@
         "width": 3,
         "height": 3,
         "gtype": "gage",
-        "title": "CPU",
+        "title": "CPU Load",
         "label": "%",
         "format": "{{value}}",
         "min": 0,
@@ -24174,8 +24392,9 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 809.8888931274414,
-        "y": 387.77777767181396,
+        "className": "",
+        "x": 710,
+        "y": 400,
         "wires": []
     },
     {
@@ -24267,8 +24486,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1190,
-        "y": 320,
+        "x": 1530,
+        "y": 360,
         "wires": [
             []
         ]
@@ -24286,13 +24505,13 @@
         "outputFieldType": "msg",
         "roundOutputField": true,
         "outputFieldDecimals": "1",
-        "name": "",
-        "x": 920,
-        "y": 320,
+        "statusType": "none",
+        "name": "C to F",
+        "x": 1150,
+        "y": 280,
         "wires": [
             [
-                "3d67dce5.112054",
-                "cd3f0873.755ee8"
+                "c57859fc4cb050a7"
             ]
         ]
     },
@@ -24349,9 +24568,9 @@
         "group": "4c7c4383a5f4d36f",
         "name": "Solar Data",
         "order": 1,
-        "width": 5,
-        "height": 15,
-        "format": "\n<style type='text/css'>\n\t.main\n\t\n\ttable {\n\t  width: 220px;\n\t  background:#000000;\n\t  border: 1px;\n\t  margin-top: 15px;\n\t  margin-bottom: 25px;\n\t}\n\tth {\n\t  font-family: \"Trebuchet MS\", Arial, Verdana;\n\t  font-size: 14px;\n\t  color: #FFFFFF;\n\t  padding: 1px;\n\t}\n\ttd {\n\t  border-bottom: 1px;\n\t  padding: 1px;\n\t  color: #F0EEEE;\n\t  text-align: center;\n\t  white-space:nowrap;\n\t}\n\t\n\ta.one:link {color:#ff0000;text-decoration:none;}\n\ta.one:visited {color:#0000ff;text-decoration:none;}\n\ta.one:hover {text-decoration:underline;}\n\n\t.lFont {font-size: 10px;}\n\t.nFont {font-size: 12px;}\n\t.bFont {font-size: 14px;}\n\t\n\t.green  {color: #14ED0D;}\n\t.yellow {color: #FEFE0B;}\n\t.red    {color: #E94D0A;}\n\t.white  {color: #F0EEEE;}\n\t\n\t/* change color of band conditions */\n\t.Poor {color: #E94D0A;}\n\t.Fair {color: #FEFE0B;}\n\t.Good {color: #14ED0D;}\n\t\n\t/* change color of geomagnetic field */\n\t.ACTIVE     {color: #FEFE0B;}\n\t.INACTIVE   {color: #14ED0D;}\n\t.UNSETTLD   {color: #14ED0D;}\n\t.QUIET      {color: #14ED0D;}\n\t.VRQUIET    {color: #14ED0D;}\n\t\n\t/* change color of sig noise*/\n\t.S0-S1  {color: #14ED0D;}\n\t.S1-S2  {color: #14ED0D;}\n\t.S2-S3  {color: #14ED0D;}\n\t.S3-S4  {color: #FEFE0B;}\n\t\n\t/* VHF band condition colours */\n\t.HighLATAUR {color: #FEFE0B;}\n\t.MIDLATAUR  {color: #14ED0D;}\n\t.BandClosed {color: #E94D0A;}\n\t.at50MHzEs    {color: #14ED0D;}\n\t.at70MHzEs    {color: #14ED0D;}\n\t.at144MHzEs   {color: #14ED0D;}\n\t.HighMUF    {color: #FEFE0B;}\n\t.NotSet     {color: #f003fc;}\n\t\n\t.cellUL {border-bottom: 1px solid #F0EEEE;}\n\n</style>\n\n    <div class=\"main\">\n        <table>\n            <tr>\n                <th colspan=\"4\" class=\"nFont\">Solar-Terrestrial Data provided by N0NBH</th>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.updated[0]}} -->\n                <td colspan=\"4\" class=\"nFont\"><font class=\"yellow\"><strong>{{msg.payload.solardata.updated[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.solarflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SFI:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.sunspots[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SN:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.sunspots[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">A-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aindex[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.kindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">K-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.kindex[0]}}</strong></font></td> \n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.xray[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">X-Ray:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.xray[0]}}</strong></font></td>\n    \t\t</tr>\n            <tr>\n                <!-- {{msg.payload.solardata.heliumline[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">304A:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.heliumline[0]}}</strong></font><span class=\"left\"> @ SEM</span></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.protonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Ptn Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.protonflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.electonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Elc Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.electonflux[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aurora[0]}} / {{msg.payload.solardata.normalization[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Auroa: </td>\n                <td colspan=\"3\" style=\"text-align:left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aurora[0]}}</strong></font>&nbsp;/&nbsp;<font class=\"green\"><strong>n={{msg.payload.solardata.normalization[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.magneticfield[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Bz:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.magneticfield[0]}}</strong></font></td>\n                <!-- {{msg.payload.solardata.solarwind[0]}} -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">SW:</td>\n    \t\t\t<td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarwind[0]}}</strong></font></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">HF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Band</td>\n    \t\t\t<td style=\"text-align: center\" class=\"nFont\">Day</td>\n                <td style=\"text-align: center\" class=\"nFont\">Night</td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">80m-40m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[0]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[0]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[4]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[4]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">30m-20m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[1]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[1]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[5]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[5]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">17m-15m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[2]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[2]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[6]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[6]._}}</strong></font></td>\n                <td></td>\n    \t\t</tr>\n            <tr>    \n                <td style=\"text-align: right\" class=\"nFont\">12m-10m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[3]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[3]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[7]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[7]._}}</strong></font></td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">VHF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<!-- {{msg.payload.solardata.latdegree[0]}} -->\n    \t\t<td style=\"text-align: right\" class=\"nFont\">Aur Lat</td>\n    \t\t<td colspan=\"3\" class=\"nFont\"><font class=\"red\"><strong>{{msg.payload.solardata.latdegree[0]}}&#176;</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[0]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Aurora</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[3]._  -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">6m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[4]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">4m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[1]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[2]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsNA</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">EME Deg</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"https://mmmonvhf.de/eme.php\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/eme/eme.png) 10% 50%; background-repeat: no-repeat; width: 100px; height: 19px;\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\">Solar Flare Prb</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"http://spaceweather.inf.brad.ac.uk/fm/\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(http://spaceweather.inf.brad.ac.uk/ASAP_latest/flaremonitor_24.png) 30% 2%; width: 35px; height: 20px; background-color: #ffffff; background-repeat: no-repeat; filter: brightness(0.6) contrast(3);\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\"><a href=\"https://mmmonvhf.de/es.php\" target=\"_blank\" style=\"color: #ffffff;\">MUF</a> <br/> <a href=\"https://mmmonvhf.de/ms.php\" target=\"_blank\" style=\"color: #ffffff;\">MS</a></td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t    <div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/es/es.png) left top no-repeat, url(https://www.mmmonvhf.de/ms/ms.png) left bottom no-repeat; width:121px; height:12px; padding: 15px;\"></div>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.geomagfield[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Geomag Field</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.geomagfield[0]}}\"><strong>{{msg.payload.solardata.geomagfield[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.signalnoise[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Sig Noise Lvl</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.signalnoise[0]}}\"><strong>{{msg.payload.solardata.signalnoise[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.muf[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">MUF US Boulder</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.muf[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<!-- {{msg.payload.solardata.source[0].$.url}} -->\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\"><a class=\"one\" href=\"{{msg.payload.solardata.source[0].$.url}}\" target=\"_blank\">{{msg.payload.solardata.source[0].$.url}}</a></td>\n            </tr>\n    \t\t<tr>\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\">© Copyright Paul L Herrman</td>\n            </tr>\n        </table>\n    </div>\n\n",
+        "width": 0,
+        "height": 0,
+        "format": "\n<style type='text/css'>\n\t.main\n\t\n\ttable.center {\n\t  background:#000000;\n\t  border: 1px;\n\t  margin-top: auto;\n\t  margin-bottom: auto;\n\t  margin-left: auto;\n\t  margin-right: auto;\n\t  body {text-align:center}\n\t}\n\tth {\n\t  font-family: \"Trebuchet MS\", Arial, Verdana;\n\t  font-size: 14px;\n\t  color: #FFFFFF;\n\t  padding: 1px;\n\t}\n\ttd {\n\t  border-bottom: 1px;\n\t  padding: 1px;\n\t  color: #F0EEEE;\n\t  text-align: center;\n\t  white-space:nowrap;\n\t}\n\t\n\ta.one:link {color:#ff0000;text-decoration:none;}\n\ta.one:visited {color:#0000ff;text-decoration:none;}\n\ta.one:hover {text-decoration:underline;}\n\n\t.lFont {font-size: 12px;}\n\t.nFont {font-size: 14px;}\n\t.bFont {font-size: 16px;}\n\t\n\t.green  {color: #14ED0D;}\n\t.yellow {color: #FEFE0B;}\n\t.red    {color: #E94D0A;}\n\t.white  {color: #F0EEEE;}\n\t\n\t/* change color of band conditions */\n\t.Poor {color: #E94D0A;}\n\t.Fair {color: #FEFE0B;}\n\t.Good {color: #14ED0D;}\n\t\n\t/* change color of geomagnetic field */\n\t.ACTIVE     {color: #FEFE0B;}\n\t.INACTIVE   {color: #14ED0D;}\n\t.UNSETTLD   {color: #14ED0D;}\n\t.QUIET      {color: #14ED0D;}\n\t.VRQUIET    {color: #14ED0D;}\n\t\n\t/* change color of sig noise*/\n\t.S0-S1  {color: #14ED0D;}\n\t.S1-S2  {color: #14ED0D;}\n\t.S2-S3  {color: #14ED0D;}\n\t.S3-S4  {color: #FEFE0B;}\n\t\n\t/* VHF band condition colours */\n\t.HighLATAUR {color: #FEFE0B;}\n\t.MIDLATAUR  {color: #14ED0D;}\n\t.BandClosed {color: #E94D0A;}\n\t.at50MHzEs    {color: #14ED0D;}\n\t.at70MHzEs    {color: #14ED0D;}\n\t.at144MHzEs   {color: #14ED0D;}\n\t.HighMUF    {color: #FEFE0B;}\n\t.NotSet     {color: #f003fc;}\n\t\n\t.cellUL {border-bottom: 1px solid #F0EEEE;}\n\n</style>\n\n    <div>\n        <table>\n            <tr>\n                <th colspan=\"4\" class=\"nFont\">Solar-Terrestrial Data provided by N0NBH</th>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.updated[0]}} -->\n                <td colspan=\"4\" class=\"nFont\"><font class=\"yellow\"><strong>{{msg.payload.solardata.updated[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.solarflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SFI:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.sunspots[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">SN:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.sunspots[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">A-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aindex[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.kindex[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">K-Index:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.kindex[0]}}</strong></font></td> \n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.xray[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">X-Ray:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.xray[0]}}</strong></font></td>\n    \t\t</tr>\n            <tr>\n                <!-- {{msg.payload.solardata.heliumline[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">304A:</td>\n                <td colspan=\"3\" style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.heliumline[0]}}</strong></font><span class=\"left\"> @ SEM</span></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.protonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Ptn Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.protonflux[0]}}</strong></font></td>\n    \t\t\t<!-- {{msg.payload.solardata.electonflux[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Elc Flx:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.electonflux[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.aurora[0]}} / {{msg.payload.solardata.normalization[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Auroa: </td>\n                <td colspan=\"3\" style=\"text-align:left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.aurora[0]}}</strong></font>&nbsp;/&nbsp;<font class=\"green\"><strong>n={{msg.payload.solardata.normalization[0]}}</strong></font></td>\n            </tr>\n            <tr>\n    \t\t\t<!-- {{msg.payload.solardata.magneticfield[0]}} -->\n                <td style=\"text-align: right\" class=\"nFont\">Bz:</td>\n                <td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.magneticfield[0]}}</strong></font></td>\n                <!-- {{msg.payload.solardata.solarwind[0]}} -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">SW:</td>\n    \t\t\t<td style=\"text-align: left\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.solarwind[0]}}</strong></font></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">HF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Band</td>\n    \t\t\t<td style=\"text-align: center\" class=\"nFont\">Day</td>\n                <td style=\"text-align: center\" class=\"nFont\">Night</td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">80m-40m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[0]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[0]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[4]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[4]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">30m-20m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[1]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[1]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[5]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[5]._}}</strong></font></td>\n                <td></td>\n            </tr>\n            <tr>\n                <td style=\"text-align: right\" class=\"nFont\">17m-15m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[2]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[2]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[6]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[6]._}}</strong></font></td>\n                <td></td>\n    \t\t</tr>\n            <tr>    \n                <td style=\"text-align: right\" class=\"nFont\">12m-10m</td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[3]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[3]._}}</strong></font></td>\n                <td style=\"text-align: center\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedconditions[0].band[7]._}}\"><strong>{{msg.payload.solardata.calculatedconditions[0].band[7]._}}</strong></font></td>\n                <td></td>\n            </tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<td colspan=\"4\" style=\"text-align: center\" class=\"nFont\">VHF Conditions</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t<!-- {{msg.payload.solardata.latdegree[0]}} -->\n    \t\t<td style=\"text-align: right\" class=\"nFont\">Aur Lat</td>\n    \t\t<td colspan=\"3\" class=\"nFont\"><font class=\"red\"><strong>{{msg.payload.solardata.latdegree[0]}}&#176;</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[0]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Aurora</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[0]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[3]._  -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">6m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[3]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[4]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">4m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[4]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[1]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsEU</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[1]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.calculatedvhfconditions[0].phenomenon[2]._ -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">2m EsNA</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2].$.bandcond}}\"><strong>{{msg.payload.solardata.calculatedvhfconditions[0].phenomenon[2]._}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">EME Deg</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"https://mmmonvhf.de/eme.php\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/eme/eme.png) 10% 50%; background-repeat: no-repeat; width: 100px; height: 19px;\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\">Solar Flare Prb</td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t<a href=\"http://spaceweather.inf.brad.ac.uk/fm/\" target=\"_blank\">\n    \t\t\t\t\t<div style=\"display: inline-block; background: url(http://spaceweather.inf.brad.ac.uk/ASAP_latest/flaremonitor_24.png) 30% 2%; width: 35px; height: 20px; background-color: #ffffff; background-repeat: no-repeat; filter: brightness(0.6) contrast(3);\"></div>\n    \t\t\t\t</a>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\" valign=\"top\"><a href=\"https://mmmonvhf.de/es.php\" target=\"_blank\" style=\"color: #ffffff;\">MUF</a> <br/> <a href=\"https://mmmonvhf.de/ms.php\" target=\"_blank\" style=\"color: #ffffff;\">MS</a></td>\n    \t\t\t<td colspan=\"3\" >\n    \t\t\t\t    <div style=\"display: inline-block; background: url(https://www.mmmonvhf.de/es/es.png) left top no-repeat, url(https://www.mmmonvhf.de/ms/ms.png) left bottom no-repeat; width:121px; height:12px; padding: 15px;\"></div>\n    \t\t\t</td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.geomagfield[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Geomag Field</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.geomagfield[0]}}\"><strong>{{msg.payload.solardata.geomagfield[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.signalnoise[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">Sig Noise Lvl</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"{{msg.payload.solardata.signalnoise[0]}}\"><strong>{{msg.payload.solardata.signalnoise[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t    <!-- payload.solardata.muf[0] -->\n    \t\t\t<td style=\"text-align: right\" class=\"nFont\">MUF US Boulder</td>\n    \t\t\t<td colspan=\"3\" class=\"nFont\"><font class=\"green\"><strong>{{msg.payload.solardata.muf[0]}}</strong></font></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<td colspan=\"4\" class=\"cellUL\"></td>\n    \t\t</tr>\n    \t\t<tr>\n    \t\t\t<!-- {{msg.payload.solardata.source[0].$.url}} -->\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\"><a class=\"one\" href=\"{{msg.payload.solardata.source[0].$.url}}\" target=\"_blank\">{{msg.payload.solardata.source[0].$.url}}</a></td>\n            </tr>\n    \t\t<tr>\n                <td colspan=\"4\" style=\"text-align: center\" class=\"lFont\">© Copyright Paul L Herrman</td>\n            </tr>\n        </table>\n    </div>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -24670,6 +24889,179 @@
         "wires": [
             [
                 "643ff825d341bf96"
+            ]
+        ]
+    },
+    {
+        "id": "c57859fc4cb050a7",
+        "type": "switch",
+        "z": "db5600520bb7f279",
+        "name": "If Fahrenheit",
+        "property": "temperature_unit",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "F",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1290,
+        "y": 280,
+        "wires": [
+            [
+                "3d67dce5.112054",
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "eb799ba44460adec",
+        "type": "switch",
+        "z": "db5600520bb7f279",
+        "name": "If Celsius",
+        "property": "temperature_unit",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "C",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1300,
+        "y": 320,
+        "wires": [
+            [
+                "3d67dce5.112054",
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "b89a084234eca9ef",
+        "type": "inject",
+        "z": "db5600520bb7f279",
+        "name": "Every 5 secs",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "temperature_unit",
+        "payloadType": "global",
+        "x": 860,
+        "y": 360,
+        "wires": [
+            [
+                "cd4b0989a632cb00"
+            ]
+        ]
+    },
+    {
+        "id": "cd4b0989a632cb00",
+        "type": "rbe",
+        "z": "db5600520bb7f279",
+        "name": "if temperature_unit change",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1080,
+        "y": 360,
+        "wires": [
+            [
+                "7427d9d83b6e6357"
+            ]
+        ]
+    },
+    {
+        "id": "7427d9d83b6e6357",
+        "type": "change",
+        "z": "db5600520bb7f279",
+        "name": "Clear Chart",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 360,
+        "wires": [
+            [
+                "cd3f0873.755ee8"
+            ]
+        ]
+    },
+    {
+        "id": "c0218de0f81a3892",
+        "type": "change",
+        "z": "db5600520bb7f279",
+        "name": "Set Gauge Display Values",
+        "rules": [
+            {
+                "t": "set",
+                "p": "label",
+                "pt": "msg",
+                "to": "temperature_unit",
+                "tot": "global",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "ui_control.seg1",
+                "pt": "msg",
+                "to": "temperature_yellow",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_control.seg2",
+                "pt": "msg",
+                "to": "temperature_red",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "ui_control.max",
+                "pt": "msg",
+                "to": "temperature_max",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 240,
+        "wires": [
+            [
+                "3d67dce5.112054"
             ]
         ]
     },
@@ -26819,7 +27211,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1930,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "086b1f9232b45a14"
@@ -26846,7 +27238,7 @@
         "to": "",
         "reg": false,
         "x": 2180,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "b6c621827fb49298"
@@ -26880,7 +27272,7 @@
         "name": "Database Lookup Engine Select",
         "info": "",
         "x": 1530,
-        "y": 960,
+        "y": 1060,
         "wires": []
     },
     {
@@ -26893,8 +27285,8 @@
                 "t": "set",
                 "p": "ttl",
                 "pt": "global",
-                "to": "payload",
-                "tot": "msg"
+                "to": "msg.payload",
+                "tot": "global"
             }
         ],
         "action": "",
@@ -26902,8 +27294,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
-        "y": 2420,
+        "x": 930,
+        "y": 2460,
         "wires": [
             [
                 "34a7871439e7394e"
@@ -26922,7 +27314,7 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 2420,
+        "y": 2460,
         "wires": [
             [
                 "73c95c45093b17ae"
@@ -26936,9 +27328,9 @@
         "name": "2 Lat & Lon Input",
         "label": "",
         "group": "54b59a095746559b",
-        "order": 3,
-        "width": 6,
-        "height": 1,
+        "order": 1,
+        "width": "0",
+        "height": "0",
         "options": [
             {
                 "label": "Home Latitude",
@@ -27071,7 +27463,7 @@
         "type": "function",
         "z": "204548a488401a1b",
         "name": "Get Lat & Lon",
-        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '')\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload={};\n    msg.payload.lat = homelat;\n    msg.payload.lon = homelon;\n}\nnode.status({text:\"LAT:\"+homelat+\" LON:\"+homelon});\nreturn msg;",
+        "func": "let homelat = global.get('homelat')\nlet homelon = global.get('homelon')\n\nif (homelat.toString() == '' || homelon.toString() == '' || homelat== undefined)\n{\n    msg.payload = \"Home Lat & Lon Not Set\";\n    msg.testlat= homelat;\n    msg.testlon= homelon;\n}\nelse\n{\n    msg.payload={};\n    msg.payload.lat = homelat;\n    msg.payload.lon = homelon;\n}\nnode.status({text:\"LAT:\"+homelat+\" LON:\"+homelon});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -27147,7 +27539,7 @@
         "label": "Map Labels",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27274,7 +27666,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "54b59a095746559b",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -27555,7 +27947,7 @@
         "place": "Select OP Sort Type",
         "group": "52728e3a5743376c",
         "order": 1,
-        "width": 6,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -28734,10 +29126,10 @@
         "id": "48f5678a75ee7dd8",
         "type": "ui_dropdown",
         "z": "204548a488401a1b",
-        "name": "Distance Measurement",
-        "label": "Units",
+        "name": "Disrtance Unit",
+        "label": "Distance",
         "tooltip": "",
-        "place": "Select option",
+        "place": "Select distance unit",
         "group": "00919f6d1599ed5f",
         "order": 1,
         "width": 6,
@@ -28760,7 +29152,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1850,
+        "x": 1820,
         "y": 860,
         "wires": [
             [
@@ -28779,7 +29171,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
+        "x": 2060,
         "y": 860,
         "wires": [
             [
@@ -28885,7 +29277,7 @@
         "finalize": "",
         "libs": [],
         "x": 1670,
-        "y": 1020,
+        "y": 1120,
         "wires": [
             [
                 "e35dbee7a81b43bc"
@@ -28899,7 +29291,7 @@
         "name": "Multi OP or S02R Operation",
         "info": "",
         "x": 1500,
-        "y": 1140,
+        "y": 1240,
         "wires": []
     },
     {
@@ -28914,7 +29306,7 @@
         "finalize": "",
         "libs": [],
         "x": 1640,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "63f29cb1261063bf"
@@ -28957,7 +29349,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1920,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "7d0c7ffca7a6660e"
@@ -28984,7 +29376,7 @@
         "to": "",
         "reg": false,
         "x": 2170,
-        "y": 1080,
+        "y": 1180,
         "wires": [
             [
                 "e0849adea5ad6c37"
@@ -29854,7 +30246,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "cd {{{projectdir}}} && git checkout {{{global.branch}}}",
+        "template": "cd {{{projectdir}}} && git restore flow.json && git checkout -b {{{global.branch}}} || git checkout {{{global.branch}}}",
         "output": "str",
         "x": 360,
         "y": 3360,
@@ -29907,7 +30299,7 @@
         "y": 3300,
         "wires": [
             [
-                "1ac8dad20963d18a"
+                "be09ec735035e01a"
             ],
             [
                 "5f7e1de47f37afaf"
@@ -30530,7 +30922,7 @@
         "label": "TTL Value",
         "tooltip": "",
         "group": "54b59a095746559b",
-        "order": 5,
+        "order": 4,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -30652,7 +31044,8 @@
                 "ad4c547076b09ade",
                 "543c8ffcfaaf7701",
                 "1dfb81dda6b742b3",
-                "5eb3915f925752d7"
+                "5eb3915f925752d7",
+                "4cc7aa20c7555c0d"
             ]
         ]
     },
@@ -30688,7 +31081,8 @@
         "y": 2500,
         "wires": [
             [
-                "55b371fcdda16d59"
+                "55b371fcdda16d59",
+                "b75f7c1d9016de43"
             ]
         ]
     },
@@ -30701,7 +31095,7 @@
             "3047a9ba16e10212"
         ],
         "x": 1445,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "b6c621827fb49298",
@@ -30848,7 +31242,8 @@
         "name": "PC Out",
         "mode": "link",
         "links": [
-            "1abba9a1115bd2c7"
+            "1abba9a1115bd2c7",
+            "afaa93d2e55e7e8c"
         ],
         "x": 1765,
         "y": 360,
@@ -30916,6 +31311,181 @@
         "x": 815,
         "y": 2860,
         "wires": []
+    },
+    {
+        "id": "4b6949f18173593d",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Store DashboardQRate",
+        "func": "let dashboardqrate = msg.payload;\n\nglobal.set('dashboardqrate',dashboardqrate);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 2600,
+        "wires": [
+            [
+                "b75f7c1d9016de43"
+            ]
+        ]
+    },
+    {
+        "id": "0837ad45ed24fb8c",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Dashboard Hourly QSO Rate",
+        "label": "Dashboard Rate Option",
+        "tooltip": "Choose which value that you would like to choose for the Radio Values on the dashboard.",
+        "place": "Select Rate",
+        "group": "475c1eff5d97ffe5",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Radio",
+                "value": "radio",
+                "type": "str"
+            },
+            {
+                "label": "Operator",
+                "value": "op",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "Hourly QSO Rate",
+        "topicType": "str",
+        "className": "",
+        "x": 1880,
+        "y": 2600,
+        "wires": [
+            [
+                "4b6949f18173593d"
+            ]
+        ]
+    },
+    {
+        "id": "b75f7c1d9016de43",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get DashboardQRate",
+        "func": "msg.payload = global.get('dashboardqrate');\n\nif (msg.payload == undefined)\n{\n    msg.payload = \"radio\";\n    return msg;\n}\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 2600,
+        "wires": [
+            [
+                "0837ad45ed24fb8c"
+            ]
+        ]
+    },
+    {
+        "id": "da26fb516364abdb",
+        "type": "ui_dropdown",
+        "z": "204548a488401a1b",
+        "name": "Temperature Unit",
+        "label": "Temperature",
+        "tooltip": "",
+        "place": "",
+        "group": "00919f6d1599ed5f",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Fahrenheit",
+                "value": "F",
+                "type": "str"
+            },
+            {
+                "label": "Celsius",
+                "value": "C",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1790,
+        "y": 960,
+        "wires": [
+            [
+                "cd712885f68288ef"
+            ]
+        ]
+    },
+    {
+        "id": "cd712885f68288ef",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Set Temperature Unit",
+        "func": "let x = msg.payload\nglobal.set('temperature_unit', x)\nif (x == 'F') {\n    global.set('temperature_yellow', 105)\n    global.set('temperature_red', 140)\n    global.set('temperature_max', 195)\n}\nelse {\n    global.set('temperature_yellow', 40)\n    global.set('temperature_red', 60)\n    global.set('temperature_max', 90)\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2020,
+        "y": 960,
+        "wires": [
+            [
+                "4cc7aa20c7555c0d"
+            ]
+        ]
+    },
+    {
+        "id": "1f7dccce6055a5b2",
+        "type": "comment",
+        "z": "204548a488401a1b",
+        "name": "Temperature Unit",
+        "info": "",
+        "x": 1520,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "4cc7aa20c7555c0d",
+        "type": "function",
+        "z": "204548a488401a1b",
+        "name": "Get Temperature Unit",
+        "func": "msg.payload=global.get('temperature_unit')\nlet x = global.get('temperature_unit')\nif (x == 'F') {\n    msg.payload = 'F';\n}\nelse {\n    msg.payload = 'C'\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 960,
+        "wires": [
+            [
+                "da26fb516364abdb"
+            ]
+        ]
+    },
+    {
+        "id": "be09ec735035e01a",
+        "type": "projectdir",
+        "z": "204548a488401a1b",
+        "name": "",
+        "x": 180,
+        "y": 3360,
+        "wires": [
+            [
+                "1ac8dad20963d18a"
+            ]
+        ]
     },
     {
         "id": "b8502660ecb5eb37",
@@ -31269,7 +31839,7 @@
         "z": "09eb64b651f58dce",
         "d": true,
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -33121,7 +33691,7 @@
         "type": "debug",
         "z": "bd8a446b999750f9",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -33804,7 +34374,6 @@
         "id": "24a259a2ccec0aa3",
         "type": "http request",
         "z": "2eedd966294071cc",
-        "d": true,
         "name": "",
         "method": "GET",
         "ret": "obj",
@@ -35024,7 +35593,7 @@
         "type": "debug",
         "z": "2eedd966294071cc",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -35408,7 +35977,7 @@
         "type": "debug",
         "z": "2eedd966294071cc",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -35901,9 +36470,7 @@
         "x": 300,
         "y": 780,
         "wires": [
-            [
-                "b7489dd59685c7a3"
-            ]
+            []
         ]
     },
     {
@@ -36393,7 +36960,7 @@
         "type": "debug",
         "z": "3e52b5d54104d7f0",
         "name": "debug 5",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -36446,7 +37013,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "cd {{projectdir}} && git restore flow.json && git pull origin {{global.branch}} ",
+        "template": "bash <(curl -sL https://contesting.nodered.kd9lsv.me) <<!\ny\n\ny\n\nn\n\n!",
         "output": "str",
         "x": 1030,
         "y": 780,
@@ -37142,7 +37709,8 @@
             "b9359e88f599c705",
             "86117516f9c50845",
             "d84431b1769ad0b7",
-            "ca794ca15d01319a"
+            "ca794ca15d01319a",
+            "09a80363b32c10dd"
         ],
         "x": 1425,
         "y": 80,
@@ -38972,7 +39540,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.config .nr-dashboard-cardtitle{\nfont-size: 18px;\nmin-height: 15px;\n}\n.config .layout-row {\nfont-size: 18px;}\n.config .n1mm .label {\nfont-size: 14px;}\n.config .label {\nfont-size: 18px;}\n.config .value {\nfont-size: 20px;}\n/*.config .nr-dashboard-dropdown md-input-container>md-select{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown p.label{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown div.md-text{\nmargin-top: 0px;\n}*/\n.config md-input-container {\nmargin-top:3px;\npadding: 0px;\nmargin-left: 7px;\n}\n.form_adj .formElement {\n        height: 46px;\n    }\n</style>",
+        "format": "<style>\n.config .nr-dashboard-cardtitle{\nfont-size: 18px;\nmin-height: 15px;\n}\n.config .layout-row {\nfont-size: 18px;}\n.config .n1mm .label {\nfont-size: 14px;}\n.config .label {\nfont-size: 18px;}\n.config .value {\nfont-size: 20px;}\n/*.config .nr-dashboard-dropdown md-input-container>md-select{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown p.label{\nmargin-top: 0px;\n}\n.config .nr-dashboard-dropdown div.md-text{\nmargin-top: 0px;\n}*/\n.config md-input-container {\nmargin-top:3px;\npadding: 0px;\nmargin-left: 7px;\n}\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -39304,7 +39872,7 @@
         "z": "b73cc2bb5f424b69",
         "d": true,
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -39903,7 +40471,7 @@
         "type": "debug",
         "z": "1acc5730a82cbfc7",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -40587,7 +41155,7 @@
         "type": "debug",
         "z": "1acc5730a82cbfc7",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -40695,7 +41263,7 @@
         "type": "debug",
         "z": "8a7fcbcd28d37f15",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": true,
@@ -40913,7 +41481,7 @@
         "type": "debug",
         "z": "8a7fcbcd28d37f15",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -40929,7 +41497,7 @@
         "type": "debug",
         "z": "8a7fcbcd28d37f15",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -41304,6 +41872,473 @@
         "end": false,
         "x": 1030,
         "y": 500,
+        "wires": []
+    },
+    {
+        "id": "15672483a10a62b2",
+        "type": "ui_toast",
+        "z": "ee0edc8a2d33034b",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Online Scoreboard Error",
+        "x": 1410,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80b1d74686de4a72",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6313d253a0c71c71",
+        "type": "rbe",
+        "z": "ee0edc8a2d33034b",
+        "name": "RBE",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1210,
+        "y": 140,
+        "wires": [
+            [
+                "15672483a10a62b2"
+            ]
+        ]
+    },
+    {
+        "id": "957c28ebf33a4784",
+        "type": "switch",
+        "z": "ee0edc8a2d33034b",
+        "name": "Error?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "Contest not supported",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Contest not supported",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "is not active",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1030,
+        "y": 140,
+        "wires": [
+            [
+                "82ba94e6dd3c3fd8"
+            ],
+            [
+                "6313d253a0c71c71",
+                "80b1d74686de4a72"
+            ],
+            [
+                "6313d253a0c71c71"
+            ]
+        ]
+    },
+    {
+        "id": "a7dc0c3abe431255",
+        "type": "function",
+        "z": "ee0edc8a2d33034b",
+        "name": "Is Error?",
+        "func": "if (msg.payload.error == undefined)\n{\n    return msg\n}\nif (msg.payload.error != undefined)\n{\n    msg.payload = \"Contest not supported\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 120,
+        "wires": [
+            [
+                "11f2a38999137dfc",
+                "957c28ebf33a4784"
+            ]
+        ]
+    },
+    {
+        "id": "53255eb5cfb7c2b6",
+        "type": "http request",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "https://contestonlinescore.com/tools/api/?key=3450792384502938475&contest={{topic}}",
+        "tls": "465f5622aae04ed5",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 690,
+        "y": 120,
+        "wires": [
+            [
+                "2c5c6722784705e5",
+                "a7dc0c3abe431255"
+            ]
+        ]
+    },
+    {
+        "id": "2c5c6722784705e5",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "11f2a38999137dfc",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "cf32d7cb8b44189c",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "903deb0cf5b2c114",
+        "type": "switch",
+        "z": "ee0edc8a2d33034b",
+        "name": "Contest Defined?",
+        "property": "contestname",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "53255eb5cfb7c2b6",
+                "cf32d7cb8b44189c"
+            ]
+        ]
+    },
+    {
+        "id": "c8bf7dd9b8eda210",
+        "type": "function",
+        "z": "ee0edc8a2d33034b",
+        "name": "Prep HTTP GET",
+        "func": "let contestname = global.get('contestname');\nlet contestcall = global.get('contestcallsign');\nlet chasecall1 = global.get('chasecall1');\nlet chasecall2 = global.get('chasecall2');\nlet chasecall3 = global.get('chasecall3');\nlet chasecall4 = global.get('chasecall4');\nlet chasecall5 = global.get('chasecall5');\n\nif (contestname == null)\n{\n    return;\n}\n\nif (contestcall == null)\n{\n    return;\n}\n\nif (chasecall1 == null)\n{\n    msg.payload = contestcall\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall2 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall3 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall4 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3\n    msg.topic = contestname;\n    return msg;\n}\n\nif (chasecall5 == null)\n{\n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4\n    msg.topic = contestname;\n    return msg;\n}\nelse {\n    \n    msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4+\",\"+chasecall5\n    msg.topic = contestname;\n    return msg;\n}\n\n//msg.payload = contestcall+\",\"+chasecall1+\",\"+chasecall2+\",\"+chasecall3+\",\"+chasecall4+\",\"+chasecall5\n\n//let dummyString=\"890909.00\"\n//msg.payload = msg.payload.replace(/(,+$)/, '')\n//console.log(dummyString)\n\n//msg.topic = contestname;\n\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 120,
+        "wires": [
+            [
+                "903deb0cf5b2c114"
+            ]
+        ]
+    },
+    {
+        "id": "d2a747b5049be4e6",
+        "type": "inject",
+        "z": "ee0edc8a2d33034b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "c8bf7dd9b8eda210"
+            ]
+        ]
+    },
+    {
+        "id": "09a80363b32c10dd",
+        "type": "link in",
+        "z": "ee0edc8a2d33034b",
+        "name": "Scoreboard HTTP Get IN",
+        "links": [
+            "3047a9ba16e10212"
+        ],
+        "x": 155,
+        "y": 60,
+        "wires": [
+            [
+                "c8bf7dd9b8eda210"
+            ]
+        ]
+    },
+    {
+        "id": "d805877e215b63df",
+        "type": "ui_table",
+        "z": "ee0edc8a2d33034b",
+        "group": "110f893b.a0f1d7",
+        "name": "Scores",
+        "order": 2,
+        "width": "44",
+        "height": "27",
+        "columns": [
+            {
+                "field": "contestcall",
+                "title": "Callsign",
+                "width": "8%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "category",
+                "title": "Category",
+                "width": "7%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "power",
+                "title": "Power",
+                "width": "6%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "qso_total",
+                "title": "QSOs",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "mult_total",
+                "title": "Mults",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "score_total",
+                "title": "Score",
+                "width": "10%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_160",
+                "title": "160",
+                "width": "8%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_80",
+                "title": "80",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_40",
+                "title": "40",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_20",
+                "title": "20",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_15",
+                "title": "15",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "band_10",
+                "title": "10",
+                "width": "7%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "last",
+                "title": "Latest Update",
+                "width": "9%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1360,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "82ba94e6dd3c3fd8",
+        "type": "function",
+        "z": "ee0edc8a2d33034b",
+        "name": "function 1",
+        "func": "node.send([]);\nlet msg_old= msg.payload \nlet output=[];\nlet power_list = [,'QRP','Low','High'];\nlet category_list=['SO','M/1','M/2','M/M'];\nlet assisted_list=['Non-Assisted','Assisted'];\nlet mode_list=['Mixed','CW','SSB','RTTY','PSK','FT8','FT4','DIGI'];\nlet overlay=['','TB-Wires','Rookie','Classic','Wire-Only'];\nlet band_list=['ALL', '160M', '80M', '40M', '20M', '15M', '10M', '6M', '2M', '1.25M', '0.70M', '0.33M', '0.23M', '0.13M', '0.09M', '0.05M', '0.03M']\n\nvar iterate=0;\nvar contest_list= Object.keys(msg_old);\nfor (let contestcall in contest_list){\n    let call_data = msg.payload[contest_list[contestcall]];\n    let score_total = call_data.data.score_total;\n    let qso_total = call_data.data.qso_total || \"\";\n    let mult_total = call_data.data.mult_total || \"\";\n    let qso_160 = call_data.data.qso_160 || \"\" ;\n    let mult_160 = call_data.data.mult_160 || \"\" ;\n    let qso_80 = call_data.data.qso_80 || \"\";\n    let mult_80 = call_data.data.mult_80 || \"\";\n    let qso_40 = call_data.data.qso_40 || \"\";\n    let mult_40 = call_data.data.mult_40 || \"\";\n    let qso_20 = call_data.data.qso_20 || \"\";\n    let mult_20 = call_data.data.mult_20 || \"\";\n    let qso_15 = call_data.data.qso_15 || \"\";\n    let mult_15 = call_data.data.mult_15 || \"\";\n    let qso_10 = call_data.data.qso_10 || \"\";\n    let mult_10 = call_data.data.mult_10 || \"\";\n    let qso_6 = call_data.data.qso_6 || \"\";\n    let mult_6 = call_data.data.mult_6 || \"\";\n    let last = call_data.data.last;\n    \n    if (call_data.data.category =='0'){\n        if (call_data.data.band=='0'){\n            var band=\"AB\";\n        }else{\n            band = 'SB '+call_data.data.band;\n        }\n        if (call_data.data.assisted =='1'){\n            var assisted=\"A\";\n        }\n        else{\n            assisted=\"\";\n        }\n    }else{\n        band=\"\";\n        assisted=\"\";\n    }\n    score_total = Number(score_total).toLocaleString('US');\n    qso_total = Number(qso_total).toLocaleString('US');\n    mult_total = Number(mult_total).toLocaleString('US');\n    output[iterate] = {\n        contestcall: contest_list[contestcall],\n        category: category_list[call_data.data.category]+assisted+band,\n        power: power_list[call_data.data.power],\n        score_total: score_total,\n        qso_total: qso_total,\n        mult_total: mult_total,\n        band_10: String(qso_10+\"/\"+mult_10),\n        band_160: String(qso_160 + \"/\" + mult_160),\n        band_80: String(qso_80 + \"/\" + mult_80),\n        band_40: String(qso_40 + \"/\" + mult_40),\n        band_20: String(qso_20 + \"/\" + mult_20),\n        band_15: String(qso_15 + \"/\" + mult_15),\n        band_6: String(qso_6 + \"/\" +mult_6),\n        last: last\n    };\n    iterate=iterate+1;\n}\n\n\noutput.sort(function (a, b) {\n    return a.category.localeCompare(b.category) || Number(b.score_total) - Number(a.score_total);\n});\n\nmsg.payload=output;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 100,
+        "wires": [
+            [
+                "d805877e215b63df",
+                "dd7d6b64a786a7d3"
+            ]
+        ]
+    },
+    {
+        "id": "dd7d6b64a786a7d3",
+        "type": "debug",
+        "z": "ee0edc8a2d33034b",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 60,
         "wires": []
     }
 ]
