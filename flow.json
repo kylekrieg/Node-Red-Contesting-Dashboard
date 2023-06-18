@@ -709,7 +709,9 @@
             "fa0188b199a945d9"
         ],
         "x": 414,
-        "y": 879
+        "y": 879,
+        "w": 1852,
+        "h": 462
     },
     {
         "id": "81692a3cb68d6cde",
@@ -742,7 +744,9 @@
             "df61b921bf703bd8"
         ],
         "x": 14,
-        "y": 1545.5
+        "y": 1545.5,
+        "w": 2618,
+        "h": 1021.5
     },
     {
         "id": "d48758cdf0c8991d",
@@ -802,7 +806,9 @@
             "b5a72874a2f95ce4"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 2232,
+        "h": 802
     },
     {
         "id": "f830dd821e0240f4",
@@ -966,7 +972,9 @@
             "8834c50bc7d9a366"
         ],
         "x": 2314,
-        "y": 819
+        "y": 819,
+        "w": 1912,
+        "h": 622
     },
     {
         "id": "b5a72874a2f95ce4",
@@ -993,7 +1001,9 @@
             "ae7413cce68dfffa"
         ],
         "x": 914,
-        "y": 79
+        "y": 79,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "94f44b7ea0e29d1d",
@@ -1032,7 +1042,9 @@
             "0ca8c50b9058010c"
         ],
         "x": 854,
-        "y": 2019
+        "y": 2019,
+        "w": 1612,
+        "h": 522
     },
     {
         "id": "a9afc3cb2db49407",
@@ -1072,7 +1084,9 @@
             "bcc4223e74a54492"
         ],
         "x": 1014,
-        "y": 1571.5
+        "y": 1571.5,
+        "w": 1592,
+        "h": 449.5
     },
     {
         "id": "70fdf3d0be199470",
@@ -30232,7 +30246,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "cd {{{projectdir}}} && git checkout {{{global.branch}}}",
+        "template": "cd {{{projectdir}}} && git restore flow.json && git checkout -b {{{global.branch}}} || git checkout {{{global.branch}}}",
         "output": "str",
         "x": 360,
         "y": 3360,
@@ -30285,7 +30299,7 @@
         "y": 3300,
         "wires": [
             [
-                "1ac8dad20963d18a"
+                "be09ec735035e01a"
             ],
             [
                 "5f7e1de47f37afaf"
@@ -31457,6 +31471,19 @@
         "wires": [
             [
                 "da26fb516364abdb"
+            ]
+        ]
+    },
+    {
+        "id": "be09ec735035e01a",
+        "type": "projectdir",
+        "z": "204548a488401a1b",
+        "name": "",
+        "x": 180,
+        "y": 3360,
+        "wires": [
+            [
+                "1ac8dad20963d18a"
             ]
         ]
     },
@@ -36988,7 +37015,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "cd {{projectdir}} && git restore flow.json && git pull origin {{global.branch}} ",
+        "template": "cd {{projectdir}} && git restore flow.json && git pull {{global.branch}} ",
         "output": "str",
         "x": 1030,
         "y": 780,
@@ -37003,7 +37030,7 @@
         "type": "debug",
         "z": "3e52b5d54104d7f0",
         "name": "debug 7",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": true,
         "tostatus": false,
