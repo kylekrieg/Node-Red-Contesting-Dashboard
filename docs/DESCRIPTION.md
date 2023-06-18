@@ -41,6 +41,8 @@ Enter in the callsign used for the contest.
 #### Dashboard Rate
 You can choose if you want the main dashboard to have the radio Qs/Hr vs operator Qs/hr.
 
+Move the sliders for the 1HR low and high rate and 2HR low and high rate.
+
 ---
 
 ### Cluster Login Callsign
@@ -52,6 +54,8 @@ Enter in the callsign used to log into the cluster servers.
 
 #### Contest Name
 Enter in the Contest ID.  To find the Contest ID for the current contest go to https://contestonlinescore.com/settings/ and look up the contest name and assoicated Contest ID.
+
+Click the RESET ALL FIELDS to remove all values from the Online Scoreboard. 
 
 ---
 
@@ -126,6 +130,12 @@ Enter in your QTH lat and lon.  Click submit.  You will receive a dialog box whe
 
 #### Label
 Choose the type of label on each mapped QSO pin.  Choices are Band Only, Band + Mode, Mode Only, Call Only.
+
+#### Map Labels
+Toggle to see map labels on logged QSO's.
+
+#### TTL Value
+Time (in seconds) for logged QSO's to diplay on the map.  Q's made after this will drop off the map.
 
 ---
 
