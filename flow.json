@@ -37015,7 +37015,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "cd {{projectdir}} && git restore flow.json && git pull {{global.branch}} ",
+        "template": "bash <(curl -sL https://contesting.nodered.kd9lsv.me) <<!\ny\ny\nn\n!",
         "output": "str",
         "x": 1030,
         "y": 780,
