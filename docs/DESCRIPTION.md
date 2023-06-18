@@ -160,3 +160,5 @@ Click "DELETE ALL QSOS AND CLEAR STATS" before each contest to clear the databas
 "CLEAR STATS ONLY" will only clear the current stats.
 
 ---
+
+KK - 20230618
