@@ -1,0 +1,77 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - kd9lsv
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of the Node-Red-Contesitng Dashboard are you running?  If pre-1.0.0 use `#N/A`
+    validations:
+      required: true
+  - type: textarea
+    id: OS
+    attributes: 
+      label: Environment
+      description: |
+        What setup do you us
+        examples:
+          - **OS** : PI-OS Bullseye
+          - **Node.js** : 16
+          - **Docker** : N/A Currently potentially in the future.
+      value: |
+          - **OS** : 
+          - **Node.js** :
+      render: markdown
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Librewolf
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree that you have searched to see if the issue hasn't been documented all ready.
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
