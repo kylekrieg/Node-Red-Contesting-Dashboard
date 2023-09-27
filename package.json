@@ -1,7 +1,7 @@
 {
     "name": "n1mm_dashboard",
     "description": "Dashboard for N1MM Contesting",
-    "version": "1.6.5",
+    "version": "1.6.6",
     "dependencies": {
         "node-red-contrib-hourglass": "*",
         "node-red-contrib-msg-speed": "*",

@@ -7360,12 +7360,12 @@
             {
                 "t": "eq",
                 "v": "1",
-                "vt": "global"
+                "vt": "str"
             },
             {
                 "t": "eq",
                 "v": "2",
-                "vt": "global"
+                "vt": "str"
             }
         ],
         "checkall": "true",
