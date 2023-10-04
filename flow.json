@@ -42340,5 +42340,15 @@
         "x": 1360,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "f5a726ef589ee066",
+        "type": "comment",
+        "z": "ee0edc8a2d33034b",
+        "name": "This is a comment",
+        "info": "",
+        "x": 350,
+        "y": 60,
+        "wires": []
     }
 ]
