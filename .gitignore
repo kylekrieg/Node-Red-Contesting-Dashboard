@@ -1,5 +1,5 @@
 *.backup
+node_modules/*
+*.code-workspace
 uibuilder/node_modules
 package-lock.json
-node_modules
-

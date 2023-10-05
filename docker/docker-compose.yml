@@ -1,0 +1,36 @@
+version: "3.2"
+
+services:
+  node-red:
+    image: ghcr.io/kylekrieg/node-red-contesting-dashboard
+    ports:
+      - "1880:1880"
+      - "12060:12060/udp"
+      - "12061:12061/udp"
+      - "12062:12062/udp"
+      - "7300:7300"
+    networks:
+      - node-red-net
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - NR_DATA:/data:rw
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      - WATCHTOWER_CLEANUP=TRUE
+      - WATCHTOWER_INCLUDE_RESTARTING=TRUE
+      - WATCHTOWER_INCLUDE_STOPPED=TRUE
+      - WATCHTOWER_REVIVE_STOPPED=TRUE
+      - WATCHTOWER_POLL_INTERVAL=86400
+      - WATCHTOWER_ROLLING_RESTART=TRUE
+      - WATCHTOWER_TIMEOUT=60
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/timezone:/etc/timezone:ro
+    command: --interval 30
+
+networks:
+  node-red-net:
+volumes:
+  NR_DATA:
+    

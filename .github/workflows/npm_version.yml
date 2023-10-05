@@ -1,0 +1,55 @@
+on:
+  push:
+    branches:
+      - master
+      - dev
+    paths-ignore:
+      - '.gitignore'
+      - '.github/**/.yml'
+
+jobs:
+
+  Create-Version-Tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        token : ${{ secrets.GITHUB_TOKEN }}
+    - name: version value
+      id: versioning
+      run: |
+        git config --global user.name 'kd9lsv'
+        git config --global user.email 'connor@kd9lsv.me'
+        echo "npmversion=$(npm version patch -m "[RELEASE] %s")" >> $GITHUB_ENV
+        git push
+    - name: Get Date
+      id: date
+      run: echo "dateval::$(date +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
+    - name: Create an Tag
+      uses: simpleactions/create-tag@v1.0.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        sha: ${{ github.sha }}
+        # The tag name
+        tag: ${{env.npmversion}}
+        # The message
+        message: ${{env.npmversion}} Update on ${{env.dateval}}
+    - name: Generate changelog
+      id: changelog
+      uses: heinrichreimer/action-github-changelog-generator@v2.3
+      with:
+          token: ${{ secrets.GITHUB_TOKEN }} 
+    - name: Create Release
+      uses: ncipollo/release-action@v1
+      if: steps.changelog.outputs.changelog
+      with:
+        allowUpdates: true
+        token: ${{ secrets.GITHUB_TOKEN }}
+        name: ${{env.npmversion}}
+        tag: ${{env.npmversion}}
+        body: |
+          ```bash
+          See docker package for updated version ${{env.npmversion}} updated on ${{env.dateval}}
+          ```
+          ${{ steps.changelog.outputs.changelog }}

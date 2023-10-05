@@ -3,6 +3,7 @@
     "description": "Dashboard for N1MM Contesting",
     "version": "1.6.6",
     "dependencies": {
+      	"node-red": "3.0.2",
         "node-red-contrib-hourglass": "*",
         "node-red-contrib-msg-speed": "*",
         "node-red-contrib-play-audio": "*",
